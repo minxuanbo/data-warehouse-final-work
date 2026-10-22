@@ -1,11 +1,12 @@
 # Stable source hashes on Windows/Linux and byte-identical CSV exports.
 * text=auto
+.gitattributes text eol=lf
 *.py text eol=lf
 *.sql text eol=lf
 *.md text eol=lf
 *.json text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
-*.csv -text
+*.csv -text whitespace=cr-at-eol
 *.pdf -text
 *.docx -text
