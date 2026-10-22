@@ -1,0 +1,14 @@
+# Downloaded datasets remain local; commit manifests, audit scripts and reports.
+data/raw/
+data/downloads/
+tmp/
+__pycache__/
+.venv/
+.env
+.local/
+.runtime/
+reports/data_acceptance/selected_review_keys.csv
+reports/data_acceptance/time_anomalies.csv
+reports/data_acceptance/order_amount_exceptions.csv
+reports/data_acceptance/issue_examples.csv
+~$*

@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "test": "known_missing_payment_preserved",
+      "passed": true
+    },
+    {
+      "test": "recorded_payment_not_zero_filled",
+      "passed": true
+    },
+    {
+      "test": "raw_review_rows_preserved",
+      "passed": true
+    },
+    {
+      "test": "one_review_per_order",
+      "passed": true
+    },
+    {
+      "test": "missing_delivery_excluded",
+      "passed": true
+    },
+    {
+      "test": "same_day_arrival_not_late",
+      "passed": true
+    },
+    {
+      "test": "zero_denominator_is_null",
+      "passed": true
+    },
+    {
+      "test": "repeat_run_kpi_exports_identical",
+      "passed": true
+    },
+    {
+      "test": "repeat_run_ods_not_duplicated",
+      "passed": true
+    },
+    {
+      "test": "repeat_run_source_batch_reused",
+      "passed": true
+    },
+    {
+      "test": "rollback_keeps_published_metrics",
+      "passed": true
+    },
+    {
+      "test": "rollback_failure_audited",
+      "passed": true
+    },
+    {
+      "test": "strict_payment_failure_preserves_snapshot",
+      "passed": true
+    },
+    {
+      "test": "strict_payment_gate_enforced",
+      "passed": true
+    }
+  ],
+  "database": "PostgreSQL 17.6 on x86_64-windows, compiled by msvc-19.44.35213, 64-bit",
+  "note": "The two failed runs in audit.pipeline_run are intentional rollback/strict-payment tests, not successful publication runs."
+}

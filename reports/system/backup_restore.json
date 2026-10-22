@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "format": "pg_dump custom",
+  "backup_bytes": 79646505,
+  "backup_sha256": "18763a35f4c21c0451caf1c52cc02b8cfc20850852125f7438782b8a8fcb418b",
+  "restored_kpi_matches": true,
+  "restored_geolocation_rows": 1000163,
+  "test_database_removed": true,
+  "backup_location": "ignored .local/olist_dw.dump",
+  "scope": "warehouse structure and data; reader login credentials not included"
+}

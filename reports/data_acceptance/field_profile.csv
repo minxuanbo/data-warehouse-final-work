@@ -1,0 +1,53 @@
+﻿table,column,total_rows,empty_count,empty_pct,distinct_nonempty,max_text_length,invalid_type_count,observed_min,observed_max
+orders,order_id,99441,0,0.0,99441,32,0,,
+orders,customer_id,99441,0,0.0,99441,32,0,,
+orders,order_status,99441,0,0.0,8,11,0,,
+orders,order_purchase_timestamp,99441,0,0.0,98875,19,0,2016-09-04 21:15:19,2018-10-17 17:30:18
+orders,order_approved_at,99441,160,0.160899,90733,19,0,2016-09-15 12:16:38,2018-09-03 17:40:06
+orders,order_delivered_carrier_date,99441,1783,1.793023,81018,19,0,2016-10-08 10:34:01,2018-09-11 19:48:28
+orders,order_delivered_customer_date,99441,2965,2.981668,95664,19,0,2016-10-11 13:46:32,2018-10-17 13:22:46
+orders,order_estimated_delivery_date,99441,0,0.0,459,19,0,2016-09-30 00:00:00,2018-11-12 00:00:00
+items,order_id,112650,0,0.0,98666,32,0,,
+items,order_item_id,112650,0,0.0,21,2,0,1,21
+items,product_id,112650,0,0.0,32951,32,0,,
+items,seller_id,112650,0,0.0,3095,32,0,,
+items,shipping_limit_date,112650,0,0.0,93318,19,0,2016-09-19 00:15:34,2020-04-09 22:35:08
+items,price,112650,0,0.0,5968,7,0,0.85,"6,735.00"
+items,freight_value,112650,0,0.0,6999,6,0,0.00,409.68
+payments,order_id,103886,0,0.0,99440,32,0,,
+payments,payment_sequential,103886,0,0.0,29,2,0,1,29
+payments,payment_type,103886,0,0.0,5,11,0,,
+payments,payment_installments,103886,0,0.0,24,2,0,0,24
+payments,payment_value,103886,0,0.0,29077,8,0,0.00,"13,664.08"
+reviews,review_id,99224,0,0.0,98410,32,0,,
+reviews,order_id,99224,0,0.0,98673,32,0,,
+reviews,review_score,99224,0,0.0,5,1,0,1,5
+reviews,review_comment_title,99224,87658,88.343546,4526,26,0,,
+reviews,review_comment_message,99224,58274,58.729743,36155,208,0,,
+reviews,review_creation_date,99224,0,0.0,636,19,0,2016-10-02 00:00:00,2018-08-31 00:00:00
+reviews,review_answer_timestamp,99224,0,0.0,98248,19,0,2016-10-07 18:32:28,2018-10-29 12:27:35
+customers,customer_id,99441,0,0.0,99441,32,0,,
+customers,customer_unique_id,99441,0,0.0,96096,32,0,,
+customers,customer_zip_code_prefix,99441,0,0.0,14994,5,0,,
+customers,customer_city,99441,0,0.0,4119,32,0,,
+customers,customer_state,99441,0,0.0,27,2,0,,
+products,product_id,32951,0,0.0,32951,32,0,,
+products,product_category_name,32951,610,1.851234,73,46,0,,
+products,product_name_lenght,32951,610,1.851234,66,2,0,5.0,76.0
+products,product_description_lenght,32951,610,1.851234,2960,4,0,4.0,3992.0
+products,product_photos_qty,32951,610,1.851234,19,2,0,1.0,20.0
+products,product_weight_g,32951,2,0.00607,2204,5,0,0.0,40425.0
+products,product_length_cm,32951,2,0.00607,99,3,0,7.0,105.0
+products,product_height_cm,32951,2,0.00607,102,3,0,2.0,105.0
+products,product_width_cm,32951,2,0.00607,95,3,0,6.0,118.0
+sellers,seller_id,3095,0,0.0,3095,32,0,,
+sellers,seller_zip_code_prefix,3095,0,0.0,2246,5,0,,
+sellers,seller_city,3095,0,0.0,611,40,0,,
+sellers,seller_state,3095,0,0.0,23,2,0,,
+geolocation,geolocation_zip_code_prefix,1000163,0,0.0,19015,5,0,,
+geolocation,geolocation_lat,1000163,0,0.0,717372,23,0,,
+geolocation,geolocation_lng,1000163,0,0.0,717615,19,0,,
+geolocation,geolocation_city,1000163,0,0.0,8011,38,0,,
+geolocation,geolocation_state,1000163,0,0.0,27,2,0,,
+translation,product_category_name,71,0,0.0,71,46,0,,
+translation,product_category_name_english,71,0,0.0,71,39,0,,

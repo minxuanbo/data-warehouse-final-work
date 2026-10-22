@@ -1,0 +1,2 @@
+﻿all_orders,delivered_orders,item_amount,freight_amount,recorded_payment_amount,missing_payment_orders,complete_payment_amount,payment_order_coverage,average_order_value,delivered_buyers,valid_delivery_orders,average_delivery_days,late_eligible_orders,late_orders,late_rate,reviewed_orders,average_review_score,low_score_orders,low_score_rate
+99441,96478,13221498.11,2198275.64,15422461.77,1,,0.99998963494268123303,137.0415857501191982,93358,96470,12.5582170980519755,96470,6534,0.06773090079817559863,95832,4.1559082561148677,12273,0.12806786877034810919

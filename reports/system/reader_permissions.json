@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "ads_select": true,
+  "denied_tables": [
+    "ods.orders",
+    "dwd.fact_order",
+    "audit.source_file"
+  ],
+  "credentials": "Stored only in ignored .local/reader.env"
+}

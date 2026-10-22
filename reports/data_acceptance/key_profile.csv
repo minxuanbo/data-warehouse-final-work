@@ -1,0 +1,11 @@
+﻿table,key,distinct_keys,duplicate_extra_rows,conflicting_rows
+orders,order_id,99441,0,0
+items,order_id+order_item_id,112650,0,0
+payments,order_id+payment_sequential,103886,0,0
+customers,customer_id,99441,0,0
+products,product_id,32951,0,0
+sellers,seller_id,3095,0,0
+translation,product_category_name,71,0,0
+reviews,review_id,98410,814,not_a_primary_key
+reviews,order_id,98673,551,not_a_primary_key
+geolocation,geolocation_zip_code_prefix,19015,981148,not_a_primary_key

@@ -1,0 +1,404 @@
+{
+  "run_id": 3,
+  "batch_id": 1,
+  "status": "passed_with_warnings",
+  "ods_reused": true,
+  "elapsed_seconds": 25.366,
+  "source_fingerprint": "6cd6dcf822ee1a3df1c19d09095b99558fa2f0a4959b857ebf6a6d496e8eb1fc",
+  "executed_at": "2026-10-22T22:57:03.222118+08:00",
+  "database_version": "PostgreSQL 17.6 on x86_64-windows, compiled by msvc-19.44.35213, 64-bit",
+  "python_version": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "checks": [
+    {
+      "name": "ods_count_orders",
+      "actual": 99441,
+      "expected": 99441,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "ods_count_order_items",
+      "actual": 112650,
+      "expected": 112650,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "ods_count_order_payments",
+      "actual": 103886,
+      "expected": 103886,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "ods_count_order_reviews",
+      "actual": 99224,
+      "expected": 99224,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "ods_count_customers",
+      "actual": 99441,
+      "expected": 99441,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "ods_count_products",
+      "actual": 32951,
+      "expected": 32951,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "ods_count_sellers",
+      "actual": 3095,
+      "expected": 3095,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "ods_count_geolocation",
+      "actual": 1000163,
+      "expected": 1000163,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "ods_count_category_translation",
+      "actual": 71,
+      "expected": 71,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "dwd_count_fact_order",
+      "actual": 99441,
+      "expected": 99441,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "dwd_count_fact_order_item",
+      "actual": 112650,
+      "expected": 112650,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "dwd_count_fact_payment",
+      "actual": 103886,
+      "expected": 103886,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "dwd_count_fact_review",
+      "actual": 98673,
+      "expected": 98673,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "order_wide_grain",
+      "actual": 99441,
+      "expected": 99441,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "amount_all_item",
+      "actual": "1359164370.00",
+      "expected": 1359164370,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "amount_all_freight",
+      "actual": "225190954.00",
+      "expected": 225190954,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "amount_all_payment",
+      "actual": "1600887212.00",
+      "expected": 1600887212,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "amount_delivered_item",
+      "actual": "1322149811.00",
+      "expected": 1322149811,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "amount_delivered_freight",
+      "actual": "219827564.00",
+      "expected": 219827564,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "amount_delivered_payment",
+      "actual": "1542246177.00",
+      "expected": 1542246177,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "inherited_keys_fact_order_item",
+      "actual": 0,
+      "expected": 0,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "inherited_keys_fact_payment",
+      "actual": 0,
+      "expected": 0,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "inherited_keys_fact_review",
+      "actual": 0,
+      "expected": 0,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "purchase_date_key",
+      "actual": 0,
+      "expected": 0,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_all_orders",
+      "actual": 99441,
+      "expected": 99441,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_delivered_orders",
+      "actual": 96478,
+      "expected": 96478,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_delivered_buyers",
+      "actual": 93358,
+      "expected": 93358,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_valid_delivery_orders",
+      "actual": 96470,
+      "expected": 96470,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_late_eligible_orders",
+      "actual": 96470,
+      "expected": 96470,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_late_orders",
+      "actual": 6534,
+      "expected": 6534,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_reviewed_orders",
+      "actual": 95832,
+      "expected": 95832,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_low_score_orders",
+      "actual": 12273,
+      "expected": 12273,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_average_delivery_days",
+      "actual": "12.5582170980519755",
+      "expected": 12.558217098051976,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_late_rate",
+      "actual": "0.06773090079817559863",
+      "expected": 0.06773090079817559,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_average_review_score",
+      "actual": "4.1559082561148677",
+      "expected": 4.155908256114867,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_low_score_rate",
+      "actual": "0.12806786877034810919",
+      "expected": 0.12806786877034812,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_item_amount",
+      "actual": "1322149811.00",
+      "expected": 1322149811,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_freight_amount",
+      "actual": "219827564.00",
+      "expected": 219827564,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "kpi_recorded_payment_amount",
+      "actual": "1542246177.00",
+      "expected": 1542246177,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "payment_completeness",
+      "actual": 1,
+      "expected": 0,
+      "passed": false,
+      "severity": "warning"
+    },
+    {
+      "name": "incomplete_payment_is_null",
+      "actual": null,
+      "expected": null,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "monthly_rollup_item_amount",
+      "actual": "13221498.11",
+      "expected": "13221498.11",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "monthly_rollup_freight_amount",
+      "actual": "2198275.64",
+      "expected": "2198275.64",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "monthly_rollup_recorded_payment_amount",
+      "actual": "15422461.77",
+      "expected": "15422461.77",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "monthly_rollup_delivered_orders",
+      "actual": "96478",
+      "expected": 96478,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "amount_rollup_ads.category_ranking",
+      "actual": "13221498.11",
+      "expected": "13221498.11",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "amount_rollup_ads.seller_ranking",
+      "actual": "13221498.11",
+      "expected": "13221498.11",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "on_time_review_sample",
+      "actual": "89443",
+      "expected": 89443,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "on_time_review_low_rate",
+      "actual": "0.09267354628087161656",
+      "expected": 0.09267354628087161,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "late_review_sample",
+      "actual": "6381",
+      "expected": 6381,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "name": "late_review_low_rate",
+      "actual": "0.62419683435198244789",
+      "expected": 0.6241968343519825,
+      "passed": true,
+      "severity": "error"
+    }
+  ],
+  "kpi": {
+    "all_orders": 99441,
+    "delivered_orders": 96478,
+    "item_amount": "13221498.11",
+    "freight_amount": "2198275.64",
+    "recorded_payment_amount": "15422461.77",
+    "missing_payment_orders": 1,
+    "complete_payment_amount": null,
+    "payment_order_coverage": "0.99998963494268123303",
+    "average_order_value": "137.0415857501191982",
+    "delivered_buyers": 93358,
+    "valid_delivery_orders": 96470,
+    "average_delivery_days": "12.5582170980519755",
+    "late_eligible_orders": 96470,
+    "late_orders": 6534,
+    "late_rate": "0.06773090079817559863",
+    "reviewed_orders": 95832,
+    "average_review_score": "4.1559082561148677",
+    "low_score_orders": 12273,
+    "low_score_rate": "0.12806786877034810919"
+  },
+  "exports_sha256": {
+    "kpi_overview": "88b73f8026c307c6975dff70e0e5f2bedca0b916a1b679e9c3d65d353637cf89",
+    "trade_month": "5404f654617c5792b929721e0301388a23425d3f744004e30138bfa89d66cfd8",
+    "fulfillment_state": "bed2b703fc5a338ebd926f5d765d6aea8adbe85318ed769f113dcfb0dc6b7013",
+    "category_ranking": "18668ac9e49c1d1259c1411fd8bb910c5da7a057eaf36dca1b894c0bbf58ecf3",
+    "seller_ranking": "f2284dfa70de376d22bb2ab7347db7996ef7eab6537a5aa7aebd1fd15433d586",
+    "delivery_review_comparison": "c5ce3129d2f866be97c0395a219218fee62240ac89b1870eccbdc98ce5030e26",
+    "review_distribution": "64eece8159ad47916e55e1bc4eea84ffac9ee859c41b0c867d22ea3520d960fb"
+  },
+  "transform_sha256": "5f5f7b06f54b3ea321f0a917a3e81bd4df31fe13d1107289e00d566eafd219e9",
+  "ddl_sha256": "29ce843d1ef9efe75695486a238f8982d1d86703e24214ce76a26deade85e6c1",
+  "limitation": "complete_payment_amount is NULL until missing-payment source issue is resolved; recorded payment remains available with coverage"
+}
