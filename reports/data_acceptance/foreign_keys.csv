@@ -1,7 +1,0 @@
-﻿child,field,parent,rows,orphan_rows
-orders,customer_id,customers,99441,0
-items,order_id,orders,112650,0
-items,product_id,products,112650,0
-items,seller_id,sellers,112650,0
-payments,order_id,orders,103886,0
-reviews,order_id,orders,99224,0

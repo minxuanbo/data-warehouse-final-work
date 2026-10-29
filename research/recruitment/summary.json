@@ -1,0 +1,404 @@
+{
+  "sample_period": "2026-10-29 至 2026-10-30（Asia/Shanghai）",
+  "hash_errors": [],
+  "request_count": 36,
+  "pages": [
+    {
+      "source": "tencent",
+      "page": 1,
+      "keyword": "",
+      "returned": 10,
+      "reported_total": 2260,
+      "ids": [
+        "2059914523263021056",
+        "2059914529491562496",
+        "2059914527440551936",
+        "2114593286558760960",
+        "2099759086919925760",
+        "2066401749501132800",
+        "1790271644757925888",
+        "2080688521202544640",
+        "2005542856462323712",
+        "2071610936929730560"
+      ],
+      "at_utc": "2026-10-29T14:28:13.996207+00:00"
+    },
+    {
+      "source": "tencent",
+      "page": 2,
+      "keyword": "",
+      "returned": 10,
+      "reported_total": 2260,
+      "ids": [
+        "2082434681986527232",
+        "1967484294205169664",
+        "2080236641573847040",
+        "2062560340050362368",
+        "2083026530455437312",
+        "2079038134749933568",
+        "2087079359847510016",
+        "2103073772172132352",
+        "2099774651340337152",
+        "2115620615661731840"
+      ],
+      "at_utc": "2026-10-29T14:29:48.534558+00:00"
+    },
+    {
+      "source": "ncss",
+      "page": 1,
+      "keyword": "数据",
+      "returned": 10,
+      "reported_total": 100,
+      "ids": [
+        "4oRGcFsfGVGDwtRFWKjCQV",
+        "77Ug7QqNz6LxST5k5Dk98z",
+        "7CNzjgDBqdB9AV597pTWD4",
+        "8w3AvbmY7ZeHu45M8Cd6G2",
+        "AqUJy8NZKutELH8LEBg9xL",
+        "BHJoMh3AVUXF3r49JBWkZq",
+        "Eakb6iMm9j7uiGnUCnNaqU",
+        "FNE3Th6CKjXSJHruWhULsD",
+        "GAngFwk7ec4kYKqxzLTery",
+        "GVPBD81rCthSr5X5sUuJjv"
+      ],
+      "at_utc": "2026-10-29T14:31:18.471424+00:00"
+    },
+    {
+      "source": "ncss",
+      "page": 2,
+      "keyword": "数据",
+      "returned": 10,
+      "reported_total": 100,
+      "ids": [
+        "J1oTJyQRCeAqFExXhy4yYL",
+        "JFNVL1SdmL92CcoaE5vTgW",
+        "Lg7FocWDSK7AhBWzEyyj7s",
+        "MB1cvx9ABexNQZffy8iFpA",
+        "TdAseaviL1AfiNgG8UQtme",
+        "Vu48vjfB4BwzuBD2k4ZkhQ",
+        "X1yeoX9RN43TRVj2NWqNgt",
+        "A7RYqj2bftyJxcCJUA8fkp",
+        "6Xnb2XHc9fZCHw6sQ6gyxT",
+        "CsgL6ZPLRKxUQXMbyzWLFv"
+      ],
+      "at_utc": "2026-10-29T14:31:28.411734+00:00"
+    },
+    {
+      "source": "netease",
+      "page": 1,
+      "keyword": "",
+      "returned": 10,
+      "reported_total": 2728,
+      "ids": [
+        "79623",
+        "55067",
+        "79622",
+        "79501",
+        "76108",
+        "41748",
+        "37610",
+        "46762",
+        "51964",
+        "57019"
+      ],
+      "at_utc": "2026-10-29T14:31:33.381411+00:00"
+    },
+    {
+      "source": "netease",
+      "page": 2,
+      "keyword": "",
+      "returned": 10,
+      "reported_total": 2728,
+      "ids": [
+        "79060",
+        "76217",
+        "77615",
+        "78811",
+        "79396",
+        "71912",
+        "72440",
+        "73261",
+        "77664",
+        "74692"
+      ],
+      "at_utc": "2026-10-29T14:32:59.541209+00:00"
+    },
+    {
+      "source": "tencent",
+      "page": 1,
+      "keyword": "数据",
+      "returned": 10,
+      "reported_total": 774,
+      "ids": [
+        "2059914523263021056",
+        "2059914525578276864",
+        "2039960834234544128",
+        "2103026924338200576",
+        "2047239002926510080",
+        "2059914527440551936",
+        "2110256329754062848",
+        "2097954502169767936",
+        "2096495552534589440",
+        "2109837811703263232"
+      ],
+      "at_utc": "2026-10-29T16:11:21.433955+00:00"
+    },
+    {
+      "source": "tencent",
+      "page": 1,
+      "keyword": "",
+      "returned": 10,
+      "reported_total": 2252,
+      "ids": [
+        "2072330920538583040",
+        "2082710396749393920",
+        "2112120499797667840",
+        "2046593469711024128",
+        "2110629918290395136",
+        "2098253020012916736",
+        "2043890038449799168",
+        "2077312480664797184",
+        "2110199350654320640",
+        "2072248701686034432"
+      ],
+      "at_utc": "2026-10-29T16:11:27.447811+00:00"
+    },
+    {
+      "source": "tencent",
+      "page": 10,
+      "keyword": "",
+      "returned": 10,
+      "reported_total": 2252,
+      "ids": [
+        "2112363288938590208",
+        "1936827497983352832",
+        "1927639153244217344",
+        "2082741237781278720",
+        "1936827253514149888",
+        "2095412220828762112",
+        "2037425096561422336",
+        "2015743823438831616",
+        "2108797627301801984",
+        "1934984932162117632"
+      ],
+      "at_utc": "2026-10-29T16:12:03.756649+00:00"
+    },
+    {
+      "source": "netease",
+      "page": 10,
+      "keyword": "",
+      "returned": 10,
+      "reported_total": 2728,
+      "ids": [
+        "16025",
+        "64936",
+        "65446",
+        "65844",
+        "66218",
+        "68015",
+        "69811",
+        "77808",
+        "78243",
+        "78735"
+      ],
+      "at_utc": "2026-10-29T16:12:08.522284+00:00"
+    },
+    {
+      "source": "netease",
+      "page": 1,
+      "keyword": "",
+      "returned": 10,
+      "reported_total": 2728,
+      "ids": [
+        "17986",
+        "27468",
+        "29002",
+        "29290",
+        "49161",
+        "49751",
+        "53229",
+        "68866",
+        "76901",
+        "78514"
+      ],
+      "at_utc": "2026-10-29T16:12:13.195293+00:00"
+    }
+  ],
+  "details": [
+    {
+      "source": "ncss",
+      "id": "TpoHfqR1rCLt7gCe3BhNMD",
+      "success": true,
+      "linked_to_sample": false
+    },
+    {
+      "source": "tencent",
+      "id": "2059914523263021056",
+      "success": true
+    },
+    {
+      "source": "tencent",
+      "id": "2059914529491562496",
+      "success": true
+    },
+    {
+      "source": "tencent",
+      "id": "2059914527440551936",
+      "success": true
+    },
+    {
+      "source": "ncss",
+      "id": "X1yeoX9RN43TRVj2NWqNgt",
+      "success": true,
+      "linked_to_sample": true
+    },
+    {
+      "source": "ncss",
+      "id": "A7RYqj2bftyJxcCJUA8fkp",
+      "success": true,
+      "linked_to_sample": true
+    },
+    {
+      "source": "ncss",
+      "id": "6Xnb2XHc9fZCHw6sQ6gyxT",
+      "success": true,
+      "linked_to_sample": true
+    },
+    {
+      "source": "ncss",
+      "id": "CsgL6ZPLRKxUQXMbyzWLFv",
+      "success": true,
+      "linked_to_sample": true
+    },
+    {
+      "source": "netease",
+      "id": "79623",
+      "success": true
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://cdn.multilingualres.hr.tencent.com/tencentcareer/static/js/vendor/config.js",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://cdn.multilingualres.hr.tencent.com/tencentcareer/static/js/p_zh-cn_search.build.js",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ncss.cn/student/jobs/jobslist/ajax/?jobName=%E6%95%B0%E6%8D%AE&offset=10&limit=10",
+      "error": [
+        {
+          "type": 0,
+          "des": "请登录后查看",
+          "refs": []
+        }
+      ],
+      "http_status": 200
+    }
+  ],
+  "sources": {
+    "tencent": {
+      "unique_source_ids": 48,
+      "companies": 1,
+      "field_presence": {
+        "title": 48,
+        "company": 48,
+        "locations_raw": 48,
+        "education_structured_raw": 0,
+        "experience_raw": 48,
+        "description": 48,
+        "requirement": 3,
+        "salary_min_cny_month": 0,
+        "updated_at_raw": 48
+      },
+      "possible_repost_groups": [],
+      "skills_demo_counts": {
+        "Python": 2,
+        "PyTorch": 2,
+        "机器学习": 1,
+        "Spark": 1,
+        "数据治理": 4
+      }
+    },
+    "netease": {
+      "unique_source_ids": 40,
+      "companies": 1,
+      "field_presence": {
+        "title": 40,
+        "company": 40,
+        "locations_raw": 40,
+        "education_structured_raw": 40,
+        "experience_raw": 40,
+        "description": 40,
+        "requirement": 40,
+        "salary_min_cny_month": 0,
+        "updated_at_raw": 40
+      },
+      "possible_repost_groups": [],
+      "skills_demo_counts": {
+        "Python": 4,
+        "C++": 5
+      }
+    },
+    "ncss": {
+      "unique_source_ids": 20,
+      "companies": 6,
+      "field_presence": {
+        "title": 20,
+        "company": 20,
+        "locations_raw": 20,
+        "education_structured_raw": 20,
+        "experience_raw": 0,
+        "description": 4,
+        "requirement": 0,
+        "salary_min_cny_month": 17,
+        "updated_at_raw": 20
+      },
+      "possible_repost_groups": [
+        {
+          "company": "重庆一路好棋网络科技有限公司",
+          "title": "市场调研及数据整合",
+          "locations": [
+            "重庆"
+          ],
+          "ids": [
+            "4oRGcFsfGVGDwtRFWKjCQV",
+            "77Ug7QqNz6LxST5k5Dk98z",
+            "7CNzjgDBqdB9AV597pTWD4",
+            "8w3AvbmY7ZeHu45M8Cd6G2",
+            "BHJoMh3AVUXF3r49JBWkZq",
+            "Eakb6iMm9j7uiGnUCnNaqU",
+            "FNE3Th6CKjXSJHruWhULsD",
+            "GAngFwk7ec4kYKqxzLTery",
+            "GVPBD81rCthSr5X5sUuJjv",
+            "J1oTJyQRCeAqFExXhy4yYL",
+            "JFNVL1SdmL92CcoaE5vTgW",
+            "Lg7FocWDSK7AhBWzEyyj7s",
+            "MB1cvx9ABexNQZffy8iFpA",
+            "Vu48vjfB4BwzuBD2k4ZkhQ"
+          ]
+        },
+        {
+          "company": "思境形科（昆山）感知科技有限公司",
+          "title": "数据采集工程师",
+          "locations": [
+            "江苏"
+          ],
+          "ids": [
+            "AqUJy8NZKutELH8LEBg9xL",
+            "TdAseaviL1AfiNgG8UQtme"
+          ]
+        }
+      ],
+      "skills_demo_counts": {
+        "数据治理": 1,
+        "SQL": 1,
+        "MySQL": 1,
+        "Redis": 1,
+        "MongoDB": 1,
+        "Oracle": 1
+      }
+    }
+  }
+}

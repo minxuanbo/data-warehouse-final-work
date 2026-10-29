@@ -1,14 +1,19 @@
-# Downloaded datasets remain local; commit manifests, audit scripts and reports.
-data/raw/
-data/downloads/
-tmp/
-__pycache__/
-.venv/
+# Credentials and local environments
 .env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
 .local/
 .runtime/
-reports/data_acceptance/selected_review_keys.csv
-reports/data_acceptance/time_anomalies.csv
-reports/data_acceptance/order_amount_exceptions.csv
-reports/data_acceptance/issue_examples.csv
+# Bulk data and raw collection evidence remain in shared storage/local disk
+data/
+research/**/raw/
+research/**/samples.json
+*.log
+*.dump
+*.sqlite
+*.sqlite3
+tmp/
 ~$*

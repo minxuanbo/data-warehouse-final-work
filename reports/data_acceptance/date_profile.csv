@@ -1,9 +1,0 @@
-﻿table,column,missing,invalid,min,max
-orders,order_purchase_timestamp,0,0,2016-09-04 21:15:19,2018-10-17 17:30:18
-orders,order_approved_at,160,0,2016-09-15 12:16:38,2018-09-03 17:40:06
-orders,order_delivered_carrier_date,1783,0,2016-10-08 10:34:01,2018-09-11 19:48:28
-orders,order_delivered_customer_date,2965,0,2016-10-11 13:46:32,2018-10-17 13:22:46
-orders,order_estimated_delivery_date,0,0,2016-09-30 00:00:00,2018-11-12 00:00:00
-items,shipping_limit_date,0,0,2016-09-19 00:15:34,2020-04-09 22:35:08
-reviews,review_creation_date,0,0,2016-10-02 00:00:00,2018-08-31 00:00:00
-reviews,review_answer_timestamp,0,0,2016-10-07 18:32:28,2018-10-29 12:27:35
