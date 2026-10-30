@@ -1,0 +1,2 @@
+# Preserve exact bytes of collected evidence and hashed JSONL across Windows/Linux.
+data/** -text

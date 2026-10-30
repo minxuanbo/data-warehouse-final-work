@@ -3,12 +3,13 @@
 .env.*
 !.env.example
 .venv/
+.venv-dbt/
 __pycache__/
 *.pyc
 .local/
 .runtime/
-# Bulk data and raw collection evidence remain in shared storage/local disk
-data/
+# Formal collection batches under data/ are intentionally tracked.
+# Legacy probe dumps and local runtime artifacts remain ignored.
 research/**/raw/
 research/**/samples.json
 *.log
@@ -17,3 +18,9 @@ research/**/samples.json
 *.sqlite3
 tmp/
 ~$*
+
+# Local databases and backups are not collection batches
+*.bak
+*.mdf
+*.ndf
+*.ldf
