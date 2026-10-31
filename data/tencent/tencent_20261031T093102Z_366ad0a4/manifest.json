@@ -38,7 +38,14 @@
     "output_records": 100,
     "excluded_unique_ids": 146,
     "unresolved_unique_ids": 0,
-    "unidentified_records": 0
+    "unidentified_records": 0,
+    "unprocessed_unique_ids": 4,
+    "unprocessed_ids": [
+      "2026648914832293888",
+      "2059112534874701824",
+      "2067158751374393344",
+      "2069983779044376576"
+    ]
   },
   "error_pages": [],
   "files": [
@@ -806,9 +813,9 @@
     },
     {
       "path": "quality_issues.jsonl",
-      "bytes": 41599,
-      "sha256": "2d7e53e8325a8cdca23b866f3cae20ec6b606647997cd2387dc4e6aa6434f2da",
-      "records": 147
+      "bytes": 45740,
+      "sha256": "f0494d3d8157cf7c55b7e27552b4f311396e7162def4e7576cd0f54d051583e5",
+      "records": 156
     }
   ]
 }

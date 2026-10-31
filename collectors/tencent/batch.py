@@ -32,8 +32,43 @@ class Batch:
             raise ValueError("该目录不是 tencent/A 的批次")
         self.batch_id = self.manifest["batch_id"]
         self.jobs = self._load_ids("jobs.jsonl")
+        self.issue_keys = self._load_issue_keys()
         self.request_count = count_nonempty_lines(self.path / "requests.jsonl") \
             if (self.path / "requests.jsonl").exists() else 0
+
+    def _load_issue_keys(self):
+        """已登记的问题键，重跑时不重复写同一岗位的同一规则。"""
+        keys = set()
+        path = self.path / "quality_issues.jsonl"
+        if not path.exists():
+            return keys
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                row = json.loads(line)
+                keys.add((row.get("source_job_id"), row.get("rule")))
+        return keys
+
+    def requested_at_for(self, response_path):
+        """按原始请求日志取响应时刻，不使用文件修改时间。"""
+        path = self.path / "requests.jsonl"
+        if not path.exists():
+            return None
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            if row.get("response_path") == response_path and not row.get("error"):
+                return row.get("requested_at")
+        return None
+
+    def first_requested_at(self):
+        path = self.path / "requests.jsonl"
+        if not path.exists():
+            return None
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                return json.loads(line).get("requested_at")
+        return None
 
     def _load_ids(self, name):
         found = set()
@@ -72,6 +107,10 @@ class Batch:
         self.jobs.add(row["source_job_id"])
 
     def add_issue(self, source_job_id, rule, severity, action, message, raw_refs):
+        key = (source_job_id, rule)
+        if key in self.issue_keys:
+            return
+        self.issue_keys.add(key)
         self.append_jsonl("quality_issues.jsonl", {
             "source_job_id": source_job_id,
             "rule": rule,
@@ -80,6 +119,25 @@ class Batch:
             "message": message,
             "raw_refs": raw_refs,
         })
+
+    def log_attempt(self, attempt, url, params, response_path, business_success):
+        """记录一次实际请求；重试链路中的失败尝试同样落盘，不留空档。"""
+        row = {
+            "request_id": attempt.request_id,
+            "requested_at": attempt.requested_at,
+            "method": "GET",
+            "url": url,
+            "params": params,
+            "http_status": attempt.status,
+            "business_success": business_success,
+            "response_path": response_path,
+            "encoding": attempt.encoding,
+            "elapsed_ms": attempt.elapsed_ms,
+            "attempt": attempt.attempt,
+            "error": attempt.error,
+        }
+        self.append_jsonl("requests.jsonl", row)
+        self.request_count += 1
 
     def log_request(self, response, response_path, business_success):
         row = {

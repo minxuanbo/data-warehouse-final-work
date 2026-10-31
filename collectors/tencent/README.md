@@ -36,7 +36,7 @@ python -m collectors.tencent --batch-dir data/tencent/<batch_id> --target 100 --
 - 列表：`GET https://careers.tencent.com/tencentcareer/api/post/Query`，参数 `pageIndex`、`pageSize`、`language=zh-cn`（可选 `keyword`）。响应 `Code=200` 且 `Data.Posts` 非空才算业务成功。
 - 详情：`GET https://careers.tencent.com/tencentcareer/api/post/ByPostId`，参数 `postId`、`language=zh-cn`。`postId` 只取自真实列表，不枚举、不编造。
 - 分页：按 `pageIndex` 顺序翻页，以 `Data.Count` 和 `Posts` 长度为准；若整页 ID 与上一页完全相同，判定分页停滞并中止（`quality_issues.jsonl` 记 `pagination_stalled`）。
-- 访问规则：单并发、请求间隔 ≥3 秒、最多重试 2 次；HTTP 401/403/418/429 或响应出现登录/验证码提示时立即停止并返回退出码 2。遵守网站规则，不做代理轮换、不绕过访问控制。
+- 访问规则：单并发、请求间隔 ≥3 秒、最多重试 2 次；HTTP 401/403/418/429 或响应出现登录/验证码提示时立即停止并返回退出码 2。触发受限的那一次请求同样写入 `requests.jsonl`，并登记 `access_restriction`，退出前仍完成 `manifest.json` 更新。遵守网站规则，不做代理轮换、不绕过访问控制。
 - 已知限制：接口未披露薪资、招聘人数、发布时间与结构化学历；`OuterPostTypeID` 为未经验证的来源代码，原样保存不译码。
 
 ## 4. 字段映射
@@ -66,10 +66,12 @@ python -m collectors.tencent --batch-dir data/tencent/<batch_id> --target 100 --
 - 类目白名单：`CategoryName` 含 技术/研发/数据/测试/运维/安全/算法/开发。
 - 标题黑名单兜底：策划、美术、原画、动画、视觉设计、销售、商务、售前、产品经理、项目经理、招聘、人力资源、财务、法务、行政。
 - 海外及港澳台地点排除；地点为空或类目为空照常输出并标记 `scope_review`，交 C 复核。
+- 标题括号内的城市与 `LocationName` 不一致时（仅当括号内容全部是已知城市，避免把 `（U3D方向）` 误判），逐条登记 `location_conflict`，保留源字段原值，不修正、不丢弃。
 - 排除项写 `quality_issues.jsonl`（`rule=scope_exclude`，含 ID、原因、原始引用），不写入 `jobs.jsonl`。
 
 ## 6. 限速、重跑与日志
 
 - 单并发、间隔 ≥3 秒；网络错误最多重试 2 次（4s、8s 退避）。
-- 断点续跑：已存在的 `raw/list_*.json`、`raw/detail_*.json` 直接复用，不覆盖原始字节；`jobs.jsonl` 中已有的 `source_job_id` 不重复写入；已排除与待复核 ID 不重复登记。
-- 请求日志：`requests.jsonl` 每请求一行，记录 URL、脱敏参数、HTTP 状态、业务成功标记、响应文件、编码、耗时、尝试次数和错误；不保存 Cookie、Authorization、Token 或登录态。
+- 断点续跑：已存在的 `raw/list_*.json`、`raw/detail_*.json` 直接复用，不覆盖原始字节；`jobs.jsonl` 中已有的 `source_job_id` 不重复写入；已排除、待复核与已登记问题不重复登记。恢复时 `observed_at` 取自 `requests.jsonl` 中该响应文件的 `requested_at`（详情缺失时退到列表响应时刻），不读文件修改时间；日志完全缺失才退化为当前时刻并登记 `observed_at_fallback`。
+- 请求日志：一次 HTTP 调用中的**每一次尝试**都单独写 `requests.jsonl`（重试前的失败尝试也留痕），记录 `request_id`、URL、脱敏参数、HTTP 状态、业务成功标记、响应文件、编码、耗时、`attempt` 与错误；不保存 Cookie、Authorization、Token 或登录态。
+- 清单计数：`counts.unprocessed_unique_ids` 与 `counts.unprocessed_ids` 明确记录“达到 target 时同页剩余、未输出也未排除”的岗位，便于逐项对账。

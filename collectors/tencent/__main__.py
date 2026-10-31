@@ -7,12 +7,11 @@ import json
 import re
 import subprocess
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlencode
 
 from .batch import Batch, sha256_file
-from .client import Client, StopCollection
+from .client import Client, StopCollection, utc_now
 from .mapping import build_job, classify, text_issues
 from . import COLLECTOR_VERSION
 
@@ -47,11 +46,6 @@ def parse_json(body):
 def raw_ref(batch, relative):
     """raw_refs 每项固定为 path + 64 位小写 sha256，路径相对本批次目录。"""
     return {"path": relative, "sha256": sha256_file(batch.path / relative)}
-
-
-def mtime_iso(path):
-    stamp = datetime.fromtimestamp(Path(path).stat().st_mtime, timezone.utc)
-    return stamp.isoformat(timespec="seconds").replace("+00:00", "Z")
 
 
 def load_issue_ids(batch):
@@ -95,10 +89,11 @@ def run(args):
 
     error_pages = []
     stop_reason = None
+    halted = False
     page = 1
     previous_ids = None
 
-    while page <= args.max_pages:
+    while page <= args.max_pages and not halted:
         if len(batch.jobs) >= args.target:
             stop_reason = "pilot_limit"
             break
@@ -113,7 +108,17 @@ def run(args):
             if args.keyword:
                 params["keyword"] = args.keyword
             url = LIST_URL + "?" + urlencode(params)
-            response = client.get(url, params)
+            try:
+                response = client.get(url, params)
+            except StopCollection as exc:
+                # 受限请求本身也要留痕，并写入异常文件后再收尾清单。
+                batch.log_attempt(exc.attempt, url, params, None, False)
+                batch.add_issue(None, "access_restriction", "error", "stop", str(exc), [])
+                error_pages.append({"page": page, "status": exc.attempt.status, "reason": str(exc)})
+                stop_reason = "access_restricted"
+                break
+            for attempt in response.attempts[:-1]:
+                batch.log_attempt(attempt, url, params, None, False)
             if response.error or response.body is None:
                 batch.log_request(response, None, False)
                 error_pages.append({"page": page, "status": response.status, "reason": response.error})
@@ -170,12 +175,30 @@ def run(args):
             detail_name = f"detail_{safe_name(job_id)}.json"
             if batch.has_raw(detail_name):
                 detail_body = batch.read_raw(detail_name)
-                observed_at = mtime_iso(batch.path / detail_name)
-                detail_response = None
                 detail_path = batch.raw_path(detail_name)
+                # 观察时间必须取自当时的请求日志；日志缺失才退到列表响应时刻。
+                observed_at = (batch.requested_at_for(detail_path)
+                               or batch.requested_at_for(response_path)
+                               or batch.first_requested_at())
+                if observed_at is None:
+                    observed_at = utc_now()
+                    batch.add_issue(job_id, "observed_at_fallback", "warning", "review",
+                                    "请求日志缺失，观察时间退化为当前时刻", [raw_ref(batch, detail_path)])
+                detail_response = None
             else:
                 params = {"postId": job_id, "language": "zh-cn"}
-                detail_response = client.get(DETAIL_URL + "?" + urlencode(params), params)
+                detail_url = DETAIL_URL + "?" + urlencode(params)
+                try:
+                    detail_response = client.get(detail_url, params)
+                except StopCollection as exc:
+                    batch.log_attempt(exc.attempt, detail_url, params, None, False)
+                    batch.add_issue(job_id, "access_restriction", "error", "stop", str(exc), [])
+                    error_pages.append({"page": page, "status": exc.attempt.status, "reason": str(exc)})
+                    stop_reason = "access_restricted"
+                    halted = True
+                    break
+                for attempt in detail_response.attempts[:-1]:
+                    batch.log_attempt(attempt, detail_url, params, None, False)
                 if detail_response.error or detail_response.body is None:
                     batch.log_request(detail_response, None, False)
                     if job_id not in unresolved:
@@ -216,6 +239,8 @@ def run(args):
 
     list_pages = len(list((batch.path / "raw").glob("list_*.json")))
     listed_records, unique_listed = list_stats(batch)
+    # 达到目标时同页剩余、既未输出也未排除的岗位：单独计数，便于逐项对账。
+    unprocessed = sorted(unique_listed - set(batch.jobs) - excluded - (unresolved - set(batch.jobs)))
     counts = {
         "requests": batch.request_count,
         "failed_requests": _count_failed_requests(batch),
@@ -227,6 +252,8 @@ def run(args):
         "output_records": len(batch.jobs),
         "excluded_unique_ids": len(excluded),
         "unresolved_unique_ids": len(unresolved - batch.jobs),
+        "unprocessed_unique_ids": len(unprocessed),
+        "unprocessed_ids": unprocessed,
         "unidentified_records": 0,
     }
     query_spec = {
@@ -259,7 +286,8 @@ def run(args):
 
     if counts["output_records"] >= args.target:
         return 0
-    if stop_reason in ("list_request_failed", "list_business_failed", "pagination_stalled"):
+    if stop_reason in ("list_request_failed", "list_business_failed", "pagination_stalled",
+                       "access_restricted"):
         return 2
     return 3
 

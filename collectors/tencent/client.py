@@ -1,4 +1,4 @@
-"""腾讯公开接口访问层：单并发、请求间隔至少 3 秒、失败有限重试。"""
+"""腾讯公开接口访问层：单并发、请求间隔至少 3 秒、失败有限重试、每次尝试留痕。"""
 import time
 import urllib.error
 import urllib.request
@@ -12,12 +12,28 @@ RESTRICTION_TEXT = ("登录", "验证码", "访问受限", "访问过于频繁")
 
 
 class StopCollection(Exception):
-    """遇到登录、验证码或访问限制，立即停止采集。"""
+    """遇到登录、验证码或访问限制，立即停止采集；携带当次尝试，便于完整留痕。"""
+
+    def __init__(self, reason, attempt):
+        super().__init__(reason)
+        self.attempt = attempt
 
 
 def utc_now():
     """返回带时区的 UTC 时间字符串（Z 结尾）。"""
     return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+@dataclass
+class Attempt:
+    """一次实际发出的 HTTP 请求；重试的每一次都单独记录，失败尝试同样留痕。"""
+    request_id: str
+    requested_at: str
+    status: int | None
+    encoding: str | None
+    elapsed_ms: int
+    attempt: int
+    error: str | None = None
 
 
 @dataclass
@@ -34,6 +50,7 @@ class Response:
     error: str | None = None
     response_path: str | None = None
     business_success: bool | None = None
+    attempts: list = field(default_factory=list)
 
 
 @dataclass
@@ -52,7 +69,12 @@ class Client:
         self._last_request_at = time.monotonic()
 
     def get(self, url, params):
-        """执行一次 GET，网络错误按退避重试；访问限制抛 StopCollection。"""
+        """执行一次 GET，网络错误按退避重试；访问限制抛 StopCollection。
+
+        返回的 Response.attempts 包含本次调用的全部尝试（含失败尝试），
+        调用方必须把 attempts 逐条写入运行日志。
+        """
+        attempts = []
         attempt = 0
         while True:
             attempt += 1
@@ -79,27 +101,49 @@ class Client:
                 error = f"{type(exc).__name__}: {exc}"
 
             elapsed_ms = int((time.monotonic() - started) * 1000)
-            result = Response(
+            current = Attempt(
                 request_id=request_id,
                 requested_at=utc_now(),
-                url=url,
-                params=dict(params),
                 status=status,
-                body=body,
                 encoding=encoding,
                 elapsed_ms=elapsed_ms,
                 attempt=attempt,
                 error=error,
             )
+            attempts.append(current)
 
             if status in RESTRICTION_STATUS:
-                raise StopCollection(f"HTTP {status} 访问受限，停止采集")
+                raise StopCollection(f"HTTP {status} 访问受限，停止采集", current)
             if body is not None:
                 text = body[:2000].decode("utf-8", errors="ignore")
                 if any(word in text for word in RESTRICTION_TEXT):
-                    raise StopCollection("响应中出现登录/验证码提示，停止采集")
+                    raise StopCollection("响应中出现登录/验证码提示，停止采集", current)
             if error is None:
-                return result
+                return Response(
+                    request_id=request_id,
+                    requested_at=current.requested_at,
+                    url=url,
+                    params=dict(params),
+                    status=status,
+                    body=body,
+                    encoding=encoding,
+                    elapsed_ms=elapsed_ms,
+                    attempt=attempt,
+                    error=error,
+                    attempts=attempts,
+                )
             if attempt > self.retries:
-                return result
+                return Response(
+                    request_id=request_id,
+                    requested_at=current.requested_at,
+                    url=url,
+                    params=dict(params),
+                    status=status,
+                    body=body,
+                    encoding=encoding,
+                    elapsed_ms=elapsed_ms,
+                    attempt=attempt,
+                    error=error,
+                    attempts=attempts,
+                )
             time.sleep(self.backoff * attempt)

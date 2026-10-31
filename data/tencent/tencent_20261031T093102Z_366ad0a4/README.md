@@ -6,7 +6,8 @@
 - 规范：schema v1.0；范围：digital_jobs_cn_v1；阶段：pilot
 - 实际执行命令：`python -m collectors.tencent --batch-dir data/tencent/tencent_20261031T093102Z_366ad0a4 --target 100 --max-pages 40`
 - 依赖：Python 3.12+，仅标准库（`collectors/tencent/requirements.txt`）
-- 代码 commit：`becadaa`；parser_version：`tencent-collector-1.0.0+becadaa`
+- 代码 commit：`becadaa`（本批数据由该版本采集）；后续采集器修复与异常补登记见 PR 追加提交，本批未重采，`raw/` 与 `jobs.jsonl` 未改动
+- parser_version：`tencent-collector-1.0.0+becadaa`
 - 来源及字段映射：见 [collectors/tencent/README.md](../../../collectors/tencent/README.md)
 
 ## 1. 实际数量、范围与停止原因
@@ -19,7 +20,7 @@
 | 输出记录 | **100** | 达到 pilot 目标后停止 |
 | 排除 ID | 146 | 类目/标题不在技术岗范围，`quality_issues.jsonl` 逐条含原因 |
 | 待复核 | 1 | `CategoryName` 为空的技术岗，已输出并标记 |
-| 未处理 | 4 | 第 25 页达到 target 后同页剩余 4 条，未请求详情、未入 jobs |
+| 未处理 | 4 | 第 25 页达到 target 后同页剩余 4 条，未请求详情、未入 jobs；已在 manifest `counts.unprocessed_unique_ids=4` 与 `unprocessed_ids` 中逐条计数 |
 | 失败请求 | 0 | 125 次请求全部 HTTP 200 且业务 `Code=200` |
 | 原始响应文件 | 125 | 25 个列表 + 100 个详情 |
 
@@ -44,7 +45,7 @@
 - 单并发、请求间隔实测 ≥3 秒（125 次请求耗时约 6 分钟），网络失败重试上限 2 次并退避。
 - 未出现登录、验证码或访问限制；列表与详情业务状态均为成功，`error_pages` 为空。
 - 排除规则：`CategoryName` 白名单（技术/研发/数据/测试/运维/安全/算法/开发）+ 标题黑名单（策划/美术/销售/产品经理等）+ 海外及港澳台地点。146 条排除均为类目或标题不符，未静默删除。
-- 标题与 `LocationName` 存在城市不一致：如“（上海）”标题对应杭州、“（北京）”标题对应深圳。按规范保留源字段原值，不做修正，待 C 复核。
+- 标题与 `LocationName` 存在城市不一致的共 9 条（如“（上海）”标题对应杭州、“（北京）”标题对应深圳），已逐条写入 `quality_issues.jsonl`（`rule=location_conflict`，含 ID、冲突说明与列表原始引用）。按规范保留源字段原值，不做修正，待 C 复核。
 - 正文未出现“扫码/推荐岗位/公司介绍”等页面弹窗内容，无 HTML 实体残留；职责与任职要求均来自详情接口 `Responsibility` / `Requirement` 原文。
 
 ## 4. 自检
@@ -57,6 +58,10 @@
 - [x] 无凭据、私人联系方式、绝对路径；单文件均远小于 50 MiB
 - [x] 已按唯一 ID 解释输出、排除、待复核和未处理去向
 - [x] 重跑不覆盖已有 raw，不重复写同一岗位；重跑后计数从原始列表回读，保持一致
+- [x] 断点恢复路径正确：已有详情 raw 但尚未写入 jobs 时重跑不报错，`observed_at` 取自 `requests.jsonl` 原请求时刻，不取文件修改时间（离线用例已验证）
+- [x] 失败尝试完整留痕：重试成功后，之前的失败请求仍各占一行 `requests.jsonl`（离线用例：失败 2 次 + 成功 1 次共 3 行）
+- [x] 访问受限（403）时：当次请求写入日志、登记 `access_restriction`、退出前完成清单更新，退出码 2（离线用例已验证）
+- [x] 城市冲突逐条登记 `location_conflict`，未处理岗位在 manifest 中明确计数
 
 ## 5. 人工抽检（20 条）
 
@@ -85,7 +90,7 @@
 | 2072607377244467200 | raw/detail_2072607377244467200.json#/Data | 英雄联盟手游-游戏客户端开发工程师（U3D方向）-GamePlay开发方向／深圳；职责 551、要求 431 | 无 | 通过（A） |
 | 2072477788216147968 | raw/detail_2072477788216147968.json#/Data | 腾讯视频-Agent 技术负责人／北京；职责 285、要求 251 | 无 | 通过（A） |
 
-抽检结论：20/20 的 ID、标题、地点、URL 与详情原文一致；无正文错配；3 条标题城市与 `LocationName` 不一致，保留原值待复核。
+抽检结论：20/20 的 ID、标题、地点、URL 与详情原文一致；无正文错配；抽查样本中 4 条标题城市与 `LocationName` 不一致（本批共 9 条，均已逐条登记 `location_conflict`），保留原值待复核。
 
 ## 6. 验收
 
