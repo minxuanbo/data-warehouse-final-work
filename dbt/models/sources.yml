@@ -1,0 +1,18 @@
+version: 2
+sources:
+  - name: dwd
+    schema: dwd
+    tables:
+      - name: fact_posting_observation
+      - name: bridge_version_location
+  - name: dim
+    schema: dim
+    tables:
+      - name: posting_identity
+      - name: posting_version
+      - name: location
+  - name: audit
+    schema: audit
+    tables:
+      - name: collection_batch
+      - name: quality_issue
