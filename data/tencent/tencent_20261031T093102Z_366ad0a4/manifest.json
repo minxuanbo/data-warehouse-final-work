@@ -26,7 +26,7 @@
   },
   "coverage_status": "partial",
   "stop_reason": "pilot_limit",
-  "acceptance_status": "pending",
+  "acceptance_status": "accepted",
   "supersedes_batch_id": null,
   "counts": {
     "requests": 125,
@@ -817,5 +817,8 @@
       "sha256": "f0494d3d8157cf7c55b7e27552b4f311396e7162def4e7576cd0f54d051583e5",
       "records": 156
     }
-  ]
+  ],
+  "acceptance_scope": "pilot_technical",
+  "reviewed_revision": "61faf27a23d6d7fd48f0ec2dba0485a65c78d496",
+  "reviewed_on": "2026-10-31"
 }
