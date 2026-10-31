@@ -4,6 +4,7 @@
 
 - **采集成员先看：[采集提交入口](data/README.md)**：A 提交 `collectors/tencent/` 与 `data/tencent/`，B 提交 `collectors/netease/` 与 `data/netease/`；代码和完整批次都经 GitHub 交付。
 - **设计入口：[前五章设计总览](docs/design/README.md)**：按老师 PPT 顺序组织，五章各一份，图表直接嵌入对应章节。
+- **D 离线联调：[技能提取与分析入口](docs/analysis/README.md)**：已提供20岗正文核对、87项技能词典、提取与验证结果、指标口径和离线看板草图；数据问题与接入事项见组内交接说明。
 - **组员先读：[小组项目说明与采集交付规范](docs/小组项目说明与采集交付规范.md)**：选题原因、四人分工、两位采集成员的来源、交付格式、验收标准和 GitHub 协作约定；末尾附可直接发群的简版。
 - [招聘真实试采报告](research/recruitment/README.md)：成功范围和限制，不能将试采数量当作正式全量数据。
 - 根目录保留老师的作业要求、PPT 模板和 Word 模板。

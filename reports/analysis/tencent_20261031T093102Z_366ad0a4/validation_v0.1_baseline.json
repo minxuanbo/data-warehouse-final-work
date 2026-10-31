@@ -1,0 +1,112 @@
+{
+  "note": "v0.1冻结后原留出成绩；24岗已用于v0.2修复，现仅作回归。",
+  "validation": {
+    "reference_type": "历史正文参考",
+    "detection_unit": "(source_job_id, skill_name), dictionary scope, non-negated candidate including uncertain",
+    "rule_version": "skills-rules-0.1.0",
+    "dictionary_version": "skills-dict-0.1.0",
+    "splits": {
+      "dev": {
+        "job_count": 27,
+        "tp": 176,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "level_checks": 34,
+        "level_correct": 34,
+        "level_accuracy": 1.0
+      },
+      "holdout": {
+        "job_count": 24,
+        "tp": 69,
+        "fp": 1,
+        "fn": 3,
+        "precision": 0.9857142857142858,
+        "recall": 0.9583333333333334,
+        "level_checks": 26,
+        "level_correct": 22,
+        "level_accuracy": 0.8461538461538461
+      }
+    },
+    "formal_acceptance": "historical_reference_only"
+  },
+  "errors": [
+    {
+      "split": "holdout",
+      "source_job_id": "2072607375201845248",
+      "skill_name": "C++",
+      "kind": "level_mismatch",
+      "expected": {
+        "skill_name": "C++",
+        "field": "requirements_raw",
+        "anchor": "熟练掌握C++",
+        "level": "必需",
+        "polarity": "positive"
+      }
+    },
+    {
+      "split": "holdout",
+      "source_job_id": "2115001234858622976",
+      "skill_name": "React",
+      "kind": "false_positive"
+    },
+    {
+      "split": "holdout",
+      "source_job_id": "2091785005486489600",
+      "skill_name": "C++",
+      "kind": "level_mismatch",
+      "expected": {
+        "skill_name": "C++",
+        "field": "requirements_raw",
+        "anchor": "精通C++",
+        "level": "必需",
+        "polarity": "positive"
+      }
+    },
+    {
+      "split": "holdout",
+      "source_job_id": "2077641750666719232",
+      "skill_name": "Python",
+      "kind": "false_negative"
+    },
+    {
+      "split": "holdout",
+      "source_job_id": "2077641750666719232",
+      "skill_name": "React",
+      "kind": "false_negative"
+    },
+    {
+      "split": "holdout",
+      "source_job_id": "2077641750666719232",
+      "skill_name": "TypeScript",
+      "kind": "false_negative"
+    },
+    {
+      "split": "holdout",
+      "source_job_id": "2077641750666719232",
+      "skill_name": "React",
+      "kind": "level_mismatch",
+      "expected": {
+        "skill_name": "React",
+        "field": "requirements_raw",
+        "anchor": "TypeScript+Node.js+Python+React+Go",
+        "level": "不确定",
+        "polarity": "alternative"
+      }
+    },
+    {
+      "split": "holdout",
+      "source_job_id": "2043623808224620544",
+      "skill_name": "C++",
+      "kind": "level_mismatch",
+      "expected": {
+        "skill_name": "C++",
+        "field": "requirements_raw",
+        "anchor": "精通C++",
+        "level": "必需",
+        "polarity": "positive"
+      }
+    }
+  ]
+}

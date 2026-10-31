@@ -1,2 +1,11 @@
 # Preserve exact bytes of collected evidence and hashed JSONL across Windows/Linux.
 data/** -text
+/etl/skills/*.py text eol=lf
+/etl/skills/*.json text eol=lf
+/tests/test_skills.py text eol=lf
+/docs/analysis/*.md text eol=lf
+/sql/analysis_trial_checks.sql text eol=lf
+/dashboards/*.html text eol=lf
+# Preserve original newlines inside quoted CSV evidence; writers control row endings.
+/reports/analysis/** -text
+/reports/analysis/**/*.csv -whitespace
