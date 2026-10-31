@@ -12,11 +12,12 @@ RESTRICTION_TEXT = ("登录", "验证码", "访问受限", "访问过于频繁")
 
 
 class StopCollection(Exception):
-    """遇到登录、验证码或访问限制，立即停止采集；携带当次尝试，便于完整留痕。"""
+    """遇到登录、验证码或访问限制，立即停止采集；携带本次调用的全部尝试。"""
 
-    def __init__(self, reason, attempt):
+    def __init__(self, reason, attempts):
         super().__init__(reason)
-        self.attempt = attempt
+        self.attempts = attempts
+        self.attempt = attempts[-1] if attempts else None
 
 
 def utc_now():
@@ -59,8 +60,13 @@ class Client:
     retries: int = 2
     timeout: int = 30
     backoff: float = 4.0
+    seq_start: int = 0
     _last_request_at: float = field(default=0.0, init=False)
     _seq: int = field(default=0, init=False)
+
+    def __post_init__(self):
+        # 同一批次多次运行时从已有日志的最大编号继续，request_id 不重复。
+        self._seq = self.seq_start
 
     def _wait(self):
         gap = time.monotonic() - self._last_request_at
@@ -113,11 +119,11 @@ class Client:
             attempts.append(current)
 
             if status in RESTRICTION_STATUS:
-                raise StopCollection(f"HTTP {status} 访问受限，停止采集", current)
+                raise StopCollection(f"HTTP {status} 访问受限，停止采集", attempts)
             if body is not None:
                 text = body[:2000].decode("utf-8", errors="ignore")
                 if any(word in text for word in RESTRICTION_TEXT):
-                    raise StopCollection("响应中出现登录/验证码提示，停止采集", current)
+                    raise StopCollection("响应中出现登录/验证码提示，停止采集", attempts)
             if error is None:
                 return Response(
                     request_id=request_id,

@@ -72,6 +72,7 @@ python -m collectors.tencent --batch-dir data/tencent/<batch_id> --target 100 --
 ## 6. 限速、重跑与日志
 
 - 单并发、间隔 ≥3 秒；网络错误最多重试 2 次（4s、8s 退避）。
-- 断点续跑：已存在的 `raw/list_*.json`、`raw/detail_*.json` 直接复用，不覆盖原始字节；`jobs.jsonl` 中已有的 `source_job_id` 不重复写入；已排除、待复核与已登记问题不重复登记。恢复时 `observed_at` 取自 `requests.jsonl` 中该响应文件的 `requested_at`（详情缺失时退到列表响应时刻），不读文件修改时间；日志完全缺失才退化为当前时刻并登记 `observed_at_fallback`。
-- 请求日志：一次 HTTP 调用中的**每一次尝试**都单独写 `requests.jsonl`（重试前的失败尝试也留痕），记录 `request_id`、URL、脱敏参数、HTTP 状态、业务成功标记、响应文件、编码、耗时、`attempt` 与错误；不保存 Cookie、Authorization、Token 或登录态。
+- 断点续跑：已存在的 `raw/list_*.json`、`raw/detail_*.json` 直接复用，不覆盖原始字节；`jobs.jsonl` 中已有的 `source_job_id` 不重复写入；已排除、待复核与已登记问题不重复登记。恢复时 `observed_at` 只取 `requests.jsonl` 中该详情响应文件的 `requested_at`；取不到时不输出该条岗位，登记 `observed_at_missing` 交人工复核，不用其他请求或当前时刻代替。
+- 请求日志：一次 HTTP 调用中的**每一次尝试**都单独写 `requests.jsonl`（重试链路上的失败尝试、以及“先失败后遇到 403”的全部尝试都留痕），记录 `request_id`、URL、脱敏参数、HTTP 状态、业务成功标记、响应文件、编码、耗时、`attempt` 与错误；不保存 Cookie、Authorization、Token 或登录态。
+- `request_id` 形如 `req_0001`，续跑时从 `requests.jsonl` 已有最大编号之后继续，同一批次内不重复。
 - 清单计数：`counts.unprocessed_unique_ids` 与 `counts.unprocessed_ids` 明确记录“达到 target 时同页剩余、未输出也未排除”的岗位，便于逐项对账。

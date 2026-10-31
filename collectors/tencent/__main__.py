@@ -11,7 +11,7 @@ from pathlib import Path
 from urllib.parse import urlencode
 
 from .batch import Batch, sha256_file
-from .client import Client, StopCollection, utc_now
+from .client import Client, StopCollection
 from .mapping import build_job, classify, text_issues
 from . import COLLECTOR_VERSION
 
@@ -61,7 +61,7 @@ def load_issue_ids(batch):
         job_id = row.get("source_job_id")
         if row.get("action") == "exclude":
             excluded.add(job_id)
-        if row.get("rule") == "detail_failed" and row.get("action") == "retry":
+        if row.get("rule") in ("detail_failed", "observed_at_missing"):
             unresolved.add(job_id)
     return excluded, unresolved
 
@@ -82,7 +82,8 @@ def list_stats(batch):
 
 def run(args):
     batch = Batch(args.batch_dir)
-    client = Client(interval=args.interval, retries=args.retries)
+    client = Client(interval=args.interval, retries=args.retries,
+                    seq_start=batch.max_request_seq())
     commit = git_commit()
     parser_version = f"tencent-collector-{COLLECTOR_VERSION}" + (f"+{commit}" if commit else "")
     excluded, unresolved = load_issue_ids(batch)
@@ -111,8 +112,9 @@ def run(args):
             try:
                 response = client.get(url, params)
             except StopCollection as exc:
-                # 受限请求本身也要留痕，并写入异常文件后再收尾清单。
-                batch.log_attempt(exc.attempt, url, params, None, False)
+                # 受限请求与它之前的失败尝试都要留痕，并写入异常文件后再收尾清单。
+                for attempt in exc.attempts:
+                    batch.log_attempt(attempt, url, params, None, False)
                 batch.add_issue(None, "access_restriction", "error", "stop", str(exc), [])
                 error_pages.append({"page": page, "status": exc.attempt.status, "reason": str(exc)})
                 stop_reason = "access_restricted"
@@ -176,14 +178,14 @@ def run(args):
             if batch.has_raw(detail_name):
                 detail_body = batch.read_raw(detail_name)
                 detail_path = batch.raw_path(detail_name)
-                # 观察时间必须取自当时的请求日志；日志缺失才退到列表响应时刻。
-                observed_at = (batch.requested_at_for(detail_path)
-                               or batch.requested_at_for(response_path)
-                               or batch.first_requested_at())
+                # 观察时间只能取该详情响应当时的请求时刻；取不到就不输出，交人工复核。
+                observed_at = batch.requested_at_for(detail_path)
                 if observed_at is None:
-                    observed_at = utc_now()
-                    batch.add_issue(job_id, "observed_at_fallback", "warning", "review",
-                                    "请求日志缺失，观察时间退化为当前时刻", [raw_ref(batch, detail_path)])
+                    unresolved.add(job_id)
+                    batch.add_issue(job_id, "observed_at_missing", "error", "review",
+                                    "详情原始请求时间缺失，按规范不输出该条观察",
+                                    [raw_ref(batch, detail_path)])
+                    continue
                 detail_response = None
             else:
                 params = {"postId": job_id, "language": "zh-cn"}
@@ -191,7 +193,8 @@ def run(args):
                 try:
                     detail_response = client.get(detail_url, params)
                 except StopCollection as exc:
-                    batch.log_attempt(exc.attempt, detail_url, params, None, False)
+                    for attempt in exc.attempts:
+                        batch.log_attempt(attempt, detail_url, params, None, False)
                     batch.add_issue(job_id, "access_restriction", "error", "stop", str(exc), [])
                     error_pages.append({"page": page, "status": exc.attempt.status, "reason": str(exc)})
                     stop_reason = "access_restricted"

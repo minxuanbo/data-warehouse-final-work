@@ -1,7 +1,10 @@
 """批次目录读写：保存原始响应、写 JSONL、维护清单与哈希。"""
 import hashlib
 import json
+import re
 from pathlib import Path
+
+REQUEST_ID = re.compile(r"^req_(\d+)$")
 
 
 def sha256_bytes(data):
@@ -69,6 +72,20 @@ class Batch:
             if line.strip():
                 return json.loads(line).get("requested_at")
         return None
+
+    def max_request_seq(self):
+        """已有日志的最大 request_id 编号；续跑时从它之后继续，避免 ID 重复。"""
+        path = self.path / "requests.jsonl"
+        if not path.exists():
+            return 0
+        largest = 0
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            match = REQUEST_ID.match(str(json.loads(line).get("request_id", "")))
+            if match:
+                largest = max(largest, int(match.group(1)))
+        return largest
 
     def _load_ids(self, name):
         found = set()
