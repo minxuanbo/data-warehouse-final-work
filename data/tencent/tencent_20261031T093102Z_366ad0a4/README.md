@@ -2,7 +2,7 @@
 
 状态：小批采集已完成，**待验收**。数据可追溯，但本批为截取样本，不能用于全量变化指标。
 
-- 来源：tencent（腾讯招聘 careers.tencent.com）；负责人：钟洋（A，学号待填）
+- 来源：tencent（腾讯招聘 careers.tencent.com）；负责人：钟洋（A，学号 2292242203547）
 - 规范：schema v1.0；范围：digital_jobs_cn_v1；阶段：pilot
 - 实际执行命令：`python -m collectors.tencent --batch-dir data/tencent/tencent_20261031T093102Z_366ad0a4 --target 100 --max-pages 40`
 - 依赖：Python 3.12+，仅标准库（`collectors/tencent/requirements.txt`）
