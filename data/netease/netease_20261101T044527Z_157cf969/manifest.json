@@ -601,5 +601,10 @@
       "sha256": "039edf1a7b9b4e0870eec98ea6d5c9adecc38001acd60365025b016d1c400128",
       "newline": "LF"
     }
-  ]
+  ],
+  "acceptance_scope": "pilot_technical",
+  "reviewed_revision": "2755b21c2a0d0d262c3de9a1032dbcce6e1179a7",
+  "reviewed_on": "2026-11-01",
+  "verified_source_snapshot": "928db6b6079cb7761ab3f51f9f62dded1f89f6eb",
+  "verified_fix_snapshot": "2755b21c2a0d0d262c3de9a1032dbcce6e1179a7"
 }
