@@ -37,7 +37,7 @@ def initialize():
         c.close()
     c = connect()
     try:
-        for name in ('001_trial_schema.sql', '002_cd_schema.sql'):
+        for name in ('001_trial_schema.sql', '002_cd_schema.sql', '003_skill_body_versions.sql'):
             c.execute((ROOT / 'sql' / name).read_text(encoding='utf-8'))
     finally:
         c.close()

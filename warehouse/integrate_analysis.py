@@ -8,8 +8,8 @@ from .load import ROOT, connect, dump
 from .validate import digest, jsonl, safe_path, validate
 
 
-def body_digest(job):
-    fields = [job.get('description_raw'), job.get('requirements_raw')]
+def body_digest(job, field_names=('description_raw', 'requirements_raw')):
+    fields = [job.get(field) for field in field_names]
     return digest(json.dumps(fields, ensure_ascii=False).encode('utf-8'))
 
 
@@ -24,8 +24,9 @@ def check_evidence(row, jobs, skills, provenance):
         raise ValueError('Skill absent from dictionary')
     if row['dictionary_version'] != provenance['dictionary_version'] or row['rule_version'] != provenance['rule_version']:
         raise ValueError('Skill rule version mismatch')
-    if row['evidence_field'] not in ('description_raw', 'requirements_raw'):
-        raise ValueError('Current D rule only covers two body fields')
+    field_names = provenance.get('body_hash_fields', ['description_raw', 'requirements_raw'])
+    if row['evidence_field'] not in field_names:
+        raise ValueError('Evidence field outside declared text scope')
     body = job[row['evidence_field']] or ''
     start, end = row['evidence_start'], row['evidence_end']
     match_start, match_end = row['match_start'], row['match_end']
@@ -35,7 +36,7 @@ def check_evidence(row, jobs, skills, provenance):
         raise ValueError('Evidence offsets outside body')
     if body[start:end] != row['evidence'] or body[match_start:match_end] != row['matched_text']:
         raise ValueError('Evidence does not match source text')
-    if row['body_sha256'] != body_digest(job):
+    if row['body_sha256'] != body_digest(job, field_names):
         raise ValueError('D body hash mismatch')
     if row['requirement_level'] not in ('必需', '优先', '提及', '不确定'):
         raise ValueError('Unknown requirement level')
@@ -45,6 +46,16 @@ def check_evidence(row, jobs, skills, provenance):
 
 
 def prepare(batch_path, analysis_path, dictionary_path):
+    provenance = json.loads((Path(analysis_path) / 'input_provenance.json').read_text(encoding='utf-8'))
+    if provenance.get('body_hash_version') == 'skills-body-1.1':
+        from .analysis_v11 import prepare_v11
+        return prepare_v11(batch_path, analysis_path, dictionary_path)
+    if provenance.get('body_hash_version') not in (None, 'skills-body-1.0'):
+        raise ValueError('Unsupported body hash version')
+    return prepare_legacy(batch_path, analysis_path, dictionary_path)
+
+
+def prepare_legacy(batch_path, analysis_path, dictionary_path):
     checked = validate(batch_path)
     batch = checked['root']
     analysis = Path(analysis_path)
@@ -136,18 +147,19 @@ def integrate(batch_path, analysis_path, dictionary_path, *, fail_after=None):
         if old:
             connection.execute('COMMIT TRANSACTION;')
             return {'status': 'unchanged', 'build_id': old[0]}
-        build_id = connection.execute('INSERT INTO audit.analysis_build(input_hash,batch_id,scope_version,dictionary_version,rule_version,provenance_json,status) OUTPUT INSERTED.build_id VALUES(?,?,?,?,?,?,?)',
-                                      input_hash, batch_id, policy['scope_version'], provenance['dictionary_version'], provenance['rule_version'], dump(provenance), 'building').fetchval()
+        build_id = connection.execute('INSERT INTO audit.analysis_build(input_hash,batch_id,scope_version,dictionary_version,rule_version,provenance_json,status,body_hash_version,skill_text_scope) OUTPUT INSERTED.build_id VALUES(?,?,?,?,?,?,?,?,?)',
+                                      input_hash, batch_id, policy['scope_version'], provenance['dictionary_version'], provenance['rule_version'], dump(provenance), 'building',
+                                      provenance.get('body_hash_version','skills-body-1.0'), '+'.join(policy['skill_input_fields'])).fetchval()
         identities = connection.execute('SELECT i.source_job_id,o.observation_key,o.version_key FROM dwd.fact_posting_observation o JOIN dim.posting_identity i ON i.posting_key=o.posting_key WHERE o.batch_id=?', batch_id).fetchall()
         keys = {row[0]: (row[1], row[2]) for row in identities}
         if len(identities) != len(enriched) or set(keys) != {row['source_job_id'] for row in enriched}:
             raise ValueError('Warehouse identity set mismatch')
         for index, row in enumerate(enriched, 1):
             observation_key, _ = keys[row['source_job_id']]
-            connection.execute('INSERT INTO dwd.observation_enrichment VALUES(?,?,?,?,?,?,?,?,?,?,?,?)',
+            connection.execute('INSERT INTO dwd.observation_enrichment(build_id,observation_key,is_core,scope_reason,additional_requirements_raw,location_notes_raw,location_conflict,experience_conflict,confirmed_locations_json,issues_json,raw_ref,raw_sha256,education_conflict,experience_hint) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                                build_id, observation_key, row['is_core'], row['scope_reason'], row['additional_requirements_raw'],
                                row['location_notes_raw'], row['location_conflict'], row['experience_conflict'],
-                               dump(row['confirmed_locations']), dump(row['issues']), row['detail_ref']['path'], row['detail_ref']['sha256'])
+                               dump(row['confirmed_locations']), dump(row['issues']), row['detail_ref']['path'], row['detail_ref']['sha256'], row.get('education_conflict',False), row.get('experience_hint',False))
             if fail_after == index:
                 raise RuntimeError('Injected C/D build failure')
         grouped = defaultdict(list)

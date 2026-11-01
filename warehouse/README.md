@@ -1,18 +1,24 @@
 # C 分工与 C/D 联调
 
-## 双来源入口（2026-11-01）
+## 当前三字段技能入口（2026-11-01）
+
+运行 `.\scripts\run_skills_v11.ps1`，准备固定输入、生成两源构建并对账后切换当前查询版本。腾讯与网易核心分母各 98，有效岗位×技能分别 333、334。正文版本 skills-body-1.1，词典 skills-dict-0.2.0，规则 skills-rules-0.3.0。
+
+先查 ads.current_analysis_builds 获取本次刷新使用的 build_id，再查询 ads.cd_ 接口。本机当前腾讯为 5、网易为 6，其他机器按查询结果选取。网易两条人工标注岗已确认归扩展，13 条经验提示细分为 12 条冲突和 1 条建议。完整决定、接口和验证见[三字段技能联调](../reports/warehouse/三字段技能联调.md)。
+
+## 双来源接入基线（2026-11-01）
 
 网易 PR #4 已技术验收并合并，腾讯与网易各 100 条已进入同一开发库。从仓库根目录执行 `.\scripts\run_dual.ps1`，可复现两批固定输入的接入和 dbt 检查。独立对账使用项目解释器运行 `-m scripts.check_dual_db`，并设置 `DW_DATABASE=recruitment_dw_dev_cd_v1`。
 
-双来源接口为 ads.dual_job_detail、ads.dual_city、ads.dual_education，概览沿用 ads.trial_overview。网易技能与核心范围待 D 提交，腾讯技能口径继续按核心 98 岗计算。两批日期不同，展示时需要保留来源、批次与观察日期。完整验证见[网易验收与双来源联调](../reports/warehouse/网易验收与双来源联调.md)。
+双来源接口为 ads.dual_job_detail、ads.dual_city、ads.dual_education，概览沿用 ads.trial_overview。该阶段建立两来源接入基线，后续三字段技能与核心范围见上方当前入口。两批日期不同，展示时需要保留来源、批次与观察日期。完整验证见[网易验收与双来源联调](../reports/warehouse/网易验收与双来源联调.md)。
 
-## 腾讯 C/D 入口（2026-11-01）
+## 腾讯两字段 C/D 基线（2026-11-01）
 
 已接入 main 上技术验收通过的腾讯批次及 D 的 PR #3 固定输入。运行 `.\scripts\run_cd.ps1`，默认创建独立 `recruitment_dw_dev_cd_v1` 并自动导出交接数据。初次安装沿用下文 Python 环境与依赖命令。旧试验库保留可复现基线。
 
 补充字段、范围口径、组员待办和本轮实测结果统一见[C/D 交接目录](../data/derived/tencent/tencent_20261031T093102Z_366ad0a4/cd_v1.1/README.md)。该目录包含可直接供 D 使用的 100 岗增强数据，核心筛选后为 98 岗。
 
-新版 SQL 入口以 ads.cd_ 开头，固定 build_id 查询。当前技能文本范围仍为职责及任职要求，D 的下一版将接入补充要求。数据库只读角色 dw_cd_reader 已配置并验证，成员实际登录账号须由本机管理员映射到该角色。
+新版 SQL 入口以 ads.cd_ 开头，固定 build_id 查询。此历史构建的技能文本范围为职责及任职要求，当前构建使用上方三字段定义。数据库只读角色 dw_cd_reader 已配置并验证，成员实际登录账号须由本机管理员映射到该角色。
 
 单独执行检查时设置 `$env:DW_DATABASE='recruitment_dw_dev_cd_v1'`，再运行 `.\.venv-dbt\Scripts\python.exe -X utf8 -m scripts.check_cd_db`。离线完整测试依赖两个固定输入目录，先运行 scripts/prepare_trial_input.py 和 scripts/prepare_cd_input.py，再运行 unittest discover。
 

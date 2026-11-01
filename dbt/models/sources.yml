@@ -20,3 +20,4 @@ sources:
       - name: collection_batch
       - name: quality_issue
       - name: analysis_build
+      - name: analysis_selection
