@@ -153,6 +153,23 @@ def write_readme(batch, *, counts, args, parser_version, commit, rows, metas,
     source_line = "；".join(
         f"`{entry['path']}` `{entry['sha256'][:12]}…`" for entry in source_entries
     ) or "见 `manifest.json` 的 `collector_source`"
+    collector_version = batch.manifest.get("collector_version") or parser_version
+    collector_commit = batch.manifest.get("collector_commit") or commit or "pending"
+    fix_version = batch.manifest.get("collector_fix_version")
+    fix_commit = batch.manifest.get("collector_fix_commit")
+    fix_source = batch.manifest.get("collector_fix_source") or []
+    fix_source_line = "；".join(
+        f"`{entry['path']}` `{entry['sha256'][:12]}…`" for entry in fix_source
+    )
+    fix_line = (
+        f"- 修复版本：`{fix_version}`，commit `{fix_commit}`"
+        f"（仅修复访问受限与重试逻辑，未重采数据；合并后回填 squash commit）\n"
+        if fix_version else ""
+    )
+    fix_source_line = (
+        f"- 修复版本源码校验（SHA-256，UTF-8，LF 换行归一化）：{fix_source_line}\n"
+        if fix_source_line else ""
+    )
     body = f"""# {batch.batch_id}
 
 状态：**小批采集完成，技术接入与数据验收待 C/D 完成**。本批为截取样本，不能用于全量变化指标或岗位下架判断。
@@ -161,9 +178,9 @@ def write_readme(batch, *, counts, args, parser_version, commit, rows, metas,
 - 规范：schema v1.0；范围：digital_jobs_cn_v1；阶段：pilot
 - 实际执行命令：`python -m collectors.netease --batch-dir data/netease/{batch.batch_id} --target {args.target} --max-pages {args.max_pages} --page-size {args.page_size} --interval {args.interval} --detail-samples {args.detail_samples}`
 - 依赖：Python 3.12+，仅标准库（`collectors/netease/requirements.txt`）
-- 代码 commit：{commit}（合并后回填；合入前用下方源码 SHA-256 定位）
-- 采集器源码校验（SHA-256 前 12 位）：{source_line}
-- parser_version：`{parser_version}`
+- 采集版本：`{collector_version}`，commit `{collector_commit}`（本批数据由该版本生成）
+{fix_line}- 采集版本源码校验（SHA-256，UTF-8，LF 换行归一化，前 12 位）：{source_line}
+{fix_source_line}- parser_version（数据内）：`{parser_version}`
 - 来源及字段映射：见 [collectors/netease/README.md](../../../collectors/netease/README.md)
 
 ## 1. 实际数量、范围与停止原因

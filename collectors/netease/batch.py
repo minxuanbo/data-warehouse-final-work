@@ -19,13 +19,19 @@ def sha256_file(path):
     return digest.hexdigest()
 
 
+def sha256_text_lf(path):
+    """源码哈希按 UTF-8 文本、LF 换行归一化计算，避免平台换行差异。"""
+    data = Path(path).read_bytes().replace(b"\r\n", b"\n")
+    return hashlib.sha256(data).hexdigest()
+
+
 def count_nonempty_lines(path):
     with Path(path).open("r", encoding="utf-8") as handle:
         return sum(1 for line in handle if line.strip())
 
 
 def collector_source(root=None):
-    """采集器源码文件及 SHA-256，供清单在 commit 合并前也可定位校验。"""
+    """采集器源码文件及 SHA-256（LF 归一化），供清单在 commit 合并前也可定位校验。"""
     root = Path(root) if root else Path(__file__).resolve().parents[2]
     base = root / "collectors" / "netease"
     entries = []
@@ -33,7 +39,8 @@ def collector_source(root=None):
         if path.is_file() and path.suffix in {".py", ".md", ".txt"}:
             entries.append({
                 "path": str(path.relative_to(root)),
-                "sha256": sha256_file(path),
+                "sha256": sha256_text_lf(path),
+                "newline": "LF",
             })
     return entries
 
