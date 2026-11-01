@@ -1,0 +1,31 @@
+{
+  "jobs_sha256": "2b6e47f26c279a6b339e06db74cdf0061d7ecd8f1d02ca5446225d4303eff8ab",
+  "manifest_sha256": "f1b2c5f18de518537509f608f7e452f13bfe58eea3e3fab35edeb6e4a03637a4",
+  "source": "netease",
+  "batch_id": "netease_20261101T044527Z_157cf969",
+  "input_acceptance_status": "accepted",
+  "input_acceptance_scope": "pilot_technical",
+  "coverage_status": "partial",
+  "source_postings": 100,
+  "core_postings": 98,
+  "input_files_checked": 78,
+  "raw_checks_passed": true,
+  "body_hash_version": "skills-body-1.1",
+  "body_hash_fields": [
+    "description_raw",
+    "requirements_raw",
+    "additional_requirements_raw"
+  ],
+  "body_hash_definition": "SHA256(UTF8(json.dumps([job.get(field) for field in body_hash_fields], ensure_ascii=False))); 默认分隔符，无换行归一化，缺失为null",
+  "dictionary_version": "skills-dict-0.2.0",
+  "rule_version": "skills-rules-0.3.0",
+  "scope_version": "d-netease-core-1.1-proposed",
+  "scope_status": "proposed_pending_C",
+  "extraction_code_sha256": {
+    "extract.py": "84c3605b2fde041a74610a9cdadf4e6517e64bea83cef7da27970bbe0c414d3e",
+    "run.py": "6a54ce407542a591c8473151cd5134ad8074d5fa0711ae32835c9d963115c262",
+    "review.py": "f971268edaf2c61511c7a25799a7ee34f4f09cd43f36dd1a525756edc7e2c7de"
+  },
+  "dictionary_sha256": "1b66fbdf4d3eb86b772ac19b080757c49c94b7c81570d3c347d011226e6627be",
+  "reference_sha256": "86ce4ba23c8d3f56ec7502a079cb690f0e8ba38a5170fc38ab7e4690bd33c7ca"
+}

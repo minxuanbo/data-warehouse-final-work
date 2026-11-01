@@ -1,0 +1,429 @@
+{
+  "reviewer": "D正文核对",
+  "rule_version": "skills-rules-0.3.0",
+  "dictionary_version": "skills-dict-0.2.0",
+  "audit_count": 20,
+  "audit_records": [
+    {
+      "source": "netease",
+      "source_job_id": "53229",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "游戏引擎开发工程师-性能优化（无限大）",
+      "location": [
+        "杭州市"
+      ],
+      "raw_ref": "raw/list_000002.json",
+      "raw_sha256": "8fcf1e482dfb08f331ad49e2f905854b561a93a47651c3cc1692099daf627da8",
+      "body_check": "issue",
+      "city_check": "same",
+      "note": "结构化经验不限，正文首行3年以上研发经验；原值保留并标记冲突。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79290",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "音视频开发工程师",
+      "location": [
+        "广州市"
+      ],
+      "raw_ref": "raw/detail_79290.json",
+      "raw_sha256": "4d9f5dcbfbb6ed084f76e4decf158e2ec96e9f5ff6bedcd9556d9abb178830ec",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79165",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "资深数据平台工程师",
+      "location": [
+        "广州市"
+      ],
+      "raw_ref": "raw/detail_79165.json",
+      "raw_sha256": "cb5519cb8cde749c71110280bc117e37016fbb44adc3d2bda88c72556ea0f0b6",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79354",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "【平台】安卓逆向开发工程师",
+      "location": [
+        "广州市"
+      ],
+      "raw_ref": "raw/list_000006.json",
+      "raw_sha256": "95a26147aebd9646c9d3e1b11aa6496eb868a1ec46055ee7a7febee5c6ec3c1e",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79628",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "Agent开发工程师（偏前端）",
+      "location": [
+        "广州市"
+      ],
+      "raw_ref": "raw/list_000007.json",
+      "raw_sha256": "d9487a1720e99ebdfdbd3868421b17e895f3760457a972ed5f246fb6b8f4d58f",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79627",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "全栈开发工程师（偏ios）",
+      "location": [
+        "广州市"
+      ],
+      "raw_ref": "raw/detail_79627.json",
+      "raw_sha256": "bfbb2659258449c64d47e8c14305abcf82aa75167c7106b31f00464f749371f3",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79093",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "全栈开发工程师",
+      "location": [
+        "北京市"
+      ],
+      "raw_ref": "raw/list_000015.json",
+      "raw_sha256": "0ebd53b921ed66279788c423322027fe2733644d6b93efe8c320520da02749cb",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79626",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "全栈开发实习生（LiveKit 音频链路构建方向）",
+      "location": [
+        "广州市"
+      ],
+      "raw_ref": "raw/detail_79626.json",
+      "raw_sha256": "9899516fc1aca579ce663bd52af9351b488d58230200e8cb8e70b9eec3540c82",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79060",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "游戏测试工程师（燕云十六声）",
+      "location": [
+        "杭州市"
+      ],
+      "raw_ref": "raw/list_000018.json",
+      "raw_sha256": "9f4104b9d1be6d78f79593e43d4468a9a911905b87de1376743545ae1f324a04",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "78780",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "游戏测试工程师（生存MMO）",
+      "location": [
+        "上海市"
+      ],
+      "raw_ref": "raw/list_000032.json",
+      "raw_sha256": "67ef37d440efa2d15a8f59b645416ce0d7868f8740ef0e81f522023421586d1f",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "78482",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "数据标注实习生（广州/杭州）",
+      "location": [
+        "杭州市"
+      ],
+      "raw_ref": "raw/list_000040.json",
+      "raw_sha256": "9acc8e3220a5cbc5cc5a486ca617b1ccbcf2fca1ca8754d3c0d933483093bb03",
+      "body_check": "issue",
+      "city_check": "same",
+      "note": "职责为人工筛选和标注，不是数据开发/算法；建议扩展，待C确认。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "78590",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "AI应用工程师（实习生）-杭州",
+      "location": [
+        "广州市"
+      ],
+      "raw_ref": "raw/list_000041.json",
+      "raw_sha256": "3767340f5a78970bfe9237750c8b8eb53654f99097ebc05750e46db07be63c99",
+      "body_check": "issue",
+      "city_check": "different",
+      "note": "标题杭州、地点广州无交集；规范化城市归冲突待确认。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79489",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "数据标注实习生（广杭不限）",
+      "location": [
+        "杭州市"
+      ],
+      "raw_ref": "raw/detail_79489.json",
+      "raw_sha256": "728222b42a547529ce5f3ea62e3a7d14b7d571cad43ccf5add9677638c9fe20d",
+      "body_check": "issue",
+      "city_check": "same",
+      "note": "职责为人工筛选和标注，不是数据开发/算法；建议扩展，待C确认。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79599",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "高级/资深数据采集工程师",
+      "location": [
+        "杭州市"
+      ],
+      "raw_ref": "raw/list_000049.json",
+      "raw_sha256": "53dfb5397f0dfa96e5322049679b8e0d1ef0380c75300ee8308d132b85655c14",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79598",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "高级/资深安全攻防工程师",
+      "location": [
+        "杭州市"
+      ],
+      "raw_ref": "raw/list_000049.json",
+      "raw_sha256": "53dfb5397f0dfa96e5322049679b8e0d1ef0380c75300ee8308d132b85655c14",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "71196",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "高级计算机视觉算法工程师",
+      "location": [
+        "杭州市"
+      ],
+      "raw_ref": "raw/list_000051.json",
+      "raw_sha256": "b9539f020a214a6970974324034493854ab6fe82ec7d50df805cb25659b45d4d",
+      "body_check": "issue",
+      "city_check": "same",
+      "note": "结构化本科，正文硕士及以上；保留双值待C确认。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "72340",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "AI 平台研发工程师（AI Agent Infra）",
+      "location": [
+        "广州市"
+      ],
+      "raw_ref": "raw/list_000055.json",
+      "raw_sha256": "c46ced2811156476d4a8ce80c924d302e0223b6a4e9c1e7fff37a1e0a1333cd5",
+      "body_check": "issue",
+      "city_check": "same",
+      "note": "原文Dock.er疑为Docker拼写，保留原文并标不确定；不据此自动加别名。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "76448",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "大数据组件运维工程师",
+      "location": [
+        "广州市"
+      ],
+      "raw_ref": "raw/list_000055.json",
+      "raw_sha256": "c46ced2811156476d4a8ce80c924d302e0223b6a4e9c1e7fff37a1e0a1333cd5",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "76449",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "大数据组件研发工程师（实时方向）",
+      "location": [
+        "广州市"
+      ],
+      "raw_ref": "raw/list_000055.json",
+      "raw_sha256": "c46ced2811156476d4a8ce80c924d302e0223b6a4e9c1e7fff37a1e0a1333cd5",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79560",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "title": "专项测试工程师（性能）",
+      "location": [
+        "上海市"
+      ],
+      "raw_ref": "raw/list_000059.json",
+      "raw_sha256": "65f0a06090038e521499c8ff0ca5c1dd2570433e70acdccbb99996e084623d70",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    }
+  ],
+  "splits": {
+    "development": {
+      "job_count": 10,
+      "tp": 80,
+      "fp": 0,
+      "fn": 0,
+      "metric_tp": 62,
+      "metric_fp": 0,
+      "metric_fn": 0,
+      "level_total": 94,
+      "level_correct": 94,
+      "status": "complete",
+      "precision": 1.0,
+      "recall": 1.0,
+      "level_accuracy": 1.0,
+      "metric_precision": 1.0,
+      "metric_recall": 1.0
+    },
+    "final": {
+      "job_count": 10,
+      "tp": 55,
+      "fp": 0,
+      "fn": 1,
+      "metric_tp": 44,
+      "metric_fp": 0,
+      "metric_fn": 0,
+      "level_total": 66,
+      "level_correct": 65,
+      "status": "complete",
+      "precision": 1.0,
+      "recall": 0.9821428571428571,
+      "level_accuracy": 0.9848484848484849,
+      "metric_precision": 1.0,
+      "metric_recall": 1.0
+    }
+  },
+  "incomplete_ids": [],
+  "excluded_final_ids": [],
+  "errors": [
+    {
+      "source_job_id": "72340",
+      "split": "final",
+      "skill_name": "Docker",
+      "kind": "false_negative"
+    },
+    {
+      "source_job_id": "72340",
+      "split": "final",
+      "kind": "level_or_evidence_mismatch",
+      "expected": {
+        "skill": "Docker",
+        "field": "requirements_raw",
+        "level": "不确定",
+        "evidence": "Dock.er",
+        "evidence_start": 200,
+        "evidence_end": 207
+      }
+    }
+  ],
+  "out_of_dictionary_labels": [
+    {
+      "source_job_id": "79290",
+      "skill": "MediaCodec",
+      "field": "requirements_raw",
+      "level": "优先",
+      "evidence": "MediaCodec / VideoToolbox",
+      "evidence_start": 188,
+      "evidence_end": 213
+    },
+    {
+      "source_job_id": "79290",
+      "skill": "VideoToolbox",
+      "field": "requirements_raw",
+      "level": "优先",
+      "evidence": "MediaCodec / VideoToolbox",
+      "evidence_start": 188,
+      "evidence_end": 213
+    },
+    {
+      "source_job_id": "79598",
+      "skill": "OpenClaw",
+      "field": "description_raw",
+      "level": "提及",
+      "evidence": "LangChain/MCP/OpenClaw",
+      "evidence_start": 173,
+      "evidence_end": 195
+    },
+    {
+      "source_job_id": "72340",
+      "skill": "Flask",
+      "field": "requirements_raw",
+      "level": "必需",
+      "evidence": "Flask、FastAPI",
+      "evidence_start": 142,
+      "evidence_end": 155
+    },
+    {
+      "source_job_id": "72340",
+      "skill": "FastAPI",
+      "field": "requirements_raw",
+      "level": "必需",
+      "evidence": "Flask、FastAPI",
+      "evidence_start": 142,
+      "evidence_end": 155
+    },
+    {
+      "source_job_id": "72340",
+      "skill": "CrewAI",
+      "field": "requirements_raw",
+      "level": "优先",
+      "evidence": "LangChain / LangGraph / CrewAI",
+      "evidence_start": 453,
+      "evidence_end": 483
+    }
+  ],
+  "review_method": "先对照原始响应/增强字段审读并记录标签，冻结参考与规则后对留出集计分；不把提取候选当答案",
+  "limits": "每来源10岗留出小样本；词典内非否定候选按岗位×技能计分，含不确定候选。词典外技术单报范围缺口。交叉核对指原始响应、交接字段与证据位置的对照，组内验收仍待C对账。",
+  "body_hash_version": "skills-body-1.1",
+  "reference_sha256": "86ce4ba23c8d3f56ec7502a079cb690f0e8ba38a5170fc38ab7e4690bd33c7ca",
+  "formal_acceptance": "pending_C_reconciliation",
+  "detection_unit": "岗位×词典技能；非否定候选与指标有效集合分别计分"
+}
