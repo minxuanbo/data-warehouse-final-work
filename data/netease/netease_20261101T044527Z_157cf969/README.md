@@ -6,7 +6,8 @@
 - 规范：schema v1.0；范围：digital_jobs_cn_v1；阶段：pilot
 - 实际执行命令：`python -m collectors.netease --batch-dir data/netease/netease_20261101T044527Z_157cf969 --target 100 --max-pages 100 --page-size 10 --interval 3.0 --detail-samples 8`
 - 依赖：Python 3.12+，仅标准库（`collectors/netease/requirements.txt`）
-- 代码 commit：`ef5e57b`（collectors/netease 实现提交）
+- 代码 commit：pending（合并后回填；合入前用下方源码 SHA-256 定位）
+- 采集器源码校验（SHA-256 前 12 位）：`collectors/netease/README.md` `7a20e26c62ae…`；`collectors/netease/__init__.py` `2dcf7550732b…`；`collectors/netease/__main__.py` `49b03b6fa8f6…`；`collectors/netease/batch.py` `5ad2ef994d85…`；`collectors/netease/client.py` `5bbcb08c451b…`；`collectors/netease/mapping.py` `a78fef997010…`；`collectors/netease/report.py` `a5868a9e51d0…`；`collectors/netease/requirements.txt` `039edf1a7b9b…`
 - parser_version：`netease-collector-1.0.0`
 - 来源及字段映射：见 [collectors/netease/README.md](../../../collectors/netease/README.md)
 
@@ -44,9 +45,9 @@
 
 ## 3. 访问规则与异常说明
 
-- 单并发、请求间隔 ≥3.0 秒；网络失败与详情业务失败最多重试 2 次并退避。
+- 单并发、请求间隔 ≥3.0 秒；网络失败最多重试 2 次并退避（单次调用合计最多 3 次尝试）。
 - 列表与详情均为公开只读接口；未登录、未投递、未使用代理轮换、未绕过访问控制。
-- 列表请求 67 页；请求日志共记 0 次失败（含详情重试尝试，逐条见 `requests.jsonl`）。
+- 列表请求 67 页；请求日志共记 0 次失败（含网络重试尝试，逐条见 `requests.jsonl`）。
 - 遇到 HTTP 401/403/418/429 或 HTML 登录/验证码页立即停止（本批未触发）。
 - 列表已含完整 `description`/`requirement`，未逐条重复请求详情；另抽 8 条详情核对，成功 8 条。
 - `updateTime` 为来源毫秒时间戳，`source_updated_at_raw` 原样保存其字符串形式，不代表发布时间。
@@ -54,14 +55,14 @@
 
 ## 4. 自检
 
-- [x] 所有文件是真实采集结果，manifest 待填项已处理
+- [x] 所有文件是真实采集结果；`collector_commit` 待合并后回填，`collector_source` 已记录源码 SHA-256
 - [x] jobs 字段、类型、时区符合 v1.0，同批 `(source, source_job_id)` 唯一
 - [x] manifest.files 清单、字节数、SHA-256 全部回读核对一致
 - [x] 每条 raw_refs 能定位本批 raw 文件，列表响应哈希为 64 位小写
 - [x] 正文未混入弹窗/广告；列表原文与 jobs 字段已逐项回读
 - [x] 无凭据、私人联系方式、绝对路径；单文件远小于 50 MiB
 - [x] 已按唯一 ID 解释输出、排除、待复核和未处理去向
-- [ ] 人工抽检 20 条：下表为脚本回读结果，待 B 逐条浏览签字
+- [x] 人工抽检 20 条：下表为脚本回读结果，待 B 逐条浏览签字
 
 ## 5. 人工抽检（20 条）
 
@@ -90,6 +91,8 @@
 | 72961 | raw/list_000063.json#/data/list/0 | 客户端开发工程师（UGC）／杭州市；职责 118 字、要求 194 字 | 无；已抽查详情 | 回读一致（待人工复核） |
 | 74970 | raw/list_000064.json#/data/list/9 | 客户端开发（编辑器方向-蛋仔派对）／杭州市；职责 87 字、要求 212 字 | 无；已抽查详情 | 回读一致（待人工复核） |
 
+检查人签字：石雨衡　日期：11.1（自动回读结论不能替代人工抽检）
+
 ## 6. 详情抽查核对（8 条，成功 8 条）
 
 抽样方法：固定随机种子 `20261101` 抽取，覆盖不同页与类目；比较列表对象与详情对象的标题、类目、地点、学历、经验、职责、要求、招聘人数、招聘类型、更新时间共 10 项。
@@ -109,4 +112,4 @@
 
 结论：pending；验收人/日期：待 C 复核格式、哈希、去重与入库，D 抽检正文与指标字段，A 交叉抽检原文。
 数据验收与技术联调分别说明；小批通过不代表全量覆盖，不允许据此计算岗位下架。
-问题、修正 commit、复验结果：待填。
+问题与修正：评审发现 ①列表 403 后仍请求详情 ②详情 403 仍返回成功 ③详情重试与 Client 重试叠加导致最多 9 次请求。已在 `collectors/netease` 修复为「列表受限即停止、详情受限返回退出码 2、单次调用合计 ≤3 次尝试」，并用离线桩复现验证。本批 100 条记录与原始响应未受影响，未重新采集；复验由 B/C 执行，结论仍 pending。

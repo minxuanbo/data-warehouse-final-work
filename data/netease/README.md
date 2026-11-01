@@ -8,4 +8,4 @@
 python scripts/new_collection_batch.py --source netease --owner B
 ```
 
-目前没有正式数据批次；README 不是验收完成记录。
+已有待验收批次：`netease_20261101T044527Z_157cf969`（100 条，`coverage_status=partial`，`stop_reason=pilot_limit`）。批次 README 记录实际命令、计数与抽检结果；本目录 README 不是验收完成记录。
