@@ -101,7 +101,7 @@ def verify_manifest(batch):
 
 
 def write_readme(batch, *, counts, args, parser_version, commit, rows, metas,
-                 detail_results, stop_reason, access_restricted=False):
+                 detail_results, stop_reason, detail_skipped=False, restriction_stage=None):
     issues = _issue_map(batch)
     categories, locations, education, experience, work_types, missing = _distribution(rows)
 
@@ -143,8 +143,33 @@ def write_readme(batch, *, counts, args, parser_version, commit, rows, metas,
     stop_note = f"本批到 {args.target} 条即停止，属于截取样本。" \
         if counts["output_records"] >= args.target \
         else f"本批翻满 {counts['list_pages']} 页仍未达到 {args.target} 条目标，属于截取样本。"
-    restriction_note = "本批详情抽查期间触发，已停止后续详情请求" if access_restricted \
-        else "本批未触发"
+    restriction_note = {
+        "list": "本批列表请求期间触发，已停止后续列表与详情请求",
+        "detail": "本批详情抽查期间触发，已停止后续详情请求",
+    }.get(restriction_stage, "本批未触发")
+    detail_note = "列表阶段已停止，本批未发起详情请求。" if detail_skipped \
+        else f"另抽 {len(detail_results)} 条详情核对，成功 {detail_ok_count} 条。"
+    source_entries = batch.manifest.get("collector_source") or []
+    source_line = "；".join(
+        f"`{entry['path']}` `{entry['sha256'][:12]}…`" for entry in source_entries
+    ) or "见 `manifest.json` 的 `collector_source`"
+    collector_version = batch.manifest.get("collector_version") or parser_version
+    collector_commit = batch.manifest.get("collector_commit") or commit or "pending"
+    fix_version = batch.manifest.get("collector_fix_version")
+    fix_commit = batch.manifest.get("collector_fix_commit")
+    fix_source = batch.manifest.get("collector_fix_source") or []
+    fix_source_line = "；".join(
+        f"`{entry['path']}` `{entry['sha256'][:12]}…`" for entry in fix_source
+    )
+    fix_line = (
+        f"- 修复版本：`{fix_version}`，commit `{fix_commit}`"
+        f"（仅修复访问受限与重试逻辑，未重采数据；合并后回填 squash commit）\n"
+        if fix_version else ""
+    )
+    fix_source_line = (
+        f"- 修复版本源码校验（SHA-256，UTF-8，LF 换行归一化）：{fix_source_line}\n"
+        if fix_source_line else ""
+    )
     body = f"""# {batch.batch_id}
 
 状态：**小批采集完成，技术接入与数据验收待 C/D 完成**。本批为截取样本，不能用于全量变化指标或岗位下架判断。
@@ -153,8 +178,9 @@ def write_readme(batch, *, counts, args, parser_version, commit, rows, metas,
 - 规范：schema v1.0；范围：digital_jobs_cn_v1；阶段：pilot
 - 实际执行命令：`python -m collectors.netease --batch-dir data/netease/{batch.batch_id} --target {args.target} --max-pages {args.max_pages} --page-size {args.page_size} --interval {args.interval} --detail-samples {args.detail_samples}`
 - 依赖：Python 3.12+，仅标准库（`collectors/netease/requirements.txt`）
-- 代码 commit：{commit}
-- parser_version：`{parser_version}`
+- 采集版本：`{collector_version}`，commit `{collector_commit}`（本批数据由该版本生成）
+{fix_line}- 采集版本源码校验（SHA-256，UTF-8，LF 换行归一化，前 12 位）：{source_line}
+{fix_source_line}- parser_version（数据内）：`{parser_version}`
 - 来源及字段映射：见 [collectors/netease/README.md](../../../collectors/netease/README.md)
 
 ## 1. 实际数量、范围与停止原因
@@ -191,17 +217,17 @@ def write_readme(batch, *, counts, args, parser_version, commit, rows, metas,
 
 ## 3. 访问规则与异常说明
 
-- 单并发、请求间隔 ≥{args.interval} 秒；网络失败与详情业务失败最多重试 {args.retries} 次并退避。
+- 单并发、请求间隔 ≥{args.interval} 秒；网络失败最多重试 {args.retries} 次并退避（单次调用合计最多 {args.retries + 1} 次尝试）。
 - 列表与详情均为公开只读接口；未登录、未投递、未使用代理轮换、未绕过访问控制。
-- 列表请求 {counts['list_pages']} 页；请求日志共记 {counts['failed_requests']} 次失败（含详情重试尝试，逐条见 `requests.jsonl`）。
+- 列表请求 {counts['list_pages']} 页；请求日志共记 {counts['failed_requests']} 次失败（含网络重试尝试，逐条见 `requests.jsonl`）。
 - 遇到 HTTP 401/403/418/429 或 HTML 登录/验证码页立即停止（{restriction_note}）。
-- 列表已含完整 `description`/`requirement`，未逐条重复请求详情；另抽 {len(detail_results)} 条详情核对，成功 {detail_ok_count} 条。
+- 列表已含完整 `description`/`requirement`，未逐条重复请求详情；{detail_note}
 - `updateTime` 为来源毫秒时间戳，`source_updated_at_raw` 原样保存其字符串形式，不代表发布时间。
 - 标题括号城市与 `workPlaceNameList` 不一致、结构化学历低于正文“X及以上”时，均保留原值并登记 `quality_issues.jsonl`，不静默修正。
 
 ## 4. 自检
 
-- [x] 所有文件是真实采集结果，manifest 待填项已处理
+- [x] 所有文件是真实采集结果；`collector_commit` 待合并后回填，`collector_source` 已记录源码 SHA-256
 - [x] jobs 字段、类型、时区符合 v1.0，同批 `(source, source_job_id)` 唯一
 - [x] manifest.files 清单、字节数、SHA-256 全部回读核对一致
 - [x] 每条 raw_refs 能定位本批 raw 文件，列表响应哈希为 64 位小写
@@ -217,6 +243,8 @@ def write_readme(batch, *, counts, args, parser_version, commit, rows, metas,
 | 来源岗位 ID | 原始文件及定位 | 标题/地点/正文核对 | 冲突或缺失 | 结果及检查人 |
 | --- | --- | --- | --- | --- |
 {chr(10).join(spot_lines)}
+
+检查人签字：__________　日期：__________（自动回读结论不能替代人工抽检）
 
 ## 6. 详情抽查核对（{len(detail_results)} 条，成功 {detail_ok_count} 条）
 
