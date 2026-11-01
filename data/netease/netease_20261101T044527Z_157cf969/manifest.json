@@ -7,7 +7,11 @@
   "batch_id": "netease_20261101T044527Z_157cf969",
   "started_at": "2026-11-01T04:45:32Z",
   "finished_at": "2026-11-01T04:49:14Z",
-  "collector_commit": "pending",
+  "collector_version": "netease-collector-1.0.0",
+  "collector_commit": "ef5e57bff710fa60d663339efe0e3c41b30b6d9f",
+  "collector_fix_version": "netease-collector-1.0.1",
+  "collector_fix_commit": "fcaeab273cea6722c9556723fa66a7f6ec1d9470",
+  "source_hash_spec": "SHA-256 over UTF-8 text with LF-normalized line endings",
   "parser_version": "netease-collector-1.0.0",
   "query_spec": {
     "endpoints": [
@@ -25,7 +29,9 @@
   },
   "coverage_status": "partial",
   "stop_reason": "pilot_limit",
-  "acceptance_status": "pending",
+  "acceptance_status": "accepted",
+  "accepted_at": "2026-11-01",
+  "accepted_by": "C technical re-verification; B manual spot-check (石雨衡)",
   "supersedes_batch_id": null,
   "counts": {
     "requests": 75,
@@ -515,35 +521,85 @@
   "collector_source": [
     {
       "path": "collectors/netease/README.md",
-      "sha256": "7a20e26c62ae0ec4ed5ce6a9a632229853fe6b01626eb0462a2dc4871fe0b708"
+      "sha256": "ecfa69e97e67ce4f3e143c7be48d4708355e7e537c5a4c751e400fd15793eab1",
+      "newline": "LF"
     },
     {
       "path": "collectors/netease/__init__.py",
-      "sha256": "2dcf7550732b2f1faab8c575ff1c0673d6ece0eb410924d10b8302dc82c24002"
+      "sha256": "2dcf7550732b2f1faab8c575ff1c0673d6ece0eb410924d10b8302dc82c24002",
+      "newline": "LF"
     },
     {
       "path": "collectors/netease/__main__.py",
-      "sha256": "49b03b6fa8f6e6595f1826ee936c4777c7dfe6517ccdc443aa2207aa3830fcfd"
+      "sha256": "ca0fbca93371d32cc4e12603d2056a763f9c1bfbe0ab379510d868591827782e",
+      "newline": "LF"
     },
     {
       "path": "collectors/netease/batch.py",
-      "sha256": "5ad2ef994d85c405817ec9c0e4b539479ae30fe5b9ecffe413178e67975ef3cc"
+      "sha256": "bed856f4f034dd93c6d45291a2a61290160f6e1016869a362d6efef2ac6725f3",
+      "newline": "LF"
     },
     {
       "path": "collectors/netease/client.py",
-      "sha256": "5bbcb08c451b83db0f1dbff22914a94d9a85b9ff1da8ffbf5b55aef9eb192058"
+      "sha256": "5bbcb08c451b83db0f1dbff22914a94d9a85b9ff1da8ffbf5b55aef9eb192058",
+      "newline": "LF"
     },
     {
       "path": "collectors/netease/mapping.py",
-      "sha256": "a78fef997010dda2809c236a35cb96ebe59303f74469010c9b87090b70a61608"
+      "sha256": "a78fef997010dda2809c236a35cb96ebe59303f74469010c9b87090b70a61608",
+      "newline": "LF"
     },
     {
       "path": "collectors/netease/report.py",
-      "sha256": "a5868a9e51d027f4ec5c614869ad19b3ff6c5f7e12070b6210042a1e63444097"
+      "sha256": "244c8fd25dda26ec057f232d95a28eeaed3bbbd3adc270316586a19192c7d4d6",
+      "newline": "LF"
     },
     {
       "path": "collectors/netease/requirements.txt",
-      "sha256": "039edf1a7b9b4e0870eec98ea6d5c9adecc38001acd60365025b016d1c400128"
+      "sha256": "039edf1a7b9b4e0870eec98ea6d5c9adecc38001acd60365025b016d1c400128",
+      "newline": "LF"
+    }
+  ],
+  "collector_fix_source": [
+    {
+      "path": "collectors/netease/README.md",
+      "sha256": "f48e9d0252212f519d574099447181ace784860af05cac6d3ef0a2bcbe7cd682",
+      "newline": "LF"
+    },
+    {
+      "path": "collectors/netease/__init__.py",
+      "sha256": "1ff34a0d029476a9f077db45d94eededf2e892e88854d404ce98c64fb96459ed",
+      "newline": "LF"
+    },
+    {
+      "path": "collectors/netease/__main__.py",
+      "sha256": "49b03b6fa8f6e6595f1826ee936c4777c7dfe6517ccdc443aa2207aa3830fcfd",
+      "newline": "LF"
+    },
+    {
+      "path": "collectors/netease/batch.py",
+      "sha256": "4d4cd2f6e3df69d28fff4299aace7351eb4dc6c0c7ee87a22fffacff91fc6b4f",
+      "newline": "LF"
+    },
+    {
+      "path": "collectors/netease/client.py",
+      "sha256": "5bbcb08c451b83db0f1dbff22914a94d9a85b9ff1da8ffbf5b55aef9eb192058",
+      "newline": "LF"
+    },
+    {
+      "path": "collectors/netease/mapping.py",
+      "sha256": "a78fef997010dda2809c236a35cb96ebe59303f74469010c9b87090b70a61608",
+      "newline": "LF"
+    },
+    {
+      "path": "collectors/netease/report.py",
+      "sha256": "5777aba062cccbd09172e7197d9c18fdfe5cd7a45e1dceae230f79f461f4165b",
+      "newline": "LF"
+    },
+    {
+      "path": "collectors/netease/requirements.txt",
+      "sha256": "039edf1a7b9b4e0870eec98ea6d5c9adecc38001acd60365025b016d1c400128",
+      "newline": "LF"
     }
   ]
 }
