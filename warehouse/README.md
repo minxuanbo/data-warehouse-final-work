@@ -1,4 +1,16 @@
-# C 分工：腾讯小批试验入库
+# C 分工与 C/D 联调
+
+## 当前入口（2026-11-01）
+
+已接入 main 上技术验收通过的腾讯批次及 D 的 PR #3 固定输入。运行 `.\scripts\run_cd.ps1`，默认创建独立 `recruitment_dw_dev_cd_v1` 并自动导出交接数据。初次安装沿用下文 Python 环境与依赖命令。旧试验库保留可复现基线。
+
+补充字段、范围口径、组员待办和本轮实测结果统一见[C/D 交接目录](../data/derived/tencent/tencent_20261031T093102Z_366ad0a4/cd_v1.1/README.md)。该目录包含可直接供 D 使用的 100 岗增强数据，核心筛选后为 98 岗。
+
+新版 SQL 入口以 ads.cd_ 开头，固定 build_id 查询。当前技能文本范围仍为职责及任职要求，D 的下一版将接入补充要求。数据库只读角色 dw_cd_reader 已配置并验证，成员实际登录账号须由本机管理员映射到该角色。
+
+单独执行检查时设置 `$env:DW_DATABASE='recruitment_dw_dev_cd_v1'`，再运行 `.\.venv-dbt\Scripts\python.exe -X utf8 -m scripts.check_cd_db`。离线完整测试依赖两个固定输入目录，先运行 scripts/prepare_trial_input.py 和 scripts/prepare_cd_input.py，再运行 unittest discover。
+
+## 首轮基线记录（2026-10-31）
 
 本轮完成可执行的 **原始批次校验 → SQL Server ODS/DIM/DWD → dbt DWS/ADS 试验接口**。代码位于 `feature/warehouse`；腾讯采集器及原始批次属于 PR #1，不重复提交、不合并它来掩盖待修问题。
 

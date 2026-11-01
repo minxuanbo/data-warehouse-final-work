@@ -1,0 +1,26 @@
+{
+  "derived_schema_version": "cd-handoff-1.1",
+  "batch_id": "tencent_20261031T093102Z_366ad0a4",
+  "source_revision": "25b397bf846a8e7c39bbc249e0700428e89bc0c3",
+  "analysis_revision": "0e06c7f9c0eff013f84bce8e5719254174162287",
+  "scope_version": "digital_jobs_cn_core_v1.1",
+  "enrichment_version": "tencent_detail_v1.1",
+  "source_manifest_sha256": "0ed9035f07a7d98b4062bd0a0be7dba25ae8046e3dd720c6368c7a6f8f1146bc",
+  "build_input_sha256": "6b998e05f765e66b5d117bff95e74768a3c87397ccd078f8f6d7e0e0f598d985",
+  "source_postings": 100,
+  "core_postings": 98,
+  "current_skill_fields": [
+    "description_raw",
+    "requirements_raw"
+  ],
+  "next_skill_fields": [
+    "description_raw",
+    "requirements_raw",
+    "additional_requirements_raw"
+  ],
+  "file": {
+    "path": "jobs_enriched.jsonl",
+    "bytes": 322441,
+    "sha256": "7c31dbb155786f51309bffc9965713db8985a8c3454026befdf9c5f0b07d6e6a"
+  }
+}

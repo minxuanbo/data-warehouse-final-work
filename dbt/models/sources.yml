@@ -5,14 +5,18 @@ sources:
     tables:
       - name: fact_posting_observation
       - name: bridge_version_location
+      - name: observation_enrichment
+      - name: bridge_version_skill
   - name: dim
     schema: dim
     tables:
       - name: posting_identity
       - name: posting_version
       - name: location
+      - name: skill
   - name: audit
     schema: audit
     tables:
       - name: collection_batch
       - name: quality_issue
+      - name: analysis_build

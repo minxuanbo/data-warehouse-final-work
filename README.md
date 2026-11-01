@@ -2,7 +2,7 @@
 
 四人数据仓库课程项目。用户已确认前五章设计审核通过，设计基线及采集规范 v1.0 已冻结；现在开展小批采集和技术联调，尚未通过数据验收或正式扩量。
 
-- **C/D 联调入口：[试验入库与接口说明](warehouse/README.md)**：本分支已跑通腾讯 100 条的 SQL Server → dbt 试验链路；数据仍为 pending/partial，详细结果见联调记录。
+- **C/D 当前交接：[增强数据与任务说明](data/derived/tencent/tencent_20261031T093102Z_366ad0a4/cd_v1.1/README.md)**。已接入验收后的腾讯 100 岗及 D 初版技能结果，核心样本 98 岗，提供补充要求、冲突标记和技能指标接口。
 - **采集成员先看：[采集提交入口](data/README.md)**：A 提交 `collectors/tencent/` 与 `data/tencent/`，B 提交 `collectors/netease/` 与 `data/netease/`；代码和完整批次都经 GitHub 交付。
 - **设计入口：[前五章设计总览](docs/design/README.md)**：按老师 PPT 顺序组织，五章各一份，图表直接嵌入对应章节。
 - **组员先读：[小组项目说明与采集交付规范](docs/小组项目说明与采集交付规范.md)**：选题原因、四人分工、两位采集成员的来源、交付格式、验收标准和 GitHub 协作约定；末尾附可直接发群的简版。
