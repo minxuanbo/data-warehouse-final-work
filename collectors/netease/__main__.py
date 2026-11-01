@@ -8,7 +8,6 @@ import random
 import re
 import subprocess
 import sys
-import time
 from pathlib import Path
 from urllib.parse import urlencode
 
@@ -21,6 +20,11 @@ from . import COLLECTOR_VERSION
 LIST_URL = "https://hr.163.com/api/hr163/position/queryPage"
 DETAIL_URL = "https://hr.163.com/api/hr163/position/query"
 SAFE_NAME = re.compile(r"[^A-Za-z0-9_-]+")
+# 列表阶段这些停止原因意味着采集已中止，不得再发起详情请求。
+LIST_HALT_REASONS = frozenset({
+    "access_restricted", "list_request_failed", "list_business_failed",
+    "pagination_stalled", "observed_at_missing",
+})
 
 
 def safe_name(value):
@@ -51,10 +55,10 @@ def raw_ref(batch, relative):
     return {"path": relative, "sha256": sha256_file(batch.path / relative)}
 
 
-def fetch_detail(batch, client, job_id, args):
-    """详情抽查：GET 详情，业务失败按退避重试；每次尝试都写入 requests.jsonl。
+def fetch_detail(batch, client, job_id):
+    """详情抽查：只发一次 GET，网络失败由 Client 内部重试，合计最多 3 次尝试。
 
-    返回 (data, 原始文件路径, 失败说明)；受限时抛 StopCollection（尝试已全部留痕）。
+    业务状态非成功不重试，直接登记交人工复核；受限时抛 StopCollection（尝试已留痕）。
     """
     params = {"id": job_id}
     url = f"{DETAIL_URL}?{urlencode(params)}"
@@ -67,31 +71,25 @@ def fetch_detail(batch, client, job_id, args):
         code = payload.get("code") if payload else "解析失败"
         return None, path, f"复用原始响应但业务状态 {code}"
 
-    message = "详情请求失败"
-    for try_no in range(args.retries + 1):
-        try:
-            response = client.get(url, params)
-        except StopCollection as exc:
-            for attempt in exc.attempts:
-                batch.log_attempt(attempt, "GET", url, params, None, False)
-            raise
-        for attempt in response.attempts[:-1]:
+    try:
+        response = client.get(url, params)
+    except StopCollection as exc:
+        for attempt in exc.attempts:
             batch.log_attempt(attempt, "GET", url, params, None, False)
-        if response.error or response.body is None:
-            batch.log_request(response, None, False)
-            message = response.error or "详情响应为空"
-        else:
-            payload = parse_json(response.body)
-            if payload and payload.get("code") == 200 and isinstance(payload.get("data"), dict):
-                path, _ = batch.save_raw(name, response.body)
-                batch.log_request(response, path, True)
-                return payload["data"], path, None
-            batch.log_request(response, None, False)
-            code = payload.get("code") if payload else "解析失败"
-            message = f"详情业务状态 {code}"
-        if try_no < args.retries:
-            time.sleep(client.backoff * (try_no + 1))
-    return None, None, message
+        raise
+    for attempt in response.attempts[:-1]:
+        batch.log_attempt(attempt, "GET", url, params, None, False)
+    if response.error or response.body is None:
+        batch.log_request(response, None, False)
+        return None, None, response.error or "详情响应为空"
+    payload = parse_json(response.body)
+    if payload and payload.get("code") == 200 and isinstance(payload.get("data"), dict):
+        path, _ = batch.save_raw(name, response.body)
+        batch.log_request(response, path, True)
+        return payload["data"], path, None
+    batch.log_request(response, None, False)
+    code = payload.get("code") if payload else "解析失败"
+    return None, None, f"详情业务状态 {code}"
 
 
 def list_stats(batch):
@@ -252,23 +250,22 @@ def run(args):
 
         page += 1
 
-    if len(rows) >= args.target:
-        stop_reason = "pilot_limit"
-    elif stop_reason is None:
-        stop_reason = "page_limit"
+    if stop_reason is None:
+        stop_reason = "pilot_limit" if len(rows) >= args.target else "page_limit"
+    detail_skipped = stop_reason in LIST_HALT_REASONS
 
     # 列表已含完整正文；只抽取少量详情核对，避免为凑请求量重复下载。
-    k = min(args.detail_samples, len(rows))
+    k = min(args.detail_samples, len(rows)) if not detail_skipped else 0
     rng = random.Random(args.sample_seed)
     sampled = sorted(rng.sample(range(len(rows)), k)) if k else []
-    restricted = False
+    restriction_stage = "list" if stop_reason == "access_restricted" else None
     for index in sampled:
         row, meta = rows[index], metas[index]
         job_id = row["source_job_id"]
         list_ref = row["raw_refs"][0]
         result = {"status": "failed", "list_path": meta["list_path"]}
         try:
-            data, detail_path, message = fetch_detail(batch, client, job_id, args)
+            data, detail_path, message = fetch_detail(batch, client, job_id)
         except StopCollection as exc:
             batch.add_issue(job_id, "access_restriction", "error", "stop", str(exc), [list_ref])
             error_pages.append({"page": meta["page"], "status": exc.attempt.status,
@@ -276,7 +273,7 @@ def run(args):
             unresolved.add(job_id)
             result.update({"path": None, "message": str(exc)})
             detail_results[job_id] = result
-            restricted = True
+            restriction_stage = "detail"
             break
         if data is None:
             refs = [list_ref] + ([raw_ref(batch, detail_path)] if detail_path else [])
@@ -298,6 +295,9 @@ def run(args):
             unresolved.add(job_id)
         result.update({"status": "ok", "path": detail_path, "mismatches": mismatches})
         detail_results[job_id] = result
+
+    if restriction_stage:
+        stop_reason = "access_restricted"
 
     for row in rows:
         for rule, severity, action, message in text_issues(row):
@@ -349,22 +349,25 @@ def run(args):
 
     write_readme(batch, counts=counts, args=args, parser_version=parser_version,
                  commit=commit, rows=rows, metas=metas, detail_results=detail_results,
-                 stop_reason=stop_reason, access_restricted=restricted)
+                 stop_reason=stop_reason, detail_skipped=detail_skipped,
+                 restriction_stage=restriction_stage)
 
     print(json.dumps({
         "batch": batch.batch_id,
         "batch_dir": str(batch.path),
         "output_records": counts["output_records"],
-        "status": "ok" if counts["output_records"] >= args.target else "incomplete",
+        "status": "restricted" if restriction_stage else
+                  ("ok" if counts["output_records"] >= args.target else "incomplete"),
         "stop_reason": stop_reason,
         "detail_samples": len(detail_results),
         "counts": counts,
     }, ensure_ascii=False, indent=2))
 
+    if stop_reason == "access_restricted":
+        return 2
     if counts["output_records"] >= args.target:
         return 0
-    if stop_reason in ("list_request_failed", "list_business_failed",
-                       "pagination_stalled", "access_restricted"):
+    if stop_reason in ("list_request_failed", "list_business_failed", "pagination_stalled"):
         return 2
     return 3
 

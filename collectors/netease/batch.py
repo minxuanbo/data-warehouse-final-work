@@ -24,6 +24,20 @@ def count_nonempty_lines(path):
         return sum(1 for line in handle if line.strip())
 
 
+def collector_source(root=None):
+    """采集器源码文件及 SHA-256，供清单在 commit 合并前也可定位校验。"""
+    root = Path(root) if root else Path(__file__).resolve().parents[2]
+    base = root / "collectors" / "netease"
+    entries = []
+    for path in sorted(base.iterdir()):
+        if path.is_file() and path.suffix in {".py", ".md", ".txt"}:
+            entries.append({
+                "path": str(path.relative_to(root)),
+                "sha256": sha256_file(path),
+            })
+    return entries
+
+
 class Batch:
     def __init__(self, path):
         self.path = Path(path).resolve()
@@ -192,6 +206,7 @@ class Batch:
             "started_at": started,
             "finished_at": finished,
             "collector_commit": collector_commit,
+            "collector_source": collector_source(),
             "parser_version": parser_version,
             "query_spec": query_spec,
             "coverage_status": coverage_status,

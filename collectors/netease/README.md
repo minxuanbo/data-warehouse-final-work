@@ -39,7 +39,7 @@ python -m collectors.netease --batch-dir data/netease/<batch_id> --target 100 --
 - 详情：`GET https://hr.163.com/api/hr163/position/query?id=<id>`，`id` 只取自真实列表，不枚举、不编造。
 - 分页：按 `currentPage` 顺序翻页，不跳页、不反复回扫；整页 ID 与上一页完全相同即判定分页停滞并中止（`quality_issues.jsonl` 记 `pagination_stalled`）。
 - 详情策略：列表对象已含完整 `description` 与 `requirement`，因此不逐条重复请求详情；按固定种子随机抽 8 条详情，对比列表与详情 10 项关键字段，差异登记 `detail_mismatch` 并交 C 复核。这样既满足“详情抽查 ≥5 条”，也不为凑请求量额外增加来源压力。
-- 访问规则：单并发、请求间隔 ≥3 秒；网络错误与详情业务失败最多重试 2 次（4s、8s 退避）；HTTP 401/403/418/429 或 HTML 响应出现登录/验证码提示时立即停止并返回退出码 2（JSON 正文不参与该判定，避免岗位描述含“登录”字样时误停）。触发受限的那一次请求同样写入 `requests.jsonl`，并登记 `access_restriction`，退出前仍完成 `manifest.json` 更新。遵守网站规则，不做代理轮换、不绕过访问控制。
+- 访问规则：单并发、请求间隔 ≥3 秒；网络错误最多重试 2 次（单次调用合计 ≤3 次尝试），业务状态非成功不重试、直接登记复核；HTTP 401/403/418/429 或 HTML 响应出现登录/验证码提示时立即停止并返回退出码 2（JSON 正文不参与该判定，避免岗位描述含“登录”字样时误停）。列表阶段一旦受限或失败，不再发起任何详情请求；详情抽查期间受限则立即停止本次抽查，`stop_reason` 记为 `access_restricted` 并返回退出码 2。触发受限的那一次请求同样写入 `requests.jsonl` 并登记 `access_restriction`，退出前仍完成 `manifest.json` 更新。遵守网站规则，不做代理轮换、不绕过访问控制。
 - 已知限制：接口不披露薪资与发布时间；`workType`、`updateTime` 为未经验证的来源代码/毫秒时间戳，原样保存不译码。
 
 ## 4. 字段映射
@@ -74,7 +74,7 @@ python -m collectors.netease --batch-dir data/netease/<batch_id> --target 100 --
 
 ## 6. 限速、重跑与日志
 
-- 单并发、间隔 ≥3 秒；网络错误与详情业务失败最多重试 2 次（4s、8s 退避），每次尝试都写入 `requests.jsonl`。
+- 单并发、间隔 ≥3 秒；网络错误最多重试 2 次（4s、8s 退避，单次调用合计 ≤3 次尝试）；业务失败不重试，每次尝试都写入 `requests.jsonl`。
 - 断点续跑：已存在的 `raw/list_*.json`、`raw/detail_*.json` 直接复用，不覆盖原始字节（`save_raw` 遇同名文件直接报错）；若 `jobs.jsonl` 已有记录则拒绝重跑，必须新建批次。已排除、待复核与已登记问题不重复登记。
 - 恢复时 `observed_at` 只取 `requests.jsonl` 中对应响应文件的 `requested_at`；取不到则停止并登记 `observed_at_missing`，不用其他请求或当前时刻代替。
 - 请求日志：一次 HTTP 调用中的**每一次尝试**都单独写 `requests.jsonl`（重试链路上的失败尝试同样留痕），记录 `request_id`、方法、URL、参数、HTTP 状态、业务成功标记、响应文件、编码、耗时、`attempt` 与错误；不保存 Cookie、Authorization、Token 或登录态。
