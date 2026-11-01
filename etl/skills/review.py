@@ -5,40 +5,32 @@ import json
 from pathlib import Path
 
 from .extract import FIELDS, RULE_VERSION, extract
-from .run import ROOT, DEFAULT_BATCH, body_digest, digest, load_json, read_batch, safe_file, write_json
+from .run import ROOT, body_digest, digest, load_json, write_json
 
 
-def review_payload(batch=None):
-    batch = batch or ROOT / "data/tencent" / DEFAULT_BATCH
-    jobs, manifest = read_batch(batch)
+def review_payload(jobs, rows, dictionary, reference_all, provenance):
+    source = jobs[0]["source"]
+    reference = reference_all["sources"][source]
     folder = Path(__file__).parent
-    dictionary = load_json(folder / "dictionary.json")
-    reference = load_json(folder / "review_reference.json")
-    if digest(folder / "extract.py") != reference["extractor_sha256_at_freeze"] or digest(folder / "dictionary.json") != reference["dictionary_sha256_at_freeze"]:
-        raise ValueError("冻结规则或词典已改变，不能继续沿用此人工留出计划")
-    plan = reference["human_review_plan"]
-    assert len(plan["development"]) == len(plan["final"]) == 10
-    assert len(set(plan["development"] + plan["final"])) == 20
-    assert not set(plan["final"]) & {x["source_job_id"] for x in reference["jobs"] + reference["audit_extra"]}
-    by_id = {job["source_job_id"]: job for job in jobs}
-    readings = {x["source_job_id"]: x for x in reference["jobs"] + reference["audit_extra"]}
+    if digest(folder / "extract.py") != reference_all["extractor_sha256_at_freeze"] or digest(folder / "dictionary.json") != reference_all["dictionary_sha256_at_freeze"]:
+        raise ValueError("冻结规则或词典已改变，需重新冻结验证计划")
+    if provenance["jobs_sha256"] != reference["jobs_sha256"] or provenance.get("enriched_jobs_sha256") != reference.get("enriched_jobs_sha256"):
+        raise ValueError("验证计划的输入正文版本不符")
+    reviews = reference["reviews"]
+    development = {k for k, v in reviews.items() if v["split"] == "development"}
+    final = {k for k, v in reviews.items() if v["split"] == "final"}
+    if len(development) != 10 or len(final) != 10 or development & final or final & set(reference.get("historical_ids", [])):
+        raise ValueError("开发/最终样本数量、历史样本隔离不符")
     selected = []
-    for split in ("development", "final"):
-        for identity in plan[split]:
-            job = by_id[identity]
-            raw_ref = next(r for r in job["raw_refs"] if Path(r["path"]).name.startswith("detail_"))
-            raw = load_json(safe_file(batch, raw_ref["path"]))["Data"]
-            selected.append({"source": job["source"], "source_job_id": identity, "batch_id": job["batch_id"],
-                "split": split, "body_sha256": body_digest(job), "title": raw["RecruitPostName"],
-                "location": raw.get("LocationName"), "description_raw": raw.get("Responsibility") or "",
-                "requirements_raw": raw.get("Requirement") or "", "normalized": {k: job[k] for k in ("title_raw", "locations_raw", *FIELDS)},
-                "raw_ref": raw_ref["path"], "raw_sha256": raw_ref["sha256"],
-                "direction": readings.get(identity, {}).get("direction"),
-                "candidates": extract(job, dictionary)})
-    return {"schema": "d-human-review-0.2.0", "batch_id": manifest["batch_id"], "plan_version": plan["version"],
-            "rule_version": RULE_VERSION, "dictionary_version": dictionary["version"],
-            "extractor_sha256": reference["extractor_sha256_at_freeze"], "dictionary_sha256": reference["dictionary_sha256_at_freeze"],
-            "skills": dictionary["skills"], "jobs": selected}
+    for job in jobs:
+        key = job["source_job_id"]
+        if key in reviews:
+            selected.append({**job, "split": reviews[key]["split"], "normalized": job, "body_sha256": body_digest(job),
+                             "title": job["title_raw"], "location": job["locations_raw"], "raw_ref": job["_raw_ref"]["path"], "raw_sha256": job["_raw_ref"]["sha256"],
+                             "candidates": [r for r in rows if r["source_job_id"] == key and r["source"] == source]})
+    return {"schema": "d-review-1.1", "batch_id": jobs[0]["batch_id"], "plan_version": reference_all["version"],
+            "rule_version": RULE_VERSION, "dictionary_version": dictionary["version"], "extractor_sha256": reference_all["extractor_sha256_at_freeze"],
+            "dictionary_sha256": reference_all["dictionary_sha256_at_freeze"], "skills": dictionary["skills"], "jobs": selected}
 
 
 def score(payload, submission):
@@ -93,39 +85,59 @@ def score(payload, submission):
         expected = {x["skill"] for x in known_labels if x["level"] != "否定"}
         actual = {x["skill_name"] for x in job["candidates"] if x["context_polarity"] != "negated"}
         result.update(tp=len(expected & actual), fp=len(actual - expected), fn=len(expected - actual))
+        expected_metric = {x["skill"] for x in known_labels if x["level"] in {"必需", "优先", "提及"}}
+        actual_metric = {x["skill_name"] for x in job["candidates"] if x["eligible_for_metric"]}
+        result.update(metric_tp=len(expected_metric & actual_metric), metric_fp=len(actual_metric - expected_metric), metric_fn=len(expected_metric - actual_metric))
+        for kind, skills in (("metric_false_positive", actual_metric - expected_metric), ("metric_false_negative", expected_metric - actual_metric)):
+            errors.extend({"source_job_id": identity, "split": job["split"], "skill_name": value, "kind": kind} for value in sorted(skills))
         for kind, skills in (("false_positive", actual - expected), ("false_negative", expected - actual)):
             errors.extend({"source_job_id": identity, "split": job["split"], "skill_name": s, "kind": kind} for s in sorted(skills))
         for label in known_labels:
-            correct = any(r["skill_name"] == label["skill"] and r["evidence_field"] == label["field"] and label["evidence"] in r["evidence"] and
+            correct = any(r["skill_name"] == label["skill"] and r["evidence_field"] == label["field"] and label["evidence"] in r["evidence"] and ("evidence_start" not in label or r["evidence_start"] <= label["evidence_start"] < label["evidence_end"] <= r["evidence_end"]) and
                           ((label["level"] == "否定" and r["context_polarity"] == "negated") or (label["level"] == r["requirement_level"] and r["context_polarity"] != "negated")) for r in job["candidates"])
             result.update(level_total=1, level_correct=int(correct))
             if not correct:
                 errors.append({"source_job_id": identity, "split": job["split"], "kind": "level_or_evidence_mismatch", "expected": label})
     results = {}
     for split, counts in totals.items():
-        result = {key: counts[key] for key in ("job_count", "tp", "fp", "fn", "level_total", "level_correct")}
+        result = {key: counts[key] for key in ("job_count", "tp", "fp", "fn", "metric_tp", "metric_fp", "metric_fn", "level_total", "level_correct")}
         ready = split != "final" or counts["job_count"] == 10
         result.update(status="complete" if counts["job_count"] == 10 else "incomplete",
             precision=counts["tp"] / (counts["tp"] + counts["fp"]) if ready and counts["tp"] + counts["fp"] else None,
             recall=counts["tp"] / (counts["tp"] + counts["fn"]) if ready and counts["tp"] + counts["fn"] else None,
             level_accuracy=counts["level_correct"] / counts["level_total"] if ready and counts["level_total"] else None)
+        for metric, denominator in (("metric_precision", counts["metric_tp"] + counts["metric_fp"]), ("metric_recall", counts["metric_tp"] + counts["metric_fn"])):
+            result[metric] = counts["metric_tp"] / denominator if ready and denominator else None
         results[split] = result
     return {"reviewer": submission["reviewer"], "rule_version": payload["rule_version"], "dictionary_version": payload["dictionary_version"],
             "audit_count": len(audits), "audit_records": audits, "splits": results, "incomplete_ids": incomplete, "excluded_final_ids": excluded,
             "errors": errors, "out_of_dictionary_labels": gaps,
             "review_method": submission.get("method", "先读正文录入参考，再对照冻结规则"),
-            "limits": "10岗最终小样本、87项冻结词典内按岗位×技能计分，含非否定不确定候选。词典外技术仅单报范围缺口，不称总体召回率；单轮审读未做交叉审阅，不自动等于组内验收。"}
+            "limits": "每来源10岗留出小样本；词典内非否定候选按岗位×技能计分，含不确定候选。词典外技术单报范围缺口。交叉核对指原始响应、交接字段与证据位置的对照，组内验收仍待C对账。"}
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("mode", choices=("score",))
+    parser.add_argument("--source", choices=("tencent", "netease"), default="tencent")
     parser.add_argument("--output", required=True, type=Path)
-    parser.add_argument("--input", required=True, type=Path)
     args = parser.parse_args()
-    if args.output.resolve() == args.input.resolve():
-        raise ValueError("计分输出不能覆盖参考标注")
-    result = score(review_payload(), load_json(args.input))
+    from .run import BATCHES, REFERENCE_PATH, audit, load_inputs, prepare_netease
+    batch = ROOT / "data" / args.source / BATCHES[args.source]
+    jobs, manifest, provenance = load_inputs(args.source, batch)
+    reference_all = load_json(REFERENCE_PATH)
+    reference = reference_all["sources"][args.source]
+    if args.source == "netease":
+        prepare_netease(jobs, reference)
+    audit(batch, jobs)
+    dictionary = load_json(Path(__file__).with_name("dictionary.json"))
+    rows = [row for job in jobs for row in extract(job, dictionary)]
+    payload = review_payload(jobs, rows, dictionary, reference_all, provenance)
+    submission = {**{k: payload[k] for k in ("schema", "batch_id", "plan_version", "rule_version", "dictionary_version", "extractor_sha256", "dictionary_sha256")},
+                  "reviewer": "D正文核对", "reviews": reference["reviews"]}
+    if args.output.resolve().is_relative_to(batch.resolve()) or args.output.resolve() == REFERENCE_PATH.resolve():
+        raise ValueError("计分输出不能覆盖输入")
+    result = score(payload, submission)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     write_json(args.output, result)
     print(json.dumps({"audit_count": result["audit_count"], "splits": result["splits"]}, ensure_ascii=False, indent=2))

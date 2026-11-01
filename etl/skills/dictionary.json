@@ -1,6 +1,6 @@
 {
-  "version": "skills-dict-0.1.0",
-  "scope": "本批开发子集实际出现的命名技术；不含泛AI/GPU、软技能、论文会议与所有算法概念。未收录技术单独登记，不视为不存在。",
+  "version": "skills-dict-0.2.0",
+  "scope": "旧87项词典、历史回归与本轮20岗开发正文出现的命名技术；不含泛AI/GPU、软技能、会议或全部算法概念。词典外技术单报范围缺口。",
   "built_from_dev_only": true,
   "skills": [
     {
@@ -14,6 +14,23 @@
         "field": "requirements_raw",
         "matched_text": "3FS",
         "context": "\n4.了解业界常见的分布式存缓系统，比如Alluxio、3FS、CEPH、AWS-S3、JuiceFS等，对RDMA、FUSE、文件系统有实际经验者更优"
+      }
+    },
+    {
+      "name": "AOSP",
+      "aliases": [
+        "AOSP"
+      ],
+      "category": "平台/运行环境",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "AOSP",
+        "match_start": 473,
+        "match_end": 477,
+        "context": "验；\n2. 了解 OLLVM/VMP 等混淆保护机制，或对 AOSP 源码、ROM 定制、Android Framework/ART 有深入了解\n3. 有分布"
       }
     },
     {
@@ -57,6 +74,23 @@
       }
     },
     {
+      "name": "Appium",
+      "aliases": [
+        "Appium"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "Appium",
+        "match_start": 542,
+        "match_end": 548,
+        "context": "入了解\n3. 有分布式数据采集架构经验，熟悉真机自动化技术（Appium、uiautomator2、PocoUI 等）\n4. 有开源安全项目贡献或技术博客分享经验"
+      }
+    },
+    {
       "name": "Arrow",
       "aliases": [
         "Arrow"
@@ -80,6 +114,23 @@
         "field": "requirements_raw",
         "matched_text": "Ascend C",
         "context": "2.熟悉GPU/AI芯片编程，如CUDA，Triton，Ascend C等；\r\n3.熟悉Cublas，Cutlass，CK等高性能算子开发工具；\r\n4.熟悉Tor"
+      }
+    },
+    {
+      "name": "AutoGen",
+      "aliases": [
+        "AutoGen"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2071430928898637824",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "AutoGen",
+        "match_start": 241,
+        "match_end": 248,
+        "context": "angChain、LlamaIndex、LangGraph、AutoGen、Dify 等）；\r\n4.工程实践经验：熟悉微服务、容器化、CI/CD 等现代工程实践，具"
       }
     },
     {
@@ -188,6 +239,91 @@
       }
     },
     {
+      "name": "Claude Code",
+      "aliases": [
+        "Claude Code"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79290",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "Claude Code",
+        "match_start": 469,
+        "match_end": 480,
+        "context": " 熟练使用 AI 编程工具者优先（如 Codex、Claude Code 等 AI Agent，能借助 AI 提升开发效率）。\n• 良好的学习能力，团队"
+      }
+    },
+    {
+      "name": "ClickHouse",
+      "aliases": [
+        "ClickHouse"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2116084604950720512",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "additional_requirements_raw",
+        "matched_text": "ClickHouse",
+        "match_start": 51,
+        "match_end": 61,
+        "context": "开发经验；\n2.有 Elasticsearch、Kafka、ClickHouse 使用经验；\n3.有 Docker、Kubernetes 或腾讯云等云服务实践经验；\n4."
+      }
+    },
+    {
+      "name": "Codex",
+      "aliases": [
+        "Codex"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79290",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "Codex",
+        "match_start": 463,
+        "match_end": 468,
+        "context": "g 等。\n• 熟练使用 AI 编程工具者优先（如 Codex、Claude Code 等 AI Agent，能借助 AI 提升开发效率）。\n"
+      }
+    },
+    {
+      "name": "Cursor",
+      "aliases": [
+        "Cursor"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79628",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "Cursor",
+        "match_start": 374,
+        "match_end": 380,
+        "context": " AI 辅助开发工具（如 Claude Code、Cursor 等）并能在工程实践中深度应用。"
+      }
+    },
+    {
+      "name": "D3D11",
+      "aliases": [
+        "D3D11"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79290",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "D3D11",
+        "match_start": 310,
+        "match_end": 315,
+        "context": "验者优先：帧预处理（色彩转换、缩放等），倾向零拷贝链路（如 D3D11/Metal/OpenGL ES 纹理共享）。\n• 有跨平台音视频采集经验者优先（屏幕/摄"
+      }
+    },
+    {
       "name": "Dart",
       "aliases": [
         "Dart"
@@ -211,6 +347,92 @@
         "field": "requirements_raw",
         "matched_text": "DeepSpeed",
         "context": "主流的训练框架和分布式框架，包括Megatron-LM、DeepSpeed、verL、LLama-factory等，熟悉常见的分布式并行策略，了解显存、通信与计算相"
+      }
+    },
+    {
+      "name": "Dify",
+      "aliases": [
+        "Dify"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2071430928898637824",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "Dify",
+        "match_start": 249,
+        "match_end": 253,
+        "context": "、LlamaIndex、LangGraph、AutoGen、Dify 等）；\r\n4.工程实践经验：熟悉微服务、容器化、CI/CD 等现代工程实践，具备高并发、"
+      }
+    },
+    {
+      "name": "Docker",
+      "aliases": [
+        "Docker"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2116084604950720512",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "additional_requirements_raw",
+        "matched_text": "Docker",
+        "match_start": 72,
+        "match_end": 78,
+        "context": "ch、Kafka、ClickHouse 使用经验；\n3.有 Docker、Kubernetes 或腾讯云等云服务实践经验；\n4.有开源贡献或可展示的技术项目；\n5"
+      }
+    },
+    {
+      "name": "Doris",
+      "aliases": [
+        "Doris"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79165",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "Doris",
+        "match_start": 62,
+        "match_end": 67,
+        "context": "网行业数据平台建设经验\n2. 熟悉 Spark、Flink、Doris 等大数据组件，具备性能调优与线上问题排查能力\n3. 有用户行为分析、数据治理、指标与标签"
+      }
+    },
+    {
+      "name": "Elasticsearch",
+      "aliases": [
+        "Elasticsearch",
+        "ES"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2116084604950720512",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "additional_requirements_raw",
+        "matched_text": "Elasticsearch",
+        "match_start": 31,
+        "match_end": 44,
+        "context": ".有高并发、分布式系统或 SaaS 产品开发经验；\n2.有 Elasticsearch、Kafka、ClickHouse 使用经验；\n3.有 Docker、Kubernetes"
+      }
+    },
+    {
+      "name": "FFmpeg",
+      "aliases": [
+        "FFmpeg"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79290",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "FFmpeg",
+        "match_start": 433,
+        "match_end": 439,
+        "context": "熟悉常见音视频传输协议，了解常用框架及库，如 WebRTC、FFmpeg 等。\n• 熟练使用 AI 编程工具者优先（如 Codex、Claude Code 等 A"
       }
     },
     {
@@ -266,6 +488,23 @@
       }
     },
     {
+      "name": "FunASR",
+      "aliases": [
+        "FunASR"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79626",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "FunASR",
+        "match_start": 349,
+        "match_end": 355,
+        "context": "\n• 有 VAD、ASR、TTS 接入经验（Whisper、FunASR、各类云厂商语音 API 等）；\n• 有 coturn 等开源 TURN/STUN 服务的"
+      }
+    },
+    {
       "name": "Gin",
       "aliases": [
         "Gin"
@@ -290,6 +529,40 @@
         "field": "requirements_raw",
         "matched_text": "Golang",
         "context": "1.熟悉C++或Golang，深入理解操作系统和网络基本原理，具备扎实的数据结构和算法基础；\r\n2.对大规模分布式系统"
+      }
+    },
+    {
+      "name": "HBase",
+      "aliases": [
+        "HBase"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "76448",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "description_raw",
+        "matched_text": "Hbase",
+        "match_start": 38,
+        "match_end": 43,
+        "context": "fka/Pulsar/ElasticSearch/Hbase部署，运维，监控等工作，保证服务稳定性。\n2.为相关大数据组件提供完善的指标/告"
+      }
+    },
+    {
+      "name": "HDFS",
+      "aliases": [
+        "HDFS"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "76448",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "HDFS",
+        "match_start": 77,
+        "match_end": 81,
+        "context": "与命令。\n3.熟悉主流的大数据组件，如Kafka/HDFS/Pulsar/Hbase/ES中任意一种或几种，有大数据运维经验。\n4.具备强"
       }
     },
     {
@@ -372,6 +645,57 @@
       }
     },
     {
+      "name": "JEB",
+      "aliases": [
+        "JEB"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "JEB",
+        "match_start": 212,
+        "match_end": 215,
+        "context": "droid 底层运行机制\n4. 熟练使用分析工具（Jadx、JEB 等）和 Hook 框架（Xposed/LSPosed），掌握静态分析、动态调试、协议还原"
+      }
+    },
+    {
+      "name": "Jadx",
+      "aliases": [
+        "Jadx"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "Jadx",
+        "match_start": 207,
+        "match_end": 211,
+        "context": "集与 Android 底层运行机制\n4. 熟练使用分析工具（Jadx、JEB 等）和 Hook 框架（Xposed/LSPosed），掌握静态分析、动态调试、"
+      }
+    },
+    {
+      "name": "Janus",
+      "aliases": [
+        "Janus"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79626",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "Janus",
+        "match_start": 286,
+        "match_end": 291,
+        "context": "流程，有客户端实时音视频接入经验；\n• 有 LiveKit、Janus、mediasoup 等实时音视频框架的使用或部署经验；\n• 有 VAD、ASR、TTS "
+      }
+    },
+    {
       "name": "Java",
       "aliases": [
         "Java"
@@ -421,6 +745,23 @@
         "field": "requirements_raw",
         "matched_text": "KMP",
         "context": "键问题。熟悉 Flutter、React Native、KMP、Kuikly 等跨端框架，或具备端侧模型推理、量化部署、端云协同经验者优先；\n6.技术判"
+      }
+    },
+    {
+      "name": "Kafka",
+      "aliases": [
+        "Kafka"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2116084604950720512",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "additional_requirements_raw",
+        "matched_text": "Kafka",
+        "match_start": 45,
+        "match_end": 50,
+        "context": "aaS 产品开发经验；\n2.有 Elasticsearch、Kafka、ClickHouse 使用经验；\n3.有 Docker、Kubernetes 或腾讯云等"
       }
     },
     {
@@ -477,6 +818,23 @@
       }
     },
     {
+      "name": "LSPosed",
+      "aliases": [
+        "LSPosed"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "LSPosed",
+        "match_start": 235,
+        "match_end": 242,
+        "context": "具（Jadx、JEB 等）和 Hook 框架（Xposed/LSPosed），掌握静态分析、动态调试、协议还原（Unicorn、Unidbg）完整流程\n5. 熟悉网"
+      }
+    },
+    {
       "name": "Lance",
       "aliases": [
         "Lance"
@@ -487,6 +845,40 @@
         "field": "requirements_raw",
         "matched_text": "Lance",
         "context": "算或查询引擎中的一种或多种；\n5.熟悉 Parquet，Lance, Vortex，Nimble 等列存文件格式，理解列式存储、随机访问、批量读取、压缩编码"
+      }
+    },
+    {
+      "name": "LangChain",
+      "aliases": [
+        "LangChain"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2071430928898637824",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "LangChain",
+        "match_start": 210,
+        "match_end": 219,
+        "context": "验，熟悉至少一种主流 Agent / LLM 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）；\r\n4.工程实"
+      }
+    },
+    {
+      "name": "LangGraph",
+      "aliases": [
+        "LangGraph"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2071430928898637824",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "LangGraph",
+        "match_start": 231,
+        "match_end": 240,
+        "context": "M 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）；\r\n4.工程实践经验：熟悉微服务、容器化、CI/CD 等"
       }
     },
     {
@@ -516,6 +908,57 @@
       }
     },
     {
+      "name": "LiveKit",
+      "aliases": [
+        "LiveKit"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79626",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "description_raw",
+        "matched_text": "LiveKit",
+        "match_start": 33,
+        "match_end": 40,
+        "context": "参与端到端语音交互链路的方案设计与技术验证：客户端接入 → LiveKit 服务端 → AI 语音服务 → 语音回传；\n2. 负责客户端侧的 LiveKit 接入与"
+      }
+    },
+    {
+      "name": "LlamaIndex",
+      "aliases": [
+        "LlamaIndex"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2071430928898637824",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "LlamaIndex",
+        "match_start": 220,
+        "match_end": 230,
+        "context": " Agent / LLM 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）；\r\n4.工程实践经验：熟悉微服务、容"
+      }
+    },
+    {
+      "name": "Lua",
+      "aliases": [
+        "Lua"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2013144251273207808",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "Lua",
+        "match_start": 80,
+        "match_end": 83,
+        "context": "或Unity引擎开发经验；\r\n3.熟练掌握C#，C++，具备Lua开发经验，有扎实的计算机编程基础；\r\n4.具备出色的学习能力，较强的问题分析与解决能力，良"
+      }
+    },
+    {
       "name": "MCP",
       "aliases": [
         "MCP"
@@ -526,6 +969,23 @@
         "field": "requirements_raw",
         "matched_text": "MCP",
         "context": "ntext / Memory 管理、RAG、Skill、MCP、Sandbox、长任务执行及异常恢复等技术。具备 Agent 框架、Coding Age"
+      }
+    },
+    {
+      "name": "MLIR",
+      "aliases": [
+        "MLIR"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2037425089443692544",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "MLIR",
+        "match_start": 116,
+        "match_end": 120,
+        "context": "ntel或 AI 芯片等编译相关的开发优化经验；\r\n3.精通MLIR、Triton、tilelang或其他CodeGen框架；\r\n4.具备良好的技术热情和责任"
       }
     },
     {
@@ -553,6 +1013,40 @@
         "field": "requirements_raw",
         "matched_text": "Megatron",
         "context": "构和算法功底，熟练掌握Python，熟悉Pytorch/Megatron/FSDP等模型训练框架、熟悉SLIME/VERL等RL框架优先；\r\n4.有ACM/ICP"
+      }
+    },
+    {
+      "name": "Metal",
+      "aliases": [
+        "Metal"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2072607372890783744",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "METAL",
+        "match_start": 168,
+        "match_end": 173,
+        "context": "性能调试工具；\r\n4.熟悉渲染优化，熟悉OPENGL、DX、METAL、VULKAN至少一项图形渲染API，在动画、场景、资源管理等至少有一项技术领域有丰富的经"
+      }
+    },
+    {
+      "name": "MongoDB",
+      "aliases": [
+        "MongoDB"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "MongoDB",
+        "match_start": 94,
+        "match_end": 101,
+        "context": "ic 等框架及常用数据解析技术；熟悉数据库操作（MySQL、MongoDB 等）\n3. 熟悉 Android/iOS 安全攻防，了解 Java 层和 Native "
       }
     },
     {
@@ -595,6 +1089,41 @@
       }
     },
     {
+      "name": "Node.js",
+      "aliases": [
+        "Node.js",
+        "NodeJS"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2077641750666719232",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "Node.js",
+        "match_start": 124,
+        "match_end": 131,
+        "context": "平台系统；精通至少两种技术栈组合，如 TypeScript+Node.js+Python+React+Go，具备跨平台开发经验者优先；\r\n3.具备对AI Agent"
+      }
+    },
+    {
+      "name": "ONNX Runtime Web",
+      "aliases": [
+        "ONNX Runtime Web"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2071430928898637824",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "additional_requirements_raw",
+        "matched_text": "ONNX Runtime Web",
+        "match_start": 367,
+        "match_end": 383,
+        "context": "Assembly 性能优化、TensorFlow.js / ONNX Runtime Web 端侧推理、WebGPU 等应用经验；\r\n6.开源与社区贡献：在知名开源项目中有持续贡献，"
+      }
+    },
+    {
       "name": "Objective-C",
       "aliases": [
         "Objective-C"
@@ -605,6 +1134,23 @@
         "field": "requirements_raw",
         "matched_text": "Objective-C",
         "context": "握一种主要编程语言，如Dart、C/C++、Swift、Objective-C、Java、Kotlin等；有至少一个主流端平台（Windows、macOS、iOS、An"
+      }
+    },
+    {
+      "name": "OpenGL ES",
+      "aliases": [
+        "OpenGL ES"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79290",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "OpenGL ES",
+        "match_start": 322,
+        "match_end": 331,
+        "context": "转换、缩放等），倾向零拷贝链路（如 D3D11/Metal/OpenGL ES 纹理共享）。\n• 有跨平台音视频采集经验者优先（屏幕/摄像头/音频采集，覆盖 Win/A"
       }
     },
     {
@@ -647,6 +1193,23 @@
       }
     },
     {
+      "name": "PocoUI",
+      "aliases": [
+        "PocoUI"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "PocoUI",
+        "match_start": 562,
+        "match_end": 568,
+        "context": "熟悉真机自动化技术（Appium、uiautomator2、PocoUI 等）\n4. 有开源安全项目贡献或技术博客分享经验"
+      }
+    },
+    {
       "name": "PostgreSQL",
       "aliases": [
         "PostgreSQL"
@@ -670,6 +1233,23 @@
         "field": "requirements_raw",
         "matched_text": "Presto",
         "context": "制；\n4.熟悉 Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种；\n5.熟悉 Par"
+      }
+    },
+    {
+      "name": "Pulsar",
+      "aliases": [
+        "Pulsar"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "76448",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "description_raw",
+        "matched_text": "Pulsar",
+        "match_start": 17,
+        "match_end": 23,
+        "context": "1.负责大数据相关组件Kafka/Pulsar/ElasticSearch/Hbase部署，运维，监控等工作，保证服务稳定性。"
       }
     },
     {
@@ -748,6 +1328,23 @@
         "field": "requirements_raw",
         "matched_text": "RDMA",
         "context": "o、3FS、CEPH、AWS-S3、JuiceFS等，对RDMA、FUSE、文件系统有实际经验者更优；\n5.具有优秀的学习能力、分析和解决问题能力、沟通能"
+      }
+    },
+    {
+      "name": "ROCm",
+      "aliases": [
+        "ROCm"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2037425089443692544",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "additional_requirements_raw",
+        "matched_text": "ROCm",
+        "match_start": 9,
+        "match_end": 13,
+        "context": "1.熟悉Cuda、ROCm算子开发与pytorch/tensorflow框架；\r\n2.熟悉LLM常见模型结构和大模型"
       }
     },
     {
@@ -870,6 +1467,23 @@
       }
     },
     {
+      "name": "Scrapy",
+      "aliases": [
+        "Scrapy"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "Scrapy",
+        "match_start": 51,
+        "match_end": 57,
+        "context": "以上工作经验\n2. 精通 Python 和 Java，熟悉 Scrapy、WebMagic 等框架及常用数据解析技术；熟悉数据库操作（MySQL、MongoDB "
+      }
+    },
+    {
       "name": "Shell",
       "aliases": [
         "Shell"
@@ -880,6 +1494,23 @@
         "field": "requirements_raw",
         "matched_text": "Shell",
         "context": "具备快速熟悉测试工具和业务能力；\n3.熟悉go，C++、Shell，有linux环境下开发经验；\n4.优秀的执行力和抗压能力，乐于主动反馈和积极思考，对问题"
+      }
+    },
+    {
+      "name": "Skia",
+      "aliases": [
+        "Skia"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2071430928898637824",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "additional_requirements_raw",
+        "matched_text": "Skia",
+        "match_start": 315,
+        "match_end": 319,
+        "context": "平台工作经验，深度了解跨端渲染引擎（如 Flutter / Skia）；\r\n5.前沿技术栈：具备 WebAssembly 性能优化、TensorFlow.js"
       }
     },
     {
@@ -932,6 +1563,23 @@
         "field": "requirements_raw",
         "matched_text": "TensorFlow",
         "context": "悉 Linux 与深度学习框架，如 PyTorch 或 TensorFlow；\r\n4.具备语音大模型训练、多语种 TTS 或大规模语音数据处理经验优先；\r\n5.熟练使"
+      }
+    },
+    {
+      "name": "TensorFlow.js",
+      "aliases": [
+        "TensorFlow.js"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2071430928898637824",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "additional_requirements_raw",
+        "matched_text": "TensorFlow.js",
+        "match_start": 351,
+        "match_end": 364,
+        "context": "\r\n5.前沿技术栈：具备 WebAssembly 性能优化、TensorFlow.js / ONNX Runtime Web 端侧推理、WebGPU 等应用经验；\r\n6.开源与"
       }
     },
     {
@@ -989,7 +1637,8 @@
     {
       "name": "TypeScript",
       "aliases": [
-        "TypeScript"
+        "TypeScript",
+        "TS"
       ],
       "category": "编程语言/标记语言",
       "observed_in_dev": {
@@ -997,6 +1646,40 @@
         "field": "requirements_raw",
         "matched_text": "TypeScript",
         "context": "与工程能力：精通 Python、Go、C++、Java、TypeScript 等至少一种主流开发语言，具备扎实的软件工程、系统设计和性能优化能力。熟悉分布式系统、异步"
+      }
+    },
+    {
+      "name": "Unicorn",
+      "aliases": [
+        "Unicorn"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "Unicorn",
+        "match_start": 261,
+        "match_end": 268,
+        "context": "sed/LSPosed），掌握静态分析、动态调试、协议还原（Unicorn、Unidbg）完整流程\n5. 熟悉网络通讯与代理机制，了解 HTTPS、SSL Pinn"
+      }
+    },
+    {
+      "name": "Unidbg",
+      "aliases": [
+        "Unidbg"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "Unidbg",
+        "match_start": 269,
+        "match_end": 275,
+        "context": "sed），掌握静态分析、动态调试、协议还原（Unicorn、Unidbg）完整流程\n5. 熟悉网络通讯与代理机制，了解 HTTPS、SSL Pinning 等安全"
       }
     },
     {
@@ -1015,12 +1698,30 @@
       }
     },
     {
+      "name": "Unix",
+      "aliases": [
+        "Unix"
+      ],
+      "category": "平台/运行环境",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2026648959719735296",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "Unix",
+        "match_start": 51,
+        "match_end": 55,
+        "context": "AI应用开发经验；\n2.精通C++，拥有3年以上Linux/Unix后台开发经验；\n3.理解大模型技术原理，具备RAG、知识图谱或NLP相关应用开发经验；\n4"
+      }
+    },
+    {
       "name": "Unreal Engine",
       "aliases": [
         "Unreal Engine",
         "UE5",
         "UE4",
-        "UE"
+        "UE",
+        "Unreal"
       ],
       "category": "框架/数据库/开发工具",
       "observed_in_dev": {
@@ -1028,6 +1729,16 @@
         "field": "description_raw",
         "matched_text": "UE5",
         "context": "1.负责UE5下开放世界游戏的gameplay开发；\n2.负责游戏核心业务系统的开发，包括角色3C、战斗"
+      },
+      "new_alias_evidence": {
+        "source": "tencent",
+        "source_job_id": "2082434681986527232",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "Unreal",
+        "match_start": 46,
+        "match_end": 52,
+        "context": "础；\r\n2.3年以上游戏引擎开发和维护经验，熟悉Unity/Unreal引擎架构；\r\n3.熟悉图形学与各种渲染技术，熟悉shader与渲染管线开发与定制；\r\n4."
       }
     },
     {
@@ -1070,6 +1781,143 @@
       }
     },
     {
+      "name": "WebAssembly",
+      "aliases": [
+        "WebAssembly"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2071430928898637824",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "additional_requirements_raw",
+        "matched_text": "WebAssembly",
+        "match_start": 334,
+        "match_end": 345,
+        "context": " Flutter / Skia）；\r\n5.前沿技术栈：具备 WebAssembly 性能优化、TensorFlow.js / ONNX Runtime Web 端侧推理、W"
+      }
+    },
+    {
+      "name": "WebGPU",
+      "aliases": [
+        "WebGPU"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2071430928898637824",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "additional_requirements_raw",
+        "matched_text": "WebGPU",
+        "match_start": 389,
+        "match_end": 395,
+        "context": "ow.js / ONNX Runtime Web 端侧推理、WebGPU 等应用经验；\r\n6.开源与社区贡献：在知名开源项目中有持续贡献，或在技术社区有较高影响力"
+      }
+    },
+    {
+      "name": "WebMagic",
+      "aliases": [
+        "WebMagic"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "WebMagic",
+        "match_start": 58,
+        "match_end": 66,
+        "context": "2. 精通 Python 和 Java，熟悉 Scrapy、WebMagic 等框架及常用数据解析技术；熟悉数据库操作（MySQL、MongoDB 等）\n3. 熟悉 "
+      }
+    },
+    {
+      "name": "WebRTC",
+      "aliases": [
+        "WebRTC"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79290",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "WebRTC",
+        "match_start": 426,
+        "match_end": 432,
+        "context": "ux）。\n• 熟悉常见音视频传输协议，了解常用框架及库，如 WebRTC、FFmpeg 等。\n• 熟练使用 AI 编程工具者优先（如 Codex、Claude C"
+      }
+    },
+    {
+      "name": "Whisper",
+      "aliases": [
+        "Whisper"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79626",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "Whisper",
+        "match_start": 341,
+        "match_end": 348,
+        "context": "使用或部署经验；\n• 有 VAD、ASR、TTS 接入经验（Whisper、FunASR、各类云厂商语音 API 等）；\n• 有 coturn 等开源 TURN/S"
+      }
+    },
+    {
+      "name": "Windows",
+      "aliases": [
+        "Windows",
+        "Win"
+      ],
+      "category": "平台/运行环境",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2115001234858622976",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "description_raw",
+        "matched_text": "Windows",
+        "match_start": 505,
+        "match_end": 512,
+        "context": " / Pro、Terminal-Bench、OSWorld、Windows Agent Arena、τ-bench、OS-Harm，识别公开基准的饱和与数据污染问题"
+      }
+    },
+    {
+      "name": "Xposed",
+      "aliases": [
+        "Xposed"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "Xposed",
+        "match_start": 228,
+        "match_end": 234,
+        "context": "熟练使用分析工具（Jadx、JEB 等）和 Hook 框架（Xposed/LSPosed），掌握静态分析、动态调试、协议还原（Unicorn、Unidbg）完整流"
+      }
+    },
+    {
+      "name": "coturn",
+      "aliases": [
+        "coturn"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79626",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "description_raw",
+        "matched_text": "coturn",
+        "match_start": 241,
+        "match_end": 247,
+        "context": "置，包括框架搭建、参数调优与版本管理；\n5. 基于开源方案（coturn）构建、部署并联调 TURN / STUN 服务，保障 NAT 穿透与媒体传输可用性；\n6"
+      }
+    },
+    {
       "name": "cuBLAS",
       "aliases": [
         "cuBLAS"
@@ -1093,6 +1941,40 @@
         "field": "description_raw",
         "matched_text": "iOS",
         "context": "；\r\n2.使用Flutter框架开发WorkBuddy的iOS、Android及鸿蒙端App，确保跨平台兼容性和高性能；设计并实现App与Agent的深"
+      }
+    },
+    {
+      "name": "macOS",
+      "aliases": [
+        "macOS"
+      ],
+      "category": "平台/运行环境",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2098253188510695424",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "macOS",
+        "match_start": 151,
+        "match_end": 156,
+        "context": "va、Kotlin等；有至少一个主流端平台（Windows、macOS、iOS、Android、Linux、OpenHarmony等）的开发经验；对Agent架"
+      }
+    },
+    {
+      "name": "mediasoup",
+      "aliases": [
+        "mediasoup"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79626",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "mediasoup",
+        "match_start": 292,
+        "match_end": 301,
+        "context": "端实时音视频接入经验；\n• 有 LiveKit、Janus、mediasoup 等实时音视频框架的使用或部署经验；\n• 有 VAD、ASR、TTS 接入经验（Whisp"
       }
     },
     {
@@ -1123,6 +2005,23 @@
       }
     },
     {
+      "name": "tilelang",
+      "aliases": [
+        "tilelang"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "tencent",
+        "source_job_id": "2037425089443692544",
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "field": "requirements_raw",
+        "matched_text": "tilelang",
+        "match_start": 128,
+        "match_end": 136,
+        "context": "编译相关的开发优化经验；\r\n3.精通MLIR、Triton、tilelang或其他CodeGen框架；\r\n4.具备良好的技术热情和责任感，优秀的分析解决问题能力，良好"
+      }
+    },
+    {
       "name": "torch.compile",
       "aliases": [
         "torch.compile",
@@ -1134,6 +2033,23 @@
         "field": "requirements_raw",
         "matched_text": "Torch-Compile",
         "context": "，Cutlass，CK等高性能算子开发工具；\r\n4.熟悉Torch-Compile等AI编译模块者优先；\r\n5.熟悉主流开源模型或推荐模型，有实际性能调优经验(如KV Ca"
+      }
+    },
+    {
+      "name": "uiautomator2",
+      "aliases": [
+        "uiautomator2"
+      ],
+      "category": "框架/数据库/开发工具",
+      "observed_in_dev": {
+        "source": "netease",
+        "source_job_id": "79599",
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "field": "requirements_raw",
+        "matched_text": "uiautomator2",
+        "match_start": 549,
+        "match_end": 561,
+        "context": "有分布式数据采集架构经验，熟悉真机自动化技术（Appium、uiautomator2、PocoUI 等）\n4. 有开源安全项目贡献或技术博客分享经验"
       }
     },
     {
@@ -1149,5 +2065,97 @@
         "context": "流推理框架和推理加速技术，包括但不限于TensorRT/vLLM/SGLang 等；\r\n5.具备良好的技术热情和责任感，优秀的分析解决问题能力，良好的团队"
       }
     }
+  ],
+  "development_ids": {
+    "tencent": [
+      "2036976620622999552",
+      "2116084604950720512",
+      "2061654749727600640",
+      "2059160518509379584",
+      "2037425089443692544",
+      "2091785005486489600",
+      "2080585827171348480",
+      "2026648959719735296",
+      "2071430928898637824",
+      "2115714592318603264"
+    ],
+    "netease": [
+      "53229",
+      "79290",
+      "79165",
+      "79628",
+      "79626",
+      "78482",
+      "78590",
+      "79599",
+      "76448",
+      "79560"
+    ]
+  },
+  "historical_tencent_ids": [
+    "1790271644757925888",
+    "1901550594292789248",
+    "1923261618968457216",
+    "1927639153244217344",
+    "1930438817001635840",
+    "1934984932162117632",
+    "1936827400029601792",
+    "1936827497983352832",
+    "1945692266278551552",
+    "1958076178912923648",
+    "1961707720809795584",
+    "1967856352005083136",
+    "1983435797747093504",
+    "1990262114463404032",
+    "1998671162179215360",
+    "2013144251273207808",
+    "2026648959719735296",
+    "2027658888916140032",
+    "2034237425647255552",
+    "2034532284522196992",
+    "2036976620622999552",
+    "2037425089443692544",
+    "2037467994921271296",
+    "2038814818466689024",
+    "2043623808224620544",
+    "2043890038449799168",
+    "2059160518509379584",
+    "2059891450371555328",
+    "2061654749727600640",
+    "2061700926892322816",
+    "2070151600797827072",
+    "2071807202225729536",
+    "2072248701686034432",
+    "2072330920538583040",
+    "2072330933721284608",
+    "2072477788216147968",
+    "2072607372890783744",
+    "2072607375201845248",
+    "2072607377244467200",
+    "2077312480664797184",
+    "2077641750666719232",
+    "2079038134749933568",
+    "2080585827171348480",
+    "2082434681986527232",
+    "2082710392638976000",
+    "2082723395740549120",
+    "2090043573536997376",
+    "2091785005486489600",
+    "2092090907078868992",
+    "2098253188510695424",
+    "2098669037675528192",
+    "2110191895966826496",
+    "2110629918290395136",
+    "2111019425472884736",
+    "2112120499797667840",
+    "2112189784016470016",
+    "2113089038390050816",
+    "2115001234858622976",
+    "2115695359488602112",
+    "2115702081611546624",
+    "2115711180747223040",
+    "2115714592318603264",
+    "2115993428956463104",
+    "2116084604950720512"
   ]
 }

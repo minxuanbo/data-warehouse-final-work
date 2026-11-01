@@ -59,7 +59,7 @@ class ExtractionTests(unittest.TestCase):
 
     def test_plus_separated_alternatives_keep_all_named_skills(self):
         rows = extract(job("精通至少两种技术栈组合，如TypeScript+Node.js+Python+React+Go。"), DICTIONARY)
-        self.assertEqual({r["skill_name"] for r in rows}, {"TypeScript", "Python", "React", "Go"})
+        self.assertEqual({r["skill_name"] for r in rows}, {"TypeScript", "Node.js", "Python", "React", "Go"})
         self.assertTrue(all(r["context_polarity"] == "alternative" for r in rows))
 
     def test_generic_script_alternative_does_not_change_cpp(self):
@@ -67,6 +67,52 @@ class ExtractionTests(unittest.TestCase):
             with self.subTest(text=text):
                 row = extract(job(text), DICTIONARY)[0]
                 self.assertEqual((row["skill_name"], row["requirement_level"]), ("C++", "必需"))
+
+    def test_additional_field_offsets_hash_and_priority_heading(self):
+        from etl.skills.extract import BODY_HASH_VERSION
+        from etl.skills.run import body_digest
+        record = job("熟悉Python")
+        before = body_digest(record)
+        record["additional_requirements_raw"] = "😀加分项\r\n熟悉SQL者优先；无需Java经验"
+        rows = [r for r in extract(record, DICTIONARY) if r["evidence_field"] == "additional_requirements_raw"]
+        self.assertNotEqual(before, body_digest(record))
+        self.assertEqual(BODY_HASH_VERSION, "skills-body-1.1")
+        self.assertEqual(rows[0]["requirement_level"], "优先")
+        self.assertEqual(rows[1]["context_polarity"], "negated")
+        for row in rows:
+            self.assertEqual(record[row["evidence_field"]][row["match_start"]:row["match_end"]], row["matched_text"])
+
+    def test_years_are_not_skill_alternatives(self):
+        rows = extract(job("至少2年UE4开发经验；精通C++和至少一种脚本语言"), DICTIONARY)
+        self.assertTrue(all(r["requirement_level"] == "必需" for r in rows))
+
+    def test_chinese_alternative_and_new_predicate(self):
+        rows = extract(job("精通MLIR、Triton、tilelang或其他框架；能熟练使用UE，有Lua脚本经验者优先"), DICTIONARY)
+        self.assertTrue(all(r["context_polarity"] == "alternative" for r in rows if r["skill_name"] in {"MLIR", "Triton", "tilelang"}))
+        self.assertEqual(next(r for r in rows if r["skill_name"] == "Unreal Engine")["requirement_level"], "必需")
+
+    def test_at_least_with_verb_and_spaced_priority_predicate(self):
+        rows = extract(job("至少熟悉一门编程语言（Python / Go / Node.js）；熟悉Linux，有 Gin、Laravel 或同类框架的项目经验"), DICTIONARY)
+        self.assertTrue(all(r["context_polarity"] == "alternative" for r in rows if r["skill_name"] in {"Python", "Go", "Node.js"}))
+        self.assertEqual(next(r for r in rows if r["skill_name"] == "Linux")["requirement_level"], "必需")
+
+    def test_priority_section_applies_until_required_heading(self):
+        rows = extract(job("加分项\n有Python经验\n熟悉SQL\n必备条件\n掌握Java"), DICTIONARY)
+        self.assertEqual([r["requirement_level"] for r in rows], ["优先", "优先", "必需"])
+
+    def test_core_and_conflict_filters_recompute_denominator(self):
+        a, b, c = job("熟悉Python"), job("未列命名工具", identity="2"), job("熟悉Java", identity="3")
+        a.update(is_core=True, location_conflict=True, experience_conflict=True)
+        b.update(is_core=True, confirmed_locations=["北京", "深圳"])
+        c.update(is_core=False)
+        rows = [row for j in (a, b, c) for row in extract(j, DICTIONARY)]
+        metrics = summarize([a, b, c], rows, [])
+        self.assertEqual((metrics["parseable_body_count"], metrics["skill_matched_posting_count"]), (2, 1))
+        self.assertEqual(metrics["skills"][0]["share"], 0.5)
+        self.assertEqual(summarize([a, b, c], rows, [], city="深圳")["parseable_body_count"], 1)
+        selected = summarize([a, b, c], rows, [], experience="冲突待确认")
+        self.assertEqual(selected["skills"][0]["share"], 1)
+        self.assertEqual(summarize([a, b, c], rows, [], city="不存在")["skills"], [])
 
     def test_raw_path_cannot_escape_batch(self):
         with self.assertRaises(ValueError):
@@ -93,6 +139,41 @@ class ExtractionTests(unittest.TestCase):
         metrics = summarize([], [], [])
         self.assertIsNone(metrics["body_coverage"])
         self.assertEqual(metrics["skills"], [])
+
+
+class EnrichedInputTests(unittest.TestCase):
+    def test_enriched_bytes_and_identity_are_verified(self):
+        import hashlib
+        import tempfile
+        from etl.skills.extract import FIELDS
+        from etl.skills.run import read_enriched, write_json
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            batch = root / "raw"
+            handoff = root / "handoff"
+            batch.mkdir()
+            handoff.mkdir()
+            (batch / "manifest.json").write_bytes(b"source-manifest")
+            original = job("熟悉Python")
+            enriched = {**original, "additional_requirements_raw": "熟悉SQL", "is_core": True, "location_conflict": False,
+                        "experience_conflict": False, "confirmed_locations": ["深圳"], "scope_rule_version": "scope-test", "enrichment_version": "enrich-test"}
+            body = json.dumps(enriched, ensure_ascii=False).encode("utf-8")
+            (handoff / "jobs_enriched.jsonl").write_bytes(body)
+            manifest = {"derived_schema_version": "cd-handoff-1.1", "batch_id": "test_batch", "next_skill_fields": list(FIELDS), "scope_version": "scope-test", "enrichment_version": "enrich-test",
+                        "source_manifest_sha256": hashlib.sha256(b"source-manifest").hexdigest(), "source_postings": 1, "core_postings": 1,
+                        "file": {"path": "jobs_enriched.jsonl", "bytes": len(body), "sha256": hashlib.sha256(body).hexdigest()}}
+            write_json(handoff / "manifest.json", manifest)
+            self.assertEqual(read_enriched(batch, [original], handoff)[0][0]["additional_requirements_raw"], "熟悉SQL")
+            (handoff / "jobs_enriched.jsonl").write_bytes(body + b" ")
+            with self.assertRaises(ValueError):
+                read_enriched(batch, [original], handoff)
+            enriched["source_job_id"] = "other"
+            body = json.dumps(enriched, ensure_ascii=False).encode("utf-8")
+            (handoff / "jobs_enriched.jsonl").write_bytes(body)
+            manifest["file"].update(bytes=len(body), sha256=hashlib.sha256(body).hexdigest())
+            write_json(handoff / "manifest.json", manifest)
+            with self.assertRaises(ValueError):
+                read_enriched(batch, [original], handoff)
 
 
 class ReviewTests(unittest.TestCase):
