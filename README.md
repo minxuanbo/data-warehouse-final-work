@@ -2,6 +2,7 @@
 
 四人数据仓库课程项目。用户已确认前五章设计审核通过，设计基线及采集规范 v1.0 已冻结；现在开展小批采集和技术联调，尚未通过数据验收或正式扩量。
 
+- **双来源入库已跑通**：腾讯、网易各 100 条，按来源和批次核对。网易技能与核心范围等待 D 提交，运行入口见 [C 分工说明](warehouse/README.md)。
 - **C/D 当前交接：[增强数据与任务说明](data/derived/tencent/tencent_20261031T093102Z_366ad0a4/cd_v1.1/README.md)**。已接入验收后的腾讯 100 岗及 D 初版技能结果，核心样本 98 岗，提供补充要求、冲突标记和技能指标接口。
 - **采集成员先看：[采集提交入口](data/README.md)**：A 提交 `collectors/tencent/` 与 `data/tencent/`，B 提交 `collectors/netease/` 与 `data/netease/`；代码和完整批次都经 GitHub 交付。
 - **设计入口：[前五章设计总览](docs/design/README.md)**：按老师 PPT 顺序组织，五章各一份，图表直接嵌入对应章节。

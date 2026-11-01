@@ -1,6 +1,12 @@
 # C 分工与 C/D 联调
 
-## 当前入口（2026-11-01）
+## 双来源入口（2026-11-01）
+
+网易 PR #4 已技术验收并合并，腾讯与网易各 100 条已进入同一开发库。从仓库根目录执行 `.\scripts\run_dual.ps1`，可复现两批固定输入的接入和 dbt 检查。独立对账使用项目解释器运行 `-m scripts.check_dual_db`，并设置 `DW_DATABASE=recruitment_dw_dev_cd_v1`。
+
+双来源接口为 ads.dual_job_detail、ads.dual_city、ads.dual_education，概览沿用 ads.trial_overview。网易技能与核心范围待 D 提交，腾讯技能口径继续按核心 98 岗计算。两批日期不同，展示时需要保留来源、批次与观察日期。完整验证见[网易验收与双来源联调](../reports/warehouse/网易验收与双来源联调.md)。
+
+## 腾讯 C/D 入口（2026-11-01）
 
 已接入 main 上技术验收通过的腾讯批次及 D 的 PR #3 固定输入。运行 `.\scripts\run_cd.ps1`，默认创建独立 `recruitment_dw_dev_cd_v1` 并自动导出交接数据。初次安装沿用下文 Python 环境与依赖命令。旧试验库保留可复现基线。
 
