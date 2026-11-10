@@ -1,0 +1,167 @@
+﻿source,source_job_id,split,skill,field,level,evidence,evidence_start,evidence_end
+netease,53229,development,Unreal Engine,requirements_raw,优先,UE/Unity,182,190
+netease,53229,development,Unity,requirements_raw,优先,UE/Unity,182,190
+netease,79290,development,Windows,description_raw,提及,Windows / Android / macOS / iOS / Linux,23,62
+netease,79290,development,Android,description_raw,提及,Windows / Android / macOS / iOS / Linux,23,62
+netease,79290,development,macOS,description_raw,提及,Windows / Android / macOS / iOS / Linux,23,62
+netease,79290,development,iOS,description_raw,提及,Windows / Android / macOS / iOS / Linux,23,62
+netease,79290,development,Linux,description_raw,提及,Windows / Android / macOS / iOS / Linux,23,62
+netease,79290,development,C,requirements_raw,必需,C/C++ 编程能力,15,25
+netease,79290,development,C++,requirements_raw,必需,C/C++ 编程能力,15,25
+netease,79290,development,Windows,requirements_raw,优先,Win/Android/macOS/iOS/Linux,96,123
+netease,79290,development,Android,requirements_raw,优先,Win/Android/macOS/iOS/Linux,96,123
+netease,79290,development,macOS,requirements_raw,优先,Win/Android/macOS/iOS/Linux,96,123
+netease,79290,development,iOS,requirements_raw,优先,Win/Android/macOS/iOS/Linux,96,123
+netease,79290,development,Linux,requirements_raw,优先,Win/Android/macOS/iOS/Linux,96,123
+netease,79290,development,D3D11,requirements_raw,优先,D3D11/Metal/OpenGL ES,310,331
+netease,79290,development,Metal,requirements_raw,优先,D3D11/Metal/OpenGL ES,310,331
+netease,79290,development,OpenGL ES,requirements_raw,优先,D3D11/Metal/OpenGL ES,310,331
+netease,79290,development,WebRTC,requirements_raw,必需,WebRTC、FFmpeg,426,439
+netease,79290,development,FFmpeg,requirements_raw,必需,WebRTC、FFmpeg,426,439
+netease,79290,development,Codex,requirements_raw,优先,Codex、Claude Code,463,480
+netease,79290,development,Claude Code,requirements_raw,优先,Codex、Claude Code,463,480
+netease,79290,development,MediaCodec,requirements_raw,优先,MediaCodec / VideoToolbox,188,213
+netease,79290,development,VideoToolbox,requirements_raw,优先,MediaCodec / VideoToolbox,188,213
+netease,79165,development,Spark,requirements_raw,必需,熟悉 Spark、Flink、Doris,47,67
+netease,79165,development,Flink,requirements_raw,必需,熟悉 Spark、Flink、Doris,47,67
+netease,79165,development,Doris,requirements_raw,必需,熟悉 Spark、Flink、Doris,47,67
+netease,79165,development,Python,requirements_raw,不确定,Python / Java / Scala 中至少一种语言,160,189
+netease,79165,development,Java,requirements_raw,不确定,Python / Java / Scala 中至少一种语言,160,189
+netease,79165,development,Scala,requirements_raw,不确定,Python / Java / Scala 中至少一种语言,160,189
+netease,79628,development,HTML,requirements_raw,必需,熟练掌握 HTML/CSS/JavaScript/TypeScript,23,58
+netease,79628,development,CSS,requirements_raw,必需,熟练掌握 HTML/CSS/JavaScript/TypeScript,23,58
+netease,79628,development,JavaScript,requirements_raw,必需,熟练掌握 HTML/CSS/JavaScript/TypeScript,23,58
+netease,79628,development,TypeScript,requirements_raw,必需,熟练掌握 HTML/CSS/JavaScript/TypeScript,23,58
+netease,79628,development,React,requirements_raw,必需,精通 React/Vue,59,71
+netease,79628,development,Vue,requirements_raw,必需,精通 React/Vue,59,71
+netease,79628,development,MCP,requirements_raw,必需,MCP 等,143,148
+netease,79628,development,Node.js,requirements_raw,不确定,Node.js 或其他服务端技术,250,266
+netease,79628,development,Claude Code,requirements_raw,必需,Claude Code、Cursor,362,380
+netease,79628,development,Cursor,requirements_raw,必需,Claude Code、Cursor,362,380
+netease,79626,development,LiveKit,description_raw,提及,LiveKit 服务端,33,44
+netease,79626,development,coturn,description_raw,提及,coturn,241,247
+netease,79626,development,Kubernetes,description_raw,不确定,d-compose 或 K8s,310,325
+netease,79626,development,Linux,requirements_raw,必需,熟悉 Linux 常用命令,109,122
+netease,79626,development,Python,requirements_raw,不确定,至少熟悉一门编程语言（Python / Go / Node.js / TS / Java 等）,146,193
+netease,79626,development,Go,requirements_raw,不确定,至少熟悉一门编程语言（Python / Go / Node.js / TS / Java 等）,146,193
+netease,79626,development,Node.js,requirements_raw,不确定,至少熟悉一门编程语言（Python / Go / Node.js / TS / Java 等）,146,193
+netease,79626,development,TypeScript,requirements_raw,不确定,至少熟悉一门编程语言（Python / Go / Node.js / TS / Java 等）,146,193
+netease,79626,development,Java,requirements_raw,不确定,至少熟悉一门编程语言（Python / Go / Node.js / TS / Java 等）,146,193
+netease,79626,development,WebRTC,requirements_raw,优先,了解 WebRTC,239,248
+netease,79626,development,LiveKit,requirements_raw,优先,LiveKit、Janus、mediasoup,278,301
+netease,79626,development,Janus,requirements_raw,优先,LiveKit、Janus、mediasoup,278,301
+netease,79626,development,mediasoup,requirements_raw,优先,LiveKit、Janus、mediasoup,278,301
+netease,79626,development,Whisper,requirements_raw,优先,Whisper、FunASR,341,355
+netease,79626,development,FunASR,requirements_raw,优先,Whisper、FunASR,341,355
+netease,79626,development,coturn,requirements_raw,优先,coturn,376,382
+netease,79626,development,Kubernetes,requirements_raw,优先,熟悉 K8s,411,417
+netease,78590,development,Python,requirements_raw,不确定,熟练掌握 Python/Go/TypeScript 等一门或多门主流编程语言,53,91
+netease,78590,development,Go,requirements_raw,不确定,熟练掌握 Python/Go/TypeScript 等一门或多门主流编程语言,53,91
+netease,78590,development,TypeScript,requirements_raw,不确定,熟练掌握 Python/Go/TypeScript 等一门或多门主流编程语言,53,91
+netease,78590,development,Linux,requirements_raw,必需,熟悉 Linux 环境,107,118
+netease,79599,development,Android,description_raw,提及,Web、Android、iOS,34,49
+netease,79599,development,iOS,description_raw,提及,Web、Android、iOS,34,49
+netease,79599,development,Python,requirements_raw,必需,精通 Python 和 Java,31,47
+netease,79599,development,Java,requirements_raw,必需,精通 Python 和 Java,31,47
+netease,79599,development,Scrapy,requirements_raw,必需,熟悉 Scrapy、WebMagic,48,66
+netease,79599,development,WebMagic,requirements_raw,必需,熟悉 Scrapy、WebMagic,48,66
+netease,79599,development,MySQL,requirements_raw,必需,MySQL、MongoDB,88,101
+netease,79599,development,MongoDB,requirements_raw,必需,MySQL、MongoDB,88,101
+netease,79599,development,Android,requirements_raw,必需,熟悉 Android/iOS,108,122
+netease,79599,development,iOS,requirements_raw,必需,熟悉 Android/iOS,108,122
+netease,79599,development,Jadx,requirements_raw,必需,Jadx、JEB,207,215
+netease,79599,development,JEB,requirements_raw,必需,Jadx、JEB,207,215
+netease,79599,development,Xposed,requirements_raw,必需,Xposed/LSPosed,228,242
+netease,79599,development,LSPosed,requirements_raw,必需,Xposed/LSPosed,228,242
+netease,79599,development,Unicorn,requirements_raw,必需,Unicorn、Unidbg,261,275
+netease,79599,development,Unidbg,requirements_raw,必需,Unicorn、Unidbg,261,275
+netease,79599,development,AOSP,requirements_raw,优先,AOSP,473,477
+netease,79599,development,Appium,requirements_raw,优先,Appium、uiautomator2、PocoUI,542,568
+netease,79599,development,uiautomator2,requirements_raw,优先,Appium、uiautomator2、PocoUI,542,568
+netease,79599,development,PocoUI,requirements_raw,优先,Appium、uiautomator2、PocoUI,542,568
+netease,76448,development,Kafka,description_raw,提及,Kafka/Pulsar/ElasticSearch/Hbase,11,43
+netease,76448,development,Pulsar,description_raw,提及,Kafka/Pulsar/ElasticSearch/Hbase,11,43
+netease,76448,development,Elasticsearch,description_raw,提及,Kafka/Pulsar/ElasticSearch/Hbase,11,43
+netease,76448,development,HBase,description_raw,提及,Kafka/Pulsar/ElasticSearch/Hbase,11,43
+netease,76448,development,Linux,requirements_raw,必需,Linux基础,31,38
+netease,76448,development,Kafka,requirements_raw,不确定,Kafka/HDFS/Pulsar/Hbase/ES中任意一种或几种,71,105
+netease,76448,development,HDFS,requirements_raw,不确定,Kafka/HDFS/Pulsar/Hbase/ES中任意一种或几种,71,105
+netease,76448,development,Pulsar,requirements_raw,不确定,Kafka/HDFS/Pulsar/Hbase/ES中任意一种或几种,71,105
+netease,76448,development,HBase,requirements_raw,不确定,Kafka/HDFS/Pulsar/Hbase/ES中任意一种或几种,71,105
+netease,76448,development,Elasticsearch,requirements_raw,不确定,Kafka/HDFS/Pulsar/Hbase/ES中任意一种或几种,71,105
+netease,76448,development,Shell,requirements_raw,不确定,一种或多种语言如Shell、Python、Java,177,202
+netease,76448,development,Python,requirements_raw,不确定,一种或多种语言如Shell、Python、Java,177,202
+netease,76448,development,Java,requirements_raw,不确定,一种或多种语言如Shell、Python、Java,177,202
+netease,76448,development,Kubernetes,requirements_raw,优先,k8s运维经验优先,212,221
+netease,79560,development,Unreal Engine,requirements_raw,不确定,熟悉UE或Unity引擎,81,93
+netease,79560,development,Unity,requirements_raw,不确定,熟悉UE或Unity引擎,81,93
+netease,79354,final,Android,description_raw,提及,Android/iOS,8,19
+netease,79354,final,iOS,description_raw,提及,Android/iOS,8,19
+netease,79354,final,C,requirements_raw,必需,c/c++ 基础,81,89
+netease,79354,final,C++,requirements_raw,必需,c/c++ 基础,81,89
+netease,79627,final,iOS,description_raw,提及,iOS 端唯一负责人,6,16
+netease,79627,final,iOS,requirements_raw,必需,iOS 开发经验,17,25
+netease,79627,final,Objective-C,requirements_raw,必需,熟练掌握 Objective-C,26,42
+netease,79627,final,HTML,requirements_raw,必需,HTML/CSS/JavaScript,197,216
+netease,79627,final,CSS,requirements_raw,必需,HTML/CSS/JavaScript,197,216
+netease,79627,final,JavaScript,requirements_raw,必需,HTML/CSS/JavaScript,197,216
+netease,79627,final,React,requirements_raw,必需,React/Vue,227,236
+netease,79627,final,Vue,requirements_raw,必需,React/Vue,227,236
+netease,79627,final,Claude Code,requirements_raw,优先,Claude Code、Cursor,338,356
+netease,79627,final,Cursor,requirements_raw,优先,Claude Code、Cursor,338,356
+netease,79093,final,JavaScript,requirements_raw,必需,熟练掌握 JavaScript / TypeScript,36,64
+netease,79093,final,TypeScript,requirements_raw,必需,熟练掌握 JavaScript / TypeScript,36,64
+netease,79093,final,React,requirements_raw,不确定,熟悉 React 或 Vue,65,79
+netease,79093,final,Vue,requirements_raw,不确定,熟悉 React 或 Vue,65,79
+netease,79093,final,Java,requirements_raw,不确定,Java、Node.js、Python 等至少一种服务端技术,116,146
+netease,79093,final,Node.js,requirements_raw,不确定,Java、Node.js、Python 等至少一种服务端技术,116,146
+netease,79093,final,Python,requirements_raw,不确定,Java、Node.js、Python 等至少一种服务端技术,116,146
+netease,79093,final,MySQL,requirements_raw,必需,MySQL、Redis,167,178
+netease,79093,final,Redis,requirements_raw,必需,MySQL、Redis,167,178
+netease,79060,final,Python,requirements_raw,必需,熟悉python、lua、C++语言,123,141
+netease,79060,final,Lua,requirements_raw,必需,熟悉python、lua、C++语言,123,141
+netease,79060,final,C++,requirements_raw,必需,熟悉python、lua、C++语言,123,141
+netease,79598,final,LangChain,description_raw,提及,LangChain/MCP/OpenClaw,173,195
+netease,79598,final,MCP,description_raw,提及,LangChain/MCP/OpenClaw,173,195
+netease,79598,final,OpenClaw,description_raw,提及,LangChain/MCP/OpenClaw,173,195
+netease,79598,final,Python,requirements_raw,不确定,熟练使用 Python/Go/Java/Node.js 至少一种,107,139
+netease,79598,final,Go,requirements_raw,不确定,熟练使用 Python/Go/Java/Node.js 至少一种,107,139
+netease,79598,final,Java,requirements_raw,不确定,熟练使用 Python/Go/Java/Node.js 至少一种,107,139
+netease,79598,final,Node.js,requirements_raw,不确定,熟练使用 Python/Go/Java/Node.js 至少一种,107,139
+netease,71196,final,PyTorch,description_raw,提及,PyTorch/TensorFlow,73,91
+netease,71196,final,TensorFlow,description_raw,提及,PyTorch/TensorFlow,73,91
+netease,71196,final,Python,requirements_raw,必需,精通Python编程语言,116,128
+netease,71196,final,PyTorch,requirements_raw,不确定,深入掌握PyTorch或TensorFlow,129,151
+netease,71196,final,TensorFlow,requirements_raw,不确定,深入掌握PyTorch或TensorFlow,129,151
+netease,71196,final,Unity,requirements_raw,优先,Unity3D、UE,317,327
+netease,71196,final,Unreal Engine,requirements_raw,优先,Unity3D、UE,317,327
+netease,72340,final,RAG,description_raw,提及,RAG 访问层,417,424
+netease,72340,final,MCP,description_raw,提及,MCP、模型加速,556,564
+netease,72340,final,Python,requirements_raw,不确定,熟练掌握 Python / Go 至少一种语言,53,76
+netease,72340,final,Go,requirements_raw,不确定,熟练掌握 Python / Go 至少一种语言,53,76
+netease,72340,final,MongoDB,requirements_raw,必需,熟练使用 MongoDB、Redis,90,108
+netease,72340,final,Redis,requirements_raw,必需,熟练使用 MongoDB、Redis,90,108
+netease,72340,final,Flask,requirements_raw,必需,Flask、FastAPI,142,155
+netease,72340,final,FastAPI,requirements_raw,必需,Flask、FastAPI,142,155
+netease,72340,final,Linux,requirements_raw,必需,熟悉 Linux 环境,182,193
+netease,72340,final,Docker,requirements_raw,不确定,Dock.er,200,207
+netease,72340,final,RAG,requirements_raw,必需,RAG 实践经验,287,295
+netease,72340,final,Cursor,requirements_raw,必需,GitHub Copilot、Cursor、Windsurf,332,362
+netease,72340,final,LangChain,requirements_raw,优先,LangChain / LangGraph / CrewAI,453,483
+netease,72340,final,LangGraph,requirements_raw,优先,LangChain / LangGraph / CrewAI,453,483
+netease,72340,final,CrewAI,requirements_raw,优先,LangChain / LangGraph / CrewAI,453,483
+netease,72340,final,RAG,requirements_raw,优先,熟悉 RAG 技术体系,583,594
+netease,72340,final,MCP,requirements_raw,优先,MCP（Model Context Protocol）,636,663
+netease,72340,final,React,requirements_raw,优先,React/Vue,689,698
+netease,72340,final,Vue,requirements_raw,优先,React/Vue,689,698
+netease,76449,final,Kafka,description_raw,提及,Kafka/Pulsar/Flink/Iceberg,5,31
+netease,76449,final,Pulsar,description_raw,提及,Kafka/Pulsar/Flink/Iceberg,5,31
+netease,76449,final,Flink,description_raw,提及,Kafka/Pulsar/Flink/Iceberg,5,31
+netease,76449,final,Iceberg,description_raw,提及,Kafka/Pulsar/Flink/Iceberg,5,31
+netease,76449,final,Flink,requirements_raw,不确定,Flink/Iceberg/Kafka/Pulsar一种或多种,34,65
+netease,76449,final,Iceberg,requirements_raw,不确定,Flink/Iceberg/Kafka/Pulsar一种或多种,34,65
+netease,76449,final,Kafka,requirements_raw,不确定,Flink/Iceberg/Kafka/Pulsar一种或多种,34,65
+netease,76449,final,Pulsar,requirements_raw,不确定,Flink/Iceberg/Kafka/Pulsar一种或多种,34,65
+netease,76449,final,Java,requirements_raw,必需,Java/Python语言精通,82,97
+netease,76449,final,Python,requirements_raw,必需,Java/Python语言精通,82,97
+netease,76449,final,Linux,requirements_raw,必需,熟悉Linux操作系统,174,185

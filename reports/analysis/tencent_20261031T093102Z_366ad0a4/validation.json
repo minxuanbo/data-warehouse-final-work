@@ -1,0 +1,503 @@
+{
+  "reviewer": "D阶段正文核对",
+  "rule_version": "skills-rules-0.2.0",
+  "dictionary_version": "skills-dict-0.1.0",
+  "audit_count": 20,
+  "audit_records": [
+    {
+      "source": "tencent",
+      "source_job_id": "1990262114463404032",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "混元大模型音频理解算法工程师（北京）",
+      "location": "深圳",
+      "raw_ref": "raw/detail_1990262114463404032.json",
+      "raw_sha256": "13037e8eaf803f558168cb8263862e3ff0b06d1f9551aa8610405558c297f007",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题北京，地点深圳，完全无交集；保留两者待确认。框架段末尾优先作用于并列框架。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2091785005486489600",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "开放世界-游戏客户端开发工程师-系统方向(上海)",
+      "location": "杭州",
+      "raw_ref": "raw/detail_2091785005486489600.json",
+      "raw_sha256": "1ca76b1687ee8a54c660634ed8bc71d18c5e0163af1e16e198b8e9a5dd8d5211",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题上海，地点杭州。C++明确必需；脚本语言是泛指备选，不影响C++；UE同时有必需及优先证据。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2092090907078868992",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "开放世界-游戏服务端开发-DS/引擎方向(上海)",
+      "location": "杭州",
+      "raw_ref": "raw/detail_2092090907078868992.json",
+      "raw_sha256": "557cc01c5ebefe32eb3cb27a4bdbbe5917ac4220692a00b8751ec6b9c9228178",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题上海，地点杭州；结构化经验五年以上而正文三年以上，另记冲突。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2090043573536997376",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "混元DataInfra 平台开发工程师（北京）",
+      "location": "深圳",
+      "raw_ref": "raw/detail_2090043573536997376.json",
+      "raw_sha256": "ef2f5b42e9f1b8f3cd6d6938b011518a18b513b9fa7d99416c398d70f40f5097",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题北京，地点深圳。Spark/Hadoop/Ray均为实践经验要求。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "1961707720809795584",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "混元AIGC算法研究员（世界模型基模方向）（北京/上海）",
+      "location": "深圳",
+      "raw_ref": "raw/detail_1961707720809795584.json",
+      "raw_sha256": "3b7c8196789b34cf7df98d47a4b7248e44a2d5014d0a75c4094714f987b3fbc2",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题北京/上海，地点深圳；冻结词典无正例，算法家族作为词典外范围记录。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2034532284522196992",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "混元多模态强化学习（RL）算法研究员（北京/上海）",
+      "location": "深圳",
+      "raw_ref": "raw/detail_2034532284522196992.json",
+      "raw_sha256": "1811a543bd2a090f8a845f05ba3cce5ee4f8e5023174052a2dda76276513c55b",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题北京/上海，地点深圳；冻结词典无正例，不能推断无技能要求。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2026648959719735296",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "企业微信-AI应用后台开发工程师-业务挖掘和应用（成都/北京）",
+      "location": "广州",
+      "raw_ref": "raw/detail_2026648959719735296.json",
+      "raw_sha256": "8084832f00f02008484219401619f655a5861d0903bc40cc2604a595c086d184",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题成都/北京，地点广州，正文明确支持base成都、广州、北京；来源多处口径并存，不直接判采集错误。RAG与知识图谱/NLP是备选经验组。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2037467994921271296",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "企业微信-AI应用后台开发工程师-AI大模型应用（成都/北京）",
+      "location": "广州",
+      "raw_ref": "raw/detail_2037467994921271296.json",
+      "raw_sha256": "8c9f9ff38fa3104ed18f505b9d751508a7f84fe489ddb758ea2c6bbe34c7ab64",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题成都/北京，地点广州；要求的RAG为优先，不与职责提及混淆。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2034237425647255552",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "微信-多模态大模型算法工程师-OCR与文档理解方向（北京）",
+      "location": "深圳",
+      "raw_ref": "raw/detail_2034237425647255552.json",
+      "raw_sha256": "bcba32c34ec043f435255af55de069fcdfd807758f79be59d786f7b8df0c4b04",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题北京，地点深圳；职责C端不是C语言。C/C++仅从任职要求中取优先证据。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2080585827171348480",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "OG项目组-高级游戏客户端开发",
+      "location": "上海",
+      "raw_ref": "raw/detail_2080585827171348480.json",
+      "raw_sha256": "507f9dd1d344ebfae934da0359444ba1f2d6612ed15c71d8b5045826a74b9a5d",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "地点上海，标题无城市。至少2年UE4开发经验是年限下限，不是技能备选。结构化三年以上与正文五年以上另记冲突。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "1923261618968457216",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "《三角洲行动》-后台开发工程师-新星引力计划",
+      "location": "深圳",
+      "raw_ref": "raw/detail_1923261618968457216.json",
+      "raw_sha256": "a496b189668579695e8637d6a52e26bc51a3b7a1085c8bec1bdcb34c88867ad9",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "标题未列城市，原始地点深圳。Go/C/C++至少一种，逐项不能都算必需。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "1967856352005083136",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "混元AIGC算法研究员（多模态生成基模方向）（深圳/北京/上海）",
+      "location": "北京",
+      "raw_ref": "raw/detail_1967856352005083136.json",
+      "raw_sha256": "6363ad2c7ddca6120cba25837d59b987ae46b768b97eb8bbd09b6a8b874254a6",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题深圳/北京/上海，地点仅北京，属于部分重合；不扩写地点。冻结词典无正例，不等于岗位无需技术。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2070151600797827072",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "微信小游戏-大模型推荐算法工程师-商业化方向",
+      "location": "广州",
+      "raw_ref": "raw/detail_2070151600797827072.json",
+      "raw_sha256": "b80df3dede68b9a8db3ce886d44969ebd1c84808bb6a7178f5baa6e52cf3fae9",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "标题未列城市，地点广州。要求主要是LLM与推荐算法方向，冻结词典无正例。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2112120499797667840",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "微信支付-大模型 AI Infra 研发工程师",
+      "location": "深圳",
+      "raw_ref": "raw/detail_2112120499797667840.json",
+      "raw_sha256": "367ce0f9c257222ba8d8e5a9521ccc899309742b4c69cc00a96597ae7718bd12",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "地点深圳；框架熟悉要求与CUDA/NCCL优先条件分开。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2115702081611546624",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "在研UE5射击手游-游戏测试开发工程师",
+      "location": "深圳",
+      "raw_ref": "raw/detail_2115702081611546624.json",
+      "raw_sha256": "bd4cb1b95bb67533d1d1629bc88d3762e3750b267d915a274d60d578a8b0d85a",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "标题的UE5不作为技能正文证据。职责和要求有通用测试能力、未指定脚本语言名称，冻结词典无正例。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2059160518509379584",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "3D动作游戏《狩》-后台开发-UE5 DS后台开发",
+      "location": "北京",
+      "raw_ref": "raw/detail_2059160518509379584.json",
+      "raw_sha256": "154dc2959f08866d2c46795db6bf1c743688cc79e63521dd53ddf32c1e03411f",
+      "body_check": "issue",
+      "city_check": "same",
+      "note": "地点北京；PostLightItem另写北京/深圳双工作地，保留其口径差异，不扩写地点。 原始ImportantItem另含补充要求，未包含在requirements_raw；本次标签仅按职责与Requirement计分。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2082434681986527232",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "Technology Platform-游戏引擎开发工程师",
+      "location": "深圳",
+      "raw_ref": "raw/detail_2082434681986527232.json",
+      "raw_sha256": "040de8feeacb369bd812553d95070186d6794dd27bac087d6e48fe6f9f6580eb",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "标题无城市，地点深圳。Unity/Unreal按熟悉谓语记要求，斜杠本身不自动证明任一即可。Unreal应归Unreal Engine。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "1936827497983352832",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "微信小店-应用研究工程师-交易治理方向",
+      "location": "广州",
+      "raw_ref": "raw/detail_1936827497983352832.json",
+      "raw_sha256": "695ced1e7e29a9cf10532d01c436e0985e4b8c37f66400f953dd7dcda6de899a",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "地点广州。PyTorch/TensorFlow有任一条件，Hive/Flink未写任一，按熟悉谓语记要求。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2059891450371555328",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "具身大模型评测与数据工程师",
+      "location": "深圳",
+      "raw_ref": "raw/detail_2059891450371555328.json",
+      "raw_sha256": "1bb7d103e787ee0543b49bed4f18a2f9871060ccc643b9e90cc0cbc91303cad3",
+      "body_check": "issue",
+      "city_check": "same",
+      "note": "地点深圳；Python/PyTorch按工程使用要求计，不能从标题补其他技能。 原始ImportantItem另含补充要求，未包含在requirements_raw；本次标签仅按职责与Requirement计分。",
+      "reviewer": "D阶段正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2037425089443692544",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "AI编译优化工程师(北京/上海/深圳)",
+      "location": "北京",
+      "raw_ref": "raw/detail_2037425089443692544.json",
+      "raw_sha256": "218d3e1b17e1b819934ae6a4c8220c12dff87c2fd59db51d42d7eefe827f080f",
+      "body_check": "issue",
+      "city_check": "different",
+      "note": "标题北京/上海/深圳，地点北京，部分重合。MLIR/Triton/tilelang或其他框架是开放备选组，Triton不能单项记为必需。 原始ImportantItem另含补充要求，未包含在requirements_raw；本次标签仅按职责与Requirement计分。",
+      "reviewer": "D阶段正文核对"
+    }
+  ],
+  "splits": {
+    "development": {
+      "job_count": 10,
+      "tp": 25,
+      "fp": 0,
+      "fn": 0,
+      "level_total": 33,
+      "level_correct": 30,
+      "status": "complete",
+      "precision": 1.0,
+      "recall": 1.0,
+      "level_accuracy": 0.9090909090909091
+    },
+    "final": {
+      "job_count": 10,
+      "tp": 30,
+      "fp": 0,
+      "fn": 1,
+      "level_total": 33,
+      "level_correct": 31,
+      "status": "complete",
+      "precision": 1.0,
+      "recall": 0.967741935483871,
+      "level_accuracy": 0.9393939393939394
+    }
+  },
+  "incomplete_ids": [],
+  "excluded_final_ids": [],
+  "errors": [
+    {
+      "source_job_id": "2091785005486489600",
+      "split": "development",
+      "kind": "level_or_evidence_mismatch",
+      "expected": {
+        "skill": "Unreal Engine",
+        "field": "requirements_raw",
+        "level": "必需",
+        "evidence": "能熟练使用UE等主流游戏引擎"
+      }
+    },
+    {
+      "source_job_id": "2026648959719735296",
+      "split": "development",
+      "kind": "level_or_evidence_mismatch",
+      "expected": {
+        "skill": "RAG",
+        "field": "requirements_raw",
+        "level": "不确定",
+        "evidence": "具备RAG、知识图谱或NLP相关应用开发经验"
+      }
+    },
+    {
+      "source_job_id": "2080585827171348480",
+      "split": "development",
+      "kind": "level_or_evidence_mismatch",
+      "expected": {
+        "skill": "Unreal Engine",
+        "field": "requirements_raw",
+        "level": "必需",
+        "evidence": "至少2年UE4开发经验"
+      }
+    },
+    {
+      "source_job_id": "2082434681986527232",
+      "split": "final",
+      "skill_name": "Unreal Engine",
+      "kind": "false_negative"
+    },
+    {
+      "source_job_id": "2082434681986527232",
+      "split": "final",
+      "kind": "level_or_evidence_mismatch",
+      "expected": {
+        "skill": "Unreal Engine",
+        "field": "requirements_raw",
+        "level": "必需",
+        "evidence": "熟悉Unity/Unreal引擎架构"
+      }
+    },
+    {
+      "source_job_id": "2037425089443692544",
+      "split": "final",
+      "kind": "level_or_evidence_mismatch",
+      "expected": {
+        "skill": "Triton",
+        "field": "requirements_raw",
+        "level": "不确定",
+        "evidence": "精通MLIR、Triton、tilelang或其他CodeGen框架"
+      }
+    }
+  ],
+  "out_of_dictionary_labels": [
+    {
+      "source_job_id": "2091785005486489600",
+      "skill": "Lua",
+      "field": "requirements_raw",
+      "level": "优先",
+      "evidence": "有Lua脚本的项目完整经验者优先"
+    },
+    {
+      "source_job_id": "2091785005486489600",
+      "skill": "UMG",
+      "field": "requirements_raw",
+      "level": "必需",
+      "evidence": "熟练使用UMG"
+    },
+    {
+      "source_job_id": "2092090907078868992",
+      "skill": "Lua",
+      "field": "requirements_raw",
+      "level": "必需",
+      "evidence": "熟练掌握C++、Lua、Golang等后台开发语言"
+    },
+    {
+      "source_job_id": "1961707720809795584",
+      "skill": "Diffusion Models",
+      "field": "requirements_raw",
+      "level": "优先",
+      "evidence": "有Diffusion Models和Autoregressive Models相关经验优先"
+    },
+    {
+      "source_job_id": "1961707720809795584",
+      "skill": "Autoregressive Models",
+      "field": "requirements_raw",
+      "level": "优先",
+      "evidence": "有Diffusion Models和Autoregressive Models相关经验优先"
+    },
+    {
+      "source_job_id": "2034532284522196992",
+      "skill": "扩散模型",
+      "field": "requirements_raw",
+      "level": "优先",
+      "evidence": "有扩散模型、自回归模型、文生图 / 文生视频生成相关经验者优先"
+    },
+    {
+      "source_job_id": "2034532284522196992",
+      "skill": "自回归模型",
+      "field": "requirements_raw",
+      "level": "优先",
+      "evidence": "有扩散模型、自回归模型、文生图 / 文生视频生成相关经验者优先"
+    },
+    {
+      "source_job_id": "2026648959719735296",
+      "skill": "Unix",
+      "field": "requirements_raw",
+      "level": "必需",
+      "evidence": "拥有3年以上Linux/Unix后台开发经验"
+    },
+    {
+      "source_job_id": "2037467994921271296",
+      "skill": "Unix",
+      "field": "requirements_raw",
+      "level": "必需",
+      "evidence": "有3年以上Linux/Unix后台开发工作经验"
+    },
+    {
+      "source_job_id": "1923261618968457216",
+      "skill": "TCP/IP",
+      "field": "requirements_raw",
+      "level": "必需",
+      "evidence": "熟悉TCP/IP原理，有网络编程经验"
+    },
+    {
+      "source_job_id": "1967856352005083136",
+      "skill": "Diffusion Models",
+      "field": "description_raw",
+      "level": "提及",
+      "evidence": "从事基础大模型的组建研发，如Diffusion Models、Autoregressive Models等"
+    },
+    {
+      "source_job_id": "1967856352005083136",
+      "skill": "Autoregressive Models",
+      "field": "description_raw",
+      "level": "提及",
+      "evidence": "从事基础大模型的组建研发，如Diffusion Models、Autoregressive Models等"
+    },
+    {
+      "source_job_id": "2070151600797827072",
+      "skill": "LLM",
+      "field": "requirements_raw",
+      "level": "必需",
+      "evidence": "熟悉LLM、搜索推荐广告、多模态等领域一个或多个算法模块"
+    },
+    {
+      "source_job_id": "2082434681986527232",
+      "skill": "Shader",
+      "field": "requirements_raw",
+      "level": "必需",
+      "evidence": "熟悉shader与渲染管线开发与定制"
+    },
+    {
+      "source_job_id": "2037425089443692544",
+      "skill": "MLIR",
+      "field": "requirements_raw",
+      "level": "不确定",
+      "evidence": "精通MLIR、Triton、tilelang或其他CodeGen框架"
+    },
+    {
+      "source_job_id": "2037425089443692544",
+      "skill": "tilelang",
+      "field": "requirements_raw",
+      "level": "不确定",
+      "evidence": "精通MLIR、Triton、tilelang或其他CodeGen框架"
+    }
+  ],
+  "review_method": "原始详情主字段逐条对照；正文参考先录入后与冻结提取器比较；开发10岗与最终10岗隔离；未做交叉审阅。",
+  "limits": "10岗最终小样本、87项冻结词典内按岗位×技能计分，含非否定不确定候选。词典外技术仅单报范围缺口，不称总体召回率；单轮审读未做交叉审阅，不自动等于组内验收。",
+  "reference_type": "原始详情正文审读参考",
+  "detection_unit": "岗位×冻结词典技能；含非否定不确定候选",
+  "regression_checks": {
+    "dev": {
+      "job_count": 27,
+      "tp": 176,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "level_checks": 34,
+      "level_correct": 34,
+      "level_accuracy": 1.0
+    },
+    "regression": {
+      "job_count": 24,
+      "tp": 72,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "level_checks": 26,
+      "level_correct": 26,
+      "level_accuracy": 1.0
+    }
+  },
+  "reference_sha256": "9edd12cf0afe6a6223e966c3df02ca32eba572add51522e5b97a095e0b182b4c",
+  "formal_acceptance": "pending_group_review"
+}

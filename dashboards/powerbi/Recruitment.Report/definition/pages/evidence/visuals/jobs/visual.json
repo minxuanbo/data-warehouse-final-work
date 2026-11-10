@@ -1,0 +1,234 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "jobs",
+  "position": {
+    "x": 24,
+    "y": 352,
+    "z": 0,
+    "height": 180,
+    "width": 1382,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs"
+                    }
+                  },
+                  "Property": "source"
+                }
+              },
+              "queryRef": "Jobs.source",
+              "nativeQueryRef": "source",
+              "displayName": "来源"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs"
+                    }
+                  },
+                  "Property": "source_job_id"
+                }
+              },
+              "queryRef": "Jobs.source_job_id",
+              "nativeQueryRef": "source_job_id",
+              "displayName": "岗位 ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs"
+                    }
+                  },
+                  "Property": "title_raw"
+                }
+              },
+              "queryRef": "Jobs.title_raw",
+              "nativeQueryRef": "title_raw",
+              "displayName": "岗位名称"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs"
+                    }
+                  },
+                  "Property": "is_core"
+                }
+              },
+              "queryRef": "Jobs.is_core",
+              "nativeQueryRef": "is_core",
+              "displayName": "核心岗位"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs"
+                    }
+                  },
+                  "Property": "experience_group"
+                }
+              },
+              "queryRef": "Jobs.experience_group",
+              "nativeQueryRef": "experience_group",
+              "displayName": "经验分组"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs"
+                    }
+                  },
+                  "Property": "education_group"
+                }
+              },
+              "queryRef": "Jobs.education_group",
+              "nativeQueryRef": "education_group",
+              "displayName": "学历分组"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs"
+                    }
+                  },
+                  "Property": "source_url"
+                }
+              },
+              "queryRef": "Jobs.source_url",
+              "nativeQueryRef": "source_url",
+              "displayName": "来源链接"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'岗位信息（点击一行联动证据）'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#123047'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

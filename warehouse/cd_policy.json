@@ -1,0 +1,17 @@
+{
+  "scope_version": "digital_jobs_cn_core_v1.1",
+  "enrichment_version": "tencent_detail_v1.1",
+  "excluded_jobs": {
+    "2072248701686034432": "核心职责为售前解决方案和POC，归入扩展样本",
+    "2082723395740549120": "核心职责为技术趋势及战略研究，归入扩展样本"
+  },
+  "additional_locations": {
+    "2059160518509379584": {
+      "evidence_field": "PostLightItem",
+      "evidence": "北京/深圳双工作地选择",
+      "locations": ["北京", "深圳"]
+    }
+  },
+  "skill_input_fields": ["description_raw", "requirements_raw"],
+  "next_skill_input_fields": ["description_raw", "requirements_raw", "additional_requirements_raw"]
+}

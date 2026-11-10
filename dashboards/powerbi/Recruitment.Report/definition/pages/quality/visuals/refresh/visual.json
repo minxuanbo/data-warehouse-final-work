@@ -1,0 +1,64 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "refresh",
+  "position": {
+    "x": 24,
+    "y": 800,
+    "z": 0,
+    "height": 60,
+    "width": 1380,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "刷新顺序：关闭 Desktop → 运行 prepare_powerbi 固定已对账构建 → 打开 Recruitment.pbip → 刷新 → 运行 DAX 对账。",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontFamily": "Segoe UI",
+                      "color": "#123047"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

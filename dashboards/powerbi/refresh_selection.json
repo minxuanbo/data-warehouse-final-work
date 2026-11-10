@@ -1,0 +1,30 @@
+{
+  "database": "recruitment_dw_dev_cd_v1",
+  "server": "lpc:localhost",
+  "builds": [
+    {
+      "source": "netease",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "build_id": 6,
+      "skill_denominator": 98,
+      "body_hash_version": "skills-body-1.1",
+      "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
+      "dictionary_version": "skills-dict-0.2.0",
+      "rule_version": "skills-rules-0.3.0",
+      "scope_version": "digital_jobs_cn_core_v1.2"
+    },
+    {
+      "source": "tencent",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "build_id": 5,
+      "skill_denominator": 98,
+      "body_hash_version": "skills-body-1.1",
+      "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
+      "dictionary_version": "skills-dict-0.2.0",
+      "rule_version": "skills-rules-0.3.0",
+      "scope_version": "digital_jobs_cn_core_v1.2"
+    }
+  ],
+  "query_sha256": "e66dd78211be2169378aaf4d14082a2eff2f41524026c3be76c6437963388583",
+  "note": "IDs frozen for all imports; regenerate only after reconciliation. No credentials stored."
+}

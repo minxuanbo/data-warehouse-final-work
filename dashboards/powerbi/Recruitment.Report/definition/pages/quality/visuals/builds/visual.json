@@ -1,0 +1,264 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "builds",
+  "position": {
+    "x": 24,
+    "y": 100,
+    "z": 0,
+    "height": 270,
+    "width": 1382,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Builds"
+                    }
+                  },
+                  "Property": "source"
+                }
+              },
+              "queryRef": "Builds.source",
+              "nativeQueryRef": "source",
+              "displayName": "来源"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Builds"
+                    }
+                  },
+                  "Property": "batch_id"
+                }
+              },
+              "queryRef": "Builds.batch_id",
+              "nativeQueryRef": "batch_id",
+              "displayName": "采集批次"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Builds"
+                    }
+                  },
+                  "Property": "build_id"
+                }
+              },
+              "queryRef": "Builds.build_id",
+              "nativeQueryRef": "build_id",
+              "displayName": "构建编号"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Builds"
+                    }
+                  },
+                  "Property": "skill_denominator"
+                }
+              },
+              "queryRef": "Builds.skill_denominator",
+              "nativeQueryRef": "skill_denominator",
+              "displayName": "正文分母"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Builds"
+                    }
+                  },
+                  "Property": "body_hash_version"
+                }
+              },
+              "queryRef": "Builds.body_hash_version",
+              "nativeQueryRef": "body_hash_version",
+              "displayName": "正文哈希版本"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Builds"
+                    }
+                  },
+                  "Property": "dictionary_version"
+                }
+              },
+              "queryRef": "Builds.dictionary_version",
+              "nativeQueryRef": "dictionary_version",
+              "displayName": "词典版本"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Builds"
+                    }
+                  },
+                  "Property": "rule_version"
+                }
+              },
+              "queryRef": "Builds.rule_version",
+              "nativeQueryRef": "rule_version",
+              "displayName": "规则版本"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Builds"
+                    }
+                  },
+                  "Property": "scope_version"
+                }
+              },
+              "queryRef": "Builds.scope_version",
+              "nativeQueryRef": "scope_version",
+              "displayName": "范围版本"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Builds"
+                    }
+                  },
+                  "Property": "skill_text_scope"
+                }
+              },
+              "queryRef": "Builds.skill_text_scope",
+              "nativeQueryRef": "skill_text_scope",
+              "displayName": "技能文本范围"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'本次刷新固定构建（代理键随机器变化）'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#123047'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

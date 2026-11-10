@@ -1,0 +1,158 @@
+﻿source,source_job_id,split,skill,field,level,evidence,evidence_start,evidence_end
+tencent,2036976620622999552,development,C,requirements_raw,必需,C/C++,6,11
+tencent,2036976620622999552,development,C++,requirements_raw,必需,C/C++,6,11
+tencent,2036976620622999552,development,Python,requirements_raw,必需,Python编程语言,12,22
+tencent,2036976620622999552,development,CUDA,requirements_raw,必需,CUDA,58,62
+tencent,2036976620622999552,development,Triton,requirements_raw,必需,Triton,63,69
+tencent,2036976620622999552,development,Ascend C,requirements_raw,必需,Ascend C,70,78
+tencent,2036976620622999552,development,cuBLAS,requirements_raw,必需,Cublas,86,92
+tencent,2036976620622999552,development,CUTLASS,requirements_raw,必需,Cutlass,93,100
+tencent,2036976620622999552,development,torch.compile,requirements_raw,优先,Torch-Compile,120,133
+tencent,2036976620622999552,development,CK,requirements_raw,必需,CK等高性能算子,101,109
+tencent,2116084604950720512,development,Go,description_raw,提及,基于 Golang,38,47
+tencent,2116084604950720512,development,Go,requirements_raw,必需,Golang/PHP,41,51
+tencent,2116084604950720512,development,PHP,requirements_raw,必需,Golang/PHP,41,51
+tencent,2116084604950720512,development,Linux,requirements_raw,必需,Linux,81,86
+tencent,2116084604950720512,development,MySQL,requirements_raw,必需,MySQL,141,146
+tencent,2116084604950720512,development,SQL,requirements_raw,必需,SQL,143,146
+tencent,2116084604950720512,development,Redis,requirements_raw,必需,Redis,167,172
+tencent,2116084604950720512,development,CI/CD,requirements_raw,必需,CI/CD,230,235
+tencent,2116084604950720512,development,Gin,requirements_raw,不确定,Gin、Laravel 或同类框架,111,128
+tencent,2116084604950720512,development,Laravel,requirements_raw,不确定,Gin、Laravel 或同类框架,111,128
+tencent,2116084604950720512,development,Elasticsearch,additional_requirements_raw,必需,Elasticsearch,31,44
+tencent,2116084604950720512,development,Kafka,additional_requirements_raw,必需,Kafka,45,50
+tencent,2116084604950720512,development,ClickHouse,additional_requirements_raw,必需,ClickHouse,51,61
+tencent,2116084604950720512,development,Docker,additional_requirements_raw,不确定,Docker、Kubernetes 或腾讯云,72,94
+tencent,2116084604950720512,development,Kubernetes,additional_requirements_raw,不确定,Docker、Kubernetes 或腾讯云,72,94
+tencent,2061654749727600640,development,Python,requirements_raw,必需,Python 编程能力,8,19
+tencent,2061654749727600640,development,Kubernetes,requirements_raw,必需,Kubernetes 和容器化,123,138
+tencent,2061654749727600640,development,TypeScript,additional_requirements_raw,必需,TypeScript / Rust / Go 代码,167,192
+tencent,2061654749727600640,development,Rust,additional_requirements_raw,必需,TypeScript / Rust / Go 代码,167,192
+tencent,2061654749727600640,development,Go,additional_requirements_raw,必需,TypeScript / Rust / Go 代码,167,192
+tencent,2059160518509379584,development,Unreal Engine,requirements_raw,必需,3年以上UE开发经验,2,12
+tencent,2059160518509379584,development,C++,requirements_raw,必需,精通C++,37,42
+tencent,2059160518509379584,development,Linux,requirements_raw,必需,Linux开发,145,152
+tencent,2059160518509379584,development,Unreal Engine,additional_requirements_raw,不确定,深入理解 UE 网络同步底层,179,193
+tencent,2037425089443692544,development,Linux,requirements_raw,必需,Linux,4,9
+tencent,2037425089443692544,development,Python,requirements_raw,必需,Python,16,22
+tencent,2037425089443692544,development,C++,requirements_raw,必需,C++,23,26
+tencent,2037425089443692544,development,MLIR,requirements_raw,不确定,MLIR、Triton、tilelang或其他CodeGen框架,116,148
+tencent,2037425089443692544,development,Triton,requirements_raw,不确定,MLIR、Triton、tilelang或其他CodeGen框架,116,148
+tencent,2037425089443692544,development,tilelang,requirements_raw,不确定,MLIR、Triton、tilelang或其他CodeGen框架,116,148
+tencent,2037425089443692544,development,CUDA,additional_requirements_raw,必需,Cuda,4,8
+tencent,2037425089443692544,development,ROCm,additional_requirements_raw,必需,ROCm,9,13
+tencent,2037425089443692544,development,PyTorch,additional_requirements_raw,必需,pytorch,18,25
+tencent,2037425089443692544,development,TensorFlow,additional_requirements_raw,必需,tensorflow,26,36
+tencent,2091785005486489600,development,Unreal Engine,description_raw,提及,负责UE引擎,9,15
+tencent,2091785005486489600,development,C++,requirements_raw,必需,精通C++,88,93
+tencent,2091785005486489600,development,Unreal Engine,requirements_raw,必需,能熟练使用UE等主流游戏引擎,103,117
+tencent,2091785005486489600,development,Lua,requirements_raw,优先,有Lua脚本的项目完整经验者优先,118,134
+tencent,2091785005486489600,development,Unreal Engine,requirements_raw,优先,有UE使用经验者优先,135,145
+tencent,2080585827171348480,development,Unreal Engine,description_raw,提及,负责UE5下,2,8
+tencent,2080585827171348480,development,Unreal Engine,requirements_raw,必需,至少2年UE4开发经验,24,35
+tencent,2080585827171348480,development,C++,requirements_raw,必需,精通C++,53,58
+tencent,2026648959719735296,development,C++,requirements_raw,必需,精通C++,33,38
+tencent,2026648959719735296,development,Linux,requirements_raw,必需,Linux/Unix后台开发,45,59
+tencent,2026648959719735296,development,Unix,requirements_raw,必需,Linux/Unix后台开发,45,59
+tencent,2026648959719735296,development,RAG,requirements_raw,不确定,RAG、知识图谱或NLP相关应用开发经验,77,97
+tencent,2071430928898637824,development,RAG,description_raw,提及,RAG（检索增强生成）,192,203
+tencent,2071430928898637824,development,CI/CD,description_raw,提及,CI/CD for AI,360,372
+tencent,2071430928898637824,development,LangChain,requirements_raw,不确定,至少一种主流 Agent / LLM 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）,184,256
+tencent,2071430928898637824,development,LlamaIndex,requirements_raw,不确定,至少一种主流 Agent / LLM 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）,184,256
+tencent,2071430928898637824,development,LangGraph,requirements_raw,不确定,至少一种主流 Agent / LLM 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）,184,256
+tencent,2071430928898637824,development,AutoGen,requirements_raw,不确定,至少一种主流 Agent / LLM 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）,184,256
+tencent,2071430928898637824,development,Dify,requirements_raw,不确定,至少一种主流 Agent / LLM 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）,184,256
+tencent,2071430928898637824,development,CI/CD,requirements_raw,必需,容器化、CI/CD 等现代工程实践,274,291
+tencent,2071430928898637824,development,vLLM,additional_requirements_raw,不确定,有大模型预训练 微调 推理优化（vLLM、TensorRT-LLM、量化、蒸馏）或 RAG 系统深度优化经验,208,262
+tencent,2071430928898637824,development,TensorRT-LLM,additional_requirements_raw,不确定,有大模型预训练 微调 推理优化（vLLM、TensorRT-LLM、量化、蒸馏）或 RAG 系统深度优化经验,208,262
+tencent,2071430928898637824,development,RAG,additional_requirements_raw,不确定,有大模型预训练 微调 推理优化（vLLM、TensorRT-LLM、量化、蒸馏）或 RAG 系统深度优化经验,208,262
+tencent,2071430928898637824,development,Flutter,additional_requirements_raw,必需,Flutter / Skia,305,319
+tencent,2071430928898637824,development,Skia,additional_requirements_raw,必需,Flutter / Skia,305,319
+tencent,2071430928898637824,development,WebAssembly,additional_requirements_raw,必需,具备 WebAssembly 性能优化、TensorFlow.js / ONNX Runtime Web 端侧推理、WebGPU 等应用经验,331,401
+tencent,2071430928898637824,development,TensorFlow.js,additional_requirements_raw,必需,具备 WebAssembly 性能优化、TensorFlow.js / ONNX Runtime Web 端侧推理、WebGPU 等应用经验,331,401
+tencent,2071430928898637824,development,ONNX Runtime Web,additional_requirements_raw,必需,具备 WebAssembly 性能优化、TensorFlow.js / ONNX Runtime Web 端侧推理、WebGPU 等应用经验,331,401
+tencent,2071430928898637824,development,WebGPU,additional_requirements_raw,必需,具备 WebAssembly 性能优化、TensorFlow.js / ONNX Runtime Web 端侧推理、WebGPU 等应用经验,331,401
+tencent,2115714592318603264,development,Spark,description_raw,提及,深度适配 Spark、Flink、StarRocks、Ray，Pytorch,78,116
+tencent,2115714592318603264,development,Flink,description_raw,提及,深度适配 Spark、Flink、StarRocks、Ray，Pytorch,78,116
+tencent,2115714592318603264,development,StarRocks,description_raw,提及,深度适配 Spark、Flink、StarRocks、Ray，Pytorch,78,116
+tencent,2115714592318603264,development,Ray,description_raw,提及,深度适配 Spark、Flink、StarRocks、Ray，Pytorch,78,116
+tencent,2115714592318603264,development,PyTorch,description_raw,提及,深度适配 Spark、Flink、StarRocks、Ray，Pytorch,78,116
+tencent,2115714592318603264,development,RAG,description_raw,提及,RAG、混合查询,369,377
+tencent,2115714592318603264,development,Java,requirements_raw,不确定,熟悉 Java / Scala / C++ / Rust / Python 中至少一种语言,55,100
+tencent,2115714592318603264,development,Scala,requirements_raw,不确定,熟悉 Java / Scala / C++ / Rust / Python 中至少一种语言,55,100
+tencent,2115714592318603264,development,C++,requirements_raw,不确定,熟悉 Java / Scala / C++ / Rust / Python 中至少一种语言,55,100
+tencent,2115714592318603264,development,Rust,requirements_raw,不确定,熟悉 Java / Scala / C++ / Rust / Python 中至少一种语言,55,100
+tencent,2115714592318603264,development,Python,requirements_raw,不确定,熟悉 Java / Scala / C++ / Rust / Python 中至少一种语言,55,100
+tencent,2115714592318603264,development,Spark,requirements_raw,不确定,Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种,179,240
+tencent,2115714592318603264,development,Flink,requirements_raw,不确定,Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种,179,240
+tencent,2115714592318603264,development,Trino,requirements_raw,不确定,Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种,179,240
+tencent,2115714592318603264,development,Presto,requirements_raw,不确定,Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种,179,240
+tencent,2115714592318603264,development,Hive,requirements_raw,不确定,Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种,179,240
+tencent,2115714592318603264,development,StarRocks,requirements_raw,不确定,Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种,179,240
+tencent,2115714592318603264,development,Ray,requirements_raw,不确定,Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种,179,240
+tencent,2115714592318603264,development,Parquet,requirements_raw,必需,"熟悉 Parquet，Lance, Vortex，Nimble 等列存文件格式",244,283
+tencent,2115714592318603264,development,Lance,requirements_raw,必需,"熟悉 Parquet，Lance, Vortex，Nimble 等列存文件格式",244,283
+tencent,2115714592318603264,development,Vortex,requirements_raw,必需,"熟悉 Parquet，Lance, Vortex，Nimble 等列存文件格式",244,283
+tencent,2115714592318603264,development,Nimble,requirements_raw,必需,"熟悉 Parquet，Lance, Vortex，Nimble 等列存文件格式",244,283
+tencent,2115714592318603264,development,RAG,requirements_raw,不确定,RAG 或大规模 embedding 数据治理者优先,389,415
+tencent,2115714592318603264,development,Iceberg,requirements_raw,优先,"有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",517,609
+tencent,2115714592318603264,development,Hudi,requirements_raw,优先,"有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",517,609
+tencent,2115714592318603264,development,Paimon,requirements_raw,优先,"有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",517,609
+tencent,2115714592318603264,development,Lance,requirements_raw,优先,"有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",517,609
+tencent,2115714592318603264,development,Vortex,requirements_raw,优先,"有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",517,609
+tencent,2115714592318603264,development,Nimble,requirements_raw,优先,"有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",517,609
+tencent,2115714592318603264,development,Arrow,requirements_raw,优先,"有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",517,609
+tencent,2115714592318603264,development,Spark,requirements_raw,优先,"有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",517,609
+tencent,2115714592318603264,development,Flink,requirements_raw,优先,"有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",517,609
+tencent,2115714592318603264,development,Trino,requirements_raw,优先,"有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",517,609
+tencent,2115714592318603264,development,Ray,requirements_raw,优先,"有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",517,609
+tencent,2098252450778759168,final,MCP,requirements_raw,必需,MCP、Agent Memory,157,173
+tencent,2098252450778759168,final,Rust,requirements_raw,不确定,Rust/Go/C++ 等任一静态语言,262,281
+tencent,2098252450778759168,final,Go,requirements_raw,不确定,Rust/Go/C++ 等任一静态语言,262,281
+tencent,2098252450778759168,final,C++,requirements_raw,不确定,Rust/Go/C++ 等任一静态语言,262,281
+tencent,2082710396749393920,final,Python,requirements_raw,必需,熟练使用 Python,21,32
+tencent,2059914523263021056,final,Python,requirements_raw,必需,Python 编程能力,50,61
+tencent,2059914523263021056,final,PyTorch,requirements_raw,必需,熟悉 PyTorch,69,79
+tencent,2059914523263021056,final,LLaMA-Factory,additional_requirements_raw,必需,熟悉常用训练/推理框架（LLaMA-Factory、DeepSpeed、vLLM 等）,23,66
+tencent,2059914523263021056,final,DeepSpeed,additional_requirements_raw,必需,熟悉常用训练/推理框架（LLaMA-Factory、DeepSpeed、vLLM 等）,23,66
+tencent,2059914523263021056,final,vLLM,additional_requirements_raw,必需,熟悉常用训练/推理框架（LLaMA-Factory、DeepSpeed、vLLM 等）,23,66
+tencent,2059914525578276864,final,SQL,requirements_raw,必需,熟练掌握 SQL 和 Python,95,112
+tencent,2059914525578276864,final,Python,requirements_raw,必需,熟练掌握 SQL 和 Python,95,112
+tencent,2059914525578276864,final,Spark,requirements_raw,不确定,熟悉至少一种大数据处理框架（Spark/Flink/Hive 等）,113,146
+tencent,2059914525578276864,final,Flink,requirements_raw,不确定,熟悉至少一种大数据处理框架（Spark/Flink/Hive 等）,113,146
+tencent,2059914525578276864,final,Hive,requirements_raw,不确定,熟悉至少一种大数据处理框架（Spark/Flink/Hive 等）,113,146
+tencent,2059914525578276864,final,TensorFlow,additional_requirements_raw,必需,熟悉业界主流框架（如TensorFlow/PyTorch）,26,55
+tencent,2059914525578276864,final,PyTorch,additional_requirements_raw,必需,熟悉业界主流框架（如TensorFlow/PyTorch）,26,55
+tencent,1947566917279653888,final,C++,requirements_raw,不确定,熟练掌握一门以上的服务端编程语言，比如C++/java/go等,21,52
+tencent,1947566917279653888,final,Java,requirements_raw,不确定,熟练掌握一门以上的服务端编程语言，比如C++/java/go等,21,52
+tencent,1947566917279653888,final,Go,requirements_raw,不确定,熟练掌握一门以上的服务端编程语言，比如C++/java/go等,21,52
+tencent,1947566917279653888,final,MySQL,requirements_raw,不确定,熟练掌握一种以上的数据库，比如mysql/mongodb等,56,85
+tencent,1947566917279653888,final,MongoDB,requirements_raw,不确定,熟练掌握一种以上的数据库，比如mysql/mongodb等,56,85
+tencent,2115304628043300864,final,C,requirements_raw,必需,精通C/C++开发,10,19
+tencent,2115304628043300864,final,C++,requirements_raw,必需,精通C/C++开发,10,19
+tencent,2115304628043300864,final,Linux,requirements_raw,必需,2年以上linux系统下的工作经验,20,37
+tencent,2115304628043300864,final,Go,requirements_raw,优先,有go语言,38,43
+tencent,2115304628043300864,final,MySQL,requirements_raw,必需,熟悉常用mysql,116,125
+tencent,2072321535468810240,final,Go,requirements_raw,不确定,精通至少一门主力语言（Go / Python / Java / TypeScript 等）,25,70
+tencent,2072321535468810240,final,Python,requirements_raw,不确定,精通至少一门主力语言（Go / Python / Java / TypeScript 等）,25,70
+tencent,2072321535468810240,final,Java,requirements_raw,不确定,精通至少一门主力语言（Go / Python / Java / TypeScript 等）,25,70
+tencent,2072321535468810240,final,TypeScript,requirements_raw,不确定,精通至少一门主力语言（Go / Python / Java / TypeScript 等）,25,70
+tencent,2072321535468810240,final,RAG,requirements_raw,必需,多Agent、RAG、多步编排,97,112
+tencent,1967484294205169664,final,C,requirements_raw,必需,熟练掌握 C/C++,2,12
+tencent,1967484294205169664,final,C++,requirements_raw,必需,熟练掌握 C/C++,2,12
+tencent,1967484294205169664,final,Python,requirements_raw,必需,Python语言,13,21
+tencent,1967484294205169664,final,CUDA,requirements_raw,必需,Cuda、OpenCL,74,85
+tencent,1967484294205169664,final,OpenCL,requirements_raw,必需,OpenCL,79,85
+tencent,1967484294205169664,final,cuBLAS,requirements_raw,不确定,熟悉至少一种GPU加速库，如cublas、cudnn、cutlass等,86,121
+tencent,1967484294205169664,final,cuDNN,requirements_raw,不确定,熟悉至少一种GPU加速库，如cublas、cudnn、cutlass等,86,121
+tencent,1967484294205169664,final,CUTLASS,requirements_raw,不确定,熟悉至少一种GPU加速库，如cublas、cudnn、cutlass等,86,121
+tencent,1967484294205169664,final,TensorRT,requirements_raw,必需,有Tensorrt/FasterTransformer/Tensorrt-llm/vllm等深度学习推理框架的实际使用经验,125,186
+tencent,1967484294205169664,final,FasterTransformer,requirements_raw,必需,有Tensorrt/FasterTransformer/Tensorrt-llm/vllm等深度学习推理框架的实际使用经验,125,186
+tencent,1967484294205169664,final,TensorRT-LLM,requirements_raw,必需,有Tensorrt/FasterTransformer/Tensorrt-llm/vllm等深度学习推理框架的实际使用经验,125,186
+tencent,1967484294205169664,final,vLLM,requirements_raw,必需,有Tensorrt/FasterTransformer/Tensorrt-llm/vllm等深度学习推理框架的实际使用经验,125,186
+tencent,1936827253514149888,final,Linux,requirements_raw,必需,熟悉Linux环境下的C/C++开发,45,63
+tencent,1936827253514149888,final,C,requirements_raw,必需,熟悉Linux环境下的C/C++开发,45,63
+tencent,1936827253514149888,final,C++,requirements_raw,必需,熟悉Linux环境下的C/C++开发,45,63
+tencent,2001341503481466880,final,Unreal Engine,description_raw,提及,负责UE4射击类游戏模式框架,2,16
+tencent,2001341503481466880,final,C++,requirements_raw,必需,熟练掌握C++,2,9
+tencent,2001341503481466880,final,Unreal Engine,requirements_raw,必需,熟悉UE4的基础开发方式和架构,10,25

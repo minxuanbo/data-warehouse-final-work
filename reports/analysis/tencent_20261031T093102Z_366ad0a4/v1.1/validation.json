@@ -1,0 +1,405 @@
+{
+  "reviewer": "D正文核对",
+  "rule_version": "skills-rules-0.3.0",
+  "dictionary_version": "skills-dict-0.2.0",
+  "audit_count": 20,
+  "audit_records": [
+    {
+      "source": "tencent",
+      "source_job_id": "2036976620622999552",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "异构加速框架工程师（深圳/北京/上海）",
+      "location": [
+        "北京"
+      ],
+      "raw_ref": "raw/detail_2036976620622999552.json",
+      "raw_sha256": "ed17e05af5172d8c912860683953701e3575885447c2d2c156f12b8ae3b2149d",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2001341503481466880",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "《三角洲行动》-客户端开发工程师-玩法",
+      "location": [
+        "深圳"
+      ],
+      "raw_ref": "raw/detail_2001341503481466880.json",
+      "raw_sha256": "9a4824a12a7160c37f00e6daa40199ff1734853c106fb227543ffc5267e252d3",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2116084604950720512",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "腾讯问卷后台开发工程师",
+      "location": [
+        "深圳"
+      ],
+      "raw_ref": "raw/detail_2116084604950720512.json",
+      "raw_sha256": "977bd0eaf801e672b14cc1c669f0e6e24ed534b07ef6b4665e650a888483729a",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2080585827171348480",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "OG项目组-高级游戏客户端开发",
+      "location": [
+        "上海"
+      ],
+      "raw_ref": "raw/detail_2080585827171348480.json",
+      "raw_sha256": "507f9dd1d344ebfae934da0359444ba1f2d6612ed15c71d8b5045826a74b9a5d",
+      "body_check": "issue",
+      "city_check": "same",
+      "note": "结构化经验与正文年限有差异；至少2年不属于技能备选。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2061654749727600640",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "混元Agent强化学习框架工程师（深圳/北京/上海）",
+      "location": [
+        "北京"
+      ],
+      "raw_ref": "raw/detail_2061654749727600640.json",
+      "raw_sha256": "37278824c5d46a96e12bdffd32d504cb205ebdc717ef0348fa459bc6ce038eb3",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2091785005486489600",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "开放世界-游戏客户端开发工程师-系统方向(上海)",
+      "location": [
+        "杭州"
+      ],
+      "raw_ref": "raw/detail_2091785005486489600.json",
+      "raw_sha256": "1ca76b1687ee8a54c660634ed8bc71d18c5e0163af1e16e198b8e9a5dd8d5211",
+      "body_check": "issue",
+      "city_check": "different",
+      "note": "标题上海、地点杭州，按C标记归冲突待确认；UE必需与Lua/UE优先分开核对。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2098252450778759168",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "WorkBuddy-Agent Harness 算法工程师",
+      "location": [
+        "深圳"
+      ],
+      "raw_ref": "raw/detail_2098252450778759168.json",
+      "raw_sha256": "d315ba3392daa46410d6867beacda986eb17c6438688ff6cdfc7e2cd8e69cab2",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2072321535468810240",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "高级投放 Agent 研发工程师（北京/深圳）",
+      "location": [
+        "北京"
+      ],
+      "raw_ref": "raw/detail_2072321535468810240.json",
+      "raw_sha256": "62f215f4a55555fe4f7f27227880c9a01ce1228f4627dc578913b0f80da7755a",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2082710396749393920",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "微信小程序-AI Agent 算法工程师-Coding方向",
+      "location": [
+        "广州"
+      ],
+      "raw_ref": "raw/detail_2082710396749393920.json",
+      "raw_sha256": "bc74dea327e0772a9eec8efb946e3b5cf8c740e3b202a97971f0cd87afc5310b",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2115714592318603264",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "智能湖仓研发工程师（上海/深圳）",
+      "location": [
+        "上海"
+      ],
+      "raw_ref": "raw/detail_2115714592318603264.json",
+      "raw_sha256": "f8f3355c9e1d8d1626c0a18a8a0ee53acc3cd50d86f810947858f0a7a8974c31",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2059160518509379584",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "3D动作游戏《狩》-后台开发-UE5 DS后台开发",
+      "location": [
+        "北京"
+      ],
+      "raw_ref": "raw/detail_2059160518509379584.json",
+      "raw_sha256": "154dc2959f08866d2c46795db6bf1c743688cc79e63521dd53ddf32c1e03411f",
+      "body_check": "issue",
+      "city_check": "same",
+      "note": "PostLightItem确认北京/深圳双工作地；附加专项与主字段至少一项有关，单字段规则可能高估强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "1967484294205169664",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "混元大模型推理加速工程师（北京/深圳）",
+      "location": [
+        "深圳"
+      ],
+      "raw_ref": "raw/detail_1967484294205169664.json",
+      "raw_sha256": "5fe071d623aff1eddf2e89282d4d54219e40820216209609b0640cbaf7766e33",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2059914523263021056",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "光子 AI-游戏模型数据专家-研发数据",
+      "location": [
+        "深圳"
+      ],
+      "raw_ref": "raw/detail_2059914523263021056.json",
+      "raw_sha256": "7633de695c6453b0a95808022f5a70b364bf76b6e876dcd50803c520c31c0ea0",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "1936827253514149888",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "微信小店-后台开发-治理方向",
+      "location": [
+        "广州"
+      ],
+      "raw_ref": "raw/detail_1936827253514149888.json",
+      "raw_sha256": "59bdc8b1855e5f9d564a1c497cd386e81a15abdabe112879ac1fd6de47870c26",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2059914525578276864",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "光子 AI-游戏模型数据专家-运营数据",
+      "location": [
+        "深圳"
+      ],
+      "raw_ref": "raw/detail_2059914525578276864.json",
+      "raw_sha256": "70a5db87a49a213fd41404a70edb863814eeb5158ddfdeffee3dcfee22d03464",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2026648959719735296",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "企业微信-AI应用后台开发工程师-业务挖掘和应用（成都/北京）",
+      "location": [
+        "广州"
+      ],
+      "raw_ref": "raw/detail_2026648959719735296.json",
+      "raw_sha256": "8084832f00f02008484219401619f655a5861d0903bc40cc2604a595c086d184",
+      "body_check": "issue",
+      "city_check": "different",
+      "note": "标题成都/北京与原地点广州无交集；保留原文，按C分组；RAG备选。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "1947566917279653888",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "Supercell游戏-服务器开发工程师",
+      "location": [
+        "深圳"
+      ],
+      "raw_ref": "raw/detail_1947566917279653888.json",
+      "raw_sha256": "63db581aa02e4bf206d5a47f4ad09851589dad9ffcfa86c6d4d23abdc19b1b6d",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2037425089443692544",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "AI编译优化工程师(北京/上海/深圳)",
+      "location": [
+        "北京"
+      ],
+      "raw_ref": "raw/detail_2037425089443692544.json",
+      "raw_sha256": "218d3e1b17e1b819934ae6a4c8220c12dff87c2fd59db51d42d7eefe827f080f",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2071430928898637824",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "企业微信-AI全栈研发工程师-协作办公",
+      "location": [
+        "广州"
+      ],
+      "raw_ref": "raw/detail_2071430928898637824.json",
+      "raw_sha256": "731363d30c47d741fb7da179ccf8a674755caf576c1ceca9a0625862124fc198",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2115304628043300864",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "title": "《怪物猎人：旅人》-服务器开发工程师-（新星引力计划）",
+      "location": [
+        "深圳"
+      ],
+      "raw_ref": "raw/detail_2115304628043300864.json",
+      "raw_sha256": "4e1cc771ba2886be3ba0a5b681be8f172a97b5508748682e49092d74d69cb6db",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+      "reviewer": "D正文核对"
+    }
+  ],
+  "splits": {
+    "development": {
+      "job_count": 10,
+      "tp": 87,
+      "fp": 0,
+      "fn": 0,
+      "metric_tp": 65,
+      "metric_fp": 0,
+      "metric_fn": 0,
+      "level_total": 106,
+      "level_correct": 105,
+      "status": "complete",
+      "precision": 1.0,
+      "recall": 1.0,
+      "level_accuracy": 0.9905660377358491,
+      "metric_precision": 1.0,
+      "metric_recall": 1.0
+    },
+    "final": {
+      "job_count": 10,
+      "tp": 46,
+      "fp": 0,
+      "fn": 0,
+      "metric_tp": 29,
+      "metric_fp": 0,
+      "metric_fn": 0,
+      "level_total": 47,
+      "level_correct": 47,
+      "status": "complete",
+      "precision": 1.0,
+      "recall": 1.0,
+      "level_accuracy": 1.0,
+      "metric_precision": 1.0,
+      "metric_recall": 1.0
+    }
+  },
+  "incomplete_ids": [],
+  "excluded_final_ids": [],
+  "errors": [
+    {
+      "source_job_id": "2059160518509379584",
+      "split": "development",
+      "kind": "level_or_evidence_mismatch",
+      "expected": {
+        "skill": "Unreal Engine",
+        "field": "additional_requirements_raw",
+        "level": "不确定",
+        "evidence": "深入理解 UE 网络同步底层",
+        "evidence_start": 179,
+        "evidence_end": 193
+      }
+    }
+  ],
+  "out_of_dictionary_labels": [
+    {
+      "source_job_id": "2036976620622999552",
+      "skill": "CK",
+      "field": "requirements_raw",
+      "level": "必需",
+      "evidence": "CK等高性能算子",
+      "evidence_start": 101,
+      "evidence_end": 109
+    },
+    {
+      "source_job_id": "1967484294205169664",
+      "skill": "OpenCL",
+      "field": "requirements_raw",
+      "level": "必需",
+      "evidence": "OpenCL",
+      "evidence_start": 79,
+      "evidence_end": 85
+    },
+    {
+      "source_job_id": "1967484294205169664",
+      "skill": "cuDNN",
+      "field": "requirements_raw",
+      "level": "不确定",
+      "evidence": "熟悉至少一种GPU加速库，如cublas、cudnn、cutlass等",
+      "evidence_start": 86,
+      "evidence_end": 121
+    },
+    {
+      "source_job_id": "1967484294205169664",
+      "skill": "FasterTransformer",
+      "field": "requirements_raw",
+      "level": "必需",
+      "evidence": "有Tensorrt/FasterTransformer/Tensorrt-llm/vllm等深度学习推理框架的实际使用经验",
+      "evidence_start": 125,
+      "evidence_end": 186
+    }
+  ],
+  "review_method": "先对照原始响应/增强字段审读并记录标签，冻结参考与规则后对留出集计分；不把提取候选当答案",
+  "limits": "每来源10岗留出小样本；词典内非否定候选按岗位×技能计分，含不确定候选。词典外技术单报范围缺口。交叉核对指原始响应、交接字段与证据位置的对照，组内验收仍待C对账。",
+  "body_hash_version": "skills-body-1.1",
+  "reference_sha256": "86ce4ba23c8d3f56ec7502a079cb690f0e8ba38a5170fc38ab7e4690bd33c7ca",
+  "formal_acceptance": "pending_C_reconciliation",
+  "detection_unit": "岗位×词典技能；非否定候选与指标有效集合分别计分"
+}

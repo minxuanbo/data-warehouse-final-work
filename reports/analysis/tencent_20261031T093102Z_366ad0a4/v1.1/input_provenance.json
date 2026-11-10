@@ -1,0 +1,60 @@
+{
+  "jobs_sha256": "eec9945879320854c029f67b8826477fc73f94562bd4cbc0cc364608bb617fcc",
+  "manifest_sha256": "0ed9035f07a7d98b4062bd0a0be7dba25ae8046e3dd720c6368c7a6f8f1146bc",
+  "handoff_revision": "e9c6ba35d3230ffc48e0181b18f3ba6f6cf77cfe",
+  "handoff_manifest_sha256": "d309d4461e543cd955b9d85486f978269c270bff9bbdccca93b8966972499684",
+  "enriched_jobs_sha256": "7c31dbb155786f51309bffc9965713db8985a8c3454026befdf9c5f0b07d6e6a",
+  "handoff": {
+    "derived_schema_version": "cd-handoff-1.1",
+    "batch_id": "tencent_20261031T093102Z_366ad0a4",
+    "source_revision": "25b397bf846a8e7c39bbc249e0700428e89bc0c3",
+    "analysis_revision": "0e06c7f9c0eff013f84bce8e5719254174162287",
+    "scope_version": "digital_jobs_cn_core_v1.1",
+    "enrichment_version": "tencent_detail_v1.1",
+    "source_manifest_sha256": "0ed9035f07a7d98b4062bd0a0be7dba25ae8046e3dd720c6368c7a6f8f1146bc",
+    "build_input_sha256": "6b998e05f765e66b5d117bff95e74768a3c87397ccd078f8f6d7e0e0f598d985",
+    "source_postings": 100,
+    "core_postings": 98,
+    "current_skill_fields": [
+      "description_raw",
+      "requirements_raw"
+    ],
+    "next_skill_fields": [
+      "description_raw",
+      "requirements_raw",
+      "additional_requirements_raw"
+    ],
+    "file": {
+      "path": "jobs_enriched.jsonl",
+      "bytes": 322441,
+      "sha256": "7c31dbb155786f51309bffc9965713db8985a8c3454026befdf9c5f0b07d6e6a"
+    }
+  },
+  "source": "tencent",
+  "batch_id": "tencent_20261031T093102Z_366ad0a4",
+  "input_acceptance_status": "accepted",
+  "input_acceptance_scope": "pilot_technical",
+  "coverage_status": "partial",
+  "source_postings": 100,
+  "core_postings": 98,
+  "input_files_checked": 128,
+  "raw_checks_passed": true,
+  "body_hash_version": "skills-body-1.1",
+  "body_hash_fields": [
+    "description_raw",
+    "requirements_raw",
+    "additional_requirements_raw"
+  ],
+  "body_hash_definition": "SHA256(UTF8(json.dumps([job.get(field) for field in body_hash_fields], ensure_ascii=False))); 默认分隔符，无换行归一化，缺失为null",
+  "dictionary_version": "skills-dict-0.2.0",
+  "rule_version": "skills-rules-0.3.0",
+  "scope_version": "digital_jobs_cn_core_v1.1",
+  "scope_status": "confirmed_by_C",
+  "extraction_code_sha256": {
+    "extract.py": "84c3605b2fde041a74610a9cdadf4e6517e64bea83cef7da27970bbe0c414d3e",
+    "run.py": "6a54ce407542a591c8473151cd5134ad8074d5fa0711ae32835c9d963115c262",
+    "review.py": "f971268edaf2c61511c7a25799a7ee34f4f09cd43f36dd1a525756edc7e2c7de"
+  },
+  "dictionary_sha256": "1b66fbdf4d3eb86b772ac19b080757c49c94b7c81570d3c347d011226e6627be",
+  "reference_sha256": "86ce4ba23c8d3f56ec7502a079cb690f0e8ba38a5170fc38ab7e4690bd33c7ca"
+}

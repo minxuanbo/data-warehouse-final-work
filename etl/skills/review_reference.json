@@ -1,0 +1,1304 @@
+{
+  "version": "review-draft-0.2.0",
+  "reviewer_type": "single_pass_text_review",
+  "scope": "检测按岗位×冻结词典技能判断；不含否定命中，含备选/不确定候选。强度另按明确锚点检查，不以命中词自动生成参考答案。",
+  "freeze_policy": "v0.1的24岗留出已用于v0.2修复，仅作回归。另设开发10岗和最终10岗，参考录入后对照冻结提取器；本轮评分后没有修改词典或规则。",
+  "dictionary_sha256_at_freeze": "6aca91d96edc85b4722a93773a277e28911979c97ab4d08cbb97d5e5c1f920ce",
+  "extractor_sha256_at_freeze": "ee021aaf85de7200973038319c64a6847349c9f2c0418510e470f943d66da7f8",
+  "jobs": [
+    {
+      "source_job_id": "1901550594292789248",
+      "split": "dev",
+      "body_sha256": "e179a41a415dd973979aec53b15683c8c51519b0e483bb99776c2c5d6eab9aca",
+      "expected_skills": [
+        "C++",
+        "Go"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "C++",
+          "field": "requirements_raw",
+          "anchor": "熟悉C++或Golang",
+          "level": "不确定",
+          "polarity": "alternative"
+        }
+      ],
+      "direction": "开发/存储",
+      "audit_note": "已独立阅读职责与要求；方向与岗位语义相符；字段精确对照另见自动检查。"
+    },
+    {
+      "source_job_id": "2036976620622999552",
+      "split": "dev",
+      "body_sha256": "243b60bd86b3a6608d770de105d64e4c2606314920bf7404cfd05c75fdf0da5e",
+      "expected_skills": [
+        "C",
+        "C++",
+        "Python",
+        "CUDA",
+        "Triton",
+        "Ascend C",
+        "cuBLAS",
+        "CUTLASS",
+        "torch.compile"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "CUDA",
+          "field": "requirements_raw",
+          "anchor": "熟悉GPU/AI芯片编程",
+          "level": "必需",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "torch.compile",
+          "field": "requirements_raw",
+          "anchor": "Torch-Compile",
+          "level": "优先",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/AI Infra",
+      "audit_note": "标题列深圳/北京/上海，地点仅北京；不扩展为三个确定城市。"
+    },
+    {
+      "source_job_id": "2077312480664797184",
+      "split": "dev",
+      "body_sha256": "6bf62490e219b1ad80f0f6e6d52ca255a643109887feb06f6a850bc41ffa4866",
+      "expected_skills": [
+        "Linux",
+        "C++",
+        "C",
+        "Python",
+        "Java",
+        "Alluxio",
+        "3FS",
+        "Ceph",
+        "AWS S3",
+        "JuiceFS",
+        "RDMA",
+        "FUSE"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Linux",
+          "field": "requirements_raw",
+          "anchor": "具有Linux后台开发经验",
+          "level": "必需",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "RDMA",
+          "field": "requirements_raw",
+          "anchor": "RDMA",
+          "level": "优先",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/存储",
+      "audit_note": "标题多城市但地点仅深圳；保留源地点。"
+    },
+    {
+      "source_job_id": "1930438817001635840",
+      "split": "dev",
+      "body_sha256": "168838fa84c138fe7042cb0d5e13b7b9a0e425f0919646e4fcc90f5318bea3d8",
+      "expected_skills": [
+        "C++",
+        "CUDA",
+        "Python",
+        "MPI",
+        "NCCL",
+        "RDMA"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "C++",
+          "field": "requirements_raw",
+          "anchor": "精通C++/CUDA",
+          "level": "必需",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "NCCL",
+          "field": "requirements_raw",
+          "anchor": "NCCL",
+          "level": "优先",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/通信",
+      "audit_note": "已独立阅读职责与要求；方向与岗位语义相符；字段精确对照另见自动检查。"
+    },
+    {
+      "source_job_id": "2072607377244467200",
+      "split": "dev",
+      "body_sha256": "b2a447a86404cee7cfd1628e21206442eb05d58e5aba46b75d83088b8b6cbaa3",
+      "expected_skills": [
+        "C++",
+        "C#",
+        "Unity"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "C++",
+          "field": "requirements_raw",
+          "anchor": "熟练掌握 C++",
+          "level": "必需",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "Unity",
+          "field": "requirements_raw",
+          "anchor": "Unity 相关开发",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/游戏",
+      "audit_note": "来源经验三年以上，要求正文5年及以上；原始经验与正文门槛有差异，交C/D裁定。"
+    },
+    {
+      "source_job_id": "2110191895966826496",
+      "split": "dev",
+      "body_sha256": "3ef72c625e668258697aee33e71cc5dcf9ad4ebf6a0976c15c92f1cb1c55a1f5",
+      "expected_skills": [
+        "Python",
+        "Go",
+        "C++",
+        "Java",
+        "TypeScript",
+        "PyTorch",
+        "RAG",
+        "MCP",
+        "Flutter",
+        "React Native",
+        "KMP",
+        "Kuikly"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Python",
+          "field": "requirements_raw",
+          "anchor": "精通 Python",
+          "level": "不确定",
+          "polarity": "alternative"
+        },
+        {
+          "skill_name": "PyTorch",
+          "field": "requirements_raw",
+          "anchor": "了解 PyTorch",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/AI应用",
+      "audit_note": "标题双城市而地点仅深圳；具备技术研发职责。"
+    },
+    {
+      "source_job_id": "2061700926892322816",
+      "split": "dev",
+      "body_sha256": "ac25d0f2585359b2ab5e147965eba14f3d272b190521073ce108ebc1056e4561",
+      "expected_skills": [
+        "Python",
+        "Linux",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Python",
+          "field": "requirements_raw",
+          "anchor": "精通 Python",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "算法/语音",
+      "audit_note": "已独立阅读职责与要求；方向与岗位语义相符；字段精确对照另见自动检查。"
+    },
+    {
+      "source_job_id": "1990262114463404032",
+      "split": "dev",
+      "body_sha256": "d0e5e3c5623496b6d2b824bfb0b99ea6ae41cc09f53f091c0e9366cff4f33fed",
+      "expected_skills": [
+        "Python",
+        "PyTorch",
+        "Megatron",
+        "FSDP",
+        "SLIME",
+        "Verl"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Python",
+          "field": "requirements_raw",
+          "anchor": "熟练掌握Python",
+          "level": "必需",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "PyTorch",
+          "field": "requirements_raw",
+          "anchor": "Pytorch/Megatron",
+          "level": "优先",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "算法/音频",
+      "audit_note": "标题北京、源地点深圳，冲突待确认。"
+    },
+    {
+      "source_job_id": "2111019425472884736",
+      "split": "dev",
+      "body_sha256": "b02e0da93e1ed9787c59857150b12416fa3fa3fca1c00c9522067db7cd68928d",
+      "expected_skills": [
+        "Linux",
+        "Python",
+        "C++",
+        "Megatron",
+        "TensorRT",
+        "vLLM",
+        "SGLang"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "vLLM",
+          "field": "requirements_raw",
+          "anchor": "TensorRT/vLLM/SGLang",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/AI Infra",
+      "audit_note": "已独立阅读职责与要求；方向与岗位语义相符；字段精确对照另见自动检查。"
+    },
+    {
+      "source_job_id": "1983435797747093504",
+      "split": "dev",
+      "body_sha256": "1a1c6a790b90f25c5846047a0afbc29f9fe4c4bdf4469593aa7b77095c7d7364",
+      "expected_skills": [],
+      "level_checks": [],
+      "direction": "开发/数据库",
+      "audit_note": "职责为计算引擎和数据库研发；本词典无命名技术匹配，不代表无需技能。"
+    },
+    {
+      "source_job_id": "2112189784016470016",
+      "split": "dev",
+      "body_sha256": "d4bbcb0b3874eae3cbcbb2697742a166accb38f1977185ec147f62c01765b9f7",
+      "expected_skills": [
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "PyTorch",
+          "field": "requirements_raw",
+          "anchor": "熟练使用PyTorch/TensorFlow",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "算法/强化学习",
+      "audit_note": "已独立阅读职责与要求；方向与岗位语义相符；字段精确对照另见自动检查。"
+    },
+    {
+      "source_job_id": "1936827400029601792",
+      "split": "dev",
+      "body_sha256": "8b20a44796620d86413a253c25432da36d22cf036ec6afc861854be754de40b2",
+      "expected_skills": [
+        "C++",
+        "C",
+        "Python",
+        "TensorFlow"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "TensorFlow",
+          "field": "requirements_raw",
+          "anchor": "熟悉Tensorflow",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "算法/推荐",
+      "audit_note": "已独立阅读职责与要求；方向与岗位语义相符；字段精确对照另见自动检查。"
+    },
+    {
+      "source_job_id": "2116084604950720512",
+      "split": "dev",
+      "body_sha256": "b60aabed521f2fd6d5872e61d79b391120f32783234d2a09a56eca864633bea2",
+      "expected_skills": [
+        "Go",
+        "PHP",
+        "Linux",
+        "Gin",
+        "Laravel",
+        "MySQL",
+        "SQL",
+        "Redis",
+        "CI/CD"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "SQL",
+          "field": "requirements_raw",
+          "anchor": "SQL 优化",
+          "level": "必需",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "Redis",
+          "field": "requirements_raw",
+          "anchor": "掌握 Redis",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/后端",
+      "audit_note": "已独立阅读职责与要求；方向与岗位语义相符；字段精确对照另见自动检查。"
+    },
+    {
+      "source_job_id": "2080585827171348480",
+      "split": "dev",
+      "body_sha256": "0878ce4b7fa852c05da268e4d5b9893ca498785c3b8cd910ab85484112b51058",
+      "expected_skills": [
+        "Unreal Engine",
+        "C++"
+      ],
+      "level_checks": [],
+      "direction": "开发/游戏",
+      "audit_note": "地点上海；标题高级游戏客户端，正文UE5/UE4，语义一致。"
+    },
+    {
+      "source_job_id": "2038814818466689024",
+      "split": "dev",
+      "body_sha256": "0f70b3a38eb185bd8e2b6678311231270c3615f0d44e55c667a7f9fb5631bc18",
+      "expected_skills": [
+        "vLLM",
+        "SGLang",
+        "TensorRT-LLM",
+        "Megatron",
+        "DeepSpeed",
+        "Verl",
+        "LLaMA-Factory",
+        "CUDA",
+        "NCCL",
+        "MPI"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "CUDA",
+          "field": "requirements_raw",
+          "anchor": "CUDA编程",
+          "level": "优先",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/AI Infra",
+      "audit_note": "地点上海；训练/推理至少熟悉一个场景，不能把每个框架解释成必须同时掌握。"
+    },
+    {
+      "source_job_id": "2043890038449799168",
+      "split": "dev",
+      "body_sha256": "9d68718e3966cf94ed40e05052de8826d3cbd52ba130bf67726d4bf1f50f4c0c",
+      "expected_skills": [
+        "Kubernetes",
+        "Spark",
+        "Flink",
+        "Ray",
+        "Go",
+        "C++",
+        "Rust"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Go",
+          "field": "requirements_raw",
+          "anchor": "Go/C++/Rust",
+          "level": "不确定",
+          "polarity": "alternative"
+        },
+        {
+          "skill_name": "Kubernetes",
+          "field": "requirements_raw",
+          "anchor": "深入理解 Kubernetes",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/数据平台",
+      "audit_note": "职责含资源调度和Kubernetes平台，不按纯算法岗位处理。"
+    },
+    {
+      "source_job_id": "2027658888916140032",
+      "split": "dev",
+      "body_sha256": "62ad8d51ca3a680922b545f5082c7f06f0116125bafd3028062ba66b050224f0",
+      "expected_skills": [
+        "RDMA",
+        "Linux",
+        "C",
+        "C++",
+        "Go",
+        "Python"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "C++",
+          "field": "requirements_raw",
+          "anchor": "C/C++/Go/Python",
+          "level": "不确定",
+          "polarity": "alternative"
+        }
+      ],
+      "direction": "开发/存储",
+      "audit_note": "已独立阅读职责与要求；方向与岗位语义相符；字段精确对照另见自动检查。"
+    },
+    {
+      "source_job_id": "2115993428956463104",
+      "split": "dev",
+      "body_sha256": "fb7e67a539d6f8daa786be9c49a126d69663c91e70856785ef02a2cbcdbf7c42",
+      "expected_skills": [
+        "Go",
+        "C++",
+        "Shell",
+        "Linux"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Shell",
+          "field": "requirements_raw",
+          "anchor": "Shell",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "测试",
+      "audit_note": "已独立阅读职责与要求；方向与岗位语义相符；字段精确对照另见自动检查。"
+    },
+    {
+      "source_job_id": "2090043573536997376",
+      "split": "dev",
+      "body_sha256": "b84fa7901075404b2840dfba0c37c6bd395a355ebe22bdfed22582700b2d13e1",
+      "expected_skills": [
+        "Spark",
+        "Hadoop",
+        "Ray"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Spark",
+          "field": "requirements_raw",
+          "anchor": "spark",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "数据开发",
+      "audit_note": "标题北京、地点深圳；Spark/Hadoop/Ray出现在要求正文。"
+    },
+    {
+      "source_job_id": "2098253188510695424",
+      "split": "dev",
+      "body_sha256": "61f26038b6532558564894afbbeb3ad511944169510239b9733cd96d44c5bd9d",
+      "expected_skills": [
+        "Flutter",
+        "iOS",
+        "Android",
+        "Dart",
+        "C",
+        "C++",
+        "Swift",
+        "Objective-C",
+        "Java",
+        "Kotlin",
+        "Linux"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Dart",
+          "field": "requirements_raw",
+          "anchor": "Dart",
+          "level": "不确定",
+          "polarity": "alternative"
+        }
+      ],
+      "direction": "开发/移动端",
+      "audit_note": "Flutter跨端职责完整；语言为至少一种的备选组。"
+    },
+    {
+      "source_job_id": "2072330920538583040",
+      "split": "dev",
+      "body_sha256": "3859a1cd60161fe52e3c4e5159517764c950370d5fced96e19f7f19162ed2788",
+      "expected_skills": [
+        "PyTorch",
+        "JAX",
+        "TensorFlow",
+        "Megatron",
+        "DeepSpeed",
+        "FSDP",
+        "CUDA"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "JAX",
+          "field": "requirements_raw",
+          "anchor": "JAX",
+          "level": "不确定",
+          "polarity": "alternative"
+        },
+        {
+          "skill_name": "CUDA",
+          "field": "requirements_raw",
+          "anchor": "熟悉CUDA优化",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/训练框架",
+      "audit_note": "杭州地点明确，职责与要求均为大规模训练框架研发。"
+    },
+    {
+      "source_job_id": "2115714592318603264",
+      "split": "dev",
+      "body_sha256": "b42beba3c5ae627861e432848caf75b2f4c28cdba18ac51cce01ae1417da0e51",
+      "expected_skills": [
+        "Spark",
+        "Flink",
+        "StarRocks",
+        "Ray",
+        "PyTorch",
+        "RAG",
+        "Java",
+        "Scala",
+        "C++",
+        "Rust",
+        "Python",
+        "Trino",
+        "Presto",
+        "Hive",
+        "Parquet",
+        "Lance",
+        "Vortex",
+        "Nimble",
+        "Iceberg",
+        "Hudi",
+        "Paimon",
+        "Arrow"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Iceberg",
+          "field": "requirements_raw",
+          "anchor": "Iceberg",
+          "level": "优先",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "Java",
+          "field": "requirements_raw",
+          "anchor": "Java / Scala",
+          "level": "不确定",
+          "polarity": "alternative"
+        }
+      ],
+      "direction": "数据开发",
+      "audit_note": "地点上海，标题上海/深圳；不擅自补深圳；湖仓技术清单很长。"
+    },
+    {
+      "source_job_id": "2098669037675528192",
+      "split": "dev",
+      "body_sha256": "85a7df885979876b8c47b58ca4598e07d5d4e4e467f9afc2a3c3ffde01551582",
+      "expected_skills": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Vue",
+        "MySQL",
+        "PostgreSQL"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "React",
+          "field": "requirements_raw",
+          "anchor": "React、Vue",
+          "level": "不确定",
+          "polarity": "alternative"
+        }
+      ],
+      "direction": "开发/全栈",
+      "audit_note": "已独立阅读职责与要求；方向与岗位语义相符；字段精确对照另见自动检查。"
+    },
+    {
+      "source_job_id": "2115695359488602112",
+      "split": "dev",
+      "body_sha256": "cda68c77a74192ffad389c4902ec7de18547dea73fd7cc1c641a49a8d0b4bac2",
+      "expected_skills": [],
+      "level_checks": [],
+      "direction": "测试",
+      "audit_note": "测试职责完整，无本词典命名技术；有效正文仍计入技能分母。"
+    },
+    {
+      "source_job_id": "2113089038390050816",
+      "split": "dev",
+      "body_sha256": "5f3e16e73c08b3640893b8300f4b29cab485a2e0462fec7d33a04f829016dffc",
+      "expected_skills": [
+        "Spark",
+        "Flink",
+        "Ray",
+        "Iceberg",
+        "Lance",
+        "Java",
+        "Scala",
+        "C++",
+        "Rust",
+        "Python"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Python",
+          "field": "requirements_raw",
+          "anchor": "Java/Scala/C++/Rust/Python",
+          "level": "不确定",
+          "polarity": "alternative"
+        }
+      ],
+      "direction": "数据开发",
+      "audit_note": "来源类别若缺失保留未知，职责为底层数据基础设施。"
+    },
+    {
+      "source_job_id": "1998671162179215360",
+      "split": "dev",
+      "body_sha256": "9c1df1701acaadf2995342c8727b02b06575f5ea528a1e7cfcc226fd144a54f0",
+      "expected_skills": [
+        "Android",
+        "React Native",
+        "JavaScript",
+        "TypeScript",
+        "HTML",
+        "CSS"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "React Native",
+          "field": "requirements_raw",
+          "anchor": "熟悉跨平台框架ReactNative",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/移动端",
+      "audit_note": "已独立阅读职责与要求；方向与岗位语义相符；字段精确对照另见自动检查。"
+    },
+    {
+      "source_job_id": "2079038134749933568",
+      "split": "dev",
+      "body_sha256": "16922f0782e6ed6e76b4dfef7940ae5ac78b394ff7988fc868f7ad49ce807ed3",
+      "expected_skills": [
+        "Python",
+        "R",
+        "SQL",
+        "pandas",
+        "scikit-learn",
+        "PySpark"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "SQL",
+          "field": "requirements_raw",
+          "anchor": "Python/R/SQL",
+          "level": "不确定",
+          "polarity": "alternative"
+        }
+      ],
+      "direction": "数据分析",
+      "audit_note": "职责确为实验/因果分析，技术工具在要求中列为语言备选。"
+    },
+    {
+      "source_job_id": "2072607375201845248",
+      "split": "regression",
+      "body_sha256": "5fb0b56e4079a5c5d91055913796a1215123c9d7ef5eec4098c2191aa9719751",
+      "expected_skills": [
+        "C++",
+        "Unity"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "C++",
+          "field": "requirements_raw",
+          "anchor": "熟练掌握C++",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/游戏",
+      "audit_note": "职责中的海外指产品版本，地点为深圳，不应按海外岗位排除。"
+    },
+    {
+      "source_job_id": "2072607372890783744",
+      "split": "regression",
+      "body_sha256": "7f0edc8d80fa5418cd35f17db0d25b5969a64630e75aeb0a39f622a3cc2a25f0",
+      "expected_skills": [
+        "C#",
+        "C++",
+        "Unity"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Unity",
+          "field": "requirements_raw",
+          "anchor": "熟悉Unity3D",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/引擎",
+      "audit_note": "渲染API如OpenGL/Metal/Vulkan不在本版词典，不能把闭集召回率称为所有技能召回率。"
+    },
+    {
+      "source_job_id": "2013144251273207808",
+      "split": "regression",
+      "body_sha256": "c72631e31bee14147b63f07aa728f9802be366f546f32bedafd8ca113a9c7ec0",
+      "expected_skills": [
+        "Unreal Engine",
+        "Unity",
+        "C#",
+        "C++",
+        "iOS",
+        "Android"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "iOS",
+          "field": "requirements_raw",
+          "anchor": "iOS、Android",
+          "level": "优先",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/游戏",
+      "audit_note": "Lua未在开发集词典收录，作为开放词表漏项登记，不计闭集FN。"
+    },
+    {
+      "source_job_id": "2115001234858622976",
+      "split": "regression",
+      "body_sha256": "dcd846d165f7ffa155aaf33b068be2b725b58dd7b27f23191971e07e54726a3c",
+      "expected_skills": [
+        "Python"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Python",
+          "field": "requirements_raw",
+          "anchor": "熟练掌握 Python",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "测试/评测",
+      "audit_note": "评测负责人具备Python平台开发要求，非纯非技术管理岗位。"
+    },
+    {
+      "source_job_id": "2061654749727600640",
+      "split": "regression",
+      "body_sha256": "68d8edbf1cd5b833af463624dcbd3ea21f3461257c09b353c66f38738e1f26d6",
+      "expected_skills": [
+        "Python",
+        "Kubernetes"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Python",
+          "field": "requirements_raw",
+          "anchor": "Python 编程能力",
+          "level": "必需",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "Kubernetes",
+          "field": "requirements_raw",
+          "anchor": "熟悉 Kubernetes",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/AI框架",
+      "audit_note": "Python工程框架职责完整，地点北京；标题多城市不扩展。"
+    },
+    {
+      "source_job_id": "1958076178912923648",
+      "split": "regression",
+      "body_sha256": "eb74301df7de13efe0bd8b5b5482c34b4f73869e7b781a22eeca57036bfeddb7",
+      "expected_skills": [
+        "C",
+        "C++",
+        "Python",
+        "CUDA",
+        "cuBLAS",
+        "CUTLASS",
+        "TensorRT",
+        "TensorRT-LLM",
+        "vLLM",
+        "SGLang"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "CUDA",
+          "field": "requirements_raw",
+          "anchor": "包括但不限于Cuda",
+          "level": "必需",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "TensorRT",
+          "field": "requirements_raw",
+          "anchor": "Tensorrt/FasterTransformer",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/推理系统",
+      "audit_note": "OpenCL/cuDNN/FasterTransformer未收录，后续版本可评审扩词；本次不调留出规则。"
+    },
+    {
+      "source_job_id": "2091785005486489600",
+      "split": "regression",
+      "body_sha256": "3827faa06c4f3d4bbf80656c530118ad254c96318ab595ddf1c92bcf8f240395",
+      "expected_skills": [
+        "Unreal Engine",
+        "C++"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "C++",
+          "field": "requirements_raw",
+          "anchor": "精通C++",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/游戏",
+      "audit_note": "标题上海、源地点杭州冲突；Lua为词典外技能。"
+    },
+    {
+      "source_job_id": "2092090907078868992",
+      "split": "regression",
+      "body_sha256": "d30d1b0cd89c4c98e4410ab508a6d4ea30e8c29b05162e9ecbc95d454250f26d",
+      "expected_skills": [
+        "Unreal Engine",
+        "C++",
+        "Go"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Go",
+          "field": "requirements_raw",
+          "anchor": "Golang",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/游戏服务端",
+      "audit_note": "标题上海、源地点杭州冲突；主体为服务端/引擎开发。"
+    },
+    {
+      "source_job_id": "2072330933721284608",
+      "split": "regression",
+      "body_sha256": "db958ccd9eedee06890f2aa1e2412a218430c4f4ffcff8ba8631e84ef2c2457b",
+      "expected_skills": [
+        "Python",
+        "Megatron",
+        "DeepSpeed",
+        "FSDP",
+        "Verl"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Python",
+          "field": "requirements_raw",
+          "anchor": "熟悉 Python",
+          "level": "必需",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "Verl",
+          "field": "requirements_raw",
+          "anchor": "熟悉 Verl",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/训练框架",
+      "audit_note": "ROLL/AReal和PPO/GRPO/DPO在词典外，单独登记。"
+    },
+    {
+      "source_job_id": "2072477788216147968",
+      "split": "regression",
+      "body_sha256": "85d13ae3e674645bbc6d484438328e59002cf29a15a18a43f4b5b26f37daad93",
+      "expected_skills": [],
+      "level_checks": [],
+      "direction": "开发/AI应用",
+      "audit_note": "正文技术职责完整，但本版命名技术词典无匹配。"
+    },
+    {
+      "source_job_id": "2082723395740549120",
+      "split": "regression",
+      "body_sha256": "51b0cea6888f5c3700e64ec3c52923cce920c3220145d41e408a79d245077538",
+      "expected_skills": [
+        "Python",
+        "PyTorch"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Python",
+          "field": "requirements_raw",
+          "anchor": "精通 Python / PyTorch",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "技术研究/范围待核",
+      "audit_note": "职责偏产业趋势/技术选型研究，是否纳入核心技术岗待C/D裁定；本轮仅计为来源样本。"
+    },
+    {
+      "source_job_id": "2077641750666719232",
+      "split": "regression",
+      "body_sha256": "62d050e32e6a1961ba1a3af683bee2d52e8889ecec600383b6422c73cc877d12",
+      "expected_skills": [
+        "MCP",
+        "TypeScript",
+        "Python",
+        "React",
+        "Go"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "MCP",
+          "field": "requirements_raw",
+          "anchor": "MCP等技术体系",
+          "level": "必需",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "React",
+          "field": "requirements_raw",
+          "anchor": "TypeScript+Node.js+Python+React+Go",
+          "level": "不确定",
+          "polarity": "alternative"
+        }
+      ],
+      "direction": "开发/开放平台",
+      "audit_note": "TypeScript+Node.js+Python+React+Go为技术栈示例，至少两种组合不等于每项单独必需；Node.js不在冻结词典。"
+    },
+    {
+      "source_job_id": "2043623808224620544",
+      "split": "regression",
+      "body_sha256": "53415cf07de9cb17e1cc91d4c4bcb368580caef6ec0a364ad408b9eed6362127",
+      "expected_skills": [
+        "Unreal Engine",
+        "C++",
+        "Linux"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "C++",
+          "field": "requirements_raw",
+          "anchor": "精通C++",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/游戏服务端",
+      "audit_note": "C++明确要求，至少一种脚本语言的条件不能自动作用到C++；作为强度检查。"
+    },
+    {
+      "source_job_id": "2110629918290395136",
+      "split": "regression",
+      "body_sha256": "dc6e6807254ba002bcb6a5a7a4d04d83616bd359f6617b238fcfa70133ad20f5",
+      "expected_skills": [
+        "MCP"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "MCP",
+          "field": "requirements_raw",
+          "anchor": "Skills、MCP实战经验",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/AI应用",
+      "audit_note": "MCP在要求正文，技能提取不补造未命名语言。"
+    },
+    {
+      "source_job_id": "2115711180747223040",
+      "split": "regression",
+      "body_sha256": "e71ab074e7de19d620fff1c2c769d384ec3bf7aa4fea7cf113dde93fafb2fd65",
+      "expected_skills": [],
+      "level_checks": [],
+      "direction": "测试",
+      "audit_note": "正文完整但没有本词典命名技术；不因未匹配而从分母删除。"
+    },
+    {
+      "source_job_id": "1790271644757925888",
+      "split": "regression",
+      "body_sha256": "cfb9395598fc47996ffbd12878a3c666e713554f3a77a38eb4aa9a6b927a6257",
+      "expected_skills": [
+        "C",
+        "C++",
+        "Go"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Go",
+          "field": "requirements_raw",
+          "anchor": "C/C++/GO",
+          "level": "不确定",
+          "polarity": "alternative"
+        }
+      ],
+      "direction": "开发/存储",
+      "audit_note": "C/C++/GO其中一门为备选组，不解释为三门同时必需。"
+    },
+    {
+      "source_job_id": "1927639153244217344",
+      "split": "regression",
+      "body_sha256": "dbb84a57f31124ddd22be860f68b92ad05e067c45da0eef2d2987a427e8833e0",
+      "expected_skills": [
+        "Python",
+        "SQL"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "SQL",
+          "field": "requirements_raw",
+          "anchor": "需掌握Python/SQL",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "数据分析",
+      "audit_note": "地点广州、正文数据科学职责完整，Python/SQL明确列入要求。"
+    },
+    {
+      "source_job_id": "1934984932162117632",
+      "split": "regression",
+      "body_sha256": "fef348535228d34ecc4aefd96c312a8ce22a3d4365afa0e1252d882df96826e6",
+      "expected_skills": [
+        "Go",
+        "Python",
+        "MySQL",
+        "Redis",
+        "MCP"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Go",
+          "field": "requirements_raw",
+          "anchor": "Go、Python、Node.js",
+          "level": "不确定",
+          "polarity": "alternative"
+        }
+      ],
+      "direction": "开发/AI应用",
+      "audit_note": "Node.js、Pulsar在词典外；Go/Python/Node.js至少一种为备选。"
+    },
+    {
+      "source_job_id": "1945692266278551552",
+      "split": "regression",
+      "body_sha256": "04e06358b4e5598847269e6684cff743f36d0ad5b26671833e63c3ed8a18b8f2",
+      "expected_skills": [],
+      "level_checks": [],
+      "direction": "测试开发",
+      "audit_note": "职责为测试工具平台开发，未列具体编程语言。"
+    },
+    {
+      "source_job_id": "2082710392638976000",
+      "split": "regression",
+      "body_sha256": "98459d8e1549bf3d323a2c5eeb9ecf424ac8322ef67a59757534ad9eae1d409b",
+      "expected_skills": [
+        "RAG",
+        "Python",
+        "PyTorch",
+        "C++",
+        "Linux",
+        "SQL",
+        "Spark",
+        "Flink"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "Python",
+          "field": "requirements_raw",
+          "anchor": "熟练使用 Python",
+          "level": "必需",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "SQL",
+          "field": "requirements_raw",
+          "anchor": "熟悉 SQL",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "算法/风控",
+      "audit_note": "安全治理算法方向，不能单凭标题安全就归入运维；原始类别保持。"
+    },
+    {
+      "source_job_id": "2026648959719735296",
+      "split": "regression",
+      "body_sha256": "56eded6bf8f194215cd32c3ad3fa527ed602aece173fb4bf47008e524b6640eb",
+      "expected_skills": [
+        "C++",
+        "Linux",
+        "RAG"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "C++",
+          "field": "requirements_raw",
+          "anchor": "精通C++",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/AI应用",
+      "audit_note": "标题成都/北京、地点广州，正文第7项支持成都/广州/北京；保留三种证据，不裁定唯一城市。"
+    },
+    {
+      "source_job_id": "2071807202225729536",
+      "split": "regression",
+      "body_sha256": "b803afeb59682fc4966e9b79fc242c4860c2998555e6930cf63491294cae9418",
+      "expected_skills": [],
+      "level_checks": [],
+      "direction": "安全",
+      "audit_note": "逆向、沙箱、风险分析为实际安全技能，但不在命名技术闭集；未匹配不等于无技能。"
+    },
+    {
+      "source_job_id": "2037467994921271296",
+      "split": "regression",
+      "body_sha256": "e2dea56b83097d02eb832010a3b475f00c47b4eb47c160e526b814a1f423c082",
+      "expected_skills": [
+        "RAG",
+        "C++",
+        "Linux"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "RAG",
+          "field": "requirements_raw",
+          "anchor": "具备RAG等相关开发经验者优先",
+          "level": "优先",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "开发/AI应用",
+      "audit_note": "标题成都/北京、源地点广州，冲突待确认；职责RAG与要求优先证据分别保留。"
+    },
+    {
+      "source_job_id": "2034237425647255552",
+      "split": "regression",
+      "body_sha256": "83c127adbdcd28f258cfc8eec33a6fbafeb8cf07d2e354ee8d64a61bbb77ffec",
+      "expected_skills": [
+        "Python",
+        "C",
+        "C++"
+      ],
+      "level_checks": [
+        {
+          "skill_name": "C++",
+          "field": "requirements_raw",
+          "anchor": "C/C++ 者优先",
+          "level": "优先",
+          "polarity": "positive"
+        },
+        {
+          "skill_name": "Python",
+          "field": "requirements_raw",
+          "anchor": "熟练使用 Python",
+          "level": "必需",
+          "polarity": "positive"
+        }
+      ],
+      "direction": "算法/多模态",
+      "audit_note": "标题北京、地点深圳；C/C++优先与Python必需不能混为同一强度。"
+    }
+  ],
+  "audit_extra": [
+    {
+      "source_job_id": "2072248701686034432",
+      "direction": "技术方案/范围待核",
+      "audit_note": "职责含售前演示与中标支持，也含云架构POC技术要求；是否核心技术岗待C/D裁定，不能仅因CategoryName=技术即确认。"
+    },
+    {
+      "source_job_id": "1961707720809795584",
+      "direction": "算法/世界模型",
+      "audit_note": "标题北京/上海、源地点深圳冲突，职责与要求为世界模型研发。"
+    },
+    {
+      "source_job_id": "2034532284522196992",
+      "direction": "算法/多模态强化学习",
+      "audit_note": "标题北京/上海、源地点深圳冲突，职责与要求为强化学习算法研发。"
+    }
+  ],
+  "open_vocabulary_notes": [
+    "留出样本明确出现但本版未收录：Lua、OpenGL、DX、Metal、Vulkan、OpenCL、cuDNN、FasterTransformer、Node.js、Pulsar、ROLL、AReal，以及逆向工程/自动化测试/统计方法等非命名工具技能。闭集召回率不能覆盖这些词。",
+    "真实样本缺少明确否定技能句；否定语境仅由隔离的合成测试覆盖，不冒充真实否定检出率。"
+  ],
+  "pre_evaluation_note": "首次运行在词典重复别名校验处停止；去掉大小写等价别名后重新固定哈希，匹配语义未变，尚未读取评估结果。",
+  "serialization_note": "最终交付统一LF，避免Windows检出换行影响冻结哈希；仅文件序列化变化，词典/规则/参考语义未改。",
+  "human_review_plan": {
+    "version": "human-review-0.2.0",
+    "development": [
+      "1990262114463404032",
+      "2091785005486489600",
+      "2092090907078868992",
+      "2090043573536997376",
+      "1961707720809795584",
+      "2034532284522196992",
+      "2026648959719735296",
+      "2037467994921271296",
+      "2034237425647255552",
+      "2080585827171348480"
+    ],
+    "final": [
+      "1923261618968457216",
+      "1967856352005083136",
+      "2070151600797827072",
+      "2112120499797667840",
+      "2115702081611546624",
+      "2059160518509379584",
+      "2082434681986527232",
+      "1936827497983352832",
+      "2059891450371555328",
+      "2037425089443692544"
+    ],
+    "policy": "20岗正文核对；开发10岗与最终10岗分开，最终评分后修规则需另升版本和另设验证集。"
+  },
+  "historical_holdout_indices": [
+    5,
+    7,
+    10,
+    20,
+    26,
+    28,
+    30,
+    31,
+    32,
+    34,
+    40,
+    41,
+    44,
+    50,
+    57,
+    71,
+    75,
+    79,
+    84,
+    87,
+    90,
+    94,
+    95,
+    99
+  ],
+  "review_status": "completed_20_sample_review"
+}

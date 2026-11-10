@@ -1,0 +1,5423 @@
+{
+  "filters": {
+    "is_core": true,
+    "city": null,
+    "experience": null,
+    "category": null
+  },
+  "total_input_posting_count": 100,
+  "core_posting_count_before_filters": 98,
+  "source_posting_count": 98,
+  "parseable_body_count": 98,
+  "body_coverage": 1.0,
+  "skill_matched_posting_count": 83,
+  "no_eligible_skill_count": 15,
+  "eligible_posting_skill_pairs": 333,
+  "evidence_count": 550,
+  "negative_evidence_count": 0,
+  "uncertain_evidence_count": 158,
+  "location_conflict_count": 9,
+  "experience_conflict_count": 3,
+  "additional_requirements_posting_count": 28,
+  "categories_raw": [
+    {
+      "name": "技术",
+      "posting_count": 97,
+      "denominator": 98,
+      "share": 0.9897959183673469
+    },
+    {
+      "name": "未知",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    }
+  ],
+  "education_raw": [
+    {
+      "name": "未知",
+      "posting_count": 98,
+      "denominator": 98,
+      "share": 1.0
+    }
+  ],
+  "experience_raw": [
+    {
+      "name": "三年以上工作经验",
+      "posting_count": 35,
+      "denominator": 98,
+      "share": 0.35714285714285715
+    },
+    {
+      "name": "两年以上工作经验",
+      "posting_count": 27,
+      "denominator": 98,
+      "share": 0.2755102040816326
+    },
+    {
+      "name": "一年以上工作经验",
+      "posting_count": 25,
+      "denominator": 98,
+      "share": 0.25510204081632654
+    },
+    {
+      "name": "五年以上工作经验",
+      "posting_count": 8,
+      "denominator": 98,
+      "share": 0.08163265306122448
+    },
+    {
+      "name": "不限",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "八年以上工作经验",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    }
+  ],
+  "employment_type_raw": [
+    {
+      "name": "40001001",
+      "posting_count": 67,
+      "denominator": 98,
+      "share": 0.6836734693877551
+    },
+    {
+      "name": "40001005",
+      "posting_count": 25,
+      "denominator": 98,
+      "share": 0.25510204081632654
+    },
+    {
+      "name": "40001002",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "name": "40001003",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "40001004",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "未知",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    }
+  ],
+  "city_raw": [
+    {
+      "name": "深圳",
+      "posting_count": 58,
+      "denominator": 98,
+      "share": 0.5918367346938775
+    },
+    {
+      "name": "广州",
+      "posting_count": 19,
+      "denominator": 98,
+      "share": 0.19387755102040816
+    },
+    {
+      "name": "北京",
+      "posting_count": 15,
+      "denominator": 98,
+      "share": 0.15306122448979592
+    },
+    {
+      "name": "上海",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "name": "杭州",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    }
+  ],
+  "city_normalized": [
+    {
+      "name": "深圳",
+      "posting_count": 54,
+      "denominator": 98,
+      "share": 0.5510204081632653
+    },
+    {
+      "name": "广州",
+      "posting_count": 17,
+      "denominator": 98,
+      "share": 0.17346938775510204
+    },
+    {
+      "name": "北京",
+      "posting_count": 15,
+      "denominator": 98,
+      "share": 0.15306122448979592
+    },
+    {
+      "name": "冲突待确认",
+      "posting_count": 9,
+      "denominator": 98,
+      "share": 0.09183673469387756
+    },
+    {
+      "name": "上海",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "name": "杭州",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    }
+  ],
+  "experience_normalized": [
+    {
+      "name": "三年以上工作经验",
+      "posting_count": 33,
+      "denominator": 98,
+      "share": 0.336734693877551
+    },
+    {
+      "name": "两年以上工作经验",
+      "posting_count": 27,
+      "denominator": 98,
+      "share": 0.2755102040816326
+    },
+    {
+      "name": "一年以上工作经验",
+      "posting_count": 25,
+      "denominator": 98,
+      "share": 0.25510204081632654
+    },
+    {
+      "name": "五年以上工作经验",
+      "posting_count": 7,
+      "denominator": 98,
+      "share": 0.07142857142857142
+    },
+    {
+      "name": "冲突待确认",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "name": "不限",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "八年以上工作经验",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    }
+  ],
+  "skills": [
+    {
+      "name": "C++",
+      "posting_count": 35,
+      "denominator": 98,
+      "share": 0.35714285714285715
+    },
+    {
+      "name": "Python",
+      "posting_count": 23,
+      "denominator": 98,
+      "share": 0.23469387755102042
+    },
+    {
+      "name": "Linux",
+      "posting_count": 16,
+      "denominator": 98,
+      "share": 0.16326530612244897
+    },
+    {
+      "name": "PyTorch",
+      "posting_count": 15,
+      "denominator": 98,
+      "share": 0.15306122448979592
+    },
+    {
+      "name": "Unreal Engine",
+      "posting_count": 14,
+      "denominator": 98,
+      "share": 0.14285714285714285
+    },
+    {
+      "name": "vLLM",
+      "posting_count": 11,
+      "denominator": 98,
+      "share": 0.11224489795918367
+    },
+    {
+      "name": "SGLang",
+      "posting_count": 9,
+      "denominator": 98,
+      "share": 0.09183673469387756
+    },
+    {
+      "name": "CUDA",
+      "posting_count": 8,
+      "denominator": 98,
+      "share": 0.08163265306122448
+    },
+    {
+      "name": "Megatron",
+      "posting_count": 8,
+      "denominator": 98,
+      "share": 0.08163265306122448
+    },
+    {
+      "name": "RAG",
+      "posting_count": 8,
+      "denominator": 98,
+      "share": 0.08163265306122448
+    },
+    {
+      "name": "C",
+      "posting_count": 7,
+      "denominator": 98,
+      "share": 0.07142857142857142
+    },
+    {
+      "name": "DeepSpeed",
+      "posting_count": 7,
+      "denominator": 98,
+      "share": 0.07142857142857142
+    },
+    {
+      "name": "Flink",
+      "posting_count": 7,
+      "denominator": 98,
+      "share": 0.07142857142857142
+    },
+    {
+      "name": "MCP",
+      "posting_count": 7,
+      "denominator": 98,
+      "share": 0.07142857142857142
+    },
+    {
+      "name": "Spark",
+      "posting_count": 6,
+      "denominator": 98,
+      "share": 0.061224489795918366
+    },
+    {
+      "name": "Unity",
+      "posting_count": 6,
+      "denominator": 98,
+      "share": 0.061224489795918366
+    },
+    {
+      "name": "C#",
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "name": "Flutter",
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "name": "Go",
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "name": "Lua",
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "name": "MySQL",
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "name": "Ray",
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "name": "TensorFlow",
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "name": "Android",
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "name": "Kubernetes",
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "name": "Redis",
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "name": "SQL",
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "name": "TypeScript",
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "name": "Verl",
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "name": "CI/CD",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "name": "FSDP",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "name": "Kafka",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "name": "LLaMA-Factory",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "name": "RDMA",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "name": "TensorRT",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "name": "TensorRT-LLM",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "name": "iOS",
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "name": "Hadoop",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "Iceberg",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "JavaScript",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "Lance",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "MPI",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "NCCL",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "Pulsar",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "React Native",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "Shell",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "Unix",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "Windows",
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "name": "3FS",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "AWS S3",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Alluxio",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Arrow",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Ascend C",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "CSS",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "CUTLASS",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Ceph",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "ClickHouse",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Codex",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Docker",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Elasticsearch",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "FUSE",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "HTML",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Hive",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Hudi",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "JuiceFS",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "KMP",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Kuikly",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Nimble",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "ONNX Runtime Web",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "PHP",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Paimon",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Parquet",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "PySpark",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "ROCm",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Rust",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "SLIME",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Skia",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "StarRocks",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "TensorFlow.js",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Trino",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Triton",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "Vortex",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "WebAssembly",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "WebGPU",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "cuBLAS",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "macOS",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "pandas",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "scikit-learn",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "name": "torch.compile",
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    }
+  ],
+  "pairs": [
+    {
+      "skills": [
+        "C++",
+        "Unreal Engine"
+      ],
+      "posting_count": 12,
+      "denominator": 98,
+      "share": 0.12244897959183673
+    },
+    {
+      "skills": [
+        "C++",
+        "Linux"
+      ],
+      "posting_count": 11,
+      "denominator": 98,
+      "share": 0.11224489795918367
+    },
+    {
+      "skills": [
+        "C++",
+        "Python"
+      ],
+      "posting_count": 10,
+      "denominator": 98,
+      "share": 0.10204081632653061
+    },
+    {
+      "skills": [
+        "SGLang",
+        "vLLM"
+      ],
+      "posting_count": 9,
+      "denominator": 98,
+      "share": 0.09183673469387756
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "Python"
+      ],
+      "posting_count": 8,
+      "denominator": 98,
+      "share": 0.08163265306122448
+    },
+    {
+      "skills": [
+        "C",
+        "C++"
+      ],
+      "posting_count": 7,
+      "denominator": 98,
+      "share": 0.07142857142857142
+    },
+    {
+      "skills": [
+        "DeepSpeed",
+        "Megatron"
+      ],
+      "posting_count": 6,
+      "denominator": 98,
+      "share": 0.061224489795918366
+    },
+    {
+      "skills": [
+        "C",
+        "Python"
+      ],
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "skills": [
+        "C#",
+        "C++"
+      ],
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "skills": [
+        "C++",
+        "CUDA"
+      ],
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "skills": [
+        "C++",
+        "Lua"
+      ],
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "skills": [
+        "C++",
+        "Unity"
+      ],
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "skills": [
+        "CUDA",
+        "Python"
+      ],
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "skills": [
+        "DeepSpeed",
+        "vLLM"
+      ],
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "skills": [
+        "Flink",
+        "Spark"
+      ],
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "skills": [
+        "Megatron",
+        "SGLang"
+      ],
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "skills": [
+        "Megatron",
+        "vLLM"
+      ],
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "skills": [
+        "Python",
+        "vLLM"
+      ],
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "skills": [
+        "Ray",
+        "Spark"
+      ],
+      "posting_count": 5,
+      "denominator": 98,
+      "share": 0.05102040816326531
+    },
+    {
+      "skills": [
+        "C++",
+        "vLLM"
+      ],
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "skills": [
+        "DeepSpeed",
+        "SGLang"
+      ],
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "skills": [
+        "Flink",
+        "Ray"
+      ],
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "skills": [
+        "Linux",
+        "Python"
+      ],
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "skills": [
+        "MySQL",
+        "Redis"
+      ],
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "vLLM"
+      ],
+      "posting_count": 4,
+      "denominator": 98,
+      "share": 0.04081632653061224
+    },
+    {
+      "skills": [
+        "Android",
+        "iOS"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "C",
+        "CUDA"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "C#",
+        "Unity"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "C++",
+        "Go"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "C++",
+        "PyTorch"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "C++",
+        "SGLang"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "C++",
+        "TensorRT"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "CUDA",
+        "DeepSpeed"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "CUDA",
+        "Megatron"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "CUDA",
+        "TensorRT-LLM"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "CUDA",
+        "vLLM"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "DeepSpeed",
+        "LLaMA-Factory"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "FSDP",
+        "Megatron"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Flink",
+        "PyTorch"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Flink",
+        "RAG"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Go",
+        "Linux"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Kafka",
+        "MySQL"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Kafka",
+        "Redis"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "LLaMA-Factory",
+        "vLLM"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Linux",
+        "MySQL"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Linux",
+        "PyTorch"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Lua",
+        "Unreal Engine"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Megatron",
+        "Python"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Megatron",
+        "Verl"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "RAG"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "SGLang"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "Spark"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Python",
+        "SGLang"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Python",
+        "SQL"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Python",
+        "TensorFlow"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Python",
+        "TensorRT"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "TensorRT",
+        "vLLM"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "TensorRT-LLM",
+        "vLLM"
+      ],
+      "posting_count": 3,
+      "denominator": 98,
+      "share": 0.030612244897959183
+    },
+    {
+      "skills": [
+        "Android",
+        "C++"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Android",
+        "Flutter"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "C",
+        "Linux"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "C",
+        "TensorRT"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "C",
+        "TensorRT-LLM"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "C",
+        "vLLM"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "C#",
+        "Lua"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "C++",
+        "Flutter"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "C++",
+        "Megatron"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "C++",
+        "RAG"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "C++",
+        "TensorFlow"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "C++",
+        "TensorRT-LLM"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "C++",
+        "Unix"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "C++",
+        "iOS"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "CUDA",
+        "MPI"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "CUDA",
+        "NCCL"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "CUDA",
+        "SGLang"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "CUDA",
+        "TensorRT"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "DeepSpeed",
+        "FSDP"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "DeepSpeed",
+        "PyTorch"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "DeepSpeed",
+        "Python"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "DeepSpeed",
+        "Verl"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Flink",
+        "Iceberg"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Flink",
+        "Lance"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Flink",
+        "Linux"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Flink",
+        "Python"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Flutter",
+        "RAG"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Flutter",
+        "iOS"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Go",
+        "MySQL"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Iceberg",
+        "Lance"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Iceberg",
+        "Ray"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Iceberg",
+        "Spark"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "JavaScript",
+        "TypeScript"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Kafka",
+        "Linux"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "LLaMA-Factory",
+        "Megatron"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "LLaMA-Factory",
+        "SGLang"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "LLaMA-Factory",
+        "Verl"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Lance",
+        "Ray"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Lance",
+        "Spark"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Linux",
+        "Megatron"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Linux",
+        "RAG"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Linux",
+        "Redis"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Linux",
+        "SGLang"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Linux",
+        "SQL"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Linux",
+        "Shell"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Linux",
+        "Unix"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Linux",
+        "Unreal Engine"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Linux",
+        "vLLM"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "MPI",
+        "NCCL"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Megatron",
+        "PyTorch"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "MySQL",
+        "Pulsar"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Pulsar",
+        "Redis"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "Ray"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "SQL"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Python",
+        "RAG"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Python",
+        "TensorRT-LLM"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Python",
+        "Verl"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "RAG",
+        "Spark"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "SGLang",
+        "TensorRT"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "SGLang",
+        "TensorRT-LLM"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "SGLang",
+        "Verl"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "TensorRT",
+        "TensorRT-LLM"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Unity",
+        "Unreal Engine"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "Verl",
+        "vLLM"
+      ],
+      "posting_count": 2,
+      "denominator": 98,
+      "share": 0.02040816326530612
+    },
+    {
+      "skills": [
+        "3FS",
+        "AWS S3"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "3FS",
+        "Alluxio"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "3FS",
+        "Ceph"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "3FS",
+        "FUSE"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "3FS",
+        "JuiceFS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "3FS",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "3FS",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "AWS S3",
+        "Alluxio"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "AWS S3",
+        "Ceph"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "AWS S3",
+        "FUSE"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "AWS S3",
+        "JuiceFS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "AWS S3",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "AWS S3",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Alluxio",
+        "Ceph"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Alluxio",
+        "FUSE"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Alluxio",
+        "JuiceFS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Alluxio",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Alluxio",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Android",
+        "C#"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Android",
+        "CSS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Android",
+        "HTML"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Android",
+        "JavaScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Android",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Android",
+        "Lua"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Android",
+        "React Native"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Android",
+        "TypeScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Android",
+        "Windows"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Android",
+        "macOS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "Flink"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "Hudi"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "Iceberg"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "Lance"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "Nimble"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "Paimon"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "Parquet"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "Ray"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "Spark"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "StarRocks"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Arrow",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ascend C",
+        "C"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ascend C",
+        "C++"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ascend C",
+        "CUDA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ascend C",
+        "CUTLASS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ascend C",
+        "Python"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ascend C",
+        "Triton"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ascend C",
+        "cuBLAS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ascend C",
+        "torch.compile"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C",
+        "CUTLASS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C",
+        "Go"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C",
+        "MySQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C",
+        "SGLang"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C",
+        "TensorFlow"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C",
+        "Triton"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C",
+        "cuBLAS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C",
+        "torch.compile"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C#",
+        "iOS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "CUTLASS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "DeepSpeed"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "Flink"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "MPI"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "MySQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "NCCL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "ROCm"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "SQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "Shell"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "Spark"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "Triton"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "TypeScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "cuBLAS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "C++",
+        "torch.compile"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "ClickHouse"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "Elasticsearch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "Flutter"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "Go"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "Kafka"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "MySQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "ONNX Runtime Web"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "PHP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "Redis"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "SGLang"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "SQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "Skia"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "TensorFlow.js"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "WebAssembly"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "WebGPU"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CI/CD",
+        "vLLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CSS",
+        "HTML"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CSS",
+        "JavaScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CSS",
+        "React Native"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CSS",
+        "TypeScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUDA",
+        "CUTLASS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUDA",
+        "FSDP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUDA",
+        "LLaMA-Factory"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUDA",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUDA",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUDA",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUDA",
+        "ROCm"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUDA",
+        "TensorFlow"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUDA",
+        "Triton"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUDA",
+        "Verl"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUDA",
+        "cuBLAS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUDA",
+        "torch.compile"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUTLASS",
+        "Python"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUTLASS",
+        "Triton"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUTLASS",
+        "cuBLAS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "CUTLASS",
+        "torch.compile"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ceph",
+        "FUSE"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ceph",
+        "JuiceFS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ceph",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ceph",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ClickHouse",
+        "Elasticsearch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ClickHouse",
+        "Go"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ClickHouse",
+        "Kafka"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ClickHouse",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ClickHouse",
+        "MySQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ClickHouse",
+        "PHP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ClickHouse",
+        "Redis"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ClickHouse",
+        "SQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Codex",
+        "MCP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "DeepSpeed",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "DeepSpeed",
+        "MPI"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "DeepSpeed",
+        "NCCL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "DeepSpeed",
+        "TensorRT-LLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Docker",
+        "Kubernetes"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Docker",
+        "MCP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Docker",
+        "SGLang"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Docker",
+        "vLLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Elasticsearch",
+        "Go"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Elasticsearch",
+        "Kafka"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Elasticsearch",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Elasticsearch",
+        "MySQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Elasticsearch",
+        "PHP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Elasticsearch",
+        "Redis"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Elasticsearch",
+        "SQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "FSDP",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "FSDP",
+        "Python"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "FSDP",
+        "SGLang"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "FSDP",
+        "SLIME"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "FSDP",
+        "Verl"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "FSDP",
+        "vLLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "FUSE",
+        "JuiceFS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "FUSE",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "FUSE",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "Hadoop"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "Hive"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "Hudi"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "Kafka"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "Kubernetes"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "MySQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "Nimble"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "Paimon"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "Parquet"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "Redis"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "SQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "StarRocks"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "TensorFlow"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flink",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "KMP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "Kuikly"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "MCP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "ONNX Runtime Web"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "React Native"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "Skia"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "TensorFlow.js"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "WebAssembly"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "WebGPU"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "Windows"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Flutter",
+        "macOS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Go",
+        "Kafka"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Go",
+        "Kubernetes"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Go",
+        "Lua"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Go",
+        "PHP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Go",
+        "Python"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Go",
+        "Redis"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Go",
+        "Rust"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Go",
+        "SQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Go",
+        "Shell"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Go",
+        "TypeScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Go",
+        "Unreal Engine"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "HTML",
+        "JavaScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "HTML",
+        "React Native"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "HTML",
+        "TypeScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hadoop",
+        "Kafka"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hadoop",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hadoop",
+        "MySQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hadoop",
+        "Ray"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hadoop",
+        "Redis"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hadoop",
+        "Spark"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hive",
+        "Python"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hive",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hudi",
+        "Iceberg"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hudi",
+        "Lance"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hudi",
+        "Nimble"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hudi",
+        "Paimon"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hudi",
+        "Parquet"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hudi",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hudi",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hudi",
+        "Ray"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hudi",
+        "Spark"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hudi",
+        "StarRocks"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hudi",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Hudi",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Iceberg",
+        "Nimble"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Iceberg",
+        "Paimon"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Iceberg",
+        "Parquet"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Iceberg",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Iceberg",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Iceberg",
+        "StarRocks"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Iceberg",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Iceberg",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "JavaScript",
+        "React Native"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "JuiceFS",
+        "Linux"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "JuiceFS",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "KMP",
+        "Kuikly"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "KMP",
+        "MCP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "KMP",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "KMP",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "KMP",
+        "React Native"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kafka",
+        "PHP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kafka",
+        "Pulsar"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kafka",
+        "SQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kubernetes",
+        "MCP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kubernetes",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kubernetes",
+        "Python"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kubernetes",
+        "Ray"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kubernetes",
+        "Rust"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kubernetes",
+        "SGLang"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kubernetes",
+        "Spark"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kubernetes",
+        "TypeScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kubernetes",
+        "vLLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kuikly",
+        "MCP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kuikly",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kuikly",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Kuikly",
+        "React Native"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "LLaMA-Factory",
+        "MPI"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "LLaMA-Factory",
+        "NCCL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "LLaMA-Factory",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "LLaMA-Factory",
+        "Python"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "LLaMA-Factory",
+        "TensorRT-LLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Lance",
+        "Nimble"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Lance",
+        "Paimon"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Lance",
+        "Parquet"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Lance",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Lance",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Lance",
+        "StarRocks"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Lance",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Lance",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Linux",
+        "PHP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Linux",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Linux",
+        "ROCm"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Linux",
+        "Spark"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Linux",
+        "TensorFlow"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Linux",
+        "TensorRT"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Linux",
+        "Windows"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Linux",
+        "iOS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Linux",
+        "macOS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Lua",
+        "TypeScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Lua",
+        "Unity"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Lua",
+        "iOS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MCP",
+        "MySQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MCP",
+        "Pulsar"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MCP",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MCP",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MCP",
+        "React Native"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MCP",
+        "Redis"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MCP",
+        "SGLang"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MCP",
+        "vLLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MPI",
+        "Megatron"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MPI",
+        "Python"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MPI",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MPI",
+        "SGLang"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MPI",
+        "TensorRT-LLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MPI",
+        "Verl"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MPI",
+        "vLLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Megatron",
+        "NCCL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Megatron",
+        "SLIME"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Megatron",
+        "TensorRT"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Megatron",
+        "TensorRT-LLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MySQL",
+        "PHP"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "MySQL",
+        "SQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "NCCL",
+        "Python"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "NCCL",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "NCCL",
+        "SGLang"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "NCCL",
+        "TensorRT-LLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "NCCL",
+        "Verl"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "NCCL",
+        "vLLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Nimble",
+        "Paimon"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Nimble",
+        "Parquet"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Nimble",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Nimble",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Nimble",
+        "Ray"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Nimble",
+        "Spark"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Nimble",
+        "StarRocks"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Nimble",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Nimble",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ONNX Runtime Web",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ONNX Runtime Web",
+        "Skia"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ONNX Runtime Web",
+        "TensorFlow.js"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ONNX Runtime Web",
+        "WebAssembly"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ONNX Runtime Web",
+        "WebGPU"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "PHP",
+        "Redis"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "PHP",
+        "SQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Paimon",
+        "Parquet"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Paimon",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Paimon",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Paimon",
+        "Ray"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Paimon",
+        "Spark"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Paimon",
+        "StarRocks"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Paimon",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Paimon",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Parquet",
+        "PyTorch"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Parquet",
+        "RAG"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Parquet",
+        "Ray"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Parquet",
+        "Spark"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Parquet",
+        "StarRocks"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Parquet",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Parquet",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "PySpark",
+        "pandas"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "PySpark",
+        "scikit-learn"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "ROCm"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "React Native"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "SLIME"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "StarRocks"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "Verl"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "PyTorch",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Python",
+        "RDMA"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Python",
+        "ROCm"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Python",
+        "Rust"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Python",
+        "SLIME"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Python",
+        "Spark"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Python",
+        "Triton"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Python",
+        "TypeScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Python",
+        "Windows"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Python",
+        "cuBLAS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Python",
+        "torch.compile"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RAG",
+        "Ray"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RAG",
+        "React Native"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RAG",
+        "SQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RAG",
+        "Skia"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RAG",
+        "StarRocks"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RAG",
+        "TensorFlow.js"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RAG",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RAG",
+        "Unix"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RAG",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RAG",
+        "WebAssembly"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RAG",
+        "WebGPU"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RDMA",
+        "SGLang"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "RDMA",
+        "vLLM"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "ROCm",
+        "TensorFlow"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ray",
+        "StarRocks"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ray",
+        "TensorFlow"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ray",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Ray",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "React Native",
+        "TypeScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Redis",
+        "SQL"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Rust",
+        "TypeScript"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "SLIME",
+        "Verl"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "SQL",
+        "Spark"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "SQL",
+        "TensorFlow"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Skia",
+        "TensorFlow.js"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Skia",
+        "WebAssembly"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Skia",
+        "WebGPU"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Spark",
+        "StarRocks"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Spark",
+        "TensorFlow"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Spark",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Spark",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "StarRocks",
+        "Trino"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "StarRocks",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "TensorFlow.js",
+        "WebAssembly"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "TensorFlow.js",
+        "WebGPU"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "TensorRT-LLM",
+        "Verl"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Trino",
+        "Vortex"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Triton",
+        "cuBLAS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Triton",
+        "torch.compile"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "TypeScript",
+        "Unreal Engine"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "WebAssembly",
+        "WebGPU"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Windows",
+        "iOS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "Windows",
+        "macOS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "cuBLAS",
+        "torch.compile"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "iOS",
+        "macOS"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    },
+    {
+      "skills": [
+        "pandas",
+        "scikit-learn"
+      ],
+      "posting_count": 1,
+      "denominator": 98,
+      "share": 0.01020408163265306
+    }
+  ],
+  "limitations": [
+    "小批、单来源、partial；不推断市场或趋势",
+    "否定、备选、不确定证据排除，未命中词典的有效正文仍进入分母",
+    "城市冲突单独分组，复核多工作地可以重叠",
+    "网易范围为D建议待C确认；学历/经验保留来源值及冲突",
+    "文件对账通过不等于数据库或Power BI联调通过"
+  ]
+}

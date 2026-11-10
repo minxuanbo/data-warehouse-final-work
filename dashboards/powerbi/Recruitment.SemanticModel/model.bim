@@ -1,0 +1,624 @@
+{
+  "name": "RecruitmentPilot",
+  "compatibilityLevel": 1600,
+  "model": {
+    "culture": "zh-CN",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "tables": [
+      {
+        "name": "Builds",
+        "columns": [
+          {
+            "name": "source",
+            "dataType": "string",
+            "sourceColumn": "source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "batch_id",
+            "dataType": "string",
+            "sourceColumn": "batch_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "build_id",
+            "dataType": "int64",
+            "sourceColumn": "build_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "skill_denominator",
+            "dataType": "int64",
+            "sourceColumn": "skill_denominator",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "body_hash_version",
+            "dataType": "string",
+            "sourceColumn": "body_hash_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "skill_text_scope",
+            "dataType": "string",
+            "sourceColumn": "skill_text_scope",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dictionary_version",
+            "dataType": "string",
+            "sourceColumn": "dictionary_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rule_version",
+            "dataType": "string",
+            "sourceColumn": "rule_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "scope_version",
+            "dataType": "string",
+            "sourceColumn": "scope_version",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Builds",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.cd_overview WHERE build_id IN (6,5)\")"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Jobs",
+        "columns": [
+          {
+            "name": "job_key",
+            "dataType": "string",
+            "sourceColumn": "job_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "source",
+            "dataType": "string",
+            "sourceColumn": "source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "batch_id",
+            "dataType": "string",
+            "sourceColumn": "batch_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "source_job_id",
+            "dataType": "string",
+            "sourceColumn": "source_job_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "title_raw",
+            "dataType": "string",
+            "sourceColumn": "title_raw",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "category_group",
+            "dataType": "string",
+            "sourceColumn": "category_group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "experience_group",
+            "dataType": "string",
+            "sourceColumn": "experience_group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "education_group",
+            "dataType": "string",
+            "sourceColumn": "education_group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "source_url",
+            "dataType": "string",
+            "sourceColumn": "source_url",
+            "summarizeBy": "none",
+            "dataCategory": "WebUrl"
+          },
+          {
+            "name": "scope_reason",
+            "dataType": "string",
+            "sourceColumn": "scope_reason",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "content_json",
+            "dataType": "string",
+            "sourceColumn": "content_json",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "additional_requirements_raw",
+            "dataType": "string",
+            "sourceColumn": "additional_requirements_raw",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "issues_json",
+            "dataType": "string",
+            "sourceColumn": "issues_json",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "raw_ref",
+            "dataType": "string",
+            "sourceColumn": "raw_ref",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "raw_sha256",
+            "dataType": "string",
+            "sourceColumn": "raw_sha256",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "body_hash_version",
+            "dataType": "string",
+            "sourceColumn": "body_hash_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "skill_text_scope",
+            "dataType": "string",
+            "sourceColumn": "skill_text_scope",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "build_id",
+            "dataType": "int64",
+            "sourceColumn": "build_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "analysis_date",
+            "dataType": "dateTime",
+            "sourceColumn": "analysis_date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          },
+          {
+            "name": "is_core",
+            "dataType": "boolean",
+            "sourceColumn": "is_core",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "body_valid",
+            "dataType": "boolean",
+            "sourceColumn": "body_valid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "location_conflict",
+            "dataType": "boolean",
+            "sourceColumn": "location_conflict",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "experience_conflict",
+            "dataType": "boolean",
+            "sourceColumn": "experience_conflict",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "education_conflict",
+            "dataType": "boolean",
+            "sourceColumn": "education_conflict",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "experience_hint",
+            "dataType": "boolean",
+            "sourceColumn": "experience_hint",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Jobs",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT CONCAT(j.build_id,'|',j.source_job_id) AS job_key,j.build_id,j.source,j.batch_id,j.source_job_id,j.title_raw,\n          CAST(j.analysis_date AS date) AS analysis_date,\n          COALESCE(NULLIF(j.category_raw,N''),N'未知') AS category_group,\n          CASE WHEN j.experience_conflict=1 THEN N'冲突待确认' ELSE COALESCE(NULLIF(j.experience_raw,N''),N'未知') END AS experience_group,\n          CASE WHEN j.education_conflict=1 THEN N'冲突待确认' ELSE COALESCE(NULLIF(j.education_raw,N''),N'未知') END AS education_group,\n          j.is_core,j.body_valid,j.location_conflict,j.experience_conflict,j.education_conflict,\n          j.experience_hint,j.source_url,j.scope_reason,j.content_json,j.additional_requirements_raw,\n          j.issues_json,j.raw_ref,j.raw_sha256,j.body_hash_version,j.skill_text_scope\n          FROM (SELECT * FROM ads.cd_job_detail WHERE build_id IN (6,5)) j\")"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "核心岗位数",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(Jobs[job_key]), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key])),0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "正文分母",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(Jobs[job_key]), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE())),0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "正文覆盖率",
+            "expression": "DIVIDE([正文分母],[核心岗位数])",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "技能岗位数",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(SkillJobs[job_key]), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE())),0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "岗位技能对数",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(COUNTROWS(SkillJobs), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE())),0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "技能出现占比",
+            "expression": "DIVIDE([技能岗位数],[正文分母])",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "组合岗位数",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(Pairs[job_key]), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE())),0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "组合出现占比",
+            "expression": "DIVIDE([组合岗位数],[正文分母])",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "有效证据数",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(COUNTROWS(Evidence), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE()), KEEPFILTERS(Evidence[eligible_for_metric]=TRUE())),0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "审计证据数",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(COUNTROWS(Evidence), TREATAS(K, Jobs[job_key])),0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "本岗核心指标资格",
+            "expression": "IF(SELECTEDVALUE(Jobs[is_core],FALSE()),\"核心\",\"扩展\")"
+          },
+          {
+            "name": "样本说明",
+            "expression": "\"两来源 partial 小批；观察日期不同；来源岗位计数；不用于全市场或趋势推断\""
+          }
+        ]
+      },
+      {
+        "name": "CityJobs",
+        "columns": [
+          {
+            "name": "job_key",
+            "dataType": "string",
+            "sourceColumn": "job_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city",
+            "dataType": "string",
+            "sourceColumn": "city",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CityJobs",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT CONCAT(j.build_id,'|',j.source_job_id) AS job_key,\n          CASE WHEN j.location_conflict=1 THEN N'冲突待确认'\n            WHEN RIGHT(loc.value,1)=N'市' THEN LEFT(loc.value,LEN(loc.value)-1)\n            ELSE COALESCE(NULLIF(loc.value,N''),N'未知') END AS city\n          FROM (SELECT * FROM ads.cd_job_detail WHERE build_id IN (6,5)) j OUTER APPLY OPENJSON(j.confirmed_locations_json) loc\")"
+            }
+          }
+        ],
+        "isHidden": true
+      },
+      {
+        "name": "SkillJobs",
+        "columns": [
+          {
+            "name": "job_key",
+            "dataType": "string",
+            "sourceColumn": "job_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "skill_name",
+            "dataType": "string",
+            "sourceColumn": "skill_name",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SkillJobs",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT CONCAT(build_id,'|',source_job_id) AS job_key, skill_name\n      FROM ads.cd_skill_evidence\n      WHERE build_id IN (6,5) AND is_core=1 AND eligible_for_metric=1\")"
+            }
+          }
+        ],
+        "isHidden": true
+      },
+      {
+        "name": "Skills",
+        "columns": [
+          {
+            "name": "skill_name",
+            "dataType": "string",
+            "sourceColumn": "skill_name",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Skills",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT skill_name FROM ads.cd_skill_evidence WHERE build_id IN (6,5)\")"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Pairs",
+        "columns": [
+          {
+            "name": "job_key",
+            "dataType": "string",
+            "sourceColumn": "job_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "skill_a",
+            "dataType": "string",
+            "sourceColumn": "skill_a",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "skill_b",
+            "dataType": "string",
+            "sourceColumn": "skill_b",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "pair_label",
+            "dataType": "string",
+            "sourceColumn": "pair_label",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Pairs",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let S = Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT CONCAT(build_id,'|',source_job_id) AS job_key, skill_name\n      FROM ads.cd_skill_evidence\n      WHERE build_id IN (6,5) AND is_core=1 AND eligible_for_metric=1\"), A = Table.RenameColumns(S, {{\"skill_name\", \"skill_a\"}}), J = Table.NestedJoin(A, {\"job_key\"}, S, {\"job_key\"}, \"B\", JoinKind.Inner), E = Table.ExpandTableColumn(J, \"B\", {\"skill_name\"}, {\"skill_b\"}), F = Table.SelectRows(E, each Comparer.Ordinal([skill_a], [skill_b]) < 0), R = Table.AddColumn(F, \"pair_label\", each [skill_a] & \" + \" & [skill_b], type text) in R"
+            }
+          }
+        ],
+        "isHidden": true
+      },
+      {
+        "name": "Evidence",
+        "columns": [
+          {
+            "name": "job_key",
+            "dataType": "string",
+            "sourceColumn": "job_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "skill_name",
+            "dataType": "string",
+            "sourceColumn": "skill_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "requirement_level",
+            "dataType": "string",
+            "sourceColumn": "requirement_level",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evidence_field",
+            "dataType": "string",
+            "sourceColumn": "evidence_field",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evidence",
+            "dataType": "string",
+            "sourceColumn": "evidence",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "matched_text",
+            "dataType": "string",
+            "sourceColumn": "matched_text",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "raw_ref",
+            "dataType": "string",
+            "sourceColumn": "raw_ref",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "raw_sha256",
+            "dataType": "string",
+            "sourceColumn": "raw_sha256",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "raw_field_name",
+            "dataType": "string",
+            "sourceColumn": "raw_field_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "body_sha256",
+            "dataType": "string",
+            "sourceColumn": "body_sha256",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "body_hash_version",
+            "dataType": "string",
+            "sourceColumn": "body_hash_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dictionary_version",
+            "dataType": "string",
+            "sourceColumn": "dictionary_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rule_version",
+            "dataType": "string",
+            "sourceColumn": "rule_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evidence_start",
+            "dataType": "int64",
+            "sourceColumn": "evidence_start",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evidence_end",
+            "dataType": "int64",
+            "sourceColumn": "evidence_end",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "match_start",
+            "dataType": "int64",
+            "sourceColumn": "match_start",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "match_end",
+            "dataType": "int64",
+            "sourceColumn": "match_end",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "eligible_for_metric",
+            "dataType": "boolean",
+            "sourceColumn": "eligible_for_metric",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "is_core",
+            "dataType": "boolean",
+            "sourceColumn": "is_core",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Evidence",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT CONCAT(e.build_id,'|',e.source_job_id) AS job_key,e.skill_name,\n          e.requirement_level,e.eligible_for_metric,e.is_core,x.*\n          FROM ads.cd_skill_evidence e CROSS APPLY OPENJSON(e.evidence_json)\n          WITH(evidence_field nvarchar(100), evidence nvarchar(max), evidence_start int,evidence_end int,\n            match_start int,match_end int,matched_text nvarchar(300),raw_ref nvarchar(1000),\n            raw_sha256 nvarchar(64),raw_field_name nvarchar(100),body_sha256 nvarchar(64),\n            body_hash_version nvarchar(100),dictionary_version nvarchar(100),rule_version nvarchar(100)) x\n          WHERE e.build_id IN (6,5)\")"
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "CityJobs_Jobs",
+        "fromTable": "CityJobs",
+        "fromColumn": "job_key",
+        "toTable": "Jobs",
+        "toColumn": "job_key",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "SkillJobs_Jobs",
+        "fromTable": "SkillJobs",
+        "fromColumn": "job_key",
+        "toTable": "Jobs",
+        "toColumn": "job_key",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "Pairs_Jobs",
+        "fromTable": "Pairs",
+        "fromColumn": "job_key",
+        "toTable": "Jobs",
+        "toColumn": "job_key",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "Evidence_Jobs",
+        "fromTable": "Evidence",
+        "fromColumn": "job_key",
+        "toTable": "Jobs",
+        "toColumn": "job_key",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "Jobs_Builds",
+        "fromTable": "Jobs",
+        "fromColumn": "build_id",
+        "toTable": "Builds",
+        "toColumn": "build_id",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "SkillJobs_Skills",
+        "fromTable": "SkillJobs",
+        "fromColumn": "skill_name",
+        "toTable": "Skills",
+        "toColumn": "skill_name",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "Evidence_Skills",
+        "fromTable": "Evidence",
+        "fromColumn": "skill_name",
+        "toTable": "Skills",
+        "toColumn": "skill_name",
+        "crossFilteringBehavior": "oneDirection"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Builds\", \"Jobs\", \"CityJobs\", \"SkillJobs\", \"Skills\", \"Pairs\", \"Evidence\"]"
+      },
+      {
+        "name": "RecruitmentPilotScope",
+        "value": "partial; two sources; not daily market trends"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6201 @@
+{
+  "source": "netease",
+  "batch_id": "netease_20261101T044527Z_157cf969",
+  "status": "pending_C_integration",
+  "scope_status": "proposed_pending_C",
+  "dictionary_version": "skills-dict-0.2.0",
+  "rule_version": "skills-rules-0.3.0",
+  "body_hash_version": "skills-body-1.1",
+  "input_postings": 100,
+  "core_ids": [
+    "23198",
+    "33992",
+    "51225",
+    "53229",
+    "57588",
+    "60238",
+    "60311",
+    "64076",
+    "65340",
+    "68172",
+    "68829",
+    "70487",
+    "70489",
+    "71014",
+    "71196",
+    "71281",
+    "71403",
+    "72078",
+    "72340",
+    "72961",
+    "73092",
+    "73898",
+    "74245",
+    "74970",
+    "75407",
+    "75851",
+    "76217",
+    "76417",
+    "76448",
+    "76449",
+    "76545",
+    "76670",
+    "77139",
+    "77425",
+    "77678",
+    "77679",
+    "77680",
+    "77950",
+    "78036",
+    "78042",
+    "78063",
+    "78108",
+    "78130",
+    "78136",
+    "78210",
+    "78243",
+    "78287",
+    "78296",
+    "78524",
+    "78590",
+    "78676",
+    "78683",
+    "78729",
+    "78780",
+    "78811",
+    "78820",
+    "78821",
+    "78824",
+    "78852",
+    "78983",
+    "79036",
+    "79039",
+    "79053",
+    "79057",
+    "79060",
+    "79093",
+    "79115",
+    "79129",
+    "79130",
+    "79165",
+    "79200",
+    "79276",
+    "79290",
+    "79294",
+    "79337",
+    "79354",
+    "79363",
+    "79396",
+    "79446",
+    "79457",
+    "79458",
+    "79516",
+    "79531",
+    "79532",
+    "79533",
+    "79534",
+    "79560",
+    "79562",
+    "79588",
+    "79593",
+    "79596",
+    "79597",
+    "79598",
+    "79599",
+    "79626",
+    "79627",
+    "79628",
+    "79643"
+  ],
+  "excluded_ids": [
+    "78482",
+    "79489"
+  ],
+  "all_evidence_rows": 515,
+  "additional_field_evidence_rows": 0,
+  "core_effective_posting_skill_pairs": 334,
+  "pairs_only_in_additional_field": 0,
+  "metrics": {
+    "filters": {
+      "is_core": true,
+      "city": null,
+      "experience": null,
+      "category": null
+    },
+    "total_input_posting_count": 100,
+    "core_posting_count_before_filters": 98,
+    "source_posting_count": 98,
+    "parseable_body_count": 98,
+    "body_coverage": 1.0,
+    "skill_matched_posting_count": 80,
+    "no_eligible_skill_count": 18,
+    "eligible_posting_skill_pairs": 334,
+    "evidence_count": 515,
+    "negative_evidence_count": 0,
+    "uncertain_evidence_count": 128,
+    "location_conflict_count": 1,
+    "experience_conflict_count": 13,
+    "additional_requirements_posting_count": 0,
+    "categories_raw": [
+      {
+        "name": "游戏程序",
+        "posting_count": 46,
+        "denominator": 98,
+        "share": 0.46938775510204084
+      },
+      {
+        "name": "技术",
+        "posting_count": 29,
+        "denominator": 98,
+        "share": 0.29591836734693877
+      },
+      {
+        "name": "人工智能",
+        "posting_count": 13,
+        "denominator": 98,
+        "share": 0.1326530612244898
+      },
+      {
+        "name": "游戏测试",
+        "posting_count": 10,
+        "denominator": 98,
+        "share": 0.10204081632653061
+      }
+    ],
+    "education_raw": [
+      {
+        "name": "本科",
+        "posting_count": 61,
+        "denominator": 98,
+        "share": 0.6224489795918368
+      },
+      {
+        "name": "不限",
+        "posting_count": 35,
+        "denominator": 98,
+        "share": 0.35714285714285715
+      },
+      {
+        "name": "硕士",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      }
+    ],
+    "experience_raw": [
+      {
+        "name": "不限",
+        "posting_count": 57,
+        "denominator": 98,
+        "share": 0.5816326530612245
+      },
+      {
+        "name": "3-5年",
+        "posting_count": 29,
+        "denominator": 98,
+        "share": 0.29591836734693877
+      },
+      {
+        "name": "5-10年",
+        "posting_count": 9,
+        "denominator": 98,
+        "share": 0.09183673469387756
+      },
+      {
+        "name": "0-3年",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "name": "10年以上",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      }
+    ],
+    "employment_type_raw": [
+      {
+        "name": "0",
+        "posting_count": 67,
+        "denominator": 98,
+        "share": 0.6836734693877551
+      },
+      {
+        "name": "1",
+        "posting_count": 31,
+        "denominator": 98,
+        "share": 0.3163265306122449
+      }
+    ],
+    "city_raw": [
+      {
+        "name": "杭州市",
+        "posting_count": 45,
+        "denominator": 98,
+        "share": 0.45918367346938777
+      },
+      {
+        "name": "广州市",
+        "posting_count": 35,
+        "denominator": 98,
+        "share": 0.35714285714285715
+      },
+      {
+        "name": "上海市",
+        "posting_count": 16,
+        "denominator": 98,
+        "share": 0.16326530612244897
+      },
+      {
+        "name": "北京市",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      }
+    ],
+    "city_normalized": [
+      {
+        "name": "杭州",
+        "posting_count": 45,
+        "denominator": 98,
+        "share": 0.45918367346938777
+      },
+      {
+        "name": "广州",
+        "posting_count": 34,
+        "denominator": 98,
+        "share": 0.3469387755102041
+      },
+      {
+        "name": "上海",
+        "posting_count": 16,
+        "denominator": 98,
+        "share": 0.16326530612244897
+      },
+      {
+        "name": "北京",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "name": "冲突待确认",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      }
+    ],
+    "experience_normalized": [
+      {
+        "name": "不限",
+        "posting_count": 44,
+        "denominator": 98,
+        "share": 0.4489795918367347
+      },
+      {
+        "name": "3-5年",
+        "posting_count": 29,
+        "denominator": 98,
+        "share": 0.29591836734693877
+      },
+      {
+        "name": "冲突待确认",
+        "posting_count": 13,
+        "denominator": 98,
+        "share": 0.1326530612244898
+      },
+      {
+        "name": "5-10年",
+        "posting_count": 9,
+        "denominator": 98,
+        "share": 0.09183673469387756
+      },
+      {
+        "name": "0-3年",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "name": "10年以上",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      }
+    ],
+    "skills": [
+      {
+        "name": "Python",
+        "posting_count": 31,
+        "denominator": 98,
+        "share": 0.3163265306122449
+      },
+      {
+        "name": "C++",
+        "posting_count": 28,
+        "denominator": 98,
+        "share": 0.2857142857142857
+      },
+      {
+        "name": "Unity",
+        "posting_count": 16,
+        "denominator": 98,
+        "share": 0.16326530612244897
+      },
+      {
+        "name": "Unreal Engine",
+        "posting_count": 16,
+        "denominator": 98,
+        "share": 0.16326530612244897
+      },
+      {
+        "name": "C",
+        "posting_count": 15,
+        "denominator": 98,
+        "share": 0.15306122448979592
+      },
+      {
+        "name": "Claude Code",
+        "posting_count": 14,
+        "denominator": 98,
+        "share": 0.14285714285714285
+      },
+      {
+        "name": "Cursor",
+        "posting_count": 12,
+        "denominator": 98,
+        "share": 0.12244897959183673
+      },
+      {
+        "name": "Lua",
+        "posting_count": 11,
+        "denominator": 98,
+        "share": 0.11224489795918367
+      },
+      {
+        "name": "RAG",
+        "posting_count": 11,
+        "denominator": 98,
+        "share": 0.11224489795918367
+      },
+      {
+        "name": "Java",
+        "posting_count": 10,
+        "denominator": 98,
+        "share": 0.10204081632653061
+      },
+      {
+        "name": "TypeScript",
+        "posting_count": 9,
+        "denominator": 98,
+        "share": 0.09183673469387756
+      },
+      {
+        "name": "Linux",
+        "posting_count": 8,
+        "denominator": 98,
+        "share": 0.08163265306122448
+      },
+      {
+        "name": "MCP",
+        "posting_count": 8,
+        "denominator": 98,
+        "share": 0.08163265306122448
+      },
+      {
+        "name": "Codex",
+        "posting_count": 6,
+        "denominator": 98,
+        "share": 0.061224489795918366
+      },
+      {
+        "name": "JavaScript",
+        "posting_count": 6,
+        "denominator": 98,
+        "share": 0.061224489795918366
+      },
+      {
+        "name": "React",
+        "posting_count": 6,
+        "denominator": 98,
+        "share": 0.061224489795918366
+      },
+      {
+        "name": "iOS",
+        "posting_count": 6,
+        "denominator": 98,
+        "share": 0.061224489795918366
+      },
+      {
+        "name": "Android",
+        "posting_count": 5,
+        "denominator": 98,
+        "share": 0.05102040816326531
+      },
+      {
+        "name": "MySQL",
+        "posting_count": 5,
+        "denominator": 98,
+        "share": 0.05102040816326531
+      },
+      {
+        "name": "Redis",
+        "posting_count": 5,
+        "denominator": 98,
+        "share": 0.05102040816326531
+      },
+      {
+        "name": "C#",
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "name": "CSS",
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "name": "Flink",
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "name": "HTML",
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "name": "Kubernetes",
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "name": "LangGraph",
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "name": "PyTorch",
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "name": "SQL",
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "name": "Spark",
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "name": "CI/CD",
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "name": "Elasticsearch",
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "name": "Kafka",
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "name": "LangChain",
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "name": "Metal",
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "name": "MongoDB",
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "name": "Vue",
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "name": "AutoGen",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "name": "Dify",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "name": "Hadoop",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "name": "Hive",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "name": "Iceberg",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "name": "Node.js",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "name": "Pulsar",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "name": "WebRTC",
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "name": "AOSP",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Appium",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "D3D11",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Doris",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "FFmpeg",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "FunASR",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Go",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "HBase",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "JEB",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Jadx",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Janus",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Kotlin",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "LSPosed",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Lance",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "LiveKit",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Objective-C",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "OpenGL ES",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "PocoUI",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "PostgreSQL",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Ray",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "React Native",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Scrapy",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "TensorFlow",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Unicorn",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Unidbg",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "WebMagic",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Whisper",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Windows",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "Xposed",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "coturn",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "macOS",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "mediasoup",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "name": "uiautomator2",
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      }
+    ],
+    "pairs": [
+      {
+        "skills": [
+          "C++",
+          "Python"
+        ],
+        "posting_count": 16,
+        "denominator": 98,
+        "share": 0.16326530612244897
+      },
+      {
+        "skills": [
+          "C",
+          "C++"
+        ],
+        "posting_count": 15,
+        "denominator": 98,
+        "share": 0.15306122448979592
+      },
+      {
+        "skills": [
+          "C",
+          "Python"
+        ],
+        "posting_count": 10,
+        "denominator": 98,
+        "share": 0.10204081632653061
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Cursor"
+        ],
+        "posting_count": 10,
+        "denominator": 98,
+        "share": 0.10204081632653061
+      },
+      {
+        "skills": [
+          "Lua",
+          "Python"
+        ],
+        "posting_count": 10,
+        "denominator": 98,
+        "share": 0.10204081632653061
+      },
+      {
+        "skills": [
+          "Unity",
+          "Unreal Engine"
+        ],
+        "posting_count": 10,
+        "denominator": 98,
+        "share": 0.10204081632653061
+      },
+      {
+        "skills": [
+          "C++",
+          "Unity"
+        ],
+        "posting_count": 8,
+        "denominator": 98,
+        "share": 0.08163265306122448
+      },
+      {
+        "skills": [
+          "C++",
+          "Unreal Engine"
+        ],
+        "posting_count": 7,
+        "denominator": 98,
+        "share": 0.07142857142857142
+      },
+      {
+        "skills": [
+          "Python",
+          "Unreal Engine"
+        ],
+        "posting_count": 7,
+        "denominator": 98,
+        "share": 0.07142857142857142
+      },
+      {
+        "skills": [
+          "C++",
+          "Lua"
+        ],
+        "posting_count": 6,
+        "denominator": 98,
+        "share": 0.061224489795918366
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Codex"
+        ],
+        "posting_count": 6,
+        "denominator": 98,
+        "share": 0.061224489795918366
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "TypeScript"
+        ],
+        "posting_count": 6,
+        "denominator": 98,
+        "share": 0.061224489795918366
+      },
+      {
+        "skills": [
+          "Cursor",
+          "React"
+        ],
+        "posting_count": 6,
+        "denominator": 98,
+        "share": 0.061224489795918366
+      },
+      {
+        "skills": [
+          "Cursor",
+          "TypeScript"
+        ],
+        "posting_count": 6,
+        "denominator": 98,
+        "share": 0.061224489795918366
+      },
+      {
+        "skills": [
+          "Python",
+          "Unity"
+        ],
+        "posting_count": 6,
+        "denominator": 98,
+        "share": 0.061224489795918366
+      },
+      {
+        "skills": [
+          "C",
+          "Lua"
+        ],
+        "posting_count": 5,
+        "denominator": 98,
+        "share": 0.05102040816326531
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Java"
+        ],
+        "posting_count": 5,
+        "denominator": 98,
+        "share": 0.05102040816326531
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "RAG"
+        ],
+        "posting_count": 5,
+        "denominator": 98,
+        "share": 0.05102040816326531
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "React"
+        ],
+        "posting_count": 5,
+        "denominator": 98,
+        "share": 0.05102040816326531
+      },
+      {
+        "skills": [
+          "Cursor",
+          "Java"
+        ],
+        "posting_count": 5,
+        "denominator": 98,
+        "share": 0.05102040816326531
+      },
+      {
+        "skills": [
+          "Cursor",
+          "RAG"
+        ],
+        "posting_count": 5,
+        "denominator": 98,
+        "share": 0.05102040816326531
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "TypeScript"
+        ],
+        "posting_count": 5,
+        "denominator": 98,
+        "share": 0.05102040816326531
+      },
+      {
+        "skills": [
+          "Android",
+          "iOS"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "C#",
+          "C++"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "C++",
+          "iOS"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "CSS",
+          "HTML"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "CSS",
+          "JavaScript"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "JavaScript"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "SQL"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "Cursor",
+          "JavaScript"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "HTML",
+          "JavaScript"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "Java",
+          "TypeScript"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "Linux"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "MySQL",
+          "Redis"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "React",
+          "TypeScript"
+        ],
+        "posting_count": 4,
+        "denominator": 98,
+        "share": 0.04081632653061224
+      },
+      {
+        "skills": [
+          "Android",
+          "C++"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "C",
+          "MCP"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "C",
+          "Unity"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "C",
+          "iOS"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "C++",
+          "MCP"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "C++",
+          "Metal"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "Claude Code"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "RAG"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "CSS",
+          "Claude Code"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "CSS",
+          "Cursor"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "CSS",
+          "TypeScript"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "HTML"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Codex",
+          "Cursor"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Codex",
+          "TypeScript"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Cursor",
+          "HTML"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Cursor",
+          "LangGraph"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Cursor",
+          "SQL"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Cursor",
+          "Vue"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Flink",
+          "Spark"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "HTML",
+          "TypeScript"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Java",
+          "MySQL"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Java",
+          "RAG"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Java",
+          "SQL"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Kafka",
+          "Linux"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "LangGraph",
+          "RAG"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Linux",
+          "RAG"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "MCP",
+          "RAG"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "MySQL",
+          "TypeScript"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "PyTorch",
+          "Python"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "RAG",
+          "SQL"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "React",
+          "Vue"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Redis",
+          "TypeScript"
+        ],
+        "posting_count": 3,
+        "denominator": 98,
+        "share": 0.030612244897959183
+      },
+      {
+        "skills": [
+          "Android",
+          "C"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Android",
+          "Java"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "AutoGen",
+          "Claude Code"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "AutoGen",
+          "Cursor"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "AutoGen",
+          "Dify"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "AutoGen",
+          "Java"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "AutoGen",
+          "LangGraph"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "AutoGen",
+          "RAG"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "AutoGen",
+          "SQL"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "C",
+          "Metal"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "C",
+          "Unreal Engine"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "C#",
+          "Unity"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "C++",
+          "Claude Code"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "C++",
+          "Codex"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "Cursor"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "CSS",
+          "RAG"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "CSS",
+          "React"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "CSS",
+          "Vue"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Dify"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "LangGraph"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Linux"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "MCP"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Node.js"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Unity"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Vue"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "iOS"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Codex",
+          "Java"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Codex",
+          "JavaScript"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Codex",
+          "Unity"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Cursor",
+          "Dify"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Cursor",
+          "MCP"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Cursor",
+          "Node.js"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Cursor",
+          "Redis"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Dify",
+          "Java"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Dify",
+          "LangGraph"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Dify",
+          "RAG"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Dify",
+          "SQL"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "Kafka"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "Kubernetes"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "Linux"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "MySQL"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "Redis"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Flink",
+          "Hive"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Flink",
+          "Java"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "HTML",
+          "RAG"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "HTML",
+          "React"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "HTML",
+          "Vue"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Hadoop",
+          "Spark"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Hive",
+          "Spark"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Java",
+          "JavaScript"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Java",
+          "Kafka"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Java",
+          "LangGraph"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Java",
+          "Linux"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Java",
+          "Python"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Java",
+          "React"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Java",
+          "Redis"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "MySQL"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "RAG"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "React"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "Redis"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "Vue"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Kafka",
+          "Kubernetes"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Kafka",
+          "Pulsar"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "RAG"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "LangChain",
+          "LangGraph"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "LangChain",
+          "MCP"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "LangChain",
+          "MongoDB"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "LangChain",
+          "Redis"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "LangGraph",
+          "MongoDB"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "LangGraph",
+          "Redis"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "LangGraph",
+          "SQL"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Linux",
+          "MCP"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Linux",
+          "Pulsar"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Linux",
+          "Redis"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Linux",
+          "WebRTC"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "MCP",
+          "Python"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "MCP",
+          "React"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "MCP",
+          "Vue"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Metal",
+          "Unity"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Metal",
+          "Unreal Engine"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "MySQL"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "Redis"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Node.js",
+          "TypeScript"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "Python",
+          "RAG"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "RAG",
+          "Redis"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "RAG",
+          "TypeScript"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "React",
+          "Redis"
+        ],
+        "posting_count": 2,
+        "denominator": 98,
+        "share": 0.02040816326530612
+      },
+      {
+        "skills": [
+          "AOSP",
+          "Android"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "Appium"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "JEB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "Jadx"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "Java"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "LSPosed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "MongoDB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "PocoUI"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "Scrapy"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "Unicorn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "AOSP",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Appium"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "C#"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Claude Code"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Codex"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "D3D11"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "FFmpeg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "JEB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Jadx"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Kotlin"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "LSPosed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Metal"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "MongoDB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "OpenGL ES"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "PocoUI"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Scrapy"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Unicorn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Windows"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Android",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "JEB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "Jadx"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "Java"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "LSPosed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "MongoDB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "PocoUI"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "Scrapy"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "Unicorn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Appium",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C",
+          "C#"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C",
+          "Claude Code"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C",
+          "Codex"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C",
+          "D3D11"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C",
+          "FFmpeg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C",
+          "OpenGL ES"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C",
+          "Windows"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C#",
+          "Claude Code"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C#",
+          "Codex"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C#",
+          "Lua"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C#",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C#",
+          "TypeScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C#",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C++",
+          "D3D11"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C++",
+          "FFmpeg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C++",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C++",
+          "OpenGL ES"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C++",
+          "TypeScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C++",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C++",
+          "Windows"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "C++",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "CSS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "Codex"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "Go"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "HTML"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "JavaScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "Kubernetes"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "MCP"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "SQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CI/CD",
+          "TypeScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CSS",
+          "Codex"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CSS",
+          "Elasticsearch"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CSS",
+          "Go"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CSS",
+          "Java"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CSS",
+          "Kafka"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CSS",
+          "Kubernetes"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CSS",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CSS",
+          "MCP"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CSS",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CSS",
+          "Objective-C"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CSS",
+          "Redis"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "CSS",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "D3D11"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "FFmpeg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Go"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Kubernetes"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Metal"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Objective-C"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "OpenGL ES"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "React Native"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Redis"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Unreal Engine"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "Windows"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Claude Code",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "D3D11"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "FFmpeg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "Go"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "HTML"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "Metal"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "Node.js"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "OpenGL ES"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "RAG"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "React"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "Unreal Engine"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "Windows"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Codex",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Cursor",
+          "Go"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Cursor",
+          "LangChain"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Cursor",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Cursor",
+          "Lua"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Cursor",
+          "MongoDB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Cursor",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Cursor",
+          "Objective-C"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Cursor",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Cursor",
+          "React Native"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Cursor",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "D3D11",
+          "FFmpeg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "D3D11",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "D3D11",
+          "Metal"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "D3D11",
+          "OpenGL ES"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "D3D11",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "D3D11",
+          "Windows"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "D3D11",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "D3D11",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Doris",
+          "Flink"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Doris",
+          "Spark"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "HBase"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "HTML"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "Java"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "JavaScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "LangChain"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "LangGraph"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "MongoDB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "PostgreSQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "Pulsar"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "RAG"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Elasticsearch",
+          "TypeScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FFmpeg",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FFmpeg",
+          "Metal"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FFmpeg",
+          "OpenGL ES"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FFmpeg",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FFmpeg",
+          "Windows"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FFmpeg",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FFmpeg",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Flink",
+          "Hadoop"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Flink",
+          "Iceberg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Flink",
+          "Kafka"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Flink",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Flink",
+          "Pulsar"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Flink",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FunASR",
+          "Janus"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FunASR",
+          "Kubernetes"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FunASR",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FunASR",
+          "LiveKit"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FunASR",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FunASR",
+          "Whisper"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FunASR",
+          "coturn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "FunASR",
+          "mediasoup"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Go",
+          "HTML"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Go",
+          "JavaScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Go",
+          "RAG"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Go",
+          "TypeScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HBase",
+          "Kafka"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HBase",
+          "Kubernetes"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HBase",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HBase",
+          "Pulsar"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HTML",
+          "Java"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HTML",
+          "Kafka"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HTML",
+          "Kubernetes"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HTML",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HTML",
+          "MCP"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HTML",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HTML",
+          "Objective-C"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HTML",
+          "Redis"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "HTML",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Hadoop",
+          "Hive"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Hadoop",
+          "Iceberg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Hadoop",
+          "Lance"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Hive",
+          "Java"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Iceberg",
+          "Java"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Iceberg",
+          "Kafka"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Iceberg",
+          "Lance"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Iceberg",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Iceberg",
+          "Pulsar"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Iceberg",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Iceberg",
+          "Spark"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "Jadx"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "Java"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "LSPosed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "MongoDB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "PocoUI"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "Scrapy"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "Unicorn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JEB",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "Java"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "LSPosed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "MongoDB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "PocoUI"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "Scrapy"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "Unicorn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Jadx",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Janus",
+          "Kubernetes"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Janus",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Janus",
+          "LiveKit"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Janus",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Janus",
+          "Whisper"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Janus",
+          "coturn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Janus",
+          "mediasoup"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "Kotlin"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "Kubernetes"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "LSPosed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "MongoDB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "Node.js"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "PocoUI"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "Pulsar"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "Scrapy"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "Spark"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "Unicorn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Java",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "Kafka"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "Kubernetes"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "MCP"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "Node.js"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "Objective-C"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "JavaScript",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kafka",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kafka",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kafka",
+          "RAG"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kafka",
+          "Redis"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kafka",
+          "TypeScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "LiveKit"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "MCP"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "Pulsar"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "Redis"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "SQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "TypeScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "Whisper"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "coturn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Kubernetes",
+          "mediasoup"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LSPosed",
+          "MongoDB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LSPosed",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LSPosed",
+          "PocoUI"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LSPosed",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LSPosed",
+          "Scrapy"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LSPosed",
+          "Unicorn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LSPosed",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LSPosed",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LSPosed",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LSPosed",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LSPosed",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Lance",
+          "Spark"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LangChain",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LangChain",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LangChain",
+          "PostgreSQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LangChain",
+          "RAG"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LangChain",
+          "React"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LangChain",
+          "Vue"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LangGraph",
+          "Linux"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LangGraph",
+          "MCP"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LangGraph",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LangGraph",
+          "PostgreSQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LangGraph",
+          "React"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LangGraph",
+          "Vue"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "LiveKit"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "Metal"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "MongoDB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "MySQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "OpenGL ES"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "React"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "SQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "TypeScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "Vue"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "Whisper"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "Windows"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "coturn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Linux",
+          "mediasoup"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LiveKit",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LiveKit",
+          "Whisper"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LiveKit",
+          "coturn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "LiveKit",
+          "mediasoup"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Lua",
+          "MCP"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Lua",
+          "RAG"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Lua",
+          "Unity"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MCP",
+          "MongoDB"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MCP",
+          "Redis"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MCP",
+          "SQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MCP",
+          "TypeScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Metal",
+          "OpenGL ES"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Metal",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Metal",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Metal",
+          "Windows"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Metal",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Metal",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "PocoUI"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "PostgreSQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "RAG"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "React"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "Scrapy"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "Unicorn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "Vue"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MongoDB",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "PocoUI"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "PostgreSQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "RAG"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "React"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "SQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "Scrapy"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "Unicorn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "MySQL",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Node.js",
+          "React"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Node.js",
+          "React Native"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Objective-C",
+          "React"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Objective-C",
+          "Vue"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Objective-C",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "OpenGL ES",
+          "WebRTC"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "OpenGL ES",
+          "Windows"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "OpenGL ES",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "OpenGL ES",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PocoUI",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PocoUI",
+          "Scrapy"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PocoUI",
+          "Unicorn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PocoUI",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PocoUI",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PocoUI",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PocoUI",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PocoUI",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PostgreSQL",
+          "Redis"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Pulsar",
+          "Python"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PyTorch",
+          "RAG"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PyTorch",
+          "TensorFlow"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PyTorch",
+          "Unity"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "PyTorch",
+          "Unreal Engine"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Python",
+          "Scrapy"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Python",
+          "TensorFlow"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Python",
+          "Unicorn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Python",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Python",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Python",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Python",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Python",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "RAG",
+          "React"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "RAG",
+          "Vue"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Ray",
+          "Unity"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "React",
+          "React Native"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "React",
+          "SQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "React",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "React Native",
+          "TypeScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Redis",
+          "SQL"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Redis",
+          "Vue"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "SQL",
+          "TypeScript"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Scrapy",
+          "Unicorn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Scrapy",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Scrapy",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Scrapy",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Scrapy",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Scrapy",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "TensorFlow",
+          "Unity"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "TensorFlow",
+          "Unreal Engine"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "TypeScript",
+          "Vue"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Unicorn",
+          "Unidbg"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Unicorn",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Unicorn",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Unicorn",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Unicorn",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Unidbg",
+          "WebMagic"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Unidbg",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Unidbg",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Unidbg",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Vue",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "WebMagic",
+          "Xposed"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "WebMagic",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "WebMagic",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "WebRTC",
+          "Whisper"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "WebRTC",
+          "Windows"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "WebRTC",
+          "coturn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "WebRTC",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "WebRTC",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "WebRTC",
+          "mediasoup"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Whisper",
+          "coturn"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Whisper",
+          "mediasoup"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Windows",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Windows",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Xposed",
+          "iOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "Xposed",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "coturn",
+          "mediasoup"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "iOS",
+          "macOS"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      },
+      {
+        "skills": [
+          "iOS",
+          "uiautomator2"
+        ],
+        "posting_count": 1,
+        "denominator": 98,
+        "share": 0.01020408163265306
+      }
+    ],
+    "limitations": [
+      "小批、单来源、partial；不推断市场或趋势",
+      "否定、备选、不确定证据排除，未命中词典的有效正文仍进入分母",
+      "城市冲突单独分组，复核多工作地可以重叠",
+      "网易范围为D建议待C确认；学历/经验保留来源值及冲突",
+      "文件对账通过不等于数据库或Power BI联调通过"
+    ]
+  }
+}

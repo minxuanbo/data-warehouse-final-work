@@ -1,2 +1,15 @@
 # Preserve exact bytes of collected evidence and hashed JSONL across Windows/Linux.
 data/** -text
+/etl/skills/*.py text eol=lf
+/etl/skills/*.json text eol=lf
+/tests/test_skills.py text eol=lf
+/docs/analysis/*.md text eol=lf
+/dashboards/*.html text eol=lf
+# Preserve original newlines inside quoted CSV evidence; writers control row endings.
+/reports/analysis/** -text
+/reports/analysis/**/*.csv -whitespace
+warehouse/cd_policy.json -text
+# Keep generated BI definitions stable across Windows clones and hash checks.
+/dashboards/powerbi/** text eol=lf
+/scripts/prepare_powerbi*.py text eol=lf
+/scripts/check_powerbi.ps1 text eol=lf

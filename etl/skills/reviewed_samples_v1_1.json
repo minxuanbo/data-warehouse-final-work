@@ -1,0 +1,3281 @@
+{
+  "version": "d-review-plan-1.1",
+  "rule_version": "skills-rules-0.3.0",
+  "dictionary_version": "skills-dict-0.2.0",
+  "body_hash_version": "skills-body-1.1",
+  "review_method": "对照原始响应、统一字段、增强正文和证据位置；开发与留出各10岗；旧腾讯最终样本只作回归",
+  "extractor_sha256_at_freeze": "84c3605b2fde041a74610a9cdadf4e6517e64bea83cef7da27970bbe0c414d3e",
+  "dictionary_sha256_at_freeze": "1b66fbdf4d3eb86b772ac19b080757c49c94b7c81570d3c347d011226e6627be",
+  "sources": {
+    "tencent": {
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "jobs_sha256": "eec9945879320854c029f67b8826477fc73f94562bd4cbc0cc364608bb617fcc",
+      "historical_ids": [
+        "1790271644757925888",
+        "1901550594292789248",
+        "1923261618968457216",
+        "1927639153244217344",
+        "1930438817001635840",
+        "1934984932162117632",
+        "1936827400029601792",
+        "1936827497983352832",
+        "1945692266278551552",
+        "1958076178912923648",
+        "1961707720809795584",
+        "1967856352005083136",
+        "1983435797747093504",
+        "1990262114463404032",
+        "1998671162179215360",
+        "2013144251273207808",
+        "2026648959719735296",
+        "2027658888916140032",
+        "2034237425647255552",
+        "2034532284522196992",
+        "2036976620622999552",
+        "2037425089443692544",
+        "2037467994921271296",
+        "2038814818466689024",
+        "2043623808224620544",
+        "2043890038449799168",
+        "2059160518509379584",
+        "2059891450371555328",
+        "2061654749727600640",
+        "2061700926892322816",
+        "2070151600797827072",
+        "2071807202225729536",
+        "2072248701686034432",
+        "2072330920538583040",
+        "2072330933721284608",
+        "2072477788216147968",
+        "2072607372890783744",
+        "2072607375201845248",
+        "2072607377244467200",
+        "2077312480664797184",
+        "2077641750666719232",
+        "2079038134749933568",
+        "2080585827171348480",
+        "2082434681986527232",
+        "2082710392638976000",
+        "2082723395740549120",
+        "2090043573536997376",
+        "2091785005486489600",
+        "2092090907078868992",
+        "2098253188510695424",
+        "2098669037675528192",
+        "2110191895966826496",
+        "2110629918290395136",
+        "2111019425472884736",
+        "2112120499797667840",
+        "2112189784016470016",
+        "2113089038390050816",
+        "2115001234858622976",
+        "2115695359488602112",
+        "2115702081611546624",
+        "2115711180747223040",
+        "2115714592318603264",
+        "2115993428956463104",
+        "2116084604950720512"
+      ],
+      "reviews": {
+        "2036976620622999552": {
+          "split": "development",
+          "body_sha256": "0f67403207cc0470704569d913b3ce830aafae27824867d8aa06e19548c9025a",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "C",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "C/C++",
+              "evidence_start": 6,
+              "evidence_end": 11
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "C/C++",
+              "evidence_start": 6,
+              "evidence_end": 11
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Python编程语言",
+              "evidence_start": 12,
+              "evidence_end": 22
+            },
+            {
+              "skill": "CUDA",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "CUDA",
+              "evidence_start": 58,
+              "evidence_end": 62
+            },
+            {
+              "skill": "Triton",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Triton",
+              "evidence_start": 63,
+              "evidence_end": 69
+            },
+            {
+              "skill": "Ascend C",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Ascend C",
+              "evidence_start": 70,
+              "evidence_end": 78
+            },
+            {
+              "skill": "cuBLAS",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Cublas",
+              "evidence_start": 86,
+              "evidence_end": 92
+            },
+            {
+              "skill": "CUTLASS",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Cutlass",
+              "evidence_start": 93,
+              "evidence_end": 100
+            },
+            {
+              "skill": "torch.compile",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Torch-Compile",
+              "evidence_start": 120,
+              "evidence_end": 133
+            },
+            {
+              "skill": "CK",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "CK等高性能算子",
+              "evidence_start": 101,
+              "evidence_end": 109
+            }
+          ],
+          "direction": "异构计算"
+        },
+        "2116084604950720512": {
+          "split": "development",
+          "body_sha256": "1973a4c9109ad4974c7edc2c214a4b2ee989dda62b79db37d737b017ba46c65f",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Go",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "基于 Golang",
+              "evidence_start": 38,
+              "evidence_end": 47
+            },
+            {
+              "skill": "Go",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Golang/PHP",
+              "evidence_start": 41,
+              "evidence_end": 51
+            },
+            {
+              "skill": "PHP",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Golang/PHP",
+              "evidence_start": 41,
+              "evidence_end": 51
+            },
+            {
+              "skill": "Linux",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Linux",
+              "evidence_start": 81,
+              "evidence_end": 86
+            },
+            {
+              "skill": "MySQL",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "MySQL",
+              "evidence_start": 141,
+              "evidence_end": 146
+            },
+            {
+              "skill": "SQL",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "SQL",
+              "evidence_start": 143,
+              "evidence_end": 146
+            },
+            {
+              "skill": "Redis",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Redis",
+              "evidence_start": 167,
+              "evidence_end": 172
+            },
+            {
+              "skill": "CI/CD",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "CI/CD",
+              "evidence_start": 230,
+              "evidence_end": 235
+            },
+            {
+              "skill": "Gin",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Gin、Laravel 或同类框架",
+              "evidence_start": 111,
+              "evidence_end": 128
+            },
+            {
+              "skill": "Laravel",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Gin、Laravel 或同类框架",
+              "evidence_start": 111,
+              "evidence_end": 128
+            },
+            {
+              "skill": "Elasticsearch",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "Elasticsearch",
+              "evidence_start": 31,
+              "evidence_end": 44
+            },
+            {
+              "skill": "Kafka",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "Kafka",
+              "evidence_start": 45,
+              "evidence_end": 50
+            },
+            {
+              "skill": "ClickHouse",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "ClickHouse",
+              "evidence_start": 51,
+              "evidence_end": 61
+            },
+            {
+              "skill": "Docker",
+              "field": "additional_requirements_raw",
+              "level": "不确定",
+              "evidence": "Docker、Kubernetes 或腾讯云",
+              "evidence_start": 72,
+              "evidence_end": 94
+            },
+            {
+              "skill": "Kubernetes",
+              "field": "additional_requirements_raw",
+              "level": "不确定",
+              "evidence": "Docker、Kubernetes 或腾讯云",
+              "evidence_start": 72,
+              "evidence_end": 94
+            }
+          ],
+          "direction": "后台开发"
+        },
+        "2061654749727600640": {
+          "split": "development",
+          "body_sha256": "8b9b2f35baf9d0015ab06d69c8385c039d4e7ce52ea2b26084ef525a96dc383d",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Python 编程能力",
+              "evidence_start": 8,
+              "evidence_end": 19
+            },
+            {
+              "skill": "Kubernetes",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Kubernetes 和容器化",
+              "evidence_start": 123,
+              "evidence_end": 138
+            },
+            {
+              "skill": "TypeScript",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "TypeScript / Rust / Go 代码",
+              "evidence_start": 167,
+              "evidence_end": 192
+            },
+            {
+              "skill": "Rust",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "TypeScript / Rust / Go 代码",
+              "evidence_start": 167,
+              "evidence_end": 192
+            },
+            {
+              "skill": "Go",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "TypeScript / Rust / Go 代码",
+              "evidence_start": 167,
+              "evidence_end": 192
+            }
+          ],
+          "direction": "训练框架"
+        },
+        "2059160518509379584": {
+          "split": "development",
+          "body_sha256": "adbc72a3bca8b6e1e8f3e4b6f3e19119d889d5447f8391ffc44f17ed35378a4a",
+          "locked": true,
+          "body_check": "issue",
+          "city_check": "same",
+          "note": "PostLightItem确认北京/深圳双工作地；附加专项与主字段至少一项有关，单字段规则可能高估强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Unreal Engine",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "3年以上UE开发经验",
+              "evidence_start": 2,
+              "evidence_end": 12
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "精通C++",
+              "evidence_start": 37,
+              "evidence_end": 42
+            },
+            {
+              "skill": "Linux",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Linux开发",
+              "evidence_start": 145,
+              "evidence_end": 152
+            },
+            {
+              "skill": "Unreal Engine",
+              "field": "additional_requirements_raw",
+              "level": "不确定",
+              "evidence": "深入理解 UE 网络同步底层",
+              "evidence_start": 179,
+              "evidence_end": 193
+            }
+          ],
+          "direction": "游戏服务端"
+        },
+        "2037425089443692544": {
+          "split": "development",
+          "body_sha256": "368a254b9a33b73840fd583b6b77068dde2d9a243f64449ac77b75547ece30ff",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Linux",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Linux",
+              "evidence_start": 4,
+              "evidence_end": 9
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Python",
+              "evidence_start": 16,
+              "evidence_end": 22
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "C++",
+              "evidence_start": 23,
+              "evidence_end": 26
+            },
+            {
+              "skill": "MLIR",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "MLIR、Triton、tilelang或其他CodeGen框架",
+              "evidence_start": 116,
+              "evidence_end": 148
+            },
+            {
+              "skill": "Triton",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "MLIR、Triton、tilelang或其他CodeGen框架",
+              "evidence_start": 116,
+              "evidence_end": 148
+            },
+            {
+              "skill": "tilelang",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "MLIR、Triton、tilelang或其他CodeGen框架",
+              "evidence_start": 116,
+              "evidence_end": 148
+            },
+            {
+              "skill": "CUDA",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "Cuda",
+              "evidence_start": 4,
+              "evidence_end": 8
+            },
+            {
+              "skill": "ROCm",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "ROCm",
+              "evidence_start": 9,
+              "evidence_end": 13
+            },
+            {
+              "skill": "PyTorch",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "pytorch",
+              "evidence_start": 18,
+              "evidence_end": 25
+            },
+            {
+              "skill": "TensorFlow",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "tensorflow",
+              "evidence_start": 26,
+              "evidence_end": 36
+            }
+          ],
+          "direction": "AI编译"
+        },
+        "2091785005486489600": {
+          "split": "development",
+          "body_sha256": "c2e28363bb006efdeab1715c5e742d132a43c2e0f5bd59a5c1e67d02bad5ee29",
+          "locked": true,
+          "body_check": "issue",
+          "city_check": "different",
+          "note": "标题上海、地点杭州，按C标记归冲突待确认；UE必需与Lua/UE优先分开核对。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Unreal Engine",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "负责UE引擎",
+              "evidence_start": 9,
+              "evidence_end": 15
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "精通C++",
+              "evidence_start": 88,
+              "evidence_end": 93
+            },
+            {
+              "skill": "Unreal Engine",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "能熟练使用UE等主流游戏引擎",
+              "evidence_start": 103,
+              "evidence_end": 117
+            },
+            {
+              "skill": "Lua",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有Lua脚本的项目完整经验者优先",
+              "evidence_start": 118,
+              "evidence_end": 134
+            },
+            {
+              "skill": "Unreal Engine",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有UE使用经验者优先",
+              "evidence_start": 135,
+              "evidence_end": 145
+            }
+          ],
+          "direction": "游戏客户端"
+        },
+        "2080585827171348480": {
+          "split": "development",
+          "body_sha256": "9f7afa1b9bb0fb6ad4dec8d4e9bf2bda70fc10cb8211c4b4ae6a2e2e4dd6425f",
+          "locked": true,
+          "body_check": "issue",
+          "city_check": "same",
+          "note": "结构化经验与正文年限有差异；至少2年不属于技能备选。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Unreal Engine",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "负责UE5下",
+              "evidence_start": 2,
+              "evidence_end": 8
+            },
+            {
+              "skill": "Unreal Engine",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "至少2年UE4开发经验",
+              "evidence_start": 24,
+              "evidence_end": 35
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "精通C++",
+              "evidence_start": 53,
+              "evidence_end": 58
+            }
+          ],
+          "direction": "游戏客户端"
+        },
+        "2026648959719735296": {
+          "split": "development",
+          "body_sha256": "adbb737317fa9feb041f8891d6fdae9db86fb4185d9004c82ca9cd7da40ecb8a",
+          "locked": true,
+          "body_check": "issue",
+          "city_check": "different",
+          "note": "标题成都/北京与原地点广州无交集；保留原文，按C分组；RAG备选。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "精通C++",
+              "evidence_start": 33,
+              "evidence_end": 38
+            },
+            {
+              "skill": "Linux",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Linux/Unix后台开发",
+              "evidence_start": 45,
+              "evidence_end": 59
+            },
+            {
+              "skill": "Unix",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Linux/Unix后台开发",
+              "evidence_start": 45,
+              "evidence_end": 59
+            },
+            {
+              "skill": "RAG",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "RAG、知识图谱或NLP相关应用开发经验",
+              "evidence_start": 77,
+              "evidence_end": 97
+            }
+          ],
+          "direction": "AI应用后台"
+        },
+        "2071430928898637824": {
+          "split": "development",
+          "body_sha256": "02abed5e4822d76de04a3a628af2f5cef58f9c35fbd5a93e1c2e2ed09dbc4d07",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "RAG",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "RAG（检索增强生成）",
+              "evidence_start": 192,
+              "evidence_end": 203
+            },
+            {
+              "skill": "CI/CD",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "CI/CD for AI",
+              "evidence_start": 360,
+              "evidence_end": 372
+            },
+            {
+              "skill": "LangChain",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "至少一种主流 Agent / LLM 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）",
+              "evidence_start": 184,
+              "evidence_end": 256
+            },
+            {
+              "skill": "LlamaIndex",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "至少一种主流 Agent / LLM 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）",
+              "evidence_start": 184,
+              "evidence_end": 256
+            },
+            {
+              "skill": "LangGraph",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "至少一种主流 Agent / LLM 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）",
+              "evidence_start": 184,
+              "evidence_end": 256
+            },
+            {
+              "skill": "AutoGen",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "至少一种主流 Agent / LLM 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）",
+              "evidence_start": 184,
+              "evidence_end": 256
+            },
+            {
+              "skill": "Dify",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "至少一种主流 Agent / LLM 应用框架（如 LangChain、LlamaIndex、LangGraph、AutoGen、Dify 等）",
+              "evidence_start": 184,
+              "evidence_end": 256
+            },
+            {
+              "skill": "CI/CD",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "容器化、CI/CD 等现代工程实践",
+              "evidence_start": 274,
+              "evidence_end": 291
+            },
+            {
+              "skill": "vLLM",
+              "field": "additional_requirements_raw",
+              "level": "不确定",
+              "evidence": "有大模型预训练 微调 推理优化（vLLM、TensorRT-LLM、量化、蒸馏）或 RAG 系统深度优化经验",
+              "evidence_start": 208,
+              "evidence_end": 262
+            },
+            {
+              "skill": "TensorRT-LLM",
+              "field": "additional_requirements_raw",
+              "level": "不确定",
+              "evidence": "有大模型预训练 微调 推理优化（vLLM、TensorRT-LLM、量化、蒸馏）或 RAG 系统深度优化经验",
+              "evidence_start": 208,
+              "evidence_end": 262
+            },
+            {
+              "skill": "RAG",
+              "field": "additional_requirements_raw",
+              "level": "不确定",
+              "evidence": "有大模型预训练 微调 推理优化（vLLM、TensorRT-LLM、量化、蒸馏）或 RAG 系统深度优化经验",
+              "evidence_start": 208,
+              "evidence_end": 262
+            },
+            {
+              "skill": "Flutter",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "Flutter / Skia",
+              "evidence_start": 305,
+              "evidence_end": 319
+            },
+            {
+              "skill": "Skia",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "Flutter / Skia",
+              "evidence_start": 305,
+              "evidence_end": 319
+            },
+            {
+              "skill": "WebAssembly",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "具备 WebAssembly 性能优化、TensorFlow.js / ONNX Runtime Web 端侧推理、WebGPU 等应用经验",
+              "evidence_start": 331,
+              "evidence_end": 401
+            },
+            {
+              "skill": "TensorFlow.js",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "具备 WebAssembly 性能优化、TensorFlow.js / ONNX Runtime Web 端侧推理、WebGPU 等应用经验",
+              "evidence_start": 331,
+              "evidence_end": 401
+            },
+            {
+              "skill": "ONNX Runtime Web",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "具备 WebAssembly 性能优化、TensorFlow.js / ONNX Runtime Web 端侧推理、WebGPU 等应用经验",
+              "evidence_start": 331,
+              "evidence_end": 401
+            },
+            {
+              "skill": "WebGPU",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "具备 WebAssembly 性能优化、TensorFlow.js / ONNX Runtime Web 端侧推理、WebGPU 等应用经验",
+              "evidence_start": 331,
+              "evidence_end": 401
+            }
+          ],
+          "direction": "全栈开发"
+        },
+        "2115714592318603264": {
+          "split": "development",
+          "body_sha256": "fd93b730cf9bdb1c1c474f2c670b42db0e26a3213537a95b2c208f1b7c7820d4",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Spark",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "深度适配 Spark、Flink、StarRocks、Ray，Pytorch",
+              "evidence_start": 78,
+              "evidence_end": 116
+            },
+            {
+              "skill": "Flink",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "深度适配 Spark、Flink、StarRocks、Ray，Pytorch",
+              "evidence_start": 78,
+              "evidence_end": 116
+            },
+            {
+              "skill": "StarRocks",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "深度适配 Spark、Flink、StarRocks、Ray，Pytorch",
+              "evidence_start": 78,
+              "evidence_end": 116
+            },
+            {
+              "skill": "Ray",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "深度适配 Spark、Flink、StarRocks、Ray，Pytorch",
+              "evidence_start": 78,
+              "evidence_end": 116
+            },
+            {
+              "skill": "PyTorch",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "深度适配 Spark、Flink、StarRocks、Ray，Pytorch",
+              "evidence_start": 78,
+              "evidence_end": 116
+            },
+            {
+              "skill": "RAG",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "RAG、混合查询",
+              "evidence_start": 369,
+              "evidence_end": 377
+            },
+            {
+              "skill": "Java",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉 Java / Scala / C++ / Rust / Python 中至少一种语言",
+              "evidence_start": 55,
+              "evidence_end": 100
+            },
+            {
+              "skill": "Scala",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉 Java / Scala / C++ / Rust / Python 中至少一种语言",
+              "evidence_start": 55,
+              "evidence_end": 100
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉 Java / Scala / C++ / Rust / Python 中至少一种语言",
+              "evidence_start": 55,
+              "evidence_end": 100
+            },
+            {
+              "skill": "Rust",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉 Java / Scala / C++ / Rust / Python 中至少一种语言",
+              "evidence_start": 55,
+              "evidence_end": 100
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉 Java / Scala / C++ / Rust / Python 中至少一种语言",
+              "evidence_start": 55,
+              "evidence_end": 100
+            },
+            {
+              "skill": "Spark",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种",
+              "evidence_start": 179,
+              "evidence_end": 240
+            },
+            {
+              "skill": "Flink",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种",
+              "evidence_start": 179,
+              "evidence_end": 240
+            },
+            {
+              "skill": "Trino",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种",
+              "evidence_start": 179,
+              "evidence_end": 240
+            },
+            {
+              "skill": "Presto",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种",
+              "evidence_start": 179,
+              "evidence_end": 240
+            },
+            {
+              "skill": "Hive",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种",
+              "evidence_start": 179,
+              "evidence_end": 240
+            },
+            {
+              "skill": "StarRocks",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种",
+              "evidence_start": 179,
+              "evidence_end": 240
+            },
+            {
+              "skill": "Ray",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Spark、Flink、Trino / Presto、Hive、StarRocks、Ray 等计算或查询引擎中的一种或多种",
+              "evidence_start": 179,
+              "evidence_end": 240
+            },
+            {
+              "skill": "Parquet",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Parquet，Lance, Vortex，Nimble 等列存文件格式",
+              "evidence_start": 244,
+              "evidence_end": 283
+            },
+            {
+              "skill": "Lance",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Parquet，Lance, Vortex，Nimble 等列存文件格式",
+              "evidence_start": 244,
+              "evidence_end": 283
+            },
+            {
+              "skill": "Vortex",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Parquet，Lance, Vortex，Nimble 等列存文件格式",
+              "evidence_start": 244,
+              "evidence_end": 283
+            },
+            {
+              "skill": "Nimble",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Parquet，Lance, Vortex，Nimble 等列存文件格式",
+              "evidence_start": 244,
+              "evidence_end": 283
+            },
+            {
+              "skill": "RAG",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "RAG 或大规模 embedding 数据治理者优先",
+              "evidence_start": 389,
+              "evidence_end": 415
+            },
+            {
+              "skill": "Iceberg",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",
+              "evidence_start": 517,
+              "evidence_end": 609
+            },
+            {
+              "skill": "Hudi",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",
+              "evidence_start": 517,
+              "evidence_end": 609
+            },
+            {
+              "skill": "Paimon",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",
+              "evidence_start": 517,
+              "evidence_end": 609
+            },
+            {
+              "skill": "Lance",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",
+              "evidence_start": 517,
+              "evidence_end": 609
+            },
+            {
+              "skill": "Vortex",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",
+              "evidence_start": 517,
+              "evidence_end": 609
+            },
+            {
+              "skill": "Nimble",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",
+              "evidence_start": 517,
+              "evidence_end": 609
+            },
+            {
+              "skill": "Arrow",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",
+              "evidence_start": 517,
+              "evidence_end": 609
+            },
+            {
+              "skill": "Spark",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",
+              "evidence_start": 517,
+              "evidence_end": 609
+            },
+            {
+              "skill": "Flink",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",
+              "evidence_start": 517,
+              "evidence_end": 609
+            },
+            {
+              "skill": "Trino",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",
+              "evidence_start": 517,
+              "evidence_end": 609
+            },
+            {
+              "skill": "Ray",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有 Iceberg，Hudi, Paimon, Lance, Vortex, Nimble, Arrow、Spark、Flink、Trino、Ray 等开源项目源码经验或社区贡献者优先",
+              "evidence_start": 517,
+              "evidence_end": 609
+            }
+          ],
+          "direction": "数据湖仓"
+        },
+        "2098252450778759168": {
+          "split": "final",
+          "body_sha256": "df9f67a3229552115c7da5ea659f08f7f827bc82ec0539a87393e51213eaed48",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "MCP",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "MCP、Agent Memory",
+              "evidence_start": 157,
+              "evidence_end": 173
+            },
+            {
+              "skill": "Rust",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Rust/Go/C++ 等任一静态语言",
+              "evidence_start": 262,
+              "evidence_end": 281
+            },
+            {
+              "skill": "Go",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Rust/Go/C++ 等任一静态语言",
+              "evidence_start": 262,
+              "evidence_end": 281
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Rust/Go/C++ 等任一静态语言",
+              "evidence_start": 262,
+              "evidence_end": 281
+            }
+          ],
+          "direction": "Agent系统"
+        },
+        "2082710396749393920": {
+          "split": "final",
+          "body_sha256": "8008fa742d3bdf16ec729776a5b0a4357c30b2d373a0fb8bf992c58972c74098",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练使用 Python",
+              "evidence_start": 21,
+              "evidence_end": 32
+            }
+          ],
+          "direction": "AI算法"
+        },
+        "2059914523263021056": {
+          "split": "final",
+          "body_sha256": "7b9a62af4a8d239d5d852d4b2c0e07a4217e0a90738161271f385c8f29604022",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Python 编程能力",
+              "evidence_start": 50,
+              "evidence_end": 61
+            },
+            {
+              "skill": "PyTorch",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 PyTorch",
+              "evidence_start": 69,
+              "evidence_end": 79
+            },
+            {
+              "skill": "LLaMA-Factory",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉常用训练/推理框架（LLaMA-Factory、DeepSpeed、vLLM 等）",
+              "evidence_start": 23,
+              "evidence_end": 66
+            },
+            {
+              "skill": "DeepSpeed",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉常用训练/推理框架（LLaMA-Factory、DeepSpeed、vLLM 等）",
+              "evidence_start": 23,
+              "evidence_end": 66
+            },
+            {
+              "skill": "vLLM",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉常用训练/推理框架（LLaMA-Factory、DeepSpeed、vLLM 等）",
+              "evidence_start": 23,
+              "evidence_end": 66
+            }
+          ],
+          "direction": "模型研发数据"
+        },
+        "2059914525578276864": {
+          "split": "final",
+          "body_sha256": "1008728e8a385f8ab73813c8705018cd3fde1ed28a1bba836c3c55966db6659f",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "SQL",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练掌握 SQL 和 Python",
+              "evidence_start": 95,
+              "evidence_end": 112
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练掌握 SQL 和 Python",
+              "evidence_start": 95,
+              "evidence_end": 112
+            },
+            {
+              "skill": "Spark",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉至少一种大数据处理框架（Spark/Flink/Hive 等）",
+              "evidence_start": 113,
+              "evidence_end": 146
+            },
+            {
+              "skill": "Flink",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉至少一种大数据处理框架（Spark/Flink/Hive 等）",
+              "evidence_start": 113,
+              "evidence_end": 146
+            },
+            {
+              "skill": "Hive",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉至少一种大数据处理框架（Spark/Flink/Hive 等）",
+              "evidence_start": 113,
+              "evidence_end": 146
+            },
+            {
+              "skill": "TensorFlow",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉业界主流框架（如TensorFlow/PyTorch）",
+              "evidence_start": 26,
+              "evidence_end": 55
+            },
+            {
+              "skill": "PyTorch",
+              "field": "additional_requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉业界主流框架（如TensorFlow/PyTorch）",
+              "evidence_start": 26,
+              "evidence_end": 55
+            }
+          ],
+          "direction": "模型运营数据"
+        },
+        "1947566917279653888": {
+          "split": "final",
+          "body_sha256": "e17972b10094517f94b45a23fcc21b65d53d47afa0e88a503e41b24d7d19f521",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练掌握一门以上的服务端编程语言，比如C++/java/go等",
+              "evidence_start": 21,
+              "evidence_end": 52
+            },
+            {
+              "skill": "Java",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练掌握一门以上的服务端编程语言，比如C++/java/go等",
+              "evidence_start": 21,
+              "evidence_end": 52
+            },
+            {
+              "skill": "Go",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练掌握一门以上的服务端编程语言，比如C++/java/go等",
+              "evidence_start": 21,
+              "evidence_end": 52
+            },
+            {
+              "skill": "MySQL",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练掌握一种以上的数据库，比如mysql/mongodb等",
+              "evidence_start": 56,
+              "evidence_end": 85
+            },
+            {
+              "skill": "MongoDB",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练掌握一种以上的数据库，比如mysql/mongodb等",
+              "evidence_start": 56,
+              "evidence_end": 85
+            }
+          ],
+          "direction": "游戏服务端"
+        },
+        "2115304628043300864": {
+          "split": "final",
+          "body_sha256": "483a517ec339aca8bfb86ece88c0d6f0444691453cf23bd1ffa188f52b0ef2cc",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "C",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "精通C/C++开发",
+              "evidence_start": 10,
+              "evidence_end": 19
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "精通C/C++开发",
+              "evidence_start": 10,
+              "evidence_end": 19
+            },
+            {
+              "skill": "Linux",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "2年以上linux系统下的工作经验",
+              "evidence_start": 20,
+              "evidence_end": 37
+            },
+            {
+              "skill": "Go",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "有go语言",
+              "evidence_start": 38,
+              "evidence_end": 43
+            },
+            {
+              "skill": "MySQL",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉常用mysql",
+              "evidence_start": 116,
+              "evidence_end": 125
+            }
+          ],
+          "direction": "游戏服务端"
+        },
+        "2072321535468810240": {
+          "split": "final",
+          "body_sha256": "c67325f930a86169fe5d4500fa9f9c96a3739260b5325c1d1d1447323ae668d5",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Go",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "精通至少一门主力语言（Go / Python / Java / TypeScript 等）",
+              "evidence_start": 25,
+              "evidence_end": 70
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "精通至少一门主力语言（Go / Python / Java / TypeScript 等）",
+              "evidence_start": 25,
+              "evidence_end": 70
+            },
+            {
+              "skill": "Java",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "精通至少一门主力语言（Go / Python / Java / TypeScript 等）",
+              "evidence_start": 25,
+              "evidence_end": 70
+            },
+            {
+              "skill": "TypeScript",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "精通至少一门主力语言（Go / Python / Java / TypeScript 等）",
+              "evidence_start": 25,
+              "evidence_end": 70
+            },
+            {
+              "skill": "RAG",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "多Agent、RAG、多步编排",
+              "evidence_start": 97,
+              "evidence_end": 112
+            }
+          ],
+          "direction": "Agent研发"
+        },
+        "1967484294205169664": {
+          "split": "final",
+          "body_sha256": "b7677013c18a69dd497830dc343f78c6a3ae834fabe116551c21309a3fc4283a",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "C",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练掌握 C/C++",
+              "evidence_start": 2,
+              "evidence_end": 12
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练掌握 C/C++",
+              "evidence_start": 2,
+              "evidence_end": 12
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Python语言",
+              "evidence_start": 13,
+              "evidence_end": 21
+            },
+            {
+              "skill": "CUDA",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Cuda、OpenCL",
+              "evidence_start": 74,
+              "evidence_end": 85
+            },
+            {
+              "skill": "OpenCL",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "OpenCL",
+              "evidence_start": 79,
+              "evidence_end": 85
+            },
+            {
+              "skill": "cuBLAS",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉至少一种GPU加速库，如cublas、cudnn、cutlass等",
+              "evidence_start": 86,
+              "evidence_end": 121
+            },
+            {
+              "skill": "cuDNN",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉至少一种GPU加速库，如cublas、cudnn、cutlass等",
+              "evidence_start": 86,
+              "evidence_end": 121
+            },
+            {
+              "skill": "CUTLASS",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉至少一种GPU加速库，如cublas、cudnn、cutlass等",
+              "evidence_start": 86,
+              "evidence_end": 121
+            },
+            {
+              "skill": "TensorRT",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "有Tensorrt/FasterTransformer/Tensorrt-llm/vllm等深度学习推理框架的实际使用经验",
+              "evidence_start": 125,
+              "evidence_end": 186
+            },
+            {
+              "skill": "FasterTransformer",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "有Tensorrt/FasterTransformer/Tensorrt-llm/vllm等深度学习推理框架的实际使用经验",
+              "evidence_start": 125,
+              "evidence_end": 186
+            },
+            {
+              "skill": "TensorRT-LLM",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "有Tensorrt/FasterTransformer/Tensorrt-llm/vllm等深度学习推理框架的实际使用经验",
+              "evidence_start": 125,
+              "evidence_end": 186
+            },
+            {
+              "skill": "vLLM",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "有Tensorrt/FasterTransformer/Tensorrt-llm/vllm等深度学习推理框架的实际使用经验",
+              "evidence_start": 125,
+              "evidence_end": 186
+            }
+          ],
+          "direction": "推理优化"
+        },
+        "1936827253514149888": {
+          "split": "final",
+          "body_sha256": "df98996c339a29c28dbccc9779b58c627028a40d3fc7da2565f1cf60e3a61e18",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Linux",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉Linux环境下的C/C++开发",
+              "evidence_start": 45,
+              "evidence_end": 63
+            },
+            {
+              "skill": "C",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉Linux环境下的C/C++开发",
+              "evidence_start": 45,
+              "evidence_end": 63
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉Linux环境下的C/C++开发",
+              "evidence_start": 45,
+              "evidence_end": 63
+            }
+          ],
+          "direction": "后台治理"
+        },
+        "2001341503481466880": {
+          "split": "final",
+          "body_sha256": "3d216bc6d6d73781e6da23b3b441cf5b9c09a6f8a5569b5ef9f3a649efcc8559",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Unreal Engine",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "负责UE4射击类游戏模式框架",
+              "evidence_start": 2,
+              "evidence_end": 16
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练掌握C++",
+              "evidence_start": 2,
+              "evidence_end": 9
+            },
+            {
+              "skill": "Unreal Engine",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉UE4的基础开发方式和架构",
+              "evidence_start": 10,
+              "evidence_end": 25
+            }
+          ],
+          "direction": "游戏客户端"
+        }
+      },
+      "enriched_jobs_sha256": "7c31dbb155786f51309bffc9965713db8985a8c3454026befdf9c5f0b07d6e6a"
+    },
+    "netease": {
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "jobs_sha256": "2b6e47f26c279a6b339e06db74cdf0061d7ecd8f1d02ca5446225d4303eff8ab",
+      "historical_ids": [],
+      "reviews": {
+        "53229": {
+          "split": "development",
+          "body_sha256": "84ed44d2f6a4b382d02e506c5af8af1eb1ca09fe03894381dde29c92d850b13d",
+          "locked": true,
+          "body_check": "issue",
+          "city_check": "same",
+          "note": "结构化经验不限，正文首行3年以上研发经验；原值保留并标记冲突。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Unreal Engine",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "UE/Unity",
+              "evidence_start": 182,
+              "evidence_end": 190
+            },
+            {
+              "skill": "Unity",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "UE/Unity",
+              "evidence_start": 182,
+              "evidence_end": 190
+            }
+          ],
+          "direction": "引擎性能"
+        },
+        "79290": {
+          "split": "development",
+          "body_sha256": "79f28c729bd47b59fdb7ef72e9136cfc13773dd7c95154a5a6e3c25121905cd3",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Windows",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Windows / Android / macOS / iOS / Linux",
+              "evidence_start": 23,
+              "evidence_end": 62
+            },
+            {
+              "skill": "Android",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Windows / Android / macOS / iOS / Linux",
+              "evidence_start": 23,
+              "evidence_end": 62
+            },
+            {
+              "skill": "macOS",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Windows / Android / macOS / iOS / Linux",
+              "evidence_start": 23,
+              "evidence_end": 62
+            },
+            {
+              "skill": "iOS",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Windows / Android / macOS / iOS / Linux",
+              "evidence_start": 23,
+              "evidence_end": 62
+            },
+            {
+              "skill": "Linux",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Windows / Android / macOS / iOS / Linux",
+              "evidence_start": 23,
+              "evidence_end": 62
+            },
+            {
+              "skill": "C",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "C/C++ 编程能力",
+              "evidence_start": 15,
+              "evidence_end": 25
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "C/C++ 编程能力",
+              "evidence_start": 15,
+              "evidence_end": 25
+            },
+            {
+              "skill": "Windows",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Win/Android/macOS/iOS/Linux",
+              "evidence_start": 96,
+              "evidence_end": 123
+            },
+            {
+              "skill": "Android",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Win/Android/macOS/iOS/Linux",
+              "evidence_start": 96,
+              "evidence_end": 123
+            },
+            {
+              "skill": "macOS",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Win/Android/macOS/iOS/Linux",
+              "evidence_start": 96,
+              "evidence_end": 123
+            },
+            {
+              "skill": "iOS",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Win/Android/macOS/iOS/Linux",
+              "evidence_start": 96,
+              "evidence_end": 123
+            },
+            {
+              "skill": "Linux",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Win/Android/macOS/iOS/Linux",
+              "evidence_start": 96,
+              "evidence_end": 123
+            },
+            {
+              "skill": "D3D11",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "D3D11/Metal/OpenGL ES",
+              "evidence_start": 310,
+              "evidence_end": 331
+            },
+            {
+              "skill": "Metal",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "D3D11/Metal/OpenGL ES",
+              "evidence_start": 310,
+              "evidence_end": 331
+            },
+            {
+              "skill": "OpenGL ES",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "D3D11/Metal/OpenGL ES",
+              "evidence_start": 310,
+              "evidence_end": 331
+            },
+            {
+              "skill": "WebRTC",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "WebRTC、FFmpeg",
+              "evidence_start": 426,
+              "evidence_end": 439
+            },
+            {
+              "skill": "FFmpeg",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "WebRTC、FFmpeg",
+              "evidence_start": 426,
+              "evidence_end": 439
+            },
+            {
+              "skill": "Codex",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Codex、Claude Code",
+              "evidence_start": 463,
+              "evidence_end": 480
+            },
+            {
+              "skill": "Claude Code",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Codex、Claude Code",
+              "evidence_start": 463,
+              "evidence_end": 480
+            },
+            {
+              "skill": "MediaCodec",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "MediaCodec / VideoToolbox",
+              "evidence_start": 188,
+              "evidence_end": 213
+            },
+            {
+              "skill": "VideoToolbox",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "MediaCodec / VideoToolbox",
+              "evidence_start": 188,
+              "evidence_end": 213
+            }
+          ],
+          "direction": "音视频"
+        },
+        "79165": {
+          "split": "development",
+          "body_sha256": "da7cf2ef23a00e9472ba0165c9744bd743e46e239b2632b7e2fffcb69f69ef0b",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Spark",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Spark、Flink、Doris",
+              "evidence_start": 47,
+              "evidence_end": 67
+            },
+            {
+              "skill": "Flink",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Spark、Flink、Doris",
+              "evidence_start": 47,
+              "evidence_end": 67
+            },
+            {
+              "skill": "Doris",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Spark、Flink、Doris",
+              "evidence_start": 47,
+              "evidence_end": 67
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Python / Java / Scala 中至少一种语言",
+              "evidence_start": 160,
+              "evidence_end": 189
+            },
+            {
+              "skill": "Java",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Python / Java / Scala 中至少一种语言",
+              "evidence_start": 160,
+              "evidence_end": 189
+            },
+            {
+              "skill": "Scala",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Python / Java / Scala 中至少一种语言",
+              "evidence_start": 160,
+              "evidence_end": 189
+            }
+          ],
+          "direction": "数据平台"
+        },
+        "79628": {
+          "split": "development",
+          "body_sha256": "8c93eddc6da4a012d335f8713d80e52832b1a74c52a613193e05e7b89efaa8b0",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "HTML",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练掌握 HTML/CSS/JavaScript/TypeScript",
+              "evidence_start": 23,
+              "evidence_end": 58
+            },
+            {
+              "skill": "CSS",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练掌握 HTML/CSS/JavaScript/TypeScript",
+              "evidence_start": 23,
+              "evidence_end": 58
+            },
+            {
+              "skill": "JavaScript",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练掌握 HTML/CSS/JavaScript/TypeScript",
+              "evidence_start": 23,
+              "evidence_end": 58
+            },
+            {
+              "skill": "TypeScript",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练掌握 HTML/CSS/JavaScript/TypeScript",
+              "evidence_start": 23,
+              "evidence_end": 58
+            },
+            {
+              "skill": "React",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "精通 React/Vue",
+              "evidence_start": 59,
+              "evidence_end": 71
+            },
+            {
+              "skill": "Vue",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "精通 React/Vue",
+              "evidence_start": 59,
+              "evidence_end": 71
+            },
+            {
+              "skill": "MCP",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "MCP 等",
+              "evidence_start": 143,
+              "evidence_end": 148
+            },
+            {
+              "skill": "Node.js",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Node.js 或其他服务端技术",
+              "evidence_start": 250,
+              "evidence_end": 266
+            },
+            {
+              "skill": "Claude Code",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Claude Code、Cursor",
+              "evidence_start": 362,
+              "evidence_end": 380
+            },
+            {
+              "skill": "Cursor",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Claude Code、Cursor",
+              "evidence_start": 362,
+              "evidence_end": 380
+            }
+          ],
+          "direction": "前端Agent"
+        },
+        "79626": {
+          "split": "development",
+          "body_sha256": "68b397792d968b851e7546d990bfcf4a7b01e05186fe1cd4d0a4ecd7e6eb778b",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "LiveKit",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "LiveKit 服务端",
+              "evidence_start": 33,
+              "evidence_end": 44
+            },
+            {
+              "skill": "coturn",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "coturn",
+              "evidence_start": 241,
+              "evidence_end": 247
+            },
+            {
+              "skill": "Kubernetes",
+              "field": "description_raw",
+              "level": "不确定",
+              "evidence": "d-compose 或 K8s",
+              "evidence_start": 310,
+              "evidence_end": 325
+            },
+            {
+              "skill": "Linux",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Linux 常用命令",
+              "evidence_start": 109,
+              "evidence_end": 122
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "至少熟悉一门编程语言（Python / Go / Node.js / TS / Java 等）",
+              "evidence_start": 146,
+              "evidence_end": 193
+            },
+            {
+              "skill": "Go",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "至少熟悉一门编程语言（Python / Go / Node.js / TS / Java 等）",
+              "evidence_start": 146,
+              "evidence_end": 193
+            },
+            {
+              "skill": "Node.js",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "至少熟悉一门编程语言（Python / Go / Node.js / TS / Java 等）",
+              "evidence_start": 146,
+              "evidence_end": 193
+            },
+            {
+              "skill": "TypeScript",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "至少熟悉一门编程语言（Python / Go / Node.js / TS / Java 等）",
+              "evidence_start": 146,
+              "evidence_end": 193
+            },
+            {
+              "skill": "Java",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "至少熟悉一门编程语言（Python / Go / Node.js / TS / Java 等）",
+              "evidence_start": 146,
+              "evidence_end": 193
+            },
+            {
+              "skill": "WebRTC",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "了解 WebRTC",
+              "evidence_start": 239,
+              "evidence_end": 248
+            },
+            {
+              "skill": "LiveKit",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "LiveKit、Janus、mediasoup",
+              "evidence_start": 278,
+              "evidence_end": 301
+            },
+            {
+              "skill": "Janus",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "LiveKit、Janus、mediasoup",
+              "evidence_start": 278,
+              "evidence_end": 301
+            },
+            {
+              "skill": "mediasoup",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "LiveKit、Janus、mediasoup",
+              "evidence_start": 278,
+              "evidence_end": 301
+            },
+            {
+              "skill": "Whisper",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Whisper、FunASR",
+              "evidence_start": 341,
+              "evidence_end": 355
+            },
+            {
+              "skill": "FunASR",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Whisper、FunASR",
+              "evidence_start": 341,
+              "evidence_end": 355
+            },
+            {
+              "skill": "coturn",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "coturn",
+              "evidence_start": 376,
+              "evidence_end": 382
+            },
+            {
+              "skill": "Kubernetes",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "熟悉 K8s",
+              "evidence_start": 411,
+              "evidence_end": 417
+            }
+          ],
+          "direction": "音视频全栈"
+        },
+        "78482": {
+          "split": "development",
+          "body_sha256": "a2501bc8c3061d4a0d0ce1f794e22078005ea8177ba838f7f613cbc26a345962",
+          "locked": true,
+          "body_check": "issue",
+          "city_check": "same",
+          "note": "职责为人工筛选和标注，不是数据开发/算法；建议扩展，待C确认。",
+          "no_skills": true,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [],
+          "direction": "人工数据标注"
+        },
+        "78590": {
+          "split": "development",
+          "body_sha256": "b1652b2cf159c8571c189b4794a3dcfe2806a47c06aab625214f3c8c3b86e1ab",
+          "locked": true,
+          "body_check": "issue",
+          "city_check": "different",
+          "note": "标题杭州、地点广州无交集；规范化城市归冲突待确认。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练掌握 Python/Go/TypeScript 等一门或多门主流编程语言",
+              "evidence_start": 53,
+              "evidence_end": 91
+            },
+            {
+              "skill": "Go",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练掌握 Python/Go/TypeScript 等一门或多门主流编程语言",
+              "evidence_start": 53,
+              "evidence_end": 91
+            },
+            {
+              "skill": "TypeScript",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练掌握 Python/Go/TypeScript 等一门或多门主流编程语言",
+              "evidence_start": 53,
+              "evidence_end": 91
+            },
+            {
+              "skill": "Linux",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Linux 环境",
+              "evidence_start": 107,
+              "evidence_end": 118
+            }
+          ],
+          "direction": "AI应用"
+        },
+        "79599": {
+          "split": "development",
+          "body_sha256": "1a6e8de509e57ba212743189e1b56fddbe186a33becdbc53082d23447c11c28b",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Android",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Web、Android、iOS",
+              "evidence_start": 34,
+              "evidence_end": 49
+            },
+            {
+              "skill": "iOS",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Web、Android、iOS",
+              "evidence_start": 34,
+              "evidence_end": 49
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "精通 Python 和 Java",
+              "evidence_start": 31,
+              "evidence_end": 47
+            },
+            {
+              "skill": "Java",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "精通 Python 和 Java",
+              "evidence_start": 31,
+              "evidence_end": 47
+            },
+            {
+              "skill": "Scrapy",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Scrapy、WebMagic",
+              "evidence_start": 48,
+              "evidence_end": 66
+            },
+            {
+              "skill": "WebMagic",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Scrapy、WebMagic",
+              "evidence_start": 48,
+              "evidence_end": 66
+            },
+            {
+              "skill": "MySQL",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "MySQL、MongoDB",
+              "evidence_start": 88,
+              "evidence_end": 101
+            },
+            {
+              "skill": "MongoDB",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "MySQL、MongoDB",
+              "evidence_start": 88,
+              "evidence_end": 101
+            },
+            {
+              "skill": "Android",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Android/iOS",
+              "evidence_start": 108,
+              "evidence_end": 122
+            },
+            {
+              "skill": "iOS",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Android/iOS",
+              "evidence_start": 108,
+              "evidence_end": 122
+            },
+            {
+              "skill": "Jadx",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Jadx、JEB",
+              "evidence_start": 207,
+              "evidence_end": 215
+            },
+            {
+              "skill": "JEB",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Jadx、JEB",
+              "evidence_start": 207,
+              "evidence_end": 215
+            },
+            {
+              "skill": "Xposed",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Xposed/LSPosed",
+              "evidence_start": 228,
+              "evidence_end": 242
+            },
+            {
+              "skill": "LSPosed",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Xposed/LSPosed",
+              "evidence_start": 228,
+              "evidence_end": 242
+            },
+            {
+              "skill": "Unicorn",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Unicorn、Unidbg",
+              "evidence_start": 261,
+              "evidence_end": 275
+            },
+            {
+              "skill": "Unidbg",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Unicorn、Unidbg",
+              "evidence_start": 261,
+              "evidence_end": 275
+            },
+            {
+              "skill": "AOSP",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "AOSP",
+              "evidence_start": 473,
+              "evidence_end": 477
+            },
+            {
+              "skill": "Appium",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Appium、uiautomator2、PocoUI",
+              "evidence_start": 542,
+              "evidence_end": 568
+            },
+            {
+              "skill": "uiautomator2",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Appium、uiautomator2、PocoUI",
+              "evidence_start": 542,
+              "evidence_end": 568
+            },
+            {
+              "skill": "PocoUI",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Appium、uiautomator2、PocoUI",
+              "evidence_start": 542,
+              "evidence_end": 568
+            }
+          ],
+          "direction": "数据采集安全"
+        },
+        "76448": {
+          "split": "development",
+          "body_sha256": "f85b77cd4f5609617414e3d70a87204b81e409c33aef6fd78da589236a39d359",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Kafka",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Kafka/Pulsar/ElasticSearch/Hbase",
+              "evidence_start": 11,
+              "evidence_end": 43
+            },
+            {
+              "skill": "Pulsar",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Kafka/Pulsar/ElasticSearch/Hbase",
+              "evidence_start": 11,
+              "evidence_end": 43
+            },
+            {
+              "skill": "Elasticsearch",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Kafka/Pulsar/ElasticSearch/Hbase",
+              "evidence_start": 11,
+              "evidence_end": 43
+            },
+            {
+              "skill": "HBase",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Kafka/Pulsar/ElasticSearch/Hbase",
+              "evidence_start": 11,
+              "evidence_end": 43
+            },
+            {
+              "skill": "Linux",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Linux基础",
+              "evidence_start": 31,
+              "evidence_end": 38
+            },
+            {
+              "skill": "Kafka",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Kafka/HDFS/Pulsar/Hbase/ES中任意一种或几种",
+              "evidence_start": 71,
+              "evidence_end": 105
+            },
+            {
+              "skill": "HDFS",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Kafka/HDFS/Pulsar/Hbase/ES中任意一种或几种",
+              "evidence_start": 71,
+              "evidence_end": 105
+            },
+            {
+              "skill": "Pulsar",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Kafka/HDFS/Pulsar/Hbase/ES中任意一种或几种",
+              "evidence_start": 71,
+              "evidence_end": 105
+            },
+            {
+              "skill": "HBase",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Kafka/HDFS/Pulsar/Hbase/ES中任意一种或几种",
+              "evidence_start": 71,
+              "evidence_end": 105
+            },
+            {
+              "skill": "Elasticsearch",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Kafka/HDFS/Pulsar/Hbase/ES中任意一种或几种",
+              "evidence_start": 71,
+              "evidence_end": 105
+            },
+            {
+              "skill": "Shell",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "一种或多种语言如Shell、Python、Java",
+              "evidence_start": 177,
+              "evidence_end": 202
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "一种或多种语言如Shell、Python、Java",
+              "evidence_start": 177,
+              "evidence_end": 202
+            },
+            {
+              "skill": "Java",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "一种或多种语言如Shell、Python、Java",
+              "evidence_start": 177,
+              "evidence_end": 202
+            },
+            {
+              "skill": "Kubernetes",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "k8s运维经验优先",
+              "evidence_start": 212,
+              "evidence_end": 221
+            }
+          ],
+          "direction": "大数据运维"
+        },
+        "79560": {
+          "split": "development",
+          "body_sha256": "f9017acf82987d2d867119a4c60303270b9d7bcc93614b62ffa26836295ac3cd",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Unreal Engine",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉UE或Unity引擎",
+              "evidence_start": 81,
+              "evidence_end": 93
+            },
+            {
+              "skill": "Unity",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉UE或Unity引擎",
+              "evidence_start": 81,
+              "evidence_end": 93
+            }
+          ],
+          "direction": "性能测试"
+        },
+        "79354": {
+          "split": "final",
+          "body_sha256": "9335adc86ee3941ef6cb676c53bc81ed44b0e080ef4d93392fda435bbb426f2f",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Android",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Android/iOS",
+              "evidence_start": 8,
+              "evidence_end": 19
+            },
+            {
+              "skill": "iOS",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Android/iOS",
+              "evidence_start": 8,
+              "evidence_end": 19
+            },
+            {
+              "skill": "C",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "c/c++ 基础",
+              "evidence_start": 81,
+              "evidence_end": 89
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "c/c++ 基础",
+              "evidence_start": 81,
+              "evidence_end": 89
+            }
+          ],
+          "direction": "逆向安全"
+        },
+        "79627": {
+          "split": "final",
+          "body_sha256": "eeb872d9b92f312f4d38edd397d477bb1fdbfcf4d9ca5e5947fcef5de17e4a79",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "iOS",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "iOS 端唯一负责人",
+              "evidence_start": 6,
+              "evidence_end": 16
+            },
+            {
+              "skill": "iOS",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "iOS 开发经验",
+              "evidence_start": 17,
+              "evidence_end": 25
+            },
+            {
+              "skill": "Objective-C",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练掌握 Objective-C",
+              "evidence_start": 26,
+              "evidence_end": 42
+            },
+            {
+              "skill": "HTML",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "HTML/CSS/JavaScript",
+              "evidence_start": 197,
+              "evidence_end": 216
+            },
+            {
+              "skill": "CSS",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "HTML/CSS/JavaScript",
+              "evidence_start": 197,
+              "evidence_end": 216
+            },
+            {
+              "skill": "JavaScript",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "HTML/CSS/JavaScript",
+              "evidence_start": 197,
+              "evidence_end": 216
+            },
+            {
+              "skill": "React",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "React/Vue",
+              "evidence_start": 227,
+              "evidence_end": 236
+            },
+            {
+              "skill": "Vue",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "React/Vue",
+              "evidence_start": 227,
+              "evidence_end": 236
+            },
+            {
+              "skill": "Claude Code",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Claude Code、Cursor",
+              "evidence_start": 338,
+              "evidence_end": 356
+            },
+            {
+              "skill": "Cursor",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Claude Code、Cursor",
+              "evidence_start": 338,
+              "evidence_end": 356
+            }
+          ],
+          "direction": "iOS全栈"
+        },
+        "79093": {
+          "split": "final",
+          "body_sha256": "8781dd9ea799ca50c6f92fabf42c3df2f5aa4bbdb14b4758195b7532b655390b",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "JavaScript",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练掌握 JavaScript / TypeScript",
+              "evidence_start": 36,
+              "evidence_end": 64
+            },
+            {
+              "skill": "TypeScript",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练掌握 JavaScript / TypeScript",
+              "evidence_start": 36,
+              "evidence_end": 64
+            },
+            {
+              "skill": "React",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉 React 或 Vue",
+              "evidence_start": 65,
+              "evidence_end": 79
+            },
+            {
+              "skill": "Vue",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟悉 React 或 Vue",
+              "evidence_start": 65,
+              "evidence_end": 79
+            },
+            {
+              "skill": "Java",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Java、Node.js、Python 等至少一种服务端技术",
+              "evidence_start": 116,
+              "evidence_end": 146
+            },
+            {
+              "skill": "Node.js",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Java、Node.js、Python 等至少一种服务端技术",
+              "evidence_start": 116,
+              "evidence_end": 146
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Java、Node.js、Python 等至少一种服务端技术",
+              "evidence_start": 116,
+              "evidence_end": 146
+            },
+            {
+              "skill": "MySQL",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "MySQL、Redis",
+              "evidence_start": 167,
+              "evidence_end": 178
+            },
+            {
+              "skill": "Redis",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "MySQL、Redis",
+              "evidence_start": 167,
+              "evidence_end": 178
+            }
+          ],
+          "direction": "全栈开发"
+        },
+        "79060": {
+          "split": "final",
+          "body_sha256": "ffa401b17db2774c84a387a277537bd2451a76387f07cac3d5e516e8547ff2b8",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉python、lua、C++语言",
+              "evidence_start": 123,
+              "evidence_end": 141
+            },
+            {
+              "skill": "Lua",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉python、lua、C++语言",
+              "evidence_start": 123,
+              "evidence_end": 141
+            },
+            {
+              "skill": "C++",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉python、lua、C++语言",
+              "evidence_start": 123,
+              "evidence_end": 141
+            }
+          ],
+          "direction": "白盒测试"
+        },
+        "78780": {
+          "split": "final",
+          "body_sha256": "afd9a136f984a75a6630cece54229aaa0ca3f373dcdb5a8044fb1c7392dd0cdd",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": true,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [],
+          "direction": "游戏测试"
+        },
+        "79489": {
+          "split": "final",
+          "body_sha256": "77962dcd226299e734aec69a35041696dff7d9868aaabaa73e9e8e9d0b7cafa8",
+          "locked": true,
+          "body_check": "issue",
+          "city_check": "same",
+          "note": "职责为人工筛选和标注，不是数据开发/算法；建议扩展，待C确认。",
+          "no_skills": true,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [],
+          "direction": "人工数据标注"
+        },
+        "79598": {
+          "split": "final",
+          "body_sha256": "3af636758e05591d4fbb0f27446e972fa30bf52c42aabc14c3e11e26fe6479e9",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "LangChain",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "LangChain/MCP/OpenClaw",
+              "evidence_start": 173,
+              "evidence_end": 195
+            },
+            {
+              "skill": "MCP",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "LangChain/MCP/OpenClaw",
+              "evidence_start": 173,
+              "evidence_end": 195
+            },
+            {
+              "skill": "OpenClaw",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "LangChain/MCP/OpenClaw",
+              "evidence_start": 173,
+              "evidence_end": 195
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练使用 Python/Go/Java/Node.js 至少一种",
+              "evidence_start": 107,
+              "evidence_end": 139
+            },
+            {
+              "skill": "Go",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练使用 Python/Go/Java/Node.js 至少一种",
+              "evidence_start": 107,
+              "evidence_end": 139
+            },
+            {
+              "skill": "Java",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练使用 Python/Go/Java/Node.js 至少一种",
+              "evidence_start": 107,
+              "evidence_end": 139
+            },
+            {
+              "skill": "Node.js",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练使用 Python/Go/Java/Node.js 至少一种",
+              "evidence_start": 107,
+              "evidence_end": 139
+            }
+          ],
+          "direction": "安全攻防"
+        },
+        "71196": {
+          "split": "final",
+          "body_sha256": "5ad7fdc500e3d953a7e639424ce0e5aa0c8ea8d571debd9c0f75e77c80c0953c",
+          "locked": true,
+          "body_check": "issue",
+          "city_check": "same",
+          "note": "结构化本科，正文硕士及以上；保留双值待C确认。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "PyTorch",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "PyTorch/TensorFlow",
+              "evidence_start": 73,
+              "evidence_end": 91
+            },
+            {
+              "skill": "TensorFlow",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "PyTorch/TensorFlow",
+              "evidence_start": 73,
+              "evidence_end": 91
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "精通Python编程语言",
+              "evidence_start": 116,
+              "evidence_end": 128
+            },
+            {
+              "skill": "PyTorch",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "深入掌握PyTorch或TensorFlow",
+              "evidence_start": 129,
+              "evidence_end": 151
+            },
+            {
+              "skill": "TensorFlow",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "深入掌握PyTorch或TensorFlow",
+              "evidence_start": 129,
+              "evidence_end": 151
+            },
+            {
+              "skill": "Unity",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Unity3D、UE",
+              "evidence_start": 317,
+              "evidence_end": 327
+            },
+            {
+              "skill": "Unreal Engine",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "Unity3D、UE",
+              "evidence_start": 317,
+              "evidence_end": 327
+            }
+          ],
+          "direction": "视觉算法"
+        },
+        "72340": {
+          "split": "final",
+          "body_sha256": "6a1605de46261118d4cc1887368b3437f2fab65611b010b828c632f02631d8b2",
+          "locked": true,
+          "body_check": "issue",
+          "city_check": "same",
+          "note": "原文Dock.er疑为Docker拼写，保留原文并标不确定；不据此自动加别名。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "RAG",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "RAG 访问层",
+              "evidence_start": 417,
+              "evidence_end": 424
+            },
+            {
+              "skill": "MCP",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "MCP、模型加速",
+              "evidence_start": 556,
+              "evidence_end": 564
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练掌握 Python / Go 至少一种语言",
+              "evidence_start": 53,
+              "evidence_end": 76
+            },
+            {
+              "skill": "Go",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "熟练掌握 Python / Go 至少一种语言",
+              "evidence_start": 53,
+              "evidence_end": 76
+            },
+            {
+              "skill": "MongoDB",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练使用 MongoDB、Redis",
+              "evidence_start": 90,
+              "evidence_end": 108
+            },
+            {
+              "skill": "Redis",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟练使用 MongoDB、Redis",
+              "evidence_start": 90,
+              "evidence_end": 108
+            },
+            {
+              "skill": "Flask",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Flask、FastAPI",
+              "evidence_start": 142,
+              "evidence_end": 155
+            },
+            {
+              "skill": "FastAPI",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Flask、FastAPI",
+              "evidence_start": 142,
+              "evidence_end": 155
+            },
+            {
+              "skill": "Linux",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉 Linux 环境",
+              "evidence_start": 182,
+              "evidence_end": 193
+            },
+            {
+              "skill": "Docker",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Dock.er",
+              "evidence_start": 200,
+              "evidence_end": 207
+            },
+            {
+              "skill": "RAG",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "RAG 实践经验",
+              "evidence_start": 287,
+              "evidence_end": 295
+            },
+            {
+              "skill": "Cursor",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "GitHub Copilot、Cursor、Windsurf",
+              "evidence_start": 332,
+              "evidence_end": 362
+            },
+            {
+              "skill": "LangChain",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "LangChain / LangGraph / CrewAI",
+              "evidence_start": 453,
+              "evidence_end": 483
+            },
+            {
+              "skill": "LangGraph",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "LangChain / LangGraph / CrewAI",
+              "evidence_start": 453,
+              "evidence_end": 483
+            },
+            {
+              "skill": "CrewAI",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "LangChain / LangGraph / CrewAI",
+              "evidence_start": 453,
+              "evidence_end": 483
+            },
+            {
+              "skill": "RAG",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "熟悉 RAG 技术体系",
+              "evidence_start": 583,
+              "evidence_end": 594
+            },
+            {
+              "skill": "MCP",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "MCP（Model Context Protocol）",
+              "evidence_start": 636,
+              "evidence_end": 663
+            },
+            {
+              "skill": "React",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "React/Vue",
+              "evidence_start": 689,
+              "evidence_end": 698
+            },
+            {
+              "skill": "Vue",
+              "field": "requirements_raw",
+              "level": "优先",
+              "evidence": "React/Vue",
+              "evidence_start": 689,
+              "evidence_end": 698
+            }
+          ],
+          "direction": "Agent平台"
+        },
+        "76449": {
+          "split": "final",
+          "body_sha256": "6795a6746216a934f0f476a65c65b26ad9139e3cc2de98ded3c2104210c30119",
+          "locked": true,
+          "body_check": "pass",
+          "city_check": "same",
+          "note": "原始正文与来源地点对照；按字段逐项核对命名技术与强度。",
+          "no_skills": false,
+          "unblinded_edit": false,
+          "independent_confirmation": true,
+          "labels": [
+            {
+              "skill": "Kafka",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Kafka/Pulsar/Flink/Iceberg",
+              "evidence_start": 5,
+              "evidence_end": 31
+            },
+            {
+              "skill": "Pulsar",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Kafka/Pulsar/Flink/Iceberg",
+              "evidence_start": 5,
+              "evidence_end": 31
+            },
+            {
+              "skill": "Flink",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Kafka/Pulsar/Flink/Iceberg",
+              "evidence_start": 5,
+              "evidence_end": 31
+            },
+            {
+              "skill": "Iceberg",
+              "field": "description_raw",
+              "level": "提及",
+              "evidence": "Kafka/Pulsar/Flink/Iceberg",
+              "evidence_start": 5,
+              "evidence_end": 31
+            },
+            {
+              "skill": "Flink",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Flink/Iceberg/Kafka/Pulsar一种或多种",
+              "evidence_start": 34,
+              "evidence_end": 65
+            },
+            {
+              "skill": "Iceberg",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Flink/Iceberg/Kafka/Pulsar一种或多种",
+              "evidence_start": 34,
+              "evidence_end": 65
+            },
+            {
+              "skill": "Kafka",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Flink/Iceberg/Kafka/Pulsar一种或多种",
+              "evidence_start": 34,
+              "evidence_end": 65
+            },
+            {
+              "skill": "Pulsar",
+              "field": "requirements_raw",
+              "level": "不确定",
+              "evidence": "Flink/Iceberg/Kafka/Pulsar一种或多种",
+              "evidence_start": 34,
+              "evidence_end": 65
+            },
+            {
+              "skill": "Java",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Java/Python语言精通",
+              "evidence_start": 82,
+              "evidence_end": 97
+            },
+            {
+              "skill": "Python",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "Java/Python语言精通",
+              "evidence_start": 82,
+              "evidence_end": 97
+            },
+            {
+              "skill": "Linux",
+              "field": "requirements_raw",
+              "level": "必需",
+              "evidence": "熟悉Linux操作系统",
+              "evidence_start": 174,
+              "evidence_end": 185
+            }
+          ],
+          "direction": "实时数据组件"
+        }
+      },
+      "scope_overrides": {
+        "78482": {
+          "reason": "核心职责为人工数据筛选/标注与美感评测，建议归扩展样本；待C确认",
+          "evidence": "根据标注规则对数据进行人工标注"
+        },
+        "79489": {
+          "reason": "核心职责为人工数据筛选/标注与美感评测，建议归扩展样本；待C确认",
+          "evidence": "根据标注规则对数据进行人工标注"
+        }
+      }
+    }
+  },
+  "development_adjudications": [
+    {
+      "source": "tencent",
+      "source_job_id": "2115714592318603264",
+      "field": "requirements_raw",
+      "skill": "RAG",
+      "before": "优先",
+      "after": "不确定",
+      "reason": "开发集复核：原句含明确或条件，应按备选处理，不能把每项作为同时要求。"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2071430928898637824",
+      "field": "additional_requirements_raw",
+      "skill": "vLLM",
+      "before": "必需",
+      "after": "不确定",
+      "reason": "开发集复核：原句含明确或条件，应按备选处理，不能把每项作为同时要求。"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2071430928898637824",
+      "field": "additional_requirements_raw",
+      "skill": "TensorRT-LLM",
+      "before": "必需",
+      "after": "不确定",
+      "reason": "开发集复核：原句含明确或条件，应按备选处理，不能把每项作为同时要求。"
+    },
+    {
+      "source": "tencent",
+      "source_job_id": "2071430928898637824",
+      "field": "additional_requirements_raw",
+      "skill": "RAG",
+      "before": "必需",
+      "after": "不确定",
+      "reason": "开发集复核：原句含明确或条件，应按备选处理，不能把每项作为同时要求。"
+    }
+  ],
+  "freeze_note": "开发集修正规则与标签后冻结；此后首次运行最终集，最终差错保留，不据此重调本版规则。"
+}

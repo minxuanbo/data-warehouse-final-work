@@ -1,0 +1,295 @@
+﻿source,source_job_id,batch_id,title_raw,is_core,scope_rule_version,scope_reason,scope_status,evidence,raw_ref,raw_sha256
+netease,53229,netease_20261101T044527Z_157cf969,游戏引擎开发工程师-性能优化（无限大）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 跨平台的客户端性能优化，确保产品在各种环境中的高效运行
+2. 跨平台的性能工具开发，监控和分析引擎性能瓶颈，提供解决方案并实施优化
+3. 负责引擎底层系统与渲染管线的开发，与项目需求结合，实现项目需求 & 性能的提升
+4. 与Game",raw/list_000002.json,8fcf1e482dfb08f331ad49e2f905854b561a93a47651c3cc1692099daf627da8
+netease,79446,netease_20261101T044527Z_157cf969,游戏客户端开发实习生,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、参与 Unity 游戏客户端功能开发、维护及问题修复。
+2、配合策划、美术和服务器开发人员完成功能实现与联调。
+3、协助开展性能分析、资源检查及开发工具建设。
+4、按项目规范完成代码提交、评审及相关技术文档整理。",raw/list_000002.json,8fcf1e482dfb08f331ad49e2f905854b561a93a47651c3cc1692099daf627da8
+netease,51225,netease_20261101T044527Z_157cf969,图形算法实习生（动作算法方向）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责人脸表情绑定与重定向算法研发，实现表情在不同人脸模型、角色资产之间的高质量迁移，兼顾效果与实时性
+职位要求；
+2、包括但不限于计算机科学、电子工程、应用数学、数字媒体等相关专业的硕士生或博士生；
+3、深度学习基础及相关知识，熟悉3D",raw/list_000002.json,8fcf1e482dfb08f331ad49e2f905854b561a93a47651c3cc1692099daf627da8
+netease,79643,netease_20261101T044527Z_157cf969,大模型算法工程师实习生（内容理解方向）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、大模型应用与算法研发
+参与大模型在内容理解场景中的应用与算法研发，围绕内容分类、语义理解、信息抽取、摘要及标签生成等任务开展研究与实验。
+结合业务需求，探索提示词优化、检索增强及多模态理解等技术方案，提升模型在实际场景中的效果。
+参与算",raw/list_000003.json,e4ca555dbaade720873961ab05b0fed1e6f5d5a79ba6a3e32834a5e2401fa8cf
+netease,79039,netease_20261101T044527Z_157cf969,AI游戏服务器工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、基于Agent框架设计并实现游戏AI的智能体应用工程开发与持续优化迭代
+2、结合业务场景负责 Agent相关模块的设计与研发落地应用
+3、探索Agent运行引擎（推理、感知、记忆等），关注AI智能体在游戏业务中的应用场景，并不断优化Ag",raw/list_000004.json,31e6760711aaa30bcabbba9ccc5232be7ce979575cbba5fc14e675e5610434ae
+netease,65340,netease_20261101T044527Z_157cf969,游戏客户端、引擎开发（在研3A射击-极限战场）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责游戏客户端功能模块的设计、开发与优化，覆盖PC端与移动端双平台  
+2. 基于公司自研游戏引擎进行底层功能扩展、渲染管线适配及性能调优  
+3. 参与客户端架构演进，推动模块解耦、热更新、资源管理等核心机制落地  
+4. 与策划、",raw/detail_65340.json,af41808bddbe0e6464fd38e49f20f028c9019a2a9f4770a3ca8a111391282792
+netease,79290,netease_20261101T044527Z_157cf969,音视频开发工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"• 负责跨平台音视频模块的基础功能开发，对接 Windows / Android / macOS / iOS / Linux 各平台客户端实现相应需求
+• 负责音视频编解码链路的开发与维护，重点对接各平台硬件编解码能力，保障在多样用户环境下",raw/detail_79290.json,4d9f5dcbfbb6ed084f76e4decf158e2ec96e9f5ff6bedcd9556d9abb178830ec
+netease,79165,netease_20261101T044527Z_157cf969,资深数据平台工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责公司内部用户行为分析平台的整体架构设计与研发，支撑产品、运营与业务方的自助式数据分析
+2. 负责平台的数据模型、数据接入与数据治理体系建设，保障数据的准确性与一致性
+3. 负责统一用户与标签画像能力建设，向业务系统输出稳定可靠的数",raw/detail_79165.json,cb5519cb8cde749c71110280bc117e37016fbb44adc3d2bda88c72556ea0f0b6
+netease,77425,netease_20261101T044527Z_157cf969,【平台】iOS逆向开发工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责移动端（iOS）游戏和应用的逆向分析，信息提取与整合；
+2、负责游戏和应用逆向调试、协议分析等技术操作，满足业务定制化功能需求；
+3、分析各种游戏/应用安全问题（例如数据加解密算法和数据传输协议等）；
+4、了解iOS逆向开发及相关框",raw/list_000005.json,3cf359d6c827d88cb06a1965bbd1e095023ad39af4d9fe5f9fe5179aa4b62a7d
+netease,79354,netease_20261101T044527Z_157cf969,【平台】安卓逆向开发工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责移动端（Android/iOS）游戏和应用的逆向分析，信息提取与整合
+2、负责游戏和应用逆向调试、协议分析等技术操作,满足业务定制化功能需求
+3、分析各种游戏/应用安全问题（例如数据加解密算法和数据传输协议等)
+4、了解Androi",raw/list_000006.json,95a26147aebd9646c9d3e1b11aa6496eb868a1ec46055ee7a7febee5c6ec3c1e
+netease,79628,netease_20261101T044527Z_157cf969,Agent开发工程师（偏前端）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责 UGC 编辑器项目的 Agent 前端开发，围绕 AI 辅助创作场景设计并实现交互式前端能力，打磨创作者使用体验；
+2. 维护并持续迭代官网、编辑器等已有前端项目，保障线上稳定性与可维护性，推动技术栈与工程结构的优化升级；
+3.",raw/list_000007.json,d9487a1720e99ebdfdbd3868421b17e895f3760457a972ed5f246fb6b8f4d58f
+netease,79627,netease_20261101T044527Z_157cf969,全栈开发工程师（偏ios）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 作为 iOS 端唯一负责人，独立负责 UGC 游戏平台 iOS 客户端的架构设计、核心开发与持续迭代，对最终交付质量负责；
+2. 主导客户端整体架构演进与模块化重构，持续优化工程结构、性能表现与可维护性，为业务快速迭代提供稳定支撑；
+",raw/detail_79627.json,bfbb2659258449c64d47e8c14305abcf82aa75167c7106b31f00464f749371f3
+netease,76545,netease_20261101T044527Z_157cf969,服务端开发负责人,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责 Agent 系统、知识库、RAG、Workflow、Tool/Skill 等 AI 应用服务端体系建设，推动模型能力与业务场景深度结合，构建稳定、可扩展的 AI 服务架构；
+2. 负责 AI 产品服务端技术方案设计与核心模块研发",raw/list_000014.json,fb1c4f712c8c6c2e165df54c4e6e729d85d113efb21470676278c35c4b9ce265
+netease,79093,netease_20261101T044527Z_157cf969,全栈开发工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责公司内部财务、OA 、大数据平台等业务系统的开发、维护和持续迭代，重点承担前端相关开发工作。
+2、独立负责相关系统或业务模块的前后端开发工作，包括方案设计、功能开发、联调及上线交付。
+3、熟练使用 AI 编程工具提升研发效率，并具备",raw/list_000015.json,0ebd53b921ed66279788c423322027fe2733644d6b93efe8c320520da02749cb
+netease,79626,netease_20261101T044527Z_157cf969,全栈开发实习生（LiveKit 音频链路构建方向）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 参与端到端语音交互链路的方案设计与技术验证：客户端接入 → LiveKit 服务端 → AI 语音服务 → 语音回传；
+2. 负责客户端侧的 LiveKit 接入与联调（Web / 移动端 / 桌面端至少一种），打通连接、订阅、音频采",raw/detail_79626.json,9899516fc1aca579ce663bd52af9351b488d58230200e8cb8e70b9eec3540c82
+netease,23198,netease_20261101T044527Z_157cf969,资深/专家引擎开发工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"游戏引擎开发：渲染方向
+- 3D引擎底层功能扩展和各种维护工作；
+- 3D引擎渲染效率优化，CPU效率优化；
+- 3D引擎的性能优化，表现问题攻坚。",raw/list_000017.json,2c34d57c1d428752e35211387ea7da1c6004da130ca0fa27e26e2997ed23ade3
+netease,33992,netease_20261101T044527Z_157cf969,游戏引擎开发工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"'-负责游戏引擎的调优以及扩展开发
+-负责游戏渲染模块的开发",raw/list_000017.json,2c34d57c1d428752e35211387ea7da1c6004da130ca0fa27e26e2997ed23ade3
+netease,79060,netease_20261101T044527Z_157cf969,游戏测试工程师（燕云十六声）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1.对产品需求进行分析、评审，提前规避问题，设计测试点、测试用例。
+2.对游戏核心系统进行功能测试、白盒测试、数值测试等日常质量保障。
+3.积极发现和推动解决项目中的进度、流程、质量风险，并能对项目提出合理建议。
+4.负责外包日常工作的管理",raw/list_000018.json,9f4104b9d1be6d78f79593e43d4468a9a911905b87de1376743545ae1f324a04
+netease,76217,netease_20261101T044527Z_157cf969,高级服务端开发工程师（在研项目）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责服务端业务系统的开发和维护； 
+2. 负责游戏服务端框架的优化与扩展； 
+3. 负责服务端性能的优化。",raw/list_000019.json,7b8d1a9df9b438aea94b12ed1ac2e0d889f40c2fe26e1640c3faffbdd2c48c6f
+netease,78811,netease_20261101T044527Z_157cf969,资深引擎开发工程师（在研项目）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责游戏引擎渲染模块的核心开发，包括但不限于光照、材质、后处理、阴影等系统的设计与实现；
+2. 优化渲染管线性能，提升多平台（PC/移动端）的渲染效率与画质表现；
+3. 与美术、技术美术（TA）团队深度合作，推动引擎工具链与工作流升级",raw/list_000019.json,7b8d1a9df9b438aea94b12ed1ac2e0d889f40c2fe26e1640c3faffbdd2c48c6f
+netease,79396,netease_20261101T044527Z_157cf969,高级服务端开发工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责服务端业务系统的开发和维护； 
+2. 负责游戏服务端框架的优化与扩展； 
+3. 负责服务端性能的优化。",raw/list_000019.json,7b8d1a9df9b438aea94b12ed1ac2e0d889f40c2fe26e1640c3faffbdd2c48c6f
+netease,79200,netease_20261101T044527Z_157cf969,资深Unity 3D 引擎/渲染开发工程师（渲染和性能）-在研 Friendslop 项目,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责优化和改造 URP，与TA对接进行管线的优化；
+2、负责 GI 和 TOD 系统的对接；
+3、负责优化 PBR 等 Shader 中的算法优化；
+4、负责性能优化和兼容适配；
+5、负责制定质量和标准的细节，使用并结合AI ，对以上内",raw/list_000020.json,7b4b5f2cc4939e8bc2b21e99133ff04f60a26250a0d8afac6918bb5d8ca87a73
+netease,77678,netease_20261101T044527Z_157cf969,高级/资深服务端开发工程师（在研新项目）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"根据项目需求，负责服务端框架优化与核心系统设计，把控代码品质；
+针对游戏特性，负责服务端关键技术的选型及攻坚，推动技术方案进行拆解落地，识别和防范技术风险；
+负责服务端的性能优化，可靠性优化；
+推进AI在项目工作流中的应用，提升团队效率。",raw/list_000022.json,7f26257521a9bc33fa913fa7cd54c49a27434206e4e0ee6b9bb40f6a4a309453
+netease,78108,netease_20261101T044527Z_157cf969,高级/资深游戏客户端开发工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、使用Unity3D引擎进行各主流平台上游戏开发；
+2、有良好图形渲染相关知识，能找出游戏中的性能瓶颈并针对性地进行优化，在符合美术质量要求的情况下协助制定资源规范，优化drawcall及资源加载；
+3、与策划、美术及技术美术保持良好沟通",raw/list_000022.json,7f26257521a9bc33fa913fa7cd54c49a27434206e4e0ee6b9bb40f6a4a309453
+netease,78243,netease_20261101T044527Z_157cf969,高级/资深游戏服务端开发工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 根据项目需求，负责服务端业务系统的开发和维护；
+2. 负责游戏服务端框架的优化与扩展；
+3. 推进AI在项目工作流中的应用，提升团队效率。",raw/list_000024.json,dc61f8c85211e6af54834807c75a6401c47a98f8dc94d86007d527428a71a2d5
+netease,77680,netease_20261101T044527Z_157cf969,高级/资深引擎开发工程师（在研新项目）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"根据项目需求，负责游戏引擎底层模块开发、相关工具和编辑器开发、客户端效果开发；
+结合效果和硬件平台限制，与程序、美术团队配合制定渲染效率优化方案，制定资源规范；
+负责游戏客户端性能优化，兼容性问题排查；
+统筹分配引擎/TA的工作内容，及时推",raw/list_000025.json,477567e6ef8c67eefce01fe11a01a65da7ca17357924dfbff507fa794a0014ae
+netease,77679,netease_20261101T044527Z_157cf969,高级/资深客户端开发工程师（在研新项目）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"根据项目需求，负责游戏客户端基础框架搭建，核心系统设计，负责gameplay的开发和维护，推进方案拆解落地，识别和确认风险，并提出解决方案；
+针对游戏特性的关键技术点选型及攻坚，把控代码品质，参与制定美术规范；
+负责游戏的性能分析、优化、技",raw/list_000026.json,c73b6d40a40d6fd554f4b554e8197444859ee54162cc8e79fb296685ec1af6e4
+netease,76417,netease_20261101T044527Z_157cf969,服务端开发工程师（广州）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 参与UGC游戏平台后端开发，负责核心服务的架构设计、功能开发与日常维护
+2. 设计并开发AI Agent工作流，包括多步推理、工具调用、记忆管理等Agent核心能力的落地实现
+3. 基于LangGraph、Dify等框架构建可编排的A",raw/list_000030.json,9df8c1dc898c26f3bcb7a473887b05628b0687d6184300401dc6bd33bd2a55b0
+netease,60238,netease_20261101T044527Z_157cf969,资深服务端开发（社区业务）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责乐评、笔记、艺粉活动等社区核心业务的系统设计与研发，支撑大规模、高并发场景下的业务增长。
+2. 探索AI在社区业务中的应用，将 AI 能力与现有服务、数据和业务流程结合，推动方案从原型验证走向生产落地。",raw/list_000030.json,9df8c1dc898c26f3bcb7a473887b05628b0687d6184300401dc6bd33bd2a55b0
+netease,79593,netease_20261101T044527Z_157cf969,高级/资深客户端（商业化系统方向）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1.负责游戏商业化客户端模块的设计和开发
+2. 负责客户端性能、表现、逻辑优化
+3. 负责渲染效果优化、物理引擎、角色动画等",raw/list_000030.json,9df8c1dc898c26f3bcb7a473887b05628b0687d6184300401dc6bd33bd2a55b0
+netease,79115,netease_20261101T044527Z_157cf969,资深游戏客户端,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1.负责游戏客户端模块的设计和开发 
+2. 负责客户端性能、表现、逻辑优化 
+3. 负责渲染效果优化、物理引擎、角色动画等",raw/list_000031.json,e27103bf04d00f93c94484ee0e081c984ff9712532ded79ee190ca641a4fa59b
+netease,78780,netease_20261101T044527Z_157cf969,游戏测试工程师（生存MMO）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 对产品需求进行分析、评审，提前规避有问题需求，设计测试点、测试用例。
+2. 负责多人关卡、怪物、任务、时装等核心模块的测试工作，推进问题解决，反馈风险，确保如期上线。
+3. 推动项目进度，改善相关流程提高测试的质量和效率。
+4. 总结",raw/list_000032.json,67ef37d440efa2d15a8f59b645416ce0d7868f8740ef0e81f522023421586d1f
+netease,79036,netease_20261101T044527Z_157cf969,游戏图形算法工程师（实习生）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 参与游戏角色服装自动化生产相关专项研究，探索针对静态服装模型的自动骨架生成、骨骼绑定与蒙皮权重生成等算法；
+2. 研究静态服装模型的物理代理网格（Simulation / Proxy Mesh）自动生成技术，包括网格简化、拓扑处理、几",raw/list_000032.json,67ef37d440efa2d15a8f59b645416ce0d7868f8740ef0e81f522023421586d1f
+netease,79057,netease_20261101T044527Z_157cf969,游戏客户端开发实习生（漫威争锋）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、使用AI工具和管线进行英雄对战类3D游戏客户端开发（公司提供各种模型及Token）；
+2、在UE5引擎下使用C++、Python、蓝图等语言进行UI，系统，国际化等方面的开发工作；
+3、对现有框架、系统、模块进行维护、迭代、完善；
+4、",raw/list_000032.json,67ef37d440efa2d15a8f59b645416ce0d7868f8740ef0e81f522023421586d1f
+netease,79276,netease_20261101T044527Z_157cf969,游戏测试工程师（日常实习生）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 对产品需求进行分析、评审，提前规避有问题需求，设计测试点、测试用例，制定详细的测试计划和测试方案并组织执行测试。
+2. 负责游戏功能模块的测试工作，推进测试中的问题解决，及时汇报和反馈进度风险。
+3. 使用和维护各种测试工具和测试框架",raw/list_000032.json,67ef37d440efa2d15a8f59b645416ce0d7868f8740ef0e81f522023421586d1f
+netease,71014,netease_20261101T044527Z_157cf969,渲染引擎开发实习生,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 游戏渲染引擎相关功能开发和性能优化
+2. 游戏渲染功能相关工具开发",raw/list_000033.json,ecb3fb998ce885e2753114566e2583c4d9fc885aae143606cfb9f1e4d31b1250
+netease,71281,netease_20261101T044527Z_157cf969,游戏测试开发工程师（27届+广/沪/杭）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"重要投递须知
+本岗位属于网易互娱27届校招项目，所有流程（简历筛选、笔试、面试、offer）均需要进入“网易互娱校招官网”完成投递后开展，第三方平台仅作信息展示，无法完成正式投递。
+请搜索“网易互娱校招官网”投递简历。或点击链接投递 htt",raw/list_000033.json,ecb3fb998ce885e2753114566e2583c4d9fc885aae143606cfb9f1e4d31b1250
+netease,71403,netease_20261101T044527Z_157cf969,游戏引擎研发实习生（27届+广/沪/杭）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"重要投递须知
+本岗位属于网易互娱27届校招项目，所有流程（简历筛选、笔试、面试、offer）均需要进入“网易互娱校招官网”完成投递后开展，第三方平台仅作信息展示，无法完成正式投递。
+请搜索“网易互娱校招官网”投递简历。或点击链接投递 htt",raw/list_000034.json,be018576832cb2521b7548cb1415de3d706e9c2aa13d28c41e3967296d064d5d
+netease,73092,netease_20261101T044527Z_157cf969,游戏研发工程师（客户端/服务端）27届+广/沪/杭,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"重要投递须知
+本岗位属于网易互娱27届校招项目，所有流程（简历筛选、笔试、面试、offer）均需要进入“网易互娱校招官网”完成投递后开展，第三方平台仅作信息展示，无法完成正式投递。
+请搜索“网易互娱校招官网”投递简历。或点击链接投递 htt",raw/list_000034.json,be018576832cb2521b7548cb1415de3d706e9c2aa13d28c41e3967296d064d5d
+netease,76670,netease_20261101T044527Z_157cf969,游戏客户端开发实习生（萤火突击）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1.对接策划功能需求，负责游戏客户端相关功能开发落地
+2.开发和维护游戏业务工具",raw/list_000034.json,be018576832cb2521b7548cb1415de3d706e9c2aa13d28c41e3967296d064d5d
+netease,78852,netease_20261101T044527Z_157cf969,客户端开发实习生（王牌竞速）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1.对接策划功能需求，负责游戏客户端相关功能开发落地
+2.开发和维护游戏业务工具",raw/list_000036.json,227bdfdd9037681ee7890a74c3d76d53d2d04b0cdad988216fa7dd3694e0a0d2
+netease,78983,netease_20261101T044527Z_157cf969,游戏研发实习生（自研引擎/AI提效/图形探索方向）-萤火突击,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1.参与自研游戏引擎研发，协助完成引擎功能开发、问题定位、性能分析和工具链建设。
+2.探索AI在研发工作流中的应用，提升代码开发、问题排查、自动化流程等环节的效率。
+3.参与图形渲染相关特性的调研与验证，包括渲染管线、材质、光照、后处理、性",raw/list_000038.json,ea2a8a8873a4ce2c155f4f278d42f3a313153df17ea6f3f365d4c59f82768f47
+netease,79053,netease_20261101T044527Z_157cf969,大数据平台研发工程师（实习生）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"岗位方向：聚焦大数据与AI融合，深耕大数据基础组件研发、数据开发、数据平台搭建、数据驱动落地等方向
+核心工作：
+1、围绕Agent编程与AI结合，聚焦大数据基础组件研发、数据开发、数据平台搭建，推动数据驱动理念落地，革新传统数据开发与运维模",raw/list_000038.json,ea2a8a8873a4ce2c155f4f278d42f3a313153df17ea6f3f365d4c59f82768f47
+netease,79129,netease_20261101T044527Z_157cf969,游戏测试工程师（FPS）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 对产品需求进行分析、评审，提前规避有问题需求，设计测试点、测试用例。
+2. 负责FPS游戏核心模块的测试工作，推进问题解决，反馈风险，确保如期上线。
+3. 推动项目进度，改善相关流程提高测试的质量和效率。
+4. 总结并沉淀日常工作及坑",raw/list_000039.json,83604e1f6074cf1fadb9a15bba8f171b1ba6d948d43c72947b5af9efcde1d209
+netease,78482,netease_20261101T044527Z_157cf969,数据标注实习生（广州/杭州）,False,d-netease-core-1.1-proposed,核心职责为人工数据筛选/标注与美感评测，建议归扩展样本；待C确认,proposed_pending_C,根据标注规则对数据进行人工标注,raw/list_000040.json,9acc8e3220a5cbc5cc5a486ca617b1ccbcf2fca1ca8754d3c0d933483093bb03
+netease,78590,netease_20261101T044527Z_157cf969,AI应用工程师（实习生）-杭州,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"您可以：
+1. 参与基于大语言模型的AI应用基础能力建设，围绕 Agent Infra、评测、可观测、模型智能路由、知识库等方向开展研发工作；
+2. 协助设计、开发和优化面向生产场景的AI应用能力，参与从能力设计、实验验证到上线落地的完整流",raw/list_000041.json,3767340f5a78970bfe9237750c8b8eb53654f99097ebc05750e46db07be63c99
+netease,78676,netease_20261101T044527Z_157cf969,游戏工具开发实习生,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1.负责游戏业务中工具管线的日常开发。
+2.结合AI大模型应用，赋能工具管线。",raw/list_000041.json,3767340f5a78970bfe9237750c8b8eb53654f99097ebc05750e46db07be63c99
+netease,78683,netease_20261101T044527Z_157cf969,游戏客户端开发实习生（萤火突击）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1.负责游戏开发内部辅助工具的设计和开发
+2.负责游戏构建流程优化",raw/list_000041.json,3767340f5a78970bfe9237750c8b8eb53654f99097ebc05750e46db07be63c99
+netease,79457,netease_20261101T044527Z_157cf969,强化学习算法实习生（游戏AI方向）--沪杭,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 参与游戏AI算法研发，基于深度强化学习、模仿学习等技术，构建高水平、拟人化的游戏智能体，应用于PvP对战、PvE战斗、AI队友、智能寻路等场景。
+2. 参与强化学习训练框架及算法优化，包括状态与动作空间设计、奖励函数设计、模型训练、性",raw/list_000043.json,9e930fe870b17a07436a9acb00f1bf38c99d7149b723e5f6e1722957c31bd3a4
+netease,79458,netease_20261101T044527Z_157cf969,强化学习算法实习生（游戏AI方向）---广州,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 参与游戏AI算法研发，基于深度强化学习、模仿学习等技术，构建高水平、拟人化的游戏智能体，应用于PvP对战、PvE战斗、AI队友、智能寻路等场景。
+2. 参与强化学习训练框架及算法优化，包括状态与动作空间设计、奖励函数设计、模型训练、性",raw/list_000043.json,9e930fe870b17a07436a9acb00f1bf38c99d7149b723e5f6e1722957c31bd3a4
+netease,79489,netease_20261101T044527Z_157cf969,数据标注实习生（广杭不限）,False,d-netease-core-1.1-proposed,核心职责为人工数据筛选/标注与美感评测，建议归扩展样本；待C确认,proposed_pending_C,根据标注规则对数据进行人工标注,raw/detail_79489.json,728222b42a547529ce5f3ea62e3a7d14b7d571cad43ccf5add9677638c9fe20d
+netease,79588,netease_20261101T044527Z_157cf969,游戏测试工程师（第五人格）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 对产品需求进行分析、评审，提前规避有问题需求，设计测试点、测试用例，制定详细的测试计划和测试方案并组织执行测试。
+2. 负责游戏核心功能模块的测试工作，推进测试中的问题解决，及时汇报和反馈进度风险。
+3. 使用和维护各种测试工具和测试",raw/list_000045.json,341857e2fdb4b80f66ca7759af8448f5a7ce76ea2ce3059621c8194bdbba0de8
+netease,68172,netease_20261101T044527Z_157cf969,图形开发工程师（27届+广/沪/杭）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"重要投递须知
+本岗位属于网易互娱27届校招项目，所有流程（简历筛选、笔试、面试、offer）均需要进入“网易互娱校招官网”完成投递后开展，第三方平台仅作信息展示，无法完成正式投递。
+请搜索“网易互娱校招官网”投递简历。或点击链接投递 htt",raw/list_000045.json,341857e2fdb4b80f66ca7759af8448f5a7ce76ea2ce3059621c8194bdbba0de8
+netease,78063,netease_20261101T044527Z_157cf969,游戏AI Agent客户端开发实习生（七日世界）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、承担项目的客户端开发工作
+2、开发和迭代游戏生产工具
+3、参与AI Agent在游戏开发中的落地",raw/list_000047.json,7fea9d92ef4c00b8b8faff1bde35501eda78f39ac321835ec81f2e4811a3a833
+netease,78136,netease_20261101T044527Z_157cf969,游戏研发实习生（引擎方向）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、引擎内部自动化流程建设，探索 AI 在研发流程中的应用。
+2、游戏引擎相关工具和编辑器开发；
+3、游戏客户端性能优化，表现问题排查；",raw/list_000047.json,7fea9d92ef4c00b8b8faff1bde35501eda78f39ac321835ec81f2e4811a3a833
+netease,78296,netease_20261101T044527Z_157cf969,游戏客户端（Gameplay）开发实习生,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,参与游戏玩法的客户端开发和工具的迭代，运用AI的能力解决实际开发中遇到的各种疑难问题。,raw/list_000048.json,cc193b0f6c437750ff1b6cd501c688e071d25ba88d9fbea2736c49e9ab26289c
+netease,79516,netease_20261101T044527Z_157cf969,服务端开发工程师（上海）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 参与UGC游戏平台后端开发，负责核心服务的架构设计、功能开发与日常维护
+2. 设计并开发AI Agent工作流，包括多步推理、工具调用、记忆管理等Agent核心能力的落地实现
+3. 基于LangGraph、Dify等框架构建可编排的A",raw/list_000048.json,cc193b0f6c437750ff1b6cd501c688e071d25ba88d9fbea2736c49e9ab26289c
+netease,78287,netease_20261101T044527Z_157cf969,游戏测试实习生（无限大）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责游戏内日常功能模块的功能测试工作，保证游戏功能的稳定和安全；
+2、与合作团队密切沟通，推进开发、测试进度及问题修复；
+3、熟练使用游戏测试相关工具，结合 AI 技术与工具，解决工作问题，规避同类问题重复出现；
+4、深度体验产品及竞品",raw/list_000048.json,cc193b0f6c437750ff1b6cd501c688e071d25ba88d9fbea2736c49e9ab26289c
+netease,77139,netease_20261101T044527Z_157cf969,性能优化工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责AI自动化Agent需求梳理、方案设计与落地实施，重点赋能游戏的研发，内容生产与运营全流程。
+2、基于大模型搭建智能体，实现引擎开发，游戏设计、内容生成、数据分析等场景的自主规划、工具调用与业务流程自动化。
+3、对接内部系统，完成A",raw/list_000049.json,53dfb5397f0dfa96e5322049679b8e0d1ef0380c75300ee8308d132b85655c14
+netease,79599,netease_20261101T044527Z_157cf969,高级/资深数据采集工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 参与新一代 Agent 驱动的数据采集系统的设计与落地，面向 Web、Android、iOS 等多端场景，持续提升采集系统的成功率、稳定性与可扩展性；
+2. 深入研究多维度数据采集策略，建设站点 / APP 结构自动识别、覆盖策略生成",raw/list_000049.json,53dfb5397f0dfa96e5322049679b8e0d1ef0380c75300ee8308d132b85655c14
+netease,79598,netease_20261101T044527Z_157cf969,高级/资深安全攻防工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责企业红队攻防演练，完成外网突破、内网横向、提权、身份攻击与攻击链构建；开展 LLM/Agent 专项测试，挖掘提示注入、越狱、模型窃取、Agent 劫持、权限逃逸等风险，输出红队报告及修复方案。
+2. 从攻击者视角支撑内容安全建设",raw/list_000049.json,53dfb5397f0dfa96e5322049679b8e0d1ef0380c75300ee8308d132b85655c14
+netease,79597,netease_20261101T044527Z_157cf969,资深AI Agent开发工程师（会员业务）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、围绕会员业务开展 Agent 应用建设，深入理解会员交易、权益等业务需求，将 AI 能力融入业务流程与产品功能，提升业务交付效率与用户体验。
+2、参与 AI 创作工具建设，服务云音乐各业务的素材生产与创意表达，将品牌审美、设计规范与创作",raw/list_000049.json,53dfb5397f0dfa96e5322049679b8e0d1ef0380c75300ee8308d132b85655c14
+netease,79596,netease_20261101T044527Z_157cf969,资深全栈开发工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、参与企业 AI 工作台建设，负责桌面客户端、Web 端及配置管理后台的功能开发，补全 Agent 应用能力，持续优化产品体验。
+2、落实业务线 FDE（面向业务落地）的工作，理解办公、运营、设计等实际工作场景，完成端侧需求定制、工具接入",raw/list_000049.json,53dfb5397f0dfa96e5322049679b8e0d1ef0380c75300ee8308d132b85655c14
+netease,79130,netease_20261101T044527Z_157cf969,高级游戏客户端,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、与策划、美术配合，负责客户端GamePlay模块开发；
+ 2、负责大世界中的战斗逻辑开发、机关逻辑开发，以及其他玩法逻辑开发； 
+3、负责持续优化客户端游戏体验、表现以及性能； 
+4、负责工具链开发和持续改进；",raw/list_000049.json,53dfb5397f0dfa96e5322049679b8e0d1ef0380c75300ee8308d132b85655c14
+netease,71196,netease_20261101T044527Z_157cf969,高级计算机视觉算法工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、 负责人体动作动画相关业务（包括但不限于动作迁移、动作生成、动作理解、运动控制）的算法研究、技术选型、系统架构设计与工程实现 
+2、 主导基于PyTorch/TensorFlow等深度学习框架的高性能、可复现的代码开发与模型训练，构建业",raw/list_000051.json,b9539f020a214a6970974324034493854ab6fe82ec7d50df805cb25659b45d4d
+netease,75851,netease_20261101T044527Z_157cf969,资深客户端开发工程师(大话2经典版),True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责客户端系统模块设计与开发；
+2. 负责客户端系统迭代和性能优化；
+3. 负责客户端工具开发。",raw/list_000051.json,b9539f020a214a6970974324034493854ab6fe82ec7d50df805cb25659b45d4d
+netease,57588,netease_20261101T044527Z_157cf969,资深全栈开发工程师（MPC方向）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责营销采购系统核心业务模块的设计、开发、交付与持续优化，对模块结果和线上质量负责。
+2. 面向采购申请、供应商、合同、订单、收货、发票、对账、付款等复杂业务场景，完成业务建模、流程设计及系统实现。
+3. 解决复杂业务系统中的数据一致",raw/list_000051.json,b9539f020a214a6970974324034493854ab6fe82ec7d50df805cb25659b45d4d
+netease,60311,netease_20261101T044527Z_157cf969,资深全栈开发工程师（小喇叭）-杭州,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 加入效率工程部，负责支撑营销域相关系统服务端的研发和迭代；
+2. 重点关注系统架构设计系统性能、数据一致性、安全稳定性等方面，解决系统开发技术难点，参与架构持续升级；
+3. 关注互联网热点技术的发展方向，能够提出、评估并应用新技术；
+",raw/list_000052.json,e89ba2002d1c066fecf9c6bf706e13384df21118ce77ae9dcd047e78c7aa5ba6
+netease,78130,netease_20261101T044527Z_157cf969,易盾-人工智能算法实习生,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责活体检测、AI人脸伪造检测相关的算法开发与优化工作。
+2、参与活体检测、AI人脸伪造检测相关的技术调研，跟进业界前沿技术发展动态。
+3、参与活体检测、AI人脸伪造检测相关领域的技术创新。",raw/list_000052.json,e89ba2002d1c066fecf9c6bf706e13384df21118ce77ae9dcd047e78c7aa5ba6
+netease,68829,netease_20261101T044527Z_157cf969,游戏测试工程师（kk-上海）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责公司产品技术测试相关工作，推进问题解决，保障产品质量；
+2、负责业务产品管线生产质量保障流程，在质量、效率、流程方面推进优化；
+3、深入产品研发环节，自主识别产品及团队问题并推进迭代。",raw/list_000053.json,1f9e654ca45a8d95f16888b5b0eff3d5c2adab6bfa6dd636d45e1964363f0dbe
+netease,72340,netease_20261101T044527Z_157cf969,AI 平台研发工程师（AI Agent Infra）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"我们正在建设企业级 AI Agent Infra（Agent 基础设施平台），目标是将 Agent 的运行、编排、工具、记忆、安全等通用能力平台化，降低业务构建 Agent 的成本。
+作为 Agent Infra 平台工程师，您将参与大模型",raw/list_000055.json,c46ced2811156476d4a8ce80c924d302e0223b6a4e9c1e7fff37a1e0a1333cd5
+netease,73898,netease_20261101T044527Z_157cf969,AI 应用工程师（知识工程）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、设计并开发基于 LLM/多模态模型的应用、服务与工作流（含 Agent 化编排）。
+2、通过上下文工程、MCP调用、SKILLS设计、RAG等手段提升输出质量、稳定性与可控性。
+3、集成并封装主流模型服务商 API，优化吞吐、延迟、成本",raw/list_000055.json,c46ced2811156476d4a8ce80c924d302e0223b6a4e9c1e7fff37a1e0a1333cd5
+netease,74245,netease_20261101T044527Z_157cf969,AIGC 3D算法研究员,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 针对业务需求定制角色、道具、场景等3D资产AIGC管线，包括但不限于：管线搭建、模型后训练、AI生成内容的后处理优化（如贴图优化、拓扑优化、UV优化、部件优化等）；
+2. 跟踪AIGC 3D领域前沿技术与研究成果，开展预研与创新，优化",raw/list_000055.json,c46ced2811156476d4a8ce80c924d302e0223b6a4e9c1e7fff37a1e0a1333cd5
+netease,75407,netease_20261101T044527Z_157cf969,资深AI应用工程师（AI Coding方向）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、IDE 插件与 CLI 工具开发
+-负责 VS Code/JetBrains 插件的架构设计与核心功能开发，打通 IDE 与内部研发工具链。
+-构建基于命令行的 AI 编程助手，设计并实现 CLI 环境下的友好交互体验。
+2、Codin",raw/list_000055.json,c46ced2811156476d4a8ce80c924d302e0223b6a4e9c1e7fff37a1e0a1333cd5
+netease,76448,netease_20261101T044527Z_157cf969,大数据组件运维工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1.负责大数据相关组件Kafka/Pulsar/ElasticSearch/Hbase部署，运维，监控等工作，保证服务稳定性。
+2.为相关大数据组件提供完善的指标/告警体系，持续优化相关平台与组件的性能与成本。
+3.为相关大数据组件开发运维",raw/list_000055.json,c46ced2811156476d4a8ce80c924d302e0223b6a4e9c1e7fff37a1e0a1333cd5
+netease,76449,netease_20261101T044527Z_157cf969,大数据组件研发工程师（实时方向）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责Kafka/Pulsar/Flink/Iceberg等实时计算核心组件的开发，持续提升功能，性能与稳定性。
+2. 基于实时计算平台和数据湖平台，为业务提供开发与优化服务，并主动分析持续针对下务进行稳定性，性能与成本方面的优化工作。",raw/list_000055.json,c46ced2811156476d4a8ce80c924d302e0223b6a4e9c1e7fff37a1e0a1333cd5
+netease,78042,netease_20261101T044527Z_157cf969,视觉算法工程师（视觉生成&多模态）-广州,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 进入网易游戏人工智能实验室，从事计算机视觉和多模态相关的算法研发和落地工作。
+2. 对图片与视频生成、多模态分析与理解、Agent等相关算法和前沿技术进行预研和跟进。",raw/list_000056.json,5ff197c30f1739b0ea3150bab40cc43de0fe9eeb5a2a394c97ed6648fb3b3601
+netease,78210,netease_20261101T044527Z_157cf969,LLM Agent Memory专家,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"• 主导复杂交互场景（如 Coding Agent、智能 NPC、个人助理）下长期记忆系统的架构设计与核心研发，让 Agent 在多轮、跨次对话中持续理解用户习惯与历史上下文；
+• 负责记忆提取、存储、检索与遗忘机制的全链路实现，解决状态压",raw/list_000056.json,5ff197c30f1739b0ea3150bab40cc43de0fe9eeb5a2a394c97ed6648fb3b3601
+netease,78524,netease_20261101T044527Z_157cf969,大数据平台开发工程师,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责大数据离线计算平台的建设与优化，保障大规模离线计算任务的稳定性与性能。
+2、基于 Iceberg / Lance 构建湖仓一体架构，支撑海量多模态数据资产的统一管理与治理。
+3、推动数据湖与 AI、数据分析等业务场景的深度融合，实现",raw/list_000056.json,5ff197c30f1739b0ea3150bab40cc43de0fe9eeb5a2a394c97ed6648fb3b3601
+netease,78036,netease_20261101T044527Z_157cf969,AI全栈开发工程师（暴雪）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责游戏宣发官网、活动专题页、小程序等前台展示类业务的研发与迭代，承担核心模块、复杂页面和关键交互的设计与开发，保障项目高质量交付。
+2. 基于 Vue3 + Vite 技术栈，负责复杂页面架构设计、组件封装、状态管理、性能优化及跨端",raw/list_000056.json,5ff197c30f1739b0ea3150bab40cc43de0fe9eeb5a2a394c97ed6648fb3b3601
+netease,78729,netease_20261101T044527Z_157cf969,资深Unity引擎开发（在研搜打撤）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责游戏引擎底层架构与核心系统的设计和开发，如渲染、物理、动画等模块
+2、扩展渲染管线与 Shader 材质开发，持续提升画面表现与合批/带宽效率
+3、优化游戏核心性能，独立分析并解决内存、功耗、帧率等关键问题
+4、搭建引擎工具链，开发",raw/list_000057.json,c86ad9e7f883485dddf0c515a83dfe71fe99bbf62af863c85659f4695d38e434
+netease,78820,netease_20261101T044527Z_157cf969,资深客户端开发（天下）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责游戏客户端的设计和开发，包括游戏界面、功能模块等的开发工作； 
+2. 负责游戏客户端的调优，包括性能优化、内存管理、代码优化等工作； 
+3. 负责解决游戏客户端开发过程中的技术问题，确保项目的顺利进行； 
+4. 与游戏策划、美术、",raw/list_000057.json,c86ad9e7f883485dddf0c515a83dfe71fe99bbf62af863c85659f4695d38e434
+netease,78821,netease_20261101T044527Z_157cf969,资深服务器开发（天下）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责游戏项目服务端系统的开发和功能迭代，进行服务端代码的编写、调试、测试和优化，确保代码质量和系统的稳定性； 
+2. 深入优化游戏服务端性能，提高游戏的运行效率和稳定性； 
+3. 参与游戏项目的需求分析和技术选型，为项目提供技术支持和",raw/list_000058.json,b73d9a4df4904610cbf0a2b678c1358aff474e6a4e2a11ff6bad447d3de83ee6
+netease,79294,netease_20261101T044527Z_157cf969,程序类实习生（天下）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1.参与多学科交叉开发：可在 gameplay、工具、简单后端、性能优化等多个领域切换，成为团队的“多面手开发者”。
+2.与策划、美术、数据、运营深度协作：理解业务和体验需求，从技术视角给出创造性的实现方案。
+3.将 AI 能力融入研发流程",raw/list_000058.json,b73d9a4df4904610cbf0a2b678c1358aff474e6a4e2a11ff6bad447d3de83ee6
+netease,79562,netease_20261101T044527Z_157cf969,高级Android开发工程师（LOFTER）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、参与 LOFTER 客户端核心业务迭代，与产品经理、设计师紧密协作，深度参与需求讨论与功能定义，持续关注用户体验，不断改进产品的易用性；
+2.、负责视频方向的客户端技术研发，覆盖视频发布、播放、创作等链路的功能开发与体验优化，提升视频发",raw/list_000058.json,b73d9a4df4904610cbf0a2b678c1358aff474e6a4e2a11ff6bad447d3de83ee6
+netease,79560,netease_20261101T044527Z_157cf969,专项测试工程师（性能）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 以性能专项小组为平台，对接网易顶尖研发团队，为各优秀项目提供专业性能优化服务。 
+2. 深入游戏研发环节，设计并落地性能问题优化方案。 
+3. 探索和研究渲染管线、图形API、3D引擎、系统与硬件等领域的前沿技术，推进性能相关的技术革",raw/list_000059.json,65f0a06090038e521499c8ff0ca5c1dd2570433e70acdccbb99996e084623d70
+netease,79363,netease_20261101T044527Z_157cf969,互动影游平台QA实习生-游戏&影游测试,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1.负责UGC编辑器、UGC客户端、OGC作品等内容的测试工作，保障项目及作品上线后的质量；
+2.根据产品需求和设计文档，编写并维护测试用例，执行功能测试、回归测试、兼容性测试等；
+3.对UGC编辑器进行创作者视角的体验测试，发现交互、流程",raw/list_000061.json,c2e90dc65227a91c9cc735e4bee607aaeb1d496eee27a769d4dbb163629587e3
+netease,72078,netease_20261101T044527Z_157cf969,高级服务器开发（7日世界）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责gameplay玩法系统的开发和维护工作；
+2. 负责服务器优化提升的技术工作；",raw/list_000061.json,c2e90dc65227a91c9cc735e4bee607aaeb1d496eee27a769d4dbb163629587e3
+netease,72961,netease_20261101T044527Z_157cf969,客户端开发工程师（UGC）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责手游系统和各类玩法模块设计开发，排查优化玩法性能；
+2. 学习并运用游戏引擎及各类编辑器工具，参与构建/优化工作流，用技术手段实质性提升团队研发效率；
+3. 与其他职紧密协作沟通，确保需求和技术实现能精准对接，问题能有效反馈；",raw/detail_72961.json,964642bd21589a2af1c2950689d232d872adff76894aad40a949dd8fba958f46
+netease,78824,netease_20261101T044527Z_157cf969,高级全栈开发工程师（出海业务）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责破次元恋人（AI 虚拟恋人产品）海外版各类型项目（H5、App 内 Hybrid、React Native、中后台系统等）的开发工作，前端为主战场。
+2、以模块为单位端到端承接，从页面、接口到服务端实现独立闭环，并对交付质量负责。
+",raw/list_000063.json,62fe139f131eb4e680a5939e2d2978d705691e9aeabba33d4977b0f4fdc84870
+netease,79534,netease_20261101T044527Z_157cf969,资深unity客户端开发工程师（狼人杀）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责项目Unity客户端逻辑功能以及核心模块的设计与开发
+2、负责客户端性能优化、表现优化和兼容性适配
+3、负责工具开发、打包优化
+4、优化工作流程，提高研发效率，对编辑器等开发工具持续进行优化
+5、改善游戏体验和细节，与各部门无间协作",raw/list_000063.json,62fe139f131eb4e680a5939e2d2978d705691e9aeabba33d4977b0f4fdc84870
+netease,79533,netease_20261101T044527Z_157cf969,资深服务器开发工程师（狼人杀）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责游戏服务端功能的需求分析、架构设计与代码实现。
+2. 编写高质量、可维护的服务端代码，严格执行自测流程，确保交付的可靠性与健壮性。
+3. 与客户端、策划、QA等团队紧密协作，保障版本迭代节奏与线上服务质量。
+4. 熟练掌握AI工作",raw/list_000064.json,d5bcdc50f29d57cd1406c540a246443efbffef9fffeeb548d1afa8524eb23a2f
+netease,79532,netease_20261101T044527Z_157cf969,游戏服务端开发（梦幻西游手游）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责服务器日常系统的开发和维护工作。 
+2、负责服务器活动、赛事玩法开发工作。 
+3、负责服务器性能分析和优化提升工作。",raw/list_000064.json,d5bcdc50f29d57cd1406c540a246443efbffef9fffeeb548d1afa8524eb23a2f
+netease,79531,netease_20261101T044527Z_157cf969,游戏客户端开发（梦幻西游 手游）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1、负责日常的客户端系统与功能开发工作；
+2、积极主动与策划、QA、UI、GUI等职能沟通，对客户端表现落地进行有力的支持；
+3、适应敏捷开发模式，持续迭代并优化客户端代码。
+4、高效使用SDD规范完成功能的架构设计和实现，利用ai完成流程",raw/list_000064.json,d5bcdc50f29d57cd1406c540a246443efbffef9fffeeb548d1afa8524eb23a2f
+netease,74970,netease_20261101T044527Z_157cf969,客户端开发（编辑器方向-蛋仔派对）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责手游客户端模块设计、开发； 
+2. 负责工具和编辑器开发、维护； 
+3. 与其他职能保持良好的沟通，确保功能与设计需求一致； 
+4. 对客户端性能、表现、逻辑调优；",raw/detail_74970.json,450867456aacca036a52b27f240ced58a69dcbb4f400d05239dafc683d53b48a
+netease,70487,netease_20261101T044527Z_157cf969,客户端开发（玩法方向-蛋仔派对）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,1. 负责手游客户端功能开发； 2. 负责游戏关卡、物理、角色、技能等游戏功能开发； 3. 和策划同学进行有效沟通，负责关卡玩法模块拆分，支持玩法功能落地。 4. 对负责玩法模块的性能热点进行排查和优化。,raw/list_000065.json,1743d6876a77e7742da7d5f02d26f980ce234b5d42ec9889d6f8d3a8d5b5a432
+netease,70489,netease_20261101T044527Z_157cf969,高级/资深客户端开发（玩法方向）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责手游客户端玩法与功能开发； 
+2. 与其他职能保持良好的沟通，确保功能与设计需求一致； 
+3. 对客户端性能、表现、逻辑调优",raw/list_000065.json,1743d6876a77e7742da7d5f02d26f980ce234b5d42ec9889d6f8d3a8d5b5a432
+netease,77950,netease_20261101T044527Z_157cf969,客户端开发工程师（编辑器及玩法）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 负责游戏系统和玩法的模块设计、开发，对性能、表现调优；
+2. 负责游戏工具和编辑器开发、维护；
+3. 探索AI在游戏开发中的落地应用，跟进AI领域最新技术趋势;
+4. 与其他职能保持良好的沟通，确保功能与设计需求一致；",raw/list_000066.json,39ff05c670ec9ffc1054ca720c24a823e5e82abbb677b9561bc327b94502e640
+netease,79337,netease_20261101T044527Z_157cf969,客户端开发-玩法开发,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1.负责游戏相关系统的设计与开发，参与玩法功能的客户端实现与迭代
+2.与策划同学有效沟通，理解需求并支持玩法功能落地与体验优化，借助AI工具提升开发效率及把握品质
+3.编写清晰、可扩展的程序代码",raw/list_000066.json,39ff05c670ec9ffc1054ca720c24a823e5e82abbb677b9561bc327b94502e640
+netease,64076,netease_20261101T044527Z_157cf969,客户端开发工程师（蛋仔派对）,True,d-netease-core-1.1-proposed,大陆开发、测试、算法、数据或运维安全岗位,proposed_pending_C,"1. 与策划、美术配合，负责战斗玩法开发；
+2. 负责战斗框架搭建和优化，并持续优化游戏体验以及性能；
+3. 负责战斗玩法所需相关工具和编辑器开发。",raw/list_000067.json,d9b26262ac6674f227bd53821c8f40b110e729396b64c3e112f83441151e8555

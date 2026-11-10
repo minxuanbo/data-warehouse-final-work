@@ -1,0 +1,807 @@
+{
+  "schema": "d-human-review-0.2.0",
+  "batch_id": "tencent_20261031T093102Z_366ad0a4",
+  "plan_version": "human-review-0.2.0",
+  "rule_version": "skills-rules-0.2.0",
+  "dictionary_version": "skills-dict-0.1.0",
+  "extractor_sha256": "ee021aaf85de7200973038319c64a6847349c9f2c0418510e470f943d66da7f8",
+  "dictionary_sha256": "6aca91d96edc85b4722a93773a277e28911979c97ab4d08cbb97d5e5c1f920ce",
+  "reviewer": "D阶段正文核对",
+  "method": "原始详情主字段逐条对照；正文参考先录入后与冻结提取器比较；开发10岗与最终10岗隔离；未做交叉审阅。",
+  "scope": "检测仅对冻结词典87项技术按岗位×技能计分；强度按选定原文锚点逐项核对；词典外列示只报告范围缺口，不作为完整开放域技能标注。",
+  "directions": {
+    "1923261618968457216": "后台开发",
+    "1967856352005083136": "多模态算法",
+    "2070151600797827072": "推荐算法",
+    "2112120499797667840": "AI基础设施",
+    "2115702081611546624": "测试开发",
+    "2059160518509379584": "服务端开发",
+    "2082434681986527232": "游戏引擎",
+    "1936827497983352832": "交易治理算法",
+    "2059891450371555328": "数据与评测",
+    "2037425089443692544": "编译优化",
+    "1990262114463404032": "音频算法",
+    "2091785005486489600": "游戏客户端",
+    "2092090907078868992": "游戏服务端",
+    "2090043573536997376": "数据平台",
+    "1961707720809795584": "世界模型算法",
+    "2034532284522196992": "强化学习算法",
+    "2026648959719735296": "AI应用后台",
+    "2037467994921271296": "AI应用后台",
+    "2034237425647255552": "文档理解算法",
+    "2080585827171348480": "游戏客户端"
+  },
+  "reviews": {
+    "1923261618968457216": {
+      "split": "final",
+      "body_sha256": "30075fd347eb8651e0a5eb925c3738be35b3faf476aad0770dd34937e20839f8",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "标题未列城市，原始地点深圳。Go/C/C++至少一种，逐项不能都算必需。",
+      "labels": [
+        {
+          "skill": "Go",
+          "field": "requirements_raw",
+          "level": "不确定",
+          "evidence": "精通Go/C/C++的至少一种"
+        },
+        {
+          "skill": "C",
+          "field": "requirements_raw",
+          "level": "不确定",
+          "evidence": "精通Go/C/C++的至少一种"
+        },
+        {
+          "skill": "C++",
+          "field": "requirements_raw",
+          "level": "不确定",
+          "evidence": "精通Go/C/C++的至少一种"
+        },
+        {
+          "skill": "Linux",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉Linux系统、shell命令、调试工具等"
+        },
+        {
+          "skill": "Shell",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉Linux系统、shell命令、调试工具等"
+        },
+        {
+          "skill": "TCP/IP",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉TCP/IP原理，有网络编程经验"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "1967856352005083136": {
+      "split": "final",
+      "body_sha256": "6a13e875d4d02b48753c6d3ecfcd49c34b2e7b96e40d18b596d529d810fd64ce",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题深圳/北京/上海，地点仅北京，属于部分重合；不扩写地点。冻结词典无正例，不等于岗位无需技术。",
+      "labels": [
+        {
+          "skill": "Diffusion Models",
+          "field": "description_raw",
+          "level": "提及",
+          "evidence": "从事基础大模型的组建研发，如Diffusion Models、Autoregressive Models等"
+        },
+        {
+          "skill": "Autoregressive Models",
+          "field": "description_raw",
+          "level": "提及",
+          "evidence": "从事基础大模型的组建研发，如Diffusion Models、Autoregressive Models等"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2070151600797827072": {
+      "split": "final",
+      "body_sha256": "edd4115ac8345158cb8f6e880f39b0e6c65eae833d2419eff1d5998a8679d27d",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "标题未列城市，地点广州。要求主要是LLM与推荐算法方向，冻结词典无正例。",
+      "labels": [
+        {
+          "skill": "LLM",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉LLM、搜索推荐广告、多模态等领域一个或多个算法模块"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2112120499797667840": {
+      "split": "final",
+      "body_sha256": "245bf7cb0eba0d3b4d23cda3b28fe7d954fc1aa45b945315f57c27b753309355",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "地点深圳；框架熟悉要求与CUDA/NCCL优先条件分开。",
+      "labels": [
+        {
+          "skill": "vLLM",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉vLLM、SGLang等推理框架"
+        },
+        {
+          "skill": "SGLang",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉vLLM、SGLang等推理框架"
+        },
+        {
+          "skill": "DeepSpeed",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉DeepSpeed、Megatron-LM、verl、LLaMA-Factory等训练及分布式框架"
+        },
+        {
+          "skill": "Megatron",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉DeepSpeed、Megatron-LM、verl、LLaMA-Factory等训练及分布式框架"
+        },
+        {
+          "skill": "Verl",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉DeepSpeed、Megatron-LM、verl、LLaMA-Factory等训练及分布式框架"
+        },
+        {
+          "skill": "LLaMA-Factory",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉DeepSpeed、Megatron-LM、verl、LLaMA-Factory等训练及分布式框架"
+        },
+        {
+          "skill": "CUDA",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "有国产GPU适配、CUDA开发、高性能算子开发、AI编译器或NCCL优化经验者优先"
+        },
+        {
+          "skill": "NCCL",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "有国产GPU适配、CUDA开发、高性能算子开发、AI编译器或NCCL优化经验者优先"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2115702081611546624": {
+      "split": "final",
+      "body_sha256": "f5292571eb63598725e904a16399c934686fcbf8caae2b5ae7ec59c655ced78c",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "标题的UE5不作为技能正文证据。职责和要求有通用测试能力、未指定脚本语言名称，冻结词典无正例。",
+      "labels": [],
+      "no_skills": true,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2059160518509379584": {
+      "split": "final",
+      "body_sha256": "e0ca59888643006337dc1c17e6d3e2ccc85997ee0740f56747e9c19888b21e46",
+      "body_check": "issue",
+      "city_check": "same",
+      "note": "地点北京；PostLightItem另写北京/深圳双工作地，保留其口径差异，不扩写地点。 原始ImportantItem另含补充要求，未包含在requirements_raw；本次标签仅按职责与Requirement计分。",
+      "labels": [
+        {
+          "skill": "Unreal Engine",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "3年以上UE开发经验"
+        },
+        {
+          "skill": "C++",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "精通C++"
+        },
+        {
+          "skill": "Unreal Engine",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "深入掌握UE核心机制"
+        },
+        {
+          "skill": "Linux",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟练掌握Linux开发、调试与部署"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2082434681986527232": {
+      "split": "final",
+      "body_sha256": "406f3c4cfb12b35cd4281ad3722e898f4fa506ee4664506432e21be8a3d32ef0",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "标题无城市，地点深圳。Unity/Unreal按熟悉谓语记要求，斜杠本身不自动证明任一即可。Unreal应归Unreal Engine。",
+      "labels": [
+        {
+          "skill": "C++",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "有良好的数学、算法、c++基础"
+        },
+        {
+          "skill": "Unity",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉Unity/Unreal引擎架构"
+        },
+        {
+          "skill": "Unreal Engine",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉Unity/Unreal引擎架构"
+        },
+        {
+          "skill": "Shader",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉shader与渲染管线开发与定制"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "1936827497983352832": {
+      "split": "final",
+      "body_sha256": "cb30556b4e6069f3918e71ae4eb810fcf040faab617ab50e419323943d26833c",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "地点广州。PyTorch/TensorFlow有任一条件，Hive/Flink未写任一，按熟悉谓语记要求。",
+      "labels": [
+        {
+          "skill": "RAG",
+          "field": "description_raw",
+          "level": "提及",
+          "evidence": "RAG 与多模态 Embedding 召回"
+        },
+        {
+          "skill": "RAG",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "Agent 与 Workflow 编排、RAG 等"
+        },
+        {
+          "skill": "Python",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟练使用 Python"
+        },
+        {
+          "skill": "PyTorch",
+          "field": "requirements_raw",
+          "level": "不确定",
+          "evidence": "熟悉 PyTorch / TensorFlow 任一框架"
+        },
+        {
+          "skill": "TensorFlow",
+          "field": "requirements_raw",
+          "level": "不确定",
+          "evidence": "熟悉 PyTorch / TensorFlow 任一框架"
+        },
+        {
+          "skill": "Hive",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉 Hive / Flink"
+        },
+        {
+          "skill": "Flink",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉 Hive / Flink"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2059891450371555328": {
+      "split": "final",
+      "body_sha256": "af51aec6e2e85fbbd1f2c3ff945aae27d12a4d29161e77e99fceb7089dbb0bc8",
+      "body_check": "issue",
+      "city_check": "same",
+      "note": "地点深圳；Python/PyTorch按工程使用要求计，不能从标题补其他技能。 原始ImportantItem另含补充要求，未包含在requirements_raw；本次标签仅按职责与Requirement计分。",
+      "labels": [
+        {
+          "skill": "Python",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟练使用 Python / PyTorch"
+        },
+        {
+          "skill": "PyTorch",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟练使用 Python / PyTorch"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2037425089443692544": {
+      "split": "final",
+      "body_sha256": "44969c1ffee09f1f26419a08aed7f22fa6f786f9becd4428cb7478906fcbec00",
+      "body_check": "issue",
+      "city_check": "different",
+      "note": "标题北京/上海/深圳，地点北京，部分重合。MLIR/Triton/tilelang或其他框架是开放备选组，Triton不能单项记为必需。 原始ImportantItem另含补充要求，未包含在requirements_raw；本次标签仅按职责与Requirement计分。",
+      "labels": [
+        {
+          "skill": "Linux",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉Linux开发环境"
+        },
+        {
+          "skill": "Python",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "掌握Python/C++等语言"
+        },
+        {
+          "skill": "C++",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "掌握Python/C++等语言"
+        },
+        {
+          "skill": "Triton",
+          "field": "requirements_raw",
+          "level": "不确定",
+          "evidence": "精通MLIR、Triton、tilelang或其他CodeGen框架"
+        },
+        {
+          "skill": "MLIR",
+          "field": "requirements_raw",
+          "level": "不确定",
+          "evidence": "精通MLIR、Triton、tilelang或其他CodeGen框架"
+        },
+        {
+          "skill": "tilelang",
+          "field": "requirements_raw",
+          "level": "不确定",
+          "evidence": "精通MLIR、Triton、tilelang或其他CodeGen框架"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "1990262114463404032": {
+      "split": "development",
+      "body_sha256": "d0e5e3c5623496b6d2b824bfb0b99ea6ae41cc09f53f091c0e9366cff4f33fed",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题北京，地点深圳，完全无交集；保留两者待确认。框架段末尾优先作用于并列框架。",
+      "labels": [
+        {
+          "skill": "Python",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟练掌握Python"
+        },
+        {
+          "skill": "PyTorch",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "熟悉Pytorch/Megatron/FSDP等模型训练框架、熟悉SLIME/VERL等RL框架优先"
+        },
+        {
+          "skill": "Megatron",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "熟悉Pytorch/Megatron/FSDP等模型训练框架、熟悉SLIME/VERL等RL框架优先"
+        },
+        {
+          "skill": "FSDP",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "熟悉Pytorch/Megatron/FSDP等模型训练框架、熟悉SLIME/VERL等RL框架优先"
+        },
+        {
+          "skill": "SLIME",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "熟悉Pytorch/Megatron/FSDP等模型训练框架、熟悉SLIME/VERL等RL框架优先"
+        },
+        {
+          "skill": "Verl",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "熟悉Pytorch/Megatron/FSDP等模型训练框架、熟悉SLIME/VERL等RL框架优先"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2091785005486489600": {
+      "split": "development",
+      "body_sha256": "3827faa06c4f3d4bbf80656c530118ad254c96318ab595ddf1c92bcf8f240395",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题上海，地点杭州。C++明确必需；脚本语言是泛指备选，不影响C++；UE同时有必需及优先证据。",
+      "labels": [
+        {
+          "skill": "Unreal Engine",
+          "field": "description_raw",
+          "level": "提及",
+          "evidence": "负责UE引擎中游戏核心主流程、商业化系统、活动系统、小游戏等业务模块的开发与迭代"
+        },
+        {
+          "skill": "C++",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "精通C++和至少一种脚本语言"
+        },
+        {
+          "skill": "Unreal Engine",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "能熟练使用UE等主流游戏引擎"
+        },
+        {
+          "skill": "Unreal Engine",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "有UE使用经验者优先"
+        },
+        {
+          "skill": "Lua",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "有Lua脚本的项目完整经验者优先"
+        },
+        {
+          "skill": "UMG",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟练使用UMG"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2092090907078868992": {
+      "split": "development",
+      "body_sha256": "d30d1b0cd89c4c98e4410ab508a6d4ea30e8c29b05162e9ecbc95d454250f26d",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题上海，地点杭州；结构化经验五年以上而正文三年以上，另记冲突。",
+      "labels": [
+        {
+          "skill": "Unreal Engine",
+          "field": "description_raw",
+          "level": "提及",
+          "evidence": "负责UE5 DS的性能优化、内存优化和带宽优化"
+        },
+        {
+          "skill": "Unreal Engine",
+          "field": "description_raw",
+          "level": "提及",
+          "evidence": "负责UE5 DS的稳定性提升工作"
+        },
+        {
+          "skill": "C++",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟练掌握C++、Lua、Golang等后台开发语言"
+        },
+        {
+          "skill": "Go",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟练掌握C++、Lua、Golang等后台开发语言"
+        },
+        {
+          "skill": "Unreal Engine",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟悉UE引擎的服务器技术体系"
+        },
+        {
+          "skill": "Lua",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟练掌握C++、Lua、Golang等后台开发语言"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2090043573536997376": {
+      "split": "development",
+      "body_sha256": "b84fa7901075404b2840dfba0c37c6bd395a355ebe22bdfed22582700b2d13e1",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题北京，地点深圳。Spark/Hadoop/Ray均为实践经验要求。",
+      "labels": [
+        {
+          "skill": "Spark",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "对常用的数据工程技术如spark、hadoop、ray，文件存储系统有实践经验"
+        },
+        {
+          "skill": "Hadoop",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "对常用的数据工程技术如spark、hadoop、ray，文件存储系统有实践经验"
+        },
+        {
+          "skill": "Ray",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "对常用的数据工程技术如spark、hadoop、ray，文件存储系统有实践经验"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "1961707720809795584": {
+      "split": "development",
+      "body_sha256": "6682d88e9589d78a533de01fd5ff23135c32befdce4ac3ef468a5ed92b26706c",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题北京/上海，地点深圳；冻结词典无正例，算法家族作为词典外范围记录。",
+      "labels": [
+        {
+          "skill": "Diffusion Models",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "有Diffusion Models和Autoregressive Models相关经验优先"
+        },
+        {
+          "skill": "Autoregressive Models",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "有Diffusion Models和Autoregressive Models相关经验优先"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2034532284522196992": {
+      "split": "development",
+      "body_sha256": "a565c310cab61d908bd7925e5f931685955ebf3b8d2549ac12587619431da512",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题北京/上海，地点深圳；冻结词典无正例，不能推断无技能要求。",
+      "labels": [
+        {
+          "skill": "扩散模型",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "有扩散模型、自回归模型、文生图 / 文生视频生成相关经验者优先"
+        },
+        {
+          "skill": "自回归模型",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "有扩散模型、自回归模型、文生图 / 文生视频生成相关经验者优先"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2026648959719735296": {
+      "split": "development",
+      "body_sha256": "56eded6bf8f194215cd32c3ad3fa527ed602aece173fb4bf47008e524b6640eb",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题成都/北京，地点广州，正文明确支持base成都、广州、北京；来源多处口径并存，不直接判采集错误。RAG与知识图谱/NLP是备选经验组。",
+      "labels": [
+        {
+          "skill": "C++",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "精通C++"
+        },
+        {
+          "skill": "Linux",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "拥有3年以上Linux/Unix后台开发经验"
+        },
+        {
+          "skill": "RAG",
+          "field": "requirements_raw",
+          "level": "不确定",
+          "evidence": "具备RAG、知识图谱或NLP相关应用开发经验"
+        },
+        {
+          "skill": "Unix",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "拥有3年以上Linux/Unix后台开发经验"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2037467994921271296": {
+      "split": "development",
+      "body_sha256": "e2dea56b83097d02eb832010a3b475f00c47b4eb47c160e526b814a1f423c082",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题成都/北京，地点广州；要求的RAG为优先，不与职责提及混淆。",
+      "labels": [
+        {
+          "skill": "RAG",
+          "field": "description_raw",
+          "level": "提及",
+          "evidence": "RAG检索增强"
+        },
+        {
+          "skill": "RAG",
+          "field": "description_raw",
+          "level": "提及",
+          "evidence": "负责RAG流程各环节的需求研发与性能调优"
+        },
+        {
+          "skill": "C++",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "精通C++"
+        },
+        {
+          "skill": "Linux",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "有3年以上Linux/Unix后台开发工作经验"
+        },
+        {
+          "skill": "RAG",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "具备RAG等相关开发经验者优先"
+        },
+        {
+          "skill": "Unix",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "有3年以上Linux/Unix后台开发工作经验"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2034237425647255552": {
+      "split": "development",
+      "body_sha256": "83c127adbdcd28f258cfc8eec33a6fbafeb8cf07d2e354ee8d64a61bbb77ffec",
+      "body_check": "pass",
+      "city_check": "different",
+      "note": "标题北京，地点深圳；职责C端不是C语言。C/C++仅从任职要求中取优先证据。",
+      "labels": [
+        {
+          "skill": "Python",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟练使用 Python"
+        },
+        {
+          "skill": "C",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "熟悉或精通 C/C++ 者优先"
+        },
+        {
+          "skill": "C++",
+          "field": "requirements_raw",
+          "level": "优先",
+          "evidence": "熟悉或精通 C/C++ 者优先"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    },
+    "2080585827171348480": {
+      "split": "development",
+      "body_sha256": "0878ce4b7fa852c05da268e4d5b9893ca498785c3b8cd910ab85484112b51058",
+      "body_check": "pass",
+      "city_check": "same",
+      "note": "地点上海，标题无城市。至少2年UE4开发经验是年限下限，不是技能备选。结构化三年以上与正文五年以上另记冲突。",
+      "labels": [
+        {
+          "skill": "Unreal Engine",
+          "field": "description_raw",
+          "level": "提及",
+          "evidence": "负责UE5下开放世界游戏的gameplay开发"
+        },
+        {
+          "skill": "Unreal Engine",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "至少2年UE4开发经验"
+        },
+        {
+          "skill": "C++",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "精通C++"
+        },
+        {
+          "skill": "Unreal Engine",
+          "field": "requirements_raw",
+          "level": "必需",
+          "evidence": "熟练掌握UE底层架构"
+        }
+      ],
+      "no_skills": false,
+      "locked": true,
+      "unblinded_edit": false,
+      "independent_confirmation": true,
+      "comparison": ""
+    }
+  }
+}

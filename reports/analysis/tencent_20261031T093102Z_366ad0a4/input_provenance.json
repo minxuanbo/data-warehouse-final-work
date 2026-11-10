@@ -1,0 +1,20 @@
+{
+  "batch_id": "tencent_20261031T093102Z_366ad0a4",
+  "source": "tencent",
+  "repository_revision_at_run": "fee6bbdf8dcf17f3fc090acaaf11c0a6ace38807",
+  "jobs_sha256": "eec9945879320854c029f67b8826477fc73f94562bd4cbc0cc364608bb617fcc",
+  "manifest_sha256": "0ed9035f07a7d98b4062bd0a0be7dba25ae8046e3dd720c6368c7a6f8f1146bc",
+  "dictionary_sha256": "6aca91d96edc85b4722a93773a277e28911979c97ab4d08cbb97d5e5c1f920ce",
+  "reference_sha256": "b2a1d31596ab303a200c1f81e10c5abf712e070ea250d4ac28f25740afea8845",
+  "extractor_sha256": "ee021aaf85de7200973038319c64a6847349c9f2c0418510e470f943d66da7f8",
+  "runner_sha256": "a3f9cd1815a8754ed458285a1dbdd8164b80f19f5d9669d6bb4811d8ca3d45ca",
+  "reviewed_samples_sha256": "9edd12cf0afe6a6223e966c3df02ca32eba572add51522e5b97a095e0b182b4c",
+  "review_scorer_sha256": "5cdae77ba312b3395ffb38f66e9ec91ec13281e36bc73b3d5ea54c391de9bbad",
+  "dictionary_version": "skills-dict-0.1.0",
+  "rule_version": "skills-rules-0.2.0",
+  "input_acceptance_status": "accepted",
+  "input_acceptance_scope": "pilot_technical",
+  "coverage_status": "partial",
+  "input_files_checked": 128,
+  "raw_checks_passed": true
+}

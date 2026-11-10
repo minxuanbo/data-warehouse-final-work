@@ -1,0 +1,2 @@
+{"source_job_id": "72340", "split": "final", "skill_name": "Docker", "kind": "false_negative"}
+{"source_job_id": "72340", "split": "final", "kind": "level_or_evidence_mismatch", "expected": {"skill": "Docker", "field": "requirements_raw", "level": "不确定", "evidence": "Dock.er", "evidence_start": 200, "evidence_end": 207}}

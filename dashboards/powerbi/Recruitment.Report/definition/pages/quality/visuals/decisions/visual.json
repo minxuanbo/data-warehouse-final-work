@@ -1,0 +1,64 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "decisions",
+  "position": {
+    "x": 24,
+    "y": 400,
+    "z": 0,
+    "height": 170,
+    "width": 1380,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "网易：78482、79489 归扩展；78590 城市冲突；71196 学历冲突。\n13 条经验提示中 12 条为冲突；78729 为建议，保留“不限”。\n腾讯：2 条扩展、9 条城市冲突、3 条经验差异；确认一岗北京/深圳双工作地。",
+                    "textStyle": {
+                      "fontSize": "17pt",
+                      "fontFamily": "Segoe UI",
+                      "color": "#123047"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

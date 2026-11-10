@@ -1,0 +1,6 @@
+{"source_job_id": "2091785005486489600", "split": "development", "kind": "level_or_evidence_mismatch", "expected": {"skill": "Unreal Engine", "field": "requirements_raw", "level": "必需", "evidence": "能熟练使用UE等主流游戏引擎"}}
+{"source_job_id": "2026648959719735296", "split": "development", "kind": "level_or_evidence_mismatch", "expected": {"skill": "RAG", "field": "requirements_raw", "level": "不确定", "evidence": "具备RAG、知识图谱或NLP相关应用开发经验"}}
+{"source_job_id": "2080585827171348480", "split": "development", "kind": "level_or_evidence_mismatch", "expected": {"skill": "Unreal Engine", "field": "requirements_raw", "level": "必需", "evidence": "至少2年UE4开发经验"}}
+{"source_job_id": "2082434681986527232", "split": "final", "skill_name": "Unreal Engine", "kind": "false_negative"}
+{"source_job_id": "2082434681986527232", "split": "final", "kind": "level_or_evidence_mismatch", "expected": {"skill": "Unreal Engine", "field": "requirements_raw", "level": "必需", "evidence": "熟悉Unity/Unreal引擎架构"}}
+{"source_job_id": "2037425089443692544", "split": "final", "kind": "level_or_evidence_mismatch", "expected": {"skill": "Triton", "field": "requirements_raw", "level": "不确定", "evidence": "精通MLIR、Triton、tilelang或其他CodeGen框架"}}
