@@ -8,3 +8,4 @@ data/** -text
 # Preserve original newlines inside quoted CSV evidence; writers control row endings.
 /reports/analysis/** -text
 /reports/analysis/**/*.csv -whitespace
+warehouse/cd_policy.json -text

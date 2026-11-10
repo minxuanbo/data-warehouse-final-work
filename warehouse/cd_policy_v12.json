@@ -1,0 +1,26 @@
+{
+  "scope_version": "digital_jobs_cn_core_v1.2",
+  "enrichment_version": "two_source_details_v1.2",
+  "body_hash_version": "skills-body-1.1",
+  "skill_input_fields": ["description_raw", "requirements_raw", "additional_requirements_raw"],
+  "sources": {
+    "tencent": {
+      "excluded_jobs": {
+        "2072248701686034432": "售前解决方案与POC，保留为扩展样本",
+        "2082723395740549120": "技术趋势与战略研究，保留为扩展样本"
+      },
+      "additional_locations": {
+        "2059160518509379584": {"evidence_field": "PostLightItem", "evidence": "北京/深圳双工作地选择", "locations": ["北京", "深圳"]}
+      },
+      "experience_hint_only": []
+    },
+    "netease": {
+      "excluded_jobs": {
+        "78482": "主要职责为多模态数据人工筛选及标注，保留为扩展样本",
+        "79489": "主要职责为多模态数据人工筛选及标注，保留为扩展样本"
+      },
+      "additional_locations": {},
+      "experience_hint_only": ["78729"]
+    }
+  }
+}

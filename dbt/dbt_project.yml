@@ -1,0 +1,17 @@
+name: recruitment_dw
+version: '0.1.0'
+config-version: 2
+profile: recruitment_dw
+model-paths: [models]
+test-paths: [tests]
+macro-paths: [macros]
+models:
+  recruitment_dw:
+    +materialized: view
+    +as_columnstore: false
+    dws:
+      +schema: dws
+    ads:
+      +schema: ads
+flags:
+  send_anonymous_usage_stats: false
