@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-10",
+  "database": "recruitment_dw_dev_bi_repro",
+  "entrypoint": "scripts/run_skills_v11.ps1",
+  "status": "passed",
+  "dbt_models": 19,
+  "dbt_tests": 9,
+  "offline_tests": 40,
+  "builds": [
+    {
+      "source": "tencent",
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "build_id": 2,
+      "denominator": 98,
+      "eligible_posting_skill_pairs": 333,
+      "evidence_rows": 552,
+      "body_hash_version": "skills-body-1.1",
+      "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
+      "rule_version": "skills-rules-0.3.0",
+      "dictionary_version": "skills-dict-0.2.0",
+      "experience_conflicts": 3,
+      "experience_hints": 3,
+      "education_conflicts": 0
+    },
+    {
+      "source": "netease",
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "build_id": 3,
+      "denominator": 98,
+      "eligible_posting_skill_pairs": 334,
+      "evidence_rows": 515,
+      "body_hash_version": "skills-body-1.1",
+      "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
+      "rule_version": "skills-rules-0.3.0",
+      "dictionary_version": "skills-dict-0.2.0",
+      "experience_conflicts": 12,
+      "experience_hints": 13,
+      "education_conflicts": 1
+    }
+  ],
+  "note": "New database recreated from fixed Git inputs; report in current dev database remains pinned to its own builds. SQL connection timeouts occurred under low available memory; after closing unused apps, all import queries completed and full database reconstruction passed."
+}

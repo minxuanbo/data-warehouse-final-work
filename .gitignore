@@ -30,3 +30,11 @@ dbt/target/
 dbt/logs/
 dbt/dbt_packages/
 dbt/.user.yml
+
+# Power BI project definitions are tracked; machine state and caches are local.
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+**/.pbi/unappliedChanges.json
+**/.pbi/RegisteredResources/
+*.pbix
+*.pbit
