@@ -21,7 +21,7 @@ def write_json(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
 
 
-def sql_queries(ids):
+def sql_queries(ids,qualification_release_id=None):
     """Every query pins the same immutable build IDs, never a moving pointer."""
     selected = ','.join(str(int(x)) for x in ids)
     jobs = f"SELECT * FROM ads.cd_job_detail WHERE build_id IN ({selected})"
@@ -29,17 +29,26 @@ def sql_queries(ids):
     eligible = f"""SELECT DISTINCT CONCAT(build_id,'|',source_job_id) AS job_key, skill_name
       FROM ads.cd_skill_evidence
       WHERE build_id IN ({selected}) AND is_core=1 AND eligible_for_metric=1"""
+    education_group="CASE WHEN j.education_conflict=1 THEN N'冲突待确认' ELSE COALESCE(NULLIF(j.education_raw,N''),N'未知') END"
+    experience_group="CASE WHEN j.experience_conflict=1 THEN N'冲突待确认' ELSE COALESCE(NULLIF(j.experience_raw,N''),N'未知') END"
+    qualification_join=''
+    if qualification_release_id is not None:
+        rid=int(qualification_release_id)
+        qualification_join=f' JOIN ads.release_job_detail q ON q.build_id=j.build_id AND q.observation_key=j.observation_key AND q.release_id={rid}'
+        education_group='q.education_group';experience_group='q.experience_group'
     return {
-        'Builds': f"SELECT * FROM ads.current_analysis_builds WHERE build_id IN ({selected})",
+        # The pointer is consulted once, before generation. Every import query,
+        # including metadata, must remain readable after that pointer changes.
+        'Builds': f"SELECT * FROM ads.cd_overview WHERE build_id IN ({selected})",
         'Jobs': f"""SELECT {key} AS job_key,j.build_id,j.source,j.batch_id,j.source_job_id,j.title_raw,
           CAST(j.analysis_date AS date) AS analysis_date,
-          COALESCE(NULLIF(j.category_raw,N''),N'未知') AS category_group,
-          CASE WHEN j.experience_conflict=1 THEN N'冲突待确认' ELSE COALESCE(NULLIF(j.experience_raw,N''),N'未知') END AS experience_group,
-          CASE WHEN j.education_conflict=1 THEN N'冲突待确认' ELSE COALESCE(NULLIF(j.education_raw,N''),N'未知') END AS education_group,
+          COALESCE(NULLIF(j.category_raw,N''),N'未知') AS source_category_group,
+          {experience_group} AS experience_group,
+          {education_group} AS education_group,
           j.is_core,j.body_valid,j.location_conflict,j.experience_conflict,j.education_conflict,
           j.experience_hint,j.source_url,j.scope_reason,j.content_json,j.additional_requirements_raw,
           j.issues_json,j.raw_ref,j.raw_sha256,j.body_hash_version,j.skill_text_scope
-          FROM ({jobs}) j""",
+          FROM ({jobs}) j{qualification_join}""",
         'CityJobs': f"""SELECT DISTINCT {key} AS job_key,
           CASE WHEN j.location_conflict=1 THEN N'冲突待确认'
             WHEN RIGHT(loc.value,1)=N'市' THEN LEFT(loc.value,LEN(loc.value)-1)
@@ -66,7 +75,7 @@ TABLE_COLUMNS = {
     'Builds': [('source','string'),('batch_id','string'),('build_id','int64'),('skill_denominator','int64'),
                ('body_hash_version','string'),('skill_text_scope','string'),('dictionary_version','string'),
                ('rule_version','string'),('scope_version','string')],
-    'Jobs': [(x,'string') for x in ('job_key','source','batch_id','source_job_id','title_raw','category_group',
+    'Jobs': [(x,'string') for x in ('job_key','source','batch_id','source_job_id','title_raw','source_category_group',
              'experience_group','education_group','source_url','scope_reason','content_json',
              'additional_requirements_raw','issues_json','raw_ref','raw_sha256','body_hash_version','skill_text_scope')]
              + [('build_id','int64'),('analysis_date','dateTime')]
@@ -109,11 +118,11 @@ def measures():
             for name,expr in values.items()]
 
 
-def model(ids, server, database):
+def model(ids, server, database,qualification_release_id=None):
     connection = (f'driver={{ODBC Driver 18 for SQL Server}};server={server};database={database};'
                   'encrypt=yes;trustservercertificate=yes;')
     tables = []
-    for name, query in sql_queries(ids).items():
+    for name, query in sql_queries(ids,qualification_release_id).items():
         # M literals escape quotes by doubling them, not by backslash.
         quote = lambda s: '"' + s.replace('"','""') + '"'
         expression = f'Odbc.Query({quote(connection)}, {quote(query)})'
@@ -228,7 +237,7 @@ def report():
         vs=[textbox('title',title,24,16,1380,52,24),
             textbox('note','PARTIAL 小批样本 · 来源岗位数 · 两源观察日不同 · 不代表招聘市场全量或每日趋势',24,72,1380,34,11)]
         for i,(t,col,label) in enumerate([('Builds','source','来源'),('CityJobs','city','城市（多工作地可重复归组）'),
-              ('Jobs','experience_group','经验'),('Jobs','category_group','源类别'),('Jobs','education_group','学历')]):
+              ('Jobs','experience_group','经验'),('Jobs','source_category_group','来源原类别'),('Jobs','education_group','学历')]):
             vs.append(visual('filter'+str(i),'slicer',24+i*280,114,268,104,{'Values':[c(t,col)]},label,
                      {'data':[{'properties':{'mode':literal('Dropdown')}}],
                       'selection':[{'properties':{'singleSelect':literal(False)}}]}))

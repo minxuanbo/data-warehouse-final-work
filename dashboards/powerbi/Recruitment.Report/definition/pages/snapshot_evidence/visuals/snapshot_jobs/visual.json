@@ -1,0 +1,375 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "snapshot_jobs",
+  "position": {
+    "x": 24,
+    "y": 250,
+    "z": 0,
+    "height": 170,
+    "width": 1382,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotJobs"
+                    }
+                  },
+                  "Property": "source"
+                }
+              },
+              "queryRef": "SnapshotJobs.source",
+              "nativeQueryRef": "source",
+              "displayName": "来源"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotJobs"
+                    }
+                  },
+                  "Property": "source_job_id"
+                }
+              },
+              "queryRef": "SnapshotJobs.source_job_id",
+              "nativeQueryRef": "source_job_id",
+              "displayName": "来源岗位 ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotJobs"
+                    }
+                  },
+                  "Property": "title_raw"
+                }
+              },
+              "queryRef": "SnapshotJobs.title_raw",
+              "nativeQueryRef": "title_raw",
+              "displayName": "岗位名称"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotJobs"
+                    }
+                  },
+                  "Property": "category_group"
+                }
+              },
+              "queryRef": "SnapshotJobs.category_group",
+              "nativeQueryRef": "category_group",
+              "displayName": "标准岗位类别"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotJobs"
+                    }
+                  },
+                  "Property": "education_group"
+                }
+              },
+              "queryRef": "SnapshotJobs.education_group",
+              "nativeQueryRef": "education_group",
+              "displayName": "学历分组"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotJobs"
+                    }
+                  },
+                  "Property": "experience_group"
+                }
+              },
+              "queryRef": "SnapshotJobs.experience_group",
+              "nativeQueryRef": "experience_group",
+              "displayName": "经验分组"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotJobs"
+                    }
+                  },
+                  "Property": "source_url"
+                }
+              },
+              "queryRef": "SnapshotJobs.source_url",
+              "nativeQueryRef": "source_url",
+              "displayName": "来源链接"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotJobs"
+                    }
+                  },
+                  "Property": "education_basis_label"
+                }
+              },
+              "queryRef": "SnapshotJobs.education_basis_label",
+              "nativeQueryRef": "education_basis_label",
+              "displayName": "学历依据"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "SnapshotJobs"
+                  }
+                },
+                "Property": "title_raw"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'固定快照的来源岗位（单击岗位行查看证据）'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#123047'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b451df6aa1d04b5bc71a",
+        "displayName": "来源",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotJobs"
+              }
+            },
+            "Property": "source"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "af5284989cd9e7e525d0",
+        "displayName": "来源岗位 ID",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotJobs"
+              }
+            },
+            "Property": "source_job_id"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c9657d4291061524e1d5",
+        "displayName": "岗位名称",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotJobs"
+              }
+            },
+            "Property": "title_raw"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5d6070b333740e254960",
+        "displayName": "标准岗位类别",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotJobs"
+              }
+            },
+            "Property": "category_group"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cb5d429be532ccad0b1e",
+        "displayName": "学历分组",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotJobs"
+              }
+            },
+            "Property": "education_group"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e1aab5cfbcad00772e80",
+        "displayName": "经验分组",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotJobs"
+              }
+            },
+            "Property": "experience_group"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d493629888de0b269969",
+        "displayName": "来源链接",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotJobs"
+              }
+            },
+            "Property": "source_url"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

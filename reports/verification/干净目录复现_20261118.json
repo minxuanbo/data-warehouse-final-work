@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "database": "recruitment_dw_dev_qualification_20261118",
+  "release_id": 1,
+  "source_counts": [
+    {
+      "source": "netease",
+      "source_postings": 100,
+      "core_postings": 98,
+      "body_denominator": 98
+    },
+    {
+      "source": "tencent",
+      "source_postings": 100,
+      "core_postings": 98,
+      "body_denominator": 98
+    }
+  ],
+  "posting_skill_pairs": [
+    {
+      "source": "netease",
+      "posting_skill_pairs": 334
+    },
+    {
+      "source": "tencent",
+      "posting_skill_pairs": 333
+    }
+  ],
+  "inputs": "tracked repository files at the pinned source revisions",
+  "pipeline": {
+    "started_at": "2026-11-18T03:59:29.665074+00:00",
+    "database": "recruitment_dw_dev_qualification_20261118",
+    "pending_batches": [],
+    "inputs": [
+      {
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "load": "loaded_trial",
+        "analysis": {
+          "status": "ready",
+          "build_id": 1,
+          "jobs": 100,
+          "core_jobs": 98,
+          "evidence": 552,
+          "bridge_rows": 528
+        }
+      },
+      {
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "load": "loaded_trial",
+        "analysis": {
+          "status": "ready",
+          "build_id": 2,
+          "jobs": 100,
+          "core_jobs": 98,
+          "evidence": 515,
+          "bridge_rows": 489
+        }
+      }
+    ],
+    "status": "passed",
+    "release": {
+      "status": "ready",
+      "release_id": 1,
+      "channel": "sample",
+      "source_observations": 200,
+      "dates": [
+        "2026-10-31",
+        "2026-11-01"
+      ]
+    },
+    "publication": {
+      "status": "published",
+      "release_id": 1,
+      "previous_release_id": null,
+      "channel": "sample"
+    },
+    "finished_at": "2026-11-18T04:00:04.621936+00:00"
+  },
+  "powerbi_prepared": false
+}

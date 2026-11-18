@@ -143,6 +143,10 @@ def write_readme(batch, *, counts, args, parser_version, commit, rows, metas,
     stop_note = f"本批到 {args.target} 条即停止，属于截取样本。" \
         if counts["output_records"] >= args.target \
         else f"本批翻满 {counts['list_pages']} 页仍未达到 {args.target} 条目标，属于截取样本。"
+    if getattr(args,'until_exhausted',False):
+        output_note='按批准查询范围遍历至空页' if stop_reason=='source_exhausted' else '遍历在保护条件下提前停止'
+        stop_note='完整性以原始分页、稳定总数与唯一ID对账为准；'+('本批证据支持complete。' if batch.manifest['coverage_status']=='complete' else '本批证据不足，保留partial。')
+    target_argument='--until-exhausted' if getattr(args,'until_exhausted',False) else f'--target {args.target}'
     restriction_note = {
         "list": "本批列表请求期间触发，已停止后续列表与详情请求",
         "detail": "本批详情抽查期间触发，已停止后续详情请求",
@@ -176,7 +180,7 @@ def write_readme(batch, *, counts, args, parser_version, commit, rows, metas,
 
 - 来源：netease（网易社会招聘 https://hr.163.com/）；负责人：B（姓名/学号待填）
 - 规范：schema v1.0；范围：digital_jobs_cn_v1；阶段：pilot
-- 实际执行命令：`python -m collectors.netease --batch-dir data/netease/{batch.batch_id} --target {args.target} --max-pages {args.max_pages} --page-size {args.page_size} --interval {args.interval} --detail-samples {args.detail_samples}`
+- 实际执行命令：`python -m collectors.netease --batch-dir data/netease/{batch.batch_id} {target_argument} --max-pages {args.max_pages} --page-size {args.page_size} --interval {args.interval} --detail-samples {args.detail_samples}`
 - 依赖：Python 3.12+，仅标准库（`collectors/netease/requirements.txt`）
 - 采集版本：`{collector_version}`，commit `{collector_commit}`（本批数据由该版本生成）
 {fix_line}- 采集版本源码校验（SHA-256，UTF-8，LF 换行归一化，前 12 位）：{source_line}
@@ -203,7 +207,7 @@ def write_readme(batch, *, counts, args, parser_version, commit, rows, metas,
 未处理的 ID（下一批可继续采，不在本批 jobs 中）：
 {('`' + '`、`'.join(counts['unprocessed_ids']) + '`') if counts['unprocessed_ids'] else '无'}
 
-`coverage_status=partial`，`stop_reason={stop_reason}`：{stop_note}
+`coverage_status={batch.manifest['coverage_status']}`，`stop_reason={stop_reason}`：{stop_note}
 
 ## 2. 范围与分布（仅描述本批样本，不代表网易全部岗位）
 

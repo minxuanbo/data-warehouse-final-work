@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="790" viewBox="0 0 1600 790">
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#50677c"/></marker></defs>
+<text x="800" y="48" font-family="Microsoft YaHei, sans-serif" font-size="30" text-anchor="middle" fill="#172e42">图3-1 公开数字技术岗位需求分析信息包</text>
+<text x="800" y="89" font-family="Microsoft YaHei, sans-serif" font-size="22" text-anchor="middle" fill="#172e42">使用者：人才培训与就业指导规划人员   决策：岗位方向、技能训练与门槛适配</text>
+<text x="40" y="137" font-family="Microsoft YaHei, sans-serif" font-size="22" text-anchor="start" fill="#172e42">业务观察：官网在扫描窗口可见的岗位状态；一份日样本内，同一来源岗位只计一次。</text>
+<rect x="40" y="175" width="253" height="58" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="166" y="212" font-family="Microsoft YaHei, sans-serif" font-size="24" text-anchor="middle" fill="#172e42">时间</text>
+<rect x="40" y="233" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="52" y="268" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">年 → 季度 → 月 → 日</text>
+<rect x="40" y="289" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="52" y="324" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">北京时间批次结束日</text>
+<rect x="40" y="345" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="52" y="380" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">不是企业发布日期</text>
+<rect x="40" y="401" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="52" y="436" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">当前不具备完整日趋势</text>
+<rect x="293" y="175" width="253" height="58" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="419" y="212" font-family="Microsoft YaHei, sans-serif" font-size="24" text-anchor="middle" fill="#172e42">来源与企业</text>
+<rect x="293" y="233" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="305" y="268" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">来源、企业分别分析</text>
+<rect x="293" y="289" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="305" y="324" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">腾讯 / 网易官网</text>
+<rect x="293" y="345" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="305" y="380" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">企业保留来源品牌名</text>
+<rect x="293" y="401" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="305" y="436" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">不将来源当法律雇主</text>
+<rect x="546" y="175" width="253" height="58" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="672" y="212" font-family="Microsoft YaHei, sans-serif" font-size="24" text-anchor="middle" fill="#172e42">岗位方向</text>
+<rect x="546" y="233" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="558" y="268" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">标准类别 → 岗位明细</text>
+<rect x="546" y="289" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="558" y="324" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">开发 / 测试 / 数据</text>
+<rect x="546" y="345" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="558" y="380" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">算法AI / 运维安全</text>
+<rect x="546" y="401" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="558" y="436" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">源类别与标准类别分列</text>
+<rect x="799" y="175" width="253" height="58" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="925" y="212" font-family="Microsoft YaHei, sans-serif" font-size="24" text-anchor="middle" fill="#172e42">学历与经验</text>
+<rect x="799" y="233" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="811" y="268" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">两个独立分析属性</text>
+<rect x="799" y="289" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="811" y="324" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">本科、硕士等门槛</text>
+<rect x="799" y="345" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="811" y="380" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">经验原区间保守保留</text>
+<rect x="799" y="401" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="811" y="436" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">未知 / 不限 / 冲突分开</text>
+<rect x="1052" y="175" width="253" height="58" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="1178" y="212" font-family="Microsoft YaHei, sans-serif" font-size="24" text-anchor="middle" fill="#172e42">地点</text>
+<rect x="1052" y="233" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="1064" y="268" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">省 → 市</text>
+<rect x="1052" y="289" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="1064" y="324" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">一个岗位可有多地点</text>
+<rect x="1052" y="345" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="1064" y="380" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">按岗位集合取并集</text>
+<rect x="1052" y="401" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="1064" y="436" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">未映射不猜省份</text>
+<rect x="1305" y="175" width="253" height="58" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="1431" y="212" font-family="Microsoft YaHei, sans-serif" font-size="24" text-anchor="middle" fill="#172e42">技能</text>
+<rect x="1305" y="233" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="1317" y="268" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">标准技能名</text>
+<rect x="1305" y="289" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="1317" y="324" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">一个岗位可有多技能</text>
+<rect x="1305" y="345" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="1317" y="380" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">必需 / 优先 / 明确提及</text>
+<rect x="1305" y="401" width="253" height="56" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<text x="1317" y="436" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">否定与不确定仅审计</text>
+<rect x="40" y="490" width="1518" height="216" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="40" y="490" width="1518" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="54" y="521" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">业务度量与汇总规则</text>
+<text x="54" y="565" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">B01 岗位结构：不同核心岗位数、地区及方向分布；岗位数不是实际招聘人数。</text>
+<text x="54" y="595" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">B02 技能需求：技能 / 组合覆盖岗位数 ÷ 有效正文岗位数；零技能命中仍保留正文分母。</text>
+<text x="54" y="625" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">B03 门槛适配：学历、经验分布及技能交叉；未知和冲突单独解释。</text>
+<text x="54" y="655" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">B04 观察变化：同范围、同规则、相邻完整日成立才计算；不等于企业新增或关闭。</text>
+<text x="54" y="685" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">可加性：跨日岗位重复需去重，多技能 / 多城市分组不直接相加，比率重算分子分母。</text>
+<text x="40" y="758" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">质量、采集与发布是分析支撑；业务实体 ER 不替代这个数仓概念模型。</text>
+</svg>

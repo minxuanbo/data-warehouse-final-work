@@ -1,3 +1,3 @@
 """腾讯招聘公开岗位采集器（课程项目，单并发、低频访问）。"""
 
-COLLECTOR_VERSION = "1.0.0"
+COLLECTOR_VERSION = "1.1.0"

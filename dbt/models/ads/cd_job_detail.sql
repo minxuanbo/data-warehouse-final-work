@@ -1,6 +1,7 @@
 select b.build_id,b.scope_version,b.dictionary_version,b.rule_version,b.body_hash_version,b.status as build_status,
  o.batch_id,i.source,i.source_job_id,o.observation_key,o.version_key,o.title_raw,o.analysis_date,
- o.category_raw,o.education_raw,o.experience_raw,o.source_url,o.body_valid,
+ o.category_raw,o.education_raw,o.experience_raw,o.source_url,
+ {{ skill_body_valid('o.body_valid', 'e.additional_requirements_raw', 'b.skill_text_scope') }} as body_valid,
  e.is_core,e.scope_reason,e.additional_requirements_raw,e.location_notes_raw,
  e.location_conflict,e.experience_conflict,e.education_conflict,e.experience_hint,e.confirmed_locations_json,e.issues_json,
  e.raw_ref,e.raw_sha256,v.payload as content_json,

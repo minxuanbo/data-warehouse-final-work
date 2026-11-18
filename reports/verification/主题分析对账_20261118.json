@@ -1,0 +1,207 @@
+{
+  "checked_at_utc": "2026-11-18T03:57:48.347114+00:00",
+  "status": "passed",
+  "database": "recruitment_dw_dev_cd_v1",
+  "release_id": 5,
+  "checks": [
+    "snapshot_grain",
+    "structure_population",
+    "entry_population",
+    "skill_numerator",
+    "skill_denominator",
+    "partial_change_gate"
+  ],
+  "sources": {
+    "tencent": {
+      "source_postings": 100,
+      "core_postings": 98,
+      "body_denominator": 98,
+      "posting_skill_pairs": 333,
+      "dates": [
+        "2026-10-31"
+      ]
+    },
+    "netease": {
+      "source_postings": 100,
+      "core_postings": 98,
+      "body_denominator": 98,
+      "posting_skill_pairs": 334,
+      "dates": [
+        "2026-11-01"
+      ]
+    }
+  },
+  "standard_category_counts": {
+    "开发": 134,
+    "算法/AI": 39,
+    "测试": 15,
+    "数据开发/分析": 6,
+    "运维/安全": 2
+  },
+  "top_skills": [
+    [
+      "C++",
+      63
+    ],
+    [
+      "Python",
+      54
+    ],
+    [
+      "Unreal Engine",
+      30
+    ],
+    [
+      "Linux",
+      24
+    ],
+    [
+      "C",
+      22
+    ],
+    [
+      "Unity",
+      22
+    ],
+    [
+      "PyTorch",
+      19
+    ],
+    [
+      "RAG",
+      19
+    ],
+    [
+      "Lua",
+      16
+    ],
+    [
+      "MCP",
+      15
+    ]
+  ],
+  "top_pairs": [
+    [
+      [
+        "C++",
+        "Python"
+      ],
+      26
+    ],
+    [
+      [
+        "C",
+        "C++"
+      ],
+      22
+    ],
+    [
+      [
+        "C++",
+        "Unreal Engine"
+      ],
+      19
+    ],
+    [
+      [
+        "C",
+        "Python"
+      ],
+      15
+    ],
+    [
+      [
+        "C++",
+        "Unity"
+      ],
+      13
+    ],
+    [
+      [
+        "C++",
+        "Linux"
+      ],
+      12
+    ],
+    [
+      [
+        "Unity",
+        "Unreal Engine"
+      ],
+      12
+    ],
+    [
+      [
+        "C++",
+        "Lua"
+      ],
+      11
+    ],
+    [
+      [
+        "PyTorch",
+        "Python"
+      ],
+      11
+    ],
+    [
+      [
+        "Claude Code",
+        "Cursor"
+      ],
+      10
+    ]
+  ],
+  "education": [
+    [
+      [
+        "netease",
+        "不限"
+      ],
+      13
+    ],
+    [
+      [
+        "netease",
+        "冲突待确认"
+      ],
+      25
+    ],
+    [
+      [
+        "netease",
+        "本科"
+      ],
+      58
+    ],
+    [
+      [
+        "netease",
+        "硕士"
+      ],
+      2
+    ],
+    [
+      [
+        "tencent",
+        "未注明"
+      ],
+      50
+    ],
+    [
+      [
+        "tencent",
+        "本科"
+      ],
+      36
+    ],
+    [
+      [
+        "tencent",
+        "硕士"
+      ],
+      12
+    ]
+  ],
+  "note": "Category mapping is automatic initial classification; no human-review accuracy claim."
+}

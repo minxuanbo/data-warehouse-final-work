@@ -1,0 +1,453 @@
+version: 2
+models:
+- name: cd_city
+  description: 每构建×确认地点/冲突/未知组一行；来自核心 cd_job_detail，按 observation_key 去重。未统一行政区划与市后缀；BI 另作展示归一，各城市计数不可相加。
+  columns:
+  - name: build_id
+    description: 不可变分析构建标识，引用 audit.analysis_build；一个构建绑定一个来源批次及规则集。
+  - name: city_group
+    description: 城市/地点分析分组；冲突与未知单列。cd_city 保留确认地点原值；dual_city 使用历史有限别名规则。
+  - name: posting_count
+    description: 当前分组中的不同来源岗位观察数；多技能/多城市分组不可直接加总。
+- name: cd_education
+  description: 每构建×学历组一行；来自核心 cd_job_detail，冲突独立成组，NULL 为未知；按来源岗位观察计数。
+  columns:
+  - name: build_id
+    description: 不可变分析构建标识，引用 audit.analysis_build；一个构建绑定一个来源批次及规则集。
+  - name: education_group
+    description: 学历分布分组，NULL 归未知，冲突单组；不是已完成的标准学历维度。
+  - name: posting_count
+    description: 当前分组中的不同来源岗位观察数；多技能/多城市分组不可直接加总。
+- name: cd_experience
+  description: 每构建×经验组一行；来自核心 cd_job_detail，冲突独立成组；提示并不自动变冲突，NULL 为未知。
+  columns:
+  - name: build_id
+    description: 不可变分析构建标识，引用 audit.analysis_build；一个构建绑定一个来源批次及规则集。
+  - name: experience_group
+    description: 经验分布组，NULL 归未知，冲突独立；不限与未知不合并。
+  - name: posting_count
+    description: 当前分组中的不同来源岗位观察数；多技能/多城市分组不可直接加总。
+- name: cd_job_detail
+  description: 每 ready 构建×来源岗位观察一行；连接构建、观察扩展、观察事实、身份、内容版本及批次；包括核心与扩展。当前不是跨源归并岗位，也不是每日快照。
+  columns:
+  - name: build_id
+    description: 不可变分析构建标识，引用 audit.analysis_build；一个构建绑定一个来源批次及规则集。
+  - name: scope_version
+    description: 当前接口范围版本：trial/dual 为采集范围，cd 为分析核心范围；不可混作同一规则。
+  - name: dictionary_version
+    description: 技能词典版本，与构建和证据共同固定。
+  - name: rule_version
+    description: 技能提取规则版本。
+  - name: body_hash_version
+    description: 技能输入正文规范化与哈希版本。
+  - name: build_status
+    description: 分析构建状态；本接口只含 ready，但 ready 不代表正式多日发布。
+  - name: batch_id
+    description: 不可变采集批次标识；可回连 audit.collection_batch。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: source_job_id
+    description: 来源岗位 ID 字符串；不得转数值或跨来源用裸 ID 去重。
+  - name: observation_key
+    description: 来源岗位观察代理键；业务唯一性为批次×来源岗位身份。
+  - name: version_key
+    description: 来源内容版本代理键，引用 dim.posting_version；SCD2 观察有效期，不是企业真实生效期。
+  - name: title_raw
+    description: 来源岗位标题原值。
+  - name: analysis_date
+    description: 观察时间换算 Asia/Shanghai 后的日期；不是发布日期，也不是目标日快照的批次结束日。
+  - name: category_raw
+    description: 源岗位类别原值；各来源编码未全部统一，不直接跨源合并同名类别。
+  - name: education_raw
+    description: 来源学历原值，不能把未知改写为不限。
+  - name: experience_raw
+    description: 来源经验原值。
+  - name: source_url
+    description: 原始岗位页面 URL，用于回查；网站内容可能变化，历史以保存响应为准。
+  - name: body_valid
+    description: 该构建技能输入范围内是否有可解析正文；三字段构建包含补充要求。仅表示输入可用，不表示命中技能。
+  - name: is_core
+    description: 是否属于当前版本核心数字技术岗位范围；不修改来源原记录。
+  - name: scope_reason
+    description: 岗位核心/扩展范围裁定原因。
+  - name: additional_requirements_raw
+    description: 从原始详情取出的补充要求原文；是否用于技能依 skill_text_scope。
+  - name: location_notes_raw
+    description: 来源地点补充说明原文。
+  - name: location_conflict
+    description: 地点冲突标记；分析分组显示冲突而非猜测城市。
+  - name: experience_conflict
+    description: 经验字段冲突标记；当前裁定与普通提示分别存储。
+  - name: education_conflict
+    description: 结构化学历与正文的待确认冲突标记；与 NULL/不限区别处理。
+  - name: experience_hint
+    description: 经验人工核查提示，可与冲突重叠；不自动当作冲突或排除岗位。
+  - name: confirmed_locations_json
+    description: 经当前范围策略裁定的地点数组；多值关系，不可按展开行数累计全局岗位数。
+  - name: issues_json
+    description: 本岗位可追溯的质量问题及人工裁定记录。
+  - name: raw_ref
+    description: 相对固定采集批次的原始详情文件路径，可连接 ods.raw_response。
+  - name: raw_sha256
+    description: 原始详情文件 SHA-256，核对原文是否被修改。
+  - name: content_json
+    description: 不可变来源内容版本原字段 JSON；使用完整 JSON 解析，避免 JSON_VALUE 截断长正文。
+  - name: acceptance_status
+    description: 采集批次技术验收状态；accepted 不表示覆盖完整或已经正式发布。
+  - name: coverage_status
+    description: 批准查询范围的遍历覆盖状态 complete/partial/failed；partial 不能驱动新增、下架趋势。
+  - name: source_revision
+    description: 固定输入批次的完整 Git 修订，配合文件清单恢复原始证据。
+  - name: skill_text_scope
+    description: 构建的正文输入字段集合；当前三字段为职责+要求+补充要求，历史两字段构建保持旧口径。
+- name: cd_overview
+  description: 每构建一行（当前构建只绑定一个来源批次）；直传 cd_scope_summary，保留所有 ready 历史构建，可供固定版本 BI 导入。
+  columns:
+  - name: build_id
+    description: 不可变分析构建标识，引用 audit.analysis_build；一个构建绑定一个来源批次及规则集。
+  - name: batch_id
+    description: 不可变采集批次标识；可回连 audit.collection_batch。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: scope_version
+    description: 当前接口范围版本：trial/dual 为采集范围，cd 为分析核心范围；不可混作同一规则。
+  - name: rule_version
+    description: 技能提取规则版本。
+  - name: dictionary_version
+    description: 技能词典版本，与构建和证据共同固定。
+  - name: body_hash_version
+    description: 技能输入正文规范化与哈希版本。
+  - name: skill_text_scope
+    description: 构建的正文输入字段集合；当前三字段为职责+要求+补充要求，历史两字段构建保持旧口径。
+  - name: source_posting_count
+    description: 批次/构建中来源岗位观察数量；trial 含扩展，cd 概览含全部，不能称独立招聘人数。
+  - name: core_posting_count
+    description: 当前构建核心范围内的不同来源岗位观察数，不是跨源独立招聘机会数。
+  - name: skill_denominator
+    description: 核心且有效正文的来源岗位数；包含无技能命中的岗位，不随技能桥过滤缩小。
+  - name: additional_requirements_count
+    description: 该构建中补充要求不为 NULL 的来源岗位数，含核心和扩展；不等同有效正文分母。
+  - name: location_conflict_count
+    description: 构建内全部来源岗位的地点冲突数，含扩展。
+  - name: experience_conflict_count
+    description: 该构建全部来源岗位的经验冲突数，含扩展。
+  - name: education_conflict_count
+    description: 该构建全部来源岗位中学历冲突数，含扩展。
+  - name: experience_hint_count
+    description: 该构建全部来源岗位中经验提示数，含实际冲突，不是冲突之外的新增计数。
+- name: cd_quality_kpi
+  description: 每构建×项目运营 KPI 一行；三项指标为核心正文覆盖、来源岗位原文可追溯、批准范围遍历完成。目标来自项目验收条件，不是招聘企业目标；无可比日序列时趋势为 NULL。
+  columns:
+  - name: build_id
+    description: 不可变分析构建标识，引用 audit.analysis_build；一个构建绑定一个来源批次及规则集。
+  - name: batch_id
+    description: 不可变采集批次标识；可回连 audit.collection_batch。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: scope_version
+    description: 当前接口范围版本：trial/dual 为采集范围，cd 为分析核心范围；不可混作同一规则。
+  - name: body_hash_version
+    description: 技能输入正文规范化与哈希版本。
+  - name: rule_version
+    description: 技能提取规则版本。
+  - name: dictionary_version
+    description: 技能词典版本，与构建和证据共同固定。
+  - name: coverage_status
+    description: 批准查询范围的遍历覆盖状态 complete/partial/failed；partial 不能驱动新增、下架趋势。
+  - name: acceptance_status
+    description: 采集批次技术验收状态；accepted 不表示覆盖完整或已经正式发布。
+  - name: kpi_code
+    description: 项目运营 KPI 代码，与 build_id 组成接口业务唯一键。
+  - name: kpi_name
+    description: 项目运营 KPI 中文名称。
+  - name: owner_role
+    description: KPI 跟踪与整改责任角色，不是招聘企业内部组织。
+  - name: numerator
+    description: 项目 KPI 实际符合条件计数；按 kpi_code 解释，不可跨 KPI 累加。
+  - name: denominator
+    description: 项目 KPI 分母；正文为核心岗位数，溯源为全部来源岗位数，范围完成为一个批准批次。
+  - name: kpi_value
+    description: numerator / denominator；分母为零返回 NULL，不能改为零达标率。
+  - name: goal_value
+    description: project_acceptance_v1 的项目验收目标，三项均为 1.0，即 100%。
+  - name: status_value
+    description: 项目 KPI 状态：达到目标为 1，未达标为 -1，零分母为 NULL；不设置无依据的黄灯区间。
+  - name: trend_value
+    description: 当前固定为 NULL，避免以不同来源的两个批次假算趋势；NULL 不代表持平。
+  - name: trend_reason
+    description: 趋势缺失原因；当前没有同范围、同规则、连续完整的每日序列。
+  - name: target_version
+    description: 项目运营验收条件版本，不是老师指定的招聘市场目标。
+- name: cd_skill_demand
+  description: 每构建×标准技能一行；从 cd_eligible_job_skill 统计岗位数，分母来自 cd_scope_summary。分母不受技能选择影响，不同技能行不可相加当独立岗位数。
+  columns:
+  - name: build_id
+    description: 不可变分析构建标识，引用 audit.analysis_build；一个构建绑定一个来源批次及规则集。
+  - name: skill_key
+    description: 标准技能代理键，引用 dim.skill。
+  - name: skill_name
+    description: 词典标准技能名，保留 SQL 与 MySQL 等不同概念。
+  - name: posting_count
+    description: 当前分组中的不同来源岗位观察数；多技能/多城市分组不可直接加总。
+  - name: skill_denominator
+    description: 核心且有效正文的来源岗位数；包含无技能命中的岗位，不随技能桥过滤缩小。
+  - name: skill_share
+    description: 该有效技能的不同核心岗位数 / 有效正文核心岗位数；零分母 NULL。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: scope_version
+    description: 当前接口范围版本：trial/dual 为采集范围，cd 为分析核心范围；不可混作同一规则。
+  - name: rule_version
+    description: 技能提取规则版本。
+  - name: dictionary_version
+    description: 技能词典版本，与构建和证据共同固定。
+  - name: body_hash_version
+    description: 技能输入正文规范化与哈希版本。
+  - name: skill_text_scope
+    description: 构建的正文输入字段集合；当前三字段为职责+要求+补充要求，历史两字段构建保持旧口径。
+- name: cd_skill_evidence
+  description: 每构建×来源版本×技能×要求强度×证据有效性一行；来自技能桥，证据 JSON 可展开多条；含扩展及无效结果用于审计，不可直接将行数当技能岗位数。
+  columns:
+  - name: build_id
+    description: 不可变分析构建标识，引用 audit.analysis_build；一个构建绑定一个来源批次及规则集。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: source_job_id
+    description: 来源岗位 ID 字符串；不得转数值或跨来源用裸 ID 去重。
+  - name: batch_id
+    description: 不可变采集批次标识；可回连 audit.collection_batch。
+  - name: version_key
+    description: 来源内容版本代理键，引用 dim.posting_version；SCD2 观察有效期，不是企业真实生效期。
+  - name: is_core
+    description: 是否属于当前版本核心数字技术岗位范围；不修改来源原记录。
+  - name: skill_name
+    description: 词典标准技能名，保留 SQL 与 MySQL 等不同概念。
+  - name: requirement_level
+    description: 证据语境强度；有效指标按明确必需/优先/提及等规则处理，否定与不确定留审计。
+  - name: eligible_for_metric
+    description: 技能证据是否符合计量语境；计算岗位指标还须同时筛核心范围和正文有效。
+  - name: evidence_count
+    description: 当前桥关系内证据 JSON 项数；不是岗位数。
+  - name: evidence_json
+    description: 证据数组，含原文片段、字段、位置、哈希和提取版本；位置相对于记录的输入正文。
+  - name: dictionary_version
+    description: 技能词典版本，与构建和证据共同固定。
+  - name: rule_version
+    description: 技能提取规则版本。
+  - name: scope_version
+    description: 当前接口范围版本：trial/dual 为采集范围，cd 为分析核心范围；不可混作同一规则。
+  - name: body_hash_version
+    description: 技能输入正文规范化与哈希版本。
+  - name: skill_text_scope
+    description: 构建的正文输入字段集合；当前三字段为职责+要求+补充要求，历史两字段构建保持旧口径。
+- name: cd_skill_pair
+  description: 每构建×无序技能对一行；同一观察内按 skill_key 升序配对，每岗每对一次，分母取全部有效正文核心岗位。
+  columns:
+  - name: build_id
+    description: 不可变分析构建标识，引用 audit.analysis_build；一个构建绑定一个来源批次及规则集。
+  - name: skill_a
+    description: 无序技能组合第一端，按 skill_key 升序选取，不保证按名称排序。
+  - name: skill_b
+    description: 无序技能组合第二端，skill_key 大于 skill_a 对应键。
+  - name: posting_count
+    description: 当前分组中的不同来源岗位观察数；多技能/多城市分组不可直接加总。
+  - name: skill_denominator
+    description: 核心且有效正文的来源岗位数；包含无技能命中的岗位，不随技能桥过滤缩小。
+  - name: pair_share
+    description: 同时命中两个有效技能的不同核心岗位数 / 有效正文核心岗位数；零分母 NULL。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: scope_version
+    description: 当前接口范围版本：trial/dual 为采集范围，cd 为分析核心范围；不可混作同一规则。
+  - name: rule_version
+    description: 技能提取规则版本。
+  - name: dictionary_version
+    description: 技能词典版本，与构建和证据共同固定。
+  - name: body_hash_version
+    description: 技能输入正文规范化与哈希版本。
+  - name: skill_text_scope
+    description: 构建的正文输入字段集合；当前三字段为职责+要求+补充要求，历史两字段构建保持旧口径。
+- name: current_analysis_builds
+  description: 每个已选择批次的当前构建一行；cd_scope_summary 连接 audit.analysis_selection。仅用于一次性取得构建选择；保存的 BI 查询必须固定 build_id 并读取
+    cd_overview。
+  columns:
+  - name: build_id
+    description: 不可变分析构建标识，引用 audit.analysis_build；一个构建绑定一个来源批次及规则集。
+  - name: batch_id
+    description: 不可变采集批次标识；可回连 audit.collection_batch。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: scope_version
+    description: 当前接口范围版本：trial/dual 为采集范围，cd 为分析核心范围；不可混作同一规则。
+  - name: rule_version
+    description: 技能提取规则版本。
+  - name: dictionary_version
+    description: 技能词典版本，与构建和证据共同固定。
+  - name: body_hash_version
+    description: 技能输入正文规范化与哈希版本。
+  - name: skill_text_scope
+    description: 构建的正文输入字段集合；当前三字段为职责+要求+补充要求，历史两字段构建保持旧口径。
+  - name: source_posting_count
+    description: 批次/构建中来源岗位观察数量；trial 含扩展，cd 概览含全部，不能称独立招聘人数。
+  - name: core_posting_count
+    description: 当前构建核心范围内的不同来源岗位观察数，不是跨源独立招聘机会数。
+  - name: skill_denominator
+    description: 核心且有效正文的来源岗位数；包含无技能命中的岗位，不随技能桥过滤缩小。
+  - name: additional_requirements_count
+    description: 该构建中补充要求不为 NULL 的来源岗位数，含核心和扩展；不等同有效正文分母。
+  - name: location_conflict_count
+    description: 构建内全部来源岗位的地点冲突数，含扩展。
+  - name: experience_conflict_count
+    description: 该构建全部来源岗位的经验冲突数，含扩展。
+  - name: education_conflict_count
+    description: 该构建全部来源岗位中学历冲突数，含扩展。
+  - name: experience_hint_count
+    description: 该构建全部来源岗位中经验提示数，含实际冲突，不是冲突之外的新增计数。
+- name: dual_city
+  description: 每批次×来源×城市组一行；使用历史原始地点桥和有限别名归一，冲突单组；岗位去重但城市不可加。
+  columns:
+  - name: batch_id
+    description: 不可变采集批次标识；可回连 audit.collection_batch。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: city_group
+    description: 城市/地点分析分组；冲突与未知单列。cd_city 保留确认地点原值；dual_city 使用历史有限别名规则。
+  - name: source_posting_count
+    description: 批次/构建中来源岗位观察数量；trial 含扩展，cd 概览含全部，不能称独立招聘人数。
+  - name: city_rule_version
+    description: 历史双来源城市别名映射规则版本。
+- name: dual_education
+  description: 每批次×来源×学历组一行；来自 dual_job_detail，含扩展岗位；未知、冲突分别保留。
+  columns:
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: batch_id
+    description: 不可变采集批次标识；可回连 audit.collection_batch。
+  - name: education_group
+    description: 学历分布分组，NULL 归未知，冲突单组；不是已完成的标准学历维度。
+  - name: source_posting_count
+    description: 批次/构建中来源岗位观察数量；trial 含扩展，cd 概览含全部，不能称独立招聘人数。
+- name: dual_job_detail
+  description: 每批次×来源岗位观察一行；扩展 trial_job_detail 的源质量冲突标记；历史口径，不代替 C 当前裁定。
+  columns:
+  - name: observation_key
+    description: 来源岗位观察代理键；业务唯一性为批次×来源岗位身份。
+  - name: batch_id
+    description: 不可变采集批次标识；可回连 audit.collection_batch。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: source_job_id
+    description: 来源岗位 ID 字符串；不得转数值或跨来源用裸 ID 去重。
+  - name: version_key
+    description: 来源内容版本代理键，引用 dim.posting_version；SCD2 观察有效期，不是企业真实生效期。
+  - name: analysis_date
+    description: 观察时间换算 Asia/Shanghai 后的日期；不是发布日期，也不是目标日快照的批次结束日。
+  - name: title_raw
+    description: 来源岗位标题原值。
+  - name: company_raw
+    description: 企业名称原值，未据此声明完成法律主体规范。
+  - name: category_raw
+    description: 源岗位类别原值；各来源编码未全部统一，不直接跨源合并同名类别。
+  - name: education_raw
+    description: 来源学历原值，不能把未知改写为不限。
+  - name: experience_raw
+    description: 来源经验原值。
+  - name: employment_type_raw
+    description: 来源招聘类型原值；未知代码不擅自译为校招或社招。
+  - name: source_url
+    description: 原始岗位页面 URL，用于回查；网站内容可能变化，历史以保存响应为准。
+  - name: content_json
+    description: 不可变来源内容版本原字段 JSON；使用完整 JSON 解析，避免 JSON_VALUE 截断长正文。
+  - name: source_revision
+    description: 固定输入批次的完整 Git 修订，配合文件清单恢复原始证据。
+  - name: coverage_status
+    description: 批准查询范围的遍历覆盖状态 complete/partial/failed；partial 不能驱动新增、下架趋势。
+  - name: acceptance_status
+    description: 采集批次技术验收状态；accepted 不表示覆盖完整或已经正式发布。
+  - name: dataset_status
+    description: 历史联调界面状态文本，不代表正式发布或全站完整。
+  - name: education_conflict
+    description: 结构化学历与正文的待确认冲突标记；与 NULL/不限区别处理。
+  - name: location_conflict
+    description: 地点冲突标记；分析分组显示冲突而非猜测城市。
+- name: trial_city
+  description: 每批次×原始地点一行；来自 trial_city_distribution，附批次状态；多地点分组不可相加。
+  columns:
+  - name: batch_id
+    description: 不可变采集批次标识；可回连 audit.collection_batch。
+  - name: location_raw
+    description: 历史版本地点桥中的原始地点，不等同已规范行政区划。
+  - name: source_posting_count
+    description: 批次/构建中来源岗位观察数量；trial 含扩展，cd 概览含全部，不能称独立招聘人数。
+  - name: dataset_status
+    description: 历史联调界面状态文本，不代表正式发布或全站完整。
+  - name: coverage_status
+    description: 批准查询范围的遍历覆盖状态 complete/partial/failed；partial 不能驱动新增、下架趋势。
+  - name: acceptance_status
+    description: 采集批次技术验收状态；accepted 不表示覆盖完整或已经正式发布。
+  - name: source_revision
+    description: 固定输入批次的完整 Git 修订，配合文件清单恢复原始证据。
+- name: trial_job_detail
+  description: 每批次×来源岗位观察一行；观察事实连接身份、版本及审计批次；不排除扩展岗位。
+  columns:
+  - name: observation_key
+    description: 来源岗位观察代理键；业务唯一性为批次×来源岗位身份。
+  - name: batch_id
+    description: 不可变采集批次标识；可回连 audit.collection_batch。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: source_job_id
+    description: 来源岗位 ID 字符串；不得转数值或跨来源用裸 ID 去重。
+  - name: version_key
+    description: 来源内容版本代理键，引用 dim.posting_version；SCD2 观察有效期，不是企业真实生效期。
+  - name: analysis_date
+    description: 观察时间换算 Asia/Shanghai 后的日期；不是发布日期，也不是目标日快照的批次结束日。
+  - name: title_raw
+    description: 来源岗位标题原值。
+  - name: company_raw
+    description: 企业名称原值，未据此声明完成法律主体规范。
+  - name: category_raw
+    description: 源岗位类别原值；各来源编码未全部统一，不直接跨源合并同名类别。
+  - name: education_raw
+    description: 来源学历原值，不能把未知改写为不限。
+  - name: experience_raw
+    description: 来源经验原值。
+  - name: employment_type_raw
+    description: 来源招聘类型原值；未知代码不擅自译为校招或社招。
+  - name: source_url
+    description: 原始岗位页面 URL，用于回查；网站内容可能变化，历史以保存响应为准。
+  - name: content_json
+    description: 不可变来源内容版本原字段 JSON；使用完整 JSON 解析，避免 JSON_VALUE 截断长正文。
+  - name: source_revision
+    description: 固定输入批次的完整 Git 修订，配合文件清单恢复原始证据。
+  - name: coverage_status
+    description: 批准查询范围的遍历覆盖状态 complete/partial/failed；partial 不能驱动新增、下架趋势。
+  - name: acceptance_status
+    description: 采集批次技术验收状态；accepted 不表示覆盖完整或已经正式发布。
+  - name: dataset_status
+    description: 历史联调界面状态文本，不代表正式发布或全站完整。
+- name: trial_overview
+  description: 每批次一行；直传 trial_batch_summary 历史联调概览，不是三字段核心口径。
+  columns:
+  - name: batch_id
+    description: 不可变采集批次标识；可回连 audit.collection_batch。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: scope_version
+    description: 当前接口范围版本：trial/dual 为采集范围，cd 为分析核心范围；不可混作同一规则。
+  - name: coverage_status
+    description: 批准查询范围的遍历覆盖状态 complete/partial/failed；partial 不能驱动新增、下架趋势。
+  - name: acceptance_status
+    description: 采集批次技术验收状态；accepted 不表示覆盖完整或已经正式发布。
+  - name: source_revision
+    description: 固定输入批次的完整 Git 修订，配合文件清单恢复原始证据。
+  - name: dataset_status
+    description: 历史联调界面状态文本，不代表正式发布或全站完整。
+  - name: source_posting_count
+    description: 批次/构建中来源岗位观察数量；trial 含扩展，cd 概览含全部，不能称独立招聘人数。
+  - name: body_valid_count
+    description: 历史试验批次中职责或任职要求非空的岗位数，未筛核心，不含补充字段判定。
+  - name: education_missing_count
+    description: 历史批次学历原值为 NULL 的来源岗位数。
+  - name: category_missing_count
+    description: 历史批次源类别为 NULL 的来源岗位数，未筛核心。

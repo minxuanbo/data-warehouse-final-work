@@ -1,0 +1,18 @@
+{
+  "recorded_at": "2026-11-17T12:25:44.200852+00:00",
+  "evidence_kind": "user_report_in_this_chat",
+  "computer_use_stopped_on_user_request": true,
+  "quality_page_05": {
+    "two_100_percent_passed_and_one_0_percent_failed": "confirmed_by_user"
+  },
+  "dimension_page_06": {
+    "hierarchy_expansion": "confirmed_by_user"
+  },
+  "detail_page_07": {
+    "category_drillthrough": "confirmed_by_user",
+    "job_to_evidence_cross_filter": "confirmed_by_user",
+    "ctrl_click_back": "confirmed_by_user"
+  },
+  "live_dax_validation": "81 cases passed; separate read-only engine record",
+  "screenshots": "requested from user; not yet visually reviewed"
+}

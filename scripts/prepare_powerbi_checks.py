@@ -5,6 +5,7 @@ from collections import defaultdict
 from scripts.check_skills_v11 import input_paths
 from scripts.prepare_powerbi import PROJECT, ROOT, write_json
 from warehouse.integrate_analysis import prepare
+from warehouse.normalization import classify
 
 
 def main():
@@ -16,8 +17,9 @@ def main():
         for j in enriched:
             j={**j,'job_key':source+'|'+j['source_job_id']}
             j['city']=set(['冲突待确认'] if j['location_conflict'] else [c.removesuffix('市') for c in j['confirmed_locations']] or ['未知'])
-            j['experience_group']='冲突待确认' if j['experience_conflict'] else j['experience_raw'] or '未知'
-            j['education_group']='冲突待确认' if j['education_conflict'] else j['education_raw'] or '未知'
+            labels=classify(j)
+            j['experience_group']=labels['experience']
+            j['education_group']=labels['education']
             j['category_group']=j['category_raw'] or '未知'
             j['body_valid']=any(j.get(k) for k in ('description_raw','requirements_raw','additional_requirements_raw'))
             jobs.append(j)
@@ -47,7 +49,7 @@ def main():
             literal=','.join('"'+v.replace('"','""')+'"' for v in values)
             filters.append(f'TREATAS({{{literal}}}, {table}[{col}])')
         for t,c,v in [('Builds','source',source),('Jobs','experience_group',experience),
-                      ('Jobs','education_group',education),('Jobs','category_group',category),
+                      ('Jobs','education_group',education),('Jobs','source_category_group',category),
                       ('Skills','skill_name',skill),('Jobs','source_job_id',job_id)]:
             if v is not None: filt(t,c,[v])
         if cities is not None: filt('CityJobs','city',cities)

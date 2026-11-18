@@ -1,0 +1,730 @@
+{
+  "checked_at_utc": "2026-11-18T03:57:47.061973+00:00",
+  "status": "passed",
+  "release_id": 5,
+  "normalization_version": "conformed-cn-1.1",
+  "qualification_rule_version": "qualification-cn-1.0",
+  "current_core_groups": {
+    "tencent": {
+      "education": {
+        "未注明": 50,
+        "本科": 36,
+        "硕士": 12
+      },
+      "experience": {
+        "3年以上": 33,
+        "2年以上": 27,
+        "冲突待确认": 3,
+        "5年以上": 7,
+        "1年以上": 25,
+        "8年以上": 1,
+        "不限": 2
+      },
+      "education_status": {
+        "not_stated": 48,
+        "body_required": 48,
+        "preference_only": 2
+      }
+    },
+    "netease": {
+      "education": {
+        "冲突待确认": 25,
+        "本科": 58,
+        "不限": 13,
+        "硕士": 2
+      },
+      "experience": {
+        "冲突待确认": 12,
+        "不限": 45,
+        "5-10年": 9,
+        "3-5年": 29,
+        "0-3年": 2,
+        "10年以上": 1
+      },
+      "education_status": {
+        "conflict": 25,
+        "structured": 73
+      }
+    }
+  },
+  "verbatim_anchors_checked": 431,
+  "source_postings": 200,
+  "core_postings": 196,
+  "old_release_id": 4,
+  "previous_tencent_groups_preserved": [
+    {
+      "education_group": "未知",
+      "experience_group": "不限",
+      "n": 2
+    },
+    {
+      "education_group": "未知",
+      "experience_group": "冲突待确认",
+      "n": 3
+    },
+    {
+      "education_group": "未知",
+      "experience_group": "未映射",
+      "n": 93
+    }
+  ],
+  "education_conflicts": [
+    {
+      "source": "netease",
+      "source_job_id": "53229",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 27,
+          "field": "requirements_raw",
+          "match_end": 5,
+          "match_start": 3,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 本科及以上学历，计算机相关专业，3年以上研发经验"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "65340",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 26,
+          "field": "requirements_raw",
+          "match_end": 5,
+          "match_start": 3,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 本科及以上学历，计算机、软件工程或相关专业优先"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79165",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 43,
+          "field": "requirements_raw",
+          "match_end": 5,
+          "match_start": 3,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 本科及以上学历，3年以上数据开发或数据平台研发经验，有互联网行业数据平台建设经验"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79628",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 79,
+          "field": "requirements_raw",
+          "match_end": 5,
+          "match_start": 3,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 本科及以上学历，3 年以上前端开发经验，熟练掌握 HTML/CSS/JavaScript/TypeScript，精通 React/Vue 等主流前端框架"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79627",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 59,
+          "field": "requirements_raw",
+          "match_end": 5,
+          "match_start": 3,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 本科及以上学历，3 年以上 iOS 开发经验，熟练掌握 Objective-C，熟悉 iOS 系统机制与常用框架"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79626",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 30,
+          "field": "requirements_raw",
+          "match_end": 27,
+          "match_start": 25,
+          "start": 5,
+          "strength": "必需",
+          "text": "• 计算机、通信、软件工程等相关专业在读本科及以上"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "76417",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 37,
+          "field": "requirements_raw",
+          "match_end": 19,
+          "match_start": 17,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 计算机、软件工程等相关专业，本科及以上学历，3年以上Java开发经验"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79593",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 54,
+          "field": "requirements_raw",
+          "match_end": 4,
+          "match_start": 2,
+          "start": 0,
+          "strength": "必需",
+          "text": "1.本科及以上学历，3年以上游戏客户端开发经历，了解渲染、动画基本原理，了解外观系统，最好有商业化经验的优先"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "78780",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 29,
+          "field": "requirements_raw",
+          "match_end": 5,
+          "match_start": 3,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 本科及以上学历，计算机相关专业，1~2年测试工作经验"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79036",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 35,
+          "field": "requirements_raw",
+          "match_end": 28,
+          "match_start": 26,
+          "start": 0,
+          "strength": "必需",
+          "text": "• 计算机、软件工程、计算机图形学、数学或相关专业，本科在读及以上学历"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79276",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 29,
+          "field": "requirements_raw",
+          "match_end": 5,
+          "match_start": 3,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 本科及以上学历，28届毕业生优先，每周能实习至少4天"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "71014",
+      "structured": "本科",
+      "evidence": [
+        {
+          "degree": "本科",
+          "end": 2,
+          "field": "education_raw",
+          "match_end": 2,
+          "match_start": 0,
+          "start": 0,
+          "strength": "必需",
+          "text": "本科"
+        },
+        {
+          "degree": "硕士",
+          "end": 196,
+          "field": "requirements_raw",
+          "match_end": 194,
+          "match_start": 191,
+          "start": 180,
+          "strength": "必需",
+          "text": "4. 学历：大四 ~ 研究生在读"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "76670",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 21,
+          "field": "requirements_raw",
+          "match_end": 14,
+          "match_start": 12,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 计算机或相关专业，本科在读及以上学历"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "78983",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 37,
+          "field": "requirements_raw",
+          "match_end": 30,
+          "match_start": 28,
+          "start": 0,
+          "strength": "必需",
+          "text": "1.计算机、软件工程、游戏开发、图形学等相关专业在校生，本科在读及以上学历"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79053",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 41,
+          "field": "requirements_raw",
+          "match_end": 17,
+          "match_start": 15,
+          "start": 13,
+          "strength": "必需",
+          "text": "- 本科及以上学历，计算机、网络、通信、自动化等相关专业"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79129",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 10,
+          "field": "requirements_raw",
+          "match_end": 5,
+          "match_start": 3,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 本科及以上学历"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "78482",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 49,
+          "field": "requirements_raw",
+          "match_end": 9,
+          "match_start": 7,
+          "start": 0,
+          "strength": "必需",
+          "text": "1、专业不限，本科以上学历，熟练使用计算机，至少实习3个月，有过深度学习、数据清洗标注相关经验优先"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "78590",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 25,
+          "field": "requirements_raw",
+          "match_end": 20,
+          "match_start": 18,
+          "start": 7,
+          "strength": "必需",
+          "text": "• 计算机或相关专业，本科及以上学历"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79588",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 28,
+          "field": "requirements_raw",
+          "match_end": 4,
+          "match_start": 2,
+          "start": 0,
+          "strength": "必需",
+          "text": "1.本科及以上学历，28届毕业生优先，每周能实习至少4天"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "78136",
+      "structured": "本科",
+      "evidence": [
+        {
+          "degree": "本科",
+          "end": 2,
+          "field": "education_raw",
+          "match_end": 2,
+          "match_start": 0,
+          "start": 0,
+          "strength": "必需",
+          "text": "本科"
+        },
+        {
+          "degree": "硕士",
+          "end": 43,
+          "field": "requirements_raw",
+          "match_end": 18,
+          "match_start": 15,
+          "start": 0,
+          "strength": "必需",
+          "text": "1、计算机相关专业在读本科生/研究生，每周至少出勤 4 天，可持续实习 3 个月及以上"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79516",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 37,
+          "field": "requirements_raw",
+          "match_end": 19,
+          "match_start": 17,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 计算机、软件工程等相关专业，本科及以上学历，3年以上Java开发经验"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "71196",
+      "structured": "本科",
+      "evidence": [
+        {
+          "degree": "本科",
+          "end": 2,
+          "field": "education_raw",
+          "match_end": 2,
+          "match_start": 0,
+          "start": 0,
+          "strength": "必需",
+          "text": "本科"
+        },
+        {
+          "degree": "硕士",
+          "end": 46,
+          "field": "requirements_raw",
+          "match_end": 27,
+          "match_start": 25,
+          "start": 0,
+          "strength": "必需",
+          "text": "1、 计算机视觉/计算机科学/人工智能等相关专业，硕士及以上学历，3年以上相关领域工作经验 "
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "72961",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 25,
+          "field": "requirements_raw",
+          "match_end": 5,
+          "match_start": 3,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 本科及以上学历，1-3年游戏客户端开发经验;"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "74970",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 26,
+          "field": "requirements_raw",
+          "match_end": 5,
+          "match_start": 3,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 本科及以上学历，1-3年游戏客户端开发经验; "
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "77950",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 49,
+          "field": "requirements_raw",
+          "match_end": 5,
+          "match_start": 3,
+          "start": 0,
+          "strength": "必需",
+          "text": "1. 本科及以上学历，1-2年以内的游戏gameplay或ai开发经验，重点院校计算机相关专业优先"
+        }
+      ]
+    },
+    {
+      "source": "netease",
+      "source_job_id": "79337",
+      "structured": "不限",
+      "evidence": [
+        {
+          "degree": "不限",
+          "end": 2,
+          "field": "education_raw",
+          "start": 0,
+          "strength": "必需",
+          "text": "不限"
+        },
+        {
+          "degree": "本科",
+          "end": 39,
+          "field": "requirements_raw",
+          "match_end": 4,
+          "match_start": 2,
+          "start": 0,
+          "strength": "必需",
+          "text": "1.本科及以上学历,3年以内游戏从业经验, 计算机 / 软件 / 相关专业优先"
+        }
+      ]
+    }
+  ],
+  "note": "Core Tencent: 48 explicit required degrees; 50 with no hard degree resolved, including 2 preference-only. No missing value converted to unlimited."
+}

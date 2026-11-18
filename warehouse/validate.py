@@ -94,6 +94,11 @@ def validate(path):
                 raise ValueError(f'Overlong field: {key}')
     if not jobs or m['counts']['output_records'] != len(jobs) or m['counts']['requests'] != len(requests):
         raise ValueError('Empty batch or counts mismatch')
+    if m['coverage_status']=='complete':
+        from collectors.coverage import assess_coverage
+        proof=assess_coverage(root,m['source'],m['stop_reason'],m['counts'],m['error_pages'])
+        if proof['coverage_status']!='complete':
+            raise ValueError('Complete coverage is unsupported by raw pagination evidence: '+','.join(proof['reasons']))
     # Review state stays unchanged. Passing structural validation is NOT acceptance.
     return {'root':root,'manifest':m,'jobs':jobs,'issues':issues,'files':files,
             'input_hash':digest(manifest_bytes), 'summary':{'jobs':len(jobs),'files':len(files),'issues':len(issues),'requests':len(requests)}}

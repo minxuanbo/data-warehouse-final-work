@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-17",
+  "offline_tests": {
+    "command": ".venv-dbt/Scripts/python.exe -X utf8 -m unittest discover -s tests -v",
+    "count": 41,
+    "status": "passed",
+    "elapsed_seconds": 9.259,
+    "evidence_type": "recorded execution output from this rectification session; not rerun for this summary"
+  },
+  "dbt_build": {
+    "selection": [
+      "cd_job_detail+",
+      "skill_body_scope_cases"
+    ],
+    "views_passed": 12,
+    "tests_passed": 5,
+    "warnings": 0,
+    "errors": 0
+  },
+  "dbt_tests": {
+    "command": "dbt test --select resource_type:test",
+    "status": "passed",
+    "elapsed_seconds": 4.514722585678101,
+    "results": [
+      {
+        "node": "test.recruitment_dw.cd_bridge_integrity",
+        "status": "pass",
+        "failures": 0
+      },
+      {
+        "node": "test.recruitment_dw.cd_metric_bounds",
+        "status": "pass",
+        "failures": 0
+      },
+      {
+        "node": "test.recruitment_dw.cd_quality_kpi_contract",
+        "status": "pass",
+        "failures": 0
+      },
+      {
+        "node": "test.recruitment_dw.cd_text_scope_metadata",
+        "status": "pass",
+        "failures": 0
+      },
+      {
+        "node": "test.recruitment_dw.city_not_inflated",
+        "status": "pass",
+        "failures": 0
+      },
+      {
+        "node": "test.recruitment_dw.dual_dimension_integrity",
+        "status": "pass",
+        "failures": 0
+      },
+      {
+        "node": "test.recruitment_dw.observation_integrity",
+        "status": "pass",
+        "failures": 0
+      },
+      {
+        "node": "test.recruitment_dw.selected_build_versions",
+        "status": "pass",
+        "failures": 0
+      },
+      {
+        "node": "test.recruitment_dw.skill_body_scope_cases",
+        "status": "pass",
+        "failures": 0
+      },
+      {
+        "node": "test.recruitment_dw.trial_reconciliation",
+        "status": "pass",
+        "failures": 0
+      },
+      {
+        "node": "test.recruitment_dw.version_intervals",
+        "status": "pass",
+        "failures": 0
+      }
+    ]
+  },
+  "midterm_ppt_sha256": "50e738cd1324236e19e5abfc6f4707a01783d1fffc577daaf2a7c0427511eaa3",
+  "powerbi_model_unchanged_from_initial_user_state": true,
+  "powerbi_live_dax_rerun": false
+}

@@ -1,0 +1,32 @@
+{
+  "database": "recruitment_dw_dev_cd_v1",
+  "checked_at": "2026-11-17T11:50:59.368568+00:00",
+  "idempotency": "passed",
+  "snapshot_transaction_rollback": "passed",
+  "publication_rollback": "passed",
+  "partial_formal_publication_blocked": "passed",
+  "sample_release_id": 1,
+  "query_seconds_three_warm_runs": {
+    "job_detail": [
+      0.017113,
+      0.012987,
+      0.008401
+    ],
+    "daily_skill": [
+      0.026712,
+      0.024622,
+      0.020189
+    ],
+    "quality_kpi": [
+      0.057098,
+      0.061174,
+      0.054323
+    ]
+  },
+  "performance_scope": "actual current 200-source-posting sample; not a 10,000/day capacity claim",
+  "backup_verify": "passed",
+  "restored_database": "recruitment_dw_dev_restore_20261117t115100478895",
+  "backup_file": "C:\\Program Files\\Microsoft SQL Server\\MSSQL17.MSSQLSERVER\\MSSQL\\Backup\\recruitment_dw_dev_cd_v1_20261117t115100478895.bak",
+  "restored_input_hashes_counts_metrics": "passed",
+  "status": "passed"
+}

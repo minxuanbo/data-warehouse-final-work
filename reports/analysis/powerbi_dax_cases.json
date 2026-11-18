@@ -3,25 +3,39 @@
   "builds": [
     {
       "source": "netease",
-      "batch_id": "netease_20261101T044527Z_157cf969",
       "build_id": 6,
-      "skill_denominator": 98,
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "scope_version": "digital_jobs_cn_core_v1.2",
+      "rule_version": "skills-rules-0.3.0",
+      "dictionary_version": "skills-dict-0.2.0",
       "body_hash_version": "skills-body-1.1",
       "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
-      "dictionary_version": "skills-dict-0.2.0",
-      "rule_version": "skills-rules-0.3.0",
-      "scope_version": "digital_jobs_cn_core_v1.2"
+      "source_posting_count": 100,
+      "core_posting_count": 98,
+      "skill_denominator": 98,
+      "additional_requirements_count": 0,
+      "location_conflict_count": 1,
+      "experience_conflict_count": 12,
+      "education_conflict_count": 1,
+      "experience_hint_count": 13
     },
     {
       "source": "tencent",
-      "batch_id": "tencent_20261031T093102Z_366ad0a4",
       "build_id": 5,
-      "skill_denominator": 98,
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "scope_version": "digital_jobs_cn_core_v1.2",
+      "rule_version": "skills-rules-0.3.0",
+      "dictionary_version": "skills-dict-0.2.0",
       "body_hash_version": "skills-body-1.1",
       "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
-      "dictionary_version": "skills-dict-0.2.0",
-      "rule_version": "skills-rules-0.3.0",
-      "scope_version": "digital_jobs_cn_core_v1.2"
+      "source_posting_count": 100,
+      "core_posting_count": 98,
+      "skill_denominator": 98,
+      "additional_requirements_count": 28,
+      "location_conflict_count": 9,
+      "experience_conflict_count": 3,
+      "education_conflict_count": 0,
+      "experience_hint_count": 3
     }
   ],
   "cases": [
@@ -130,8 +144,8 @@
       }
     },
     {
-      "name": "tencent_experience_一年以上工作经验",
-      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"一年以上工作经验\"}, Jobs[experience_group]))",
+      "name": "tencent_experience_1年以上",
+      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"1年以上\"}, Jobs[experience_group]))",
       "expected": {
         "core": 25,
         "denominator": 25,
@@ -143,8 +157,21 @@
       }
     },
     {
-      "name": "tencent_experience_三年以上工作经验",
-      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"三年以上工作经验\"}, Jobs[experience_group]))",
+      "name": "tencent_experience_2年以上",
+      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"2年以上\"}, Jobs[experience_group]))",
+      "expected": {
+        "core": 27,
+        "denominator": 27,
+        "job_skill_pairs": 78,
+        "skilled_jobs": 23,
+        "skill_share": 0.8518518518518519,
+        "eligible_evidence": 97,
+        "combination_jobs": 20
+      }
+    },
+    {
+      "name": "tencent_experience_3年以上",
+      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"3年以上\"}, Jobs[experience_group]))",
       "expected": {
         "core": 33,
         "denominator": 33,
@@ -153,6 +180,32 @@
         "skill_share": 0.8181818181818182,
         "eligible_evidence": 166,
         "combination_jobs": 24
+      }
+    },
+    {
+      "name": "tencent_experience_5年以上",
+      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"5年以上\"}, Jobs[experience_group]))",
+      "expected": {
+        "core": 7,
+        "denominator": 7,
+        "job_skill_pairs": 20,
+        "skilled_jobs": 5,
+        "skill_share": 0.7142857142857143,
+        "eligible_evidence": 21,
+        "combination_jobs": 4
+      }
+    },
+    {
+      "name": "tencent_experience_8年以上",
+      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"8年以上\"}, Jobs[experience_group]))",
+      "expected": {
+        "core": 1,
+        "denominator": 1,
+        "job_skill_pairs": 2,
+        "skilled_jobs": 1,
+        "skill_share": 1.0,
+        "eligible_evidence": 2,
+        "combination_jobs": 1
       }
     },
     {
@@ -165,45 +218,6 @@
         "skilled_jobs": 2,
         "skill_share": 1.0,
         "eligible_evidence": 3,
-        "combination_jobs": 1
-      }
-    },
-    {
-      "name": "tencent_experience_两年以上工作经验",
-      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"两年以上工作经验\"}, Jobs[experience_group]))",
-      "expected": {
-        "core": 27,
-        "denominator": 27,
-        "job_skill_pairs": 78,
-        "skilled_jobs": 23,
-        "skill_share": 0.8518518518518519,
-        "eligible_evidence": 97,
-        "combination_jobs": 20
-      }
-    },
-    {
-      "name": "tencent_experience_五年以上工作经验",
-      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"五年以上工作经验\"}, Jobs[experience_group]))",
-      "expected": {
-        "core": 7,
-        "denominator": 7,
-        "job_skill_pairs": 20,
-        "skilled_jobs": 5,
-        "skill_share": 0.7142857142857143,
-        "eligible_evidence": 21,
-        "combination_jobs": 4
-      }
-    },
-    {
-      "name": "tencent_experience_八年以上工作经验",
-      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"八年以上工作经验\"}, Jobs[experience_group]))",
-      "expected": {
-        "core": 1,
-        "denominator": 1,
-        "job_skill_pairs": 2,
-        "skilled_jobs": 1,
-        "skill_share": 1.0,
-        "eligible_evidence": 2,
         "combination_jobs": 1
       }
     },
@@ -221,16 +235,42 @@
       }
     },
     {
-      "name": "tencent_education_未知",
-      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"未知\"}, Jobs[education_group]))",
+      "name": "tencent_education_未注明",
+      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"未注明\"}, Jobs[education_group]))",
       "expected": {
-        "core": 98,
-        "denominator": 98,
-        "job_skill_pairs": 333,
-        "skilled_jobs": 83,
-        "skill_share": 0.8469387755102041,
-        "eligible_evidence": 392,
-        "combination_jobs": 74
+        "core": 50,
+        "denominator": 50,
+        "job_skill_pairs": 192,
+        "skilled_jobs": 41,
+        "skill_share": 0.82,
+        "eligible_evidence": 232,
+        "combination_jobs": 40
+      }
+    },
+    {
+      "name": "tencent_education_本科",
+      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"本科\"}, Jobs[education_group]))",
+      "expected": {
+        "core": 36,
+        "denominator": 36,
+        "job_skill_pairs": 96,
+        "skilled_jobs": 30,
+        "skill_share": 0.8333333333333334,
+        "eligible_evidence": 113,
+        "combination_jobs": 23
+      }
+    },
+    {
+      "name": "tencent_education_硕士",
+      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"硕士\"}, Jobs[education_group]))",
+      "expected": {
+        "core": 12,
+        "denominator": 12,
+        "job_skill_pairs": 45,
+        "skilled_jobs": 12,
+        "skill_share": 1.0,
+        "eligible_evidence": 47,
+        "combination_jobs": 11
       }
     },
     {
@@ -287,7 +327,7 @@
     },
     {
       "name": "tencent_city_experience_category",
-      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"三年以上工作经验\"}, Jobs[experience_group]),TREATAS({\"技术\"}, Jobs[category_group]),TREATAS({\"深圳\"}, CityJobs[city]))",
+      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"tencent\"}, Builds[source]),TREATAS({\"3年以上\"}, Jobs[experience_group]),TREATAS({\"技术\"}, Jobs[source_category_group]),TREATAS({\"深圳\"}, CityJobs[city]))",
       "expected": {
         "core": 20,
         "denominator": 20,
@@ -484,39 +524,39 @@
       "name": "netease_education_不限",
       "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"netease\"}, Builds[source]),TREATAS({\"不限\"}, Jobs[education_group]))",
       "expected": {
-        "core": 35,
-        "denominator": 35,
-        "job_skill_pairs": 112,
-        "skilled_jobs": 25,
-        "skill_share": 0.7142857142857143,
-        "eligible_evidence": 139,
-        "combination_jobs": 22
+        "core": 13,
+        "denominator": 13,
+        "job_skill_pairs": 36,
+        "skilled_jobs": 9,
+        "skill_share": 0.6923076923076923,
+        "eligible_evidence": 49,
+        "combination_jobs": 7
       }
     },
     {
       "name": "netease_education_冲突待确认",
       "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"netease\"}, Builds[source]),TREATAS({\"冲突待确认\"}, Jobs[education_group]))",
       "expected": {
-        "core": 1,
-        "denominator": 1,
-        "job_skill_pairs": 5,
-        "skilled_jobs": 1,
-        "skill_share": 1.0,
-        "eligible_evidence": 5,
-        "combination_jobs": 1
+        "core": 25,
+        "denominator": 25,
+        "job_skill_pairs": 88,
+        "skilled_jobs": 19,
+        "skill_share": 0.76,
+        "eligible_evidence": 102,
+        "combination_jobs": 17
       }
     },
     {
       "name": "netease_education_本科",
       "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"netease\"}, Builds[source]),TREATAS({\"本科\"}, Jobs[education_group]))",
       "expected": {
-        "core": 60,
-        "denominator": 60,
-        "job_skill_pairs": 216,
-        "skilled_jobs": 53,
-        "skill_share": 0.8833333333333333,
-        "eligible_evidence": 242,
-        "combination_jobs": 42
+        "core": 58,
+        "denominator": 58,
+        "job_skill_pairs": 209,
+        "skilled_jobs": 51,
+        "skill_share": 0.8793103448275862,
+        "eligible_evidence": 235,
+        "combination_jobs": 41
       }
     },
     {
@@ -586,7 +626,7 @@
     },
     {
       "name": "netease_city_experience_category",
-      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"netease\"}, Builds[source]),TREATAS({\"冲突待确认\"}, Jobs[experience_group]),TREATAS({\"游戏程序\"}, Jobs[category_group]),TREATAS({\"杭州\"}, CityJobs[city]))",
+      "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"netease\"}, Builds[source]),TREATAS({\"冲突待确认\"}, Jobs[experience_group]),TREATAS({\"游戏程序\"}, Jobs[source_category_group]),TREATAS({\"杭州\"}, CityJobs[city]))",
       "expected": {
         "core": 3,
         "denominator": 3,

@@ -1,0 +1,204 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "qualification_evidence",
+  "position": {
+    "x": 23.597395316745008,
+    "y": 449.5924791927207,
+    "z": 0,
+    "height": 150.27814912242874,
+    "width": 1382.3105782914313,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "QualificationEvidence"
+                    }
+                  },
+                  "Property": "qualification_kind"
+                }
+              },
+              "queryRef": "QualificationEvidence.qualification_kind",
+              "nativeQueryRef": "qualification_kind",
+              "displayName": "门槛类型"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "QualificationEvidence"
+                    }
+                  },
+                  "Property": "qualification_value"
+                }
+              },
+              "queryRef": "QualificationEvidence.qualification_value",
+              "nativeQueryRef": "qualification_value",
+              "displayName": "规范结果"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "QualificationEvidence"
+                    }
+                  },
+                  "Property": "strength"
+                }
+              },
+              "queryRef": "QualificationEvidence.strength",
+              "nativeQueryRef": "strength",
+              "displayName": "要求强度"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "QualificationEvidence"
+                    }
+                  },
+                  "Property": "evidence_field"
+                }
+              },
+              "queryRef": "QualificationEvidence.evidence_field",
+              "nativeQueryRef": "evidence_field",
+              "displayName": "原文字段"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "QualificationEvidence"
+                    }
+                  },
+                  "Property": "evidence"
+                }
+              },
+              "queryRef": "QualificationEvidence.evidence",
+              "nativeQueryRef": "evidence",
+              "displayName": "原文证据"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'学历与经验依据：优先不等于必需；未注明不等于不限'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#123047'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

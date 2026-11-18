@@ -32,17 +32,8 @@ def count_nonempty_lines(path):
 
 def collector_source(root=None):
     """采集器源码文件及 SHA-256（LF 归一化），供清单在 commit 合并前也可定位校验。"""
-    root = Path(root) if root else Path(__file__).resolve().parents[2]
-    base = root / "collectors" / "netease"
-    entries = []
-    for path in sorted(base.iterdir()):
-        if path.is_file() and path.suffix in {".py", ".md", ".txt"}:
-            entries.append({
-                "path": str(path.relative_to(root)),
-                "sha256": sha256_text_lf(path),
-                "newline": "LF",
-            })
-    return entries
+    from collectors.coverage import source_files
+    return source_files('netease',root)
 
 
 class Batch:

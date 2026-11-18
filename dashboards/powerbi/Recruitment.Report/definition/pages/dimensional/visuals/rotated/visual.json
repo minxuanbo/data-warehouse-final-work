@@ -1,0 +1,357 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "rotated",
+  "position": {
+    "x": 24,
+    "y": 565,
+    "z": 0,
+    "height": 240,
+    "width": 1382,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotCityJobs"
+                    }
+                  },
+                  "Property": "province_name"
+                }
+              },
+              "queryRef": "SnapshotCityJobs.province_name",
+              "nativeQueryRef": "province_name",
+              "active": true,
+              "displayName": "省份"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotCityJobs"
+                    }
+                  },
+                  "Property": "city_name"
+                }
+              },
+              "queryRef": "SnapshotCityJobs.city_name",
+              "nativeQueryRef": "city_name",
+              "active": false,
+              "displayName": "城市"
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotJobs"
+                    }
+                  },
+                  "Property": "category_group"
+                }
+              },
+              "queryRef": "SnapshotJobs.category_group",
+              "nativeQueryRef": "category_group",
+              "active": true,
+              "displayName": "标准岗位类别"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotJobs"
+                    }
+                  },
+                  "Property": "快照核心岗位数"
+                }
+              },
+              "queryRef": "SnapshotJobs.快照核心岗位数",
+              "nativeQueryRef": "快照核心岗位数",
+              "displayName": "快照核心岗位数"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "showExpandCollapseButtons": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "stepped": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "238.0148279805578D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "SnapshotCityJobs"
+                          }
+                        },
+                        "Property": "province_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'冲突待确认'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'旋转视图：与上表交换类别/地点的行列；总计按岗位去重'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#123047'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bae3f3f8ba6b885324d2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotJobs"
+              }
+            },
+            "Property": "category_group"
+          }
+        },
+        "type": "Categorical",
+        "displayName": "标准岗位类别"
+      },
+      {
+        "name": "f551beeb02003b18e77a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotJobs"
+              }
+            },
+            "Property": "快照核心岗位数"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e1569d86116a3d34d693",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotCityJobs"
+              }
+            },
+            "Property": "province_name"
+          }
+        },
+        "type": "Categorical",
+        "displayName": "省份"
+      },
+      {
+        "name": "2bd1b1741165cd933718",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotCityJobs"
+              }
+            },
+            "Property": "city_name"
+          }
+        },
+        "type": "Categorical",
+        "displayName": "城市"
+      }
+    ]
+  }
+}

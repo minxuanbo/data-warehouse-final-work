@@ -1,0 +1,243 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1760.982060846595,
+            "y": 856.2748171942726
+          },
+          "nodeIndex": "Builds",
+          "nodeLineageTag": "5b55ed96-e8e2-4f10-ae62-42adb2c0bfaf",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2086.91740463107,
+            "y": 753.3218673730928
+          },
+          "nodeIndex": "CityJobs",
+          "nodeLineageTag": "3621deca-34c7-4a03-9514-d560a2e034a9",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1499.9443456620143,
+            "y": 129.47370005723246
+          },
+          "nodeIndex": "Evidence",
+          "nodeLineageTag": "3baa014a-3ca7-40ee-af5e-614a2af976a1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1784.7794987944446,
+            "y": 486.72069606603407
+          },
+          "nodeIndex": "Jobs",
+          "nodeLineageTag": "099b56f6-5b1a-4908-bb41-39f42c424a37",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2074.6876331101066,
+            "y": 303.48324036769191
+          },
+          "nodeIndex": "Pairs",
+          "nodeLineageTag": "45409134-a6ed-4e7e-8be4-534c078276f8",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1495.5021437574469,
+            "y": 675.75746772749085
+          },
+          "nodeIndex": "SkillJobs",
+          "nodeLineageTag": "a572f7d4-0c29-4550-9dcc-6fbccc9c86de",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1210.0367507163744,
+            "y": 223.69873185297479
+          },
+          "nodeIndex": "Skills",
+          "nodeLineageTag": "35841b1d-6938-4cd3-89c2-d5d94e65a880",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 553.09761185100012,
+            "y": 355.31698314917753
+          },
+          "nodeIndex": "Calendar",
+          "nodeLineageTag": "bd45940e-5925-4285-858a-4ec56e2e5f15",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 411.53542018014332,
+            "y": -50
+          },
+          "nodeIndex": "QualityKpi",
+          "nodeLineageTag": "2c396cfe-7a1a-4781-a86b-ce2c725f0b2a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 926.03675071637429,
+            "y": 765.61203322353788
+          },
+          "nodeIndex": "SnapshotCityJobs",
+          "nodeLineageTag": "605045da-3b2e-4d3a-9b1b-925b2e2b4ede",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 465.23419674905176
+          },
+          "nodeIndex": "SnapshotDays",
+          "nodeLineageTag": "5305eb18-d6c7-4a70-8f18-40439564f787",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 885.39588624995076,
+            "y": 413.53581844553923
+          },
+          "nodeIndex": "SnapshotEvidence",
+          "nodeLineageTag": "2004275b-caa5-460d-afdf-d6d367840eba",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 304.99980588040034,
+            "y": 825.09816869313806
+          },
+          "nodeIndex": "SnapshotJobs",
+          "nodeLineageTag": "89b2e75c-8a7a-43cd-b690-7b1c3e034aef",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 428.54538494716473,
+            "y": 1183.7485172515051
+          },
+          "nodeIndex": "SnapshotSkillJobs",
+          "nodeLineageTag": "91a2d097-d9c2-4da1-8199-78bfe1828450",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 596.0438712297464,
+            "y": 710.06036703816642
+          },
+          "nodeIndex": "SnapshotSkills",
+          "nodeLineageTag": "429ec007-40af-4f07-a366-891deec1ffbd",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 266.26932541628491,
+            "y": 304.29191920783865
+          },
+          "nodeIndex": "SnapshotSources",
+          "nodeLineageTag": "5d1dbae3-32bc-4010-815b-2ff0db386916",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2320.91740463107,
+            "y": 542.87425862575253
+          },
+          "nodeIndex": "QualificationEvidence",
+          "nodeLineageTag": "5c35cadd-8703-41de-8065-3870a2622d5d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "所有表",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "所有表",
+  "defaultDiagram": "所有表"
+}

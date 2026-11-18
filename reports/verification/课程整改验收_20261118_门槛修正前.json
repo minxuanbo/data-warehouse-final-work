@@ -1,0 +1,328 @@
+{
+  "checked_at_utc": "2026-11-18T03:30:12.459998+00:00",
+  "status": "passed_for_current_sample_scope",
+  "teacher_issues": {
+    "subject_oriented_analysis": "implemented_and_reconciled",
+    "fact_design": "grain_dimensions_facts_and_additivity_explicit",
+    "conceptual_expression": "information_package_primary_business_ER_auxiliary",
+    "star_vs_layers": "actual_star_plus_layer_lineage_and_three_topic_interfaces",
+    "consistency_and_handoff": "current_docs_keys_categories_and_model_aligned_clean_directory_reproduction_passed"
+  },
+  "subjects": {
+    "checked_at_utc": "2026-11-18T03:30:12.345979+00:00",
+    "status": "passed",
+    "database": "recruitment_dw_dev_cd_v1",
+    "release_id": 4,
+    "checks": [
+      "snapshot_grain",
+      "structure_population",
+      "entry_population",
+      "skill_numerator",
+      "skill_denominator",
+      "partial_change_gate"
+    ],
+    "sources": {
+      "tencent": {
+        "source_postings": 100,
+        "core_postings": 98,
+        "body_denominator": 98,
+        "posting_skill_pairs": 333,
+        "dates": [
+          "2026-10-31"
+        ]
+      },
+      "netease": {
+        "source_postings": 100,
+        "core_postings": 98,
+        "body_denominator": 98,
+        "posting_skill_pairs": 334,
+        "dates": [
+          "2026-11-01"
+        ]
+      }
+    },
+    "standard_category_counts": {
+      "开发": 134,
+      "算法/AI": 39,
+      "测试": 15,
+      "数据开发/分析": 6,
+      "运维/安全": 2
+    },
+    "top_skills": [
+      [
+        "C++",
+        63
+      ],
+      [
+        "Python",
+        54
+      ],
+      [
+        "Unreal Engine",
+        30
+      ],
+      [
+        "Linux",
+        24
+      ],
+      [
+        "C",
+        22
+      ],
+      [
+        "Unity",
+        22
+      ],
+      [
+        "PyTorch",
+        19
+      ],
+      [
+        "RAG",
+        19
+      ],
+      [
+        "Lua",
+        16
+      ],
+      [
+        "MCP",
+        15
+      ]
+    ],
+    "top_pairs": [
+      [
+        [
+          "C++",
+          "Python"
+        ],
+        26
+      ],
+      [
+        [
+          "C",
+          "C++"
+        ],
+        22
+      ],
+      [
+        [
+          "C++",
+          "Unreal Engine"
+        ],
+        19
+      ],
+      [
+        [
+          "C",
+          "Python"
+        ],
+        15
+      ],
+      [
+        [
+          "C++",
+          "Unity"
+        ],
+        13
+      ],
+      [
+        [
+          "C++",
+          "Linux"
+        ],
+        12
+      ],
+      [
+        [
+          "Unity",
+          "Unreal Engine"
+        ],
+        12
+      ],
+      [
+        [
+          "C++",
+          "Lua"
+        ],
+        11
+      ],
+      [
+        [
+          "PyTorch",
+          "Python"
+        ],
+        11
+      ],
+      [
+        [
+          "Claude Code",
+          "Cursor"
+        ],
+        10
+      ]
+    ],
+    "education": [
+      [
+        [
+          "netease",
+          "不限"
+        ],
+        35
+      ],
+      [
+        [
+          "netease",
+          "冲突待确认"
+        ],
+        1
+      ],
+      [
+        [
+          "netease",
+          "本科"
+        ],
+        60
+      ],
+      [
+        [
+          "netease",
+          "硕士"
+        ],
+        2
+      ],
+      [
+        [
+          "tencent",
+          "未知"
+        ],
+        98
+      ]
+    ],
+    "note": "Category mapping is automatic initial classification; no human-review accuracy claim."
+  },
+  "semantic_model_contract": {
+    "status": "passed",
+    "relationship_count": 16,
+    "tables": 16
+  },
+  "powerbi_engine_cases": 81,
+  "powerbi_model_sha256": "57a7f15b641e80420116e1b24573a77b05d483f36904a780c4ba35db7f07dae9",
+  "dbt_models": 36,
+  "dbt_models_documented": 36,
+  "dbt_checks_passed": 15,
+  "clean_directory_reproduction": {
+    "status": "passed",
+    "database": "recruitment_dw_dev_clean_20261118",
+    "release_id": 1,
+    "source_counts": [
+      {
+        "source": "netease",
+        "source_postings": 100,
+        "core_postings": 98,
+        "body_denominator": 98
+      },
+      {
+        "source": "tencent",
+        "source_postings": 100,
+        "core_postings": 98,
+        "body_denominator": 98
+      }
+    ],
+    "posting_skill_pairs": [
+      {
+        "source": "netease",
+        "posting_skill_pairs": 334
+      },
+      {
+        "source": "tencent",
+        "posting_skill_pairs": 333
+      }
+    ],
+    "inputs": "tracked repository files at the pinned source revisions",
+    "pipeline": {
+      "started_at": "2026-11-18T03:06:40.855783+00:00",
+      "database": "recruitment_dw_dev_clean_20261118",
+      "pending_batches": [],
+      "inputs": [
+        {
+          "batch_id": "tencent_20261031T093102Z_366ad0a4",
+          "load": "loaded_trial",
+          "analysis": {
+            "status": "ready",
+            "build_id": 1,
+            "jobs": 100,
+            "core_jobs": 98,
+            "evidence": 552,
+            "bridge_rows": 528
+          }
+        },
+        {
+          "batch_id": "netease_20261101T044527Z_157cf969",
+          "load": "loaded_trial",
+          "analysis": {
+            "status": "ready",
+            "build_id": 2,
+            "jobs": 100,
+            "core_jobs": 98,
+            "evidence": 515,
+            "bridge_rows": 489
+          }
+        }
+      ],
+      "status": "passed",
+      "release": {
+        "status": "ready",
+        "release_id": 1,
+        "channel": "sample",
+        "source_observations": 200,
+        "dates": [
+          "2026-10-31",
+          "2026-11-01"
+        ]
+      },
+      "publication": {
+        "status": "published",
+        "release_id": 1,
+        "previous_release_id": null,
+        "channel": "sample"
+      },
+      "finished_at": "2026-11-18T03:12:38.930279+00:00"
+    },
+    "powerbi_prepared": false
+  },
+  "clean_directory_runtime_scope": "Separate source checkout and new database, sharing only the installed pinned Python environment and read-only Git object storage; no original hidden batch/cache inputs.",
+  "offline_tests": {
+    "count": 63,
+    "status": "passed",
+    "elapsed_seconds": 15.487,
+    "scope": "clean source directory after documented fixed-fixture preparation",
+    "evidence": "observed execution in this rectification session"
+  },
+  "data_dictionary": {
+    "status": "passed",
+    "database": "recruitment_dw_dev_cd_v1",
+    "documented_objects": 67,
+    "documented_columns": 576,
+    "new_model_descriptions": 16,
+    "unexplained_columns": []
+  },
+  "current_links": "passed",
+  "visual_field_references": "passed",
+  "diagrams": {
+    "docs\\design\\figures\\03_00_岗位分析信息包.svg": "20e6ecf7663c6d8c686ed2206aa5174b9862b30a10442075f9972ecb41fd6e88",
+    "docs\\design\\figures\\04_01_岗位日状态星型.svg": "212c54d71d6b2259f52acadbeac0a66c9ea5585087f7e76f3b5c789813ac4c07",
+    "docs\\design\\figures\\04_02_分层与分析模型.svg": "49dbf0c702797f7e41a085712e2b6fcad3759a5c5aae075bd75112df59e08335"
+  },
+  "remaining_final_data_conditions": [
+    "real consecutive complete source batches before trends",
+    "additional 100-job HUMAN review before claiming that acceptance target",
+    "independent verification of employment type codes before using that analysis"
+  ],
+  "not_claimed": [
+    "teacher grading approval",
+    "nationwide market coverage",
+    "cross-source entity resolution",
+    "new physical backup restore in this session"
+  ]
+}

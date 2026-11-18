@@ -30,7 +30,15 @@ def prepare_v11(batch_path, analysis_path, dictionary_path):
     manifest = checked['manifest']
     analysis = Path(analysis_path)
     provenance = json.loads((analysis / 'input_provenance.json').read_text(encoding='utf-8'))
-    policy = json.loads((ROOT / 'warehouse/cd_policy_v12.json').read_text(encoding='utf-8'))
+    if provenance.get('scope_policy_sha256'):
+        policy_bytes=safe_path(analysis,'scope_policy.json').read_bytes()
+        if digest(policy_bytes)!=provenance['scope_policy_sha256']:
+            raise ValueError('Analysis scope policy hash mismatch')
+        policy=json.loads(policy_bytes)
+        if policy['scope_version']!=provenance['scope_version']:
+            raise ValueError('Analysis scope version mismatch')
+    else:
+        policy = json.loads((ROOT / 'warehouse/cd_policy_v12.json').read_text(encoding='utf-8'))
     fields = policy['skill_input_fields']
     if provenance['body_hash_fields'] != fields or provenance['body_hash_version'] != policy['body_hash_version']:
         raise ValueError('Unsupported three-field hash definition')

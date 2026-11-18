@@ -1,0 +1,13 @@
+{
+  "unit": "a distinct source job, not an evidence anchor",
+  "target_jobs": 100,
+  "jobs_per_source": 50,
+  "prior_reference_jobs": 40,
+  "additional_jobs": 60,
+  "packet_sha256": "afb84d2ddb70d0de700e90406aef5f7add71ae4a4a15319b745976fd9ecf56d5",
+  "extractor_sha256": "84c3605b2fde041a74610a9cdadf4e6517e64bea83cef7da27970bbe0c414d3e",
+  "dictionary_sha256": "1b66fbdf4d3eb86b772ac19b080757c49c94b7c81570d3c347d011226e6627be",
+  "status": "pending_human_review",
+  "scores": null,
+  "note": "No extracted candidates included. Prior 40-job frozen holdout results remain separate."
+}

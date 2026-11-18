@@ -1,0 +1,447 @@
+version: 2
+models:
+- name: release_calendar
+  description: 每曾发布 release×日历日；填充分析窗口日历，但不伪造该日岗位。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: calendar_date
+    description: 日历 DATE，用于日期维；不代表该日确有采集。
+  - name: calendar_year
+    description: 日历年份。
+  - name: calendar_quarter
+    description: 季度 1—4。
+  - name: calendar_month
+    description: 月份 1—12。
+  - name: calendar_day
+    description: 月内日期。
+- name: release_city
+  description: 每曾发布 release×分析日×规范城市；不同核心岗位计数，多城市不加总。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: city_key
+    description: 规范地点成员代理键。
+  - name: city_name
+    description: 规范城市名，统一市字后缀；未知和冲突显式保留。
+  - name: province_name
+    description: 保守查表得到的省级名称；未映射城市不猜测省份。
+  - name: mapping_status
+    description: 地点映射状态 mapped/unmapped/unknown/conflict。
+  - name: posting_count
+    description: 当前维度组覆盖的不同来源岗位数；技能或城市分组之间可能重叠。
+- name: release_city_detail
+  description: 每曾发布 release×分析日×岗位×城市，供城市筛选集合。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: job_key
+    description: 稳定来源岗位分析身份，当前与 posting_key 一对一，不声称完成跨来源归并。
+  - name: snapshot_key
+    description: release_id、date_key、job_key 拼接的 BI 关系键，用来区分多日状态。
+  - name: city_name
+    description: 规范城市名，统一市字后缀；未知和冲突显式保留。
+  - name: province_name
+    description: 保守查表得到的省级名称；未映射城市不猜测省份。
+  - name: mapping_status
+    description: 地点映射状态 mapped/unmapped/unknown/conflict。
+- name: job_demand_entry_profile
+  description: B03 对外服务，物理名 ads.release_entry_profile；门槛分布供交叉分析。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: analysis_date
+    description: 北京时间批次结束日，来自 manifest.finished_at；不是发布日期。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: category_group
+    description: 快照中的标准岗位方向，按第2章初分类规则；来源原类别为 category_raw。
+  - name: education_group
+    description: 学历分布分组，NULL 归未知，冲突单组；不是已完成的标准学历维度。
+  - name: experience_group
+    description: 经验分布组，NULL 归未知，冲突独立；不限与未知不合并。
+  - name: employment_type_group
+    description: 日状态使用的招聘类型规范分组；当前多为代码未释义。
+  - name: core_posting_count
+    description: 当前模型粒度下的核心来源岗位计数；多日状态不可直接累加为独立机会。
+  - name: skill_denominator
+    description: 当前模型粒度下全部有效正文核心岗位数，包括零技能命中；不从技能桥取分母。
+- name: release_job_detail
+  description: 每曾发布 release×分析日×来源岗位；标准属性、原值和证据引用。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: analysis_date
+    description: 北京时间批次结束日，来自 manifest.finished_at；不是发布日期。
+  - name: calendar_year
+    description: 日历年份。
+  - name: calendar_quarter
+    description: 季度 1—4。
+  - name: calendar_month
+    description: 月份 1—12。
+  - name: job_key
+    description: 稳定来源岗位分析身份，当前与 posting_key 一对一，不声称完成跨来源归并。
+  - name: build_id
+    description: 单来源批次的范围、冲突及技能分析构建；不是整组 release。
+  - name: observation_key
+    description: 来源岗位观察代理键；业务唯一性为批次×来源岗位身份。
+  - name: version_key
+    description: 来源内容版本代理键，引用 dim.posting_version；SCD2 观察有效期，不是企业真实生效期。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: source_job_id
+    description: 来源岗位 ID 字符串；不得转数值或跨来源用裸 ID 去重。
+  - name: batch_id
+    description: 不可变采集批次标识；可回连 audit.collection_batch。
+  - name: title_raw
+    description: 来源岗位标题原值。
+  - name: source_url
+    description: 原始岗位页面 URL，用于回查；网站内容可能变化，历史以保存响应为准。
+  - name: company_name
+    description: 保守保留的企业/品牌名；缺失为显式未知。
+  - name: category_group
+    description: 快照中的标准岗位方向，按第2章初分类规则；来源原类别为 category_raw。
+  - name: education_group
+    description: 学历分布分组，NULL 归未知，冲突单组；不是已完成的标准学历维度。
+  - name: experience_group
+    description: 经验分布组，NULL 归未知，冲突独立；不限与未知不合并。
+  - name: employment_type_group
+    description: 日状态使用的招聘类型规范分组；当前多为代码未释义。
+  - name: qualification_rule_version
+    description: 学历/经验派生规则版本；原值和旧发布不覆写。
+  - name: education_resolution_status
+    description: 学历解析状态 structured/body_required/preference_only/not_stated/conflict/ambiguous/unparsed。
+  - name: education_basis
+    description: 学历派生依据类型，区别结构化来源、正文与未提供。
+  - name: education_basis_label
+    description: 供报表阅读的中文学历依据，保留来源/正文/偏好/未注明/冲突的区别。
+  - name: education_resolution_json
+    description: 学历值、来源/正文依据、必需/优先/不确定证据、字符位置及原始引用 JSON。
+  - name: experience_resolution_json
+    description: 经验规范值、状态、来源字段证据与原始引用 JSON；中文数字忠实转换。
+  - name: category_raw
+    description: 源岗位类别原值；各来源编码未全部统一，不直接跨源合并同名类别。
+  - name: education_raw
+    description: 来源学历原值，不能把未知改写为不限。
+  - name: experience_raw
+    description: 来源经验原值。
+  - name: is_core
+    description: 是否属于当前版本核心数字技术岗位范围；不修改来源原记录。
+  - name: body_valid
+    description: 按该构建的 skill_text_scope 判断正文有效；三字段构建含职责、任职要求、补充要求。
+  - name: location_conflict
+    description: 地点冲突标记；分析分组显示冲突而非猜测城市。
+  - name: education_conflict
+    description: 结构化学历与正文的待确认冲突标记；与 NULL/不限区别处理。
+  - name: experience_conflict
+    description: 经验字段冲突标记；当前裁定与普通提示分别存储。
+  - name: experience_hint
+    description: 经验人工核查提示，可与冲突重叠；不自动当作冲突或排除岗位。
+  - name: raw_ref
+    description: 相对固定采集批次的原始详情文件路径，可连接 ods.raw_response。
+  - name: raw_sha256
+    description: 原始详情文件 SHA-256，核对原文是否被修改。
+  - name: content_json
+    description: 不可变来源内容版本原字段 JSON；使用完整 JSON 解析，避免 JSON_VALUE 截断长正文。
+  - name: additional_requirements_raw
+    description: 从原始详情取出的补充要求原文；是否用于技能依 skill_text_scope。
+  - name: issues_json
+    description: 本岗位可追溯的质量问题及人工裁定记录。
+  - name: scope_reason
+    description: 岗位核心/扩展范围裁定原因。
+  - name: body_hash_version
+    description: 技能输入正文规范化与哈希版本。
+  - name: dictionary_version
+    description: 技能词典版本，与构建和证据共同固定。
+  - name: rule_version
+    description: 技能提取规则版本。
+  - name: scope_version
+    description: 当前接口范围版本：trial/dual 为采集范围，cd 为分析核心范围；不可混作同一规则。
+  - name: skill_text_scope
+    description: 构建的正文输入字段集合；当前三字段为职责+要求+补充要求，历史两字段构建保持旧口径。
+  - name: channel
+    description: 发布通道 sample/formal；sample 可包含 partial，formal 必须通过范围完整性。
+  - name: normalization_version
+    description: 岗位类别和地点等标准化规则版本。
+  - name: mapping_version
+    description: 来源岗位到分析身份的映射版本；当前 source-identity-only-1.0。
+  - name: coverage_status
+    description: 批准查询范围的遍历覆盖状态 complete/partial/failed；partial 不能驱动新增、下架趋势。
+  - name: acceptance_status
+    description: 采集批次技术验收状态；accepted 不表示覆盖完整或已经正式发布。
+  - name: dataset_note
+    description: 样本/正式观察范围及推断限制提示。
+- name: job_demand_structure
+  description: B01 对外服务，物理名 ads.release_job_structure；来源/类别显示属性和覆盖率。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: analysis_date
+    description: 北京时间批次结束日，来自 manifest.finished_at；不是发布日期。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: category_group
+    description: 快照中的标准岗位方向，按第2章初分类规则；来源原类别为 category_raw。
+  - name: core_posting_count
+    description: 当前模型粒度下的核心来源岗位计数；多日状态不可直接累加为独立机会。
+  - name: skill_denominator
+    description: 当前模型粒度下全部有效正文核心岗位数，包括零技能命中；不从技能桥取分母。
+  - name: skilled_posting_count
+    description: 该来源/方向正文集合中至少命中一项有效技能的不同岗位数。
+  - name: body_coverage
+    description: 有效正文核心岗位数 / 核心岗位数；零分母 NULL。
+  - name: skill_coverage
+    description: 至少命中一项有效技能的岗位数 / 有效正文岗位数；不等于词频。
+- name: release_observed_change
+  description: 每曾发布 release×分析日；只在完整相邻基线成立时计算变化。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: calendar_date
+    description: 日历 DATE，用于日期维；不代表该日确有采集。
+  - name: previous_date_key
+    description: 严格相邻前一日的日历键；没有对应日汇总时不可比较。
+  - name: source_posting_count
+    description: 批次/构建中来源岗位观察数量；trial 含扩展，cd 概览含全部，不能称独立招聘人数。
+  - name: core_posting_count
+    description: 当前模型粒度下的核心来源岗位计数；多日状态不可直接累加为独立机会。
+  - name: skill_denominator
+    description: 当前模型粒度下全部有效正文核心岗位数，包括零技能命中；不从技能桥取分母。
+  - name: expected_source_count
+    description: 批准范围内预期的来源数量。
+  - name: observed_source_count
+    description: 该日实际选入的不同来源数。
+  - name: complete_source_count
+    description: 该日技术验收且 complete 的来源批次数。
+  - name: is_complete
+    description: 该日批准来源集合是否全部完整；不完整不可作变化基线。
+  - name: is_comparable
+    description: 当前与相邻前一日是否都完整，且发布固定同一规则/范围。
+  - name: newly_observed_count
+    description: 可比相邻日中新出现的来源岗位身份数，不等于企业新招聘。
+  - name: first_discovered_count
+    description: 本发布观察窗口内首次发现的岗位数；无完整基线时 NULL。
+  - name: still_unobserved_count
+    description: 曾出现但连续两个合格日未观察的身份数，不确认岗位关闭。
+  - name: content_changed_count
+    description: 可比日相同身份的代表内容哈希变化数，不含凭空追造历史。
+  - name: comparison_note
+    description: 变化计算成立或拒绝计算的业务原因。
+- name: release_qualification_evidence
+  description: 每曾发布 release×日×岗位×门槛证据；区分必需、优先及待确认并保留原文。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: job_key
+    description: 稳定来源岗位分析身份，当前与 posting_key 一对一，不声称完成跨来源归并。
+  - name: snapshot_key
+    description: release_id、date_key、job_key 拼接的 BI 关系键，用来区分多日状态。
+  - name: qualification_kind
+    description: 门槛证据类型：学历或经验。
+  - name: qualification_rule_version
+    description: 学历/经验派生规则版本；原值和旧发布不覆写。
+  - name: qualification_value
+    description: 该门槛的规范化结果。
+  - name: resolution_status
+    description: 门槛解析状态，不将未注明或仅优先当成硬性要求。
+  - name: evidence_field
+    description: 职责、任职要求或补充要求的字段名。
+  - name: evidence
+    description: 来源正文逐字证据片段。
+  - name: evidence_start
+    description: 证据片段起始 Unicode 字符索引（含），不是字节位置。
+  - name: evidence_end
+    description: 证据片段结束 Unicode 字符索引（不含）。
+  - name: strength
+    description: 门槛证据强度：必需、优先、不确定或来源值。
+  - name: degree
+    description: 该条证据对应的学历层次；没有学历证据时为空。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: source_job_id
+    description: 来源岗位 ID 字符串；不得转数值或跨来源用裸 ID 去重。
+  - name: raw_ref
+    description: 相对固定采集批次的原始详情文件路径，可连接 ods.raw_response。
+  - name: raw_sha256
+    description: 原始详情文件 SHA-256，核对原文是否被修改。
+  - name: record_ref
+    description: 规范源记录 jobs.jsonl 及文本岗位ID定位；证据下标指该记录相应字段值。
+  - name: raw_refs_json
+    description: 该规范记录对应的原响应文件与哈希集合，可定位列表/详情，不假定字段都来自详情。
+- name: release_skill_demand
+  description: 每曾发布 release×分析日×技能；去重覆盖数与当日正文分母。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: skill_key
+    description: 标准技能代理键，引用 dim.skill。
+  - name: skill_name
+    description: 词典标准技能名，保留 SQL 与 MySQL 等不同概念。
+  - name: posting_count
+    description: 当前维度组覆盖的不同来源岗位数；技能或城市分组之间可能重叠。
+  - name: skill_denominator
+    description: 当前模型粒度下全部有效正文核心岗位数，包括零技能命中；不从技能桥取分母。
+  - name: skill_share
+    description: 有效技能覆盖岗位数 / 对应完整正文岗位集合；技能筛选不反向缩小分母。
+- name: release_skill_detail
+  description: 每曾发布 release×分析日×岗位×有效标准技能。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: job_key
+    description: 稳定来源岗位分析身份，当前与 posting_key 一对一，不声称完成跨来源归并。
+  - name: snapshot_key
+    description: release_id、date_key、job_key 拼接的 BI 关系键，用来区分多日状态。
+  - name: skill_name
+    description: 词典标准技能名，保留 SQL 与 MySQL 等不同概念。
+- name: release_skill_evidence
+  description: 每曾发布 release×分析日×岗位×证据锚点，含审计无效证据。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: job_key
+    description: 稳定来源岗位分析身份，当前与 posting_key 一对一，不声称完成跨来源归并。
+  - name: snapshot_key
+    description: release_id、date_key、job_key 拼接的 BI 关系键，用来区分多日状态。
+  - name: skill_name
+    description: 词典标准技能名，保留 SQL 与 MySQL 等不同概念。
+  - name: eligible_for_metric
+    description: 技能证据是否符合计量语境；计算岗位指标还须同时筛核心范围和正文有效。
+  - name: evidence_field
+    description: 职责、任职要求或补充要求的字段名。
+  - name: evidence
+    description: 来源正文逐字证据片段。
+  - name: raw_ref
+    description: 相对固定采集批次的原始详情文件路径，可连接 ods.raw_response。
+  - name: evidence_start
+    description: 证据片段起始 Unicode 字符索引（含），不是字节位置。
+  - name: evidence_end
+    description: 证据片段结束 Unicode 字符索引（不含）。
+  - name: body_hash_version
+    description: 技能输入正文规范化与哈希版本。
+- name: job_demand_skill_profile
+  description: B02 对外服务，物理名 ads.release_skill_profile；技能覆盖与类别正文分母。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: analysis_date
+    description: 北京时间批次结束日，来自 manifest.finished_at；不是发布日期。
+  - name: source
+    description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+  - name: category_group
+    description: 快照中的标准岗位方向，按第2章初分类规则；来源原类别为 category_raw。
+  - name: skill_name
+    description: 词典标准技能名，保留 SQL 与 MySQL 等不同概念。
+  - name: posting_count
+    description: 当前维度组覆盖的不同来源岗位数；技能或城市分组之间可能重叠。
+  - name: skill_denominator
+    description: 当前模型粒度下全部有效正文核心岗位数，包括零技能命中；不从技能桥取分母。
+  - name: skill_share
+    description: 有效技能覆盖岗位数 / 对应完整正文岗位集合；技能筛选不反向缩小分母。
+- name: release_validation
+  description: 每实际发布违规一行；未发现违规为零行，不伪造通过行。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: issue_code
+    description: 发布校验的违规类型；验证视图每行是一个问题，零行才通过。
+- name: release_daily_summary
+  description: 每 release×分析日；来源完整性、核心岗位及正文计数。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: source_posting_count
+    description: 批次/构建中来源岗位观察数量；trial 含扩展，cd 概览含全部，不能称独立招聘人数。
+  - name: core_posting_count
+    description: 当前模型粒度下的核心来源岗位计数；多日状态不可直接累加为独立机会。
+  - name: skill_denominator
+    description: 当前模型粒度下全部有效正文核心岗位数，包括零技能命中；不从技能桥取分母。
+  - name: expected_source_count
+    description: 批准范围内预期的来源数量。
+  - name: observed_source_count
+    description: 该日实际选入的不同来源数。
+  - name: complete_source_count
+    description: 该日技术验收且 complete 的来源批次数。
+  - name: is_complete
+    description: 该日批准来源集合是否全部完整；不完整不可作变化基线。
+- name: release_entry_profile
+  description: B03：每 release×分析日×来源×标准方向×学历×经验×招聘类型。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: source_key
+    description: 来源维代理键；用于统一来源成员，不等于企业键。
+  - name: category_key
+    description: 标准岗位方向的维度键，按规范化版本识别。
+  - name: education_key
+    description: 学历规范成员代理键；未知、不限、冲突分别建成员。
+  - name: experience_key
+    description: 经验规范成员代理键，保留源经验区间，不伪造精度。
+  - name: employment_type_key
+    description: 招聘类型维键；未经核实的数字代码为来源代码未释义。
+  - name: core_posting_count
+    description: 当前模型粒度下的核心来源岗位计数；多日状态不可直接累加为独立机会。
+  - name: skill_denominator
+    description: 当前模型粒度下全部有效正文核心岗位数，包括零技能命中；不从技能桥取分母。
+- name: release_job_structure
+  description: B01：每 release×分析日×来源×标准方向，岗位结构计数。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: source_key
+    description: 来源维代理键；用于统一来源成员，不等于企业键。
+  - name: category_key
+    description: 标准岗位方向的维度键，按规范化版本识别。
+  - name: core_posting_count
+    description: 当前模型粒度下的核心来源岗位计数；多日状态不可直接累加为独立机会。
+  - name: skill_denominator
+    description: 当前模型粒度下全部有效正文核心岗位数，包括零技能命中；不从技能桥取分母。
+  - name: skilled_posting_count
+    description: 该来源/方向正文集合中至少命中一项有效技能的不同岗位数。
+- name: release_skill_profile
+  description: B02：每 release×分析日×来源×标准方向×技能，独立分子/正文分母。
+  columns:
+  - name: release_id
+    description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+  - name: date_key
+    description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+  - name: source_key
+    description: 来源维代理键；用于统一来源成员，不等于企业键。
+  - name: category_key
+    description: 标准岗位方向的维度键，按规范化版本识别。
+  - name: skill_key
+    description: 标准技能代理键，引用 dim.skill。
+  - name: posting_count
+    description: 当前维度组覆盖的不同来源岗位数；技能或城市分组之间可能重叠。
+  - name: skill_denominator
+    description: 当前模型粒度下全部有效正文核心岗位数，包括零技能命中；不从技能桥取分母。

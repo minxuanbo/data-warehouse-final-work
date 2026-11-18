@@ -1,0 +1,14 @@
+{
+  "recorded_at_utc": "2026-11-18T03:25:06.668573+00:00",
+  "evidence_kind": "user_screenshots_and_replies_in_this_chat",
+  "hierarchy_and_drillthrough_screenshots": {
+    "inspected": true,
+    "stage": "before final auto-relationship cleanup",
+    "observed_core_total": 196
+  },
+  "auto_relationship_detection_disabled": "confirmed_by_user",
+  "final_refresh_and_save": "confirmed_by_user_after_cleanup",
+  "final_engine_validation": "84 current cases, with current relationship/query/measure contract checked",
+  "final_visual_screenshot": "not_requested_or_manufactured",
+  "qualification_refresh_and_save": "confirmed_by_user_after_qualification_fix"
+}

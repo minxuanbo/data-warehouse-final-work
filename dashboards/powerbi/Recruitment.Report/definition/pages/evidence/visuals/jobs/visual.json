@@ -44,7 +44,7 @@
               },
               "queryRef": "Jobs.source_job_id",
               "nativeQueryRef": "source_job_id",
-              "displayName": "岗位 ID"
+              "displayName": "来源岗位 ID"
             },
             {
               "field": {

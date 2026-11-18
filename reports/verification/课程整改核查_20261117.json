@@ -1,0 +1,1916 @@
+{
+  "checked_at_utc": "2026-11-17T11:22:03.871787+00:00",
+  "database": "recruitment_dw_dev_cd_v1",
+  "status": "passed",
+  "baseline": [
+    {
+      "source": "netease",
+      "build_id": 6,
+      "source_postings": 100,
+      "core_postings": 98,
+      "body_denominator": 98,
+      "first_observation_date": "2026-11-01",
+      "last_observation_date": "2026-11-01"
+    },
+    {
+      "source": "tencent",
+      "build_id": 5,
+      "source_postings": 100,
+      "core_postings": 98,
+      "body_denominator": 98,
+      "first_observation_date": "2026-10-31",
+      "last_observation_date": "2026-10-31"
+    }
+  ],
+  "posting_skill_pairs": [
+    {
+      "source": "netease",
+      "build_id": 6,
+      "posting_skill_pairs": 334
+    },
+    {
+      "source": "tencent",
+      "build_id": 5,
+      "posting_skill_pairs": 333
+    }
+  ],
+  "quality_kpis": [
+    {
+      "build_id": 6,
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "source": "netease",
+      "scope_version": "digital_jobs_cn_core_v1.2",
+      "body_hash_version": "skills-body-1.1",
+      "rule_version": "skills-rules-0.3.0",
+      "dictionary_version": "skills-dict-0.2.0",
+      "coverage_status": "partial",
+      "acceptance_status": "accepted",
+      "kpi_code": "collection_scope_complete",
+      "kpi_name": "批准采集范围遍历完成率",
+      "owner_role": "A/B：来源采集",
+      "numerator": 0,
+      "denominator": 1,
+      "kpi_value": 0.0,
+      "goal_value": 1.0,
+      "status_value": -1,
+      "trend_value": null,
+      "trend_reason": "no_comparable_daily_series",
+      "target_version": "project_acceptance_v1"
+    },
+    {
+      "build_id": 6,
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "source": "netease",
+      "scope_version": "digital_jobs_cn_core_v1.2",
+      "body_hash_version": "skills-body-1.1",
+      "rule_version": "skills-rules-0.3.0",
+      "dictionary_version": "skills-dict-0.2.0",
+      "coverage_status": "partial",
+      "acceptance_status": "accepted",
+      "kpi_code": "core_body_coverage",
+      "kpi_name": "核心岗位正文覆盖率",
+      "owner_role": "C/D：数据加工与技能分析",
+      "numerator": 98,
+      "denominator": 98,
+      "kpi_value": 1.0,
+      "goal_value": 1.0,
+      "status_value": 1,
+      "trend_value": null,
+      "trend_reason": "no_comparable_daily_series",
+      "target_version": "project_acceptance_v1"
+    },
+    {
+      "build_id": 6,
+      "batch_id": "netease_20261101T044527Z_157cf969",
+      "source": "netease",
+      "scope_version": "digital_jobs_cn_core_v1.2",
+      "body_hash_version": "skills-body-1.1",
+      "rule_version": "skills-rules-0.3.0",
+      "dictionary_version": "skills-dict-0.2.0",
+      "coverage_status": "partial",
+      "acceptance_status": "accepted",
+      "kpi_code": "raw_traceability",
+      "kpi_name": "来源岗位原文可追溯率",
+      "owner_role": "A/B/C：采集与入库",
+      "numerator": 100,
+      "denominator": 100,
+      "kpi_value": 1.0,
+      "goal_value": 1.0,
+      "status_value": 1,
+      "trend_value": null,
+      "trend_reason": "no_comparable_daily_series",
+      "target_version": "project_acceptance_v1"
+    },
+    {
+      "build_id": 5,
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "source": "tencent",
+      "scope_version": "digital_jobs_cn_core_v1.2",
+      "body_hash_version": "skills-body-1.1",
+      "rule_version": "skills-rules-0.3.0",
+      "dictionary_version": "skills-dict-0.2.0",
+      "coverage_status": "partial",
+      "acceptance_status": "accepted",
+      "kpi_code": "collection_scope_complete",
+      "kpi_name": "批准采集范围遍历完成率",
+      "owner_role": "A/B：来源采集",
+      "numerator": 0,
+      "denominator": 1,
+      "kpi_value": 0.0,
+      "goal_value": 1.0,
+      "status_value": -1,
+      "trend_value": null,
+      "trend_reason": "no_comparable_daily_series",
+      "target_version": "project_acceptance_v1"
+    },
+    {
+      "build_id": 5,
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "source": "tencent",
+      "scope_version": "digital_jobs_cn_core_v1.2",
+      "body_hash_version": "skills-body-1.1",
+      "rule_version": "skills-rules-0.3.0",
+      "dictionary_version": "skills-dict-0.2.0",
+      "coverage_status": "partial",
+      "acceptance_status": "accepted",
+      "kpi_code": "core_body_coverage",
+      "kpi_name": "核心岗位正文覆盖率",
+      "owner_role": "C/D：数据加工与技能分析",
+      "numerator": 98,
+      "denominator": 98,
+      "kpi_value": 1.0,
+      "goal_value": 1.0,
+      "status_value": 1,
+      "trend_value": null,
+      "trend_reason": "no_comparable_daily_series",
+      "target_version": "project_acceptance_v1"
+    },
+    {
+      "build_id": 5,
+      "batch_id": "tencent_20261031T093102Z_366ad0a4",
+      "source": "tencent",
+      "scope_version": "digital_jobs_cn_core_v1.2",
+      "body_hash_version": "skills-body-1.1",
+      "rule_version": "skills-rules-0.3.0",
+      "dictionary_version": "skills-dict-0.2.0",
+      "coverage_status": "partial",
+      "acceptance_status": "accepted",
+      "kpi_code": "raw_traceability",
+      "kpi_name": "来源岗位原文可追溯率",
+      "owner_role": "A/B/C：采集与入库",
+      "numerator": 100,
+      "denominator": 100,
+      "kpi_value": 1.0,
+      "goal_value": 1.0,
+      "status_value": 1,
+      "trend_value": null,
+      "trend_reason": "no_comparable_daily_series",
+      "target_version": "project_acceptance_v1"
+    }
+  ],
+  "historical_unselected_build_readable": 1,
+  "physical_tables": [
+    {
+      "schema_name": "audit",
+      "table_name": "analysis_build",
+      "foreign_key_count": 1
+    },
+    {
+      "schema_name": "audit",
+      "table_name": "analysis_selection",
+      "foreign_key_count": 2
+    },
+    {
+      "schema_name": "audit",
+      "table_name": "collection_batch",
+      "foreign_key_count": 0
+    },
+    {
+      "schema_name": "audit",
+      "table_name": "quality_issue",
+      "foreign_key_count": 1
+    },
+    {
+      "schema_name": "dim",
+      "table_name": "location",
+      "foreign_key_count": 0
+    },
+    {
+      "schema_name": "dim",
+      "table_name": "posting_identity",
+      "foreign_key_count": 0
+    },
+    {
+      "schema_name": "dim",
+      "table_name": "posting_version",
+      "foreign_key_count": 1
+    },
+    {
+      "schema_name": "dim",
+      "table_name": "skill",
+      "foreign_key_count": 0
+    },
+    {
+      "schema_name": "dwd",
+      "table_name": "bridge_version_location",
+      "foreign_key_count": 2
+    },
+    {
+      "schema_name": "dwd",
+      "table_name": "bridge_version_skill",
+      "foreign_key_count": 3
+    },
+    {
+      "schema_name": "dwd",
+      "table_name": "fact_posting_observation",
+      "foreign_key_count": 2
+    },
+    {
+      "schema_name": "dwd",
+      "table_name": "observation_enrichment",
+      "foreign_key_count": 2
+    },
+    {
+      "schema_name": "ods",
+      "table_name": "posting_record",
+      "foreign_key_count": 1
+    },
+    {
+      "schema_name": "ods",
+      "table_name": "raw_response",
+      "foreign_key_count": 1
+    }
+  ],
+  "model_columns": [
+    {
+      "schema_name": "ads",
+      "model_name": "cd_city",
+      "column_name": "build_id",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_city",
+      "column_name": "city_group",
+      "sql_type": "nvarchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_city",
+      "column_name": "posting_count",
+      "sql_type": "bigint",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_education",
+      "column_name": "build_id",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_education",
+      "column_name": "education_group",
+      "sql_type": "nvarchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_education",
+      "column_name": "posting_count",
+      "sql_type": "bigint",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_experience",
+      "column_name": "build_id",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_experience",
+      "column_name": "experience_group",
+      "sql_type": "nvarchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_experience",
+      "column_name": "posting_count",
+      "sql_type": "bigint",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "build_id",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "scope_version",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "dictionary_version",
+      "sql_type": "varchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "rule_version",
+      "sql_type": "varchar",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "body_hash_version",
+      "sql_type": "varchar",
+      "column_id": 5
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "build_status",
+      "sql_type": "varchar",
+      "column_id": 6
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 8
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "source_job_id",
+      "sql_type": "nvarchar",
+      "column_id": 9
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "observation_key",
+      "sql_type": "bigint",
+      "column_id": 10
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "version_key",
+      "sql_type": "bigint",
+      "column_id": 11
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "title_raw",
+      "sql_type": "nvarchar",
+      "column_id": 12
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "analysis_date",
+      "sql_type": "date",
+      "column_id": 13
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "category_raw",
+      "sql_type": "nvarchar",
+      "column_id": 14
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "education_raw",
+      "sql_type": "nvarchar",
+      "column_id": 15
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "experience_raw",
+      "sql_type": "nvarchar",
+      "column_id": 16
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "source_url",
+      "sql_type": "nvarchar",
+      "column_id": 17
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "body_valid",
+      "sql_type": "bit",
+      "column_id": 18
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "is_core",
+      "sql_type": "bit",
+      "column_id": 19
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "scope_reason",
+      "sql_type": "nvarchar",
+      "column_id": 20
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "additional_requirements_raw",
+      "sql_type": "nvarchar",
+      "column_id": 21
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "location_notes_raw",
+      "sql_type": "nvarchar",
+      "column_id": 22
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "location_conflict",
+      "sql_type": "bit",
+      "column_id": 23
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "experience_conflict",
+      "sql_type": "bit",
+      "column_id": 24
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "education_conflict",
+      "sql_type": "bit",
+      "column_id": 25
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "experience_hint",
+      "sql_type": "bit",
+      "column_id": 26
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "confirmed_locations_json",
+      "sql_type": "nvarchar",
+      "column_id": 27
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "issues_json",
+      "sql_type": "nvarchar",
+      "column_id": 28
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "raw_ref",
+      "sql_type": "nvarchar",
+      "column_id": 29
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "raw_sha256",
+      "sql_type": "char",
+      "column_id": 30
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "content_json",
+      "sql_type": "nvarchar",
+      "column_id": 31
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "acceptance_status",
+      "sql_type": "varchar",
+      "column_id": 32
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "coverage_status",
+      "sql_type": "varchar",
+      "column_id": 33
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "source_revision",
+      "sql_type": "varchar",
+      "column_id": 34
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_job_detail",
+      "column_name": "skill_text_scope",
+      "sql_type": "varchar",
+      "column_id": 35
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "build_id",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "scope_version",
+      "sql_type": "varchar",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "rule_version",
+      "sql_type": "varchar",
+      "column_id": 5
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "dictionary_version",
+      "sql_type": "varchar",
+      "column_id": 6
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "body_hash_version",
+      "sql_type": "varchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "skill_text_scope",
+      "sql_type": "varchar",
+      "column_id": 8
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "source_posting_count",
+      "sql_type": "bigint",
+      "column_id": 9
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "core_posting_count",
+      "sql_type": "bigint",
+      "column_id": 10
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "skill_denominator",
+      "sql_type": "bigint",
+      "column_id": 11
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "additional_requirements_count",
+      "sql_type": "bigint",
+      "column_id": 12
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "location_conflict_count",
+      "sql_type": "bigint",
+      "column_id": 13
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "experience_conflict_count",
+      "sql_type": "bigint",
+      "column_id": 14
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "education_conflict_count",
+      "sql_type": "bigint",
+      "column_id": 15
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_overview",
+      "column_name": "experience_hint_count",
+      "sql_type": "bigint",
+      "column_id": 16
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "build_id",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "scope_version",
+      "sql_type": "varchar",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "body_hash_version",
+      "sql_type": "varchar",
+      "column_id": 5
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "rule_version",
+      "sql_type": "varchar",
+      "column_id": 6
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "dictionary_version",
+      "sql_type": "varchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "coverage_status",
+      "sql_type": "varchar",
+      "column_id": 8
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "acceptance_status",
+      "sql_type": "varchar",
+      "column_id": 9
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "kpi_code",
+      "sql_type": "varchar",
+      "column_id": 10
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "kpi_name",
+      "sql_type": "nvarchar",
+      "column_id": 11
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "owner_role",
+      "sql_type": "nvarchar",
+      "column_id": 12
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "numerator",
+      "sql_type": "bigint",
+      "column_id": 13
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "denominator",
+      "sql_type": "bigint",
+      "column_id": 14
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "kpi_value",
+      "sql_type": "float",
+      "column_id": 15
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "goal_value",
+      "sql_type": "float",
+      "column_id": 16
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "status_value",
+      "sql_type": "int",
+      "column_id": 17
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "trend_value",
+      "sql_type": "int",
+      "column_id": 18
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "trend_reason",
+      "sql_type": "varchar",
+      "column_id": 19
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_quality_kpi",
+      "column_name": "target_version",
+      "sql_type": "varchar",
+      "column_id": 20
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_demand",
+      "column_name": "build_id",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_demand",
+      "column_name": "skill_key",
+      "sql_type": "bigint",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_demand",
+      "column_name": "skill_name",
+      "sql_type": "nvarchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_demand",
+      "column_name": "posting_count",
+      "sql_type": "bigint",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_demand",
+      "column_name": "skill_denominator",
+      "sql_type": "bigint",
+      "column_id": 5
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_demand",
+      "column_name": "skill_share",
+      "sql_type": "float",
+      "column_id": 6
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_demand",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_demand",
+      "column_name": "scope_version",
+      "sql_type": "varchar",
+      "column_id": 8
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_demand",
+      "column_name": "rule_version",
+      "sql_type": "varchar",
+      "column_id": 9
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_demand",
+      "column_name": "dictionary_version",
+      "sql_type": "varchar",
+      "column_id": 10
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_demand",
+      "column_name": "body_hash_version",
+      "sql_type": "varchar",
+      "column_id": 11
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_demand",
+      "column_name": "skill_text_scope",
+      "sql_type": "varchar",
+      "column_id": 12
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "build_id",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "source_job_id",
+      "sql_type": "nvarchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "version_key",
+      "sql_type": "bigint",
+      "column_id": 5
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "is_core",
+      "sql_type": "bit",
+      "column_id": 6
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "skill_name",
+      "sql_type": "nvarchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "requirement_level",
+      "sql_type": "nvarchar",
+      "column_id": 8
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "eligible_for_metric",
+      "sql_type": "bit",
+      "column_id": 9
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "evidence_count",
+      "sql_type": "int",
+      "column_id": 10
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "evidence_json",
+      "sql_type": "nvarchar",
+      "column_id": 11
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "dictionary_version",
+      "sql_type": "varchar",
+      "column_id": 12
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "rule_version",
+      "sql_type": "varchar",
+      "column_id": 13
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "scope_version",
+      "sql_type": "varchar",
+      "column_id": 14
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "body_hash_version",
+      "sql_type": "varchar",
+      "column_id": 15
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_evidence",
+      "column_name": "skill_text_scope",
+      "sql_type": "varchar",
+      "column_id": 16
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_pair",
+      "column_name": "build_id",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_pair",
+      "column_name": "skill_a",
+      "sql_type": "nvarchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_pair",
+      "column_name": "skill_b",
+      "sql_type": "nvarchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_pair",
+      "column_name": "posting_count",
+      "sql_type": "bigint",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_pair",
+      "column_name": "skill_denominator",
+      "sql_type": "bigint",
+      "column_id": 5
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_pair",
+      "column_name": "pair_share",
+      "sql_type": "float",
+      "column_id": 6
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_pair",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_pair",
+      "column_name": "scope_version",
+      "sql_type": "varchar",
+      "column_id": 8
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_pair",
+      "column_name": "rule_version",
+      "sql_type": "varchar",
+      "column_id": 9
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_pair",
+      "column_name": "dictionary_version",
+      "sql_type": "varchar",
+      "column_id": 10
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_pair",
+      "column_name": "body_hash_version",
+      "sql_type": "varchar",
+      "column_id": 11
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "cd_skill_pair",
+      "column_name": "skill_text_scope",
+      "sql_type": "varchar",
+      "column_id": 12
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "build_id",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "scope_version",
+      "sql_type": "varchar",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "rule_version",
+      "sql_type": "varchar",
+      "column_id": 5
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "dictionary_version",
+      "sql_type": "varchar",
+      "column_id": 6
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "body_hash_version",
+      "sql_type": "varchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "skill_text_scope",
+      "sql_type": "varchar",
+      "column_id": 8
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "source_posting_count",
+      "sql_type": "bigint",
+      "column_id": 9
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "core_posting_count",
+      "sql_type": "bigint",
+      "column_id": 10
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "skill_denominator",
+      "sql_type": "bigint",
+      "column_id": 11
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "additional_requirements_count",
+      "sql_type": "bigint",
+      "column_id": 12
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "location_conflict_count",
+      "sql_type": "bigint",
+      "column_id": 13
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "experience_conflict_count",
+      "sql_type": "bigint",
+      "column_id": 14
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "education_conflict_count",
+      "sql_type": "bigint",
+      "column_id": 15
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "current_analysis_builds",
+      "column_name": "experience_hint_count",
+      "sql_type": "bigint",
+      "column_id": 16
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_city",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_city",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_city",
+      "column_name": "city_group",
+      "sql_type": "nvarchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_city",
+      "column_name": "source_posting_count",
+      "sql_type": "bigint",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_city",
+      "column_name": "city_rule_version",
+      "sql_type": "varchar",
+      "column_id": 5
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_education",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_education",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_education",
+      "column_name": "education_group",
+      "sql_type": "nvarchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_education",
+      "column_name": "source_posting_count",
+      "sql_type": "bigint",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "observation_key",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "source_job_id",
+      "sql_type": "nvarchar",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "version_key",
+      "sql_type": "bigint",
+      "column_id": 5
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "analysis_date",
+      "sql_type": "date",
+      "column_id": 6
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "title_raw",
+      "sql_type": "nvarchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "company_raw",
+      "sql_type": "nvarchar",
+      "column_id": 8
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "category_raw",
+      "sql_type": "nvarchar",
+      "column_id": 9
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "education_raw",
+      "sql_type": "nvarchar",
+      "column_id": 10
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "experience_raw",
+      "sql_type": "nvarchar",
+      "column_id": 11
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "employment_type_raw",
+      "sql_type": "nvarchar",
+      "column_id": 12
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "source_url",
+      "sql_type": "nvarchar",
+      "column_id": 13
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "content_json",
+      "sql_type": "nvarchar",
+      "column_id": 14
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "source_revision",
+      "sql_type": "varchar",
+      "column_id": 15
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "coverage_status",
+      "sql_type": "varchar",
+      "column_id": 16
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "acceptance_status",
+      "sql_type": "varchar",
+      "column_id": 17
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "dataset_status",
+      "sql_type": "nvarchar",
+      "column_id": 18
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "education_conflict",
+      "sql_type": "bit",
+      "column_id": 19
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "dual_job_detail",
+      "column_name": "location_conflict",
+      "sql_type": "bit",
+      "column_id": 20
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_city",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_city",
+      "column_name": "location_raw",
+      "sql_type": "nvarchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_city",
+      "column_name": "source_posting_count",
+      "sql_type": "bigint",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_city",
+      "column_name": "dataset_status",
+      "sql_type": "nvarchar",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_city",
+      "column_name": "coverage_status",
+      "sql_type": "varchar",
+      "column_id": 5
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_city",
+      "column_name": "acceptance_status",
+      "sql_type": "varchar",
+      "column_id": 6
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_city",
+      "column_name": "source_revision",
+      "sql_type": "varchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "observation_key",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "source_job_id",
+      "sql_type": "nvarchar",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "version_key",
+      "sql_type": "bigint",
+      "column_id": 5
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "analysis_date",
+      "sql_type": "date",
+      "column_id": 6
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "title_raw",
+      "sql_type": "nvarchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "company_raw",
+      "sql_type": "nvarchar",
+      "column_id": 8
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "category_raw",
+      "sql_type": "nvarchar",
+      "column_id": 9
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "education_raw",
+      "sql_type": "nvarchar",
+      "column_id": 10
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "experience_raw",
+      "sql_type": "nvarchar",
+      "column_id": 11
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "employment_type_raw",
+      "sql_type": "nvarchar",
+      "column_id": 12
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "source_url",
+      "sql_type": "nvarchar",
+      "column_id": 13
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "content_json",
+      "sql_type": "nvarchar",
+      "column_id": 14
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "source_revision",
+      "sql_type": "varchar",
+      "column_id": 15
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "coverage_status",
+      "sql_type": "varchar",
+      "column_id": 16
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "acceptance_status",
+      "sql_type": "varchar",
+      "column_id": 17
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_job_detail",
+      "column_name": "dataset_status",
+      "sql_type": "nvarchar",
+      "column_id": 18
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_overview",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 1
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_overview",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_overview",
+      "column_name": "scope_version",
+      "sql_type": "varchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_overview",
+      "column_name": "coverage_status",
+      "sql_type": "varchar",
+      "column_id": 4
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_overview",
+      "column_name": "acceptance_status",
+      "sql_type": "varchar",
+      "column_id": 5
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_overview",
+      "column_name": "source_revision",
+      "sql_type": "varchar",
+      "column_id": 6
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_overview",
+      "column_name": "dataset_status",
+      "sql_type": "nvarchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_overview",
+      "column_name": "source_posting_count",
+      "sql_type": "bigint",
+      "column_id": 8
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_overview",
+      "column_name": "body_valid_count",
+      "sql_type": "bigint",
+      "column_id": 9
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_overview",
+      "column_name": "education_missing_count",
+      "sql_type": "bigint",
+      "column_id": 10
+    },
+    {
+      "schema_name": "ads",
+      "model_name": "trial_overview",
+      "column_name": "category_missing_count",
+      "sql_type": "bigint",
+      "column_id": 11
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_eligible_job_skill",
+      "column_name": "build_id",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_eligible_job_skill",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_eligible_job_skill",
+      "column_name": "observation_key",
+      "sql_type": "bigint",
+      "column_id": 3
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_eligible_job_skill",
+      "column_name": "version_key",
+      "sql_type": "bigint",
+      "column_id": 4
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_eligible_job_skill",
+      "column_name": "skill_key",
+      "sql_type": "bigint",
+      "column_id": 5
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_eligible_job_skill",
+      "column_name": "skill_name",
+      "sql_type": "nvarchar",
+      "column_id": 6
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "build_id",
+      "sql_type": "bigint",
+      "column_id": 1
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "scope_version",
+      "sql_type": "varchar",
+      "column_id": 4
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "rule_version",
+      "sql_type": "varchar",
+      "column_id": 5
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "dictionary_version",
+      "sql_type": "varchar",
+      "column_id": 6
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "body_hash_version",
+      "sql_type": "varchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "skill_text_scope",
+      "sql_type": "varchar",
+      "column_id": 8
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "source_posting_count",
+      "sql_type": "bigint",
+      "column_id": 9
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "core_posting_count",
+      "sql_type": "bigint",
+      "column_id": 10
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "skill_denominator",
+      "sql_type": "bigint",
+      "column_id": 11
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "additional_requirements_count",
+      "sql_type": "bigint",
+      "column_id": 12
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "location_conflict_count",
+      "sql_type": "bigint",
+      "column_id": 13
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "experience_conflict_count",
+      "sql_type": "bigint",
+      "column_id": 14
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "education_conflict_count",
+      "sql_type": "bigint",
+      "column_id": 15
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "cd_scope_summary",
+      "column_name": "experience_hint_count",
+      "sql_type": "bigint",
+      "column_id": 16
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_batch_summary",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 1
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_batch_summary",
+      "column_name": "source",
+      "sql_type": "varchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_batch_summary",
+      "column_name": "scope_version",
+      "sql_type": "varchar",
+      "column_id": 3
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_batch_summary",
+      "column_name": "coverage_status",
+      "sql_type": "varchar",
+      "column_id": 4
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_batch_summary",
+      "column_name": "acceptance_status",
+      "sql_type": "varchar",
+      "column_id": 5
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_batch_summary",
+      "column_name": "source_revision",
+      "sql_type": "varchar",
+      "column_id": 6
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_batch_summary",
+      "column_name": "dataset_status",
+      "sql_type": "nvarchar",
+      "column_id": 7
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_batch_summary",
+      "column_name": "source_posting_count",
+      "sql_type": "bigint",
+      "column_id": 8
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_batch_summary",
+      "column_name": "body_valid_count",
+      "sql_type": "bigint",
+      "column_id": 9
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_batch_summary",
+      "column_name": "education_missing_count",
+      "sql_type": "bigint",
+      "column_id": 10
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_batch_summary",
+      "column_name": "category_missing_count",
+      "sql_type": "bigint",
+      "column_id": 11
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_city_distribution",
+      "column_name": "batch_id",
+      "sql_type": "varchar",
+      "column_id": 1
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_city_distribution",
+      "column_name": "location_raw",
+      "sql_type": "nvarchar",
+      "column_id": 2
+    },
+    {
+      "schema_name": "dws",
+      "model_name": "trial_city_distribution",
+      "column_name": "source_posting_count",
+      "sql_type": "bigint",
+      "column_id": 3
+    }
+  ],
+  "powerbi_query_pinning": {
+    "Builds": "immutable build query",
+    "Jobs": "immutable build query",
+    "CityJobs": "immutable build query",
+    "SkillJobs": "immutable build query",
+    "Skills": "immutable build query",
+    "Pairs": "immutable build query",
+    "Evidence": "immutable build query"
+  },
+  "powerbi_definition_sha256": "29b9dc75ecda28b3cb9ff78a2c03c841895568180acc56524613ee46411d374f",
+  "powerbi_live_dax": "not_rerun; see dated reports/analysis/powerbi_validation.json"
+}

@@ -1,23 +1,458 @@
 version: 2
 sources:
-  - name: dwd
-    schema: dwd
-    tables:
-      - name: fact_posting_observation
-      - name: bridge_version_location
-      - name: observation_enrichment
-      - name: bridge_version_skill
-  - name: dim
-    schema: dim
-    tables:
-      - name: posting_identity
-      - name: posting_version
-      - name: location
-      - name: skill
-  - name: audit
-    schema: audit
-    tables:
-      - name: collection_batch
-      - name: quality_issue
-      - name: analysis_build
-      - name: analysis_selection
+- name: audit
+  schema: audit
+  tables:
+  - name: analysis_build
+    description: 一个单来源批次/提取规则组合。
+    columns:
+    - name: build_id
+      description: 单来源批次的范围、冲突及技能分析构建；不是整组 release。
+    - name: input_hash
+      description: 不可变输入/规则组合的 SHA-256 指纹，用于幂等和防覆盖。
+    - name: batch_id
+      description: 不可变采集批次标识；可回连 audit.collection_batch。
+    - name: scope_version
+      description: 当前接口范围版本：trial/dual 为采集范围，cd 为分析核心范围；不可混作同一规则。
+    - name: dictionary_version
+      description: 技能词典版本，与构建和证据共同固定。
+    - name: rule_version
+      description: 技能提取规则版本。
+    - name: provenance_json
+      description: 提取输入、规则、正文、词典与来源证据的构建血缘 JSON。
+    - name: status
+      description: 构建生命周期 building/ready；ready 不等于已发布或数据全量。
+    - name: created_at
+      description: 技术构建创建时间，不是岗位发布日期。
+    - name: body_hash_version
+      description: 技能输入正文规范化与哈希版本。
+    - name: skill_text_scope
+      description: 构建的正文输入字段集合；当前三字段为职责+要求+补充要求，历史两字段构建保持旧口径。
+  - name: analysis_selection
+    description: 一批次的当前 CD 构建选择，历史基线工具使用。
+    columns:
+    - name: batch_id
+      description: 不可变采集批次标识；可回连 audit.collection_batch。
+    - name: build_id
+      description: 单来源批次的范围、冲突及技能分析构建；不是整组 release。
+  - name: collection_batch
+    description: 一次真实来源扫描的批次元数据，不是分析业务事实。
+    columns:
+    - name: batch_id
+      description: 不可变采集批次标识；可回连 audit.collection_batch。
+    - name: source
+      description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+    - name: scope_version
+      description: 当前接口范围版本：trial/dual 为采集范围，cd 为分析核心范围；不可混作同一规则。
+    - name: input_hash
+      description: 不可变输入/规则组合的 SHA-256 指纹，用于幂等和防覆盖。
+    - name: source_revision
+      description: 固定输入批次的完整 Git 修订，配合文件清单恢复原始证据。
+    - name: manifest_json
+      description: 原始批次清单 JSON，包含范围、起止、请求/页数和验收/覆盖状态。
+    - name: coverage_status
+      description: 批准查询范围的遍历覆盖状态 complete/partial/failed；partial 不能驱动新增、下架趋势。
+    - name: acceptance_status
+      description: 采集批次技术验收状态；accepted 不表示覆盖完整或已经正式发布。
+    - name: load_mode
+      description: 接入模式，当前持久库沿用 trial 命名，不表示已完成正式范围覆盖。
+    - name: record_count
+      description: 批次实际规范来源岗位记录数，不等于请求数或全站总数。
+    - name: loaded_at
+      description: 原始批次加载时间。
+  - name: model_build
+    description: 一个固定输入及规则的整组分析 release。
+    columns:
+    - name: release_id
+      description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+    - name: input_hash
+      description: 不可变输入/规则组合的 SHA-256 指纹，用于幂等和防覆盖。
+    - name: normalization_version
+      description: 岗位类别和地点等标准化规则版本。
+    - name: mapping_version
+      description: 来源岗位到分析身份的映射版本；当前 source-identity-only-1.0。
+    - name: channel
+      description: 发布通道 sample/formal；sample 可包含 partial，formal 必须通过范围完整性。
+    - name: expected_sources_json
+      description: 发布批准来源集合 JSON，不能因缺来源而自动缩小。
+    - name: status
+      description: 构建生命周期 building/ready；ready 不等于已发布或数据全量。
+    - name: code_sha256
+      description: 日状态构建实现的代码内容指纹。
+    - name: created_at
+      description: 技术构建创建时间，不是岗位发布日期。
+  - name: publication_history
+    description: 一次已成功的发布切换，保留上一版本及验证信息。
+    columns:
+    - name: publication_id
+      description: 一次成功切换发布指针的审计流水键。
+    - name: channel
+      description: 发布通道 sample/formal；sample 可包含 partial，formal 必须通过范围完整性。
+    - name: release_id
+      description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+    - name: previous_release_id
+      description: 切换前的同通道发布版本，可为 NULL。
+    - name: validation_json
+      description: 该次发布校验的审计说明 JSON。
+    - name: published_at
+      description: 技术发布时间，不是采集日或企业发布日期。
+  - name: publication_pointer
+    description: 每个发布通道当前 release 指针。
+    columns:
+    - name: channel
+      description: 发布通道 sample/formal；sample 可包含 partial，formal 必须通过范围完整性。
+    - name: release_id
+      description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+    - name: updated_at
+      description: 发布指针更新时间。
+  - name: quality_issue
+    description: 一批次×质量问题序号。
+    columns:
+    - name: batch_id
+      description: 不可变采集批次标识；可回连 audit.collection_batch。
+    - name: issue_no
+      description: 批次内质量问题序号。
+    - name: payload
+      description: 该持久对象的不可变原字段 JSON；业务字段原值保留。
+  - name: release_input
+    description: 一个 release 选择的单来源提取构建；每源×日唯一。
+    columns:
+    - name: release_id
+      description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+    - name: build_id
+      description: 单来源批次的范围、冲突及技能分析构建；不是整组 release。
+    - name: source_key
+      description: 来源维代理键；用于统一来源成员，不等于企业键。
+    - name: batch_id
+      description: 不可变采集批次标识；可回连 audit.collection_batch。
+    - name: date_key
+      description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+    - name: coverage_status
+      description: 批准查询范围的遍历覆盖状态 complete/partial/failed；partial 不能驱动新增、下架趋势。
+    - name: acceptance_status
+      description: 采集批次技术验收状态；accepted 不表示覆盖完整或已经正式发布。
+- name: dim
+  schema: dim
+  tables:
+  - name: calendar_date
+    description: 一个日历日。
+    columns:
+    - name: date_key
+      description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+    - name: calendar_date
+      description: 日历 DATE，用于日期维；不代表该日确有采集。
+    - name: calendar_year
+      description: 日历年份。
+    - name: calendar_quarter
+      description: 季度 1—4。
+    - name: calendar_month
+      description: 月份 1—12。
+    - name: calendar_day
+      description: 月内日期。
+  - name: city
+    description: 一规范化版本×一个内部地点代码，含省市及映射状态。
+    columns:
+    - name: city_key
+      description: 规范地点成员代理键。
+    - name: city_code
+      description: 内部地点业务代码，不冒充官方行政区划代码。
+    - name: city_name
+      description: 规范城市名，统一市字后缀；未知和冲突显式保留。
+    - name: province_name
+      description: 保守查表得到的省级名称；未映射城市不猜测省份。
+    - name: mapping_status
+      description: 地点映射状态 mapped/unmapped/unknown/conflict。
+    - name: normalization_version
+      description: 岗位类别和地点等标准化规则版本。
+  - name: company
+    description: 一个来源企业品牌名，未核实法律主体。
+    columns:
+    - name: company_key
+      description: 来源企业品牌名称的维度键；不是已核实法律主体身份。
+    - name: company_name
+      description: 保守保留的企业/品牌名；缺失为显式未知。
+    - name: identity_status
+      description: 主体核实状态；当前为来源品牌、未核实法律实体。
+  - name: education
+    description: 一个规范学历成员。
+    columns:
+    - name: education_key
+      description: 学历规范成员代理键；未知、不限、冲突分别建成员。
+    - name: education_name
+      description: 规范学历分组，源值保留在观察/内容中。
+  - name: employment_type
+    description: 一个规范招聘类型成员。
+    columns:
+    - name: employment_type_key
+      description: 招聘类型维键；未经核实的数字代码为来源代码未释义。
+    - name: employment_type_name
+      description: 招聘类型分组，不将未知代码猜成社招/校招。
+  - name: experience
+    description: 一个规范经验成员。
+    columns:
+    - name: experience_key
+      description: 经验规范成员代理键，保留源经验区间，不伪造精度。
+    - name: experience_name
+      description: 规范经验分组；未知、不限、冲突分开。
+  - name: job
+    description: 一个分析岗位身份，当前一对一来源身份，不声称跨来源归并。
+    columns:
+    - name: job_key
+      description: 稳定来源岗位分析身份，当前与 posting_key 一对一，不声称完成跨来源归并。
+    - name: posting_key
+      description: 由来源代码与文本岗位 ID 唯一识别的来源身份代理键。
+    - name: creation_method
+      description: 分析身份创建方法；当前限定 source_identity_only。
+  - name: job_category
+    description: 一规范化版本×一个标准方向。
+    columns:
+    - name: category_key
+      description: 标准岗位方向的维度键，按规范化版本识别。
+    - name: category_name
+      description: 标准方向：开发、测试、数据开发/分析、算法/AI、运维/安全或待分类。
+    - name: normalization_version
+      description: 岗位类别和地点等标准化规则版本。
+  - name: location
+    description: 一个原地点字符串；与规范 dim.city 分开。
+    columns:
+    - name: location_key
+      description: 历史原地点字典键，区别于规范 dim.city.city_key。
+    - name: location_raw
+      description: 历史版本地点桥中的原始地点，不等同已规范行政区划。
+  - name: posting_identity
+    description: 一来源代码×一文本岗位 ID；来源身份字典。
+    columns:
+    - name: posting_key
+      description: 由来源代码与文本岗位 ID 唯一识别的来源身份代理键。
+    - name: source
+      description: 来源代码；与源岗位 ID 共同组成来源岗位自然键，来源不等于雇主。
+    - name: source_job_id
+      description: 来源岗位 ID 字符串；不得转数值或跨来源用裸 ID 去重。
+  - name: posting_version
+    description: 一来源身份的一段观察内容有效期，A→B→A 维护三个版本。
+    columns:
+    - name: version_key
+      description: 来源内容版本代理键，引用 dim.posting_version；SCD2 观察有效期，不是企业真实生效期。
+    - name: posting_key
+      description: 由来源代码与文本岗位 ID 唯一识别的来源身份代理键。
+    - name: content_hash
+      description: 岗位内容属性的 SHA-256，不含采集时间；相同内容重现仍按有效期维护。
+    - name: valid_from_observed
+      description: 内容版本观察有效期起点（含）。
+    - name: valid_to_observed
+      description: 内容版本观察有效期终点（不含），当前有效版本为 NULL。
+    - name: payload
+      description: 该持久对象的不可变原字段 JSON；业务字段原值保留。
+  - name: skill
+    description: 一个标准技能名。
+    columns:
+    - name: skill_key
+      description: 标准技能代理键，引用 dim.skill。
+    - name: skill_name
+      description: 词典标准技能名，保留 SQL 与 MySQL 等不同概念。
+  - name: source
+    description: 一个批准官网来源。
+    columns:
+    - name: source_key
+      description: 来源维代理键；用于统一来源成员，不等于企业键。
+    - name: source_code
+      description: 批准的来源代码 tencent/netease；与来源岗位 ID 组成自然身份。
+    - name: source_name
+      description: 来源显示名称。
+    - name: official_url
+      description: 来源官方招聘入口 URL。
+- name: dwd
+  schema: dwd
+  tables:
+  - name: bridge_daily_city
+    description: 一发布×一分析日×一来源岗位×一个规范地点。
+    columns:
+    - name: release_id
+      description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+    - name: date_key
+      description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+    - name: job_key
+      description: 稳定来源岗位分析身份，当前与 posting_key 一对一，不声称完成跨来源归并。
+    - name: city_key
+      description: 规范地点成员代理键。
+  - name: bridge_daily_skill
+    description: 一发布×一分析日×一来源岗位×一个有效标准技能。
+    columns:
+    - name: release_id
+      description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+    - name: date_key
+      description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+    - name: job_key
+      description: 稳定来源岗位分析身份，当前与 posting_key 一对一，不声称完成跨来源归并。
+    - name: skill_key
+      description: 标准技能代理键，引用 dim.skill。
+  - name: bridge_version_location
+    description: 一内容版本×原始地点×原地点映射版本。
+    columns:
+    - name: version_key
+      description: 来源内容版本代理键，引用 dim.posting_version；SCD2 观察有效期，不是企业真实生效期。
+    - name: location_key
+      description: 历史原地点字典键，区别于规范 dim.city.city_key。
+    - name: normalization_version
+      description: 岗位类别和地点等标准化规则版本。
+  - name: bridge_version_skill
+    description: 一提取构建×内容版本×技能×强度×有效性；保存证据组。
+    columns:
+    - name: build_id
+      description: 单来源批次的范围、冲突及技能分析构建；不是整组 release。
+    - name: version_key
+      description: 来源内容版本代理键，引用 dim.posting_version；SCD2 观察有效期，不是企业真实生效期。
+    - name: skill_key
+      description: 标准技能代理键，引用 dim.skill。
+    - name: requirement_level
+      description: 证据语境强度；有效指标按明确必需/优先/提及等规则处理，否定与不确定留审计。
+    - name: eligible_for_metric
+      description: 技能证据是否符合计量语境；计算岗位指标还须同时筛核心范围和正文有效。
+    - name: evidence_count
+      description: 当前桥关系内证据 JSON 项数；不是岗位数。
+    - name: evidence_json
+      description: 证据数组，含原文片段、字段、位置、哈希和提取版本；位置相对于记录的输入正文。
+  - name: fact_job_daily
+    description: 一发布×一分析日×一来源岗位身份；主分析快照，计数对日期半可加。
+    columns:
+    - name: release_id
+      description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+    - name: date_key
+      description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+    - name: job_key
+      description: 稳定来源岗位分析身份，当前与 posting_key 一对一，不声称完成跨来源归并。
+    - name: build_id
+      description: 单来源批次的范围、冲突及技能分析构建；不是整组 release。
+    - name: observation_key
+      description: 来源岗位观察代理键；业务唯一性为批次×来源岗位身份。
+    - name: representative_version_key
+      description: 本条日状态选中的内容版本；当前等于被选观察的 version_key。
+    - name: source_key
+      description: 来源维代理键；用于统一来源成员，不等于企业键。
+    - name: company_key
+      description: 来源企业品牌名称的维度键；不是已核实法律主体身份。
+    - name: category_key
+      description: 标准岗位方向的维度键，按规范化版本识别。
+    - name: education_key
+      description: 学历规范成员代理键；未知、不限、冲突分别建成员。
+    - name: experience_key
+      description: 经验规范成员代理键，保留源经验区间，不伪造精度。
+    - name: employment_type_key
+      description: 招聘类型维键；未经核实的数字代码为来源代码未释义。
+    - name: is_core
+      description: 是否属于当前版本核心数字技术岗位范围；不修改来源原记录。
+    - name: body_valid
+      description: 按该构建的 skill_text_scope 判断正文有效；三字段构建含职责、任职要求、补充要求。
+    - name: job_count
+      description: 每条日状态为 1；跨日期或多值桥展开后不能直接累加为独立岗位数。
+  - name: fact_posting_observation
+    description: 一批次×一来源身份；无事实型观察明细，不等于企业发布事件。
+    columns:
+    - name: observation_key
+      description: 来源岗位观察代理键；业务唯一性为批次×来源岗位身份。
+    - name: batch_id
+      description: 不可变采集批次标识；可回连 audit.collection_batch。
+    - name: posting_key
+      description: 由来源代码与文本岗位 ID 唯一识别的来源身份代理键。
+    - name: version_key
+      description: 来源内容版本代理键，引用 dim.posting_version；SCD2 观察有效期，不是企业真实生效期。
+    - name: observed_at
+      description: 带时区的真实采集观察时刻。
+    - name: analysis_date
+      description: observed_at 换算 Asia/Shanghai 的观察日；不是源岗位发布日期或加载日。
+    - name: title_raw
+      description: 来源岗位标题原值。
+    - name: company_raw
+      description: 企业名称原值，未据此声明完成法律主体规范。
+    - name: category_raw
+      description: 源岗位类别原值；各来源编码未全部统一，不直接跨源合并同名类别。
+    - name: experience_raw
+      description: 来源经验原值。
+    - name: education_raw
+      description: 来源学历原值，不能把未知改写为不限。
+    - name: employment_type_raw
+      description: 来源招聘类型原值；未知代码不擅自译为校招或社招。
+    - name: source_url
+      description: 原始岗位页面 URL，用于回查；网站内容可能变化，历史以保存响应为准。
+    - name: body_valid
+      description: 原始观察的职责/任职要求两字段有效性；三字段增强在 CD/日状态接口另按构建范围计算。
+  - name: job_qualification_evidence
+    description: 每 release×分析日×岗位的学历/经验派生及证据；原观察不覆写。
+    columns:
+    - name: release_id
+      description: 整组分析发布版本；固定输入构建、日期范围及规范化/映射规则，查询须显式选择。
+    - name: date_key
+      description: 北京时间批次结束日的 YYYYMMDD 键，引用 dim.calendar_date；不是岗位发布日期。
+    - name: job_key
+      description: 稳定来源岗位分析身份，当前与 posting_key 一对一，不声称完成跨来源归并。
+    - name: qualification_rule_version
+      description: 学历/经验派生规则版本；原值和旧发布不覆写。
+    - name: education_resolution_json
+      description: 学历值、来源/正文依据、必需/优先/不确定证据、字符位置及原始引用 JSON。
+    - name: experience_resolution_json
+      description: 经验规范值、状态、来源字段证据与原始引用 JSON；中文数字忠实转换。
+  - name: observation_enrichment
+    description: 一提取构建×一来源观察；范围、正文增强及字段冲突。
+    columns:
+    - name: build_id
+      description: 单来源批次的范围、冲突及技能分析构建；不是整组 release。
+    - name: observation_key
+      description: 来源岗位观察代理键；业务唯一性为批次×来源岗位身份。
+    - name: is_core
+      description: 是否属于当前版本核心数字技术岗位范围；不修改来源原记录。
+    - name: scope_reason
+      description: 岗位核心/扩展范围裁定原因。
+    - name: additional_requirements_raw
+      description: 从原始详情取出的补充要求原文；是否用于技能依 skill_text_scope。
+    - name: location_notes_raw
+      description: 来源地点补充说明原文。
+    - name: location_conflict
+      description: 地点冲突标记；分析分组显示冲突而非猜测城市。
+    - name: experience_conflict
+      description: 经验字段冲突标记；当前裁定与普通提示分别存储。
+    - name: confirmed_locations_json
+      description: 经当前范围策略裁定的地点数组；多值关系，不可按展开行数累计全局岗位数。
+    - name: issues_json
+      description: 本岗位可追溯的质量问题及人工裁定记录。
+    - name: raw_ref
+      description: 相对固定采集批次的原始详情文件路径，可连接 ods.raw_response。
+    - name: raw_sha256
+      description: 原始详情文件 SHA-256，核对原文是否被修改。
+    - name: education_conflict
+      description: 结构化学历与正文的待确认冲突标记；与 NULL/不限区别处理。
+    - name: experience_hint
+      description: 经验人工核查提示，可与冲突重叠；不自动当作冲突或排除岗位。
+  - name: posting_job_map
+    description: 一映射版本×一来源身份；当前一对一保守映射。
+    columns:
+    - name: mapping_version
+      description: 来源岗位到分析身份的映射版本；当前 source-identity-only-1.0。
+    - name: posting_key
+      description: 由来源代码与文本岗位 ID 唯一识别的来源身份代理键。
+    - name: job_key
+      description: 稳定来源岗位分析身份，当前与 posting_key 一对一，不声称完成跨来源归并。
+    - name: mapping_method
+      description: 来源身份到分析身份的映射方法；当前保守一对一。
+- name: ods
+  schema: ods
+  tables:
+  - name: posting_record
+    description: 一批次×一个来源岗位 ID，保存原始规范记录 JSON。
+    columns:
+    - name: batch_id
+      description: 不可变采集批次标识；可回连 audit.collection_batch。
+    - name: source_job_id
+      description: 来源岗位 ID 字符串；不得转数值或跨来源用裸 ID 去重。
+    - name: payload
+      description: 该持久对象的不可变原字段 JSON；业务字段原值保留。
+  - name: raw_response
+    description: 一批次×一个原始响应文件，保存引用、哈希和大小。
+    columns:
+    - name: batch_id
+      description: 不可变采集批次标识；可回连 audit.collection_batch。
+    - name: relative_path
+      description: 批次目录内的原始响应相对路径。
+    - name: sha256
+      description: 该文件实际字节的 SHA-256，用于证据一致性校验。
+    - name: byte_count
+      description: 原始响应文件实际字节数。

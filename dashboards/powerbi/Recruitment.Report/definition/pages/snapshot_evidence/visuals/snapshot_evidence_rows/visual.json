@@ -1,0 +1,309 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "snapshot_evidence_rows",
+  "position": {
+    "x": 24,
+    "y": 600,
+    "z": 0,
+    "height": 200,
+    "width": 1382,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotEvidence"
+                    }
+                  },
+                  "Property": "skill_name"
+                }
+              },
+              "queryRef": "SnapshotEvidence.skill_name",
+              "nativeQueryRef": "skill_name",
+              "displayName": "标准技能"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotEvidence"
+                    }
+                  },
+                  "Property": "eligible_for_metric"
+                }
+              },
+              "queryRef": "SnapshotEvidence.eligible_for_metric",
+              "nativeQueryRef": "eligible_for_metric",
+              "displayName": "证据有效"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotEvidence"
+                    }
+                  },
+                  "Property": "evidence_field"
+                }
+              },
+              "queryRef": "SnapshotEvidence.evidence_field",
+              "nativeQueryRef": "evidence_field",
+              "displayName": "原文字段"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotEvidence"
+                    }
+                  },
+                  "Property": "evidence"
+                }
+              },
+              "queryRef": "SnapshotEvidence.evidence",
+              "nativeQueryRef": "evidence",
+              "displayName": "原文证据"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotEvidence"
+                    }
+                  },
+                  "Property": "evidence_start"
+                }
+              },
+              "queryRef": "SnapshotEvidence.evidence_start",
+              "nativeQueryRef": "evidence_start",
+              "displayName": "起始位置"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotEvidence"
+                    }
+                  },
+                  "Property": "evidence_end"
+                }
+              },
+              "queryRef": "SnapshotEvidence.evidence_end",
+              "nativeQueryRef": "evidence_end",
+              "displayName": "结束位置"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'逐字证据与字符位置：保留否定/不确定项用于审计'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#123047'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2f80f3ebe1dcb98202b0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotEvidence"
+              }
+            },
+            "Property": "skill_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "73fd2754bd082c26b36a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotEvidence"
+              }
+            },
+            "Property": "eligible_for_metric"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "094a7bea53ab21a495b9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotEvidence"
+              }
+            },
+            "Property": "evidence_field"
+          }
+        },
+        "type": "Categorical",
+        "displayName": "原文字段"
+      },
+      {
+        "name": "60f81ec0e3c316895b70",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotEvidence"
+              }
+            },
+            "Property": "evidence"
+          }
+        },
+        "type": "Categorical",
+        "displayName": "原文证据"
+      },
+      {
+        "name": "6c1515042592ca330a87",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotEvidence"
+              }
+            },
+            "Property": "evidence_start"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b579cfe08dce02ea11d5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotEvidence"
+              }
+            },
+            "Property": "evidence_end"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,11 +1,13 @@
 param(
     [Parameter(Mandatory=$true)][ValidateRange(1,65535)][int]$Port,
-    [string]$DesktopBin = 'C:\Program Files\Microsoft Power BI Desktop\bin'
+    [string]$DesktopBin = 'C:\Program Files\Microsoft Power BI Desktop\bin',
+    [string]$CasesPath,
+    [string]$OutputPath
 )
 $ErrorActionPreference='Stop'
 $projectRoot=Split-Path -Parent $PSScriptRoot
-$casesPath=Join-Path $projectRoot 'reports\analysis\powerbi_dax_cases.json'
-$outputPath=Join-Path $projectRoot 'reports\analysis\powerbi_validation.json'
+if (-not $CasesPath) { $CasesPath=Join-Path $projectRoot 'reports\analysis\powerbi_dax_cases.json' }
+if (-not $OutputPath) { $OutputPath=Join-Path $projectRoot 'reports\analysis\powerbi_validation.json' }
 $assemblyPath=Join-Path $DesktopBin 'Microsoft.PowerBI.AdomdClient.dll'
 [System.Reflection.Assembly]::LoadFrom($assemblyPath) | Out-Null
 [System.Reflection.Assembly]::LoadFrom((Join-Path $DesktopBin 'Microsoft.PowerBI.Tabular.dll')) | Out-Null
@@ -18,6 +20,16 @@ try {
     if ($models.Count -ne 1) { throw 'The selected endpoint must contain exactly one Recruitment model' }
     $catalog=$models[0].Name
     $loadedModel=$models[0].Model
+    $expectedRelations=@($definition.model.relationships | ForEach-Object {
+        "$($_.fromTable)|$($_.fromColumn)|$($_.toTable)|$($_.toColumn)"
+    } | Sort-Object)
+    $actualRelations=@($loadedModel.Relationships | ForEach-Object {
+        if ($_.CrossFilteringBehavior.ToString() -ne 'OneDirection') { throw "Unexpected bidirectional relationship: $($_.Name)" }
+        "$($_.FromTable.Name)|$($_.FromColumn.Name)|$($_.ToTable.Name)|$($_.ToColumn.Name)"
+    } | Sort-Object)
+    if (($expectedRelations -join "`n") -cne ($actualRelations -join "`n")) {
+        throw 'Loaded model relationships differ from the explicit warehouse contract; check automatic detection'
+    }
     foreach($tableDefinition in $definition.model.tables) {
         $table=$loadedModel.Tables[$tableDefinition.name]
         if ($null -eq $table) { throw "Missing table: $($tableDefinition.name)" }
@@ -57,6 +69,8 @@ try {
             $actualValue=$actual[$property.Name]
             if ($null -eq $property.Value) {
                 if ($null -ne $actualValue) { throw "$($case.name): $($property.Name) should be BLANK" }
+            } elseif ($property.Value -is [string]) {
+                if ([string]$actualValue -cne $property.Value) { throw "$($case.name): $($property.Name) text differs" }
             } elseif ($null -eq $actualValue -or [Math]::Abs([double]$actualValue-[double]$property.Value) -gt 0.000000001) {
                 throw "$($case.name): $($property.Name) expected $($property.Value), actual $actualValue"
             }

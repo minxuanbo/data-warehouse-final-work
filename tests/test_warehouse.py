@@ -42,6 +42,11 @@ class ContractTests(unittest.TestCase):
         with (self.root/'jobs.jsonl').open('ab') as f:f.write(b' ')
         with self.assertRaisesRegex(ValueError,'Hash/size'):validate(self.root)
 
+    def test_partial_raw_batch_cannot_be_promoted_by_editing_manifest_flag(self):
+        path=self.root/'manifest.json';m=json.loads(path.read_text(encoding='utf-8'));m['coverage_status']='complete'
+        path.write_text(json.dumps(m),encoding='utf-8')
+        with self.assertRaisesRegex(ValueError,'Complete coverage is unsupported'):validate(self.root)
+
     def test_duplicate_even_with_updated_hash_rejected(self):
         self.rewrite_jobs(lambda rows:rows.append(rows[0]))
         with self.assertRaisesRegex(ValueError,'Duplicate'):validate(self.root)

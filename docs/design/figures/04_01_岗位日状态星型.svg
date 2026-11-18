@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1260" viewBox="0 0 1600 1260">
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#50677c"/></marker></defs>
+<text x="800" y="43" font-family="Microsoft YaHei, sans-serif" font-size="29" text-anchor="middle" fill="#172e42">图4-1 岗位日状态扩展星型（与实际 SQL 对象对应）</text>
+<polyline points="440,180 500,180 500,370 550,370" fill="none" stroke="#50677c" stroke-width="2"/>
+<text x="502.0" y="268.0" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">1 : N</text>
+<polyline points="800,205 800,320" fill="none" stroke="#50677c" stroke-width="2"/>
+<text x="807.0" y="268.5" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">1 : N</text>
+<polyline points="1160,180 1100,180 1100,400 1050,400" fill="none" stroke="#50677c" stroke-width="2"/>
+<text x="1112.0" y="283.0" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">1 : N</text>
+<polyline points="440,420 550,420" fill="none" stroke="#50677c" stroke-width="2"/>
+<text x="502.0" y="413.0" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">1 : N</text>
+<polyline points="440,640 550,640" fill="none" stroke="#50677c" stroke-width="2"/>
+<text x="502.0" y="633.0" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">1 : N</text>
+<polyline points="1160,500 1050,500" fill="none" stroke="#50677c" stroke-width="2"/>
+<text x="1112.0" y="493.0" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">1:N</text>
+<polyline points="700,670 700,815 500,815 500,850" fill="none" stroke="#50677c" stroke-width="2"/>
+<text x="607.0" y="753.0" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">1 : N</text>
+<polyline points="900,670 900,815 1100,815 1100,850" fill="none" stroke="#50677c" stroke-width="2"/>
+<text x="1007.0" y="753.0" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">1 : N</text>
+<polyline points="500,1006 500,1050" fill="none" stroke="#50677c" stroke-width="2"/>
+<text x="507.0" y="1034.0" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">N : 1</text>
+<polyline points="1100,1006 1100,1050" fill="none" stroke="#50677c" stroke-width="2"/>
+<text x="1107.0" y="1034.0" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">N : 1</text>
+<rect x="40" y="95" width="400" height="126" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="40" y="95" width="400" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="54" y="126" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">dim.source 来源维</text>
+<text x="54" y="170" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">PK source_key</text>
+<text x="54" y="200" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">来源代码、名称、官网</text>
+<rect x="550" y="95" width="500" height="126" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="550" y="95" width="500" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="564" y="126" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">dim.calendar_date 日期维</text>
+<text x="564" y="170" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">PK date_key</text>
+<text x="564" y="200" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">年、季度、月、日；北京时间结束日</text>
+<rect x="1160" y="95" width="400" height="126" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="1160" y="95" width="400" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="1174" y="126" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">dim.company 企业维</text>
+<text x="1174" y="170" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">PK company_key</text>
+<text x="1174" y="200" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">来源品牌名、主体核实状态</text>
+<rect x="40" y="340" width="400" height="126" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="40" y="340" width="400" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="54" y="371" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">dim.job_category 类别维</text>
+<text x="54" y="415" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">PK category_key</text>
+<text x="54" y="445" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">标准方向、规范化版本</text>
+<rect x="40" y="560" width="400" height="156" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="40" y="560" width="400" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="54" y="591" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">dim.job 来源岗位身份维</text>
+<text x="54" y="635" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">PK job_key；UQ posting_key</text>
+<text x="54" y="665" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">当前一对一绑定来源岗位</text>
+<text x="54" y="695" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">不是已完成的跨来源归并</text>
+<rect x="1160" y="340" width="400" height="246" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="1160" y="340" width="400" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="1174" y="371" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">门槛及类型：三张独立维表</text>
+<text x="1174" y="415" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">dim.education：PK education_key</text>
+<text x="1174" y="445" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">dim.experience：PK experience_key</text>
+<text x="1174" y="475" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">dim.employment_type：</text>
+<text x="1174" y="505" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">  PK employment_type_key</text>
+<text x="1174" y="535" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">分别保存学历、经验、招聘类型</text>
+<text x="1174" y="565" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">未知、不限、冲突不合并</text>
+<rect x="550" y="320" width="500" height="366" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="550" y="320" width="500" height="46" fill="#fff0d7" stroke="#526779" stroke-width="1.5"/>
+<text x="564" y="351" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">dwd.fact_job_daily 日状态事实</text>
+<text x="564" y="395" font-family="Microsoft YaHei, sans-serif" font-size="20" text-anchor="start" fill="#172e42">粒度：发布版本 × 分析日 × 来源岗位</text>
+<text x="564" y="425" font-family="Microsoft YaHei, sans-serif" font-size="20" text-anchor="start" fill="#172e42">组合PK：release_id, date_key, job_key</text>
+<text x="564" y="455" font-family="Microsoft YaHei, sans-serif" font-size="20" text-anchor="start" fill="#172e42">FK：source_key, company_key</text>
+<text x="564" y="485" font-family="Microsoft YaHei, sans-serif" font-size="20" text-anchor="start" fill="#172e42">FK：category_key, education_key</text>
+<text x="564" y="515" font-family="Microsoft YaHei, sans-serif" font-size="20" text-anchor="start" fill="#172e42">FK：experience_key, employment_type_key</text>
+<text x="564" y="545" font-family="Microsoft YaHei, sans-serif" font-size="20" text-anchor="start" fill="#172e42">度量：job_count=1, is_core, body_valid</text>
+<text x="564" y="575" font-family="Microsoft YaHei, sans-serif" font-size="20" text-anchor="start" fill="#172e42">技术引用：build_id, observation_key</text>
+<text x="564" y="605" font-family="Microsoft YaHei, sans-serif" font-size="20" text-anchor="start" fill="#172e42">技术引用：representative_version_key</text>
+<text x="564" y="635" font-family="Microsoft YaHei, sans-serif" font-size="20" text-anchor="start" fill="#172e42">日期不可直接累加为独立岗位数</text>
+<text x="564" y="665" font-family="Microsoft YaHei, sans-serif" font-size="20" text-anchor="start" fill="#172e42">sample 可含 partial；formal 检查完整性</text>
+<rect x="230" y="850" width="540" height="156" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="230" y="850" width="540" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="244" y="881" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">dwd.bridge_daily_city 多地点桥</text>
+<text x="244" y="925" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">组合PK：release_id, date_key, job_key, city_key</text>
+<text x="244" y="955" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">前三列 FK → 日状态事实；city_key → 地点维</text>
+<text x="244" y="985" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">一岗多城市；汇总取岗位并集</text>
+<rect x="830" y="850" width="540" height="156" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="830" y="850" width="540" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="844" y="881" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">dwd.bridge_daily_skill 多技能桥</text>
+<text x="844" y="925" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">组合PK：release_id, date_key, job_key, skill_key</text>
+<text x="844" y="955" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">前三列 FK → 日状态事实；skill_key → 技能维</text>
+<text x="844" y="985" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">仅有效技能；审计证据另保留</text>
+<rect x="230" y="1050" width="540" height="96" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="230" y="1050" width="540" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="244" y="1081" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">dim.city 地点维</text>
+<text x="244" y="1125" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">PK city_key；省、市、映射状态、规范化版本</text>
+<rect x="830" y="1050" width="540" height="96" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="830" y="1050" width="540" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="844" y="1081" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">dim.skill 技能维</text>
+<text x="844" y="1125" font-family="Microsoft YaHei, sans-serif" font-size="19" text-anchor="start" fill="#172e42">PK skill_key；标准技能名</text>
+<text x="40" y="1205" font-family="Microsoft YaHei, sans-serif" font-size="20" text-anchor="start" fill="#172e42">图例：PK 主键；FK 外键；UQ 唯一约束；1 : N 一对多。连线表示键关联，不表示 ETL。</text>
+<text x="40" y="1238" font-family="Microsoft YaHei, sans-serif" font-size="20" text-anchor="start" fill="#172e42">原始观察、内容版本与构建审计保留在底层；主图聚焦业务分析，不将运行日志拼成业务星座。</text>
+</svg>

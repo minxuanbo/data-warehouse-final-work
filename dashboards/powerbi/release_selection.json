@@ -1,0 +1,23 @@
+{
+  "database": "recruitment_dw_dev_cd_v1",
+  "release_id": 5,
+  "build_ids": [
+    6,
+    5
+  ],
+  "channel": "sample",
+  "queries": {
+    "QualityKpi": "SELECT * FROM ads.cd_quality_kpi WHERE build_id IN (6,5)",
+    "SnapshotSources": "SELECT DISTINCT source FROM ads.release_job_detail WHERE release_id=5",
+    "SnapshotJobs": "SELECT CONCAT(release_id,'|',date_key,'|',job_key) AS snapshot_key,* FROM ads.release_job_detail WHERE release_id=5",
+    "SnapshotCityJobs": "SELECT snapshot_key,city_name,province_name FROM ads.release_city_detail WHERE release_id=5",
+    "SnapshotSkillJobs": "SELECT snapshot_key,job_key,skill_name FROM ads.release_skill_detail WHERE release_id=5",
+    "SnapshotSkills": "SELECT DISTINCT skill_name FROM ads.release_skill_detail WHERE release_id=5",
+    "SnapshotEvidence": "SELECT * FROM ads.release_skill_evidence WHERE release_id=5",
+    "Calendar": "SELECT * FROM ads.release_calendar WHERE release_id=5",
+    "SnapshotDays": "SELECT * FROM ads.release_observed_change WHERE release_id=5",
+    "QualificationEvidence": "SELECT * FROM ads.release_qualification_evidence WHERE release_id=5"
+  },
+  "cd_scope": "latest selected input per source; historical pilot projection",
+  "note": "All queries pinned before refresh; no fact-to-fact/content relationship."
+}

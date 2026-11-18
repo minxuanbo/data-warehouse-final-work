@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="870" viewBox="0 0 1600 870">
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#50677c"/></marker></defs>
+<text x="800" y="48" font-family="Microsoft YaHei, sans-serif" font-size="30" text-anchor="middle" fill="#172e42">图4-2 同一个岗位需求模型如何贯通数据分层</text>
+<text x="800" y="91" font-family="Microsoft YaHei, sans-serif" font-size="22" text-anchor="middle" fill="#172e42">实线箭头 = 加工依赖；虚线 = 描述 / 审计支撑；星型是 DWD 与 DIM 的关联结构</text>
+<polyline points="290,300 340,300" fill="none" stroke="#50677c" stroke-width="2" marker-end="url(#a)"/>
+<polyline points="570,300 620,300" fill="none" stroke="#50677c" stroke-width="2" marker-end="url(#a)"/>
+<polyline points="980,300 1030,300" fill="none" stroke="#50677c" stroke-width="2" marker-end="url(#a)"/>
+<polyline points="1260,300 1310,300" fill="none" stroke="#50677c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="40" y="165" width="250" height="216" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="40" y="165" width="250" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="54" y="196" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">文件接入</text>
+<text x="54" y="240" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">官网列表 / 详情响应</text>
+<text x="54" y="270" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">jobs + manifest</text>
+<text x="54" y="300" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">请求日志 / SHA-256</text>
+<text x="54" y="330" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">原始字段和批次</text>
+<text x="54" y="360" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">真实采集，不造历史</text>
+<rect x="340" y="165" width="230" height="216" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="340" y="165" width="230" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="354" y="196" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">ODS 原值</text>
+<text x="354" y="240" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">raw_response</text>
+<text x="354" y="270" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">posting_record</text>
+<text x="354" y="300" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">保存文件引用 / 原值</text>
+<text x="354" y="330" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">一批一来源岗位</text>
+<text x="354" y="360" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">守恒及哈希校验</text>
+<rect x="620" y="165" width="360" height="246" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="620" y="165" width="360" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="634" y="196" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">DWD 分析明细</text>
+<text x="634" y="240" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">fact_posting_observation</text>
+<text x="634" y="270" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">observation_enrichment / 技能证据</text>
+<text x="634" y="300" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">fact_job_daily（日状态主事实）</text>
+<text x="634" y="330" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">bridge_daily_city / skill</text>
+<text x="634" y="360" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">粒度：release × date × job</text>
+<text x="634" y="390" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">正文资格和核心范围</text>
+<rect x="1030" y="165" width="230" height="216" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="1030" y="165" width="230" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="1044" y="196" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">DWS 主题汇总</text>
+<text x="1044" y="240" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">岗位结构 / 门槛</text>
+<text x="1044" y="270" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">技能分子与正文分母</text>
+<text x="1044" y="300" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">每日范围完整性</text>
+<text x="1044" y="330" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">计数按粒度守恒</text>
+<text x="1044" y="360" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">比率按集合重算</text>
+<rect x="1310" y="165" width="250" height="216" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="1310" y="165" width="250" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="1324" y="196" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">ADS 业务服务</text>
+<text x="1324" y="240" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">岗位 / 技能 / 门槛</text>
+<text x="1324" y="270" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">证据明细与质量KPI</text>
+<text x="1324" y="300" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">release_id 固定查询</text>
+<text x="1324" y="330" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">已发布版本可回查</text>
+<text x="1324" y="360" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">Power BI 主题分析</text>
+<rect x="620" y="490" width="360" height="156" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="620" y="490" width="360" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="634" y="521" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">DIM 统一分析描述</text>
+<text x="634" y="565" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">日期 / 来源 / 企业 / 岗位方向</text>
+<text x="634" y="595" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">学历 / 经验 / 类型 / 岗位身份</text>
+<text x="634" y="625" font-family="Microsoft YaHei, sans-serif" font-size="18" text-anchor="start" fill="#172e42">地点 / 技能 / 内容版本</text>
+<polyline points="800,490 800,411" fill="none" stroke="#50677c" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="40" y="685" width="1520" height="126" fill="#f6f8fa" stroke="#526779" stroke-width="1.5"/>
+<rect x="40" y="685" width="1520" height="46" fill="#eaf1f8" stroke="#526779" stroke-width="1.5"/>
+<text x="54" y="716" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">AUDIT 与可追溯加工链</text>
+<text x="54" y="760" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">批次 / 输入哈希 / 规则与构建 / release 输入 / 质量门 / 发布指针与历史，为各层提供证据。</text>
+<text x="54" y="790" font-family="Microsoft YaHei, sans-serif" font-size="21" text-anchor="start" fill="#172e42">例：ImportantItem → ODS 原值 → 三字段正文与 Unity 优先证据 → 技能桥 → 主题覆盖占比 → 岗位原文回查。</text>
+<polyline points="800,685 800,630" fill="none" stroke="#50677c" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="40" y="838" font-family="Microsoft YaHei, sans-serif" font-size="22" text-anchor="start" fill="#172e42">星型回答“如何按维度分析事实”；分层回答“如何加工与复用数据”。不是每层复制一套相同表。</text>
+</svg>

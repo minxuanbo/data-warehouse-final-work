@@ -16,6 +16,7 @@ from .client import Client, StopCollection
 from .mapping import build_job, classify, compare_detail, text_issues, validate_job
 from .report import verify_manifest, write_readme
 from . import COLLECTOR_VERSION
+from collectors.coverage import assess_coverage
 
 LIST_URL = "https://hr.163.com/api/hr163/position/queryPage"
 DETAIL_URL = "https://hr.163.com/api/hr163/position/query"
@@ -334,9 +335,12 @@ def run(args):
         "pagination_basis": f"响应 data.pages={reported['pages']}、data.total={reported['total']}；"
                             "按 currentPage 翻页，整页 ID 与上一页相同即判定停滞",
     }
+    coverage=assess_coverage(batch.path,'netease',stop_reason,counts,error_pages)
+    batch.manifest['coverage_evidence']=coverage
+    query_spec['collection_mode']='until_exhausted' if getattr(args,'until_exhausted',False) else 'bounded_sample'
     batch.finalize(
         query_spec=query_spec,
-        coverage_status="partial",
+        coverage_status=coverage['coverage_status'],
         stop_reason=stop_reason,
         counts=counts,
         error_pages=error_pages,
@@ -357,7 +361,7 @@ def run(args):
         "batch_dir": str(batch.path),
         "output_records": counts["output_records"],
         "status": "restricted" if restriction_stage else
-                  ("ok" if counts["output_records"] >= args.target else "incomplete"),
+                  ("ok" if counts["output_records"] >= args.target or coverage['coverage_status']=='complete' else "incomplete"),
         "stop_reason": stop_reason,
         "detail_samples": len(detail_results),
         "counts": counts,
@@ -365,7 +369,7 @@ def run(args):
 
     if stop_reason == "access_restricted":
         return 2
-    if counts["output_records"] >= args.target:
+    if counts["output_records"] >= args.target or coverage['coverage_status']=='complete':
         return 0
     if stop_reason in ("list_request_failed", "list_business_failed", "pagination_stalled"):
         return 2
@@ -385,7 +389,10 @@ def main(argv=None):
     parser.add_argument("--sample-seed", type=int, default=20261101, help="详情与抽检固定随机种子")
     parser.add_argument("--collector-commit", default="pending",
                         help="生成数据的代码 commit；应用补丁提交后回填")
+    parser.add_argument('--until-exhausted',action='store_true',help='在max-pages保护内遍历至空页；完整性仍需原始分页与总数对账')
     args = parser.parse_args(argv)
+    if args.target<=0 or args.max_pages<=0 or args.page_size<=0:parser.error('target/max-pages/page-size must be positive')
+    if args.until_exhausted:args.target=args.max_pages*args.page_size+1
     try:
         return run(args)
     except StopCollection as exc:

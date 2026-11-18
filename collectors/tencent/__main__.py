@@ -14,6 +14,7 @@ from .batch import Batch, sha256_file
 from .client import Client, StopCollection
 from .mapping import build_job, classify, text_issues
 from . import COLLECTOR_VERSION
+from collectors.coverage import assess_coverage,source_files
 
 LIST_URL = "https://careers.tencent.com/tencentcareer/api/post/Query"
 DETAIL_URL = "https://careers.tencent.com/tencentcareer/api/post/ByPostId"
@@ -158,6 +159,9 @@ def run(args):
             if len(batch.jobs) >= args.target:
                 break
             job_id = str(post.get("PostId"))
+            if post.get('PostId') is None or not job_id.strip():
+                batch.add_issue(None,'unidentified_record','error','review','列表岗位缺少真实ID，不请求伪造的详情地址',[raw_ref(batch,response_path)])
+                continue
             if job_id in batch.jobs:
                 continue
             if job_id in excluded:
@@ -268,9 +272,13 @@ def run(args):
                           ("；keyword=" + args.keyword if args.keyword else "；不使用关键词筛选"),
         "pagination_basis": "接口 Data.Count 与 Posts 长度；整页 ID 与上一页相同即判定停滞",
     }
+    coverage=assess_coverage(batch.path,'tencent',stop_reason,counts,error_pages)
+    batch.manifest['coverage_evidence']=coverage
+    batch.manifest['collector_source']=source_files('tencent')
+    query_spec['collection_mode']='until_exhausted' if getattr(args,'until_exhausted',False) else 'bounded_sample'
     batch.finalize(
         query_spec=query_spec,
-        coverage_status="partial",
+        coverage_status=coverage['coverage_status'],
         stop_reason=stop_reason,
         counts=counts,
         error_pages=error_pages,
@@ -282,12 +290,12 @@ def run(args):
         "batch": batch.batch_id,
         "batch_dir": str(batch.path),
         "output_records": counts["output_records"],
-        "status": "ok" if counts["output_records"] >= args.target else "incomplete",
+        "status": "ok" if counts["output_records"] >= args.target or coverage['coverage_status']=='complete' else "incomplete",
         "stop_reason": stop_reason,
         "counts": counts,
     }, ensure_ascii=False, indent=2))
 
-    if counts["output_records"] >= args.target:
+    if counts["output_records"] >= args.target or coverage['coverage_status']=='complete':
         return 0
     if stop_reason in ("list_request_failed", "list_business_failed", "pagination_stalled",
                        "access_restricted"):
@@ -318,7 +326,10 @@ def main(argv=None):
     parser.add_argument("--interval", type=float, default=3.0, help="请求最小间隔（秒）")
     parser.add_argument("--retries", type=int, default=2, help="网络失败重试次数")
     parser.add_argument("--keyword", default="", help="可选关键词；默认不使用")
+    parser.add_argument('--until-exhausted',action='store_true',help='在max-pages保护内遍历至空页；完整性仍需原始分页与总数对账')
     args = parser.parse_args(argv)
+    if args.target<=0 or args.max_pages<=0 or args.page_size<=0:parser.error('target/max-pages/page-size must be positive')
+    if args.until_exhausted:args.target=args.max_pages*args.page_size+1
     try:
         return run(args)
     except StopCollection as exc:

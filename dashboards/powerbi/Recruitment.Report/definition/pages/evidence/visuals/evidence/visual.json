@@ -74,7 +74,7 @@
               },
               "queryRef": "Evidence.evidence",
               "nativeQueryRef": "evidence",
-              "displayName": "证据原文"
+              "displayName": "原文证据"
             },
             {
               "field": {

@@ -1,13 +1,1771 @@
 {
-  "name": "RecruitmentPilot",
-  "compatibilityLevel": 1600,
+  "compatibilityLevel": 1606,
   "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Builds\", \"Jobs\", \"CityJobs\", \"SkillJobs\", \"Skills\", \"Pairs\", \"Evidence\", \"QualityKpi\", \"SnapshotSources\", \"SnapshotJobs\", \"SnapshotCityJobs\", \"SnapshotSkillJobs\", \"SnapshotSkills\", \"SnapshotEvidence\", \"Calendar\", \"SnapshotDays\", \"QualificationEvidence\"]"
+      },
+      {
+        "name": "RecruitmentPilotScope",
+        "value": "partial; two sources; not daily market trends"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ],
     "culture": "zh-CN",
-    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "cultures": [
+      {
+        "name": "zh-CN",
+        "linguisticMetadata": {
+          "content": {
+            "Entities": {
+              "builds.batch_id": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Builds",
+                    "ConceptualProperty": "batch_id"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "采集批次": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "builds.body_hash_version": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Builds",
+                    "ConceptualProperty": "body_hash_version"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "正文哈希版本": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "builds.build_id": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Builds",
+                    "ConceptualProperty": "build_id"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "构建编号": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "builds.dictionary_version": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Builds",
+                    "ConceptualProperty": "dictionary_version"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "词典版本": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "builds.rule_version": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Builds",
+                    "ConceptualProperty": "rule_version"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "规则版本": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "builds.scope_version": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Builds",
+                    "ConceptualProperty": "scope_version"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "范围版本": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "builds.skill_denominator": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Builds",
+                    "ConceptualProperty": "skill_denominator"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "正文分母": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "builds.skill_text_scope": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Builds",
+                    "ConceptualProperty": "skill_text_scope"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "技能文本范围": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "builds.source": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Builds",
+                    "ConceptualProperty": "source"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "来源": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calendar.calendar_date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calendar",
+                    "ConceptualProperty": "calendar_date"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "观察日": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calendar.calendar_month": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calendar",
+                    "ConceptualProperty": "calendar_month"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "月": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calendar.calendar_quarter": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calendar",
+                    "ConceptualProperty": "calendar_quarter"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "季度": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calendar.calendar_year": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calendar",
+                    "ConceptualProperty": "calendar_year"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "年": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "cityjobs.city": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "CityJobs",
+                    "ConceptualProperty": "city"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "city": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "evidence.body_hash_version": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Evidence",
+                    "ConceptualProperty": "body_hash_version"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "正文哈希版本": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "evidence.eligible_for_metric": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Evidence",
+                    "ConceptualProperty": "eligible_for_metric"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "证据有效": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "evidence.evidence": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Evidence",
+                    "ConceptualProperty": "evidence"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "原文证据": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "evidence.evidence_end": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Evidence",
+                    "ConceptualProperty": "evidence_end"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "结束位置": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "evidence.evidence_field": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Evidence",
+                    "ConceptualProperty": "evidence_field"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "原文字段": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "evidence.evidence_start": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Evidence",
+                    "ConceptualProperty": "evidence_start"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "起始位置": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "evidence.matched_text": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Evidence",
+                    "ConceptualProperty": "matched_text"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "命中文本": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "evidence.raw_field_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Evidence",
+                    "ConceptualProperty": "raw_field_name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "来源字段": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "evidence.raw_ref": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Evidence",
+                    "ConceptualProperty": "raw_ref"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "原始响应": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "evidence.skill_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Evidence",
+                    "ConceptualProperty": "skill_name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "标准技能": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.category_group": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "category_group"
+                  }
+                },
+                "State": "Generated"
+              },
+              "jobs.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "核心岗位数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "核心岗位数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.column1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "正文分母"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "正文分母": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.column2": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "岗位技能对数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "岗位技能对数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.column3": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "正文覆盖率"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "正文覆盖率": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.column4": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "组合岗位数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "组合岗位数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.column5": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "组合出现占比"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "组合出现占比": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.column6": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "技能岗位数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "技能岗位数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.column7": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "技能出现占比"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "技能出现占比": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.education_group": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "education_group"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "学历分组": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.experience_group": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "experience_group"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "经验分组": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.is_core": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "is_core"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "核心岗位": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.source": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "source"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "来源": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.source_category_group": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "source_category_group"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "来源原类别": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.source_job_id": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "source_job_id"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "来源岗位 ID": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.source_url": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "source_url"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "来源链接": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "jobs.title_raw": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Jobs",
+                    "ConceptualProperty": "title_raw"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "岗位名称": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "pairs.pair_label": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Pairs",
+                    "ConceptualProperty": "pair_label"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "技能组合": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualificationevidence.evidence": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualificationEvidence",
+                    "ConceptualProperty": "evidence"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "原文证据": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualificationevidence.evidence_field": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualificationEvidence",
+                    "ConceptualProperty": "evidence_field"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "原文字段": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualificationevidence.qualification_kind": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualificationEvidence",
+                    "ConceptualProperty": "qualification_kind"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "门槛类型": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualificationevidence.qualification_value": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualificationEvidence",
+                    "ConceptualProperty": "qualification_value"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "规范结果": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualificationevidence.strength": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualificationEvidence",
+                    "ConceptualProperty": "strength"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "要求强度": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualitykpi.kpi": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualityKpi",
+                    "ConceptualProperty": "KPI分子"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "KPI分子": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualitykpi.kpi1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualityKpi",
+                    "ConceptualProperty": "KPI分母"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "KPI分母": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualitykpi.kpi2": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualityKpi",
+                    "ConceptualProperty": "KPI实际值"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "KPI实际值": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualitykpi.kpi3": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualityKpi",
+                    "ConceptualProperty": "KPI目标值"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "KPI目标值": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualitykpi.kpi4": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualityKpi",
+                    "ConceptualProperty": "KPI状态说明"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "KPI状态说明": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualitykpi.kpi5": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualityKpi",
+                    "ConceptualProperty": "KPI趋势说明"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "KPI趋势说明": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualitykpi.kpi_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualityKpi",
+                    "ConceptualProperty": "kpi_name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "kpi_name": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualitykpi.owner_role": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualityKpi",
+                    "ConceptualProperty": "owner_role"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "owner_role": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "qualitykpi.target_version": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "QualityKpi",
+                    "ConceptualProperty": "target_version"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "target_version": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "skills.skill_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Skills",
+                    "ConceptualProperty": "skill_name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "标准技能": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotcityjobs.city_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotCityJobs",
+                    "ConceptualProperty": "city_name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "城市": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotcityjobs.province_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotCityJobs",
+                    "ConceptualProperty": "province_name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "省份": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotevidence.eligible_for_metric": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotEvidence",
+                    "ConceptualProperty": "eligible_for_metric"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "证据有效": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotevidence.evidence": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotEvidence",
+                    "ConceptualProperty": "evidence"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "原文证据": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotevidence.evidence_end": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotEvidence",
+                    "ConceptualProperty": "evidence_end"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "结束位置": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotevidence.evidence_field": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotEvidence",
+                    "ConceptualProperty": "evidence_field"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "原文字段": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotevidence.evidence_start": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotEvidence",
+                    "ConceptualProperty": "evidence_start"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "起始位置": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotevidence.skill_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotEvidence",
+                    "ConceptualProperty": "skill_name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "标准技能": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.category_group": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "category_group"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "标准岗位类别": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "快照核心岗位数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "快照核心岗位数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.education_basis_label": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "education_basis_label"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "学历依据": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.education_group": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "education_group"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "学历分组": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.employment_type_group": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "employment_type_group"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "招聘类型": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.experience_group": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "experience_group"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "经验分组": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.source": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "source"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "来源": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.source_job_id": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "source_job_id"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "来源岗位 ID": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.source_url": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "source_url"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "来源链接": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.title_raw": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "title_raw"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "岗位名称": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotskills.skill_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotSkills",
+                    "ConceptualProperty": "skill_name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "技能": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotsources.source": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotSources",
+                    "ConceptualProperty": "source"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "来源": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
     "dataAccessOptions": {
       "legacyRedirects": true,
       "returnErrorValuesAsNull": true
     },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "DW_00",
+        "fromColumn": "job_key",
+        "fromTable": "CityJobs",
+        "toColumn": "job_key",
+        "toTable": "Jobs"
+      },
+      {
+        "name": "DW_01",
+        "fromColumn": "job_key",
+        "fromTable": "SkillJobs",
+        "toColumn": "job_key",
+        "toTable": "Jobs"
+      },
+      {
+        "name": "DW_02",
+        "fromColumn": "job_key",
+        "fromTable": "Pairs",
+        "toColumn": "job_key",
+        "toTable": "Jobs"
+      },
+      {
+        "name": "DW_03",
+        "fromColumn": "job_key",
+        "fromTable": "Evidence",
+        "toColumn": "job_key",
+        "toTable": "Jobs"
+      },
+      {
+        "name": "DW_04",
+        "fromColumn": "build_id",
+        "fromTable": "Jobs",
+        "toColumn": "build_id",
+        "toTable": "Builds"
+      },
+      {
+        "name": "DW_05",
+        "fromColumn": "skill_name",
+        "fromTable": "SkillJobs",
+        "toColumn": "skill_name",
+        "toTable": "Skills"
+      },
+      {
+        "name": "DW_06",
+        "fromColumn": "skill_name",
+        "fromTable": "Evidence",
+        "toColumn": "skill_name",
+        "toTable": "Skills"
+      },
+      {
+        "name": "DW_07",
+        "fromColumn": "source",
+        "fromTable": "QualityKpi",
+        "toColumn": "source",
+        "toTable": "SnapshotSources"
+      },
+      {
+        "name": "DW_08",
+        "fromColumn": "source",
+        "fromTable": "SnapshotJobs",
+        "toColumn": "source",
+        "toTable": "SnapshotSources"
+      },
+      {
+        "name": "DW_09",
+        "fromColumn": "date_key",
+        "fromTable": "SnapshotJobs",
+        "toColumn": "date_key",
+        "toTable": "Calendar"
+      },
+      {
+        "name": "DW_10",
+        "fromColumn": "date_key",
+        "fromTable": "SnapshotDays",
+        "toColumn": "date_key",
+        "toTable": "Calendar"
+      },
+      {
+        "name": "DW_11",
+        "fromColumn": "snapshot_key",
+        "fromTable": "SnapshotCityJobs",
+        "toColumn": "snapshot_key",
+        "toTable": "SnapshotJobs"
+      },
+      {
+        "name": "DW_12",
+        "fromColumn": "snapshot_key",
+        "fromTable": "SnapshotSkillJobs",
+        "toColumn": "snapshot_key",
+        "toTable": "SnapshotJobs"
+      },
+      {
+        "name": "DW_13",
+        "fromColumn": "snapshot_key",
+        "fromTable": "SnapshotEvidence",
+        "toColumn": "snapshot_key",
+        "toTable": "SnapshotJobs"
+      },
+      {
+        "name": "DW_14",
+        "fromColumn": "skill_name",
+        "fromTable": "SnapshotSkillJobs",
+        "toColumn": "skill_name",
+        "toTable": "SnapshotSkills"
+      },
+      {
+        "name": "DW_15",
+        "fromColumn": "skill_name",
+        "fromTable": "SnapshotEvidence",
+        "toColumn": "skill_name",
+        "toTable": "SnapshotSkills"
+      },
+      {
+        "name": "DW_16",
+        "fromColumn": "snapshot_key",
+        "fromTable": "QualificationEvidence",
+        "toColumn": "snapshot_key",
+        "toTable": "SnapshotJobs"
+      }
+    ],
+    "sourceQueryCulture": "zh-CN",
     "tables": [
       {
         "name": "Builds",
@@ -15,65 +1773,179 @@
           {
             "name": "source",
             "dataType": "string",
+            "lineageTag": "e694331b-8623-494a-b29b-2c8569979cbf",
             "sourceColumn": "source",
             "summarizeBy": "none"
           },
           {
             "name": "batch_id",
             "dataType": "string",
+            "lineageTag": "13080d6a-4db9-44e9-9821-302088818a6a",
             "sourceColumn": "batch_id",
             "summarizeBy": "none"
           },
           {
             "name": "build_id",
             "dataType": "int64",
+            "lineageTag": "8fb7a388-351a-4875-957b-f68374cabecf",
             "sourceColumn": "build_id",
             "summarizeBy": "none"
           },
           {
             "name": "skill_denominator",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
             "dataType": "int64",
+            "lineageTag": "4b8f110e-b42e-4548-b2ca-f833fb7dac4a",
             "sourceColumn": "skill_denominator",
-            "summarizeBy": "none"
+            "summarizeBy": "sum"
           },
           {
             "name": "body_hash_version",
             "dataType": "string",
+            "lineageTag": "46c429a6-e2e1-44f9-89cd-ac57eb884264",
             "sourceColumn": "body_hash_version",
             "summarizeBy": "none"
           },
           {
             "name": "skill_text_scope",
             "dataType": "string",
+            "lineageTag": "3bcd548d-476f-49fe-99a4-eaa08664b969",
             "sourceColumn": "skill_text_scope",
             "summarizeBy": "none"
           },
           {
             "name": "dictionary_version",
             "dataType": "string",
+            "lineageTag": "e8bc4c0e-c59b-48ac-af47-be7181803c89",
             "sourceColumn": "dictionary_version",
             "summarizeBy": "none"
           },
           {
             "name": "rule_version",
             "dataType": "string",
+            "lineageTag": "c1a8c0b8-898b-488f-9109-d6d646d374dc",
             "sourceColumn": "rule_version",
             "summarizeBy": "none"
           },
           {
             "name": "scope_version",
             "dataType": "string",
+            "lineageTag": "f5c5129d-165b-497a-8597-f275cb5f844a",
             "sourceColumn": "scope_version",
             "summarizeBy": "none"
+          },
+          {
+            "name": "source_posting_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "be67dfca-340a-4426-a25f-7fcfcdcabdd4",
+            "sourceColumn": "source_posting_count",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "core_posting_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d14e17c4-41e5-4eb8-aa1e-f7abf471ea01",
+            "sourceColumn": "core_posting_count",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "additional_requirements_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ff96db01-db6a-4d98-9a95-cced64d14f88",
+            "sourceColumn": "additional_requirements_count",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "location_conflict_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "001d9227-ff7b-4330-9bfe-03625a65a579",
+            "sourceColumn": "location_conflict_count",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "experience_conflict_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "16c15479-4047-470f-88d6-3444e65f496e",
+            "sourceColumn": "experience_conflict_count",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "education_conflict_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3f65afdb-4946-41d6-8027-52f976888238",
+            "sourceColumn": "education_conflict_count",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "experience_hint_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "36fd2fc6-c7ab-442a-a997-ac7971c43d5b",
+            "sourceColumn": "experience_hint_count",
+            "summarizeBy": "sum"
           }
         ],
+        "lineageTag": "7bfab00e-47ae-4c1f-a1f0-737e22a918d5",
         "partitions": [
           {
             "name": "Builds",
             "mode": "import",
             "source": {
-              "type": "m",
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.cd_overview WHERE build_id IN (6,5)\")"
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.cd_overview WHERE build_id IN (6,5)\")",
+              "type": "m"
             }
           }
         ]
@@ -84,154 +1956,259 @@
           {
             "name": "job_key",
             "dataType": "string",
+            "lineageTag": "910e501b-5538-4f26-b7f8-ae12f0d5499e",
             "sourceColumn": "job_key",
             "summarizeBy": "none"
           },
           {
             "name": "source",
             "dataType": "string",
+            "lineageTag": "aa168ec1-2820-478c-b774-cea78216b071",
             "sourceColumn": "source",
             "summarizeBy": "none"
           },
           {
             "name": "batch_id",
             "dataType": "string",
+            "lineageTag": "5e203683-88a9-4d2a-b1ab-0e08516c9659",
             "sourceColumn": "batch_id",
             "summarizeBy": "none"
           },
           {
             "name": "source_job_id",
             "dataType": "string",
+            "lineageTag": "e7ca54f6-6234-4602-9816-2d74f03c9520",
             "sourceColumn": "source_job_id",
             "summarizeBy": "none"
           },
           {
             "name": "title_raw",
             "dataType": "string",
+            "lineageTag": "3851a5ed-6a7d-44b7-b448-9e382ddf05d1",
             "sourceColumn": "title_raw",
             "summarizeBy": "none"
           },
           {
-            "name": "category_group",
+            "name": "source_category_group",
             "dataType": "string",
-            "sourceColumn": "category_group",
+            "lineageTag": "b35cbfd2-610b-4f0a-ad81-1f09f880ab35",
+            "sourceColumn": "source_category_group",
             "summarizeBy": "none"
           },
           {
             "name": "experience_group",
             "dataType": "string",
+            "lineageTag": "20e40b88-08f8-4e59-b65c-4ec37e921b31",
             "sourceColumn": "experience_group",
             "summarizeBy": "none"
           },
           {
             "name": "education_group",
             "dataType": "string",
+            "lineageTag": "aa4ad413-6496-4dc2-a349-f9364e6a8794",
             "sourceColumn": "education_group",
             "summarizeBy": "none"
           },
           {
             "name": "source_url",
+            "dataCategory": "WebUrl",
             "dataType": "string",
+            "lineageTag": "ef4ef4f3-1974-4d94-994c-db0207ed750d",
             "sourceColumn": "source_url",
-            "summarizeBy": "none",
-            "dataCategory": "WebUrl"
+            "summarizeBy": "none"
           },
           {
             "name": "scope_reason",
             "dataType": "string",
+            "lineageTag": "8efbd6ec-1a1e-4c11-ac9c-d59c0dd17a5b",
             "sourceColumn": "scope_reason",
             "summarizeBy": "none"
           },
           {
             "name": "content_json",
             "dataType": "string",
+            "lineageTag": "4eb04067-8069-4fa9-ad7f-991ea8263d38",
             "sourceColumn": "content_json",
             "summarizeBy": "none"
           },
           {
             "name": "additional_requirements_raw",
             "dataType": "string",
+            "lineageTag": "d004bec8-0152-42fb-9ef1-f6dfd8d34a65",
             "sourceColumn": "additional_requirements_raw",
             "summarizeBy": "none"
           },
           {
             "name": "issues_json",
             "dataType": "string",
+            "lineageTag": "49ac459d-8c15-4abc-a27d-201ca7b8cf42",
             "sourceColumn": "issues_json",
             "summarizeBy": "none"
           },
           {
             "name": "raw_ref",
             "dataType": "string",
+            "lineageTag": "66755681-9f4b-47fc-8121-1154bd74ce0c",
             "sourceColumn": "raw_ref",
             "summarizeBy": "none"
           },
           {
             "name": "raw_sha256",
             "dataType": "string",
+            "lineageTag": "4b9b16d2-05cd-4a63-b08b-2484fdcec218",
             "sourceColumn": "raw_sha256",
             "summarizeBy": "none"
           },
           {
             "name": "body_hash_version",
             "dataType": "string",
+            "lineageTag": "0285c6da-fe4e-44d4-87a2-509f6c5c8a27",
             "sourceColumn": "body_hash_version",
             "summarizeBy": "none"
           },
           {
             "name": "skill_text_scope",
             "dataType": "string",
+            "lineageTag": "02fdb1a0-80d1-458a-9e1d-e04aaab03ef5",
             "sourceColumn": "skill_text_scope",
             "summarizeBy": "none"
           },
           {
             "name": "build_id",
             "dataType": "int64",
+            "lineageTag": "1f1d903f-34bb-4ca2-83a8-b14e0e241ea1",
             "sourceColumn": "build_id",
             "summarizeBy": "none"
           },
           {
             "name": "analysis_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
             "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "lineageTag": "7d0599da-83c5-4daf-8705-cfdb56b5bf0f",
             "sourceColumn": "analysis_date",
-            "summarizeBy": "none",
-            "formatString": "yyyy-MM-dd"
+            "summarizeBy": "none"
           },
           {
             "name": "is_core",
             "dataType": "boolean",
+            "lineageTag": "2e762ad3-be5c-4ae0-8f53-0dd4cbf98403",
             "sourceColumn": "is_core",
             "summarizeBy": "none"
           },
           {
             "name": "body_valid",
             "dataType": "boolean",
+            "lineageTag": "404a8be1-b0ee-4d09-9951-b8512dcc3bc1",
             "sourceColumn": "body_valid",
             "summarizeBy": "none"
           },
           {
             "name": "location_conflict",
             "dataType": "boolean",
+            "lineageTag": "30235336-3c86-4346-ad75-ba46e3213405",
             "sourceColumn": "location_conflict",
             "summarizeBy": "none"
           },
           {
             "name": "experience_conflict",
             "dataType": "boolean",
+            "lineageTag": "99ccff6e-8d9b-46f3-9b0f-de9ea18360ef",
             "sourceColumn": "experience_conflict",
             "summarizeBy": "none"
           },
           {
             "name": "education_conflict",
             "dataType": "boolean",
+            "lineageTag": "86e5b40f-3def-4e58-bd9a-6a6db92ef1d9",
             "sourceColumn": "education_conflict",
             "summarizeBy": "none"
           },
           {
             "name": "experience_hint",
             "dataType": "boolean",
+            "lineageTag": "b69e6949-5f94-44ac-9f01-7ef3c29f2de8",
             "sourceColumn": "experience_hint",
             "summarizeBy": "none"
+          }
+        ],
+        "description": "固定历史CD构建的来源岗位投影；source_category_group是官网原类别，不是标准岗位类别。",
+        "lineageTag": "c32a405a-d96a-46b2-9e26-8c0f41fe58b4",
+        "measures": [
+          {
+            "name": "核心岗位数",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(Jobs[job_key]), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key])),0)",
+            "formatString": "#,0",
+            "lineageTag": "21da07bd-3a9d-4da6-8f7a-d64c21dfcc39"
+          },
+          {
+            "name": "正文分母",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(Jobs[job_key]), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE())),0)",
+            "formatString": "#,0",
+            "lineageTag": "e67b34a5-f7b2-43fd-8536-3d71d00208ea"
+          },
+          {
+            "name": "正文覆盖率",
+            "expression": "DIVIDE([正文分母],[核心岗位数])",
+            "formatString": "0.0%",
+            "lineageTag": "8b105f52-360b-46d6-8f8c-093c779eeb27"
+          },
+          {
+            "name": "技能岗位数",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(SkillJobs[job_key]), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE())),0)",
+            "formatString": "#,0",
+            "lineageTag": "4935f188-ead9-4496-af71-3a1ebee5e612"
+          },
+          {
+            "name": "岗位技能对数",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(COUNTROWS(SkillJobs), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE())),0)",
+            "formatString": "#,0",
+            "lineageTag": "0e59cd52-6bf3-4919-8513-e76a53af5866"
+          },
+          {
+            "name": "技能出现占比",
+            "expression": "DIVIDE([技能岗位数],[正文分母])",
+            "formatString": "0.0%",
+            "lineageTag": "43565b8f-f83e-467b-b785-aa86de6449b1"
+          },
+          {
+            "name": "组合岗位数",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(Pairs[job_key]), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE())),0)",
+            "formatString": "#,0",
+            "lineageTag": "d587f061-1212-4144-a51b-c251eedf1204"
+          },
+          {
+            "name": "组合出现占比",
+            "expression": "DIVIDE([组合岗位数],[正文分母])",
+            "formatString": "0.0%",
+            "lineageTag": "201480db-b2ca-4bec-98a5-75d4569b18f3"
+          },
+          {
+            "name": "有效证据数",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(COUNTROWS(Evidence), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE()), KEEPFILTERS(Evidence[eligible_for_metric]=TRUE())),0)",
+            "formatString": "#,0",
+            "lineageTag": "788bbd42-c623-4761-b8ef-5fc8982c6d7f"
+          },
+          {
+            "name": "审计证据数",
+            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(COUNTROWS(Evidence), TREATAS(K, Jobs[job_key])),0)",
+            "formatString": "#,0",
+            "lineageTag": "d91ff7c4-a82e-4f85-a82c-ec7e6a25b0eb"
+          },
+          {
+            "name": "本岗核心指标资格",
+            "expression": "IF(SELECTEDVALUE(Jobs[is_core],FALSE()),\"核心\",\"扩展\")",
+            "lineageTag": "81a074b3-bd46-43d1-8c3a-ffc0fc311954"
+          },
+          {
+            "name": "样本说明",
+            "expression": "\"两来源 partial 小批；观察日期不同；来源岗位计数；不用于全市场或趋势推断\"",
+            "lineageTag": "48efb3b8-8b7e-4653-977f-f1798f69227d"
           }
         ],
         "partitions": [
@@ -239,69 +2216,19 @@
             "name": "Jobs",
             "mode": "import",
             "source": {
-              "type": "m",
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT CONCAT(j.build_id,'|',j.source_job_id) AS job_key,j.build_id,j.source,j.batch_id,j.source_job_id,j.title_raw,\n          CAST(j.analysis_date AS date) AS analysis_date,\n          COALESCE(NULLIF(j.category_raw,N''),N'未知') AS category_group,\n          CASE WHEN j.experience_conflict=1 THEN N'冲突待确认' ELSE COALESCE(NULLIF(j.experience_raw,N''),N'未知') END AS experience_group,\n          CASE WHEN j.education_conflict=1 THEN N'冲突待确认' ELSE COALESCE(NULLIF(j.education_raw,N''),N'未知') END AS education_group,\n          j.is_core,j.body_valid,j.location_conflict,j.experience_conflict,j.education_conflict,\n          j.experience_hint,j.source_url,j.scope_reason,j.content_json,j.additional_requirements_raw,\n          j.issues_json,j.raw_ref,j.raw_sha256,j.body_hash_version,j.skill_text_scope\n          FROM (SELECT * FROM ads.cd_job_detail WHERE build_id IN (6,5)) j\")"
+              "expression": [
+                "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT CONCAT(j.build_id,'|',j.source_job_id) AS job_key,j.build_id,j.source,j.batch_id,j.source_job_id,j.title_raw,",
+                "          CAST(j.analysis_date AS date) AS analysis_date,",
+                "          COALESCE(NULLIF(j.category_raw,N''),N'未知') AS source_category_group,",
+                "          q.experience_group AS experience_group,",
+                "          q.education_group AS education_group,",
+                "          j.is_core,j.body_valid,j.location_conflict,j.experience_conflict,j.education_conflict,",
+                "          j.experience_hint,j.source_url,j.scope_reason,j.content_json,j.additional_requirements_raw,",
+                "          j.issues_json,j.raw_ref,j.raw_sha256,j.body_hash_version,j.skill_text_scope",
+                "          FROM (SELECT * FROM ads.cd_job_detail WHERE build_id IN (6,5)) j JOIN ads.release_job_detail q ON q.build_id=j.build_id AND q.observation_key=j.observation_key AND q.release_id=5\")"
+              ],
+              "type": "m"
             }
-          }
-        ],
-        "measures": [
-          {
-            "name": "核心岗位数",
-            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(Jobs[job_key]), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key])),0)",
-            "formatString": "#,0"
-          },
-          {
-            "name": "正文分母",
-            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(Jobs[job_key]), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE())),0)",
-            "formatString": "#,0"
-          },
-          {
-            "name": "正文覆盖率",
-            "expression": "DIVIDE([正文分母],[核心岗位数])",
-            "formatString": "0.0%"
-          },
-          {
-            "name": "技能岗位数",
-            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(SkillJobs[job_key]), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE())),0)",
-            "formatString": "#,0"
-          },
-          {
-            "name": "岗位技能对数",
-            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(COUNTROWS(SkillJobs), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE())),0)",
-            "formatString": "#,0"
-          },
-          {
-            "name": "技能出现占比",
-            "expression": "DIVIDE([技能岗位数],[正文分母])",
-            "formatString": "0.0%"
-          },
-          {
-            "name": "组合岗位数",
-            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(Pairs[job_key]), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE())),0)",
-            "formatString": "#,0"
-          },
-          {
-            "name": "组合出现占比",
-            "expression": "DIVIDE([组合岗位数],[正文分母])",
-            "formatString": "0.0%"
-          },
-          {
-            "name": "有效证据数",
-            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(COUNTROWS(Evidence), KEEPFILTERS(Jobs[is_core] = TRUE()), TREATAS(K, Jobs[job_key]), KEEPFILTERS(Jobs[body_valid] = TRUE()), KEEPFILTERS(Evidence[eligible_for_metric]=TRUE())),0)",
-            "formatString": "#,0"
-          },
-          {
-            "name": "审计证据数",
-            "expression": "VAR K = VALUES(CityJobs[job_key]) RETURN COALESCE(CALCULATE(COUNTROWS(Evidence), TREATAS(K, Jobs[job_key])),0)",
-            "formatString": "#,0"
-          },
-          {
-            "name": "本岗核心指标资格",
-            "expression": "IF(SELECTEDVALUE(Jobs[is_core],FALSE()),\"核心\",\"扩展\")"
-          },
-          {
-            "name": "样本说明",
-            "expression": "\"两来源 partial 小批；观察日期不同；来源岗位计数；不用于全市场或趋势推断\""
           }
         ]
       },
@@ -311,27 +2238,36 @@
           {
             "name": "job_key",
             "dataType": "string",
+            "lineageTag": "760a7f92-dac8-4d1a-bd6a-c0fc3fd90a31",
             "sourceColumn": "job_key",
             "summarizeBy": "none"
           },
           {
             "name": "city",
             "dataType": "string",
+            "lineageTag": "7bec3c23-a2b1-44fb-808e-054765bc3549",
             "sourceColumn": "city",
             "summarizeBy": "none"
           }
         ],
+        "isHidden": true,
+        "lineageTag": "f1d46226-d49f-4f8a-aca7-295336e00fc6",
         "partitions": [
           {
             "name": "CityJobs",
             "mode": "import",
             "source": {
-              "type": "m",
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT CONCAT(j.build_id,'|',j.source_job_id) AS job_key,\n          CASE WHEN j.location_conflict=1 THEN N'冲突待确认'\n            WHEN RIGHT(loc.value,1)=N'市' THEN LEFT(loc.value,LEN(loc.value)-1)\n            ELSE COALESCE(NULLIF(loc.value,N''),N'未知') END AS city\n          FROM (SELECT * FROM ads.cd_job_detail WHERE build_id IN (6,5)) j OUTER APPLY OPENJSON(j.confirmed_locations_json) loc\")"
+              "expression": [
+                "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT CONCAT(j.build_id,'|',j.source_job_id) AS job_key,",
+                "          CASE WHEN j.location_conflict=1 THEN N'冲突待确认'",
+                "            WHEN RIGHT(loc.value,1)=N'市' THEN LEFT(loc.value,LEN(loc.value)-1)",
+                "            ELSE COALESCE(NULLIF(loc.value,N''),N'未知') END AS city",
+                "          FROM (SELECT * FROM ads.cd_job_detail WHERE build_id IN (6,5)) j OUTER APPLY OPENJSON(j.confirmed_locations_json) loc\")"
+              ],
+              "type": "m"
             }
           }
-        ],
-        "isHidden": true
+        ]
       },
       {
         "name": "SkillJobs",
@@ -339,45 +2275,60 @@
           {
             "name": "job_key",
             "dataType": "string",
+            "lineageTag": "73a4f11e-e7ab-4c58-aed6-068abce924f1",
             "sourceColumn": "job_key",
             "summarizeBy": "none"
           },
           {
             "name": "skill_name",
             "dataType": "string",
+            "lineageTag": "9fca3d8c-a93d-406b-8a33-5497d4741304",
             "sourceColumn": "skill_name",
             "summarizeBy": "none"
           }
         ],
+        "isHidden": true,
+        "lineageTag": "7b389b12-7156-4f82-ab0d-91da8266fe7f",
         "partitions": [
           {
             "name": "SkillJobs",
             "mode": "import",
             "source": {
-              "type": "m",
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT CONCAT(build_id,'|',source_job_id) AS job_key, skill_name\n      FROM ads.cd_skill_evidence\n      WHERE build_id IN (6,5) AND is_core=1 AND eligible_for_metric=1\")"
+              "expression": [
+                "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT CONCAT(build_id,'|',source_job_id) AS job_key, skill_name",
+                "      FROM ads.cd_skill_evidence",
+                "      WHERE build_id IN (6,5) AND is_core=1 AND eligible_for_metric=1\")"
+              ],
+              "type": "m"
             }
           }
-        ],
-        "isHidden": true
+        ]
       },
       {
         "name": "Skills",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
         "columns": [
           {
             "name": "skill_name",
             "dataType": "string",
+            "lineageTag": "8bea65b5-2707-445b-af62-00e566ad02cf",
             "sourceColumn": "skill_name",
             "summarizeBy": "none"
           }
         ],
+        "lineageTag": "acbdada2-39d1-41b6-8440-005d55ed8af1",
         "partitions": [
           {
             "name": "Skills",
             "mode": "import",
             "source": {
-              "type": "m",
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT skill_name FROM ads.cd_skill_evidence WHERE build_id IN (6,5)\")"
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT skill_name FROM ads.cd_skill_evidence WHERE build_id IN (6,5)\")",
+              "type": "m"
             }
           }
         ]
@@ -388,39 +2339,48 @@
           {
             "name": "job_key",
             "dataType": "string",
+            "lineageTag": "db78ae13-caf8-4b58-9e4f-ceb2ce82206b",
             "sourceColumn": "job_key",
             "summarizeBy": "none"
           },
           {
             "name": "skill_a",
             "dataType": "string",
+            "lineageTag": "4315aa19-e0dd-4714-a988-88428bd3bf55",
             "sourceColumn": "skill_a",
             "summarizeBy": "none"
           },
           {
             "name": "skill_b",
             "dataType": "string",
+            "lineageTag": "0ed07b6e-2642-4000-9a01-2e8abadbc6cb",
             "sourceColumn": "skill_b",
             "summarizeBy": "none"
           },
           {
             "name": "pair_label",
             "dataType": "string",
+            "lineageTag": "d9485122-b9ed-4232-bf1f-dbe4d07858c1",
             "sourceColumn": "pair_label",
             "summarizeBy": "none"
           }
         ],
+        "isHidden": true,
+        "lineageTag": "bd18925b-2013-4d22-b98f-f3b738d2c52b",
         "partitions": [
           {
             "name": "Pairs",
             "mode": "import",
             "source": {
-              "type": "m",
-              "expression": "let S = Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT CONCAT(build_id,'|',source_job_id) AS job_key, skill_name\n      FROM ads.cd_skill_evidence\n      WHERE build_id IN (6,5) AND is_core=1 AND eligible_for_metric=1\"), A = Table.RenameColumns(S, {{\"skill_name\", \"skill_a\"}}), J = Table.NestedJoin(A, {\"job_key\"}, S, {\"job_key\"}, \"B\", JoinKind.Inner), E = Table.ExpandTableColumn(J, \"B\", {\"skill_name\"}, {\"skill_b\"}), F = Table.SelectRows(E, each Comparer.Ordinal([skill_a], [skill_b]) < 0), R = Table.AddColumn(F, \"pair_label\", each [skill_a] & \" + \" & [skill_b], type text) in R"
+              "expression": [
+                "let S = Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT CONCAT(build_id,'|',source_job_id) AS job_key, skill_name",
+                "      FROM ads.cd_skill_evidence",
+                "      WHERE build_id IN (6,5) AND is_core=1 AND eligible_for_metric=1\"), A = Table.RenameColumns(S, {{\"skill_name\", \"skill_a\"}}), J = Table.NestedJoin(A, {\"job_key\"}, S, {\"job_key\"}, \"B\", JoinKind.Inner), E = Table.ExpandTableColumn(J, \"B\", {\"skill_name\"}, {\"skill_b\"}), F = Table.SelectRows(E, each Comparer.Ordinal([skill_a], [skill_b]) < 0), R = Table.AddColumn(F, \"pair_label\", each [skill_a] & \" + \" & [skill_b], type text) in R"
+              ],
+              "type": "m"
             }
           }
-        ],
-        "isHidden": true
+        ]
       },
       {
         "name": "Evidence",
@@ -428,196 +2388,1830 @@
           {
             "name": "job_key",
             "dataType": "string",
+            "lineageTag": "9906a6d6-078f-4eac-923e-5b94395cd97f",
             "sourceColumn": "job_key",
             "summarizeBy": "none"
           },
           {
             "name": "skill_name",
             "dataType": "string",
+            "lineageTag": "457b35b2-edc9-4a3e-815f-a2d8761680d1",
             "sourceColumn": "skill_name",
             "summarizeBy": "none"
           },
           {
             "name": "requirement_level",
             "dataType": "string",
+            "lineageTag": "6034bd6f-1357-49d0-bfcd-22deda3f490a",
             "sourceColumn": "requirement_level",
             "summarizeBy": "none"
           },
           {
             "name": "evidence_field",
             "dataType": "string",
+            "lineageTag": "081537dc-d410-4873-8d58-c5cf5a820113",
             "sourceColumn": "evidence_field",
             "summarizeBy": "none"
           },
           {
             "name": "evidence",
             "dataType": "string",
+            "lineageTag": "1a3dd662-760f-4d7e-bc6d-55bdb9bc0ad8",
             "sourceColumn": "evidence",
             "summarizeBy": "none"
           },
           {
             "name": "matched_text",
             "dataType": "string",
+            "lineageTag": "895a2662-986a-4b09-bef1-48fd06d973d3",
             "sourceColumn": "matched_text",
             "summarizeBy": "none"
           },
           {
             "name": "raw_ref",
             "dataType": "string",
+            "lineageTag": "e7cbcc5f-94e1-4d4b-b8c3-b8e056a8e130",
             "sourceColumn": "raw_ref",
             "summarizeBy": "none"
           },
           {
             "name": "raw_sha256",
             "dataType": "string",
+            "lineageTag": "a9ac0bc9-9d14-4463-a50f-ae1d53fdcbac",
             "sourceColumn": "raw_sha256",
             "summarizeBy": "none"
           },
           {
             "name": "raw_field_name",
             "dataType": "string",
+            "lineageTag": "f0c7de81-612c-442b-a5e3-f4dea1977d60",
             "sourceColumn": "raw_field_name",
             "summarizeBy": "none"
           },
           {
             "name": "body_sha256",
             "dataType": "string",
+            "lineageTag": "d9f07697-2f69-4030-9dd0-05fc15f65b3c",
             "sourceColumn": "body_sha256",
             "summarizeBy": "none"
           },
           {
             "name": "body_hash_version",
             "dataType": "string",
+            "lineageTag": "4b149826-ccbb-4d6e-acbc-666fc3eeae98",
             "sourceColumn": "body_hash_version",
             "summarizeBy": "none"
           },
           {
             "name": "dictionary_version",
             "dataType": "string",
+            "lineageTag": "c4668615-f24e-443d-8261-48455d0d2c56",
             "sourceColumn": "dictionary_version",
             "summarizeBy": "none"
           },
           {
             "name": "rule_version",
             "dataType": "string",
+            "lineageTag": "b8242dd7-1c94-447f-8a66-892374548bfe",
             "sourceColumn": "rule_version",
             "summarizeBy": "none"
           },
           {
             "name": "evidence_start",
             "dataType": "int64",
+            "lineageTag": "31303327-419a-4679-8ea2-697290286585",
             "sourceColumn": "evidence_start",
             "summarizeBy": "none"
           },
           {
             "name": "evidence_end",
             "dataType": "int64",
+            "lineageTag": "1fda820c-3ac4-457e-ba8e-149c5162aa15",
             "sourceColumn": "evidence_end",
             "summarizeBy": "none"
           },
           {
             "name": "match_start",
             "dataType": "int64",
+            "lineageTag": "98cc1fb0-5e3c-4132-a7e8-177a9ff64ea9",
             "sourceColumn": "match_start",
             "summarizeBy": "none"
           },
           {
             "name": "match_end",
             "dataType": "int64",
+            "lineageTag": "b0f25d7d-4caa-47ed-940c-09a044f62fb6",
             "sourceColumn": "match_end",
             "summarizeBy": "none"
           },
           {
             "name": "eligible_for_metric",
             "dataType": "boolean",
+            "lineageTag": "7b8097a5-5cc6-44c1-8c7f-54613c484ea7",
             "sourceColumn": "eligible_for_metric",
             "summarizeBy": "none"
           },
           {
             "name": "is_core",
             "dataType": "boolean",
+            "lineageTag": "c10364dd-7005-4971-aa01-6a6ec47c0da6",
             "sourceColumn": "is_core",
             "summarizeBy": "none"
           }
         ],
+        "lineageTag": "9f9cd20e-b3f1-4d69-b975-5a438f496e87",
         "partitions": [
           {
             "name": "Evidence",
             "mode": "import",
             "source": {
-              "type": "m",
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT CONCAT(e.build_id,'|',e.source_job_id) AS job_key,e.skill_name,\n          e.requirement_level,e.eligible_for_metric,e.is_core,x.*\n          FROM ads.cd_skill_evidence e CROSS APPLY OPENJSON(e.evidence_json)\n          WITH(evidence_field nvarchar(100), evidence nvarchar(max), evidence_start int,evidence_end int,\n            match_start int,match_end int,matched_text nvarchar(300),raw_ref nvarchar(1000),\n            raw_sha256 nvarchar(64),raw_field_name nvarchar(100),body_sha256 nvarchar(64),\n            body_hash_version nvarchar(100),dictionary_version nvarchar(100),rule_version nvarchar(100)) x\n          WHERE e.build_id IN (6,5)\")"
+              "expression": [
+                "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT CONCAT(e.build_id,'|',e.source_job_id) AS job_key,e.skill_name,",
+                "          e.requirement_level,e.eligible_for_metric,e.is_core,x.*",
+                "          FROM ads.cd_skill_evidence e CROSS APPLY OPENJSON(e.evidence_json)",
+                "          WITH(evidence_field nvarchar(100), evidence nvarchar(max), evidence_start int,evidence_end int,",
+                "            match_start int,match_end int,matched_text nvarchar(300),raw_ref nvarchar(1000),",
+                "            raw_sha256 nvarchar(64),raw_field_name nvarchar(100),body_sha256 nvarchar(64),",
+                "            body_hash_version nvarchar(100),dictionary_version nvarchar(100),rule_version nvarchar(100)) x",
+                "          WHERE e.build_id IN (6,5)\")"
+              ],
+              "type": "m"
             }
           }
         ]
-      }
-    ],
-    "relationships": [
-      {
-        "name": "CityJobs_Jobs",
-        "fromTable": "CityJobs",
-        "fromColumn": "job_key",
-        "toTable": "Jobs",
-        "toColumn": "job_key",
-        "crossFilteringBehavior": "oneDirection"
       },
       {
-        "name": "SkillJobs_Jobs",
-        "fromTable": "SkillJobs",
-        "fromColumn": "job_key",
-        "toTable": "Jobs",
-        "toColumn": "job_key",
-        "crossFilteringBehavior": "oneDirection"
+        "name": "QualityKpi",
+        "columns": [
+          {
+            "name": "source",
+            "dataType": "string",
+            "lineageTag": "494ba626-dfd3-4e14-a3c3-52f0991142a9",
+            "sourceColumn": "source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "kpi_code",
+            "dataType": "string",
+            "lineageTag": "ec7d239b-dc63-4952-8736-1176187bb216",
+            "sourceColumn": "kpi_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "kpi_name",
+            "dataType": "string",
+            "lineageTag": "4562e8fd-e4c4-491d-8a61-89a80c3c7553",
+            "sourceColumn": "kpi_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "owner_role",
+            "dataType": "string",
+            "lineageTag": "d149e848-66bc-4f59-b192-3bfbe718101c",
+            "sourceColumn": "owner_role",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "trend_reason",
+            "dataType": "string",
+            "lineageTag": "6d63c484-8197-463c-88b4-0e8f5cbd17f5",
+            "sourceColumn": "trend_reason",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "target_version",
+            "dataType": "string",
+            "lineageTag": "f778e76a-ea94-4952-be95-8208f2359fb0",
+            "sourceColumn": "target_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "build_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "5e331277-7721-4138-9b53-0fddf5797ba1",
+            "sourceColumn": "build_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "numerator",
+            "dataType": "int64",
+            "lineageTag": "752f52eb-32d2-4a73-bc2b-089f569a77bb",
+            "sourceColumn": "numerator",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "denominator",
+            "dataType": "int64",
+            "lineageTag": "1715566f-28e8-4efa-8eba-a3e01abc90ee",
+            "sourceColumn": "denominator",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "status_value",
+            "dataType": "int64",
+            "lineageTag": "5563fa22-4443-4862-9a5f-f84ba542d6dd",
+            "sourceColumn": "status_value",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "kpi_value",
+            "dataType": "double",
+            "lineageTag": "78f1a156-a02f-4ab4-8537-08058ebdff6b",
+            "sourceColumn": "kpi_value",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "goal_value",
+            "dataType": "double",
+            "lineageTag": "f8152405-b99d-4f40-83ab-eb2755a0a828",
+            "sourceColumn": "goal_value",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "batch_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0aa880f9-259f-4024-83e4-06468ef217d2",
+            "sourceColumn": "batch_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "scope_version",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3713a107-8d7c-4cf9-a415-627948355d6c",
+            "sourceColumn": "scope_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "body_hash_version",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4433fb40-4056-4f9c-ae8d-d0cbe7b2537b",
+            "sourceColumn": "body_hash_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rule_version",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d5283b9d-43e5-4ab3-b2ca-d1607c9aff10",
+            "sourceColumn": "rule_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dictionary_version",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "341d0e78-b1a4-4b87-8534-ef036f971682",
+            "sourceColumn": "dictionary_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "coverage_status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "81734af4-37bb-4cd8-8ed4-626d337350b7",
+            "sourceColumn": "coverage_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "acceptance_status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "77dcd8fa-82eb-4a30-9091-5777623d05b7",
+            "sourceColumn": "acceptance_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "trend_value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "aa8d00b7-38cf-4bc0-ae70-3761a50f775a",
+            "sourceColumn": "trend_value",
+            "summarizeBy": "sum"
+          }
+        ],
+        "description": "每选定构建×质量KPI；构建级，不受岗位/城市切片影响。",
+        "lineageTag": "714cf981-e0f0-4081-be6d-58120db6f071",
+        "measures": [
+          {
+            "name": "KPI分子",
+            "description": "项目运营验收条件；跨KPI不计算无意义总计。",
+            "expression": "IF(HASONEVALUE(QualityKpi[kpi_code]),SUM(QualityKpi[numerator]))",
+            "formatString": "#,0",
+            "lineageTag": "5abf914b-bf5d-42b4-a997-cf5795cac7cf"
+          },
+          {
+            "name": "KPI分母",
+            "description": "项目运营验收条件；跨KPI不计算无意义总计。",
+            "expression": "IF(HASONEVALUE(QualityKpi[kpi_code]),SUM(QualityKpi[denominator]))",
+            "formatString": "#,0",
+            "lineageTag": "347b312f-61e5-4866-91a7-d21e396f62b7"
+          },
+          {
+            "name": "KPI实际值",
+            "description": "项目运营验收条件；跨KPI不计算无意义总计。",
+            "expression": "DIVIDE([KPI分子],[KPI分母])",
+            "formatString": "0.0%",
+            "lineageTag": "2019eb20-9551-4fe4-86d6-f33699488d2e"
+          },
+          {
+            "name": "KPI目标值",
+            "description": "项目运营验收条件；跨KPI不计算无意义总计。",
+            "expression": "IF(HASONEVALUE(QualityKpi[kpi_code]),MAX(QualityKpi[goal_value]))",
+            "formatString": "0.0%",
+            "lineageTag": "8e5542eb-afcc-4da0-b8c2-b874f0f4838c"
+          },
+          {
+            "name": "KPI状态说明",
+            "description": "项目运营验收条件；跨KPI不计算无意义总计。",
+            "expression": "IF(NOT HASONEVALUE(QualityKpi[kpi_code]),BLANK(),IF(ISBLANK([KPI实际值]),\"无分母\",IF([KPI实际值]>=[KPI目标值],\"达标\",\"未达标\")))",
+            "lineageTag": "9de73978-bb27-4423-a11d-8522a0e57221"
+          },
+          {
+            "name": "KPI趋势说明",
+            "description": "项目运营验收条件；跨KPI不计算无意义总计。",
+            "expression": "IF(HASONEVALUE(QualityKpi[kpi_code]),\"无可比日序列\")",
+            "lineageTag": "e1b7e4a2-f231-4fb1-a38c-05c4bc2067a0"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "QualityKpi",
+            "mode": "import",
+            "source": {
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.cd_quality_kpi WHERE build_id IN (6,5)\")",
+              "type": "m"
+            }
+          }
+        ]
       },
       {
-        "name": "Pairs_Jobs",
-        "fromTable": "Pairs",
-        "fromColumn": "job_key",
-        "toTable": "Jobs",
-        "toColumn": "job_key",
-        "crossFilteringBehavior": "oneDirection"
+        "name": "SnapshotSources",
+        "columns": [
+          {
+            "name": "source",
+            "dataType": "string",
+            "lineageTag": "50623f30-dfc3-46ca-a502-db48133b5b89",
+            "sourceColumn": "source",
+            "summarizeBy": "none"
+          }
+        ],
+        "description": "固定不可变发布版本的分析关联或属性表。",
+        "lineageTag": "e5b2c061-878f-4dfc-86f8-53a5da7519a8",
+        "partitions": [
+          {
+            "name": "SnapshotSources",
+            "mode": "import",
+            "source": {
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT source FROM ads.release_job_detail WHERE release_id=5\")",
+              "type": "m"
+            }
+          }
+        ]
       },
       {
-        "name": "Evidence_Jobs",
-        "fromTable": "Evidence",
-        "fromColumn": "job_key",
-        "toTable": "Jobs",
-        "toColumn": "job_key",
-        "crossFilteringBehavior": "oneDirection"
+        "name": "SnapshotJobs",
+        "columns": [
+          {
+            "name": "snapshot_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "49d262e4-572f-47de-87b5-9818d30a6a38",
+            "sourceColumn": "snapshot_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "source",
+            "dataType": "string",
+            "lineageTag": "5745f284-3771-4170-b3cb-97fe2be85cca",
+            "sourceColumn": "source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "source_job_id",
+            "dataType": "string",
+            "lineageTag": "39c54468-a819-4b46-abca-4368426dc767",
+            "sourceColumn": "source_job_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "batch_id",
+            "dataType": "string",
+            "lineageTag": "e4775892-1e24-4016-8828-1b802b0fdbed",
+            "sourceColumn": "batch_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "title_raw",
+            "dataType": "string",
+            "lineageTag": "39caaf46-98b6-4f8d-b313-bfeeae501060",
+            "sourceColumn": "title_raw",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "source_url",
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "58a2ec3a-2254-48d7-8060-64dddde4d00d",
+            "sourceColumn": "source_url",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "company_name",
+            "dataType": "string",
+            "lineageTag": "a49aad63-e098-4272-8bc6-5d4b3156fa71",
+            "sourceColumn": "company_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "category_group",
+            "dataType": "string",
+            "lineageTag": "b9128c50-e6c0-4a57-bd1e-200db1ee44a7",
+            "sourceColumn": "category_group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "education_group",
+            "dataType": "string",
+            "lineageTag": "3f2dfc1b-d1f2-4be4-b9d7-eb1b0d6ace37",
+            "sourceColumn": "education_group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "experience_group",
+            "dataType": "string",
+            "lineageTag": "2ec0d38c-f386-4139-9509-3c67516d2c9c",
+            "sourceColumn": "experience_group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "employment_type_group",
+            "dataType": "string",
+            "lineageTag": "efe1bc1c-5e4b-47d4-b392-15a802399a3f",
+            "sourceColumn": "employment_type_group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dataset_note",
+            "dataType": "string",
+            "lineageTag": "a47fcb0a-6bdc-4085-b14d-c7caee1b3594",
+            "sourceColumn": "dataset_note",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "release_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "d2345db3-b714-4800-851f-f9f2ca6d2aba",
+            "sourceColumn": "release_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "date_key",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "43540b0b-b57e-48c4-b73c-26101b207215",
+            "sourceColumn": "date_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "job_key",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "c62ee90f-7076-4a44-9ed9-0945ba2c687f",
+            "sourceColumn": "job_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "build_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "d2dc1045-3579-4567-b117-69c57294fa83",
+            "sourceColumn": "build_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "analysis_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "lineageTag": "667a4c60-0cb4-45d6-ac34-c4eee9c19c60",
+            "sourceColumn": "analysis_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "is_core",
+            "dataType": "boolean",
+            "lineageTag": "2254036a-837e-4a9c-be56-61b4fd09eece",
+            "sourceColumn": "is_core",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "body_valid",
+            "dataType": "boolean",
+            "lineageTag": "23f27c44-a6ec-404b-87c9-24467700992e",
+            "sourceColumn": "body_valid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "education_basis_label",
+            "dataType": "string",
+            "lineageTag": "36498f8e-3194-4c76-b01b-7521cf5e2d08",
+            "sourceColumn": "education_basis_label",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "calendar_year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5d87d3e5-7b5d-44f5-9441-09ae8ae564bd",
+            "sourceColumn": "calendar_year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "calendar_quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "777d8ac4-c05a-4405-87c8-dc476eafebb6",
+            "sourceColumn": "calendar_quarter",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "calendar_month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6dd3c8ba-3b5c-455a-a079-e3a7e9537517",
+            "sourceColumn": "calendar_month",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "observation_key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "266f14c1-554f-49b0-baa5-dcb30ba72c2a",
+            "sourceColumn": "observation_key",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "version_key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2cab3c05-362f-46f6-bc64-eba66d49e9dc",
+            "sourceColumn": "version_key",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "qualification_rule_version",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "31f69618-6d8b-4309-8d2c-9630e4244724",
+            "sourceColumn": "qualification_rule_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "education_resolution_status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b1e36066-aa64-4fce-981c-bef27ecb0d5e",
+            "sourceColumn": "education_resolution_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "education_basis",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "13fe39cf-5667-4867-b068-7b5d8f9ba23b",
+            "sourceColumn": "education_basis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "education_resolution_json",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bd2c2425-b749-4371-a944-d0bb88c07a8d",
+            "sourceColumn": "education_resolution_json",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "experience_resolution_json",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c7e82325-4ca2-4be9-afe2-3167e5ca396c",
+            "sourceColumn": "experience_resolution_json",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "category_raw",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e85f8ddf-712b-497a-b8cd-ab5c37f66276",
+            "sourceColumn": "category_raw",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "education_raw",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "17e2651a-e3fd-4057-bbcb-54a5abc34da5",
+            "sourceColumn": "education_raw",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "experience_raw",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7418da3f-ed2b-4dc9-8dd7-34d2155ef3aa",
+            "sourceColumn": "experience_raw",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "location_conflict",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "ac105dbf-95b7-48fc-bf99-976bdb381329",
+            "sourceColumn": "location_conflict",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "education_conflict",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "5d7f843e-e37d-4147-a69d-db5db71d1383",
+            "sourceColumn": "education_conflict",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "experience_conflict",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "1dbdb095-8de7-4ab5-b3f9-a54d55e43623",
+            "sourceColumn": "experience_conflict",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "experience_hint",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "1d407790-e98e-4d73-aa9d-03641ff2ef6e",
+            "sourceColumn": "experience_hint",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "raw_ref",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "646070a2-d42e-4759-936d-e5f4667d3e46",
+            "sourceColumn": "raw_ref",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "raw_sha256",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "745d1f52-2ee4-4ef5-913e-8a3586239959",
+            "sourceColumn": "raw_sha256",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "content_json",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6933541a-cc7f-43fb-adcc-63e21a9a5b21",
+            "sourceColumn": "content_json",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "additional_requirements_raw",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "45ea745e-d71c-44f5-86d3-bf9a1db0f08a",
+            "sourceColumn": "additional_requirements_raw",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "issues_json",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "24e5f108-42f0-43ad-b191-3b507d9f6a42",
+            "sourceColumn": "issues_json",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "scope_reason",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7db7179a-49a0-422e-ae0a-bfb85c449580",
+            "sourceColumn": "scope_reason",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "body_hash_version",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "11e43a6e-6d44-4659-a2ea-0fe72099fcad",
+            "sourceColumn": "body_hash_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dictionary_version",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ec25340a-83e0-4c04-8667-51e1cb23d615",
+            "sourceColumn": "dictionary_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rule_version",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2377155e-6aa5-4d7c-89cf-d2f48b586e5a",
+            "sourceColumn": "rule_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "scope_version",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6a4b53f2-bcca-4fc7-b62c-dda3fe8a3eb6",
+            "sourceColumn": "scope_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "skill_text_scope",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3d9ef81d-7b30-4719-b29d-6dd31a3279e4",
+            "sourceColumn": "skill_text_scope",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "channel",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ec72d8e2-5e08-49cb-8edd-05e258a72af8",
+            "sourceColumn": "channel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "normalization_version",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "760b7817-74fb-43e1-8bb9-38a778e1d934",
+            "sourceColumn": "normalization_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mapping_version",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7832374c-e8f6-467d-a947-f4fd6553acef",
+            "sourceColumn": "mapping_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "coverage_status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "30e0f180-db9c-4f34-9d98-5179cc456ff5",
+            "sourceColumn": "coverage_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "acceptance_status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1f94fa0b-43ba-494c-91e8-41a0fb5972ca",
+            "sourceColumn": "acceptance_status",
+            "summarizeBy": "none"
+          }
+        ],
+        "description": "每固定发布版本×批次结束日×来源身份；一致性维度分析切片，跨日总计按岗位去重。",
+        "lineageTag": "8dcff4c7-ac09-424f-a91b-1bc32b154faf",
+        "measures": [
+          {
+            "name": "快照核心岗位数",
+            "description": "按当前筛选重算去重岗位集合；城市多值不可累加，技能选择保持正文分母。",
+            "expression": "VAR K = VALUES(SnapshotCityJobs[snapshot_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(SnapshotJobs[job_key]),KEEPFILTERS(SnapshotJobs[is_core]=TRUE()), TREATAS(K,SnapshotJobs[snapshot_key])),0)",
+            "formatString": "#,0",
+            "lineageTag": "0f352edf-d468-4496-b25f-a21ca30bf08a"
+          },
+          {
+            "name": "快照正文分母",
+            "description": "按当前筛选重算去重岗位集合；城市多值不可累加，技能选择保持正文分母。",
+            "expression": "VAR K = VALUES(SnapshotCityJobs[snapshot_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(SnapshotJobs[job_key]),KEEPFILTERS(SnapshotJobs[is_core]=TRUE()), TREATAS(K,SnapshotJobs[snapshot_key]), KEEPFILTERS(SnapshotJobs[body_valid]=TRUE())),0)",
+            "formatString": "#,0",
+            "lineageTag": "cbb5b8c9-02b5-4e77-a383-536a3af846f5"
+          },
+          {
+            "name": "快照技能岗位数",
+            "description": "按当前筛选重算去重岗位集合；城市多值不可累加，技能选择保持正文分母。",
+            "expression": "VAR K = VALUES(SnapshotCityJobs[snapshot_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(SnapshotSkillJobs[job_key]),KEEPFILTERS(SnapshotJobs[is_core]=TRUE()), TREATAS(K,SnapshotJobs[snapshot_key]), KEEPFILTERS(SnapshotJobs[body_valid]=TRUE())),0)",
+            "formatString": "#,0",
+            "lineageTag": "6741e897-60ff-4080-8d9d-cbaf4d40717a"
+          },
+          {
+            "name": "快照技能占比",
+            "description": "按当前筛选重算去重岗位集合；城市多值不可累加，技能选择保持正文分母。",
+            "expression": "DIVIDE([快照技能岗位数],[快照正文分母])",
+            "formatString": "0.0%",
+            "lineageTag": "1880a65a-c17c-438f-8cf9-82166fb4a2ea"
+          },
+          {
+            "name": "可比新增观察数",
+            "description": "按当前筛选重算去重岗位集合；城市多值不可累加，技能选择保持正文分母。",
+            "expression": "IF(HASONEVALUE(Calendar[date_key]),MAX(SnapshotDays[newly_observed_count]))",
+            "formatString": "#,0",
+            "lineageTag": "363324cc-4118-4bf2-b9eb-a0d4980d25d3"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SnapshotJobs",
+            "mode": "import",
+            "source": {
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT CONCAT(release_id,'|',date_key,'|',job_key) AS snapshot_key,* FROM ads.release_job_detail WHERE release_id=5\")",
+              "type": "m"
+            }
+          }
+        ]
       },
       {
-        "name": "Jobs_Builds",
-        "fromTable": "Jobs",
-        "fromColumn": "build_id",
-        "toTable": "Builds",
-        "toColumn": "build_id",
-        "crossFilteringBehavior": "oneDirection"
+        "name": "SnapshotCityJobs",
+        "columns": [
+          {
+            "name": "snapshot_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "c3b08877-265f-4516-ac44-dc3aa14451bd",
+            "sourceColumn": "snapshot_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city_name",
+            "dataType": "string",
+            "lineageTag": "edffff01-aa35-42ef-aa96-8489f82125e2",
+            "sourceColumn": "city_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "province_name",
+            "dataType": "string",
+            "lineageTag": "02e93d59-a733-4be2-ba8b-6ee23d0f2130",
+            "sourceColumn": "province_name",
+            "summarizeBy": "none"
+          }
+        ],
+        "description": "固定不可变发布版本的分析关联或属性表。",
+        "hierarchies": [
+          {
+            "name": "省市",
+            "levels": [
+              {
+                "name": "省",
+                "column": "province_name",
+                "lineageTag": "da632056-7643-4ea3-b741-cf09fde469a0",
+                "ordinal": 0
+              },
+              {
+                "name": "市",
+                "column": "city_name",
+                "lineageTag": "a38c11af-4e3a-4038-b971-0a6394386cbd",
+                "ordinal": 1
+              }
+            ],
+            "lineageTag": "6b3941a6-c804-4967-9deb-167e96a127bb"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "399d5cc4-abf9-469c-98e3-d576428ac578",
+        "partitions": [
+          {
+            "name": "SnapshotCityJobs",
+            "mode": "import",
+            "source": {
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT snapshot_key,city_name,province_name FROM ads.release_city_detail WHERE release_id=5\")",
+              "type": "m"
+            }
+          }
+        ]
       },
       {
-        "name": "SkillJobs_Skills",
-        "fromTable": "SkillJobs",
-        "fromColumn": "skill_name",
-        "toTable": "Skills",
-        "toColumn": "skill_name",
-        "crossFilteringBehavior": "oneDirection"
+        "name": "SnapshotSkillJobs",
+        "columns": [
+          {
+            "name": "snapshot_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "dd0c3fc1-bd55-4a19-bb59-34b439d539b7",
+            "sourceColumn": "snapshot_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "job_key",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "a6d48598-e0bb-4e7e-896b-f7802bc21d55",
+            "sourceColumn": "job_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "skill_name",
+            "dataType": "string",
+            "lineageTag": "e309c9fd-ec66-4162-8f34-0dd3fa9012f0",
+            "sourceColumn": "skill_name",
+            "summarizeBy": "none"
+          }
+        ],
+        "description": "固定不可变发布版本的分析关联或属性表。",
+        "isHidden": true,
+        "lineageTag": "3c839e5b-15fc-447c-9534-2615e5870c81",
+        "partitions": [
+          {
+            "name": "SnapshotSkillJobs",
+            "mode": "import",
+            "source": {
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT snapshot_key,job_key,skill_name FROM ads.release_skill_detail WHERE release_id=5\")",
+              "type": "m"
+            }
+          }
+        ]
       },
       {
-        "name": "Evidence_Skills",
-        "fromTable": "Evidence",
-        "fromColumn": "skill_name",
-        "toTable": "Skills",
-        "toColumn": "skill_name",
-        "crossFilteringBehavior": "oneDirection"
-      }
-    ],
-    "annotations": [
-      {
-        "name": "PBI_QueryOrder",
-        "value": "[\"Builds\", \"Jobs\", \"CityJobs\", \"SkillJobs\", \"Skills\", \"Pairs\", \"Evidence\"]"
+        "name": "SnapshotSkills",
+        "columns": [
+          {
+            "name": "skill_name",
+            "dataType": "string",
+            "lineageTag": "3046241c-5a83-4c44-b493-bea8a672adbb",
+            "sourceColumn": "skill_name",
+            "summarizeBy": "none"
+          }
+        ],
+        "description": "固定不可变发布版本的分析关联或属性表。",
+        "lineageTag": "0673c414-aef0-4155-ad51-8025097e356f",
+        "partitions": [
+          {
+            "name": "SnapshotSkills",
+            "mode": "import",
+            "source": {
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT skill_name FROM ads.release_skill_detail WHERE release_id=5\")",
+              "type": "m"
+            }
+          }
+        ]
       },
       {
-        "name": "RecruitmentPilotScope",
-        "value": "partial; two sources; not daily market trends"
+        "name": "SnapshotEvidence",
+        "columns": [
+          {
+            "name": "snapshot_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "6fdef3c2-4409-4aee-9a8f-8aecaf46d24e",
+            "sourceColumn": "snapshot_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "skill_name",
+            "dataType": "string",
+            "lineageTag": "8ad51a9e-a216-4d90-8f2a-9c6de8089c64",
+            "sourceColumn": "skill_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evidence_field",
+            "dataType": "string",
+            "lineageTag": "6d469d40-a427-4d7e-bdaa-956e02c76344",
+            "sourceColumn": "evidence_field",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evidence",
+            "dataType": "string",
+            "lineageTag": "9195f3d4-176a-4444-918b-93b58dc40c6e",
+            "sourceColumn": "evidence",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "raw_ref",
+            "dataType": "string",
+            "lineageTag": "9ae1ba6e-d8fc-4664-b2cc-9d3bc9874cc9",
+            "sourceColumn": "raw_ref",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "body_hash_version",
+            "dataType": "string",
+            "lineageTag": "2f9b1c1b-b7f2-4938-bd0c-2c35ca054277",
+            "sourceColumn": "body_hash_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "eligible_for_metric",
+            "dataType": "boolean",
+            "lineageTag": "e4abe62a-3ffb-4c4d-a6d6-362f82f2f09a",
+            "sourceColumn": "eligible_for_metric",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evidence_start",
+            "dataType": "int64",
+            "lineageTag": "99ef286c-c586-4453-b30d-8bb5b1516600",
+            "sourceColumn": "evidence_start",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evidence_end",
+            "dataType": "int64",
+            "lineageTag": "a57e1fac-6a85-47c4-bcb2-f8c8b8d66534",
+            "sourceColumn": "evidence_end",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "release_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0dd14618-7a94-471a-85f1-b7313da06428",
+            "sourceColumn": "release_id",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "date_key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "56322782-6c19-4c53-b748-05972ccc6f63",
+            "sourceColumn": "date_key",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "job_key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e2965315-1f70-4ee3-8198-1a53605a88e4",
+            "sourceColumn": "job_key",
+            "summarizeBy": "sum"
+          }
+        ],
+        "description": "固定不可变发布版本的分析关联或属性表。",
+        "lineageTag": "a566e72d-4957-4b5b-9340-d141708adc8d",
+        "partitions": [
+          {
+            "name": "SnapshotEvidence",
+            "mode": "import",
+            "source": {
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.release_skill_evidence WHERE release_id=5\")",
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "columns": [
+          {
+            "name": "date_key",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "ec42ad35-1d7b-4280-b113-ace3029af3d6",
+            "sourceColumn": "date_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "calendar_year",
+            "dataType": "int64",
+            "lineageTag": "b13eea93-dc94-4928-9016-ccb106577802",
+            "sourceColumn": "calendar_year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "calendar_quarter",
+            "dataType": "int64",
+            "lineageTag": "1eb998a5-3694-4c9d-8b0d-cfa987573ae1",
+            "sourceColumn": "calendar_quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "calendar_month",
+            "dataType": "int64",
+            "lineageTag": "ae737eed-865c-4a9a-8173-256c66cf2c56",
+            "sourceColumn": "calendar_month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "calendar_day",
+            "dataType": "int64",
+            "lineageTag": "3bf3c3ce-6a6a-431b-945d-bf71ed0db0e5",
+            "sourceColumn": "calendar_day",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "calendar_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "isKey": true,
+            "lineageTag": "3aac5d6e-6044-417f-81b3-90e7a4f09b19",
+            "sourceColumn": "calendar_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "release_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "27aa36f7-f228-42cd-8d3e-8d79c914728f",
+            "sourceColumn": "release_id",
+            "summarizeBy": "sum"
+          }
+        ],
+        "dataCategory": "Time",
+        "description": "连续北京时间分析日历；日期为批次结束日，不是岗位发布日期。",
+        "hierarchies": [
+          {
+            "name": "年季度月日",
+            "levels": [
+              {
+                "name": "年",
+                "column": "calendar_year",
+                "lineageTag": "27ab1398-73f8-4f70-8279-45fe1f75af99",
+                "ordinal": 0
+              },
+              {
+                "name": "季度",
+                "column": "calendar_quarter",
+                "lineageTag": "b71f2f4b-f0f1-43c5-8b34-aa01c99215c0",
+                "ordinal": 1
+              },
+              {
+                "name": "月",
+                "column": "calendar_month",
+                "lineageTag": "9c85f8e0-2c84-4826-bd5e-7a2c4d66bc5f",
+                "ordinal": 2
+              },
+              {
+                "name": "日",
+                "column": "calendar_date",
+                "lineageTag": "010b7e89-a242-46e0-879c-1064d4f9e49f",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "949b3364-49a0-40a6-a2f7-ec65ce5978c9"
+          }
+        ],
+        "lineageTag": "3c0e8e23-bbed-47ce-b6f4-0d0aa6fba10a",
+        "partitions": [
+          {
+            "name": "Calendar",
+            "mode": "import",
+            "source": {
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.release_calendar WHERE release_id=5\")",
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SnapshotDays",
+        "columns": [
+          {
+            "name": "release_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "56d39b20-991d-4299-92c1-9ab66e7706b2",
+            "sourceColumn": "release_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "date_key",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "ecdb9c80-845d-4363-bef5-814c3f67dd08",
+            "sourceColumn": "date_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "source_posting_count",
+            "dataType": "int64",
+            "lineageTag": "a49c4704-539f-467f-9954-0ed32a851d70",
+            "sourceColumn": "source_posting_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "core_posting_count",
+            "dataType": "int64",
+            "lineageTag": "0c395019-9733-438c-8ea8-ba270b035182",
+            "sourceColumn": "core_posting_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "skill_denominator",
+            "dataType": "int64",
+            "lineageTag": "09f5be94-a4ed-4d5c-8d70-0e3c497a84bd",
+            "sourceColumn": "skill_denominator",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "expected_source_count",
+            "dataType": "int64",
+            "lineageTag": "61d87078-2812-4022-93d7-44b7d8ac2b7c",
+            "sourceColumn": "expected_source_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "observed_source_count",
+            "dataType": "int64",
+            "lineageTag": "c626f5a5-a807-453d-968d-38241b9360c0",
+            "sourceColumn": "observed_source_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "complete_source_count",
+            "dataType": "int64",
+            "lineageTag": "d52490a9-868f-4cea-a383-efe15cf8a57a",
+            "sourceColumn": "complete_source_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "newly_observed_count",
+            "dataType": "int64",
+            "lineageTag": "bfc9464e-b520-4471-a6ed-39e9468c0ddd",
+            "sourceColumn": "newly_observed_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "content_changed_count",
+            "dataType": "int64",
+            "lineageTag": "a4c4de20-359c-4da3-9eb6-fd41db060d0d",
+            "sourceColumn": "content_changed_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "is_complete",
+            "dataType": "boolean",
+            "lineageTag": "da20b586-a65d-47ef-b447-a5acc2957eb7",
+            "sourceColumn": "is_complete",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "is_comparable",
+            "dataType": "boolean",
+            "lineageTag": "d9028e2f-e561-4cf0-9209-7390b27ac173",
+            "sourceColumn": "is_comparable",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "comparison_note",
+            "dataType": "string",
+            "lineageTag": "88d108a2-ed2c-4bd2-9482-97415324b8a1",
+            "sourceColumn": "comparison_note",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "calendar_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "0fcb22d1-d6b4-4fbb-8cc1-0cafdcb5ec87",
+            "sourceColumn": "calendar_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "previous_date_key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d721f33c-ddd7-48b2-93b5-263e523dfc81",
+            "sourceColumn": "previous_date_key",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "first_discovered_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bc37c851-c22d-4781-82d6-35eff5931a38",
+            "sourceColumn": "first_discovered_count",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "still_unobserved_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d31ad030-576a-4492-9ebe-7c3f9a8036c0",
+            "sourceColumn": "still_unobserved_count",
+            "summarizeBy": "sum"
+          }
+        ],
+        "description": "固定不可变发布版本的分析关联或属性表。",
+        "isHidden": true,
+        "lineageTag": "1fc0783d-2bce-4569-a7a1-60ddfbd3e101",
+        "partitions": [
+          {
+            "name": "SnapshotDays",
+            "mode": "import",
+            "source": {
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.release_observed_change WHERE release_id=5\")",
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "QualificationEvidence",
+        "columns": [
+          {
+            "name": "snapshot_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "d27f7e27-e263-4785-a98f-01d0db5f76fa",
+            "sourceColumn": "snapshot_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "qualification_kind",
+            "dataType": "string",
+            "lineageTag": "31c2037b-219a-43c6-b407-778e1c8f40fd",
+            "sourceColumn": "qualification_kind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "qualification_value",
+            "dataType": "string",
+            "lineageTag": "edf98ddd-a163-4a5b-89c1-e5ee254254d4",
+            "sourceColumn": "qualification_value",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "resolution_status",
+            "dataType": "string",
+            "lineageTag": "8a71dfb6-801c-4003-b552-2987b1502eb2",
+            "sourceColumn": "resolution_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evidence_field",
+            "dataType": "string",
+            "lineageTag": "d777a289-85c1-4480-82a5-d5c4606f3b6a",
+            "sourceColumn": "evidence_field",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evidence",
+            "dataType": "string",
+            "lineageTag": "eef03b17-35e4-40cb-8579-aada0f371d2f",
+            "sourceColumn": "evidence",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "strength",
+            "dataType": "string",
+            "lineageTag": "a2b055a3-6316-4ffd-a45e-14e4af25125d",
+            "sourceColumn": "strength",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "record_ref",
+            "dataType": "string",
+            "lineageTag": "534af845-4473-4cc7-b99a-7f91eef9e676",
+            "sourceColumn": "record_ref",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evidence_start",
+            "dataType": "int64",
+            "lineageTag": "96a28ef3-df86-45f5-81ad-9fb8034b08d7",
+            "sourceColumn": "evidence_start",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evidence_end",
+            "dataType": "int64",
+            "lineageTag": "7b93eb51-7d5a-4d25-a0a2-d55f182bb1e0",
+            "sourceColumn": "evidence_end",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "release_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "717cf2b9-c250-42e2-a131-4f1fdc20c1bd",
+            "sourceColumn": "release_id",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "date_key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "71f4f093-23e8-4414-8f49-deba947c1597",
+            "sourceColumn": "date_key",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "job_key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b850b112-c8b8-4edf-ba44-8858b5d4a7b8",
+            "sourceColumn": "job_key",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "qualification_rule_version",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "20d96658-a408-4192-84a9-591a665b56e3",
+            "sourceColumn": "qualification_rule_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "degree",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "edc78a04-328c-4705-9ecc-6d7e8578da2c",
+            "sourceColumn": "degree",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "source",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7d020e15-0caa-489a-b50c-69f61c2a2a6e",
+            "sourceColumn": "source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "source_job_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a05e83a2-3f73-432f-ab6c-a2c76e3f19ac",
+            "sourceColumn": "source_job_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "raw_ref",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7265189d-b889-46bc-8d25-89ca263b4e68",
+            "sourceColumn": "raw_ref",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "raw_sha256",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c3a39df1-9049-4886-89db-95a9055d07fc",
+            "sourceColumn": "raw_sha256",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "raw_refs_json",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e1f7f4aa-e8d6-4fc7-8db4-3468aaad9dbd",
+            "sourceColumn": "raw_refs_json",
+            "summarizeBy": "none"
+          }
+        ],
+        "description": "固定不可变发布版本的分析关联或属性表。",
+        "lineageTag": "5c35cadd-8703-41de-8065-3870a2622d5d",
+        "partitions": [
+          {
+            "name": "QualificationEvidence",
+            "mode": "import",
+            "source": {
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.release_qualification_evidence WHERE release_id=5\")",
+              "type": "m"
+            }
+          }
+        ]
       }
     ]
   }

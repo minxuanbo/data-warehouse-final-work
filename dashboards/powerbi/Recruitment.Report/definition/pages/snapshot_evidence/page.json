@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "snapshot_evidence",
+  "displayName": "07 快照岗位与证据",
+  "displayOption": "FitToPage",
+  "height": 900,
+  "width": 1440,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter5fe2b36f235e4c65acf21608",
+        "displayName": "标准岗位类别",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotJobs"
+              }
+            },
+            "Property": "category_group"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "s",
+              "Entity": "SnapshotJobs",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "s"
+                          }
+                        },
+                        "Property": "category_group"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'开发'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "Pod",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "Param_Filter5fe2b36f235e4c65acf21608",
+        "boundFilter": "Filter5fe2b36f235e4c65acf21608",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SnapshotJobs"
+              }
+            },
+            "Property": "category_group"
+          }
+        }
+      }
+    ]
+  }
+}

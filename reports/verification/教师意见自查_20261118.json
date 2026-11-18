@@ -1,0 +1,296 @@
+{
+  "checked_at_utc": "2026-11-18T01:56:18.018991+00:00",
+  "scope": "read-only database queries, local model and documentation audit, offline unit tests; no new Power BI engine/interaction acceptance",
+  "conclusion": "rectification_not_closed",
+  "course": {
+    "file": "C:/Users/21051/Downloads/ch4 数仓设计案例.pdf",
+    "pages": 57,
+    "sha256": "34d20f09ce5a3324061f11792bc78cdb8b2bfcb34fa4ab89aaa1a714a3cb7cdf",
+    "visually_reviewed_pdf_pages": [
+      23,
+      25,
+      26,
+      56
+    ]
+  },
+  "offline_tests": {
+    "command": ".venv-dbt/Scripts/python.exe -X utf8 -m unittest discover -s tests -v",
+    "count": 60,
+    "elapsed_seconds": 14.679,
+    "exit_code": 0,
+    "status": "passed"
+  },
+  "database": {
+    "name": "recruitment_dw_dev_cd_v1",
+    "table_count": 31,
+    "view_count": 30,
+    "publication_pointer": [
+      {
+        "channel": "sample",
+        "release_id": 4
+      }
+    ],
+    "release4_source_counts": [
+      {
+        "source": "netease",
+        "raw_count": 100,
+        "core_count": 98,
+        "body_denominator": 98
+      },
+      {
+        "source": "tencent",
+        "raw_count": 100,
+        "core_count": 98,
+        "body_denominator": 98
+      }
+    ],
+    "release4_category_counts": [
+      {
+        "source": "netease",
+        "category_group": "测试",
+        "n": 10
+      },
+      {
+        "source": "tencent",
+        "category_group": "测试",
+        "n": 5
+      },
+      {
+        "source": "netease",
+        "category_group": "开发",
+        "n": 72
+      },
+      {
+        "source": "tencent",
+        "category_group": "开发",
+        "n": 62
+      },
+      {
+        "source": "netease",
+        "category_group": "数据开发/分析",
+        "n": 5
+      },
+      {
+        "source": "tencent",
+        "category_group": "数据开发/分析",
+        "n": 1
+      },
+      {
+        "source": "netease",
+        "category_group": "算法/AI",
+        "n": 10
+      },
+      {
+        "source": "tencent",
+        "category_group": "算法/AI",
+        "n": 29
+      },
+      {
+        "source": "netease",
+        "category_group": "运维/安全",
+        "n": 1
+      },
+      {
+        "source": "tencent",
+        "category_group": "运维/安全",
+        "n": 1
+      }
+    ],
+    "release4_employment_type_counts": [
+      {
+        "source": "netease",
+        "employment_type_group": "来源代码未释义",
+        "n": 100
+      },
+      {
+        "source": "tencent",
+        "employment_type_group": "来源代码未释义",
+        "n": 99
+      },
+      {
+        "source": "tencent",
+        "employment_type_group": "未知",
+        "n": 1
+      }
+    ],
+    "release4_integrity": [
+      {
+        "issue_count": 0
+      }
+    ],
+    "job_mapping": [
+      {
+        "creation_method": "source_identity_only",
+        "n": 200
+      }
+    ],
+    "quality": [
+      {
+        "source": "netease",
+        "kpi_code": "collection_scope_complete",
+        "numerator": 0,
+        "denominator": 1,
+        "kpi_value": 0.0
+      },
+      {
+        "source": "netease",
+        "kpi_code": "core_body_coverage",
+        "numerator": 98,
+        "denominator": 98,
+        "kpi_value": 1.0
+      },
+      {
+        "source": "netease",
+        "kpi_code": "raw_traceability",
+        "numerator": 100,
+        "denominator": 100,
+        "kpi_value": 1.0
+      },
+      {
+        "source": "tencent",
+        "kpi_code": "collection_scope_complete",
+        "numerator": 0,
+        "denominator": 1,
+        "kpi_value": 0.0
+      },
+      {
+        "source": "tencent",
+        "kpi_code": "core_body_coverage",
+        "numerator": 98,
+        "denominator": 98,
+        "kpi_value": 1.0
+      },
+      {
+        "source": "tencent",
+        "kpi_code": "raw_traceability",
+        "numerator": 100,
+        "denominator": 100,
+        "kpi_value": 1.0
+      }
+    ],
+    "current_release_days": [
+      {
+        "release_id": 4,
+        "date_key": 20261031,
+        "source_posting_count": 100,
+        "core_posting_count": 98,
+        "skill_denominator": 98,
+        "expected_source_count": 2,
+        "observed_source_count": 1,
+        "complete_source_count": 0,
+        "is_complete": false
+      },
+      {
+        "release_id": 4,
+        "date_key": 20261101,
+        "source_posting_count": 100,
+        "core_posting_count": 98,
+        "skill_denominator": 98,
+        "expected_source_count": 2,
+        "observed_source_count": 1,
+        "complete_source_count": 0,
+        "is_complete": false
+      }
+    ],
+    "current_release_change": [
+      {
+        "release_id": 4,
+        "date_key": 20261031,
+        "calendar_date": "2026-10-31",
+        "previous_date_key": null,
+        "source_posting_count": 100,
+        "core_posting_count": 98,
+        "skill_denominator": 98,
+        "expected_source_count": 2,
+        "observed_source_count": 1,
+        "complete_source_count": 0,
+        "is_complete": false,
+        "is_comparable": false,
+        "newly_observed_count": null,
+        "first_discovered_count": null,
+        "still_unobserved_count": null,
+        "content_changed_count": null,
+        "comparison_note": "当前日缺来源或扫描不完整"
+      },
+      {
+        "release_id": 4,
+        "date_key": 20261101,
+        "calendar_date": "2026-11-01",
+        "previous_date_key": 20261031,
+        "source_posting_count": 100,
+        "core_posting_count": 98,
+        "skill_denominator": 98,
+        "expected_source_count": 2,
+        "observed_source_count": 1,
+        "complete_source_count": 0,
+        "is_complete": false,
+        "is_comparable": false,
+        "newly_observed_count": null,
+        "first_discovered_count": null,
+        "still_unobserved_count": null,
+        "content_changed_count": null,
+        "comparison_note": "当前日缺来源或扫描不完整"
+      }
+    ]
+  },
+  "powerbi": {
+    "current_model_sha256": "ed5304afe1c57b476bbd735858a98d0364ed054470cc3baafc02c7a4734e1ca1",
+    "previous_validated_model_sha256": "e814292ae6a7ff7957ffbe2aec8047c0951b30da50fcc7028b126778a00ccef0",
+    "matches_previous_validation": false,
+    "previous_case_count": 81,
+    "previous_validation_checked_at_utc": "2026-11-17T12:13:21.7765450Z",
+    "unsafe_relationships": [
+      {
+        "name": "AutoDetected_e8abc4a3-b08d-4f8e-adbb-e8380b50ff77",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "content_json",
+        "fromTable": "SnapshotJobs",
+        "toColumn": "content_json",
+        "toTable": "Jobs"
+      }
+    ],
+    "pages": [
+      "06 一致性维度分析",
+      "03 岗位与证据",
+      "01 小批概览",
+      "04 构建与质量",
+      "05 项目质量 KPI",
+      "02 技能与组合",
+      "07 快照岗位与证据"
+    ]
+  },
+  "dbt": {
+    "model_count": 30,
+    "models_without_yaml_model_descriptions": [
+      "release_calendar",
+      "release_city",
+      "release_city_detail",
+      "release_job_detail",
+      "release_observed_change",
+      "release_skill_demand",
+      "release_skill_detail",
+      "release_skill_evidence",
+      "release_validation",
+      "release_daily_summary"
+    ],
+    "previous_build_generated_at": "2026-11-17T14:30:53.819415Z",
+    "previous_build_success_models": 30,
+    "previous_build_pass_tests": 14,
+    "rerun_in_this_audit": false
+  },
+  "pipeline": {
+    "config": "warehouse/pipeline.json",
+    "ignored_local_paths_in_config": [
+      ".local/cd_input/data/tencent/tencent_20261031T093102Z_366ad0a4",
+      ".local/skills_v11/reports/analysis/tencent_20261031T093102Z_366ad0a4/v1.1",
+      ".local/skills_v11/etl/skills/dictionary.json",
+      ".local/netease_input/data/netease/netease_20261101T044527Z_157cf969",
+      ".local/skills_v11/reports/analysis/netease_20261101T044527Z_157cf969/v1.1",
+      ".local/skills_v11/etl/skills/dictionary.json"
+    ],
+    "scheduled_task_status": "not_revalidated_in_this_audit",
+    "collectors_invoked_by_pipeline": false
+  },
+  "preserved_midterm_ppt_sha256": "50e738cd1324236e19e5abfc6f4707a01783d1fffc577daaf2a7c0427511eaa3"
+}
