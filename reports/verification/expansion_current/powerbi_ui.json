@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "case_count": 184,
+  "model_definition_sha256": "579b7298b821dbe9abc790384d0344207a0f6762c383ddd0a851d5f47580088d",
+  "operations_observed": [
+    "refresh_and_save_four_sources",
+    "bachelor_slice_719_core",
+    "bachelor_development_420_core",
+    "expand_province_training_zhejiang_117_body_46_cpp",
+    "category_province_drillthrough_with_filters",
+    "select_netease_75548_qualification_and_cpp_verbatim_0_34",
+    "return_to_analysis_page",
+    "reset_degree_and_skill_slicers_1556_baseline"
+  ],
+  "screenshots": [
+    "ui_baseline.jpg",
+    "ui_training_cpp.jpg",
+    "ui_job_evidence.jpg",
+    "ui_reset.jpg"
+  ],
+  "note": "Unedited native screenshots; UI observations and programmatic DAX checks are separate. Independent human gold accuracy is not claimed."
+}

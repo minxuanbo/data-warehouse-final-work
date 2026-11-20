@@ -1,0 +1,126 @@
+{
+  "status": "passed",
+  "database": "recruitment_dw_dev_expansion_clone_v1",
+  "release_id": 1,
+  "source_counts": [
+    {
+      "source": "jd",
+      "source_postings": 200,
+      "core_postings": 199,
+      "body_denominator": 199
+    },
+    {
+      "source": "netease",
+      "source_postings": 448,
+      "core_postings": 444,
+      "body_denominator": 444
+    },
+    {
+      "source": "tencent",
+      "source_postings": 431,
+      "core_postings": 416,
+      "body_denominator": 416
+    },
+    {
+      "source": "xiaomi",
+      "source_postings": 500,
+      "core_postings": 497,
+      "body_denominator": 497
+    }
+  ],
+  "posting_skill_pairs": [
+    {
+      "source": "jd",
+      "posting_skill_pairs": 263
+    },
+    {
+      "source": "netease",
+      "posting_skill_pairs": 1263
+    },
+    {
+      "source": "tencent",
+      "posting_skill_pairs": 1304
+    },
+    {
+      "source": "xiaomi",
+      "posting_skill_pairs": 1170
+    }
+  ],
+  "inputs": "tracked repository files at the pinned source revisions",
+  "pipeline": {
+    "started_at": "2026-11-20T16:51:17.448361+00:00",
+    "database": "recruitment_dw_dev_expansion_clone_v1",
+    "pending_batches": [],
+    "inputs": [
+      {
+        "batch_id": "tencent_20261120T145742Z_cb8952ee",
+        "load": "loaded_trial",
+        "analysis": {
+          "status": "ready",
+          "build_id": 1,
+          "jobs": 431,
+          "core_jobs": 416,
+          "evidence": 2267,
+          "bridge_rows": 2151
+        }
+      },
+      {
+        "batch_id": "netease_20261120T145742Z_a2a9c5c5",
+        "load": "loaded_trial",
+        "analysis": {
+          "status": "ready",
+          "build_id": 2,
+          "jobs": 448,
+          "core_jobs": 444,
+          "evidence": 2061,
+          "bridge_rows": 1959
+        }
+      },
+      {
+        "batch_id": "xiaomi_20261120T152702Z_470b8a89",
+        "load": "loaded_trial",
+        "analysis": {
+          "status": "ready",
+          "build_id": 3,
+          "jobs": 500,
+          "core_jobs": 497,
+          "evidence": 1885,
+          "bridge_rows": 1718
+        }
+      },
+      {
+        "batch_id": "jd_20261120T152717Z_b825c288",
+        "load": "loaded_trial",
+        "analysis": {
+          "status": "ready",
+          "build_id": 4,
+          "jobs": 200,
+          "core_jobs": 199,
+          "evidence": 379,
+          "bridge_rows": 369
+        }
+      }
+    ],
+    "status": "passed",
+    "release": {
+      "status": "ready",
+      "release_id": 1,
+      "channel": "sample",
+      "source_observations": 1579,
+      "dates": [
+        "2026-11-20",
+        "2026-11-21"
+      ]
+    },
+    "publication": {
+      "status": "published",
+      "release_id": 1,
+      "previous_release_id": null,
+      "channel": "sample"
+    },
+    "finished_at": "2026-11-20T16:53:33.589774+00:00"
+  },
+  "powerbi_prepared": false,
+  "clone_revision": "b6efe47",
+  "execution_scope": "clean same-machine Git clone; shared Python environment and local SQL Server; no cross-machine claim"
+}

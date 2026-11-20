@@ -44,7 +44,7 @@
               },
               "queryRef": "SnapshotCityJobs.province_name",
               "nativeQueryRef": "province_name",
-              "active": false,
+              "active": true,
               "displayName": "省份"
             },
             {
@@ -194,7 +194,20 @@
             ]
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'开发'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
       }
     ],
     "objects": {

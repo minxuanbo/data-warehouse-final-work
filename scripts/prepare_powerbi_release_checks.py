@@ -57,6 +57,12 @@ def main(output_path=None):
     add('no_matching_skill',skill='不存在的技能')
     add('training_cohort',province='广东',category='开发',education='本科')
     add('training_cohort_cpp',province='广东',category='开发',education='本科',skill='C++')
+    cohort_provinces={p for j in jobs if j['is_core'] and any((j.get(f) or '').strip() for f in ('description_raw','requirements_raw','additional_requirements_raw')) and j['category']=='开发' and j['education']=='本科' for p in j['provinces'] if p not in {'未知','冲突待确认'}}
+    if cohort_provinces:
+        chosen=max(cohort_provinces,key=lambda p:(sum(j['is_core'] and any((j.get(f) or '').strip() for f in ('description_raw','requirements_raw','additional_requirements_raw')) and j['category']=='开发' and j['education']=='本科' and p in j['provinces'] for j in jobs),p))
+        add('largest_training_cohort',province=chosen,category='开发',education='本科')
+        add('largest_training_cohort_cpp',province=chosen,category='开发',education='本科',skill='C++')
+        add('largest_training_cohort_union',province=chosen,category='开发',education='本科',skill=['C++','Python'])
     add('netease_fulltime',source='netease',employment='全职')
     add('netease_internship',source='netease',employment='实习')
     add('tencent_unverified_type',source='tencent',employment='来源代码未释义')

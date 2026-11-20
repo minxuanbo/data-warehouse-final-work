@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "scope": "four-company frozen partial observations; reporting update deferred by user",
+  "database": "recruitment_dw_dev_expansion_v1",
+  "release_id": 1,
+  "source_jobs": 1579,
+  "core_body_jobs": 1556,
+  "effective_job_skill_pairs": 4000,
+  "offline_tests": 90,
+  "dbt_models": 37,
+  "dbt_tests": 16,
+  "dax_cases": 184,
+  "qualification_anchors": 2631,
+  "skill_audit_anchors": 6592,
+  "future_observation_plan": "docs/连续观察采集安排.md",
+  "report_update": "deferred",
+  "ppt_video": "deferred",
+  "complete_days_available": 0
+}

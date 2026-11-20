@@ -1,0 +1,2349 @@
+{
+  "status": "passed",
+  "cases_sha256": "206b1cbef9dc6cdd786c242a02822d8d61ccc158a4a92d4a2b85ad8fdcd112cd",
+  "builds": [
+    {
+      "source": "jd",
+      "build_id": 7,
+      "batch_id": "jd_20261120T152717Z_b825c288",
+      "scope_version": "digital_jobs_cn_core_v2.1",
+      "rule_version": "skills-rules-0.3.1",
+      "dictionary_version": "skills-dict-0.2.0",
+      "body_hash_version": "skills-body-1.1",
+      "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
+      "source_posting_count": 200,
+      "core_posting_count": 199,
+      "skill_denominator": 199,
+      "additional_requirements_count": 0,
+      "location_conflict_count": 0,
+      "experience_conflict_count": 0,
+      "education_conflict_count": 0,
+      "experience_hint_count": 0
+    },
+    {
+      "source": "netease",
+      "build_id": 5,
+      "batch_id": "netease_20261120T145742Z_a2a9c5c5",
+      "scope_version": "digital_jobs_cn_core_v2.1",
+      "rule_version": "skills-rules-0.3.1",
+      "dictionary_version": "skills-dict-0.2.0",
+      "body_hash_version": "skills-body-1.1",
+      "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
+      "source_posting_count": 448,
+      "core_posting_count": 444,
+      "skill_denominator": 444,
+      "additional_requirements_count": 0,
+      "location_conflict_count": 0,
+      "experience_conflict_count": 0,
+      "education_conflict_count": 5,
+      "experience_hint_count": 0
+    },
+    {
+      "source": "tencent",
+      "build_id": 4,
+      "batch_id": "tencent_20261120T145742Z_cb8952ee",
+      "scope_version": "digital_jobs_cn_core_v2.1",
+      "rule_version": "skills-rules-0.3.1",
+      "dictionary_version": "skills-dict-0.2.0",
+      "body_hash_version": "skills-body-1.1",
+      "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
+      "source_posting_count": 431,
+      "core_posting_count": 416,
+      "skill_denominator": 416,
+      "additional_requirements_count": 143,
+      "location_conflict_count": 31,
+      "experience_conflict_count": 0,
+      "education_conflict_count": 0,
+      "experience_hint_count": 0
+    },
+    {
+      "source": "xiaomi",
+      "build_id": 6,
+      "batch_id": "xiaomi_20261120T152702Z_470b8a89",
+      "scope_version": "digital_jobs_cn_core_v2.1",
+      "rule_version": "skills-rules-0.3.1",
+      "dictionary_version": "skills-dict-0.2.0",
+      "body_hash_version": "skills-body-1.1",
+      "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
+      "source_posting_count": 500,
+      "core_posting_count": 497,
+      "skill_denominator": 497,
+      "additional_requirements_count": 0,
+      "location_conflict_count": 0,
+      "experience_conflict_count": 0,
+      "education_conflict_count": 0,
+      "experience_hint_count": 0
+    }
+  ],
+  "case_count": 184,
+  "results": [
+    {
+      "actual": {
+        "job_skill_pairs": 4000,
+        "skilled_jobs": 1148,
+        "eligible_evidence": 4761,
+        "combination_jobs": 939,
+        "denominator": 1556,
+        "skill_share": 0.7377892030848329,
+        "core": 1556
+      },
+      "name": "all_sources",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 263,
+        "skilled_jobs": 75,
+        "eligible_evidence": 297,
+        "combination_jobs": 56,
+        "denominator": 199,
+        "skill_share": 0.3768844221105528,
+        "core": 199
+      },
+      "name": "jd",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 10,
+        "skilled_jobs": 5,
+        "eligible_evidence": 12,
+        "combination_jobs": 2,
+        "denominator": 16,
+        "skill_share": 0.3125,
+        "core": 16
+      },
+      "name": "jd_city_上海",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 228,
+        "skilled_jobs": 62,
+        "eligible_evidence": 260,
+        "combination_jobs": 48,
+        "denominator": 152,
+        "skill_share": 0.40789473684210525,
+        "core": 152
+      },
+      "name": "jd_city_北京",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 4,
+        "skilled_jobs": 1,
+        "eligible_evidence": 4,
+        "combination_jobs": 1,
+        "denominator": 2,
+        "skill_share": 0.5,
+        "core": 2
+      },
+      "name": "jd_city_四川省",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 1,
+        "skill_share": 0.0,
+        "core": 1
+      },
+      "name": "jd_city_安徽省",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 20,
+        "skilled_jobs": 6,
+        "eligible_evidence": 20,
+        "combination_jobs": 5,
+        "denominator": 22,
+        "skill_share": 0.2727272727272727,
+        "core": 22
+      },
+      "name": "jd_city_广东省",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 1,
+        "skill_share": 0.0,
+        "core": 1
+      },
+      "name": "jd_city_江苏省",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 1,
+        "skilled_jobs": 1,
+        "eligible_evidence": 1,
+        "combination_jobs": 0,
+        "denominator": 3,
+        "skill_share": 0.3333333333333333,
+        "core": 3
+      },
+      "name": "jd_city_海南省",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 1,
+        "skill_share": 0.0,
+        "core": 1
+      },
+      "name": "jd_city_湖北省",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 1,
+        "skill_share": 0.0,
+        "core": 1
+      },
+      "name": "jd_city_陕西省",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 4,
+        "skilled_jobs": 1,
+        "eligible_evidence": 4,
+        "combination_jobs": 1,
+        "denominator": 1,
+        "skill_share": 1.0,
+        "core": 1
+      },
+      "name": "jd_experience_2-5年",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 21,
+        "skilled_jobs": 5,
+        "eligible_evidence": 21,
+        "combination_jobs": 5,
+        "denominator": 5,
+        "skill_share": 1.0,
+        "core": 5
+      },
+      "name": "jd_experience_2年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 22,
+        "skilled_jobs": 7,
+        "eligible_evidence": 26,
+        "combination_jobs": 5,
+        "denominator": 7,
+        "skill_share": 1.0,
+        "core": 7
+      },
+      "name": "jd_experience_3-5年",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 42,
+        "skilled_jobs": 9,
+        "eligible_evidence": 42,
+        "combination_jobs": 9,
+        "denominator": 12,
+        "skill_share": 0.75,
+        "core": 12
+      },
+      "name": "jd_experience_3年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 1,
+        "skilled_jobs": 1,
+        "eligible_evidence": 1,
+        "combination_jobs": 0,
+        "denominator": 2,
+        "skill_share": 0.5,
+        "core": 2
+      },
+      "name": "jd_experience_5-10年",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 36,
+        "skilled_jobs": 6,
+        "eligible_evidence": 39,
+        "combination_jobs": 6,
+        "denominator": 10,
+        "skill_share": 0.6,
+        "core": 10
+      },
+      "name": "jd_experience_5年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 12,
+        "skilled_jobs": 2,
+        "eligible_evidence": 18,
+        "combination_jobs": 2,
+        "denominator": 2,
+        "skill_share": 1.0,
+        "core": 2
+      },
+      "name": "jd_experience_待确认",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 125,
+        "skilled_jobs": 44,
+        "eligible_evidence": 146,
+        "combination_jobs": 28,
+        "denominator": 160,
+        "skill_share": 0.275,
+        "core": 160
+      },
+      "name": "jd_experience_未注明",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 73,
+        "skilled_jobs": 30,
+        "eligible_evidence": 86,
+        "combination_jobs": 16,
+        "denominator": 141,
+        "skill_share": 0.2127659574468085,
+        "core": 141
+      },
+      "name": "jd_education_未注明",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 138,
+        "skilled_jobs": 31,
+        "eligible_evidence": 157,
+        "combination_jobs": 27,
+        "denominator": 43,
+        "skill_share": 0.7209302325581395,
+        "core": 43
+      },
+      "name": "jd_education_本科",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 52,
+        "skilled_jobs": 14,
+        "eligible_evidence": 54,
+        "combination_jobs": 13,
+        "denominator": 15,
+        "skill_share": 0.9333333333333333,
+        "core": 15
+      },
+      "name": "jd_education_硕士",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 19,
+        "skilled_jobs": 19,
+        "eligible_evidence": 19,
+        "combination_jobs": 56,
+        "denominator": 199,
+        "skill_share": 0.09547738693467336,
+        "core": 199
+      },
+      "name": "jd_Python_denominator",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 0,
+        "skill_share": null,
+        "core": 0
+      },
+      "name": "jd_city_Python",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 263,
+        "skilled_jobs": 75,
+        "eligible_evidence": 297,
+        "combination_jobs": 1,
+        "denominator": 199,
+        "skill_share": 0.3768844221105528,
+        "core": 199
+      },
+      "name": "jd_Python_SQL_pair",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 0,
+        "skill_share": null,
+        "core": 0
+      },
+      "name": "jd_city_pair",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 11,
+        "skilled_jobs": 3,
+        "eligible_evidence": 11,
+        "combination_jobs": 2,
+        "denominator": 16,
+        "skill_share": 0.1875,
+        "core": 16
+      },
+      "name": "jd_city_experience_category",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 1,
+        "skill_share": 0.0,
+        "core": 1
+      },
+      "name": "jd_no_match_body_kept",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 0,
+        "skill_share": null,
+        "core": 0
+      },
+      "name": "jd_extension_excluded",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 1263,
+        "skilled_jobs": 356,
+        "eligible_evidence": 1489,
+        "combination_jobs": 302,
+        "denominator": 444,
+        "skill_share": 0.8018018018018018,
+        "core": 444
+      },
+      "name": "netease",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 184,
+        "skilled_jobs": 63,
+        "eligible_evidence": 205,
+        "combination_jobs": 50,
+        "denominator": 83,
+        "skill_share": 0.7590361445783133,
+        "core": 83
+      },
+      "name": "netease_city_上海",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 43,
+        "skilled_jobs": 11,
+        "eligible_evidence": 54,
+        "combination_jobs": 11,
+        "denominator": 11,
+        "skill_share": 1.0,
+        "core": 11
+      },
+      "name": "netease_city_北京",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 2,
+        "skilled_jobs": 1,
+        "eligible_evidence": 2,
+        "combination_jobs": 1,
+        "denominator": 4,
+        "skill_share": 0.25,
+        "core": 4
+      },
+      "name": "netease_city_安顺",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 322,
+        "skilled_jobs": 71,
+        "eligible_evidence": 394,
+        "combination_jobs": 66,
+        "denominator": 89,
+        "skill_share": 0.797752808988764,
+        "core": 89
+      },
+      "name": "netease_city_广州",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 10,
+        "skilled_jobs": 2,
+        "eligible_evidence": 12,
+        "combination_jobs": 2,
+        "denominator": 2,
+        "skill_share": 1.0,
+        "core": 2
+      },
+      "name": "netease_city_成都",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 702,
+        "skilled_jobs": 208,
+        "eligible_evidence": 822,
+        "combination_jobs": 172,
+        "denominator": 255,
+        "skill_share": 0.8156862745098039,
+        "core": 255
+      },
+      "name": "netease_city_杭州",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 48,
+        "skilled_jobs": 16,
+        "eligible_evidence": 55,
+        "combination_jobs": 15,
+        "denominator": 21,
+        "skill_share": 0.7619047619047619,
+        "core": 21
+      },
+      "name": "netease_experience_0-3年",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 4,
+        "skilled_jobs": 2,
+        "eligible_evidence": 4,
+        "combination_jobs": 2,
+        "denominator": 4,
+        "skill_share": 0.5,
+        "core": 4
+      },
+      "name": "netease_experience_10年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 524,
+        "skilled_jobs": 137,
+        "eligible_evidence": 632,
+        "combination_jobs": 115,
+        "denominator": 159,
+        "skill_share": 0.8616352201257862,
+        "core": 159
+      },
+      "name": "netease_experience_3-5年",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 181,
+        "skilled_jobs": 53,
+        "eligible_evidence": 220,
+        "combination_jobs": 45,
+        "denominator": 60,
+        "skill_share": 0.8833333333333333,
+        "core": 60
+      },
+      "name": "netease_experience_5-10年",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 506,
+        "skilled_jobs": 148,
+        "eligible_evidence": 578,
+        "combination_jobs": 125,
+        "denominator": 200,
+        "skill_share": 0.74,
+        "core": 200
+      },
+      "name": "netease_experience_不限",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 92,
+        "skilled_jobs": 33,
+        "eligible_evidence": 110,
+        "combination_jobs": 21,
+        "denominator": 43,
+        "skill_share": 0.7674418604651163,
+        "core": 43
+      },
+      "name": "netease_education_不限",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 284,
+        "skilled_jobs": 77,
+        "eligible_evidence": 326,
+        "combination_jobs": 70,
+        "denominator": 105,
+        "skill_share": 0.7333333333333333,
+        "core": 105
+      },
+      "name": "netease_education_冲突待确认",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 855,
+        "skilled_jobs": 237,
+        "eligible_evidence": 1017,
+        "combination_jobs": 206,
+        "denominator": 284,
+        "skill_share": 0.8345070422535211,
+        "core": 284
+      },
+      "name": "netease_education_本科",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 32,
+        "skilled_jobs": 9,
+        "eligible_evidence": 36,
+        "combination_jobs": 5,
+        "denominator": 12,
+        "skill_share": 0.75,
+        "core": 12
+      },
+      "name": "netease_education_硕士",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 155,
+        "skilled_jobs": 155,
+        "eligible_evidence": 165,
+        "combination_jobs": 302,
+        "denominator": 444,
+        "skill_share": 0.3490990990990991,
+        "core": 444
+      },
+      "name": "netease_Python_denominator",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 89,
+        "skilled_jobs": 89,
+        "eligible_evidence": 96,
+        "combination_jobs": 172,
+        "denominator": 255,
+        "skill_share": 0.34901960784313724,
+        "core": 255
+      },
+      "name": "netease_city_Python",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 1263,
+        "skilled_jobs": 356,
+        "eligible_evidence": 1489,
+        "combination_jobs": 9,
+        "denominator": 444,
+        "skill_share": 0.8018018018018018,
+        "core": 444
+      },
+      "name": "netease_Python_SQL_pair",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 702,
+        "skilled_jobs": 208,
+        "eligible_evidence": 822,
+        "combination_jobs": 7,
+        "denominator": 255,
+        "skill_share": 0.8156862745098039,
+        "core": 255
+      },
+      "name": "netease_city_pair",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 18,
+        "skilled_jobs": 6,
+        "eligible_evidence": 25,
+        "combination_jobs": 6,
+        "denominator": 9,
+        "skill_share": 0.6666666666666666,
+        "core": 9
+      },
+      "name": "netease_city_experience_category",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 1,
+        "skill_share": 0.0,
+        "core": 1
+      },
+      "name": "netease_no_match_body_kept",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 0,
+        "skill_share": null,
+        "core": 0
+      },
+      "name": "netease_extension_excluded",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 1304,
+        "skilled_jobs": 339,
+        "eligible_evidence": 1537,
+        "combination_jobs": 276,
+        "denominator": 416,
+        "skill_share": 0.8149038461538461,
+        "core": 416
+      },
+      "name": "tencent",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 88,
+        "skilled_jobs": 18,
+        "eligible_evidence": 110,
+        "combination_jobs": 15,
+        "denominator": 22,
+        "skill_share": 0.8181818181818182,
+        "core": 22
+      },
+      "name": "tencent_city_上海",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 94,
+        "skilled_jobs": 25,
+        "eligible_evidence": 119,
+        "combination_jobs": 21,
+        "denominator": 31,
+        "skill_share": 0.8064516129032258,
+        "core": 31
+      },
+      "name": "tencent_city_冲突待确认",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 264,
+        "skilled_jobs": 60,
+        "eligible_evidence": 302,
+        "combination_jobs": 50,
+        "denominator": 71,
+        "skill_share": 0.8450704225352113,
+        "core": 71
+      },
+      "name": "tencent_city_北京",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 1,
+        "skill_share": 0.0,
+        "core": 1
+      },
+      "name": "tencent_city_南京",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 148,
+        "skilled_jobs": 39,
+        "eligible_evidence": 161,
+        "combination_jobs": 31,
+        "denominator": 48,
+        "skill_share": 0.8125,
+        "core": 48
+      },
+      "name": "tencent_city_广州",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 29,
+        "skilled_jobs": 8,
+        "eligible_evidence": 34,
+        "combination_jobs": 6,
+        "denominator": 9,
+        "skill_share": 0.8888888888888888,
+        "core": 9
+      },
+      "name": "tencent_city_成都",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 24,
+        "skilled_jobs": 4,
+        "eligible_evidence": 26,
+        "combination_jobs": 4,
+        "denominator": 4,
+        "skill_share": 1.0,
+        "core": 4
+      },
+      "name": "tencent_city_杭州",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 13,
+        "skilled_jobs": 2,
+        "eligible_evidence": 15,
+        "combination_jobs": 2,
+        "denominator": 2,
+        "skill_share": 1.0,
+        "core": 2
+      },
+      "name": "tencent_city_武汉",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 628,
+        "skilled_jobs": 180,
+        "eligible_evidence": 751,
+        "combination_jobs": 144,
+        "denominator": 224,
+        "skill_share": 0.8035714285714286,
+        "core": 224
+      },
+      "name": "tencent_city_深圳",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 3,
+        "skilled_jobs": 1,
+        "eligible_evidence": 4,
+        "combination_jobs": 1,
+        "denominator": 2,
+        "skill_share": 0.5,
+        "core": 2
+      },
+      "name": "tencent_city_西安",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 13,
+        "skilled_jobs": 2,
+        "eligible_evidence": 15,
+        "combination_jobs": 2,
+        "denominator": 2,
+        "skill_share": 1.0,
+        "core": 2
+      },
+      "name": "tencent_city_重庆",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 1,
+        "skilled_jobs": 1,
+        "eligible_evidence": 2,
+        "combination_jobs": 0,
+        "denominator": 2,
+        "skill_share": 0.5,
+        "core": 2
+      },
+      "name": "tencent_experience_10年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 268,
+        "skilled_jobs": 73,
+        "eligible_evidence": 306,
+        "combination_jobs": 61,
+        "denominator": 88,
+        "skill_share": 0.8295454545454546,
+        "core": 88
+      },
+      "name": "tencent_experience_1年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 256,
+        "skilled_jobs": 68,
+        "eligible_evidence": 301,
+        "combination_jobs": 55,
+        "denominator": 82,
+        "skill_share": 0.8292682926829268,
+        "core": 82
+      },
+      "name": "tencent_experience_2年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 555,
+        "skilled_jobs": 131,
+        "eligible_evidence": 674,
+        "combination_jobs": 109,
+        "denominator": 157,
+        "skill_share": 0.8343949044585988,
+        "core": 157
+      },
+      "name": "tencent_experience_3年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 171,
+        "skilled_jobs": 50,
+        "eligible_evidence": 198,
+        "combination_jobs": 39,
+        "denominator": 69,
+        "skill_share": 0.7246376811594203,
+        "core": 69
+      },
+      "name": "tencent_experience_5年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 8,
+        "skilled_jobs": 3,
+        "eligible_evidence": 8,
+        "combination_jobs": 2,
+        "denominator": 4,
+        "skill_share": 0.75,
+        "core": 4
+      },
+      "name": "tencent_experience_8年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 44,
+        "skilled_jobs": 12,
+        "eligible_evidence": 46,
+        "combination_jobs": 10,
+        "denominator": 13,
+        "skill_share": 0.9230769230769231,
+        "core": 13
+      },
+      "name": "tencent_experience_不限",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 1,
+        "skilled_jobs": 1,
+        "eligible_evidence": 2,
+        "combination_jobs": 0,
+        "denominator": 1,
+        "skill_share": 1.0,
+        "core": 1
+      },
+      "name": "tencent_experience_未注明",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 5,
+        "skilled_jobs": 3,
+        "eligible_evidence": 5,
+        "combination_jobs": 2,
+        "denominator": 4,
+        "skill_share": 0.75,
+        "core": 4
+      },
+      "name": "tencent_education_博士",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 560,
+        "skilled_jobs": 134,
+        "eligible_evidence": 683,
+        "combination_jobs": 114,
+        "denominator": 170,
+        "skill_share": 0.788235294117647,
+        "core": 170
+      },
+      "name": "tencent_education_未注明",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 550,
+        "skilled_jobs": 154,
+        "eligible_evidence": 645,
+        "combination_jobs": 123,
+        "denominator": 186,
+        "skill_share": 0.8279569892473119,
+        "core": 186
+      },
+      "name": "tencent_education_本科",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 189,
+        "skilled_jobs": 48,
+        "eligible_evidence": 204,
+        "combination_jobs": 37,
+        "denominator": 56,
+        "skill_share": 0.8571428571428571,
+        "core": 56
+      },
+      "name": "tencent_education_硕士",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 99,
+        "skilled_jobs": 99,
+        "eligible_evidence": 104,
+        "combination_jobs": 276,
+        "denominator": 416,
+        "skill_share": 0.23798076923076922,
+        "core": 416
+      },
+      "name": "tencent_Python_denominator",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 34,
+        "skilled_jobs": 34,
+        "eligible_evidence": 36,
+        "combination_jobs": 144,
+        "denominator": 224,
+        "skill_share": 0.15178571428571427,
+        "core": 224
+      },
+      "name": "tencent_city_Python",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 1304,
+        "skilled_jobs": 339,
+        "eligible_evidence": 1537,
+        "combination_jobs": 13,
+        "denominator": 416,
+        "skill_share": 0.8149038461538461,
+        "core": 416
+      },
+      "name": "tencent_Python_SQL_pair",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 628,
+        "skilled_jobs": 180,
+        "eligible_evidence": 751,
+        "combination_jobs": 3,
+        "denominator": 224,
+        "skill_share": 0.8035714285714286,
+        "core": 224
+      },
+      "name": "tencent_city_pair",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 73,
+        "skilled_jobs": 22,
+        "eligible_evidence": 86,
+        "combination_jobs": 17,
+        "denominator": 35,
+        "skill_share": 0.6285714285714286,
+        "core": 35
+      },
+      "name": "tencent_city_experience_category",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 1,
+        "skill_share": 0.0,
+        "core": 1
+      },
+      "name": "tencent_no_match_body_kept",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 0,
+        "skill_share": null,
+        "core": 0
+      },
+      "name": "tencent_extension_excluded",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 1170,
+        "skilled_jobs": 378,
+        "eligible_evidence": 1438,
+        "combination_jobs": 305,
+        "denominator": 497,
+        "skill_share": 0.7605633802816901,
+        "core": 497
+      },
+      "name": "xiaomi",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 227,
+        "skilled_jobs": 79,
+        "eligible_evidence": 291,
+        "combination_jobs": 60,
+        "denominator": 105,
+        "skill_share": 0.7523809523809524,
+        "core": 105
+      },
+      "name": "xiaomi_city_上海",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 637,
+        "skilled_jobs": 213,
+        "eligible_evidence": 754,
+        "combination_jobs": 174,
+        "denominator": 279,
+        "skill_share": 0.7634408602150538,
+        "core": 279
+      },
+      "name": "xiaomi_city_北京",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 223,
+        "skilled_jobs": 68,
+        "eligible_evidence": 305,
+        "combination_jobs": 54,
+        "denominator": 87,
+        "skill_share": 0.7816091954022989,
+        "core": 87
+      },
+      "name": "xiaomi_city_南京",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 20,
+        "skilled_jobs": 4,
+        "eligible_evidence": 25,
+        "combination_jobs": 4,
+        "denominator": 4,
+        "skill_share": 1.0,
+        "core": 4
+      },
+      "name": "xiaomi_city_成都",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 182,
+        "skilled_jobs": 51,
+        "eligible_evidence": 201,
+        "combination_jobs": 46,
+        "denominator": 64,
+        "skill_share": 0.796875,
+        "core": 64
+      },
+      "name": "xiaomi_city_武汉",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 19,
+        "skilled_jobs": 9,
+        "eligible_evidence": 22,
+        "combination_jobs": 7,
+        "denominator": 16,
+        "skill_share": 0.5625,
+        "core": 16
+      },
+      "name": "xiaomi_city_深圳",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 92,
+        "skilled_jobs": 29,
+        "eligible_evidence": 125,
+        "combination_jobs": 26,
+        "denominator": 33,
+        "skill_share": 0.8787878787878788,
+        "core": 33
+      },
+      "name": "xiaomi_city_西安",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 3,
+        "skilled_jobs": 2,
+        "eligible_evidence": 3,
+        "combination_jobs": 1,
+        "denominator": 3,
+        "skill_share": 0.6666666666666666,
+        "core": 3
+      },
+      "name": "xiaomi_experience_10年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 5,
+        "skilled_jobs": 2,
+        "eligible_evidence": 5,
+        "combination_jobs": 1,
+        "denominator": 2,
+        "skill_share": 1.0,
+        "core": 2
+      },
+      "name": "xiaomi_experience_1年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 14,
+        "skilled_jobs": 5,
+        "eligible_evidence": 24,
+        "combination_jobs": 5,
+        "denominator": 6,
+        "skill_share": 0.8333333333333334,
+        "core": 6
+      },
+      "name": "xiaomi_experience_2年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 5,
+        "skilled_jobs": 2,
+        "eligible_evidence": 5,
+        "combination_jobs": 2,
+        "denominator": 2,
+        "skill_share": 1.0,
+        "core": 2
+      },
+      "name": "xiaomi_experience_3-5年",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 4,
+        "skilled_jobs": 1,
+        "eligible_evidence": 4,
+        "combination_jobs": 1,
+        "denominator": 1,
+        "skill_share": 1.0,
+        "core": 1
+      },
+      "name": "xiaomi_experience_3-8年",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 4,
+        "skilled_jobs": 2,
+        "eligible_evidence": 6,
+        "combination_jobs": 2,
+        "denominator": 2,
+        "skill_share": 1.0,
+        "core": 2
+      },
+      "name": "xiaomi_experience_3年",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 108,
+        "skilled_jobs": 33,
+        "eligible_evidence": 139,
+        "combination_jobs": 27,
+        "denominator": 53,
+        "skill_share": 0.6226415094339622,
+        "core": 53
+      },
+      "name": "xiaomi_experience_3年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 14,
+        "skilled_jobs": 4,
+        "eligible_evidence": 15,
+        "combination_jobs": 4,
+        "denominator": 4,
+        "skill_share": 1.0,
+        "core": 4
+      },
+      "name": "xiaomi_experience_4年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 7,
+        "skilled_jobs": 1,
+        "eligible_evidence": 10,
+        "combination_jobs": 1,
+        "denominator": 1,
+        "skill_share": 1.0,
+        "core": 1
+      },
+      "name": "xiaomi_experience_5年",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 117,
+        "skilled_jobs": 36,
+        "eligible_evidence": 138,
+        "combination_jobs": 27,
+        "denominator": 50,
+        "skill_share": 0.72,
+        "core": 50
+      },
+      "name": "xiaomi_experience_5年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 1,
+        "skilled_jobs": 1,
+        "eligible_evidence": 2,
+        "combination_jobs": 0,
+        "denominator": 2,
+        "skill_share": 0.5,
+        "core": 2
+      },
+      "name": "xiaomi_experience_6年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 26,
+        "skilled_jobs": 8,
+        "eligible_evidence": 28,
+        "combination_jobs": 7,
+        "denominator": 8,
+        "skill_share": 1.0,
+        "core": 8
+      },
+      "name": "xiaomi_experience_7年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 29,
+        "skilled_jobs": 8,
+        "eligible_evidence": 39,
+        "combination_jobs": 7,
+        "denominator": 9,
+        "skill_share": 0.8888888888888888,
+        "core": 9
+      },
+      "name": "xiaomi_experience_8年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 8,
+        "skilled_jobs": 2,
+        "eligible_evidence": 8,
+        "combination_jobs": 2,
+        "denominator": 2,
+        "skill_share": 1.0,
+        "core": 2
+      },
+      "name": "xiaomi_experience_9年以上",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 59,
+        "skilled_jobs": 16,
+        "eligible_evidence": 98,
+        "combination_jobs": 14,
+        "denominator": 21,
+        "skill_share": 0.7619047619047619,
+        "core": 21
+      },
+      "name": "xiaomi_experience_待确认",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 766,
+        "skilled_jobs": 255,
+        "eligible_evidence": 914,
+        "combination_jobs": 204,
+        "denominator": 331,
+        "skill_share": 0.770392749244713,
+        "core": 331
+      },
+      "name": "xiaomi_experience_未注明",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 12,
+        "skilled_jobs": 4,
+        "eligible_evidence": 12,
+        "combination_jobs": 4,
+        "denominator": 10,
+        "skill_share": 0.4,
+        "core": 10
+      },
+      "name": "xiaomi_education_博士",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 346,
+        "skilled_jobs": 115,
+        "eligible_evidence": 388,
+        "combination_jobs": 95,
+        "denominator": 161,
+        "skill_share": 0.7142857142857143,
+        "core": 161
+      },
+      "name": "xiaomi_education_未注明",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 545,
+        "skilled_jobs": 167,
+        "eligible_evidence": 733,
+        "combination_jobs": 134,
+        "denominator": 206,
+        "skill_share": 0.8106796116504854,
+        "core": 206
+      },
+      "name": "xiaomi_education_本科",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 267,
+        "skilled_jobs": 92,
+        "eligible_evidence": 305,
+        "combination_jobs": 72,
+        "denominator": 120,
+        "skill_share": 0.7666666666666667,
+        "core": 120
+      },
+      "name": "xiaomi_education_硕士",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 147,
+        "skilled_jobs": 147,
+        "eligible_evidence": 155,
+        "combination_jobs": 305,
+        "denominator": 497,
+        "skill_share": 0.29577464788732394,
+        "core": 497
+      },
+      "name": "xiaomi_Python_denominator",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 0,
+        "skill_share": null,
+        "core": 0
+      },
+      "name": "xiaomi_city_Python",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 1170,
+        "skilled_jobs": 378,
+        "eligible_evidence": 1438,
+        "combination_jobs": 8,
+        "denominator": 497,
+        "skill_share": 0.7605633802816901,
+        "core": 497
+      },
+      "name": "xiaomi_Python_SQL_pair",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 0,
+        "skill_share": null,
+        "core": 0
+      },
+      "name": "xiaomi_city_pair",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 143,
+        "skilled_jobs": 46,
+        "eligible_evidence": 188,
+        "combination_jobs": 35,
+        "denominator": 61,
+        "skill_share": 0.7540983606557377,
+        "core": 61
+      },
+      "name": "xiaomi_city_experience_category",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 1,
+        "skill_share": 0.0,
+        "core": 1
+      },
+      "name": "xiaomi_no_match_body_kept",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 0,
+        "skill_share": null,
+        "core": 0
+      },
+      "name": "xiaomi_extension_excluded",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 892,
+        "skilled_jobs": 240,
+        "eligible_evidence": 1053,
+        "combination_jobs": 194,
+        "denominator": 295,
+        "skill_share": 0.8135593220338984,
+        "core": 295
+      },
+      "name": "tencent_multi_city_union",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 5,
+        "skilled_jobs": 1,
+        "eligible_evidence": 5,
+        "combination_jobs": 1,
+        "denominator": 1,
+        "skill_share": 1.0,
+        "core": 1
+      },
+      "name": "netease_hint_not_conflict",
+      "passed": true
+    },
+    {
+      "actual": {
+        "job_skill_pairs": 0,
+        "skilled_jobs": 0,
+        "eligible_evidence": 0,
+        "combination_jobs": 0,
+        "denominator": 0,
+        "skill_share": null,
+        "core": 0
+      },
+      "name": "empty_selection",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 1556,
+        "core": 1556,
+        "newly_observed": null,
+        "skilled": 1148,
+        "share": 0.7377892030848329
+      },
+      "name": "release_all",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 199,
+        "core": 199,
+        "newly_observed": null,
+        "skilled": 75,
+        "share": 0.3768844221105528
+      },
+      "name": "release_jd",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 444,
+        "core": 444,
+        "newly_observed": null,
+        "skilled": 356,
+        "share": 0.8018018018018018
+      },
+      "name": "release_netease",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 416,
+        "core": 416,
+        "newly_observed": null,
+        "skilled": 339,
+        "share": 0.8149038461538461
+      },
+      "name": "release_tencent",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 497,
+        "core": 497,
+        "newly_observed": null,
+        "skilled": 378,
+        "share": 0.7605633802816901
+      },
+      "name": "release_xiaomi",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 1140,
+        "core": 1140,
+        "newly_observed": null,
+        "skilled": 809,
+        "share": 0.7096491228070175
+      },
+      "name": "release_day_20261120",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 416,
+        "core": 416,
+        "newly_observed": null,
+        "skilled": 339,
+        "share": 0.8149038461538461
+      },
+      "name": "release_day_20261121",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 725,
+        "core": 725,
+        "newly_observed": null,
+        "skilled": 561,
+        "share": 0.7737931034482759
+      },
+      "name": "release_category_开发",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 12,
+        "core": 12,
+        "newly_observed": null,
+        "skilled": 8,
+        "share": 0.6666666666666666
+      },
+      "name": "release_category_待分类",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 51,
+        "core": 51,
+        "newly_observed": null,
+        "skilled": 39,
+        "share": 0.7647058823529411
+      },
+      "name": "release_category_数据开发/分析",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 119,
+        "core": 119,
+        "newly_observed": null,
+        "skilled": 66,
+        "share": 0.5546218487394958
+      },
+      "name": "release_category_测试",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 602,
+        "core": 602,
+        "newly_observed": null,
+        "skilled": 447,
+        "share": 0.7425249169435216
+      },
+      "name": "release_category_算法/AI",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 47,
+        "core": 47,
+        "newly_observed": null,
+        "skilled": 27,
+        "share": 0.574468085106383
+      },
+      "name": "release_category_运维/安全",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 226,
+        "core": 226,
+        "newly_observed": null,
+        "skilled": 165,
+        "share": 0.7300884955752213
+      },
+      "name": "release_province_上海",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 31,
+        "core": 31,
+        "newly_observed": null,
+        "skilled": 25,
+        "share": 0.8064516129032258
+      },
+      "name": "release_province_冲突待确认",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 513,
+        "core": 513,
+        "newly_observed": null,
+        "skilled": 346,
+        "share": 0.6744639376218323
+      },
+      "name": "release_province_北京",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 17,
+        "core": 17,
+        "newly_observed": null,
+        "skilled": 15,
+        "share": 0.8823529411764706
+      },
+      "name": "release_province_四川",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 1,
+        "core": 1,
+        "newly_observed": null,
+        "skilled": 0,
+        "share": 0.0
+      },
+      "name": "release_province_安徽",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 399,
+        "core": 399,
+        "newly_observed": null,
+        "skilled": 305,
+        "share": 0.7644110275689223
+      },
+      "name": "release_province_广东",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 0,
+        "core": 0,
+        "newly_observed": null,
+        "skilled": 0,
+        "share": null
+      },
+      "name": "release_province_未知",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 89,
+        "core": 89,
+        "newly_observed": null,
+        "skilled": 68,
+        "share": 0.7640449438202247
+      },
+      "name": "release_province_江苏",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 259,
+        "core": 259,
+        "newly_observed": null,
+        "skilled": 212,
+        "share": 0.8185328185328186
+      },
+      "name": "release_province_浙江",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 3,
+        "core": 3,
+        "newly_observed": null,
+        "skilled": 1,
+        "share": 0.3333333333333333
+      },
+      "name": "release_province_海南",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 67,
+        "core": 67,
+        "newly_observed": null,
+        "skilled": 53,
+        "share": 0.7910447761194029
+      },
+      "name": "release_province_湖北",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 4,
+        "core": 4,
+        "newly_observed": null,
+        "skilled": 1,
+        "share": 0.25
+      },
+      "name": "release_province_贵州",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 2,
+        "core": 2,
+        "newly_observed": null,
+        "skilled": 2,
+        "share": 1.0
+      },
+      "name": "release_province_重庆",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 36,
+        "core": 36,
+        "newly_observed": null,
+        "skilled": 30,
+        "share": 0.8333333333333334
+      },
+      "name": "release_province_陕西",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 43,
+        "core": 43,
+        "newly_observed": null,
+        "skilled": 33,
+        "share": 0.7674418604651163
+      },
+      "name": "release_education_不限",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 105,
+        "core": 105,
+        "newly_observed": null,
+        "skilled": 77,
+        "share": 0.7333333333333333
+      },
+      "name": "release_education_冲突待确认",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 14,
+        "core": 14,
+        "newly_observed": null,
+        "skilled": 7,
+        "share": 0.5
+      },
+      "name": "release_education_博士",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 472,
+        "core": 472,
+        "newly_observed": null,
+        "skilled": 279,
+        "share": 0.5911016949152542
+      },
+      "name": "release_education_未注明",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 719,
+        "core": 719,
+        "newly_observed": null,
+        "skilled": 589,
+        "share": 0.8191933240611962
+      },
+      "name": "release_education_本科",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 203,
+        "core": 203,
+        "newly_observed": null,
+        "skilled": 163,
+        "share": 0.8029556650246306
+      },
+      "name": "release_education_硕士",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 1556,
+        "core": 1556,
+        "newly_observed": null,
+        "skilled": 420,
+        "share": 0.2699228791773779
+      },
+      "name": "release_Python_denominator_kept",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 399,
+        "core": 399,
+        "newly_observed": null,
+        "skilled": 78,
+        "share": 0.19548872180451127
+      },
+      "name": "release_province_Python",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 0,
+        "core": 0,
+        "newly_observed": null,
+        "skilled": 0,
+        "share": null
+      },
+      "name": "release_empty",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 1556,
+        "core": 1556,
+        "newly_observed": null,
+        "skilled": 614,
+        "share": 0.39460154241645246
+      },
+      "name": "release_Python_or_cpp_union",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 725,
+        "core": 725,
+        "newly_observed": null,
+        "skilled": 143,
+        "share": 0.19724137931034483
+      },
+      "name": "release_development_Python",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 719,
+        "core": 719,
+        "newly_observed": null,
+        "skilled": 188,
+        "share": 0.2614742698191933
+      },
+      "name": "release_bachelor_Python",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 1556,
+        "core": 1556,
+        "newly_observed": null,
+        "skilled": 0,
+        "share": 0.0
+      },
+      "name": "release_no_matching_skill",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 104,
+        "core": 104,
+        "newly_observed": null,
+        "skilled": 89,
+        "share": 0.8557692307692307
+      },
+      "name": "release_training_cohort",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 104,
+        "core": 104,
+        "newly_observed": null,
+        "skilled": 46,
+        "share": 0.4423076923076923
+      },
+      "name": "release_training_cohort_cpp",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 117,
+        "core": 117,
+        "newly_observed": null,
+        "skilled": 97,
+        "share": 0.8290598290598291
+      },
+      "name": "release_largest_training_cohort",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 117,
+        "core": 117,
+        "newly_observed": null,
+        "skilled": 46,
+        "share": 0.39316239316239315
+      },
+      "name": "release_largest_training_cohort_cpp",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 117,
+        "core": 117,
+        "newly_observed": null,
+        "skilled": 56,
+        "share": 0.47863247863247865
+      },
+      "name": "release_largest_training_cohort_union",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 382,
+        "core": 382,
+        "newly_observed": null,
+        "skilled": 311,
+        "share": 0.8141361256544503
+      },
+      "name": "release_netease_fulltime",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 59,
+        "core": 59,
+        "newly_observed": null,
+        "skilled": 42,
+        "share": 0.711864406779661
+      },
+      "name": "release_netease_internship",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 398,
+        "core": 398,
+        "newly_observed": null,
+        "skilled": 323,
+        "share": 0.8115577889447236
+      },
+      "name": "release_tencent_unverified_type",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 1556,
+        "numerator": 1556,
+        "status": "达标",
+        "goal": 1.0,
+        "value": 1.0
+      },
+      "name": "quality_None_core_body_coverage",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 1579,
+        "numerator": 1579,
+        "status": "达标",
+        "goal": 1.0,
+        "value": 1.0
+      },
+      "name": "quality_None_raw_traceability",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 4,
+        "numerator": 0,
+        "status": "未达标",
+        "goal": 1.0,
+        "value": 0.0
+      },
+      "name": "quality_None_collection_scope_complete",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 199,
+        "numerator": 199,
+        "status": "达标",
+        "goal": 1.0,
+        "value": 1.0
+      },
+      "name": "quality_jd_core_body_coverage",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 200,
+        "numerator": 200,
+        "status": "达标",
+        "goal": 1.0,
+        "value": 1.0
+      },
+      "name": "quality_jd_raw_traceability",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 1,
+        "numerator": 0,
+        "status": "未达标",
+        "goal": 1.0,
+        "value": 0.0
+      },
+      "name": "quality_jd_collection_scope_complete",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 444,
+        "numerator": 444,
+        "status": "达标",
+        "goal": 1.0,
+        "value": 1.0
+      },
+      "name": "quality_netease_core_body_coverage",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 448,
+        "numerator": 448,
+        "status": "达标",
+        "goal": 1.0,
+        "value": 1.0
+      },
+      "name": "quality_netease_raw_traceability",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 1,
+        "numerator": 0,
+        "status": "未达标",
+        "goal": 1.0,
+        "value": 0.0
+      },
+      "name": "quality_netease_collection_scope_complete",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 416,
+        "numerator": 416,
+        "status": "达标",
+        "goal": 1.0,
+        "value": 1.0
+      },
+      "name": "quality_tencent_core_body_coverage",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 431,
+        "numerator": 431,
+        "status": "达标",
+        "goal": 1.0,
+        "value": 1.0
+      },
+      "name": "quality_tencent_raw_traceability",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 1,
+        "numerator": 0,
+        "status": "未达标",
+        "goal": 1.0,
+        "value": 0.0
+      },
+      "name": "quality_tencent_collection_scope_complete",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 497,
+        "numerator": 497,
+        "status": "达标",
+        "goal": 1.0,
+        "value": 1.0
+      },
+      "name": "quality_xiaomi_core_body_coverage",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 500,
+        "numerator": 500,
+        "status": "达标",
+        "goal": 1.0,
+        "value": 1.0
+      },
+      "name": "quality_xiaomi_raw_traceability",
+      "passed": true
+    },
+    {
+      "actual": {
+        "denominator": 1,
+        "numerator": 0,
+        "status": "未达标",
+        "goal": 1.0,
+        "value": 0.0
+      },
+      "name": "quality_xiaomi_collection_scope_complete",
+      "passed": true
+    }
+  ],
+  "checked_at_utc": "2026-11-20T16:49:22.1240937Z",
+  "model_definition_sha256": "579b7298b821dbe9abc790384d0344207a0f6762c383ddd0a851d5f47580088d"
+}
