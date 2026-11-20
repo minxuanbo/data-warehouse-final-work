@@ -1,5 +1,5 @@
 # Preserve exact bytes of collected evidence and hashed JSONL across Windows/Linux.
-data/** -text
+data/** -text whitespace=cr-at-eol
 /etl/skills/*.py text eol=lf
 /etl/skills/*.json text eol=lf
 /tests/test_skills.py text eol=lf
@@ -18,3 +18,6 @@ warehouse/cd_policy.json -text
 
 # Current nested audit records also bind exact bytes across checkouts.
 /reports/verification/pilot_closeout_20261120/** -text whitespace=cr-at-eol
+/reports/verification/expansion_current/** -text whitespace=cr-at-eol
+/reports/verification/expansion_attempts/** -text whitespace=cr-at-eol
+/reports/verification/defense_20261120/** -text whitespace=cr-at-eol
