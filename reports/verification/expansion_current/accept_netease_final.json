@@ -1,0 +1,2270 @@
+{
+  "status": "passed_for_technical_acceptance",
+  "checked_at": "2026-11-20T16:32:32.200028+00:00",
+  "source": "netease",
+  "batch_id": "netease_20261120T145742Z_a2a9c5c5",
+  "jobs": 448,
+  "field_values_reconstructed": 9408,
+  "files_hashed": 273,
+  "request_attempts": 284,
+  "failed_attempts": 14,
+  "coverage_proof": {
+    "version": "coverage-proof-1.0",
+    "coverage_status": "partial",
+    "unique_listed_ids": 2568,
+    "reported_totals": [
+      0,
+      2602
+    ],
+    "terminal_empty_page": true,
+    "reasons": [
+      "business_total_changed_or_missing"
+    ]
+  },
+  "core_jobs": 444,
+  "scope_decisions": {
+    "79396": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000001.json"
+    },
+    "23198": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000004.json"
+    },
+    "53229": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000004.json"
+    },
+    "76595": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000004.json"
+    },
+    "79599": {
+      "is_core": true,
+      "reason": "任职要求明确采集系统与编程研发，区别人工采集/标注",
+      "raw_ref": "raw/list_000005.json"
+    },
+    "78352": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000006.json"
+    },
+    "80046": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000006.json"
+    },
+    "79817": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000006.json"
+    },
+    "76545": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000006.json"
+    },
+    "79093": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000007.json"
+    },
+    "79777": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000013.json"
+    },
+    "78001": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000015.json"
+    },
+    "67460": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000015.json"
+    },
+    "74175": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000015.json"
+    },
+    "79532": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000015.json"
+    },
+    "79531": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000015.json"
+    },
+    "70487": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000016.json"
+    },
+    "75408": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000018.json"
+    },
+    "74803": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000018.json"
+    },
+    "74245": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000019.json"
+    },
+    "13009": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000020.json"
+    },
+    "78287": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000020.json"
+    },
+    "65809": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000020.json"
+    },
+    "79447": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000020.json"
+    },
+    "61088": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000021.json"
+    },
+    "79013": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000021.json"
+    },
+    "79363": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000023.json"
+    },
+    "80011": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000023.json"
+    },
+    "79060": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000023.json"
+    },
+    "80000": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000024.json"
+    },
+    "69373": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000026.json"
+    },
+    "63111": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000027.json"
+    },
+    "77470": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000028.json"
+    },
+    "59977": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000028.json"
+    },
+    "79562": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000028.json"
+    },
+    "77034": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000029.json"
+    },
+    "77037": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000029.json"
+    },
+    "72078": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000030.json"
+    },
+    "58563": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000030.json"
+    },
+    "69222": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000030.json"
+    },
+    "73695": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000030.json"
+    },
+    "75851": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000031.json"
+    },
+    "79732": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000032.json"
+    },
+    "78913": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000032.json"
+    },
+    "79786": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000032.json"
+    },
+    "79351": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000032.json"
+    },
+    "79200": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000032.json"
+    },
+    "79827": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000032.json"
+    },
+    "78923": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000033.json"
+    },
+    "79367": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000034.json"
+    },
+    "77678": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000035.json"
+    },
+    "78108": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000035.json"
+    },
+    "78243": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000036.json"
+    },
+    "77680": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000037.json"
+    },
+    "77679": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000038.json"
+    },
+    "79970": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000038.json"
+    },
+    "78811": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000040.json"
+    },
+    "79115": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000041.json"
+    },
+    "78482": {
+      "is_core": false,
+      "reason": "非本期软件数据数字技术职责或管理/运营岗位",
+      "raw_ref": "raw/list_000043.json"
+    },
+    "79773": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000044.json"
+    },
+    "58384": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000044.json"
+    },
+    "78864": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000045.json"
+    },
+    "77578": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000045.json"
+    },
+    "77384": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000046.json"
+    },
+    "77062": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000046.json"
+    },
+    "78063": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000048.json"
+    },
+    "79654": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000049.json"
+    },
+    "79749": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000049.json"
+    },
+    "79837": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000049.json"
+    },
+    "71014": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000049.json"
+    },
+    "79657": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000051.json"
+    },
+    "78265": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000054.json"
+    },
+    "74090": {
+      "is_core": false,
+      "reason": "非本期软件数据数字技术职责或管理/运营岗位",
+      "raw_ref": "raw/list_000054.json"
+    },
+    "79897": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000054.json"
+    },
+    "79053": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000059.json"
+    },
+    "79354": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000059.json"
+    },
+    "57588": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000060.json"
+    },
+    "77358": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000060.json"
+    },
+    "78729": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000061.json"
+    },
+    "79294": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000062.json"
+    },
+    "78821": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000062.json"
+    },
+    "78841": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000062.json"
+    },
+    "69149": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000064.json"
+    },
+    "71177": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000064.json"
+    },
+    "77315": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000064.json"
+    },
+    "58561": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000065.json"
+    },
+    "63733": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000065.json"
+    },
+    "65376": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000065.json"
+    },
+    "65697": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000065.json"
+    },
+    "70930": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000065.json"
+    },
+    "77621": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000065.json"
+    },
+    "71493": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000066.json"
+    },
+    "78410": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000067.json"
+    },
+    "79250": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000067.json"
+    },
+    "79265": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000067.json"
+    },
+    "75531": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000067.json"
+    },
+    "78358": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000067.json"
+    },
+    "76758": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000067.json"
+    },
+    "77636": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000068.json"
+    },
+    "78401": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000068.json"
+    },
+    "72752": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000068.json"
+    },
+    "76585": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000068.json"
+    },
+    "76586": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000068.json"
+    },
+    "76588": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000068.json"
+    },
+    "77289": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000068.json"
+    },
+    "77329": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000068.json"
+    },
+    "79315": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000068.json"
+    },
+    "77063": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000068.json"
+    },
+    "78675": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000069.json"
+    },
+    "79019": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000069.json"
+    },
+    "68829": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000069.json"
+    },
+    "71085": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000069.json"
+    },
+    "78046": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000069.json"
+    },
+    "79154": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000069.json"
+    },
+    "79560": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000069.json"
+    },
+    "73399": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000069.json"
+    },
+    "73402": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000069.json"
+    },
+    "76756": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000069.json"
+    },
+    "77748": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000070.json"
+    },
+    "78942": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000070.json"
+    },
+    "79757": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000070.json"
+    },
+    "79780": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000071.json"
+    },
+    "77374": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000071.json"
+    },
+    "74244": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000071.json"
+    },
+    "79733": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000071.json"
+    },
+    "78989": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000071.json"
+    },
+    "69074": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000071.json"
+    },
+    "79845": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000072.json"
+    },
+    "59913": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000072.json"
+    },
+    "78952": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000073.json"
+    },
+    "79835": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000073.json"
+    },
+    "18566": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000073.json"
+    },
+    "33140": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000074.json"
+    },
+    "60238": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000074.json"
+    },
+    "65222": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000074.json"
+    },
+    "66197": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000074.json"
+    },
+    "69388": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000075.json"
+    },
+    "70064": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000075.json"
+    },
+    "73999": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000075.json"
+    },
+    "75490": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000075.json"
+    },
+    "76458": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000075.json"
+    },
+    "77730": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000076.json"
+    },
+    "78491": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000077.json"
+    },
+    "78823": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000077.json"
+    },
+    "78824": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000077.json"
+    },
+    "78916": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000078.json"
+    },
+    "79109": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000078.json"
+    },
+    "79479": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000078.json"
+    },
+    "79597": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000078.json"
+    },
+    "79598": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000078.json"
+    },
+    "79807": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000079.json"
+    },
+    "76104": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000080.json"
+    },
+    "66890": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000080.json"
+    },
+    "79052": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000083.json"
+    },
+    "78042": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000083.json"
+    },
+    "75407": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000083.json"
+    },
+    "76448": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000083.json"
+    },
+    "76449": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000083.json"
+    },
+    "79804": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000084.json"
+    },
+    "79337": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000084.json"
+    },
+    "79792": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000085.json"
+    },
+    "75258": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000086.json"
+    },
+    "79050": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000086.json"
+    },
+    "79051": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000086.json"
+    },
+    "79588": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000087.json"
+    },
+    "79626": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000090.json"
+    },
+    "78780": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000091.json"
+    },
+    "78852": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000091.json"
+    },
+    "79036": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000092.json"
+    },
+    "79057": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000092.json"
+    },
+    "79129": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000092.json"
+    },
+    "79752": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000094.json"
+    },
+    "79753": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000094.json"
+    },
+    "76749": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000095.json"
+    },
+    "33992": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000096.json"
+    },
+    "79775": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000096.json"
+    },
+    "79774": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000096.json"
+    },
+    "79767": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000100.json"
+    },
+    "77425": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000102.json"
+    },
+    "76383": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000103.json"
+    },
+    "79755": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000103.json"
+    },
+    "79267": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000104.json"
+    },
+    "51225": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000105.json"
+    },
+    "79731": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000105.json"
+    },
+    "79726": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000106.json"
+    },
+    "77858": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000106.json"
+    },
+    "75954": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000108.json"
+    },
+    "76329": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000109.json"
+    },
+    "76723": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000110.json"
+    },
+    "76331": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000110.json"
+    },
+    "76722": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000110.json"
+    },
+    "75384": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000111.json"
+    },
+    "79709": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000111.json"
+    },
+    "65340": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000113.json"
+    },
+    "74023": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000114.json"
+    },
+    "74302": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000114.json"
+    },
+    "65299": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000114.json"
+    },
+    "69390": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000114.json"
+    },
+    "78749": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000114.json"
+    },
+    "74672": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000114.json"
+    },
+    "75153": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000115.json"
+    },
+    "78750": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000115.json"
+    },
+    "70839": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000116.json"
+    },
+    "60311": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000116.json"
+    },
+    "77774": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000116.json"
+    },
+    "66771": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000116.json"
+    },
+    "77865": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000116.json"
+    },
+    "78041": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000117.json"
+    },
+    "79165": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000118.json"
+    },
+    "76386": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000118.json"
+    },
+    "75336": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000118.json"
+    },
+    "65176": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000120.json"
+    },
+    "79643": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000121.json"
+    },
+    "79290": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000121.json"
+    },
+    "79628": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000122.json"
+    },
+    "79627": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000122.json"
+    },
+    "76417": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000127.json"
+    },
+    "79593": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000127.json"
+    },
+    "79516": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000127.json"
+    },
+    "79130": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000128.json"
+    },
+    "78130": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000129.json"
+    },
+    "72340": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000130.json"
+    },
+    "73898": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000130.json"
+    },
+    "78210": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000130.json"
+    },
+    "78524": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000130.json"
+    },
+    "72961": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000132.json"
+    },
+    "74970": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000133.json"
+    },
+    "77476": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000134.json"
+    },
+    "77950": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000134.json"
+    },
+    "64076": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000134.json"
+    },
+    "70489": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000135.json"
+    },
+    "71176": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000135.json"
+    },
+    "71955": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000135.json"
+    },
+    "77815": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000135.json"
+    },
+    "79523": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000135.json"
+    },
+    "79522": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000135.json"
+    },
+    "77703": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000137.json"
+    },
+    "77492": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000138.json"
+    },
+    "77522": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000138.json"
+    },
+    "74214": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000139.json"
+    },
+    "78525": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000140.json"
+    },
+    "73959": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000143.json"
+    },
+    "79397": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000145.json"
+    },
+    "74955": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000146.json"
+    },
+    "74276": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000146.json"
+    },
+    "74277": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000146.json"
+    },
+    "63098": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000146.json"
+    },
+    "73426": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000146.json"
+    },
+    "76823": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000146.json"
+    },
+    "77339": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000147.json"
+    },
+    "77390": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000147.json"
+    },
+    "74475": {
+      "is_core": false,
+      "reason": "非本期软件数据数字技术职责或管理/运营岗位",
+      "raw_ref": "raw/list_000148.json"
+    },
+    "73882": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000149.json"
+    },
+    "79229": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000151.json"
+    },
+    "79084": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000152.json"
+    },
+    "75444": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000152.json"
+    },
+    "67502": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000152.json"
+    },
+    "79082": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000152.json"
+    },
+    "76814": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000152.json"
+    },
+    "79327": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000152.json"
+    },
+    "79326": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000153.json"
+    },
+    "77090": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000155.json"
+    },
+    "76098": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000155.json"
+    },
+    "77473": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000155.json"
+    },
+    "75548": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000155.json"
+    },
+    "75663": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000155.json"
+    },
+    "77490": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000155.json"
+    },
+    "78502": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000156.json"
+    },
+    "78697": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000157.json"
+    },
+    "78670": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000157.json"
+    },
+    "77702": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000158.json"
+    },
+    "77704": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000158.json"
+    },
+    "78557": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000159.json"
+    },
+    "75740": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000160.json"
+    },
+    "71609": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000160.json"
+    },
+    "79177": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000161.json"
+    },
+    "73915": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000162.json"
+    },
+    "73483": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000162.json"
+    },
+    "78604": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000163.json"
+    },
+    "78614": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000163.json"
+    },
+    "79141": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000163.json"
+    },
+    "78115": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000163.json"
+    },
+    "77978": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000164.json"
+    },
+    "70689": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000164.json"
+    },
+    "63699": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000165.json"
+    },
+    "75889": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000166.json"
+    },
+    "75754": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000166.json"
+    },
+    "76147": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000167.json"
+    },
+    "77732": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000167.json"
+    },
+    "70483": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000168.json"
+    },
+    "75832": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000168.json"
+    },
+    "79001": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000168.json"
+    },
+    "77338": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000169.json"
+    },
+    "71486": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000169.json"
+    },
+    "77317": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000170.json"
+    },
+    "78628": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000170.json"
+    },
+    "33178": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000173.json"
+    },
+    "76766": {
+      "is_core": true,
+      "reason": "标题明确软件平台或编程技术方向",
+      "raw_ref": "raw/list_000173.json"
+    },
+    "56828": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000174.json"
+    },
+    "64141": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000174.json"
+    },
+    "63388": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000174.json"
+    },
+    "56186": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000175.json"
+    },
+    "78126": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000175.json"
+    },
+    "78857": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000176.json"
+    },
+    "68703": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000176.json"
+    },
+    "78856": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000176.json"
+    },
+    "76151": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000177.json"
+    },
+    "78829": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000178.json"
+    },
+    "76734": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000178.json"
+    },
+    "72455": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000178.json"
+    },
+    "78798": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000179.json"
+    },
+    "78792": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000179.json"
+    },
+    "78783": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000180.json"
+    },
+    "75831": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000180.json"
+    },
+    "78708": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000180.json"
+    },
+    "78775": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000180.json"
+    },
+    "78764": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000180.json"
+    },
+    "74021": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000180.json"
+    },
+    "78767": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000181.json"
+    },
+    "68161": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000181.json"
+    },
+    "57293": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000182.json"
+    },
+    "74952": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000184.json"
+    },
+    "65561": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000184.json"
+    },
+    "70986": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000184.json"
+    },
+    "77622": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000184.json"
+    },
+    "77673": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000185.json"
+    },
+    "78585": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000185.json"
+    },
+    "78629": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000186.json"
+    },
+    "78599": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000194.json"
+    },
+    "75431": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000194.json"
+    },
+    "58587": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000196.json"
+    },
+    "61697": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000196.json"
+    },
+    "52664": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000196.json"
+    },
+    "62064": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000197.json"
+    },
+    "65260": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000198.json"
+    },
+    "70059": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000198.json"
+    },
+    "78437": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000198.json"
+    },
+    "76665": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000199.json"
+    },
+    "77475": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000199.json"
+    },
+    "75410": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000199.json"
+    },
+    "76008": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000199.json"
+    },
+    "76120": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000199.json"
+    },
+    "78366": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000200.json"
+    },
+    "78251": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000202.json"
+    },
+    "77252": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000203.json"
+    },
+    "77666": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000204.json"
+    },
+    "77346": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000204.json"
+    },
+    "78166": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000205.json"
+    },
+    "76570": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000205.json"
+    },
+    "73107": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000206.json"
+    },
+    "77556": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000206.json"
+    },
+    "78065": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000206.json"
+    },
+    "77763": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000207.json"
+    },
+    "78052": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000207.json"
+    },
+    "76197": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000208.json"
+    },
+    "72396": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000210.json"
+    },
+    "52032": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000212.json"
+    },
+    "75071": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000212.json"
+    },
+    "73048": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000212.json"
+    },
+    "27410": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000213.json"
+    },
+    "55328": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000214.json"
+    },
+    "77713": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000215.json"
+    },
+    "63359": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000215.json"
+    },
+    "74456": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000216.json"
+    },
+    "59893": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000216.json"
+    },
+    "70820": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000216.json"
+    },
+    "75608": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000217.json"
+    },
+    "73830": {
+      "is_core": false,
+      "reason": "标题未明确属于本期数字技术方向，保守排除",
+      "raw_ref": "raw/list_000218.json"
+    },
+    "77449": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000218.json"
+    },
+    "70837": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000219.json"
+    },
+    "63680": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000220.json"
+    },
+    "67635": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000222.json"
+    },
+    "72090": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000222.json"
+    },
+    "77300": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000222.json"
+    },
+    "70402": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000223.json"
+    },
+    "75361": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000223.json"
+    },
+    "75788": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000223.json"
+    },
+    "76079": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000223.json"
+    },
+    "75166": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000224.json"
+    },
+    "70596": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000224.json"
+    },
+    "70274": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000224.json"
+    },
+    "75871": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000225.json"
+    },
+    "73896": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000225.json"
+    },
+    "71252": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000226.json"
+    },
+    "76697": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000227.json"
+    },
+    "52326": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000227.json"
+    },
+    "73897": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000228.json"
+    },
+    "76163": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000228.json"
+    },
+    "68165": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000228.json"
+    },
+    "73526": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000228.json"
+    },
+    "70843": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000229.json"
+    },
+    "74243": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000229.json"
+    },
+    "70293": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000229.json"
+    },
+    "60061": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000230.json"
+    },
+    "74552": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000230.json"
+    },
+    "70545": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000235.json"
+    },
+    "72457": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000236.json"
+    },
+    "76078": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000236.json"
+    },
+    "75977": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000237.json"
+    },
+    "69248": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000237.json"
+    },
+    "75878": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000238.json"
+    },
+    "74402": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000238.json"
+    },
+    "69996": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000239.json"
+    },
+    "75676": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000240.json"
+    },
+    "73949": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000241.json"
+    },
+    "68388": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000242.json"
+    },
+    "74602": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000242.json"
+    },
+    "51334": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000242.json"
+    },
+    "71808": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000243.json"
+    },
+    "61039": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000243.json"
+    },
+    "71736": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000243.json"
+    },
+    "19149": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000243.json"
+    },
+    "70886": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000244.json"
+    },
+    "74792": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000244.json"
+    },
+    "63981": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000245.json"
+    },
+    "8226": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000245.json"
+    },
+    "71303": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000246.json"
+    },
+    "54481": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000246.json"
+    },
+    "74198": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000246.json"
+    },
+    "72662": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000247.json"
+    },
+    "72810": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000247.json"
+    },
+    "19486": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000247.json"
+    },
+    "62256": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000247.json"
+    },
+    "72198": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000247.json"
+    },
+    "72262": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000247.json"
+    },
+    "66432": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000248.json"
+    },
+    "41871": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000248.json"
+    },
+    "56888": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000249.json"
+    },
+    "56889": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000250.json"
+    },
+    "71525": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000250.json"
+    },
+    "71526": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000250.json"
+    },
+    "71527": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000250.json"
+    },
+    "50715": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000251.json"
+    },
+    "50718": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000251.json"
+    },
+    "73315": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000251.json"
+    },
+    "61818": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000253.json"
+    },
+    "61819": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000253.json"
+    },
+    "70804": {
+      "is_core": true,
+      "reason": "官网游戏/程序背景下的明确软件测试或引擎开发",
+      "raw_ref": "raw/list_000253.json"
+    },
+    "19148": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000254.json"
+    },
+    "19150": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000254.json"
+    },
+    "71882": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000255.json"
+    },
+    "69449": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000255.json"
+    },
+    "69911": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000256.json"
+    },
+    "70716": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000256.json"
+    },
+    "39710": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000256.json"
+    },
+    "51346": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000256.json"
+    },
+    "50730": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000256.json"
+    },
+    "68905": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000257.json"
+    }
+  },
+  "human_annotation": false,
+  "review_actor": "AI-assisted technical verification authorized by user",
+  "acceptance_scope": "Collected subset and source lineage; not full market coverage or independent precision/recall"
+}

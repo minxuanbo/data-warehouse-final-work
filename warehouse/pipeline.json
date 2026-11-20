@@ -1,31 +1,73 @@
 {
-  "database": "recruitment_dw_dev_cd_v1",
+  "database": "recruitment_dw_dev_expansion_v1",
   "channel": "sample",
-  "pilot_expectations": {
-    "source_postings_per_source": 100,
-    "core_postings_per_source": 98,
-    "posting_skill_pairs": {
-      "tencent": 334,
-      "netease": 337
-    },
-    "rule_version": "skills-rules-0.3.1"
-  },
-  "discover_roots": [
-    "data/tencent",
-    "data/netease"
+  "expected_sources": [
+    "tencent",
+    "netease",
+    "xiaomi",
+    "jd"
   ],
+  "discover_roots": [],
+  "scope_note": "Frozen four-source expansion in one night window; different Beijing batch-end dates retained; no complete-day trend",
   "inputs": [
     {
-      "batch_path": "data/tencent/tencent_20261031T093102Z_366ad0a4",
-      "revision": "25b397bf846a8e7c39bbc249e0700428e89bc0c3",
-      "analysis_path": "reports/analysis/tencent_20261031T093102Z_366ad0a4/v1.3",
-      "dictionary_path": "etl/skills/dictionary.json"
+      "batch_path": "data/tencent/tencent_20261120T145742Z_cb8952ee",
+      "revision": "ca596de13e0833715e5168683ca6ed32f21bc45e",
+      "analysis_path": "reports/analysis/tencent_20261120T145742Z_cb8952ee/expanded-v2.1",
+      "dictionary_path": "etl/skills/dictionary.json",
+      "policy_path": "warehouse/expansion_policy_v21.json"
     },
     {
-      "batch_path": "data/netease/netease_20261101T044527Z_157cf969",
-      "revision": "0f862031ba07e5f46c3929818873dee7b9e05608",
-      "analysis_path": "reports/analysis/netease_20261101T044527Z_157cf969/v1.3",
-      "dictionary_path": "etl/skills/dictionary.json"
+      "batch_path": "data/netease/netease_20261120T145742Z_a2a9c5c5",
+      "revision": "79c1c1108d9159c383ece8cd7ea23b817d4dd200",
+      "analysis_path": "reports/analysis/netease_20261120T145742Z_a2a9c5c5/expanded-v2.1",
+      "dictionary_path": "etl/skills/dictionary.json",
+      "policy_path": "warehouse/expansion_policy_v21.json"
+    },
+    {
+      "batch_path": "data/xiaomi/xiaomi_20261120T152702Z_470b8a89",
+      "revision": "79c1c1108d9159c383ece8cd7ea23b817d4dd200",
+      "analysis_path": "reports/analysis/xiaomi_20261120T152702Z_470b8a89/expanded-v2.1",
+      "dictionary_path": "etl/skills/dictionary.json",
+      "policy_path": "warehouse/expansion_policy_v21.json"
+    },
+    {
+      "batch_path": "data/jd/jd_20261120T152717Z_b825c288",
+      "revision": "79c1c1108d9159c383ece8cd7ea23b817d4dd200",
+      "analysis_path": "reports/analysis/jd_20261120T152717Z_b825c288/expanded-v2.1",
+      "dictionary_path": "etl/skills/dictionary.json",
+      "policy_path": "warehouse/expansion_policy_v21.json"
     }
-  ]
+  ],
+  "expectations": {
+    "source_counts": {
+      "tencent": {
+        "source_postings": 431,
+        "core_postings": 416,
+        "body_denominator": 416
+      },
+      "netease": {
+        "source_postings": 448,
+        "core_postings": 444,
+        "body_denominator": 444
+      },
+      "xiaomi": {
+        "source_postings": 500,
+        "core_postings": 497,
+        "body_denominator": 497
+      },
+      "jd": {
+        "source_postings": 200,
+        "core_postings": 199,
+        "body_denominator": 199
+      }
+    },
+    "posting_skill_pairs": {
+      "tencent": 1304,
+      "netease": 1263,
+      "xiaomi": 1170,
+      "jd": 263
+    },
+    "rule_version": "skills-rules-0.3.1"
+  }
 }

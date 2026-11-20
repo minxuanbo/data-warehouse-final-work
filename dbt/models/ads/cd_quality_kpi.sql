@@ -20,9 +20,9 @@ with traced_jobs as (
  join {{ source('audit','collection_batch') }} c on c.batch_id=s.batch_id
  join traceability t on t.build_id=s.build_id
  cross apply (values
-  ('core_body_coverage',N'核心岗位正文覆盖率',N'C/D：数据加工与技能分析',s.skill_denominator,s.core_posting_count),
-  ('raw_traceability',N'来源岗位原文可追溯率',N'A/B/C：采集与入库',t.traced_count,t.posting_count),
-  ('collection_scope_complete',N'批准采集范围遍历完成率',N'A/B：来源采集',
+  ('core_body_coverage',N'核心岗位正文覆盖率',N'数据加工与技能分析',s.skill_denominator,s.core_posting_count),
+  ('raw_traceability',N'来源岗位原文可追溯率',N'四来源采集与入库',t.traced_count,t.posting_count),
+  ('collection_scope_complete',N'批准采集范围遍历完成率',N'来源采集与验收',
    cast(case when c.coverage_status='complete' then 1 else 0 end as bigint),cast(1 as bigint))
  ) k(kpi_code,kpi_name,owner_role,numerator,denominator)
 )

@@ -58,7 +58,7 @@ def main():
         dax='EVALUATE '+('CALCULATETABLE('+expr+','+','.join(filters)+')' if filters else expr)
         cases.append({'name':name,'dax':dax,'expected':expected})
     add('all_sources')
-    for source in ('tencent','netease'):
+    for source in sorted({j['source'] for j in jobs}):
         add(source,source)
         source_jobs=[j for j in jobs if j['source']==source and j['is_core']]
         for city in sorted(set.union(*(j['city'] for j in source_jobs))):
@@ -73,10 +73,10 @@ def main():
         add(source+'_city_pair',source,cities=['深圳' if source=='tencent' else '杭州'],pair=['Python','SQL'])
         add(source+'_city_experience_category',source,cities=list(source_jobs[0]['city']),
             experience=source_jobs[0]['experience_group'],category=source_jobs[0]['category_group'])
-        no_match=next(j for j in source_jobs if not skills[j['job_key']])
-        add(source+'_no_match_body_kept',source,job_id=no_match['source_job_id'])
-        extension=next(j for j in jobs if j['source']==source and not j['is_core'])
-        add(source+'_extension_excluded',source,job_id=extension['source_job_id'])
+        no_match=next((j for j in source_jobs if not skills[j['job_key']]),None)
+        if no_match:add(source+'_no_match_body_kept',source,job_id=no_match['source_job_id'])
+        extension=next((j for j in jobs if j['source']==source and not j['is_core']),None)
+        if extension:add(source+'_extension_excluded',source,job_id=extension['source_job_id'])
     add('tencent_multi_city_union','tencent',cities=['北京','深圳'])
     add('netease_hint_not_conflict','netease',experience='不限',job_id='78729')
     add('empty_selection',cities=['不存在的城市'])

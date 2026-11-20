@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "database": "recruitment_dw_dev_expansion_v1",
+  "documented_objects": 69,
+  "documented_columns": 608,
+  "new_model_descriptions": 17,
+  "unexplained_columns": []
+}

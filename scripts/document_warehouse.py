@@ -1,5 +1,6 @@
 """Generate model/field documentation from verified SQL metadata, with business meanings."""
 import argparse
+from datetime import datetime
 from collections import defaultdict
 import json
 from pathlib import Path
@@ -147,7 +148,9 @@ TABLE_GRAINS={
 }
 
 
-def main(database):
+def main(database,evidence_output=None):
+    evidence_output=Path(evidence_output) if evidence_output else ROOT/('reports/verification/模型文档覆盖_'+datetime.now().strftime('%Y%m%dT%H%M%S')+'.json')
+    if evidence_output.exists():raise FileExistsError(evidence_output)
     c=connect(database)
     try:
         rows=records(c,'''SELECT s.name as schema_name,o.name as object_name,o.type,c.column_id,c.name as column_name,
@@ -227,9 +230,11 @@ def main(database):
     doc.write_text('\n'.join(intro+index+details)+'\n',encoding='utf-8')
     result={'status':'passed','database':database,'documented_objects':len(objects),'documented_columns':len(rows),
       'new_model_descriptions':len(model_docs),'unexplained_columns':missing}
-    (ROOT/'reports/verification/模型文档覆盖_20261118.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    evidence_output.parent.mkdir(parents=True,exist_ok=True)
+    evidence_output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,ensure_ascii=False))
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--database',default='recruitment_dw_dev_cd_v1');main(p.parse_args().database)
+    p=argparse.ArgumentParser();p.add_argument('--database',default='recruitment_dw_dev_cd_v1');p.add_argument('--evidence-output',type=Path)
+    args=p.parse_args();main(args.database,args.evidence_output)

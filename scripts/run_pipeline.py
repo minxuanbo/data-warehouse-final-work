@@ -76,7 +76,7 @@ def run(config_path,*,dry_run=False):
         result=subprocess.run(command,cwd=ROOT,capture_output=True,text=True,encoding='utf-8',errors='replace')
         (out/'dbt.log').write_text(result.stdout+result.stderr,encoding='utf-8')
         if result.returncode:raise RuntimeError('dbt failed; previous publication preserved. See local dbt.log')
-        release=build_release(build_ids,channel=config.get('channel','sample'))
+        release=build_release(build_ids,channel=config.get('channel','sample'),expected_sources=config.get('expected_sources',('tencent','netease')))
         # New snapshot rows are checked AFTER construction, before any pointer switch.
         from warehouse.load import connect
         c=connect()

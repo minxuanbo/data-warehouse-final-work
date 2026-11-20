@@ -20,6 +20,15 @@ from warehouse.normalization import category
 
 
 LANGUAGE=re.compile(r'Java|Python|Android|iOS|HarmonyOS|鸿蒙|\bWeb\b|C\+\+|C#|Golang|SDK|推荐|搜索|智能体|\bAgent\b',re.I)
+FOREIGN_CITIES={'伦敦','奥克兰','贝尔维尤','法兰克福','尔湾','悉尼','马德里','慕尼黑','迪拜'}
+# Reviewed against this exact new batch. A department prefix such as 营销/客服
+# cannot override an explicit software engineering role. Never copy to new scans.
+TENCENT_REVIEWED_SOFTWARE={
+ '2089960263330742272':'Java后端开发工程师','2056671347148505088':'后台开发工程师',
+ '2110211598940549120':'运营开发工程师','2119283217256333312':'全栈开发工程师',
+ '1958073234469572608':'Pytorch框架研发','2117825129072472064':'运营开发',
+ '2104475912140664832':'AI Agent 架构师','2114892055439392768':'研发负责人',
+ '2117169901797027840':'Gameplay开发工程师','1958073219999223808':'预训练框架研发工程师'}
 
 
 def main(batch,output,accept=False):
@@ -66,6 +75,11 @@ def main(batch,output,accept=False):
             if LANGUAGE.search(title):in_core,reason=True,'标题明确软件平台或编程技术方向'
             elif category(title,job['category_raw'])!='待分类' and re.search(r'软件|算法|代码|编程|研发|开发|系统|数据',job['requirements_raw'] or ''):
                 in_core,reason=True,'标题/来源类别与任职要求共同支持数字技术职责'
+        if m['batch_id']=='tencent_20261120T145742Z_cb8952ee' and sid in TENCENT_REVIEWED_SOFTWARE:
+            assert TENCENT_REVIEWED_SOFTWARE[sid] in title
+            in_core,reason=True,'本批原文复核：部门前缀不替代明确软件研发职责；依据标题 '+TENCENT_REVIEWED_SOFTWARE[sid]
+        if locations and all(x in FOREIGN_CITIES or OVERSEAS.search(x) for x in locations):
+            in_core,reason=False,'来源明确为境外城市，不进入本期中国大陆核心范围'
         decisions[sid]={'is_core':in_core,'reason':reason,'raw_ref':list_ref['path']}
     proof=(assess(root,source,m['stop_reason'],m['counts'],m['error_pages']) if source in ('xiaomi','jd')
            else assess_coverage(root,source,m['stop_reason'],m['counts'],m['error_pages']))

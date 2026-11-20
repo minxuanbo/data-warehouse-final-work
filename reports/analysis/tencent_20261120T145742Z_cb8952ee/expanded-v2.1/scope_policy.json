@@ -1,0 +1,35 @@
+{
+  "scope_version": "digital_jobs_cn_core_v2.1",
+  "enrichment_version": "four_source_official_v2.0",
+  "body_hash_version": "skills-body-1.1",
+  "skill_input_fields": [
+    "description_raw",
+    "requirements_raw",
+    "additional_requirements_raw"
+  ],
+  "review_actor": "AI_assisted_scope_review",
+  "business_scope": "Mainland public software, data, algorithms, software/game QA and operations/security roles; excludes design creation, manual annotation, pure hardware, operations and nontechnical management",
+  "sources": {
+    "tencent": {
+      "excluded_jobs": {
+        "2123662691158634496": "来源明确为境外城市，不进入本期中国大陆核心范围",
+        "2104760602634403840": "非本期软件数据数字技术职责或管理/运营岗位",
+        "2120442506620616704": "标题未明确属于本期数字技术方向，保守排除",
+        "2122666103573495808": "来源明确为境外城市，不进入本期中国大陆核心范围",
+        "2120929740708823040": "来源明确为境外城市，不进入本期中国大陆核心范围",
+        "2120808855029071872": "来源明确为境外城市，不进入本期中国大陆核心范围",
+        "2120340766067961856": "来源明确为境外城市，不进入本期中国大陆核心范围",
+        "2063813057255223296": "非本期软件数据数字技术职责或管理/运营岗位",
+        "2052679386385264640": "非本期软件数据数字技术职责或管理/运营岗位",
+        "2118589234158944256": "来源明确为境外城市，不进入本期中国大陆核心范围",
+        "2118272142553559040": "来源明确为境外城市，不进入本期中国大陆核心范围",
+        "2112851436600733696": "来源明确为境外城市，不进入本期中国大陆核心范围",
+        "2117094389141647360": "来源明确为境外城市，不进入本期中国大陆核心范围",
+        "2059914525578276864": "非本期软件数据数字技术职责或管理/运营岗位",
+        "2114963351808425984": "非本期软件数据数字技术职责或管理/运营岗位"
+      },
+      "additional_locations": {},
+      "experience_hint_only": []
+    }
+  }
+}

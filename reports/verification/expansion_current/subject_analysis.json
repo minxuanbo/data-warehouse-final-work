@@ -1,0 +1,1574 @@
+{
+  "checked_at_utc": "2026-11-20T16:40:38.021285+00:00",
+  "status": "passed",
+  "database": "recruitment_dw_dev_expansion_v1",
+  "release_id": 1,
+  "checks": [
+    "snapshot_grain",
+    "structure_population",
+    "entry_population",
+    "skill_numerator",
+    "skill_denominator",
+    "partial_change_gate"
+  ],
+  "sources": {
+    "netease": {
+      "source_postings": 448,
+      "core_postings": 444,
+      "body_denominator": 444,
+      "posting_skill_pairs": 1263,
+      "dates": [
+        "2026-11-20"
+      ]
+    },
+    "xiaomi": {
+      "source_postings": 500,
+      "core_postings": 497,
+      "body_denominator": 497,
+      "posting_skill_pairs": 1170,
+      "dates": [
+        "2026-11-20"
+      ]
+    },
+    "jd": {
+      "source_postings": 200,
+      "core_postings": 199,
+      "body_denominator": 199,
+      "posting_skill_pairs": 263,
+      "dates": [
+        "2026-11-20"
+      ]
+    },
+    "tencent": {
+      "source_postings": 431,
+      "core_postings": 416,
+      "body_denominator": 416,
+      "posting_skill_pairs": 1304,
+      "dates": [
+        "2026-11-21"
+      ]
+    }
+  },
+  "standard_category_counts": {
+    "开发": 725,
+    "测试": 119,
+    "运维/安全": 47,
+    "算法/AI": 602,
+    "数据开发/分析": 51,
+    "待分类": 12
+  },
+  "top_skills": [
+    [
+      "Python",
+      420
+    ],
+    [
+      "C++",
+      416
+    ],
+    [
+      "Linux",
+      229
+    ],
+    [
+      "C",
+      194
+    ],
+    [
+      "PyTorch",
+      170
+    ],
+    [
+      "Java",
+      117
+    ],
+    [
+      "Unreal Engine",
+      114
+    ],
+    [
+      "Android",
+      109
+    ],
+    [
+      "RAG",
+      108
+    ],
+    [
+      "MySQL",
+      96
+    ]
+  ],
+  "top_pairs": [
+    [
+      [
+        "C++",
+        "Python"
+      ],
+      222
+    ],
+    [
+      [
+        "C",
+        "C++"
+      ],
+      155
+    ],
+    [
+      [
+        "PyTorch",
+        "Python"
+      ],
+      101
+    ],
+    [
+      [
+        "C++",
+        "Linux"
+      ],
+      93
+    ],
+    [
+      [
+        "C",
+        "Python"
+      ],
+      86
+    ],
+    [
+      [
+        "PyTorch",
+        "TensorFlow"
+      ],
+      78
+    ],
+    [
+      [
+        "C++",
+        "Unreal Engine"
+      ],
+      76
+    ],
+    [
+      [
+        "MySQL",
+        "Redis"
+      ],
+      68
+    ],
+    [
+      [
+        "Linux",
+        "Python"
+      ],
+      63
+    ],
+    [
+      [
+        "C",
+        "Linux"
+      ],
+      57
+    ]
+  ],
+  "education": [
+    [
+      [
+        "jd",
+        "未注明"
+      ],
+      141
+    ],
+    [
+      [
+        "jd",
+        "本科"
+      ],
+      43
+    ],
+    [
+      [
+        "jd",
+        "硕士"
+      ],
+      15
+    ],
+    [
+      [
+        "netease",
+        "不限"
+      ],
+      43
+    ],
+    [
+      [
+        "netease",
+        "冲突待确认"
+      ],
+      105
+    ],
+    [
+      [
+        "netease",
+        "本科"
+      ],
+      284
+    ],
+    [
+      [
+        "netease",
+        "硕士"
+      ],
+      12
+    ],
+    [
+      [
+        "tencent",
+        "博士"
+      ],
+      4
+    ],
+    [
+      [
+        "tencent",
+        "未注明"
+      ],
+      170
+    ],
+    [
+      [
+        "tencent",
+        "本科"
+      ],
+      186
+    ],
+    [
+      [
+        "tencent",
+        "硕士"
+      ],
+      56
+    ],
+    [
+      [
+        "xiaomi",
+        "博士"
+      ],
+      10
+    ],
+    [
+      [
+        "xiaomi",
+        "未注明"
+      ],
+      161
+    ],
+    [
+      [
+        "xiaomi",
+        "本科"
+      ],
+      206
+    ],
+    [
+      [
+        "xiaomi",
+        "硕士"
+      ],
+      120
+    ]
+  ],
+  "note": "Category mapping is automatic initial classification; no human-review accuracy claim.",
+  "source_direction_counts": {
+    "netease": {
+      "开发": 271,
+      "测试": 64,
+      "运维/安全": 20,
+      "算法/AI": 75,
+      "数据开发/分析": 14
+    },
+    "xiaomi": {
+      "开发": 170,
+      "算法/AI": 263,
+      "待分类": 11,
+      "数据开发/分析": 13,
+      "测试": 33,
+      "运维/安全": 7
+    },
+    "jd": {
+      "算法/AI": 79,
+      "开发": 88,
+      "测试": 7,
+      "运维/安全": 11,
+      "数据开发/分析": 13,
+      "待分类": 1
+    },
+    "tencent": {
+      "开发": 196,
+      "算法/AI": 185,
+      "数据开发/分析": 11,
+      "运维/安全": 9,
+      "测试": 15
+    }
+  },
+  "experience": [
+    [
+      [
+        "jd",
+        "2-5年"
+      ],
+      1
+    ],
+    [
+      [
+        "jd",
+        "2年以上"
+      ],
+      5
+    ],
+    [
+      [
+        "jd",
+        "3-5年"
+      ],
+      7
+    ],
+    [
+      [
+        "jd",
+        "3年以上"
+      ],
+      12
+    ],
+    [
+      [
+        "jd",
+        "5-10年"
+      ],
+      2
+    ],
+    [
+      [
+        "jd",
+        "5年以上"
+      ],
+      10
+    ],
+    [
+      [
+        "jd",
+        "待确认"
+      ],
+      2
+    ],
+    [
+      [
+        "jd",
+        "未注明"
+      ],
+      160
+    ],
+    [
+      [
+        "netease",
+        "0-3年"
+      ],
+      21
+    ],
+    [
+      [
+        "netease",
+        "10年以上"
+      ],
+      4
+    ],
+    [
+      [
+        "netease",
+        "3-5年"
+      ],
+      159
+    ],
+    [
+      [
+        "netease",
+        "5-10年"
+      ],
+      60
+    ],
+    [
+      [
+        "netease",
+        "不限"
+      ],
+      200
+    ],
+    [
+      [
+        "tencent",
+        "10年以上"
+      ],
+      2
+    ],
+    [
+      [
+        "tencent",
+        "1年以上"
+      ],
+      88
+    ],
+    [
+      [
+        "tencent",
+        "2年以上"
+      ],
+      82
+    ],
+    [
+      [
+        "tencent",
+        "3年以上"
+      ],
+      157
+    ],
+    [
+      [
+        "tencent",
+        "5年以上"
+      ],
+      69
+    ],
+    [
+      [
+        "tencent",
+        "8年以上"
+      ],
+      4
+    ],
+    [
+      [
+        "tencent",
+        "不限"
+      ],
+      13
+    ],
+    [
+      [
+        "tencent",
+        "未注明"
+      ],
+      1
+    ],
+    [
+      [
+        "xiaomi",
+        "10年以上"
+      ],
+      3
+    ],
+    [
+      [
+        "xiaomi",
+        "1年以上"
+      ],
+      2
+    ],
+    [
+      [
+        "xiaomi",
+        "2年以上"
+      ],
+      6
+    ],
+    [
+      [
+        "xiaomi",
+        "3-5年"
+      ],
+      2
+    ],
+    [
+      [
+        "xiaomi",
+        "3-8年"
+      ],
+      1
+    ],
+    [
+      [
+        "xiaomi",
+        "3年"
+      ],
+      2
+    ],
+    [
+      [
+        "xiaomi",
+        "3年以上"
+      ],
+      53
+    ],
+    [
+      [
+        "xiaomi",
+        "4年以上"
+      ],
+      4
+    ],
+    [
+      [
+        "xiaomi",
+        "5年"
+      ],
+      1
+    ],
+    [
+      [
+        "xiaomi",
+        "5年以上"
+      ],
+      50
+    ],
+    [
+      [
+        "xiaomi",
+        "6年以上"
+      ],
+      2
+    ],
+    [
+      [
+        "xiaomi",
+        "7年以上"
+      ],
+      8
+    ],
+    [
+      [
+        "xiaomi",
+        "8年以上"
+      ],
+      9
+    ],
+    [
+      [
+        "xiaomi",
+        "9年以上"
+      ],
+      2
+    ],
+    [
+      [
+        "xiaomi",
+        "待确认"
+      ],
+      21
+    ],
+    [
+      [
+        "xiaomi",
+        "未注明"
+      ],
+      331
+    ]
+  ],
+  "skilled_jobs": 1148,
+  "combination_jobs": 939,
+  "zero_skill_jobs": 408,
+  "coverage": {
+    "netease": [
+      "partial"
+    ],
+    "xiaomi": [
+      "partial"
+    ],
+    "jd": [
+      "partial"
+    ],
+    "tencent": [
+      "partial"
+    ]
+  },
+  "province_only_job_count": 31,
+  "scenario": {
+    "population_definition": {
+      "province": "浙江",
+      "category": "开发",
+      "education": "本科"
+    },
+    "selection_method": "Among bachelor/development provincial groups, select largest observed body population for a clear demonstration, not a market ranking",
+    "denominator": 117,
+    "source_counts": {
+      "netease": 116,
+      "tencent": 1
+    },
+    "zero_skill_jobs": 20,
+    "skills": [
+      [
+        "C++",
+        46
+      ],
+      [
+        "Python",
+        30
+      ],
+      [
+        "Unreal Engine",
+        27
+      ],
+      [
+        "Unity",
+        23
+      ],
+      [
+        "Java",
+        18
+      ],
+      [
+        "MySQL",
+        18
+      ],
+      [
+        "Redis",
+        16
+      ],
+      [
+        "Lua",
+        15
+      ],
+      [
+        "Linux",
+        12
+      ],
+      [
+        "C",
+        10
+      ],
+      [
+        "Claude Code",
+        10
+      ],
+      [
+        "React",
+        10
+      ]
+    ],
+    "pairs": [
+      [
+        [
+          "C++",
+          "Python"
+        ],
+        20
+      ],
+      [
+        [
+          "C++",
+          "Unreal Engine"
+        ],
+        16
+      ],
+      [
+        [
+          "Unity",
+          "Unreal Engine"
+        ],
+        16
+      ],
+      [
+        [
+          "Java",
+          "MySQL"
+        ],
+        13
+      ],
+      [
+        [
+          "C++",
+          "Unity"
+        ],
+        13
+      ],
+      [
+        [
+          "C++",
+          "Lua"
+        ],
+        12
+      ],
+      [
+        [
+          "MySQL",
+          "Redis"
+        ],
+        12
+      ],
+      [
+        [
+          "Java",
+          "Redis"
+        ],
+        11
+      ],
+      [
+        [
+          "C",
+          "C++"
+        ],
+        9
+      ],
+      [
+        [
+          "Claude Code",
+          "MySQL"
+        ],
+        8
+      ]
+    ],
+    "experience_groups": {
+      "5-10年": 26,
+      "3-5年": 55,
+      "0-3年": 7,
+      "不限": 26,
+      "10年以上": 2,
+      "3年以上": 1
+    },
+    "jobs": [
+      {
+        "source": "netease",
+        "source_job_id": "23198",
+        "title": "资深/专家引擎开发工程师（在研新项目）",
+        "date_key": 20261120,
+        "job_key": 202
+      },
+      {
+        "source": "netease",
+        "source_job_id": "76595",
+        "title": "高级/资深工具开发",
+        "date_key": 20261120,
+        "job_key": 204
+      },
+      {
+        "source": "netease",
+        "source_job_id": "79599",
+        "title": "高级/资深数据采集工程师",
+        "date_key": 20261120,
+        "job_key": 205
+      },
+      {
+        "source": "netease",
+        "source_job_id": "79777",
+        "title": "音频QA工程师（无限大）",
+        "date_key": 20261120,
+        "job_key": 211
+      },
+      {
+        "source": "netease",
+        "source_job_id": "74175",
+        "title": "高级/资深风控策略（C端业务）",
+        "date_key": 20261120,
+        "job_key": 214
+      },
+      {
+        "source": "netease",
+        "source_job_id": "70487",
+        "title": "客户端开发（玩法方向-蛋仔派对）",
+        "date_key": 20261120,
+        "job_key": 217
+      },
+      {
+        "source": "netease",
+        "source_job_id": "79447",
+        "title": "游戏服务器开发实习生",
+        "date_key": 20261120,
+        "job_key": 224
+      },
+      {
+        "source": "netease",
+        "source_job_id": "61088",
+        "title": "游戏研发工程师实习生（客户端方向）",
+        "date_key": 20261120,
+        "job_key": 225
+      },
+      {
+        "source": "netease",
+        "source_job_id": "80011",
+        "title": "资深全栈开发工程师（偏前端）",
+        "date_key": 20261120,
+        "job_key": 228
+      },
+      {
+        "source": "netease",
+        "source_job_id": "63111",
+        "title": "资深/高级全栈开发工程师（HR系统）",
+        "date_key": 20261120,
+        "job_key": 232
+      },
+      {
+        "source": "netease",
+        "source_job_id": "59977",
+        "title": "高级客户端开发工程师",
+        "date_key": 20261120,
+        "job_key": 234
+      },
+      {
+        "source": "netease",
+        "source_job_id": "79562",
+        "title": "高级/资深Agent工程师（前端/跨端背景）-LOFTER",
+        "date_key": 20261120,
+        "job_key": 235
+      },
+      {
+        "source": "netease",
+        "source_job_id": "58563",
+        "title": "客户端专家/组长",
+        "date_key": 20261120,
+        "job_key": 239
+      },
+      {
+        "source": "netease",
+        "source_job_id": "77678",
+        "title": "高级/资深服务端开发工程师（在研新项目）",
+        "date_key": 20261120,
+        "job_key": 251
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78108",
+        "title": "高级/资深游戏客户端开发工程师",
+        "date_key": 20261120,
+        "job_key": 252
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78243",
+        "title": "高级/资深游戏服务端开发工程师",
+        "date_key": 20261120,
+        "job_key": 253
+      },
+      {
+        "source": "netease",
+        "source_job_id": "77680",
+        "title": "高级/资深引擎开发工程师（在研新项目）",
+        "date_key": 20261120,
+        "job_key": 254
+      },
+      {
+        "source": "netease",
+        "source_job_id": "77679",
+        "title": "高级/资深客户端开发工程师（在研新项目）",
+        "date_key": 20261120,
+        "job_key": 255
+      },
+      {
+        "source": "netease",
+        "source_job_id": "79970",
+        "title": "资深全栈开发工程师（营收域）",
+        "date_key": 20261120,
+        "job_key": 256
+      },
+      {
+        "source": "netease",
+        "source_job_id": "58384",
+        "title": "平台开发实习生（Python方向）",
+        "date_key": 20261120,
+        "job_key": 261
+      },
+      {
+        "source": "netease",
+        "source_job_id": "77384",
+        "title": "全栈资深开发工程师（费控）",
+        "date_key": 20261120,
+        "job_key": 264
+      },
+      {
+        "source": "netease",
+        "source_job_id": "57588",
+        "title": "资深全栈开发工程师（MPC方向）",
+        "date_key": 20261120,
+        "job_key": 277
+      },
+      {
+        "source": "netease",
+        "source_job_id": "77358",
+        "title": "资深管线和工具开发工程师",
+        "date_key": 20261120,
+        "job_key": 278
+      },
+      {
+        "source": "netease",
+        "source_job_id": "63733",
+        "title": "资深全栈开发工程师（核算域）",
+        "date_key": 20261120,
+        "job_key": 287
+      },
+      {
+        "source": "netease",
+        "source_job_id": "65376",
+        "title": "资深全栈开发工程师（税务域）",
+        "date_key": 20261120,
+        "job_key": 288
+      },
+      {
+        "source": "netease",
+        "source_job_id": "65697",
+        "title": "资深全栈开发工程师（VMS方向）",
+        "date_key": 20261120,
+        "job_key": 289
+      },
+      {
+        "source": "netease",
+        "source_job_id": "79780",
+        "title": "引擎交付工程师",
+        "date_key": 20261120,
+        "job_key": 322
+      },
+      {
+        "source": "netease",
+        "source_job_id": "59913",
+        "title": "资深音频客户端工程师（播放）",
+        "date_key": 20261120,
+        "job_key": 329
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78952",
+        "title": "高级/资深平台开发工程师",
+        "date_key": 20261120,
+        "job_key": 330
+      },
+      {
+        "source": "netease",
+        "source_job_id": "18566",
+        "title": "特效TA（无限大）",
+        "date_key": 20261120,
+        "job_key": 332
+      },
+      {
+        "source": "netease",
+        "source_job_id": "33140",
+        "title": "资深Android开发工程师（多终端业务）",
+        "date_key": 20261120,
+        "job_key": 333
+      },
+      {
+        "source": "netease",
+        "source_job_id": "60238",
+        "title": "资深服务端开发（社区业务）",
+        "date_key": 20261120,
+        "job_key": 334
+      },
+      {
+        "source": "netease",
+        "source_job_id": "65222",
+        "title": "高级/资深Android开发工程师（广告业务）",
+        "date_key": 20261120,
+        "job_key": 335
+      },
+      {
+        "source": "netease",
+        "source_job_id": "66197",
+        "title": "高级/资深中间件开发工程师",
+        "date_key": 20261120,
+        "job_key": 336
+      },
+      {
+        "source": "netease",
+        "source_job_id": "69388",
+        "title": "资深Android开发工程师（社区）",
+        "date_key": 20261120,
+        "job_key": 337
+      },
+      {
+        "source": "netease",
+        "source_job_id": "75490",
+        "title": "资深云计算开发工程师",
+        "date_key": 20261120,
+        "job_key": 340
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78823",
+        "title": "高级服务端开发工程师（海外项目）",
+        "date_key": 20261120,
+        "job_key": 344
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78824",
+        "title": "高级全栈开发工程师（出海业务）",
+        "date_key": 20261120,
+        "job_key": 345
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78916",
+        "title": "资深iOS开发工程师（网络/播放）",
+        "date_key": 20261120,
+        "job_key": 346
+      },
+      {
+        "source": "netease",
+        "source_job_id": "79479",
+        "title": "资深Android开发工程师（播放）",
+        "date_key": 20261120,
+        "job_key": 348
+      },
+      {
+        "source": "netease",
+        "source_job_id": "76104",
+        "title": "高级/资深Golang开发工程师",
+        "date_key": 20261120,
+        "job_key": 352
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78852",
+        "title": "客户端开发实习生（王牌竞速）",
+        "date_key": 20261120,
+        "job_key": 368
+      },
+      {
+        "source": "netease",
+        "source_job_id": "33992",
+        "title": "游戏引擎开发工程师",
+        "date_key": 20261120,
+        "job_key": 375
+      },
+      {
+        "source": "netease",
+        "source_job_id": "75384",
+        "title": "游戏服务端开发工程师",
+        "date_key": 20261120,
+        "job_key": 392
+      },
+      {
+        "source": "netease",
+        "source_job_id": "74302",
+        "title": "资深架构师（工程智能化）",
+        "date_key": 20261120,
+        "job_key": 396
+      },
+      {
+        "source": "netease",
+        "source_job_id": "69390",
+        "title": "资深/专家游戏服务器端开发（星绘友晴天）",
+        "date_key": 20261120,
+        "job_key": 398
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78750",
+        "title": "软件集成开发工程师（工程机械智能化）",
+        "date_key": 20261120,
+        "job_key": 402
+      },
+      {
+        "source": "netease",
+        "source_job_id": "60311",
+        "title": "资深全栈开发工程师（小喇叭）-杭州",
+        "date_key": 20261120,
+        "job_key": 404
+      },
+      {
+        "source": "netease",
+        "source_job_id": "77774",
+        "title": "高级/资深全栈开发工程师（综合产品）",
+        "date_key": 20261120,
+        "job_key": 405
+      },
+      {
+        "source": "netease",
+        "source_job_id": "66771",
+        "title": "资深爬虫开发工程师（杭州）",
+        "date_key": 20261120,
+        "job_key": 406
+      },
+      {
+        "source": "netease",
+        "source_job_id": "65176",
+        "title": "资深游戏客户端开发工程师（在研新项目）",
+        "date_key": 20261120,
+        "job_key": 412
+      },
+      {
+        "source": "netease",
+        "source_job_id": "79130",
+        "title": "高级游戏客户端",
+        "date_key": 20261120,
+        "job_key": 420
+      },
+      {
+        "source": "netease",
+        "source_job_id": "79523",
+        "title": "TA负责人",
+        "date_key": 20261120,
+        "job_key": 435
+      },
+      {
+        "source": "netease",
+        "source_job_id": "79522",
+        "title": "引擎负责人",
+        "date_key": 20261120,
+        "job_key": 436
+      },
+      {
+        "source": "netease",
+        "source_job_id": "77492",
+        "title": "资深Java开发工程师",
+        "date_key": 20261120,
+        "job_key": 438
+      },
+      {
+        "source": "netease",
+        "source_job_id": "77522",
+        "title": "资深引擎开发工程师-诡影藏锋",
+        "date_key": 20261120,
+        "job_key": 439
+      },
+      {
+        "source": "netease",
+        "source_job_id": "77473",
+        "title": "高级客户端工程师（gameplay）",
+        "date_key": 20261120,
+        "job_key": 464
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78670",
+        "title": "资深游戏服务器开发",
+        "date_key": 20261120,
+        "job_key": 470
+      },
+      {
+        "source": "netease",
+        "source_job_id": "71609",
+        "title": "高级服务器开发工程师",
+        "date_key": 20261120,
+        "job_key": 475
+      },
+      {
+        "source": "netease",
+        "source_job_id": "73483",
+        "title": "引擎开发工程师",
+        "date_key": 20261120,
+        "job_key": 478
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78614",
+        "title": "IT服务管理专家（杭州）",
+        "date_key": 20261120,
+        "job_key": 480
+      },
+      {
+        "source": "netease",
+        "source_job_id": "79001",
+        "title": "Codewave-服务端开发工程师",
+        "date_key": 20261120,
+        "job_key": 492
+      },
+      {
+        "source": "netease",
+        "source_job_id": "33178",
+        "title": "资深C++服务器开发工程师（全明星街球派对）",
+        "date_key": 20261120,
+        "job_key": 497
+      },
+      {
+        "source": "netease",
+        "source_job_id": "76766",
+        "title": "高级C++服务器开发工程师（在研体育竞技）",
+        "date_key": 20261120,
+        "job_key": 498
+      },
+      {
+        "source": "netease",
+        "source_job_id": "68703",
+        "title": "游戏研发工程师实习生（服务器方向）",
+        "date_key": 20261120,
+        "job_key": 505
+      },
+      {
+        "source": "netease",
+        "source_job_id": "76151",
+        "title": "高级游戏客户端开发工程师-《燕云十六声》",
+        "date_key": 20261120,
+        "job_key": 507
+      },
+      {
+        "source": "netease",
+        "source_job_id": "76734",
+        "title": "引擎研发工程师（编辑器方向）",
+        "date_key": 20261120,
+        "job_key": 509
+      },
+      {
+        "source": "netease",
+        "source_job_id": "72455",
+        "title": "高级/资深客户端开发工程师",
+        "date_key": 20261120,
+        "job_key": 510
+      },
+      {
+        "source": "netease",
+        "source_job_id": "57293",
+        "title": "综合岗位",
+        "date_key": 20261120,
+        "job_key": 521
+      },
+      {
+        "source": "netease",
+        "source_job_id": "77622",
+        "title": "机房现场管理专家（IM&服务器）",
+        "date_key": 20261120,
+        "job_key": 525
+      },
+      {
+        "source": "netease",
+        "source_job_id": "58587",
+        "title": "引擎开发（综合方向）",
+        "date_key": 20261120,
+        "job_key": 531
+      },
+      {
+        "source": "netease",
+        "source_job_id": "61697",
+        "title": "引擎开发（内存、优化方向）",
+        "date_key": 20261120,
+        "job_key": 532
+      },
+      {
+        "source": "netease",
+        "source_job_id": "52664",
+        "title": "引擎开发（GI光追方向）",
+        "date_key": 20261120,
+        "job_key": 533
+      },
+      {
+        "source": "netease",
+        "source_job_id": "62064",
+        "title": "引擎开发-渲染向-杭州",
+        "date_key": 20261120,
+        "job_key": 534
+      },
+      {
+        "source": "netease",
+        "source_job_id": "70059",
+        "title": "高级/资深 PVP战斗开发工程师",
+        "date_key": 20261120,
+        "job_key": 536
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78251",
+        "title": "高级游戏客户端开发工程师",
+        "date_key": 20261120,
+        "job_key": 544
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78166",
+        "title": "资深游戏客户端开发工程师",
+        "date_key": 20261120,
+        "job_key": 548
+      },
+      {
+        "source": "netease",
+        "source_job_id": "76570",
+        "title": "高级引擎开发工程师（逆水寒）",
+        "date_key": 20261120,
+        "job_key": 549
+      },
+      {
+        "source": "netease",
+        "source_job_id": "78052",
+        "title": "服务器开发工程师",
+        "date_key": 20261120,
+        "job_key": 554
+      },
+      {
+        "source": "netease",
+        "source_job_id": "72396",
+        "title": "资深游戏客户端（在研体育竞技）",
+        "date_key": 20261120,
+        "job_key": 556
+      },
+      {
+        "source": "netease",
+        "source_job_id": "52032",
+        "title": "高级客户端/服务器开发-寻路（无限大）",
+        "date_key": 20261120,
+        "job_key": 557
+      },
+      {
+        "source": "netease",
+        "source_job_id": "55328",
+        "title": "客户端开发工程师",
+        "date_key": 20261120,
+        "job_key": 561
+      },
+      {
+        "source": "netease",
+        "source_job_id": "74456",
+        "title": "引擎开发工程师（3D UI系统方向）",
+        "date_key": 20261120,
+        "job_key": 564
+      },
+      {
+        "source": "netease",
+        "source_job_id": "63680",
+        "title": "引擎开发工程师",
+        "date_key": 20261120,
+        "job_key": 571
+      },
+      {
+        "source": "netease",
+        "source_job_id": "67635",
+        "title": "游戏客户端开发工程师",
+        "date_key": 20261120,
+        "job_key": 572
+      },
+      {
+        "source": "netease",
+        "source_job_id": "75788",
+        "title": "资深游戏客户端开发工程师",
+        "date_key": 20261120,
+        "job_key": 577
+      },
+      {
+        "source": "netease",
+        "source_job_id": "76079",
+        "title": "游戏引擎开发工程师（移动端性能优化）",
+        "date_key": 20261120,
+        "job_key": 578
+      },
+      {
+        "source": "netease",
+        "source_job_id": "70274",
+        "title": "高级/资深客户端开发工程师（gameplay-遗忘之海）",
+        "date_key": 20261120,
+        "job_key": 581
+      },
+      {
+        "source": "netease",
+        "source_job_id": "52326",
+        "title": "资深/专家游戏引擎开发",
+        "date_key": 20261120,
+        "job_key": 586
+      },
+      {
+        "source": "netease",
+        "source_job_id": "76078",
+        "title": "游戏引擎开发工程师（移动端性能优化）",
+        "date_key": 20261120,
+        "job_key": 598
+      },
+      {
+        "source": "netease",
+        "source_job_id": "75878",
+        "title": "资深UE客户端开发（性能优化）",
+        "date_key": 20261120,
+        "job_key": 601
+      },
+      {
+        "source": "netease",
+        "source_job_id": "68388",
+        "title": "高级/资深Unreal开发工程师（界外狂潮）",
+        "date_key": 20261120,
+        "job_key": 606
+      },
+      {
+        "source": "netease",
+        "source_job_id": "74602",
+        "title": "管线和工具开发工程师",
+        "date_key": 20261120,
+        "job_key": 607
+      },
+      {
+        "source": "netease",
+        "source_job_id": "71808",
+        "title": "游戏引擎开发（无限大）",
+        "date_key": 20261120,
+        "job_key": 609
+      },
+      {
+        "source": "netease",
+        "source_job_id": "61039",
+        "title": "服务端开发（开放世界武侠项目）",
+        "date_key": 20261120,
+        "job_key": 610
+      },
+      {
+        "source": "netease",
+        "source_job_id": "71736",
+        "title": "客户端开发工程师-玩法（无限大）",
+        "date_key": 20261120,
+        "job_key": 611
+      },
+      {
+        "source": "netease",
+        "source_job_id": "19149",
+        "title": "游戏引擎开发工程师 （逆水寒IP）",
+        "date_key": 20261120,
+        "job_key": 612
+      },
+      {
+        "source": "netease",
+        "source_job_id": "63981",
+        "title": "资深Unreal引擎开发工程师（在研新项目）",
+        "date_key": 20261120,
+        "job_key": 615
+      },
+      {
+        "source": "netease",
+        "source_job_id": "8226",
+        "title": "资深/专家客户端性能优化（无限大）",
+        "date_key": 20261120,
+        "job_key": 616
+      },
+      {
+        "source": "netease",
+        "source_job_id": "74198",
+        "title": "高级客户端开发工程师",
+        "date_key": 20261120,
+        "job_key": 619
+      },
+      {
+        "source": "netease",
+        "source_job_id": "72810",
+        "title": "客户端开发工程师-NPC氛围（无限大）",
+        "date_key": 20261120,
+        "job_key": 621
+      },
+      {
+        "source": "netease",
+        "source_job_id": "41871",
+        "title": "客户端引擎开发专家（无限大）",
+        "date_key": 20261120,
+        "job_key": 627
+      },
+      {
+        "source": "netease",
+        "source_job_id": "56888",
+        "title": "UE5工具程序员",
+        "date_key": 20261120,
+        "job_key": 628
+      },
+      {
+        "source": "netease",
+        "source_job_id": "71526",
+        "title": "高级游戏服务端开发工程师- 系统/架构 (无限大）",
+        "date_key": 20261120,
+        "job_key": 631
+      },
+      {
+        "source": "netease",
+        "source_job_id": "71527",
+        "title": "高级游戏服务端开发工程师- 任务/玩法 (无限大）",
+        "date_key": 20261120,
+        "job_key": 632
+      },
+      {
+        "source": "netease",
+        "source_job_id": "50715",
+        "title": "资深/专家客户端开发-3C系统（无限大）",
+        "date_key": 20261120,
+        "job_key": 633
+      },
+      {
+        "source": "netease",
+        "source_job_id": "50718",
+        "title": "资深/专家客户端开发-载具相关（无限大）",
+        "date_key": 20261120,
+        "job_key": 634
+      },
+      {
+        "source": "netease",
+        "source_job_id": "73315",
+        "title": "客户端开发工程师-演出线（无限大）",
+        "date_key": 20261120,
+        "job_key": 635
+      },
+      {
+        "source": "netease",
+        "source_job_id": "61818",
+        "title": "资深客户端（3C方向）",
+        "date_key": 20261120,
+        "job_key": 636
+      },
+      {
+        "source": "netease",
+        "source_job_id": "61819",
+        "title": "资深客户端（性能优化）",
+        "date_key": 20261120,
+        "job_key": 637
+      },
+      {
+        "source": "netease",
+        "source_job_id": "19148",
+        "title": "游戏客户端开发工程师（逆水寒手游）",
+        "date_key": 20261120,
+        "job_key": 639
+      },
+      {
+        "source": "netease",
+        "source_job_id": "19150",
+        "title": "游戏服务器开发工程师",
+        "date_key": 20261120,
+        "job_key": 640
+      },
+      {
+        "source": "netease",
+        "source_job_id": "39710",
+        "title": "资深客户端开发工程师 （开放世界武侠）",
+        "date_key": 20261120,
+        "job_key": 645
+      },
+      {
+        "source": "netease",
+        "source_job_id": "51346",
+        "title": "资深客户端开发工程师（逆水寒手游）",
+        "date_key": 20261120,
+        "job_key": 646
+      },
+      {
+        "source": "netease",
+        "source_job_id": "50730",
+        "title": "资深服务器开发工程师（逆水寒手游）",
+        "date_key": 20261120,
+        "job_key": 647
+      },
+      {
+        "source": "netease",
+        "source_job_id": "68905",
+        "title": "高级服务器开发（服务器）",
+        "date_key": 20261120,
+        "job_key": 648
+      },
+      {
+        "source": "tencent",
+        "source_job_id": "2080585829356580864",
+        "title": "OG项目组-高级游戏客户端开发",
+        "date_key": 20261121,
+        "job_key": 1568
+      }
+    ]
+  },
+  "change_rows": [
+    {
+      "date_key": 20261120,
+      "is_complete": false,
+      "is_comparable": false,
+      "newly_observed_count": null,
+      "content_changed_count": null
+    },
+    {
+      "date_key": 20261121,
+      "is_complete": false,
+      "is_comparable": false,
+      "newly_observed_count": null,
+      "content_changed_count": null
+    }
+  ]
+}

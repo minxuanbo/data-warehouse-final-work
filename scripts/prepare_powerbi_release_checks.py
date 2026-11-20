@@ -44,7 +44,8 @@ def main(output_path=None):
         expression='ROW("core",[快照核心岗位数],"denominator",[快照正文分母],"skilled",[快照技能岗位数],"share",[快照技能占比],"newly_observed",[可比新增观察数])'
         cases.append({'name':'release_'+name,'dax':'EVALUATE '+('CALCULATETABLE('+expression+','+','.join(filters)+')' if filters else expression),'expected':expected})
     add('all')
-    for source in ('tencent','netease'):add(source,source=source)
+    sources=sorted({j['source'] for j in jobs})
+    for source in sources:add(source,source=source)
     for day in sorted({j['date_key'] for j in jobs}):add('day_'+str(day),day=day)
     for group in sorted({j['category'] for j in jobs if j['is_core']}):add('category_'+group,category=group)
     for group in sorted(set.union(*(j['provinces'] for j in jobs))):add('province_'+group,province=group)
@@ -59,16 +60,19 @@ def main(output_path=None):
     add('netease_fulltime',source='netease',employment='全职')
     add('netease_internship',source='netease',employment='实习')
     add('tencent_unverified_type',source='tencent',employment='来源代码未释义')
-    for source in (None,'tencent','netease'):
+    for source in [None]+sources:
         groups=[j for j in jobs if source is None or j['source']==source]
-        for code,den,num in [('core_body_coverage',sum(j['is_core'] for j in groups),sum(j['is_core'] for j in groups)),
-                             ('raw_traceability',len(groups),len(groups)),('collection_scope_complete',2 if source is None else 1,0)]:
+        selected_sources=set(sources if source is None else [source])
+        complete=sum(json.loads((batch/'manifest.json').read_text(encoding='utf-8'))['coverage_status']=='complete'
+                     for s,batch,_,_ in input_paths() if s in selected_sources)
+        for code,den,num in [('core_body_coverage',sum(j['is_core'] for j in groups),sum(j['is_core'] and any((j.get(f) or '').strip() for f in ('description_raw','requirements_raw','additional_requirements_raw')) for j in groups)),
+                             ('raw_traceability',len(groups),len(groups)),('collection_scope_complete',len(selected_sources),complete)]:
             filters=[f'TREATAS({{"{code}"}},QualityKpi[kpi_code])']
             if source:filters.append(f'TREATAS({{"{source}"}},SnapshotSources[source])')
             cases.append({'name':'quality_'+str(source)+'_'+code,'dax':'EVALUATE CALCULATETABLE(ROW("numerator",[KPI分子],"denominator",[KPI分母],"value",[KPI实际值],"goal",[KPI目标值],"status",[KPI状态说明]),'+','.join(filters)+')',
-                          'expected':{'numerator':num,'denominator':den,'value':num/den,'goal':1,'status':'达标' if num==den else '未达标'}})
+                          'expected':{'numerator':num,'denominator':den,'value':num/den if den else None,'goal':1,'status':'达标' if den and num==den else '未达标' if den else '无分母'}})
     target=Path(output_path) if output_path else ROOT/'reports/verification/powerbi_release_cases_20261118.json'
-    write_json(target,{'builds':original['builds'],'input':'fixed raw source + independent Python sets; current 200-posting acceptance; skill multi-select is union','cases':cases})
+    write_json(target,{'builds':original['builds'],'input':'fixed source files + independent Python sets; approved sources and body populations are data-derived; skill multi-select is union','cases':cases})
     print(json.dumps({'cases':len(cases),'new_cases':len(cases)-len(original['cases'])}))
 
 

@@ -65,6 +65,9 @@ def check(database='recruitment_dw_dev_cd_v1',release_id=None,write_report=True,
       'top_pairs':[[list(k),v] for k,v in pair_counts.most_common(10)],
       'education':[[list(k),v] for k,v in sorted(education.items())],
       'note':'Category mapping is automatic initial classification; no human-review accuracy claim.'}
+    if write_report and len(sources)>2:
+        from scripts.analyze_expansion import write
+        return write(record,jobs,skills,output_dir)
     if write_report:
         stamp=datetime.now(timezone(timedelta(hours=8)));day=stamp.strftime('%Y%m%d')
         folder=Path(output_dir) if output_dir else ROOT/'reports/verification'

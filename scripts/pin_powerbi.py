@@ -31,6 +31,16 @@ def polish_visuals(value,rid):
     return result
 
 
+def set_visual_text(relative,value):
+    path=PROJECT/'Recruitment.Report/definition/pages'/relative
+    doc=json.loads(path.read_text(encoding='utf-8'))
+    paragraphs=doc['visual']['objects']['general'][0]['properties']['paragraphs']
+    paragraphs[0]['textRuns'][0]['value']=value
+    for paragraph in paragraphs:
+        for run in paragraph['textRuns'][(1 if paragraph is paragraphs[0] else 0):]:run['value']=''
+    write_json(path,doc)
+
+
 def pin(database,server='lpc:localhost',release_id=None):
     os.environ['DW_DATABASE']=database;os.environ['DW_SERVER']=server
     c=connect()
@@ -41,8 +51,14 @@ def pin(database,server='lpc:localhost',release_id=None):
           SELECT i.*,s.source_code,ROW_NUMBER() OVER(PARTITION BY s.source_code ORDER BY date_key DESC,build_id DESC) n
           FROM audit.release_input i JOIN dim.source s ON s.source_key=i.source_key WHERE release_id=?)
           SELECT c.source_code as source,v.* FROM chosen c JOIN ads.cd_overview v ON v.build_id=c.build_id WHERE c.n=1 ORDER BY c.source_code''',rid)
-        if len(inputs)!=2:raise ValueError('The pilot baseline requires both approved sources')
+        expected=set(json.loads(c.execute('SELECT expected_sources_json FROM audit.model_build WHERE release_id=?',rid).fetchval()))
+        if {i['source'] for i in inputs}!=expected:raise ValueError('Report inputs must cover the release approved sources')
         if c.execute('SELECT COUNT(*) FROM ads.release_validation WHERE release_id=?',rid).fetchval():raise ValueError('Release not valid')
+        stats=records(c,'''SELECT source,SUM(core_posting_count) core_jobs,SUM(skill_denominator) body_jobs,
+          SUM(skilled_posting_count) skilled_jobs FROM ads.release_job_structure WHERE release_id=? GROUP BY source ORDER BY source''',rid)
+        pairs=records(c,'''SELECT j.source,COUNT_BIG(*) pairs FROM ads.release_job_detail j JOIN dwd.bridge_daily_skill b
+          ON b.release_id=j.release_id AND b.date_key=j.date_key AND b.job_key=j.job_key
+          WHERE j.release_id=? GROUP BY j.source''',rid)
     finally:c.close()
     ids=[i['build_id'] for i in inputs]
     path=PROJECT/'Recruitment.SemanticModel/model.bim'
@@ -79,6 +95,16 @@ def pin(database,server='lpc:localhost',release_id=None):
     skill_path=detail/'snapshot_evidence_rows/visual.json';skill=json.loads(skill_path.read_text(encoding='utf-8'))
     skill['position'].update(y=600,height=200);write_json(skill_path,skill)
     repair_skill_page()
+    if len(expected)>2:
+        pair_counts={r['source']:r['pairs'] for r in pairs}
+        summary='；'.join(f"{r['source']} 核心{r['core_jobs']} / 正文{r['body_jobs']} / 技能对{pair_counts.get(r['source'],0)}" for r in stats)
+        set_visual_text('quality/visuals/rules/visual.json',summary+'。\n指标按岗位去重，零命中正文仍在分母；固定同一发布输入。\n四企业官网范围观察，partial不推导市场规模或趋势。')
+        set_visual_text('quality/visuals/decisions/visual.json','原始字段与正文矛盾单列，未注明不等于不限，优先不等于必需。\n仅披露省份的岗位保留省级成员，城市显示“城市未披露”。\n来源字段回放与AI辅助审计可回查，不代表独立人工金标。')
+        set_visual_text('overview/visuals/foot/visual.json','正文分母包含零技能命中的核心有效正文；来源地点可能仅披露省份；多地点总计按岗位并集。')
+        set_visual_text('dimensional/visuals/dim_footer/visual.json','四来源扩量观察，覆盖与观察时刻分别披露；自动主方向按优先级归属。技能多选取并集；省级地点不补造城市；无相邻完整日不推导趋势。')
+        for page,label in [('overview','01 来源概览'),('skills','02 技能与组合'),('quality','04 构建与质量')]:
+            page_path=PROJECT/f'Recruitment.Report/definition/pages/{page}/page.json'
+            d=json.loads(page_path.read_text(encoding='utf-8'));d['displayName']=label;write_json(page_path,d)
     for p in (PROJECT/'Recruitment.Report/definition/pages').rglob('*.json'):
         old=json.loads(p.read_text(encoding='utf-8'));new=polish_visuals(old,rid)
         if new!=old:write_json(p,new)

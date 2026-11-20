@@ -1,0 +1,73 @@
+{
+  "started_at": "2026-11-20T16:38:01.012627+00:00",
+  "database": "recruitment_dw_dev_expansion_v1",
+  "pending_batches": [],
+  "inputs": [
+    {
+      "batch_id": "tencent_20261120T145742Z_cb8952ee",
+      "load": "loaded_trial",
+      "analysis": {
+        "status": "ready",
+        "build_id": 4,
+        "jobs": 431,
+        "core_jobs": 416,
+        "evidence": 2267,
+        "bridge_rows": 2151
+      }
+    },
+    {
+      "batch_id": "netease_20261120T145742Z_a2a9c5c5",
+      "load": "unchanged",
+      "analysis": {
+        "status": "ready",
+        "build_id": 5,
+        "jobs": 448,
+        "core_jobs": 444,
+        "evidence": 2061,
+        "bridge_rows": 1959
+      }
+    },
+    {
+      "batch_id": "xiaomi_20261120T152702Z_470b8a89",
+      "load": "unchanged",
+      "analysis": {
+        "status": "ready",
+        "build_id": 6,
+        "jobs": 500,
+        "core_jobs": 497,
+        "evidence": 1885,
+        "bridge_rows": 1718
+      }
+    },
+    {
+      "batch_id": "jd_20261120T152717Z_b825c288",
+      "load": "unchanged",
+      "analysis": {
+        "status": "ready",
+        "build_id": 7,
+        "jobs": 200,
+        "core_jobs": 199,
+        "evidence": 379,
+        "bridge_rows": 369
+      }
+    }
+  ],
+  "status": "passed",
+  "release": {
+    "status": "ready",
+    "release_id": 1,
+    "channel": "sample",
+    "source_observations": 1579,
+    "dates": [
+      "2026-11-20",
+      "2026-11-21"
+    ]
+  },
+  "publication": {
+    "status": "published",
+    "release_id": 1,
+    "previous_release_id": null,
+    "channel": "sample"
+  },
+  "finished_at": "2026-11-20T16:40:16.175523+00:00"
+}

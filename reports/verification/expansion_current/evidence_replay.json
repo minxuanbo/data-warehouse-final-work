@@ -1,0 +1,213 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-20T16:43:35.016392+00:00",
+  "database": "recruitment_dw_dev_expansion_v1",
+  "release_id": 1,
+  "sources": {
+    "tencent": {
+      "source_jobs": 431,
+      "core_jobs": 416,
+      "skill_evidence_anchors": 2267,
+      "valid_core_job_skill_pairs": 1304,
+      "input_hash": "58cdba67f91951dd39345a24ffb115fbe70c91d36e29667b07dab14e4b477f78",
+      "scope_version": "digital_jobs_cn_core_v2.1"
+    },
+    "netease": {
+      "source_jobs": 448,
+      "core_jobs": 444,
+      "skill_evidence_anchors": 2061,
+      "valid_core_job_skill_pairs": 1263,
+      "input_hash": "c5ab4d93845caa989bbd50a8295adfabecefe1bf8a63967a6119183f37d0ac38",
+      "scope_version": "digital_jobs_cn_core_v2.1"
+    },
+    "xiaomi": {
+      "source_jobs": 500,
+      "core_jobs": 497,
+      "skill_evidence_anchors": 1885,
+      "valid_core_job_skill_pairs": 1170,
+      "input_hash": "3b3dd1edb4b10be770f1b22ceddbd4d4c1933547aa396b65d173c097eb988b0f",
+      "scope_version": "digital_jobs_cn_core_v2.1"
+    },
+    "jd": {
+      "source_jobs": 200,
+      "core_jobs": 199,
+      "skill_evidence_anchors": 379,
+      "valid_core_job_skill_pairs": 263,
+      "input_hash": "49f735c0689ac41c2b4f72b8f880051458fac3e9db294465da77aed604f06daa",
+      "scope_version": "digital_jobs_cn_core_v2.1"
+    }
+  },
+  "qualification_rule_version": "qualification-cn-1.2",
+  "qualification_anchors_checked": 2631,
+  "qualification_statuses": [
+    [
+      [
+        "jd",
+        "education",
+        "body_required"
+      ],
+      59
+    ],
+    [
+      [
+        "jd",
+        "education",
+        "not_stated"
+      ],
+      140
+    ],
+    [
+      [
+        "jd",
+        "education",
+        "preference_only"
+      ],
+      1
+    ],
+    [
+      [
+        "jd",
+        "experience",
+        "ambiguous"
+      ],
+      2
+    ],
+    [
+      [
+        "jd",
+        "experience",
+        "body_required"
+      ],
+      37
+    ],
+    [
+      [
+        "jd",
+        "experience",
+        "not_stated"
+      ],
+      161
+    ],
+    [
+      [
+        "netease",
+        "education",
+        "conflict"
+      ],
+      106
+    ],
+    [
+      [
+        "netease",
+        "education",
+        "structured"
+      ],
+      342
+    ],
+    [
+      [
+        "netease",
+        "experience",
+        "structured"
+      ],
+      448
+    ],
+    [
+      [
+        "tencent",
+        "education",
+        "body_required"
+      ],
+      251
+    ],
+    [
+      [
+        "tencent",
+        "education",
+        "not_stated"
+      ],
+      176
+    ],
+    [
+      [
+        "tencent",
+        "education",
+        "preference_only"
+      ],
+      4
+    ],
+    [
+      [
+        "tencent",
+        "experience",
+        "not_stated"
+      ],
+      10
+    ],
+    [
+      [
+        "tencent",
+        "experience",
+        "structured"
+      ],
+      421
+    ],
+    [
+      [
+        "xiaomi",
+        "education",
+        "body_required"
+      ],
+      339
+    ],
+    [
+      [
+        "xiaomi",
+        "education",
+        "not_stated"
+      ],
+      153
+    ],
+    [
+      [
+        "xiaomi",
+        "education",
+        "preference_only"
+      ],
+      8
+    ],
+    [
+      [
+        "xiaomi",
+        "experience",
+        "ambiguous"
+      ],
+      21
+    ],
+    [
+      [
+        "xiaomi",
+        "experience",
+        "body_required"
+      ],
+      148
+    ],
+    [
+      [
+        "xiaomi",
+        "experience",
+        "not_stated"
+      ],
+      330
+    ],
+    [
+      [
+        "xiaomi",
+        "experience",
+        "preference_only"
+      ],
+      1
+    ]
+  ],
+  "verification_actor": "programmatic replay and AI-assisted review; not independent human annotation"
+}

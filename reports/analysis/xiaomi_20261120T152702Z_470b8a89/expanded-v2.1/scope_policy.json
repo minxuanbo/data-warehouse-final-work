@@ -1,0 +1,23 @@
+{
+  "scope_version": "digital_jobs_cn_core_v2.1",
+  "enrichment_version": "four_source_official_v2.0",
+  "body_hash_version": "skills-body-1.1",
+  "skill_input_fields": [
+    "description_raw",
+    "requirements_raw",
+    "additional_requirements_raw"
+  ],
+  "review_actor": "AI_assisted_scope_review",
+  "business_scope": "Mainland public software, data, algorithms, software/game QA and operations/security roles; excludes design creation, manual annotation, pure hardware, operations and nontechnical management",
+  "sources": {
+    "xiaomi": {
+      "excluded_jobs": {
+        "7615223992437246271": "来源明确为境外城市，不进入本期中国大陆核心范围",
+        "7615223808715016454": "来源明确为境外城市，不进入本期中国大陆核心范围",
+        "7595188990560127275": "来源明确为境外城市，不进入本期中国大陆核心范围"
+      },
+      "additional_locations": {},
+      "experience_hint_only": []
+    }
+  }
+}

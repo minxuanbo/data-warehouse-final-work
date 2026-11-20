@@ -7,6 +7,7 @@ from pathlib import Path
 
 from .load import ROOT,connect,dump
 from .normalization import VERSION,MAPPING_VERSION,city,classify
+from .source_catalog import SOURCES,BASELINE_SOURCES,EXPANSION_SOURCES
 
 
 def records(c,sql,*args):
@@ -18,7 +19,7 @@ def records(c,sql,*args):
 
 
 def implementation_hash():
-    names=['warehouse/release_build.py','warehouse/normalization.py','warehouse/qualifications.py','sql/004_release_schema.sql','sql/005_qualification_evidence.sql']
+    names=['warehouse/release_build.py','warehouse/normalization.py','warehouse/qualifications.py','warehouse/source_catalog.py','sql/004_release_schema.sql','sql/005_qualification_evidence.sql']
     return hashlib.sha256(dump({n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in names}).encode()).hexdigest()
 
 
@@ -82,7 +83,8 @@ def ensure_calendar(c,start,end):
 def build_release(build_ids,*,channel='sample',expected_sources=('tencent','netease'),fail_after=None):
     if channel not in ('sample','formal'):raise ValueError('Unknown publication channel')
     if not build_ids or any(type(x) is not int or x<=0 for x in build_ids):raise ValueError('Positive build IDs required')
-    if set(expected_sources)!={'tencent','netease'}:raise ValueError('Freeze both approved sources; do not silently shrink scope')
+    if frozenset(expected_sources) not in (BASELINE_SOURCES,EXPANSION_SOURCES):
+        raise ValueError('Freeze the approved two-source baseline or full four-source expansion; do not silently shrink scope')
     c=connect()
     try:
         c.execute((ROOT/'sql/004_release_schema.sql').read_text(encoding='utf-8'))
@@ -115,7 +117,7 @@ def build_release(build_ids,*,channel='sample',expected_sources=('tencent','nete
             source_key=c.execute('SELECT source_key FROM dim.source WHERE source_code=?',source).fetchval()
             if source_key is None:
                 source_key=c.execute('INSERT INTO dim.source(source_code,source_name,official_url) OUTPUT INSERTED.source_key VALUES(?,?,?)',
-                  source,{'tencent':'腾讯招聘','netease':'网易招聘'}[source],{'tencent':'https://careers.tencent.com','netease':'https://hr.163.com'}[source]).fetchval()
+                  source,SOURCES[source]['name'],SOURCES[source]['url']).fetchval()
             c.execute('INSERT INTO audit.release_input VALUES(?,?,?,?,?,?,?)',release_id,batch['build_id'],source_key,batch['batch_id'],dk,batch['coverage_status'],batch['acceptance_status'])
             jobs=records(c,'''SELECT j.*,o.posting_key,o.company_raw,o.employment_type_raw,r.payload as original_record_json
               FROM ads.cd_job_detail j JOIN dwd.fact_posting_observation o ON o.observation_key=j.observation_key
