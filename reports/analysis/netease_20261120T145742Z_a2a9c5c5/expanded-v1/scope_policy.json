@@ -1,0 +1,24 @@
+{
+  "scope_version": "digital_jobs_cn_core_v2.0",
+  "enrichment_version": "four_source_official_v2.0",
+  "body_hash_version": "skills-body-1.1",
+  "skill_input_fields": [
+    "description_raw",
+    "requirements_raw",
+    "additional_requirements_raw"
+  ],
+  "review_actor": "AI_assisted_scope_review",
+  "business_scope": "Mainland public software, data, algorithms, software/game QA and operations/security roles; excludes design creation, manual annotation, pure hardware, operations and nontechnical management",
+  "sources": {
+    "netease": {
+      "excluded_jobs": {
+        "78482": "非本期软件数据数字技术职责或管理/运营岗位",
+        "74090": "非本期软件数据数字技术职责或管理/运营岗位",
+        "74475": "非本期软件数据数字技术职责或管理/运营岗位",
+        "73830": "标题未明确属于本期数字技术方向，保守排除"
+      },
+      "additional_locations": {},
+      "experience_hint_only": []
+    }
+  }
+}

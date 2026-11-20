@@ -1,0 +1,21 @@
+{
+  "source": "jd",
+  "batch_id": "jd_20261120T152717Z_b825c288",
+  "jobs_sha256": "51cb24a755fbb8940584b85c10a53f45415a6cdb039692ad252ef93e0b08de74",
+  "manifest_sha256": "49f735c0689ac41c2b4f72b8f880051458fac3e9db294465da77aed604f06daa",
+  "dictionary_sha256": "1b66fbdf4d3eb86b772ac19b080757c49c94b7c81570d3c347d011226e6627be",
+  "dictionary_version": "skills-dict-0.2.0",
+  "rule_version": "skills-rules-0.3.1",
+  "body_hash_version": "skills-body-1.1",
+  "body_hash_fields": [
+    "description_raw",
+    "requirements_raw",
+    "additional_requirements_raw"
+  ],
+  "scope_version": "digital_jobs_cn_core_v2.0",
+  "scope_policy_sha256": "2750e1e8056ff42dc92681eb165ba3c26381a3469fc5a208c97f464136dea5f0",
+  "source_postings": 200,
+  "core_postings": 199,
+  "extraction_code_sha256": "f62c82e24b0168817d84598971ce5a138145ec62e9c7ac20544e1204034fec2a",
+  "review_status": "automated_evidence_not_human_labels"
+}

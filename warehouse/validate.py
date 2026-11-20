@@ -3,6 +3,7 @@ import hashlib
 import json
 from datetime import datetime
 from pathlib import Path, PurePosixPath
+from .source_catalog import SOURCES
 
 FIELDS = set('schema_version source source_job_id batch_id observed_at source_url title_raw company_raw locations_raw category_raw education_raw experience_raw description_raw requirements_raw employment_type_raw salary_raw headcount_raw source_published_at_raw source_updated_at_raw raw_refs parser_version'.split())
 REQUIRED = 'source source_job_id batch_id observed_at source_url title_raw company_raw parser_version'.split()
@@ -37,7 +38,7 @@ def validate(path):
     m = json.loads(manifest_bytes)
     if m['schema_version'] != '1.0' or m['batch_id'] != root.name:
         raise ValueError('Unsupported schema or batch directory mismatch')
-    if m['source'] not in ('tencent', 'netease') or m['coverage_status'] not in ('complete','partial','failed'):
+    if m['source'] not in SOURCES or m['coverage_status'] not in ('complete','partial','failed'):
         raise ValueError('Unsupported source/coverage')
     files = {}
     for entry in m['files']:
@@ -96,7 +97,10 @@ def validate(path):
         raise ValueError('Empty batch or counts mismatch')
     if m['coverage_status']=='complete':
         from collectors.coverage import assess_coverage
-        proof=assess_coverage(root,m['source'],m['stop_reason'],m['counts'],m['error_pages'])
+        if m['source'] in ('xiaomi','jd'):
+            from collectors.enterprise_coverage import assess
+            proof=assess(root,m['source'],m['stop_reason'],m['counts'],m['error_pages'])
+        else:proof=assess_coverage(root,m['source'],m['stop_reason'],m['counts'],m['error_pages'])
         if proof['coverage_status']!='complete':
             raise ValueError('Complete coverage is unsupported by raw pagination evidence: '+','.join(proof['reasons']))
     # Review state stays unchanged. Passing structural validation is NOT acceptance.

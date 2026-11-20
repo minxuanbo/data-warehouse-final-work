@@ -1,0 +1,21 @@
+{
+  "source": "netease",
+  "batch_id": "netease_20261120T145742Z_a2a9c5c5",
+  "jobs_sha256": "b11e0fec0d69e06371cfb37f873eac1f19847332325f7beb4e0c8e7338b66c57",
+  "manifest_sha256": "c5ab4d93845caa989bbd50a8295adfabecefe1bf8a63967a6119183f37d0ac38",
+  "dictionary_sha256": "1b66fbdf4d3eb86b772ac19b080757c49c94b7c81570d3c347d011226e6627be",
+  "dictionary_version": "skills-dict-0.2.0",
+  "rule_version": "skills-rules-0.3.1",
+  "body_hash_version": "skills-body-1.1",
+  "body_hash_fields": [
+    "description_raw",
+    "requirements_raw",
+    "additional_requirements_raw"
+  ],
+  "scope_version": "digital_jobs_cn_core_v2.0",
+  "scope_policy_sha256": "483115c5e4d1d02a8e9055639830094bf67dd506f3df4d9ee7e8b51c617121a1",
+  "source_postings": 448,
+  "core_postings": 444,
+  "extraction_code_sha256": "f62c82e24b0168817d84598971ce5a138145ec62e9c7ac20544e1204034fec2a",
+  "review_status": "automated_evidence_not_human_labels"
+}

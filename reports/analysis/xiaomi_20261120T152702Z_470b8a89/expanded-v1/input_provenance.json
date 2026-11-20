@@ -1,0 +1,21 @@
+{
+  "source": "xiaomi",
+  "batch_id": "xiaomi_20261120T152702Z_470b8a89",
+  "jobs_sha256": "d71fe3733fcfe8f3361a66936c22b34f8ecfee7ca8ff06b7a65dda8502e0c805",
+  "manifest_sha256": "3b3dd1edb4b10be770f1b22ceddbd4d4c1933547aa396b65d173c097eb988b0f",
+  "dictionary_sha256": "1b66fbdf4d3eb86b772ac19b080757c49c94b7c81570d3c347d011226e6627be",
+  "dictionary_version": "skills-dict-0.2.0",
+  "rule_version": "skills-rules-0.3.1",
+  "body_hash_version": "skills-body-1.1",
+  "body_hash_fields": [
+    "description_raw",
+    "requirements_raw",
+    "additional_requirements_raw"
+  ],
+  "scope_version": "digital_jobs_cn_core_v2.0",
+  "scope_policy_sha256": "91ca7cc6625c4df7035fbb97d0da7ddb4af2d560a0313f7f8eb9aff41e6c95e6",
+  "source_postings": 500,
+  "core_postings": 500,
+  "extraction_code_sha256": "f62c82e24b0168817d84598971ce5a138145ec62e9c7ac20544e1204034fec2a",
+  "review_status": "automated_evidence_not_human_labels"
+}

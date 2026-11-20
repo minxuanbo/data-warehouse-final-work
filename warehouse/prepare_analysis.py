@@ -10,6 +10,7 @@ from .analysis_v11 import raw_post
 from .integrate_analysis import body_digest,prepare
 from .load import ROOT,dump
 from .validate import validate,digest
+from .source_catalog import SOURCES
 
 
 def write_json(path,value):
@@ -27,6 +28,8 @@ def generate(batch_path,output_path,dictionary_path=None,policy_path=None,review
     sp['excluded_jobs']={k:v for k,v in sp['excluded_jobs'].items() if k in ids}
     sp['additional_locations']={k:v for k,v in sp['additional_locations'].items() if k in ids}
     sp['experience_hint_only']=[k for k in sp['experience_hint_only'] if k in ids]
+    # Unrelated source decisions must not invalidate this source's frozen build.
+    policy['sources']={source:sp}
     # Freeze the exact policy alongside evidence, so future config changes cannot rewrite this build.
     policy_bytes=(json.dumps(policy,ensure_ascii=False,indent=2)+'\n').encode('utf-8')
     # A skill-only rebuild must retain field findings reviewed against this exact raw batch.
@@ -66,8 +69,7 @@ def generate(batch_path,output_path,dictionary_path=None,policy_path=None,review
                                'raw_ref':ref['path'],'treatment':'保留原值，冲突单列，按版本策略裁定'})
     # Reviewed rows carry the richer evidence. Prefer them to collector-only flags.
     issues=list({(r['source_job_id'],r['kind']):r for r in issues+reviewed_issues}.values())
-    raw_fields={'tencent':{'description_raw':'Responsibility','requirements_raw':'Requirement','additional_requirements_raw':'ImportantItem'},
-                'netease':{'description_raw':'description','requirements_raw':'requirement'}}[source]
+    raw_fields=SOURCES[source]['raw_fields']
     evidence=[{**r,'body_sha256':body_digest(j,FIELDS),'body_hash_version':BODY_HASH_VERSION,
                'is_core':j['is_core'],'scope_rule_version':policy['scope_version'],
                'raw_ref':j['_ref']['path'],'raw_sha256':j['_ref']['sha256'],'raw_field_name':raw_fields[r['evidence_field']]}

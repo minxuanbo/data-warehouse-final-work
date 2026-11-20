@@ -2,7 +2,7 @@
 import re
 from .qualifications import resolve,normalize_experience
 
-VERSION = 'conformed-cn-1.2'
+VERSION = 'conformed-cn-1.3'
 MAPPING_VERSION = 'source-identity-only-1.0'
 UNKNOWN = '未知'
 CONFLICT = '冲突待确认'
@@ -15,12 +15,21 @@ CITY_PROVINCE = {
     '贵阳':'贵州','昆明':'云南','兰州':'甘肃','银川':'宁夏','西宁':'青海','乌鲁木齐':'新疆',
     '呼和浩特':'内蒙古','拉萨':'西藏',
 }
+CITY_PROVINCE.update({'东莞':'广东','珠海':'广东','佛山':'广东','惠州':'广东','中山':'广东','汕头':'广东',
+ '常州':'江苏','徐州':'江苏','扬州':'江苏','宿迁':'江苏','嘉兴':'浙江','绍兴':'浙江','温州':'浙江',
+ '烟台':'山东','潍坊':'山东','洛阳':'河南','宜昌':'湖北','泉州':'福建','三亚':'海南'})
+PROVINCES={n+'省':n for n in ('河北','山西','辽宁','吉林','黑龙江','江苏','浙江','安徽','福建','江西','山东','河南','湖北','湖南','广东','海南','四川','贵州','云南','陕西','甘肃','青海')}
+PROVINCES.update({'内蒙古自治区':'内蒙古','广西壮族自治区':'广西','西藏自治区':'西藏','宁夏回族自治区':'宁夏','新疆维吾尔自治区':'新疆'})
 
 
 def city(raw, conflict=False):
     if conflict:
         return {'code':'conflict','name':CONFLICT,'province':CONFLICT,'mapping_status':'conflict'}
-    name=(raw or '').strip().removesuffix('市')
+    original=(raw or '').strip()
+    if original in PROVINCES:
+        province=PROVINCES[original]
+        return {'code':'province:'+province,'name':'城市未披露','province':province,'mapping_status':'province_only'}
+    name=original.removesuffix('市')
     if not name:
         return {'code':'unknown','name':UNKNOWN,'province':UNKNOWN,'mapping_status':'unknown'}
     province=CITY_PROVINCE.get(name)
@@ -66,6 +75,9 @@ def employment_type(source, raw):
     # must not be relabelled as social recruitment. Preserve unknown codes.
     if source=='netease' and text in {'0','1','2'}:
         return {'0':'全职','1':'实习','2':'派遣'}[text]
+    if source=='xiaomi' and text in {'1','2','3','4'}:
+        return {'1':'社招渠道','2':'校招渠道','3':'实习项目','4':'顶尖人才项目'}[text]
+    if source=='jd' and text=='社会招聘':return '社招渠道'
     # Tencent codes remain unverified; never apply another source's codebook.
     if re.search(r'实习',text):return '实习'
     if re.search(r'校招|校园|应届',text):return '校招'

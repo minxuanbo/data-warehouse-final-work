@@ -3,7 +3,7 @@ import json
 import re
 import unicodedata
 
-RULE_VERSION='qualification-cn-1.1'
+RULE_VERSION='qualification-cn-1.2'
 DEGREES={'高中':'高中/中专','中专':'高中/中专','中技':'高中/中专','大专':'大专','专科':'大专',
          '本科':'本科','学士':'本科','硕士':'硕士','研究生':'硕士','博士':'博士'}
 RANK={'高中/中专':1,'大专':2,'本科':3,'硕士':4,'博士':5}
@@ -102,10 +102,43 @@ def education_resolution(job):
     return {'value':value,'status':status,'basis':basis,'preferred':preferred,'evidence':all_evidence,'rule_version':RULE_VERSION}
 
 
-def resolve(job):
-    ed=education_resolution(job)
+def experience_resolution(job):
     raw=job.get('experience_raw');value=normalize_experience(raw,job.get('experience_conflict',False))
     ex={'value':value,'status':'conflict' if job.get('experience_conflict') else 'not_stated' if not raw else 'unparsed' if value=='待解析' else 'structured',
         'basis':'experience_raw' if raw else 'none','rule_version':RULE_VERSION,
         'evidence':[{'field':'experience_raw','start':0,'end':len(raw),'text':raw,'strength':'来源值'}] if raw else []}
+    if raw or job.get('experience_conflict'):return ex
+    # Only infer from explicit experience language in requirement fields. Project
+    # durations, product lifetimes and study years do not become work experience.
+    evidence=[];required=set();preferred=False;conditional=False
+    number=r'[0-9０-９零〇一二两三四五六七八九十]+'
+    pattern=re.compile(fr'({number})(?:\s*[-~～至到]\s*({number}))?\s*年\s*(及以上|以上|及以下|以下|以内)?[^，,。；;\n\r]{{0,24}}?经验')
+    for field,text in body_fields(job).items():
+        if not text:continue
+        for m in pattern.finditer(text):
+            start=max([text.rfind(c,0,m.start()) for c in ('\n','。','；',';','，',',')])+1
+            ends=[p for c in ('\n','。','；',';','，',',') if (p:=text.find(c,m.end()))>=0]
+            end=min(ends) if ends else len(text)
+            clause=text[start:end]
+            complex_condition=bool(re.search(r'本科|硕士|博士',clause) and clause.count('年')>1)
+            conditional=conditional or complex_condition
+            strength='不确定' if complex_condition else '优先' if re.search(r'优先|加分|更佳',clause) else '必需'
+            normalized=normalize_experience(m[1]+('-'+m[2] if m[2] else '')+'年'+(m[3] or ''))
+            evidence.append({'field':field,'start':start,'end':end,'text':clause,'match_start':m.start(),
+                             'match_end':m.end(),'strength':strength,'normalized_value':normalized})
+            if strength=='必需':required.add(normalized)
+            elif strength=='优先':preferred=True
+        for m in re.finditer(r'(?:工作)?经验(?:不限|无要求|不限制)|无需(?:工作)?经验|无(?:工作)?经验亦可',text):
+            evidence.append({'field':field,'start':m.start(),'end':m.end(),'text':m[0],'strength':'必需','normalized_value':'不限'})
+            required.add('不限')
+    if conditional or len(required)>1:value,status='待确认','ambiguous'
+    elif required:value,status=next(iter(required)),'body_required'
+    elif preferred:value,status='未注明','preference_only'
+    else:value,status='未注明','not_stated'
+    return {**ex,'value':value,'status':status,'basis':'body' if evidence else 'none','evidence':evidence}
+
+
+def resolve(job):
+    ed=education_resolution(job)
+    ex=experience_resolution(job)
     return {'education':ed,'experience':ex}

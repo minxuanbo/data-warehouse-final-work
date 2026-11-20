@@ -1,0 +1,27 @@
+{
+  "selected": [
+    "tencent",
+    "netease",
+    "xiaomi",
+    "jd"
+  ],
+  "xiaomi": {
+    "official": "https://hr.xiaomi.com/website/opportunities.html",
+    "list": "https://hr.xiaomi.com/website/api/agent/searchJobPage",
+    "verified": "code0,data.list contains jobPostId,cityZhNames,description,requirement,type; site jobs.js maps1社招/2校招/3实习/4顶尖人才; all-project query without keyword",
+    "reference_sha256": "97cdc721fdf8045f8ed6ff1a6e2fc489fc90af69636b7dda22ef9312b16483d2"
+  },
+  "jd": {
+    "official": "https://zhaopin.jd.com/web/job/job_info_list/3",
+    "list": "https://zhaopin.jd.com/web/job/job_list",
+    "count": "https://zhaopin.jd.com/web/job/job_count",
+    "verified": "Official job-info-index.js posts pageIndex/pageSize and JSON array filters; workContent/qualification full text; requirementId is official public-link identity; workCity can be province only",
+    "reference_sha256": "42b6ccc2d5ba69e84016ebb5fc58502bb7ae5feb7b2145e45939b54fdea4680f"
+  },
+  "not_selected": {
+    "meituan": "Official homepage verified; public list parameter adaptation not completed, no mass collection",
+    "huawei": "Certificate verification failed; no certificate bypass or collection"
+  },
+  "access_policy": "Public pages only, per-source single request stream >=3sec, finite retries, stop at real login/CAPTCHA/401/403/418/429",
+  "scope_note": "Chosen enterprises and collected subset are purposive samples, not a national market survey"
+}

@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.0",
+  "scope_version": "digital_jobs_cn_v1",
+  "phase": "expansion",
+  "source": "xiaomi",
+  "owner": "D",
+  "batch_id": "xiaomi_20261120T152702Z_470b8a89",
+  "started_at": "2026-11-20T15:27:02Z",
+  "finished_at": "2026-11-20T15:30:15Z",
+  "collector_commit": "865771aa0607678abc1e1c46797a3faec705300a",
+  "parser_version": "enterprise-public-1.0.0",
+  "collector_source": [
+    {
+      "path": "collectors/enterprise.py",
+      "sha256": "be80b9bea27775cbaad3edad449d49bc352b49260c91c3710551593f302cd286",
+      "newline": "LF"
+    }
+  ],
+  "collection_window": "four-source-expansion-20261120-night",
+  "execution_actor": "AI-assisted technical takeover authorized by user; not member manual review",
+  "acceptance_status": "pending",
+  "coverage_status": "partial",
+  "stop_reason": "request_or_business_failure",
+  "counts": {
+    "requests": 54,
+    "failed_requests": 3,
+    "list_pages": 51,
+    "raw_response_files": 51,
+    "listed_records": 510,
+    "unique_source_ids": 510,
+    "output_records": 150,
+    "excluded_unique_ids": 360,
+    "unresolved_unique_ids": 0,
+    "unidentified_records": 0,
+    "unprocessed_unique_ids": 0,
+    "unprocessed_ids": []
+  },
+  "error_pages": [
+    {
+      "reason": "('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))"
+    }
+  ],
+  "files": [
+    {
+      "path": "jobs.jsonl",
+      "bytes": 294913,
+      "sha256": "1b7cc34e52739f5d728f101ae130ba9378349d600255c872d2e092565d2c0333",
+      "records": 150
+    },
+    {
+      "path": "quality_issues.jsonl",
+      "bytes": 110972,
+      "sha256": "86feeed98c1870b83f783cb7e4473d4f61af120e5a5cc96ce912ae2f6aeb34ec",
+      "records": 360
+    },
+    {
+      "path": "raw/list_000001.json",
+      "bytes": 17158,
+      "sha256": "27627d74714466526a8d327ba48d1010329d89f73df29aef93a9f07df4f4ade7",
+      "records": null
+    },
+    {
+      "path": "raw/list_000002.json",
+      "bytes": 19130,
+      "sha256": "df230448c7d8a5be13ea8a922d92a3156721daa16aab8c504b3d62fe1e866aa0",
+      "records": null
+    },
+    {
+      "path": "raw/list_000003.json",
+      "bytes": 14970,
+      "sha256": "f72c24d1355da73d6d09f23009fa6313c27b8976609aa3d07abdb8d1e76115b5",
+      "records": null
+    },
+    {
+      "path": "raw/list_000004.json",
+      "bytes": 15889,
+      "sha256": "e114ee400953ff5a1623447a5662ab2fc1451bc0c8405c3d69b1170f5150f32a",
+      "records": null
+    },
+    {
+      "path": "raw/list_000005.json",
+      "bytes": 15616,
+      "sha256": "ee8538041d42b36401a557d55d8dc5097c38576a2b925af8547cfda776df6d45",
+      "records": null
+    },
+    {
+      "path": "raw/list_000006.json",
+      "bytes": 18584,
+      "sha256": "a438b1388df13e221235220717140cf1427375b1cf65cd058a44db4c634655d4",
+      "records": null
+    },
+    {
+      "path": "raw/list_000007.json",
+      "bytes": 18367,
+      "sha256": "4082f3625ca03770aaafd245ff914672dfd04100b12780184daa441bc6dacb67",
+      "records": null
+    },
+    {
+      "path": "raw/list_000008.json",
+      "bytes": 16917,
+      "sha256": "ca530a96ff822a3f3277848f9982f65334ef261566bbab606dff72b49947d217",
+      "records": null
+    },
+    {
+      "path": "raw/list_000009.json",
+      "bytes": 15100,
+      "sha256": "412837aca5e11a68558ff78d9f795cc036da6a35b5b1246e69887002ebfe7389",
+      "records": null
+    },
+    {
+      "path": "raw/list_000010.json",
+      "bytes": 19282,
+      "sha256": "ef8bd6c07088a47e02bd26790cdcbaf9ec4c8df5802a51f68cccc36c678801aa",
+      "records": null
+    },
+    {
+      "path": "raw/list_000011.json",
+      "bytes": 15730,
+      "sha256": "397c916f87f31e84be6aa0cb8ff748c67be60043ca90dd21d5dcf7fbb9879d07",
+      "records": null
+    },
+    {
+      "path": "raw/list_000012.json",
+      "bytes": 16801,
+      "sha256": "dd3100b4e927079d22c0e32b52adbb12695eadf6b57c813c73b7738fd2ceb8ab",
+      "records": null
+    },
+    {
+      "path": "raw/list_000013.json",
+      "bytes": 16101,
+      "sha256": "4bf8e0f8181d18ed5df2ce6978db2d3a8550ea1d83a18a8d4008c90f9a861811",
+      "records": null
+    },
+    {
+      "path": "raw/list_000014.json",
+      "bytes": 17560,
+      "sha256": "c25cb8d115bfe8ec0e84bdaa97d7ab7f52e77d6d5452deeceac7f01aacb6c540",
+      "records": null
+    },
+    {
+      "path": "raw/list_000015.json",
+      "bytes": 13331,
+      "sha256": "ba8f313785827bbe0490cae2686252c4d8eabc2fe66e32504f3fd7f2c7a3ea69",
+      "records": null
+    },
+    {
+      "path": "raw/list_000016.json",
+      "bytes": 20673,
+      "sha256": "5aa056c84ce188ce7b76ab1783f414a3ed7adaaa4de1d8d55c5e6c3b734aaebf",
+      "records": null
+    },
+    {
+      "path": "raw/list_000017.json",
+      "bytes": 15832,
+      "sha256": "befd89c63a8b0cb71cc48bd2a09e94cb26c5908fc5495499d5922c75f1eb2702",
+      "records": null
+    },
+    {
+      "path": "raw/list_000018.json",
+      "bytes": 14343,
+      "sha256": "d4851f1ce5ad8afcf635b6b571dcaab5d8deac916c82511f1e5ef4c061f106a4",
+      "records": null
+    },
+    {
+      "path": "raw/list_000019.json",
+      "bytes": 14153,
+      "sha256": "698b7c7ebae8278226a15fc0e22782834d0660b9d779aa565b4aaadb29785815",
+      "records": null
+    },
+    {
+      "path": "raw/list_000020.json",
+      "bytes": 18182,
+      "sha256": "d28f3663b903d393dcd711c671fc663e70eaef6a48c92891ce038a7194edb8b7",
+      "records": null
+    },
+    {
+      "path": "raw/list_000021.json",
+      "bytes": 12680,
+      "sha256": "6cf2d28baa28d4dcab8d47de475ac09017733ea8f1d2158cfe9135ff197e7100",
+      "records": null
+    },
+    {
+      "path": "raw/list_000022.json",
+      "bytes": 13733,
+      "sha256": "29a5e1aa92f6379ab88a14b8d1a772fbaadee591f1d3e06521887476ee143789",
+      "records": null
+    },
+    {
+      "path": "raw/list_000023.json",
+      "bytes": 15546,
+      "sha256": "d9ebde85fc9e0f987e166067e3cf1686fc7aab9cf91644e2a04a8b1fd9023aa7",
+      "records": null
+    },
+    {
+      "path": "raw/list_000024.json",
+      "bytes": 15280,
+      "sha256": "bd988d786ad84dd4e09915eba3978a0981350d5384e2f7aceac4904863b64b1b",
+      "records": null
+    },
+    {
+      "path": "raw/list_000025.json",
+      "bytes": 17136,
+      "sha256": "3a0df54e7886d3e614f78f2d74111a3a8d465e99f9c8b1191d4f3644d54c077a",
+      "records": null
+    },
+    {
+      "path": "raw/list_000026.json",
+      "bytes": 12129,
+      "sha256": "d4b6a8b934ede6a30347f8ab6bca1fcde3072953e2b83d40f3594b036a7434b3",
+      "records": null
+    },
+    {
+      "path": "raw/list_000027.json",
+      "bytes": 12047,
+      "sha256": "fb4d87af6aacf9cb3e216d364abe5fa7abe9bc601ea37c7f2d7f41d3e158d7a9",
+      "records": null
+    },
+    {
+      "path": "raw/list_000028.json",
+      "bytes": 17938,
+      "sha256": "a83c933beaa7e770c6b0af317326fd4a6c5db01b359e5252fee8b261c71f935c",
+      "records": null
+    },
+    {
+      "path": "raw/list_000029.json",
+      "bytes": 21322,
+      "sha256": "e274fae1102fd3ac0eff81188d27dad1750ab76b9d0e3b66328d084d89c674ef",
+      "records": null
+    },
+    {
+      "path": "raw/list_000030.json",
+      "bytes": 19941,
+      "sha256": "23dcfb676e9ae31d6f6b50535fa085bd68644c378cc15a0bafaad28d9824a383",
+      "records": null
+    },
+    {
+      "path": "raw/list_000031.json",
+      "bytes": 15636,
+      "sha256": "51c2bbfc36a3b12c61ee5b6af6ed0b111bc93ece56a3f4a92d68504c6917d272",
+      "records": null
+    },
+    {
+      "path": "raw/list_000032.json",
+      "bytes": 13107,
+      "sha256": "bc8c00dd06620d8c37c01142f97cc43c86ecf9f639de77929e770cce54065a12",
+      "records": null
+    },
+    {
+      "path": "raw/list_000033.json",
+      "bytes": 12829,
+      "sha256": "bd978bdba43daeb398d2e6d86e7e262a7bcdefbf663130d80235ef6165f7af5f",
+      "records": null
+    },
+    {
+      "path": "raw/list_000034.json",
+      "bytes": 18739,
+      "sha256": "da90cfea40e0a2e8aac889817fa306acf61e394aa24b0dea976773968907e0ae",
+      "records": null
+    },
+    {
+      "path": "raw/list_000035.json",
+      "bytes": 12423,
+      "sha256": "9ac33b85568218c5cb2138139db7e452b182c2ff279ab295987af2f12746afa5",
+      "records": null
+    },
+    {
+      "path": "raw/list_000036.json",
+      "bytes": 17939,
+      "sha256": "938d509161af081a83ddf628ecd66ca59a5298bf3119f16afb64db87d246ce45",
+      "records": null
+    },
+    {
+      "path": "raw/list_000037.json",
+      "bytes": 12747,
+      "sha256": "343b3dce499bc5cf0ed50dc011c7a6153e3089dc5fb759cdcc9adb0ae29d52e1",
+      "records": null
+    },
+    {
+      "path": "raw/list_000038.json",
+      "bytes": 17383,
+      "sha256": "b7401f57a86a291a8863c7f87a843d532d7dff19875c931d2b91c67a9a0157ed",
+      "records": null
+    },
+    {
+      "path": "raw/list_000039.json",
+      "bytes": 12742,
+      "sha256": "f5e97180efa79e63767e69a4cdfb47ac14523310a32c4695575b9159a0b1428d",
+      "records": null
+    },
+    {
+      "path": "raw/list_000040.json",
+      "bytes": 14683,
+      "sha256": "e0800e587e95be2ffa2e4e0dd65ac0dc052092749a1bf870914c7047b3932008",
+      "records": null
+    },
+    {
+      "path": "raw/list_000041.json",
+      "bytes": 16439,
+      "sha256": "6c71003ecd6fc727048882112305ed25ba59a2f6375328bc98719332dc076056",
+      "records": null
+    },
+    {
+      "path": "raw/list_000042.json",
+      "bytes": 12916,
+      "sha256": "d9916c6beda6153b73dedd5c2782745282ae40c625ca1867423d5fdbe88aa53a",
+      "records": null
+    },
+    {
+      "path": "raw/list_000043.json",
+      "bytes": 16807,
+      "sha256": "b16108ccead8d59d614150a3214af8d19edfc649b8b82f575f86e85a9b1cc6a4",
+      "records": null
+    },
+    {
+      "path": "raw/list_000044.json",
+      "bytes": 14633,
+      "sha256": "ab579933a26e7965f9d8ef058ab1a3ead44e9010f9b9076c745298131f782973",
+      "records": null
+    },
+    {
+      "path": "raw/list_000045.json",
+      "bytes": 17288,
+      "sha256": "52fd66064689f45bd9f5a63d262cea1130f4afd67369d2784e157d9c36783ae9",
+      "records": null
+    },
+    {
+      "path": "raw/list_000046.json",
+      "bytes": 14637,
+      "sha256": "e7469b32de581968b026d5f624c3538ed9d7f4b20e31b9c88497e3600b672748",
+      "records": null
+    },
+    {
+      "path": "raw/list_000047.json",
+      "bytes": 12593,
+      "sha256": "0e1f1367dcdf8aee373da36f653fa37a5424d18e45aee31513287196e7a6f31c",
+      "records": null
+    },
+    {
+      "path": "raw/list_000048.json",
+      "bytes": 13321,
+      "sha256": "a0a3893a2fd244fd9394cb079d3c1de791aa757b2816e2f3a786d846252246d4",
+      "records": null
+    },
+    {
+      "path": "raw/list_000049.json",
+      "bytes": 14443,
+      "sha256": "8945f75814ee579c8748747698674fdf2f6bf34370028b870eeecc7976eae931",
+      "records": null
+    },
+    {
+      "path": "raw/list_000050.json",
+      "bytes": 12934,
+      "sha256": "b1a228198755bd13b461ceae14add8ef4d63cb6a6369e2cde82f3d0869ea6b5e",
+      "records": null
+    },
+    {
+      "path": "raw/list_000051.json",
+      "bytes": 12788,
+      "sha256": "6e6a7c35f7ea4af9456cf78ae85453d1dca44d152ea2b8272dbe05039bb8ed73",
+      "records": null
+    },
+    {
+      "path": "requests.jsonl",
+      "bytes": 21011,
+      "sha256": "5cf6edec561dd67bac599624f42851c009c8246445f13095fdcc97736a55a8c1",
+      "records": 54
+    }
+  ],
+  "coverage_evidence": {
+    "version": "enterprise-coverage-1.0",
+    "terminal_empty_page": false,
+    "reported_totals": [
+      3698
+    ],
+    "unique_listed_ids": 510
+  },
+  "query_spec": {
+    "endpoints": [
+      "https://hr.xiaomi.com/website/api/agent/searchJobPage"
+    ],
+    "parameters": {
+      "all_cities": true,
+      "all_projects": true,
+      "page_size": 10,
+      "target": 500
+    },
+    "selection_rule": "All public list pages in source order; conservative title-based mainland software/data core; exclusions retain raw refs",
+    "pagination_basis": "Source total and successful terminal empty page; bounded target does not imply complete"
+  }
+}

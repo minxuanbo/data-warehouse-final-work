@@ -1,0 +1,21 @@
+{
+  "scope_version": "digital_jobs_cn_core_v2.0",
+  "enrichment_version": "four_source_official_v2.0",
+  "body_hash_version": "skills-body-1.1",
+  "skill_input_fields": [
+    "description_raw",
+    "requirements_raw",
+    "additional_requirements_raw"
+  ],
+  "review_actor": "AI_assisted_scope_review",
+  "business_scope": "Mainland public software, data, algorithms, software/game QA and operations/security roles; excludes design creation, manual annotation, pure hardware, operations and nontechnical management",
+  "sources": {
+    "jd": {
+      "excluded_jobs": {
+        "225451": "设计创作职责；AIGC工具使用不等于算法或软件研发"
+      },
+      "additional_locations": {},
+      "experience_hint_only": []
+    }
+  }
+}

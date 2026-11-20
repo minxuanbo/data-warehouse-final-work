@@ -1,5 +1,6 @@
 """腾讯公开接口访问层：单并发、请求间隔至少 3 秒、失败有限重试、每次尝试留痕。"""
 import time
+import json
 import urllib.error
 import urllib.request
 from dataclasses import dataclass, field
@@ -121,8 +122,16 @@ class Client:
             if status in RESTRICTION_STATUS:
                 raise StopCollection(f"HTTP {status} 访问受限，停止采集", attempts)
             if body is not None:
-                text = body[:2000].decode("utf-8", errors="ignore")
-                if any(word in text for word in RESTRICTION_TEXT):
+                text = body.decode("utf-8", errors="ignore")
+                try:
+                    payload=json.loads(text)
+                except ValueError:
+                    payload=None
+                # A valid public job JSON may describe account/login software.
+                # Only an error message or a non-JSON challenge is a restriction.
+                restricted_text = (str(payload.get('Message') or payload.get('message') or '')
+                                   if isinstance(payload,dict) else text[:2000])
+                if any(word in restricted_text for word in RESTRICTION_TEXT):
                     raise StopCollection("响应中出现登录/验证码提示，停止采集", attempts)
             if error is None:
                 return Response(

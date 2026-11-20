@@ -6,12 +6,17 @@ from pathlib import Path
 from .integrate_analysis import check_evidence
 from .load import ROOT, dump
 from .validate import digest, jsonl, safe_path, validate
+from .source_catalog import SOURCES,raw_posts,raw_identity
 
 
 def raw_post(batch, reference, source, identity):
     raw = safe_path(batch, reference).read_bytes()
     payload = json.loads(raw)
-    if source == 'tencent':
+    if source in ('xiaomi','jd'):
+        matches=[post for post in raw_posts(source,payload) if raw_identity(source,post)==identity]
+        if len(matches)!=1:raise ValueError('Expanded source raw identity mismatch')
+        post=matches[0]
+    elif source == 'tencent':
         post = payload['Data']
         if str(post['PostId']) != identity:
             raise ValueError('Tencent raw identity mismatch')
@@ -101,8 +106,7 @@ def prepare_v11(batch_path, analysis_path, dictionary_path):
     enriched_by_id = {row['source_job_id']: row for row in enriched}
     evidence = jsonl(analysis / 'skill_evidence.jsonl')
     seen = set()
-    raw_fields = {'tencent': {'description_raw':'Responsibility','requirements_raw':'Requirement','additional_requirements_raw':'ImportantItem'},
-                  'netease': {'description_raw':'description','requirements_raw':'requirement'}}
+    raw_fields = {source:meta['raw_fields'] for source,meta in SOURCES.items()}
     for row in evidence:
         check_evidence(row, enriched_by_id, skill_names, provenance)
         identity = row['source_job_id']
@@ -131,7 +135,7 @@ def prepare_v11(batch_path, analysis_path, dictionary_path):
         raise ValueError('D reconciliation differs from validated evidence')
     if provenance['core_postings'] != len(core) or provenance['source_postings'] != len(jobs):
         raise ValueError('D denominator differs from C scope')
-    provenance = {**provenance, 'c_scope_decision': {'version':policy['scope_version'], 'status':'confirmed_by_C',
+    provenance = {**provenance, 'c_scope_decision': {'version':policy['scope_version'], 'status':policy.get('review_actor','confirmed_by_C'),
                    'excluded_jobs':source_policy['excluded_jobs'], 'experience_hint_only':source_policy['experience_hint_only']}}
     hashes = {name:digest((analysis/name).read_bytes()) for name in
               ('input_provenance.json','skill_evidence.jsonl','data_issues.jsonl','reconciliation.json')}
