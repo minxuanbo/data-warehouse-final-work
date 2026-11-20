@@ -1,0 +1,21 @@
+{
+  "source": "tencent",
+  "batch_id": "tencent_20261120T145742Z_cb8952ee",
+  "jobs_sha256": "ada11b00590f432b9bd7945c1f2938d6ceaf4c819367ebb56f299cb4fb705f63",
+  "manifest_sha256": "58cdba67f91951dd39345a24ffb115fbe70c91d36e29667b07dab14e4b477f78",
+  "dictionary_sha256": "1b66fbdf4d3eb86b772ac19b080757c49c94b7c81570d3c347d011226e6627be",
+  "dictionary_version": "skills-dict-0.2.0",
+  "rule_version": "skills-rules-0.3.1",
+  "body_hash_version": "skills-body-1.1",
+  "body_hash_fields": [
+    "description_raw",
+    "requirements_raw",
+    "additional_requirements_raw"
+  ],
+  "scope_version": "digital_jobs_cn_core_v2.0",
+  "scope_policy_sha256": "8f901529b218735c2301e448428e79f783de3e8e7d35bc52ac22ff6251a0d1e1",
+  "source_postings": 431,
+  "core_postings": 407,
+  "extraction_code_sha256": "f62c82e24b0168817d84598971ce5a138145ec62e9c7ac20544e1204034fec2a",
+  "review_status": "automated_evidence_not_human_labels"
+}

@@ -24,6 +24,10 @@ LANGUAGE=re.compile(r'Java|Python|Android|iOS|HarmonyOS|鸿蒙|\bWeb\b|C\+\+|C#|
 
 def main(batch,output,accept=False):
     checked=validate(batch);m=checked['manifest'];root=checked['root'];source=m['source']
+    for file in m.get('collector_source',[]):
+        assert hashlib.sha256((ROOT/file['path']).read_bytes().replace(b'\r\n',b'\n')).hexdigest()==file['sha256'],file['path']
+    if m.get('continuation'):
+        assert hashlib.sha256((ROOT/'scripts/resume_expansion.py').read_bytes().replace(b'\r\n',b'\n')).hexdigest()==m['continuation']['runner_sha256']
     requests=[json.loads(l) for l in (root/'requests.jsonl').read_text(encoding='utf-8').splitlines()]
     times={r['response_path']:r['requested_at'] for r in requests if r['response_path'] and r['business_success']}
     decisions={};reconstructed=0
