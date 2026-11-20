@@ -3,9 +3,9 @@
   "name": "rotated",
   "position": {
     "x": 24,
-    "y": 565,
+    "y": 850,
     "z": 0,
-    "height": 240,
+    "height": 220,
     "width": 1382,
     "tabOrder": 0
   },
@@ -65,7 +65,7 @@
               "queryRef": "SnapshotJobs.category_group",
               "nativeQueryRef": "category_group",
               "active": true,
-              "displayName": "标准岗位类别"
+              "displayName": "自动主方向"
             }
           ]
         },
@@ -306,7 +306,7 @@
           }
         },
         "type": "Categorical",
-        "displayName": "标准岗位类别"
+        "displayName": "自动主方向"
       },
       {
         "name": "f551beeb02003b18e77a",

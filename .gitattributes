@@ -13,3 +13,5 @@ warehouse/cd_policy.json -text
 /dashboards/powerbi/** text eol=lf
 /scripts/prepare_powerbi*.py text eol=lf
 /scripts/check_powerbi.ps1 text eol=lf
+# DAX records bind exact case bytes; keep that binding stable on Windows clones.
+/reports/verification/*.json text eol=lf

@@ -9,7 +9,7 @@ from warehouse.integrate_analysis import prepare
 from warehouse.normalization import classify,city
 
 
-def main():
+def main(output_path=None):
     original=json.loads((ROOT/'reports/analysis/powerbi_dax_cases.json').read_text(encoding='utf-8'))
     cases=json.loads(json.dumps(original['cases']));jobs=[];skills={}
     for case in cases:
@@ -29,13 +29,16 @@ def main():
           and (day is None or j['date_key']==day) and (province is None or province in j['provinces'])
           and (category is None or j['category']==category) and (education is None or j['education']==education)]
         body=[j for j in selected if any((j.get(f) or '').strip() for f in ('description_raw','requirements_raw','additional_requirements_raw'))]
-        n=sum(bool(skills.get(j['key'],set()) if skill is None else skills.get(j['key'],set())&{skill}) for j in body)
+        selected_skills=None if skill is None else ({skill} if isinstance(skill,str) else set(skill))
+        n=sum(bool(skills.get(j['key'],set()) if selected_skills is None else skills.get(j['key'],set())&selected_skills) for j in body)
         expected={'core':len({j['key'] for j in selected}),'denominator':len({j['key'] for j in body}),
                   'skilled':n,'share':n/len(body) if body else None,'newly_observed':None}
         filters=[]
         for t,c,v in [('SnapshotSources','source',source),('Calendar','date_key',day),('SnapshotCityJobs','province_name',province),
                       ('SnapshotJobs','category_group',category),('SnapshotSkills','skill_name',skill),('SnapshotJobs','education_group',education)]:
-            if v is not None:filters.append(f"TREATAS({{{literal(v)}}},'{t}'[{c}])")
+            if v is not None:
+                values=[v] if isinstance(v,(str,int)) else v
+                filters.append(f"TREATAS({{{','.join(literal(x) for x in values)}}},'{t}'[{c}])")
         expression='ROW("core",[快照核心岗位数],"denominator",[快照正文分母],"skilled",[快照技能岗位数],"share",[快照技能占比],"newly_observed",[可比新增观察数])'
         cases.append({'name':'release_'+name,'dax':'EVALUATE '+('CALCULATETABLE('+expression+','+','.join(filters)+')' if filters else expression),'expected':expected})
     add('all')
@@ -45,6 +48,12 @@ def main():
     for group in sorted(set.union(*(j['provinces'] for j in jobs))):add('province_'+group,province=group)
     for edu in sorted({j['education'] for j in jobs}):add('education_'+edu,education=edu)
     add('Python_denominator_kept',skill='Python');add('province_Python',province='广东',skill='Python');add('empty',province='不存在')
+    add('Python_or_cpp_union',skill=['Python','C++'])
+    add('development_Python',category='开发',skill='Python')
+    add('bachelor_Python',education='本科',skill='Python')
+    add('no_matching_skill',skill='不存在的技能')
+    add('training_cohort',province='广东',category='开发',education='本科')
+    add('training_cohort_cpp',province='广东',category='开发',education='本科',skill='C++')
     for source in (None,'tencent','netease'):
         groups=[j for j in jobs if source is None or j['source']==source]
         for code,den,num in [('core_body_coverage',sum(j['is_core'] for j in groups),sum(j['is_core'] for j in groups)),
@@ -53,8 +62,12 @@ def main():
             if source:filters.append(f'TREATAS({{"{source}"}},SnapshotSources[source])')
             cases.append({'name':'quality_'+str(source)+'_'+code,'dax':'EVALUATE CALCULATETABLE(ROW("numerator",[KPI分子],"denominator",[KPI分母],"value",[KPI实际值],"goal",[KPI目标值],"status",[KPI状态说明]),'+','.join(filters)+')',
                           'expected':{'numerator':num,'denominator':den,'value':num/den,'goal':1,'status':'达标' if num==den else '未达标'}})
-    write_json(ROOT/'reports/verification/powerbi_release_cases_20261118.json',{'builds':original['builds'],'input':'fixed raw source + independent Python sets; current 200-posting acceptance','cases':cases})
+    target=Path(output_path) if output_path else ROOT/'reports/verification/powerbi_release_cases_20261118.json'
+    write_json(target,{'builds':original['builds'],'input':'fixed raw source + independent Python sets; current 200-posting acceptance; skill multi-select is union','cases':cases})
     print(json.dumps({'cases':len(cases),'new_cases':len(cases)-len(original['cases'])}))
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    import argparse
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path)
+    main(p.parse_args().output)

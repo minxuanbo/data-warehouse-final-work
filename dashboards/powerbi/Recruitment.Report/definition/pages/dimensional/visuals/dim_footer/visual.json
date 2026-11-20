@@ -3,7 +3,7 @@
   "name": "dim_footer",
   "position": {
     "x": 24,
-    "y": 830,
+    "y": 1090,
     "z": 0,
     "height": 55,
     "width": 1382,
@@ -46,9 +46,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "当前两来源观察日不同且覆盖partial；日快照可查询，增长/关闭等市场趋势不可推断。多城市总计不是各行相加。",
+                    "value": "小批联调：两来源日期不同且均partial；自动主方向待业务复核。未选技能时计至少命中一项；多城市总计按岗位并集，不推导市场趋势。",
                     "textStyle": {
-                      "fontSize": "15pt",
+                      "fontSize": "14pt",
                       "fontFamily": "Segoe UI",
                       "color": "#123047"
                     }

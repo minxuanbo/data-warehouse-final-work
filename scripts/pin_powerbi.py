@@ -4,7 +4,7 @@ import json
 import os
 import re
 from scripts.prepare_powerbi import PROJECT,model,write_json,visual
-from scripts.extend_powerbi import add_model
+from scripts.extend_powerbi import add_model,repair_skill_page
 from scripts.powerbi_contract import fix_model,rename_visual_fields,validate_model
 from warehouse.load import connect
 from warehouse.release_build import records
@@ -74,6 +74,7 @@ def pin(database,server='lpc:localhost',release_id=None):
     write_json(detail/'qualification_evidence/visual.json',audit)
     skill_path=detail/'snapshot_evidence_rows/visual.json';skill=json.loads(skill_path.read_text(encoding='utf-8'))
     skill['position'].update(y=600,height=200);write_json(skill_path,skill)
+    repair_skill_page()
     for p in (PROJECT/'Recruitment.Report/definition/pages').rglob('*.json'):
         old=json.loads(p.read_text(encoding='utf-8'));new=polish_visuals(old,rid)
         if new!=old:write_json(p,new)

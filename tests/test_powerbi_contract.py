@@ -25,5 +25,20 @@ class AnalysisModelTests(unittest.TestCase):
         self.assertIn('source_category_group',{c['name'] for c in tables['Jobs']['columns']})
         self.assertIn('category_group',{c['name'] for c in tables['SnapshotJobs']['columns']})
 
+    def test_skill_slicer_has_visible_numerator_denominator_and_share(self):
+        # Model-only DAX tests missed a page which displayed just the invariant core count.
+        page=Path('dashboards/powerbi/Recruitment.Report/definition/pages/dimensional')
+        definition=json.loads((page/'visuals/skill_profile/visual.json').read_text(encoding='utf-8'))
+        projections=definition['visual']['query']['queryState']['Values']['projections']
+        actual={p['field']['Measure']['Property'] for p in projections}
+        required={'快照核心岗位数','快照正文分母','快照技能岗位数','快照技能占比'}
+        self.assertTrue(required.issubset(actual))
+        table=next(t for t in self.model['model']['tables'] if t['name']=='SnapshotJobs')
+        self.assertTrue(actual.issubset({m['name'] for m in table['measures']}))
+        height=json.loads((page/'page.json').read_text(encoding='utf-8'))['height']
+        for name in ('skill_profile','rotated','dim_footer'):
+            visual=json.loads((page/f'visuals/{name}/visual.json').read_text(encoding='utf-8'))
+            self.assertLessEqual(visual['position']['y']+visual['position']['height'],height)
+
 
 if __name__=='__main__':unittest.main()

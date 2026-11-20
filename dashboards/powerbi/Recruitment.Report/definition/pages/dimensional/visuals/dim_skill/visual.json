@@ -61,6 +61,11 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
       ]
     },
     "visualContainerObjects": {
@@ -101,7 +106,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'技能'"
+                  "Value": "'技能（多选取并集）'"
                 }
               }
             },

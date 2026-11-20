@@ -63,6 +63,12 @@ py -3.12 -m venv .venv-dbt
 
 第 06 页按年/季度/月/日、省/市展开，类别总计右键钻取第 07 页，点岗位联动证据，Ctrl+单击返回。基线未筛选为 196 核心岗；FALSE 为保留的审计证据，不进入技能指标。第 01—03 页类别是来源原类别，第 06—07 页为标准方向，不混用。
 
+第06页新增技能训练线索表：选Python应显示技能54、正文196、27.6%；多选Python/C++按任一命中的岗位并集，不能相加或当作两技能同时具备。日期/地区的核心岗位基数不随技能缩小。仅修复现有页面定义可关闭Desktop后运行 `python -X utf8 -m scripts.extend_powerbi --repair-skill-page`，重新打开工程；`pin_powerbi`也保留该修复。
+
+真实样本决策案例与交叉岗位待复核包可用 `python -X utf8 -m scripts.prepare_pilot_decision --database <专用库> --release-id <已发布版本>` 生成；要求每个来源身份只有一次观察，避免把多日重复累计成当前小批叙事。后续引擎检查可通过 `scripts.prepare_powerbi_release_checks --output <本轮用例JSON>` 另存新用例，保留历史证据。
+
+无SQL连接时可运行 `python -X utf8 -m scripts.prepare_pilot_decision --offline --release-id 5`，从仓库内经哈希验证的固定输入独立计算；此处5只是参考发布号，输出明确标记文件复算，不能据此声称重新查询SQL。2026-11-20的案例36岗及C++18岗已另与Desktop已加载模型的DAX核对一致。
+
 真实 DAX 验收使用 `scripts/check_powerbi.ps1` 对指定 Desktop 引擎端口执行，先校验已加载查询、度量和关系与文件相同，再运行用例；不据 SQL 测试或旧模型哈希宣称报表通过。日后改连接/构建或模型后必须重新生成相应期望和绑定当前哈希的验收记录。
 
 ## 5 接新批与定时加工

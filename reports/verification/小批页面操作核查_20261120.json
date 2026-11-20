@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-11-20T17:57:52.698465+08:00",
+  "method": "Windows computer-use observation of the actual Power BI Desktop page, followed by save",
+  "page": "06 岗位需求多维分析",
+  "reference_release_id": 5,
+  "status": "passed",
+  "model_definition_sha256": "16ac22e16e1ef0ea3a40faaea4306224a74c35e732b723b859190ac039ba5dd0",
+  "page_files_sha256": {
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/page.json": "f3b0e05bff84841fe2292d94a4be3fb43a77e7640f9f12f6529d26292434898c",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/date_hierarchy/visual.json": "7407d97b46736bac93964f8ad53f61b3a284c750a519010b49983123537effd3",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/dim_date/visual.json": "cb9f14dc61cbf3a688aa8139581039fcdd527d89f6d383cfed266a524f2c2783",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/dim_education/visual.json": "74d65f574d34164ee17c4450429f70eb7f186e927b6061b6ac82d7d59f7301a4",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/dim_employment/visual.json": "1e67dc883658f4196866eb0b698ee09e4aa205976fa95a0024124548ebbb2af9",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/dim_experience/visual.json": "9e84a11efed4c1ec360743af8b5de89858ac39a724acc64cac9b5732c3a2f69e",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/dim_footer/visual.json": "375de2e5479d41db7150ea02d64f0b1bc99140327f19dfe59e36aaa28d902bcf",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/dim_note/visual.json": "bc10ea8e81cf5c6e9b6d8870546a152f714c99cf4b3522ca97a4d34a98569975",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/dim_skill/visual.json": "9a821395546dda642c6a6b296f719931e8fa3334f0b70711d68be61306f0dc91",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/dim_source/visual.json": "595b44b0eb9035a16f690b453e0834845b25beb0456d785fd67cfa20bc95d2c5",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/dim_title/visual.json": "4509c4c5c5a8a3c1bdd80759ea2975973bab9974bf9ae91e4dad543250afb246",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/geo_hierarchy/visual.json": "1bb4942c11c785d011dae58f7cf6b0713bc5947558b4a13de1f425221e109a52",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/rotated/visual.json": "400a7c6a955a171470ab8c603ad8491b69689c16b06ea5eae7eceb8ef8dc7b5c",
+    "dashboards/powerbi/Recruitment.Report/definition/pages/dimensional/visuals/skill_profile/visual.json": "1c6a0fed2805b4a56dba3a45dc560bd04a192eab3beaa99eff722591ab16f06d"
+  },
+  "observed": [
+    {
+      "selection": "none",
+      "core": 196,
+      "denominator": 196,
+      "skilled": 163,
+      "share_display": "83.2%"
+    },
+    {
+      "selection": [
+        "Python"
+      ],
+      "core": 196,
+      "denominator": 196,
+      "skilled": 54,
+      "share_display": "27.6%"
+    },
+    {
+      "selection": [
+        "Python",
+        "C++"
+      ],
+      "semantics": "any_selected_union",
+      "core": 196,
+      "denominator": 196,
+      "skilled": 91,
+      "share_display": "46.4%"
+    }
+  ],
+  "default_selection_restored": true,
+  "saved_in_original_model_format": true,
+  "not_retested": [
+    "full_SQL_refresh",
+    "page_07_full_drillthrough",
+    "independent_member_reproduction"
+  ],
+  "note": "No screenshot files manufactured. The current tool observations establish the UI values; DAX record separately contains 90 actual engine queries.",
+  "repository_line_endings_normalized_after_save": true
+}

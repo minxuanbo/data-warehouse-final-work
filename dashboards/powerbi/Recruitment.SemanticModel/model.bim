@@ -1229,6 +1229,16 @@
                       "State": "Suggested",
                       "Weight": 0.9
                     }
+                  },
+                  {
+                    "city_name": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -1243,6 +1253,16 @@
                 "Terms": [
                   {
                     "省份": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "province_name": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -1389,6 +1409,16 @@
                 "State": "Generated",
                 "Terms": [
                   {
+                    "自动主方向": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
                     "标准岗位类别": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
@@ -1411,6 +1441,69 @@
                 "Terms": [
                   {
                     "快照核心岗位数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.column1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "快照正文分母"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "快照正文分母": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.column2": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "快照技能岗位数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "快照技能岗位数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "snapshotjobs.column3": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SnapshotJobs",
+                    "ConceptualProperty": "快照技能占比"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "快照技能占比": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"

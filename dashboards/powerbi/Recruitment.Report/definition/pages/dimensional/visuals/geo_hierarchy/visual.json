@@ -29,7 +29,7 @@
               "queryRef": "SnapshotJobs.category_group",
               "nativeQueryRef": "category_group",
               "active": true,
-              "displayName": "标准岗位类别"
+              "displayName": "自动主方向"
             }
           ]
         },

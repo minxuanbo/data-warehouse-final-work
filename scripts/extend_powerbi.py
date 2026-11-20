@@ -132,6 +132,52 @@ def slicer(name,table,col,x,y,w,title):
     return v
 
 
+def repair_skill_page(project=PROJECT):
+    """Expose skill numerators beside their stable denominator without reverse filtering."""
+    page=project/'Recruitment.Report/definition/pages/dimensional'
+    metadata=json.loads((page/'page.json').read_text(encoding='utf-8'))
+    metadata['height']=1160
+    write_json(page/'page.json',metadata)
+    rotated=page/'visuals/rotated/visual.json'
+    existing=json.loads(rotated.read_text(encoding='utf-8'))
+    existing['position'].update(y=850,height=220)
+    write_json(rotated,existing)
+    c=lambda t,n:(t,n,False)
+    measures=[('SnapshotJobs',n,True) for n in ('快照核心岗位数','快照正文分母','快照技能岗位数','快照技能占比')]
+    profile=matrix('skill_profile',[c('SnapshotJobs','category_group'),c('SnapshotCityJobs','province_name'),
+                   c('SnapshotCityJobs','city_name')],[],measures,24,565,1382,260,
+                   '技能训练线索｜按自动主方向→省→市展开；多选技能取任一命中岗位')
+    profile['$schema']='https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json'
+    write_json(page/'visuals/skill_profile/visual.json',profile)
+    notes={
+        'dim_note':('技能筛选作用于下方技能岗位数与占比；核心岗位数和正文分母保持当前人群。多选=任一命中，非同时具备；右键主方向可钻取07。',76,43),
+        'dim_footer':('小批联调：两来源日期不同且均partial；自动主方向待业务复核。未选技能时计至少命中一项；多城市总计按岗位并集，不推导市场趋势。',1090,55),
+    }
+    for name,(text,y,height) in notes.items():
+        path=page/f'visuals/{name}/visual.json'
+        definition=json.loads(path.read_text(encoding='utf-8'))
+        definition['position'].update(y=y,height=height)
+        definition['visual']['objects']['general'][0]['properties']['paragraphs']=[{
+            'textRuns':[{'value':text,'textStyle':{'fontSize':'14pt','fontFamily':'Segoe UI','color':'#123047'}}]}]
+        write_json(path,definition)
+    skill_path=page/'visuals/dim_skill/visual.json'
+    skill=json.loads(skill_path.read_text(encoding='utf-8'))
+    skill['visual']['visualContainerObjects']['title'][0]['properties']['text']=literal('技能（多选取并集）')
+    write_json(skill_path,skill)
+    for path in page.rglob('visual.json'):
+        definition=json.loads(path.read_text(encoding='utf-8'))
+        def label(value):
+            if isinstance(value,dict):
+                col=value.get('field',{}).get('Column',{})
+                if col.get('Property')=='category_group':value['displayName']='自动主方向'
+                for child in value.values():label(child)
+            elif isinstance(value,list):
+                for child in value:label(child)
+        label(definition)
+        write_json(path,definition)
+    return {'page':'dimensional','skill_selection':'any_selected','measures':[m[1] for m in measures]}
+
+
 def add_pages(release_id):
     report=PROJECT/'Recruitment.Report/definition/pages'
     page_meta=json.loads((report/'pages.json').read_text(encoding='utf-8'))
@@ -181,6 +227,7 @@ def add_pages(release_id):
       visual('snapshot_evidence_rows','tableEx',24,530,1382,290,{'Values':[c('SnapshotEvidence',n) for n in ('skill_name','eligible_for_metric','evidence_field','evidence','evidence_start','evidence_end')]},'逐字证据与字符位置：保留否定/不确定项用于审计'),
       textbox('snapshot_footer',f'固定发布 {release_id}；原文由批次、相对文件路径、SHA-256与字符位置追溯；当前身份保守按来源区分，未声称跨源重复已全部归并。',24,833,1382,53,14)
     ],extra)
+    repair_skill_page()
 
 
 def main():
@@ -206,4 +253,10 @@ def main():
     print(json.dumps({'release_id':rid,'build_ids':builds,'added_tables':EXTENSIONS,'added_pages':PAGES},ensure_ascii=False))
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--repair-skill-page',action='store_true',help='Patch the existing page only; no database connection or repinning')
+    args=parser.parse_args()
+    if args.repair_skill_page:print(json.dumps(repair_skill_page(),ensure_ascii=False))
+    else:main()
