@@ -1,0 +1,162 @@
+{
+  "clean_directory": ".local\\pilot-closeout-20261120\\clean-v3",
+  "baseline_commit": "87c9773c0e193cd1719730be6d0b2c8872c4feb9",
+  "method": "local shared Git objects, copied exact working source; dedicated empty database; shared installed pinned Python environment; no copied hidden batch/cache inputs",
+  "files": [
+    {
+      "path": "dbt/tests/qualification_resolution_contract.sql",
+      "source_sha256": "cceb3ed6de2d633cfa4079deec9f18d9f237bcd56cdc3a423b17d7a5d2138736",
+      "clean_sha256": "cceb3ed6de2d633cfa4079deec9f18d9f237bcd56cdc3a423b17d7a5d2138736"
+    },
+    {
+      "path": "etl/skills/extract.py",
+      "source_sha256": "f62c82e24b0168817d84598971ce5a138145ec62e9c7ac20544e1204034fec2a",
+      "clean_sha256": "f62c82e24b0168817d84598971ce5a138145ec62e9c7ac20544e1204034fec2a"
+    },
+    {
+      "path": "reports/analysis/netease_20261101T044527Z_157cf969/v1.3/data_issues.jsonl",
+      "source_sha256": "c0c01f0e5c6446a6654fb13952abe84b1e4795d78e0f5ea2abf3896be8de4d45",
+      "clean_sha256": "c0c01f0e5c6446a6654fb13952abe84b1e4795d78e0f5ea2abf3896be8de4d45"
+    },
+    {
+      "path": "reports/analysis/netease_20261101T044527Z_157cf969/v1.3/input_provenance.json",
+      "source_sha256": "16fa2d6606427347b54b73c8343a5f07de2eee8454e67da9f4dbed3eb588ce18",
+      "clean_sha256": "16fa2d6606427347b54b73c8343a5f07de2eee8454e67da9f4dbed3eb588ce18"
+    },
+    {
+      "path": "reports/analysis/netease_20261101T044527Z_157cf969/v1.3/reconciliation.json",
+      "source_sha256": "426e2d92f276fc202e19b87c8afd20b8727b03993784f6d4a3716208de3af575",
+      "clean_sha256": "426e2d92f276fc202e19b87c8afd20b8727b03993784f6d4a3716208de3af575"
+    },
+    {
+      "path": "reports/analysis/netease_20261101T044527Z_157cf969/v1.3/scope_policy.json",
+      "source_sha256": "c66f8497ba21d5cd943381f9030cf334cc811b0be51718db1d60ee9f2ca5e0d0",
+      "clean_sha256": "c66f8497ba21d5cd943381f9030cf334cc811b0be51718db1d60ee9f2ca5e0d0"
+    },
+    {
+      "path": "reports/analysis/netease_20261101T044527Z_157cf969/v1.3/skill_evidence.jsonl",
+      "source_sha256": "485b1454dab9ca1f9d802726c1f3bdca55ee1cdcc4d1b7882cd0d70f48f678d8",
+      "clean_sha256": "485b1454dab9ca1f9d802726c1f3bdca55ee1cdcc4d1b7882cd0d70f48f678d8"
+    },
+    {
+      "path": "reports/analysis/tencent_20261031T093102Z_366ad0a4/v1.3/data_issues.jsonl",
+      "source_sha256": "176a4646aaa2348ad78d89d0684750979939dca361cc4bc0f542a2df9a62fd8a",
+      "clean_sha256": "176a4646aaa2348ad78d89d0684750979939dca361cc4bc0f542a2df9a62fd8a"
+    },
+    {
+      "path": "reports/analysis/tencent_20261031T093102Z_366ad0a4/v1.3/input_provenance.json",
+      "source_sha256": "a707d80338964f94c94ff03dd20307ac9451897f1f3186d861b9e787ef085984",
+      "clean_sha256": "a707d80338964f94c94ff03dd20307ac9451897f1f3186d861b9e787ef085984"
+    },
+    {
+      "path": "reports/analysis/tencent_20261031T093102Z_366ad0a4/v1.3/reconciliation.json",
+      "source_sha256": "12e7e3ab86e3d40f6e87aa8fac728483101a9b119452eb0cfb707f977d380fce",
+      "clean_sha256": "12e7e3ab86e3d40f6e87aa8fac728483101a9b119452eb0cfb707f977d380fce"
+    },
+    {
+      "path": "reports/analysis/tencent_20261031T093102Z_366ad0a4/v1.3/scope_policy.json",
+      "source_sha256": "c66f8497ba21d5cd943381f9030cf334cc811b0be51718db1d60ee9f2ca5e0d0",
+      "clean_sha256": "c66f8497ba21d5cd943381f9030cf334cc811b0be51718db1d60ee9f2ca5e0d0"
+    },
+    {
+      "path": "reports/analysis/tencent_20261031T093102Z_366ad0a4/v1.3/skill_evidence.jsonl",
+      "source_sha256": "c4e98e208565149f57a51c055e659b65b965109c5a9ae0aeff105d21cbd0f6e6",
+      "clean_sha256": "c4e98e208565149f57a51c055e659b65b965109c5a9ae0aeff105d21cbd0f6e6"
+    },
+    {
+      "path": "scripts/analysis_inputs.py",
+      "source_sha256": "d60f9aef6eef1ecdd21212cf817f5bc26c55d26e2ee0946e5bd794426fa7416d",
+      "clean_sha256": "d60f9aef6eef1ecdd21212cf817f5bc26c55d26e2ee0946e5bd794426fa7416d"
+    },
+    {
+      "path": "scripts/check_pilot_closeout.py",
+      "source_sha256": "e5c4ccc755b70143a899490873ecb4094ac632a4473b1266ffb5d48cf6bed756",
+      "clean_sha256": "e5c4ccc755b70143a899490873ecb4094ac632a4473b1266ffb5d48cf6bed756"
+    },
+    {
+      "path": "scripts/check_qualifications.py",
+      "source_sha256": "07d2b203afff8782351f3be051757253c3092cc4664643906a0ca95d556ecc9c",
+      "clean_sha256": "07d2b203afff8782351f3be051757253c3092cc4664643906a0ca95d556ecc9c"
+    },
+    {
+      "path": "scripts/check_subjects.py",
+      "source_sha256": "7f75031b92591f1d99e812519bc0b23854d913cdb67a09f5d9d8533491640c67",
+      "clean_sha256": "7f75031b92591f1d99e812519bc0b23854d913cdb67a09f5d9d8533491640c67"
+    },
+    {
+      "path": "scripts/prepare_pilot_decision.py",
+      "source_sha256": "5e4db9dd0d6a2e3fdbf0e2b9e3a47411708188472820996bdfd20ad38157c830",
+      "clean_sha256": "5e4db9dd0d6a2e3fdbf0e2b9e3a47411708188472820996bdfd20ad38157c830"
+    },
+    {
+      "path": "scripts/prepare_powerbi_checks.py",
+      "source_sha256": "68a7aafb086cfdca95fa9e1e3c457dc82a630feb18a19edaf69b2a23fa7a1087",
+      "clean_sha256": "68a7aafb086cfdca95fa9e1e3c457dc82a630feb18a19edaf69b2a23fa7a1087"
+    },
+    {
+      "path": "scripts/prepare_powerbi_release_checks.py",
+      "source_sha256": "5aecb9812affbf1e4f218b780953d363faed0f5579478c2dbd895f6b5c24b018",
+      "clean_sha256": "5aecb9812affbf1e4f218b780953d363faed0f5579478c2dbd895f6b5c24b018"
+    },
+    {
+      "path": "scripts/reproduce.py",
+      "source_sha256": "8ef0224d7f7d54ffa6d608ebc938d4f18076302bbc2eaca8d8ffb7fb12d11fce",
+      "clean_sha256": "8ef0224d7f7d54ffa6d608ebc938d4f18076302bbc2eaca8d8ffb7fb12d11fce"
+    },
+    {
+      "path": "tests/test_generic_analysis.py",
+      "source_sha256": "43c38419901b920920e04181f323028abccc3ed8159e36afa1d839c48ff8e72c",
+      "clean_sha256": "43c38419901b920920e04181f323028abccc3ed8159e36afa1d839c48ff8e72c"
+    },
+    {
+      "path": "tests/test_normalization.py",
+      "source_sha256": "fff7eaaaef915762a7f9c1d448d1a785026a70cc4f2e9930d98bdf0d47685fdb",
+      "clean_sha256": "fff7eaaaef915762a7f9c1d448d1a785026a70cc4f2e9930d98bdf0d47685fdb"
+    },
+    {
+      "path": "tests/test_qualifications.py",
+      "source_sha256": "a47448eb306834395d343a5ee32e968db1d7c84a50ea784077d4df7db51f73c5",
+      "clean_sha256": "a47448eb306834395d343a5ee32e968db1d7c84a50ea784077d4df7db51f73c5"
+    },
+    {
+      "path": "tests/test_skills.py",
+      "source_sha256": "e6a2ce2c32b05616755c6631952a1775ebe154cbbd9588d1f3f873e12e322598",
+      "clean_sha256": "e6a2ce2c32b05616755c6631952a1775ebe154cbbd9588d1f3f873e12e322598"
+    },
+    {
+      "path": "warehouse/normalization.py",
+      "source_sha256": "0c4fae285fcf121f579a58acf635d56d35c23e2693eb23946c75738f76b7c5cf",
+      "clean_sha256": "0c4fae285fcf121f579a58acf635d56d35c23e2693eb23946c75738f76b7c5cf"
+    },
+    {
+      "path": "warehouse/pipeline.json",
+      "source_sha256": "a568834cf2092e7bc06858180a3abda0df3a9c0722be253753e05cd3f40b93d4",
+      "clean_sha256": "a568834cf2092e7bc06858180a3abda0df3a9c0722be253753e05cd3f40b93d4"
+    },
+    {
+      "path": "warehouse/prepare_analysis.py",
+      "source_sha256": "fedeb5fa763def4eb3cf30931ea4f98f73ae9f6aa05de95dbb793efccb55b114",
+      "clean_sha256": "fedeb5fa763def4eb3cf30931ea4f98f73ae9f6aa05de95dbb793efccb55b114"
+    },
+    {
+      "path": "warehouse/qualifications.py",
+      "source_sha256": "6a8e89924643d6d2e6fd782914e2bfe4b3fb47926eb08fed7076987e4f63ed7b",
+      "clean_sha256": "6a8e89924643d6d2e6fd782914e2bfe4b3fb47926eb08fed7076987e4f63ed7b"
+    }
+  ],
+  "post_reproduction_changes": [
+    {
+      "path": "scripts/prepare_pilot_decision.py",
+      "reproduced_sha256": "5e4db9dd0d6a2e3fdbf0e2b9e3a47411708188472820996bdfd20ad38157c830",
+      "final_sha256": "a245b58607296ec236e7019f12476109045187a9976a742fae381db007062617",
+      "validation": "Report-only three-field export checked against all 200 published rows; field preservation test moved out of hidden-fixture skip and 7 targeted tests passed."
+    },
+    {
+      "path": "tests/test_generic_analysis.py",
+      "reproduced_sha256": "43c38419901b920920e04181f323028abccc3ed8159e36afa1d839c48ff8e72c",
+      "final_sha256": "5f6b69c0a8ec60de3a32b21b7513b20cbd70ac475bc797a689de03ac0b0c5b37",
+      "validation": "Report-only three-field export checked against all 200 published rows; field preservation test moved out of hidden-fixture skip and 7 targeted tests passed."
+    }
+  ],
+  "post_reproduction_note": "Warehouse pipeline/normalization/qualification/skill implementation and frozen inputs unchanged; report export and test organization changes verified separately."
+}

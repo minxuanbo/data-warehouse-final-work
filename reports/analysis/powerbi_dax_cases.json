@@ -3,10 +3,10 @@
   "builds": [
     {
       "source": "netease",
-      "build_id": 6,
+      "build_id": 11,
       "batch_id": "netease_20261101T044527Z_157cf969",
       "scope_version": "digital_jobs_cn_core_v1.2",
-      "rule_version": "skills-rules-0.3.0",
+      "rule_version": "skills-rules-0.3.1",
       "dictionary_version": "skills-dict-0.2.0",
       "body_hash_version": "skills-body-1.1",
       "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
@@ -21,10 +21,10 @@
     },
     {
       "source": "tencent",
-      "build_id": 5,
+      "build_id": 10,
       "batch_id": "tencent_20261031T093102Z_366ad0a4",
       "scope_version": "digital_jobs_cn_core_v1.2",
-      "rule_version": "skills-rules-0.3.0",
+      "rule_version": "skills-rules-0.3.1",
       "dictionary_version": "skills-dict-0.2.0",
       "body_hash_version": "skills-body-1.1",
       "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
@@ -45,11 +45,11 @@
       "expected": {
         "core": 196,
         "denominator": 196,
-        "job_skill_pairs": 667,
-        "skilled_jobs": 163,
-        "skill_share": 0.8316326530612245,
-        "eligible_evidence": 779,
-        "combination_jobs": 139
+        "job_skill_pairs": 671,
+        "skilled_jobs": 165,
+        "skill_share": 0.8418367346938775,
+        "eligible_evidence": 784,
+        "combination_jobs": 140
       }
     },
     {
@@ -58,10 +58,10 @@
       "expected": {
         "core": 98,
         "denominator": 98,
-        "job_skill_pairs": 333,
+        "job_skill_pairs": 334,
         "skilled_jobs": 83,
         "skill_share": 0.8469387755102041,
-        "eligible_evidence": 392,
+        "eligible_evidence": 393,
         "combination_jobs": 74
       }
     },
@@ -136,10 +136,10 @@
       "expected": {
         "core": 54,
         "denominator": 54,
-        "job_skill_pairs": 181,
+        "job_skill_pairs": 182,
         "skilled_jobs": 48,
         "skill_share": 0.8888888888888888,
-        "eligible_evidence": 216,
+        "eligible_evidence": 217,
         "combination_jobs": 43
       }
     },
@@ -162,10 +162,10 @@
       "expected": {
         "core": 27,
         "denominator": 27,
-        "job_skill_pairs": 78,
+        "job_skill_pairs": 79,
         "skilled_jobs": 23,
         "skill_share": 0.8518518518518519,
-        "eligible_evidence": 97,
+        "eligible_evidence": 98,
         "combination_jobs": 20
       }
     },
@@ -253,10 +253,10 @@
       "expected": {
         "core": 36,
         "denominator": 36,
-        "job_skill_pairs": 96,
+        "job_skill_pairs": 97,
         "skilled_jobs": 30,
         "skill_share": 0.8333333333333334,
-        "eligible_evidence": 113,
+        "eligible_evidence": 114,
         "combination_jobs": 23
       }
     },
@@ -305,10 +305,10 @@
       "expected": {
         "core": 98,
         "denominator": 98,
-        "job_skill_pairs": 333,
+        "job_skill_pairs": 334,
         "skilled_jobs": 83,
         "skill_share": 0.8469387755102041,
-        "eligible_evidence": 392,
+        "eligible_evidence": 393,
         "combination_jobs": 3
       }
     },
@@ -318,10 +318,10 @@
       "expected": {
         "core": 54,
         "denominator": 54,
-        "job_skill_pairs": 181,
+        "job_skill_pairs": 182,
         "skilled_jobs": 48,
         "skill_share": 0.8888888888888888,
-        "eligible_evidence": 216,
+        "eligible_evidence": 217,
         "combination_jobs": 1
       }
     },
@@ -370,11 +370,11 @@
       "expected": {
         "core": 98,
         "denominator": 98,
-        "job_skill_pairs": 334,
-        "skilled_jobs": 80,
-        "skill_share": 0.8163265306122449,
-        "eligible_evidence": 387,
-        "combination_jobs": 65
+        "job_skill_pairs": 337,
+        "skilled_jobs": 82,
+        "skill_share": 0.8367346938775511,
+        "eligible_evidence": 391,
+        "combination_jobs": 66
       }
     },
     {
@@ -383,11 +383,11 @@
       "expected": {
         "core": 16,
         "denominator": 16,
-        "job_skill_pairs": 28,
+        "job_skill_pairs": 27,
         "skilled_jobs": 9,
         "skill_share": 0.5625,
         "eligible_evidence": 32,
-        "combination_jobs": 6
+        "combination_jobs": 5
       }
     },
     {
@@ -435,11 +435,11 @@
       "expected": {
         "core": 45,
         "denominator": 45,
-        "job_skill_pairs": 153,
-        "skilled_jobs": 38,
-        "skill_share": 0.8444444444444444,
-        "eligible_evidence": 168,
-        "combination_jobs": 30
+        "job_skill_pairs": 157,
+        "skilled_jobs": 40,
+        "skill_share": 0.8888888888888888,
+        "eligible_evidence": 172,
+        "combination_jobs": 32
       }
     },
     {
@@ -500,11 +500,11 @@
       "expected": {
         "core": 45,
         "denominator": 45,
-        "job_skill_pairs": 117,
+        "job_skill_pairs": 116,
         "skilled_jobs": 34,
         "skill_share": 0.7555555555555555,
         "eligible_evidence": 136,
-        "combination_jobs": 27
+        "combination_jobs": 26
       }
     },
     {
@@ -513,11 +513,11 @@
       "expected": {
         "core": 12,
         "denominator": 12,
-        "job_skill_pairs": 49,
-        "skilled_jobs": 9,
-        "skill_share": 0.75,
-        "eligible_evidence": 60,
-        "combination_jobs": 9
+        "job_skill_pairs": 53,
+        "skilled_jobs": 11,
+        "skill_share": 0.9166666666666666,
+        "eligible_evidence": 64,
+        "combination_jobs": 11
       }
     },
     {
@@ -537,25 +537,25 @@
       "name": "netease_education_冲突待确认",
       "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"netease\"}, Builds[source]),TREATAS({\"冲突待确认\"}, Jobs[education_group]))",
       "expected": {
-        "core": 25,
-        "denominator": 25,
-        "job_skill_pairs": 88,
-        "skilled_jobs": 19,
-        "skill_share": 0.76,
+        "core": 24,
+        "denominator": 24,
+        "job_skill_pairs": 86,
+        "skilled_jobs": 20,
+        "skill_share": 0.8333333333333334,
         "eligible_evidence": 102,
-        "combination_jobs": 17
+        "combination_jobs": 18
       }
     },
     {
       "name": "netease_education_本科",
       "dax": "EVALUATE CALCULATETABLE(ROW(\"core\",[核心岗位数],\"denominator\",[正文分母],\"job_skill_pairs\",[岗位技能对数],\"skilled_jobs\",[技能岗位数],\"skill_share\",[技能出现占比],\"eligible_evidence\",[有效证据数],\"combination_jobs\",[组合岗位数]),TREATAS({\"netease\"}, Builds[source]),TREATAS({\"本科\"}, Jobs[education_group]))",
       "expected": {
-        "core": 58,
-        "denominator": 58,
-        "job_skill_pairs": 209,
-        "skilled_jobs": 51,
-        "skill_share": 0.8793103448275862,
-        "eligible_evidence": 235,
+        "core": 59,
+        "denominator": 59,
+        "job_skill_pairs": 214,
+        "skilled_jobs": 52,
+        "skill_share": 0.8813559322033898,
+        "eligible_evidence": 239,
         "combination_jobs": 41
       }
     },
@@ -578,11 +578,11 @@
       "expected": {
         "core": 98,
         "denominator": 98,
-        "job_skill_pairs": 31,
-        "skilled_jobs": 31,
-        "skill_share": 0.3163265306122449,
-        "eligible_evidence": 33,
-        "combination_jobs": 65
+        "job_skill_pairs": 33,
+        "skilled_jobs": 33,
+        "skill_share": 0.336734693877551,
+        "eligible_evidence": 35,
+        "combination_jobs": 66
       }
     },
     {
@@ -591,11 +591,11 @@
       "expected": {
         "core": 45,
         "denominator": 45,
-        "job_skill_pairs": 18,
-        "skilled_jobs": 18,
-        "skill_share": 0.4,
-        "eligible_evidence": 19,
-        "combination_jobs": 30
+        "job_skill_pairs": 20,
+        "skilled_jobs": 20,
+        "skill_share": 0.4444444444444444,
+        "eligible_evidence": 21,
+        "combination_jobs": 32
       }
     },
     {
@@ -604,10 +604,10 @@
       "expected": {
         "core": 98,
         "denominator": 98,
-        "job_skill_pairs": 334,
-        "skilled_jobs": 80,
-        "skill_share": 0.8163265306122449,
-        "eligible_evidence": 387,
+        "job_skill_pairs": 337,
+        "skilled_jobs": 82,
+        "skill_share": 0.8367346938775511,
+        "eligible_evidence": 391,
         "combination_jobs": 0
       }
     },
@@ -617,10 +617,10 @@
       "expected": {
         "core": 45,
         "denominator": 45,
-        "job_skill_pairs": 153,
-        "skilled_jobs": 38,
-        "skill_share": 0.8444444444444444,
-        "eligible_evidence": 168,
+        "job_skill_pairs": 157,
+        "skilled_jobs": 40,
+        "skill_share": 0.8888888888888888,
+        "eligible_evidence": 172,
         "combination_jobs": 0
       }
     },
@@ -630,11 +630,11 @@
       "expected": {
         "core": 3,
         "denominator": 3,
-        "job_skill_pairs": 2,
-        "skilled_jobs": 1,
-        "skill_share": 0.3333333333333333,
-        "eligible_evidence": 2,
-        "combination_jobs": 1
+        "job_skill_pairs": 6,
+        "skilled_jobs": 3,
+        "skill_share": 1.0,
+        "eligible_evidence": 6,
+        "combination_jobs": 3
       }
     },
     {
@@ -669,10 +669,10 @@
       "expected": {
         "core": 68,
         "denominator": 68,
-        "job_skill_pairs": 226,
+        "job_skill_pairs": 227,
         "skilled_jobs": 58,
         "skill_share": 0.8529411764705882,
-        "eligible_evidence": 267,
+        "eligible_evidence": 268,
         "combination_jobs": 51
       }
     },

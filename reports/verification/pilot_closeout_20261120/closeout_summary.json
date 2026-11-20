@@ -1,0 +1,28 @@
+{
+  "status": "passed_for_authorized_small_batch_technical_closeout",
+  "release_id": 8,
+  "build_ids": {
+    "tencent": 10,
+    "netease": 11
+  },
+  "jobs": 200,
+  "core_jobs": 196,
+  "posting_skill_pairs": {
+    "tencent": 334,
+    "netease": 337
+  },
+  "offline_tests": 84,
+  "dbt_models": 37,
+  "dbt_tests": 16,
+  "clean_rebuild_and_idempotence": "passed",
+  "source_and_evidence_audit": "passed",
+  "powerbi_cases_generated": 93,
+  "powerbi_actual_acceptance": "passed",
+  "human_gold_annotation_completed": false,
+  "scope": "user-authorized technical takeover plus AI-assisted non-blind evidence review",
+  "service_restart": "performed_by_user_confirmed_in_conversation",
+  "powerbi_dax_cases": 93,
+  "powerbi_relationships": 17,
+  "ui_acceptance": "passed",
+  "final_powerbi_model_sha256": "41139a55ccc73c4137767f06fa0c32a964861798edc31cd7591dec6a993efd23"
+}

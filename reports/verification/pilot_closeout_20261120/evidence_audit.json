@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-11-20T19:11:23.353565+08:00",
+  "status": "passed_for_pilot_evidence_scope",
+  "normalization_version": "conformed-cn-1.2",
+  "qualification_rule_version": "qualification-cn-1.1",
+  "sources": [
+    {
+      "source": "tencent",
+      "jobs": 100,
+      "collector_fields_roundtripped": 2100,
+      "manifest_files_checked": 128,
+      "requests": 125,
+      "skill_evidence_anchors_checked": 552,
+      "coverage_status": "partial",
+      "stop_reason": "pilot_limit",
+      "input_hash": "0ed9035f07a7d98b4062bd0a0be7dba25ae8046e3dd720c6368c7a6f8f1146bc"
+    },
+    {
+      "source": "netease",
+      "jobs": 100,
+      "collector_fields_roundtripped": 2100,
+      "manifest_files_checked": 78,
+      "requests": 75,
+      "skill_evidence_anchors_checked": 514,
+      "coverage_status": "partial",
+      "stop_reason": "pilot_limit",
+      "input_hash": "f1b2c5f18de518537509f608f7e452f13bfe58eea3e3fab35edeb6e4a03637a4"
+    }
+  ],
+  "jobs": 200,
+  "core_jobs": 196,
+  "qualification_anchors_checked": 436,
+  "skill_audit_jobs": 100,
+  "skill_audit_kind": "AI_assisted_non_blind_evidence_audit",
+  "human_gold_annotation_completed": false,
+  "human_precision": null,
+  "human_recall": null,
+  "original_human_packet_unchanged": true,
+  "qualification_conflict_cases": 31,
+  "historical_field_findings_preserved": true,
+  "primary_direction_cases": 200,
+  "database_checked": true,
+  "database": "recruitment_dw_dev_cd_v1",
+  "release_id": 8,
+  "category_counts": {
+    "开发": 112,
+    "算法/AI": 61,
+    "测试": 15,
+    "数据开发/分析": 6,
+    "运维/安全": 2
+  },
+  "employment_types": {
+    "netease": {
+      "全职": 67,
+      "实习": 31
+    },
+    "tencent": {
+      "来源代码未释义": 97,
+      "未知": 1
+    }
+  }
+}

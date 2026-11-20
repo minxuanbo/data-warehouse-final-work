@@ -13,10 +13,10 @@ from .validate import validate,digest
 
 
 def write_json(path,value):
-    path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 
 
-def generate(batch_path,output_path,dictionary_path=None,policy_path=None):
+def generate(batch_path,output_path,dictionary_path=None,policy_path=None,reviewed_analysis_path=None):
     checked=validate(batch_path);batch=checked['root'];m=checked['manifest'];source=m['source']
     if m['acceptance_status']!='accepted':raise ValueError('Pending batches require real technical review before integration')
     dictionary_path=Path(dictionary_path or ROOT/'etl/skills/dictionary.json')
@@ -29,11 +29,26 @@ def generate(batch_path,output_path,dictionary_path=None,policy_path=None):
     sp['experience_hint_only']=[k for k in sp['experience_hint_only'] if k in ids]
     # Freeze the exact policy alongside evidence, so future config changes cannot rewrite this build.
     policy_bytes=(json.dumps(policy,ensure_ascii=False,indent=2)+'\n').encode('utf-8')
+    # A skill-only rebuild must retain field findings reviewed against this exact raw batch.
+    # prepare() verifies source/batch, manifest, jobs, dictionary and every raw reference;
+    # an annotation from another observation cannot silently leak into a new batch.
+    reviewed_issues=[];review_source=None
+    if reviewed_analysis_path:
+        prior=Path(reviewed_analysis_path).resolve()
+        prior_prepared=prepare(batch,prior,dictionary_path)
+        reviewed_issues=[r for r in map(json.loads,(prior/'data_issues.jsonl').read_text(encoding='utf-8').splitlines())
+                         if r['kind'] in {'location_conflict','experience_conflict','education_conflict'}]
+        review_source={'analysis_path':prior.relative_to(ROOT).as_posix() if prior.is_relative_to(ROOT) else str(prior),
+                       'validated_input_hash':prior_prepared[-1],
+                       'data_issues_sha256':digest((prior/'data_issues.jsonl').read_bytes()),
+                       'input_provenance_sha256':digest((prior/'input_provenance.json').read_bytes()),
+                       'scope':'existing field findings for identical immutable source batch; not new human signoff'}
     output=Path(output_path).resolve()
     if output==batch or output.is_relative_to(batch) or batch.is_relative_to(output):raise ValueError('Analysis output must be separate from raw input')
     if output.exists():
         prepared=prepare(batch,output,dictionary_path)
         if prepared[1].get('scope_policy_sha256')!=digest(policy_bytes):raise ValueError('Existing output uses another policy; choose a new version directory')
+        if prepared[1].get('field_review_source')!=review_source:raise ValueError('Existing output uses another field review; choose a new version directory')
         return {'status':'unchanged','analysis_path':str(output),'input_hash':prepared[-1]}
     jobs=[];issues=[]
     issue_kinds={'location_conflict','experience_conflict','education_conflict'}
@@ -49,6 +64,8 @@ def generate(batch_path,output_path,dictionary_path=None,policy_path=None):
             if issue.get('source_job_id')==job['source_job_id'] and kind in issue_kinds:
                 issues.append({'source':source,'source_job_id':job['source_job_id'],'kind':kind,
                                'raw_ref':ref['path'],'treatment':'保留原值，冲突单列，按版本策略裁定'})
+    # Reviewed rows carry the richer evidence. Prefer them to collector-only flags.
+    issues=list({(r['source_job_id'],r['kind']):r for r in issues+reviewed_issues}.values())
     raw_fields={'tencent':{'description_raw':'Responsibility','requirements_raw':'Requirement','additional_requirements_raw':'ImportantItem'},
                 'netease':{'description_raw':'description','requirements_raw':'requirement'}}[source]
     evidence=[{**r,'body_sha256':body_digest(j,FIELDS),'body_hash_version':BODY_HASH_VERSION,
@@ -63,11 +80,12 @@ def generate(batch_path,output_path,dictionary_path=None,policy_path=None):
                 'source_postings':len(jobs),'core_postings':sum(j['is_core'] for j in jobs),
                 'extraction_code_sha256':digest((ROOT/'etl/skills/extract.py').read_bytes()),
                 'review_status':'automated_evidence_not_human_labels'}
+    if review_source:provenance['field_review_source']=review_source
     output.mkdir(parents=True,exist_ok=False)
     try:
         (output/'scope_policy.json').write_bytes(policy_bytes)
         for name,rows in [('skill_evidence.jsonl',evidence),('data_issues.jsonl',issues)]:
-            (output/name).write_text(''.join(dump(r)+'\n' for r in rows),encoding='utf-8')
+            (output/name).write_text(''.join(dump(r)+'\n' for r in rows),encoding='utf-8',newline='\n')
         write_json(output/'input_provenance.json',provenance)
         write_json(output/'reconciliation.json',{'core_ids':sorted(j['source_job_id'] for j in jobs if j['is_core']),
                                                 'core_effective_posting_skill_pairs':len(pairs)})
@@ -82,5 +100,5 @@ def generate(batch_path,output_path,dictionary_path=None,policy_path=None):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('batch');p.add_argument('--output',required=True)
-    p.add_argument('--dictionary');p.add_argument('--policy');a=p.parse_args()
-    print(json.dumps(generate(a.batch,a.output,a.dictionary,a.policy),ensure_ascii=False))
+    p.add_argument('--dictionary');p.add_argument('--policy');p.add_argument('--reviewed-analysis');a=p.parse_args()
+    print(json.dumps(generate(a.batch,a.output,a.dictionary,a.policy,a.reviewed_analysis),ensure_ascii=False))

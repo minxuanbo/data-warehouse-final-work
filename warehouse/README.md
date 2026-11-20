@@ -1,6 +1,6 @@
 # 数仓运行与交接说明
 
-本页是 C 的当前操作入口，2026-11-18 更新。先读[逻辑模型](../docs/design/04_逻辑设计.md)理解分析事实；业务分析见[主题报告](../reports/analysis/岗位需求主题分析.md)。历史 trial/CD 脚本仍保留供追溯，新成员不必逐个猜测运行顺序。
+本页是当前操作入口，2026-11-20小批收口更新。先读[逻辑模型](../docs/design/04_逻辑设计.md)理解分析事实；业务分析见[主题报告](../reports/analysis/岗位需求主题分析.md)。历史 trial/CD 脚本仍保留供追溯，新成员不必逐个猜测运行顺序。
 
 ## 1 环境准备
 
@@ -21,9 +21,9 @@ py -3.12 -m venv .venv-dbt
 .\.venv-dbt\Scripts\python.exe -X utf8 -m scripts.reproduce --database recruitment_dw_dev_reproduction
 ```
 
-脚本校验固定 Git 修订下的仓库内 `data/`、`reports/analysis/<batch>/v1.1/` 和 `etl/skills/dictionary.json`，创建缺失的专用开发库，运行加载、提取接入、维度/日状态、dbt 模型和质量门，发布 sample 并对账。**不依赖组长电脑原有的 .local 输入目录**。Git 若缺固定修订，先获取完整 main 历史；不要绕过输入修订校验。
+脚本校验固定 Git 修订下的仓库内 `data/`、`reports/analysis/<batch>/v1.3/` 和 `etl/skills/dictionary.json`，创建缺失的专用开发库，运行加载、提取接入、维度/日状态、dbt 模型和质量门，发布 sample 并对账。**不依赖组长电脑原有的 .local 输入目录**。Git 若缺固定修订，先获取完整 main 历史；不要绕过输入修订校验。
 
-预期：两来源各 100 原始/98 核心/98 正文，腾讯 333、网易 334 对有效岗位技能；两日不完整，变化不可比较。各机器 build_id/release_id 可以不同。重复运行应 unchanged，不重复入账；不删除已有数据库来让测试通过。
+预期：两来源各 100 原始/98 核心/98 正文，腾讯 334、网易 337 对有效岗位技能；两日不完整，变化不可比较。各机器 build_id/release_id 可以不同。重复运行应 unchanged，不重复入账；不删除已有数据库来让测试通过。
 
 运行结果在 `.local/reproduction/<库名>/result.json`；逐次 dbt 日志和运行记录在 `.local/pipeline_runs/`。错误时保留日志，不改原批次哈希/验收状态掩盖原因。可用 `--prepare-bi` 同时将当前报表固定到本次库；改报表连接前关闭 Desktop 工程。
 
@@ -63,11 +63,11 @@ py -3.12 -m venv .venv-dbt
 
 第 06 页按年/季度/月/日、省/市展开，类别总计右键钻取第 07 页，点岗位联动证据，Ctrl+单击返回。基线未筛选为 196 核心岗；FALSE 为保留的审计证据，不进入技能指标。第 01—03 页类别是来源原类别，第 06—07 页为标准方向，不混用。
 
-第06页新增技能训练线索表：选Python应显示技能54、正文196、27.6%；多选Python/C++按任一命中的岗位并集，不能相加或当作两技能同时具备。日期/地区的核心岗位基数不随技能缩小。仅修复现有页面定义可关闭Desktop后运行 `python -X utf8 -m scripts.extend_powerbi --repair-skill-page`，重新打开工程；`pin_powerbi`也保留该修复。
+第06页新增技能训练线索表：选Python应显示技能56、正文196、28.6%；多选Python/C++按任一命中的岗位并集，不能相加或当作两技能同时具备。日期/地区的核心岗位基数不随技能缩小。仅修复现有页面定义可关闭Desktop后运行 `python -X utf8 -m scripts.extend_powerbi --repair-skill-page`，重新打开工程；`pin_powerbi`也保留该修复。
 
 真实样本决策案例与交叉岗位待复核包可用 `python -X utf8 -m scripts.prepare_pilot_decision --database <专用库> --release-id <已发布版本>` 生成；要求每个来源身份只有一次观察，避免把多日重复累计成当前小批叙事。后续引擎检查可通过 `scripts.prepare_powerbi_release_checks --output <本轮用例JSON>` 另存新用例，保留历史证据。
 
-无SQL连接时可运行 `python -X utf8 -m scripts.prepare_pilot_decision --offline --release-id 5`，从仓库内经哈希验证的固定输入独立计算；此处5只是参考发布号，输出明确标记文件复算，不能据此声称重新查询SQL。2026-11-20的案例36岗及C++18岗已另与Desktop已加载模型的DAX核对一致。
+无SQL连接时可运行 `python -X utf8 -m scripts.prepare_pilot_decision --offline --release-id 8 --output-dir reports/verification/<本轮目录>`，输出明确标记文件复算，不能据此声称重新查询SQL。当前案例为广东×开发×本科31岗，C++18/31；旧发布5的36岗案例保留为历史，不混用。
 
 真实 DAX 验收使用 `scripts/check_powerbi.ps1` 对指定 Desktop 引擎端口执行，先校验已加载查询、度量和关系与文件相同，再运行用例；不据 SQL 测试或旧模型哈希宣称报表通过。日后改连接/构建或模型后必须重新生成相应期望和绑定当前哈希的验收记录。
 
@@ -96,8 +96,16 @@ py -3.12 -m venv .venv-dbt
 
 ## 7 门槛字段修正与复验
 
-腾讯不需要为本次问题重采：原经验和正文已存在，修的是 ETL。当前规范化为 conformed-cn-1.1；学历由结构化值及任职/补充正文带证据派生，不把缺失当不限，不把优先当必需。来源/正文不一致单列冲突，原始采集文件及旧 release 均保留。
+腾讯不需要为本次问题重采：原经验和正文已存在，修的是 ETL。当前规范化为 conformed-cn-1.2，门槛规则qualification-cn-1.1；学历由结构化值及任职/补充正文带证据派生，不把缺失当不限，不把优先当必需。来源/正文不一致单列冲突，原始采集文件及旧 release 均保留。
 
 第01—03页的门槛字段通过固定 qualification_release_id 关联新派生；第06—07页同一release。第07页新增学历与经验原文依据。`python -X utf8 -m scripts.check_qualifications` 可只读核对分组、逐字位置和旧版本。
 
-本批网易新增标出结构化学历与正文不一致的问题，当前核心25岗进入学历冲突组（含原1岗）。这是保留冲突，不是将这些岗位移出核心或采集失败；具体两边原文在门槛核查记录中，后续人工复核再裁定。
+本批网易新增标出结构化学历与正文不一致的问题，当前核心24岗进入学历冲突组。这是保留冲突，不是将这些岗位移出核心或采集失败；具体两边原文在门槛核查记录中，保留两边证据，不为收口强行择一。
+
+## 8 本轮冻结与证据再生成
+
+当前仓内sample release 8，输入v1.3、技能0.3.1。v1.2/release7是被回归检查发现丢失既有经验/地点标记的中间结果，不能用作当前基线；v1.3从同一不可变原批校验v1.1字段复核来源并继承标记，记录来源哈希。后续只重算技能时使用 `warehouse.prepare_analysis --reviewed-analysis reports/analysis/<相同batch>/v1.1 --output <新的版本目录>`；禁止跨批套用。新批必须重新核查字段。
+
+最终核查入口：`scripts.check_pilot_closeout --database <专用库>`、`scripts.check_qualifications --database <专用库>`、`scripts.prepare_powerbi_checks`、`scripts.prepare_powerbi_release_checks --output <本轮用例JSON>`。本轮干净目录复现与幂等记录见[收口记录](../docs/verification/小批联调收口_20261120.md)。这证明同机独立目录和空库可复现，没有冒称另一位成员或另一台电脑验收。
+
+本轮Desktop实测遇SQL内存错误802和登录超时；将全局数据加载的最大同时计算从24降到允许最低2并重开Desktop，用户重启SQL服务后刷新通过。16GB本机环境可从低并行开始；这项本地设置不随Git克隆迁移。禁止拿旧缓存冒充刷新成功。最终93条DAX及原生UI截图见收口记录。

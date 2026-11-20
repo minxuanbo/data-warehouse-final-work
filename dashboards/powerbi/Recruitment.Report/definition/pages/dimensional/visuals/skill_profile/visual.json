@@ -29,7 +29,7 @@
               "queryRef": "SnapshotJobs.category_group",
               "nativeQueryRef": "category_group",
               "active": true,
-              "displayName": "自动主方向"
+              "displayName": "标准岗位类别"
             },
             {
               "field": {
@@ -45,7 +45,7 @@
               "queryRef": "SnapshotCityJobs.province_name",
               "nativeQueryRef": "province_name",
               "active": false,
-              "displayName": "province_name"
+              "displayName": "省份"
             },
             {
               "field": {
@@ -61,7 +61,7 @@
               "queryRef": "SnapshotCityJobs.city_name",
               "nativeQueryRef": "city_name",
               "active": false,
-              "displayName": "city_name"
+              "displayName": "城市"
             }
           ]
         },
@@ -131,6 +131,72 @@
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "SnapshotJobs.category_group"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotJobs"
+                    }
+                  },
+                  "Property": "category_group"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "SnapshotCityJobs.province_name"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotCityJobs"
+                    }
+                  },
+                  "Property": "province_name"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "SnapshotCityJobs.city_name"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SnapshotCityJobs"
+                    }
+                  },
+                  "Property": "city_name"
+                }
+              }
+            ]
+          }
+        ],
+        "root": {}
+      }
+    ],
     "objects": {
       "columnHeaders": [
         {

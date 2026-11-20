@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-11-20T18:14:21.636400+08:00",
+  "source": "netease",
+  "page": "https://hr.163.com/",
+  "code_url": "https://hr.163.com/static/js/commons.c65656b8.chunk.js",
+  "code_sha256": "62dfc75fcc63a0c0803fca738e7def517ebce2931193d0e09e8dab4e29ce1f53",
+  "dictionary_module": "0vM+",
+  "verbatim_decoded_excerpt": "\"0vM+\":function(e,t,n){\"use strict\";n.d(t,\"b\",(function(){return r})),n.d(t,\"a\",(function(){return o}));var r=[{id:\"0\",en_name:\"Full time\",name:\"全职\"},{id:\"1\",en_name:\"Internship\",name:\"实习\"},{id:\"2\",en_name:\"Dispatch\",name:\"派遣\"}]",
+  "consumer_url": "https://hr.163.com/static/js/34.e3c060e4.chunk.js",
+  "consumer_sha256": "99667245663c7160871617136147fd9232d887f3c9d468de14949090116d8a60",
+  "mapping": {
+    "0": "全职",
+    "1": "实习",
+    "2": "派遣"
+  },
+  "scope": "employment form, not social/campus recruitment channel",
+  "evidence_chain": "Official index references commons; route job-list loads chunk34; position formatter passes t.workType to the official label formatter.",
+  "other_source": {
+    "tencent": "unverified; official CDN returned403, retained source codes; no relabelling or bypass"
+  }
+}

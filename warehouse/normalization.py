@@ -2,7 +2,7 @@
 import re
 from .qualifications import resolve,normalize_experience
 
-VERSION = 'conformed-cn-1.1'
+VERSION = 'conformed-cn-1.2'
 MAPPING_VERSION = 'source-identity-only-1.0'
 UNKNOWN = '未知'
 CONFLICT = '冲突待确认'
@@ -46,7 +46,7 @@ def experience(raw, conflict=False):
 def category(title, raw_category=None):
     # Title takes precedence over broad source categories; no body keyword voting.
     title=title or ''
-    patterns=[('算法/AI',r'算法|人工智能|机器学习|深度学习|大模型|[Aa][Ii](?:工程|研究|算法)'),
+    patterns=[('算法/AI',r'算法|人工智能|机器学习|深度学习|大模型|AIGC|(?<![A-Za-z])AI(?![A-Za-z])'),
               ('数据开发/分析',r'数据(?:开发|分析|仓库|平台|工程|挖掘|治理)|数仓|大数据|BI\b'),
               ('测试',r'测试|质量保障|\bQA\b'),
               ('运维/安全',r'运维|安全|SRE\b|DevOps|基础设施|网络工程'),
@@ -62,7 +62,11 @@ def category(title, raw_category=None):
 def employment_type(source, raw):
     text=(raw or '').strip()
     if not text:return UNKNOWN
-    # Numeric workType/OuterPostTypeID meanings are not independently verified.
+    # Official hr.163.com front-end module 0vM+ declares these labels; full-time
+    # must not be relabelled as social recruitment. Preserve unknown codes.
+    if source=='netease' and text in {'0','1','2'}:
+        return {'0':'全职','1':'实习','2':'派遣'}[text]
+    # Tencent codes remain unverified; never apply another source's codebook.
     if re.search(r'实习',text):return '实习'
     if re.search(r'校招|校园|应届',text):return '校招'
     if re.search(r'社招|社会招聘',text):return '社招'

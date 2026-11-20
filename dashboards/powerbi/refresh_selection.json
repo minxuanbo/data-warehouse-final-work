@@ -4,10 +4,10 @@
   "builds": [
     {
       "source": "netease",
-      "build_id": 6,
+      "build_id": 11,
       "batch_id": "netease_20261101T044527Z_157cf969",
       "scope_version": "digital_jobs_cn_core_v1.2",
-      "rule_version": "skills-rules-0.3.0",
+      "rule_version": "skills-rules-0.3.1",
       "dictionary_version": "skills-dict-0.2.0",
       "body_hash_version": "skills-body-1.1",
       "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
@@ -22,10 +22,10 @@
     },
     {
       "source": "tencent",
-      "build_id": 5,
+      "build_id": 10,
       "batch_id": "tencent_20261031T093102Z_366ad0a4",
       "scope_version": "digital_jobs_cn_core_v1.2",
-      "rule_version": "skills-rules-0.3.0",
+      "rule_version": "skills-rules-0.3.1",
       "dictionary_version": "skills-dict-0.2.0",
       "body_hash_version": "skills-body-1.1",
       "skill_text_scope": "description_raw+requirements_raw+additional_requirements_raw",
@@ -39,5 +39,5 @@
       "experience_hint_count": 3
     }
   ],
-  "qualification_release_id": 5
+  "qualification_release_id": 8
 }

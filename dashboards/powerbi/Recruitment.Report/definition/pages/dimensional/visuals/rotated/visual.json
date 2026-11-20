@@ -65,7 +65,7 @@
               "queryRef": "SnapshotJobs.category_group",
               "nativeQueryRef": "category_group",
               "active": true,
-              "displayName": "自动主方向"
+              "displayName": "标准岗位类别"
             }
           ]
         },
@@ -306,7 +306,7 @@
           }
         },
         "type": "Categorical",
-        "displayName": "自动主方向"
+        "displayName": "标准岗位类别"
       },
       {
         "name": "f551beeb02003b18e77a",

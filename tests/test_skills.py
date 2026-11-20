@@ -35,6 +35,17 @@ class ExtractionTests(unittest.TestCase):
         rows = extract(job("熟练掌握Python，熟悉PyTorch者优先。"), DICTIONARY)
         self.assertEqual([(r["skill_name"], r["requirement_level"]) for r in rows], [("Python", "必需"), ("PyTorch", "优先")])
 
+    def test_named_preference_survives_a_generic_language_alternative(self):
+        for text in ('熟练任意一门编程语言，熟练使用Lua、Python优先','精通任意一门编程语言，Lua、Python优先'):
+            rows=extract(job(text),DICTIONARY)
+            self.assertEqual({(r['skill_name'],r['requirement_level'],r['eligible_for_metric']) for r in rows},
+                             {('Lua','优先',True),('Python','优先',True)})
+
+    def test_ray_tracing_is_not_the_distributed_ray_framework(self):
+        rows=extract(job('深入理解硬件光线追踪（Ray Tracing）；熟悉Ray分布式计算框架。'),DICTIONARY)
+        self.assertEqual([r['matched_text'] for r in rows],['Ray'])
+        self.assertIn('分布式',rows[0]['evidence'])
+
     def test_alternative_is_not_each_mandatory(self):
         rows = extract(job("熟悉Python/Java中至少一种语言。"), DICTIONARY)
         self.assertEqual(len(rows), 2)

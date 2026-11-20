@@ -15,3 +15,6 @@ warehouse/cd_policy.json -text
 /scripts/check_powerbi.ps1 text eol=lf
 # DAX records bind exact case bytes; keep that binding stable on Windows clones.
 /reports/verification/*.json text eol=lf
+
+# Current nested audit records also bind exact bytes across checkouts.
+/reports/verification/pilot_closeout_20261120/** -text whitespace=cr-at-eol

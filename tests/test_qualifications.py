@@ -49,6 +49,18 @@ class QualificationTests(unittest.TestCase):
     def test_mentored_students_are_not_applicant_qualifications(self):
         self.assertEqual(self.education('具有指导本科生的经验。')['value'],'未注明')
 
+    def test_enrolled_bachelor_is_not_mistaken_for_mentored_student(self):
+        for text in ('计算机相关专业在读本科生/研究生，每周至少出勤4天','学历：大四 ~ 研究生在读'):
+            result=self.education(text,'本科')
+            self.assertEqual((result['value'],result['status']),('本科','structured'))
+            for e in result['evidence']:
+                original='本科' if e['field']=='education_raw' else text
+                self.assertEqual(original[e['start']:e['end']],e['text'])
+
+    def test_graduate_student_requirement_can_reveal_a_real_source_conflict(self):
+        result=self.education('相关专业的硕士生或博士生','本科')
+        self.assertEqual((result['value'],result['status']),('冲突待确认','conflict'))
+
     def test_verbatim_offsets_roundtrip(self):
         text='任职要求：\n1.计算机相关专业本科及以上学历，硕士优先。'
         for e in self.education(text)['evidence']:

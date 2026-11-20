@@ -1,0 +1,28 @@
+{
+  "source": "netease",
+  "batch_id": "netease_20261101T044527Z_157cf969",
+  "jobs_sha256": "2b6e47f26c279a6b339e06db74cdf0061d7ecd8f1d02ca5446225d4303eff8ab",
+  "manifest_sha256": "f1b2c5f18de518537509f608f7e452f13bfe58eea3e3fab35edeb6e4a03637a4",
+  "dictionary_sha256": "1b66fbdf4d3eb86b772ac19b080757c49c94b7c81570d3c347d011226e6627be",
+  "dictionary_version": "skills-dict-0.2.0",
+  "rule_version": "skills-rules-0.3.1",
+  "body_hash_version": "skills-body-1.1",
+  "body_hash_fields": [
+    "description_raw",
+    "requirements_raw",
+    "additional_requirements_raw"
+  ],
+  "scope_version": "digital_jobs_cn_core_v1.2",
+  "scope_policy_sha256": "c66f8497ba21d5cd943381f9030cf334cc811b0be51718db1d60ee9f2ca5e0d0",
+  "source_postings": 100,
+  "core_postings": 98,
+  "extraction_code_sha256": "f62c82e24b0168817d84598971ce5a138145ec62e9c7ac20544e1204034fec2a",
+  "review_status": "automated_evidence_not_human_labels",
+  "field_review_source": {
+    "analysis_path": "reports/analysis/netease_20261101T044527Z_157cf969/v1.1",
+    "validated_input_hash": "5fe2badb04d11e0790eac293b502c8ef5395deaf7ba7410be5bff4c5d7faeca3",
+    "data_issues_sha256": "15c690463de976b7cee7e05bb4f0f3354aad09cb336c27fa83010929fbec4e1a",
+    "input_provenance_sha256": "8d954a2ae12fa18a97d974e0d4bb7a9e00be0970d0afaa6bd9fcf09db2d9de6a",
+    "scope": "existing field findings for identical immutable source batch; not new human signoff"
+  }
+}

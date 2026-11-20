@@ -4,11 +4,12 @@ from datetime import datetime,timezone
 import json
 from warehouse.load import ROOT,connect
 from warehouse.release_build import records
-from warehouse.qualifications import body_fields
+from warehouse.qualifications import body_fields,RULE_VERSION
+from warehouse.normalization import VERSION
 
 
-def main():
-    c=connect('recruitment_dw_dev_cd_v1')
+def main(database='recruitment_dw_dev_cd_v1',output=None):
+    c=connect(database)
     try:
         rid=c.execute("SELECT release_id FROM audit.publication_pointer WHERE channel='sample'").fetchval()
         rows=records(c,'''SELECT j.*,q.education_resolution_json as education_json,q.experience_resolution_json as experience_json
@@ -38,7 +39,7 @@ def main():
         for name in ('education','experience'):
             resolution=json.loads(job[name+'_json'])
             assert resolution['value']==job[name+'_group']
-            assert resolution['rule_version']=='qualification-cn-1.0'
+            assert resolution['rule_version']==RULE_VERSION
             assert resolution['record_ref'].endswith('#'+job['source_job_id'])
             assert resolution['raw_refs']
             for e in resolution['evidence']:
@@ -55,13 +56,17 @@ def main():
         assert sum(x['n'] for x in old if x['education_group']=='未知')==98
         assert sum(x['n'] for x in old if x['experience_group']=='未映射')==93
     result={'checked_at_utc':datetime.now(timezone.utc).isoformat(),'status':'passed','release_id':rid,
-      'normalization_version':'conformed-cn-1.1','qualification_rule_version':'qualification-cn-1.0',
+      'normalization_version':VERSION,'qualification_rule_version':RULE_VERSION,
       'current_core_groups':counters,'verbatim_anchors_checked':anchors,'source_postings':200,'core_postings':196,
       'old_release_id':previous,'previous_tencent_groups_preserved':old,'education_conflicts':conflicts,
       'note':'Core Tencent: 48 explicit required degrees; 50 with no hard degree resolved, including 2 preference-only. No missing value converted to unlimited.'}
-    target=ROOT/'reports/verification/门槛字段整改_20261118.json'
+    target=output or ROOT/'reports/verification/门槛字段联调收口_20261120.json'
     target.write_text(json.dumps(result,ensure_ascii=False,indent=2,default=str)+'\n',encoding='utf-8')
     print(json.dumps({k:result[k] for k in ('status','release_id','current_core_groups','verbatim_anchors_checked')},ensure_ascii=False))
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    import argparse
+    from pathlib import Path
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--database',default='recruitment_dw_dev_cd_v1');p.add_argument('--output',type=Path)
+    a=p.parse_args();main(a.database,a.output)

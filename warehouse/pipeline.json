@@ -1,6 +1,15 @@
 {
   "database": "recruitment_dw_dev_cd_v1",
   "channel": "sample",
+  "pilot_expectations": {
+    "source_postings_per_source": 100,
+    "core_postings_per_source": 98,
+    "posting_skill_pairs": {
+      "tencent": 334,
+      "netease": 337
+    },
+    "rule_version": "skills-rules-0.3.1"
+  },
   "discover_roots": [
     "data/tencent",
     "data/netease"
@@ -9,13 +18,13 @@
     {
       "batch_path": "data/tencent/tencent_20261031T093102Z_366ad0a4",
       "revision": "25b397bf846a8e7c39bbc249e0700428e89bc0c3",
-      "analysis_path": "reports/analysis/tencent_20261031T093102Z_366ad0a4/v1.1",
+      "analysis_path": "reports/analysis/tencent_20261031T093102Z_366ad0a4/v1.3",
       "dictionary_path": "etl/skills/dictionary.json"
     },
     {
       "batch_path": "data/netease/netease_20261101T044527Z_157cf969",
       "revision": "0f862031ba07e5f46c3929818873dee7b9e05608",
-      "analysis_path": "reports/analysis/netease_20261101T044527Z_157cf969/v1.1",
+      "analysis_path": "reports/analysis/netease_20261101T044527Z_157cf969/v1.3",
       "dictionary_path": "etl/skills/dictionary.json"
     }
   ]

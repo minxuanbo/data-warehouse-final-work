@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "database": "recruitment_dw_dev_pilot_closeout_v3_20261120",
+  "release_id": 1,
+  "source_counts": [
+    {
+      "source": "netease",
+      "source_postings": 100,
+      "core_postings": 98,
+      "body_denominator": 98
+    },
+    {
+      "source": "tencent",
+      "source_postings": 100,
+      "core_postings": 98,
+      "body_denominator": 98
+    }
+  ],
+  "posting_skill_pairs": [
+    {
+      "source": "netease",
+      "posting_skill_pairs": 337
+    },
+    {
+      "source": "tencent",
+      "posting_skill_pairs": 334
+    }
+  ],
+  "inputs": "tracked repository files at the pinned source revisions",
+  "pipeline": {
+    "started_at": "2026-11-20T10:37:28.855797+00:00",
+    "database": "recruitment_dw_dev_pilot_closeout_v3_20261120",
+    "pending_batches": [],
+    "inputs": [
+      {
+        "batch_id": "tencent_20261031T093102Z_366ad0a4",
+        "load": "unchanged",
+        "analysis": {
+          "status": "unchanged",
+          "build_id": 1
+        }
+      },
+      {
+        "batch_id": "netease_20261101T044527Z_157cf969",
+        "load": "unchanged",
+        "analysis": {
+          "status": "unchanged",
+          "build_id": 2
+        }
+      }
+    ],
+    "status": "passed",
+    "release": {
+      "status": "unchanged",
+      "release_id": 1,
+      "channel": "sample"
+    },
+    "publication": {
+      "status": "unchanged",
+      "release_id": 1,
+      "channel": "sample"
+    },
+    "finished_at": "2026-11-20T10:37:43.064989+00:00"
+  },
+  "powerbi_prepared": false
+}

@@ -3,11 +3,11 @@ import json
 import re
 import unicodedata
 
-RULE_VERSION='qualification-cn-1.0'
+RULE_VERSION='qualification-cn-1.1'
 DEGREES={'高中':'高中/中专','中专':'高中/中专','中技':'高中/中专','大专':'大专','专科':'大专',
          '本科':'本科','学士':'本科','硕士':'硕士','研究生':'硕士','博士':'博士'}
 RANK={'高中/中专':1,'大专':2,'本科':3,'硕士':4,'博士':5}
-TOKEN=re.compile('|'.join(DEGREES))
+TOKEN=re.compile('|'.join(DEGREES)+r'|大[一二三四五]')
 
 
 def chinese_number(text):
@@ -50,7 +50,13 @@ def degree_mentions(field,text):
         before=text[max(0,m.start()-18):m.start()]
         after=text[m.end():]
         # A degree held by people being mentored is not the applicant's degree.
-        if after.startswith(('生','后')) or re.search(r'(?:指导|辅导|培养|教授).{0,6}$',before):continue
+        if after.startswith('后') or re.search(r'(?:指导|辅导|培养|教授).{0,6}$',before):continue
+        degree=DEGREES.get(m[0])
+        if degree is None:
+            # 大四～研究生在读 is an explicit undergraduate-to-graduate option.
+            # Do not interpret arbitrary project/grade numbers as qualifications.
+            if not (re.search(r'学历|本科|大学',before) or re.search(r'^.{0,12}(?:研究生|在读)',after)):continue
+            degree='本科'
         left=re.split(r'[，,。；;\n\r]',before)[-1]
         right=re.split(r'[，,。；;\n\r]',after)[0]
         # Include paired degree alternatives before a shared 优先, e.g. 硕士、博士优先.
@@ -61,7 +67,7 @@ def degree_mentions(field,text):
         ends=[p for ch in ('\n','；','。') if (p:=text.find(ch,m.end()))>=0]
         end=min(ends) if ends else len(text)
         result.append({'field':field,'start':start,'end':end,'text':text[start:end],
-                       'match_start':m.start(),'match_end':m.end(),'degree':DEGREES[m[0]],'strength':strength})
+                       'match_start':m.start(),'match_end':m.end(),'degree':degree,'strength':strength})
     # An explicit no-limit statement is evidence, not an inference from missing text.
     for m in re.finditer(r'学历(?:不限|无要求|不限制)|不限学历|无学历要求',text):
         result.append({'field':field,'start':m.start(),'end':m.end(),'text':m[0],

@@ -3,7 +3,7 @@ import json
 from datetime import datetime,timedelta,timezone
 from pathlib import Path
 
-from scripts.check_skills_v11 import input_paths
+from scripts.analysis_inputs import input_paths
 from scripts.prepare_powerbi import ROOT,write_json
 from warehouse.integrate_analysis import prepare
 from warehouse.normalization import classify,city
@@ -24,10 +24,11 @@ def main(output_path=None):
         for r in evidence:
             if r['is_core'] and r['eligible_for_metric']:skills.setdefault(source+'|'+r['source_job_id'],set()).add(r['skill_name'])
     def literal(v):return str(v) if isinstance(v,int) else '"'+v.replace('"','""')+'"'
-    def add(name,source=None,day=None,province=None,category=None,skill=None,education=None):
+    def add(name,source=None,day=None,province=None,category=None,skill=None,education=None,employment=None):
         selected=[j for j in jobs if j['is_core'] and (source is None or j['source']==source)
           and (day is None or j['date_key']==day) and (province is None or province in j['provinces'])
-          and (category is None or j['category']==category) and (education is None or j['education']==education)]
+          and (category is None or j['category']==category) and (education is None or j['education']==education)
+          and (employment is None or j['employment_type']==employment)]
         body=[j for j in selected if any((j.get(f) or '').strip() for f in ('description_raw','requirements_raw','additional_requirements_raw'))]
         selected_skills=None if skill is None else ({skill} if isinstance(skill,str) else set(skill))
         n=sum(bool(skills.get(j['key'],set()) if selected_skills is None else skills.get(j['key'],set())&selected_skills) for j in body)
@@ -35,7 +36,8 @@ def main(output_path=None):
                   'skilled':n,'share':n/len(body) if body else None,'newly_observed':None}
         filters=[]
         for t,c,v in [('SnapshotSources','source',source),('Calendar','date_key',day),('SnapshotCityJobs','province_name',province),
-                      ('SnapshotJobs','category_group',category),('SnapshotSkills','skill_name',skill),('SnapshotJobs','education_group',education)]:
+                      ('SnapshotJobs','category_group',category),('SnapshotSkills','skill_name',skill),('SnapshotJobs','education_group',education),
+                      ('SnapshotJobs','employment_type_group',employment)]:
             if v is not None:
                 values=[v] if isinstance(v,(str,int)) else v
                 filters.append(f"TREATAS({{{','.join(literal(x) for x in values)}}},'{t}'[{c}])")
@@ -54,6 +56,9 @@ def main(output_path=None):
     add('no_matching_skill',skill='不存在的技能')
     add('training_cohort',province='广东',category='开发',education='本科')
     add('training_cohort_cpp',province='广东',category='开发',education='本科',skill='C++')
+    add('netease_fulltime',source='netease',employment='全职')
+    add('netease_internship',source='netease',employment='实习')
+    add('tencent_unverified_type',source='tencent',employment='来源代码未释义')
     for source in (None,'tencent','netease'):
         groups=[j for j in jobs if source is None or j['source']==source]
         for code,den,num in [('core_body_coverage',sum(j['is_core'] for j in groups),sum(j['is_core'] for j in groups)),

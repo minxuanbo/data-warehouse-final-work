@@ -1,0 +1,271 @@
+{
+  "dbt_results": [
+    {
+      "unique_id": "model.recruitment_dw.release_calendar",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_city",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_city_detail",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_daily_summary",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_entry_profile",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_job_structure",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_skill_detail",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.trial_batch_summary",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.trial_city_distribution",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "test.recruitment_dw.observation_integrity",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.recruitment_dw.observation_set_cases",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.recruitment_dw.qualification_resolution_contract",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.recruitment_dw.selected_build_versions",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.recruitment_dw.skill_body_scope_cases",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.recruitment_dw.version_intervals",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_skill_demand",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.job_demand_entry_profile",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.job_demand_structure",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_skill_profile",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.trial_overview",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.trial_city",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.cd_job_detail",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_observed_change",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.trial_job_detail",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.job_demand_skill_profile",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "test.recruitment_dw.subject_profile_reconciliation",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.recruitment_dw.trial_reconciliation",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.recruitment_dw.city_not_inflated",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.recruitment_dw.cd_bridge_integrity",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.recruitment_dw.cd_text_scope_metadata",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.recruitment_dw.release_change_gate",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "model.recruitment_dw.dual_job_detail",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.cd_city",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.cd_education",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.cd_eligible_job_skill",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.cd_experience",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.cd_scope_summary",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.cd_skill_evidence",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_job_detail",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_qualification_evidence",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.dual_city",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.dual_education",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.cd_overview",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.cd_skill_demand",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.cd_skill_pair",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.current_analysis_builds",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_skill_evidence",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "test.recruitment_dw.dual_dimension_integrity",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "model.recruitment_dw.cd_quality_kpi",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.recruitment_dw.release_validation",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "test.recruitment_dw.cd_metric_bounds",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.recruitment_dw.cd_quality_kpi_contract",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.recruitment_dw.release_integrity",
+      "status": "pass",
+      "failures": 0
+    }
+  ],
+  "model_count": 37,
+  "test_count": 16
+}

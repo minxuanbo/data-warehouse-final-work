@@ -1229,16 +1229,6 @@
                       "State": "Suggested",
                       "Weight": 0.9
                     }
-                  },
-                  {
-                    "city_name": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -1253,16 +1243,6 @@
                 "Terms": [
                   {
                     "省份": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
-                  },
-                  {
-                    "province_name": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -1408,16 +1388,6 @@
                 },
                 "State": "Generated",
                 "Terms": [
-                  {
-                    "自动主方向": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
-                  },
                   {
                     "标准岗位类别": {
                       "Source": {
@@ -2037,7 +2007,7 @@
             "name": "Builds",
             "mode": "import",
             "source": {
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.cd_overview WHERE build_id IN (6,5)\")",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.cd_overview WHERE build_id IN (11,10)\")",
               "type": "m"
             }
           }
@@ -2318,7 +2288,7 @@
                 "          j.is_core,j.body_valid,j.location_conflict,j.experience_conflict,j.education_conflict,",
                 "          j.experience_hint,j.source_url,j.scope_reason,j.content_json,j.additional_requirements_raw,",
                 "          j.issues_json,j.raw_ref,j.raw_sha256,j.body_hash_version,j.skill_text_scope",
-                "          FROM (SELECT * FROM ads.cd_job_detail WHERE build_id IN (6,5)) j JOIN ads.release_job_detail q ON q.build_id=j.build_id AND q.observation_key=j.observation_key AND q.release_id=5\")"
+                "          FROM (SELECT * FROM ads.cd_job_detail WHERE build_id IN (11,10)) j JOIN ads.release_job_detail q ON q.build_id=j.build_id AND q.observation_key=j.observation_key AND q.release_id=8\")"
               ],
               "type": "m"
             }
@@ -2355,7 +2325,7 @@
                 "          CASE WHEN j.location_conflict=1 THEN N'冲突待确认'",
                 "            WHEN RIGHT(loc.value,1)=N'市' THEN LEFT(loc.value,LEN(loc.value)-1)",
                 "            ELSE COALESCE(NULLIF(loc.value,N''),N'未知') END AS city",
-                "          FROM (SELECT * FROM ads.cd_job_detail WHERE build_id IN (6,5)) j OUTER APPLY OPENJSON(j.confirmed_locations_json) loc\")"
+                "          FROM (SELECT * FROM ads.cd_job_detail WHERE build_id IN (11,10)) j OUTER APPLY OPENJSON(j.confirmed_locations_json) loc\")"
               ],
               "type": "m"
             }
@@ -2390,7 +2360,7 @@
               "expression": [
                 "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT CONCAT(build_id,'|',source_job_id) AS job_key, skill_name",
                 "      FROM ads.cd_skill_evidence",
-                "      WHERE build_id IN (6,5) AND is_core=1 AND eligible_for_metric=1\")"
+                "      WHERE build_id IN (11,10) AND is_core=1 AND eligible_for_metric=1\")"
               ],
               "type": "m"
             }
@@ -2420,7 +2390,7 @@
             "name": "Skills",
             "mode": "import",
             "source": {
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT skill_name FROM ads.cd_skill_evidence WHERE build_id IN (6,5)\")",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT skill_name FROM ads.cd_skill_evidence WHERE build_id IN (11,10)\")",
               "type": "m"
             }
           }
@@ -2468,7 +2438,7 @@
               "expression": [
                 "let S = Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT CONCAT(build_id,'|',source_job_id) AS job_key, skill_name",
                 "      FROM ads.cd_skill_evidence",
-                "      WHERE build_id IN (6,5) AND is_core=1 AND eligible_for_metric=1\"), A = Table.RenameColumns(S, {{\"skill_name\", \"skill_a\"}}), J = Table.NestedJoin(A, {\"job_key\"}, S, {\"job_key\"}, \"B\", JoinKind.Inner), E = Table.ExpandTableColumn(J, \"B\", {\"skill_name\"}, {\"skill_b\"}), F = Table.SelectRows(E, each Comparer.Ordinal([skill_a], [skill_b]) < 0), R = Table.AddColumn(F, \"pair_label\", each [skill_a] & \" + \" & [skill_b], type text) in R"
+                "      WHERE build_id IN (11,10) AND is_core=1 AND eligible_for_metric=1\"), A = Table.RenameColumns(S, {{\"skill_name\", \"skill_a\"}}), J = Table.NestedJoin(A, {\"job_key\"}, S, {\"job_key\"}, \"B\", JoinKind.Inner), E = Table.ExpandTableColumn(J, \"B\", {\"skill_name\"}, {\"skill_b\"}), F = Table.SelectRows(E, each Comparer.Ordinal([skill_a], [skill_b]) < 0), R = Table.AddColumn(F, \"pair_label\", each [skill_a] & \" + \" & [skill_b], type text) in R"
               ],
               "type": "m"
             }
@@ -2626,7 +2596,7 @@
                 "            match_start int,match_end int,matched_text nvarchar(300),raw_ref nvarchar(1000),",
                 "            raw_sha256 nvarchar(64),raw_field_name nvarchar(100),body_sha256 nvarchar(64),",
                 "            body_hash_version nvarchar(100),dictionary_version nvarchar(100),rule_version nvarchar(100)) x",
-                "          WHERE e.build_id IN (6,5)\")"
+                "          WHERE e.build_id IN (11,10)\")"
               ],
               "type": "m"
             }
@@ -2639,42 +2609,42 @@
           {
             "name": "source",
             "dataType": "string",
-            "lineageTag": "494ba626-dfd3-4e14-a3c3-52f0991142a9",
+            "lineageTag": "8db0dc83-b50a-4212-b7f3-d74b9232c444",
             "sourceColumn": "source",
             "summarizeBy": "none"
           },
           {
             "name": "kpi_code",
             "dataType": "string",
-            "lineageTag": "ec7d239b-dc63-4952-8736-1176187bb216",
+            "lineageTag": "afd7e171-004b-4dbb-a448-71c4ad2f0834",
             "sourceColumn": "kpi_code",
             "summarizeBy": "none"
           },
           {
             "name": "kpi_name",
             "dataType": "string",
-            "lineageTag": "4562e8fd-e4c4-491d-8a61-89a80c3c7553",
+            "lineageTag": "b2f60559-4270-4438-bfda-d60f265820cc",
             "sourceColumn": "kpi_name",
             "summarizeBy": "none"
           },
           {
             "name": "owner_role",
             "dataType": "string",
-            "lineageTag": "d149e848-66bc-4f59-b192-3bfbe718101c",
+            "lineageTag": "3814c89c-01ba-4871-a686-09eed3f5ddbc",
             "sourceColumn": "owner_role",
             "summarizeBy": "none"
           },
           {
             "name": "trend_reason",
             "dataType": "string",
-            "lineageTag": "6d63c484-8197-463c-88b4-0e8f5cbd17f5",
+            "lineageTag": "6cb803ad-90c9-49df-a027-74445cf0170a",
             "sourceColumn": "trend_reason",
             "summarizeBy": "none"
           },
           {
             "name": "target_version",
             "dataType": "string",
-            "lineageTag": "f778e76a-ea94-4952-be95-8208f2359fb0",
+            "lineageTag": "fee28524-bd49-429d-baf9-96579ae12166",
             "sourceColumn": "target_version",
             "summarizeBy": "none"
           },
@@ -2682,42 +2652,42 @@
             "name": "build_id",
             "dataType": "int64",
             "isHidden": true,
-            "lineageTag": "5e331277-7721-4138-9b53-0fddf5797ba1",
+            "lineageTag": "c6c50eb6-a665-4ed0-8389-827728daca34",
             "sourceColumn": "build_id",
             "summarizeBy": "none"
           },
           {
             "name": "numerator",
             "dataType": "int64",
-            "lineageTag": "752f52eb-32d2-4a73-bc2b-089f569a77bb",
+            "lineageTag": "58b15a2e-a21b-498c-accd-5e09e61c03d6",
             "sourceColumn": "numerator",
             "summarizeBy": "none"
           },
           {
             "name": "denominator",
             "dataType": "int64",
-            "lineageTag": "1715566f-28e8-4efa-8eba-a3e01abc90ee",
+            "lineageTag": "28c7c9c8-e766-47a3-a0c2-091e45e24d99",
             "sourceColumn": "denominator",
             "summarizeBy": "none"
           },
           {
             "name": "status_value",
             "dataType": "int64",
-            "lineageTag": "5563fa22-4443-4862-9a5f-f84ba542d6dd",
+            "lineageTag": "8a40dcb7-4856-4f74-9023-aa66c8895f83",
             "sourceColumn": "status_value",
             "summarizeBy": "none"
           },
           {
             "name": "kpi_value",
             "dataType": "double",
-            "lineageTag": "78f1a156-a02f-4ab4-8537-08058ebdff6b",
+            "lineageTag": "ffa25d7f-b08b-46c2-bf7a-0c194fc45d3e",
             "sourceColumn": "kpi_value",
             "summarizeBy": "none"
           },
           {
             "name": "goal_value",
             "dataType": "double",
-            "lineageTag": "f8152405-b99d-4f40-83ab-eb2755a0a828",
+            "lineageTag": "bc793829-7fdf-482a-9daa-affa9040b27b",
             "sourceColumn": "goal_value",
             "summarizeBy": "none"
           },
@@ -2730,7 +2700,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "0aa880f9-259f-4024-83e4-06468ef217d2",
+            "lineageTag": "9c7d2a63-8550-49cf-9a16-ce8a7ae308d7",
             "sourceColumn": "batch_id",
             "summarizeBy": "none"
           },
@@ -2743,7 +2713,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "3713a107-8d7c-4cf9-a415-627948355d6c",
+            "lineageTag": "041ac9bc-daad-4ef9-a0a4-29bebe2af3a6",
             "sourceColumn": "scope_version",
             "summarizeBy": "none"
           },
@@ -2756,7 +2726,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "4433fb40-4056-4f9c-ae8d-d0cbe7b2537b",
+            "lineageTag": "a0eb532d-dde7-4a5c-a59e-bb1eb01a7dc3",
             "sourceColumn": "body_hash_version",
             "summarizeBy": "none"
           },
@@ -2769,7 +2739,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "d5283b9d-43e5-4ab3-b2ca-d1607c9aff10",
+            "lineageTag": "dda18207-db18-4e06-b66a-6e0d30243d28",
             "sourceColumn": "rule_version",
             "summarizeBy": "none"
           },
@@ -2782,7 +2752,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "341d0e78-b1a4-4b87-8534-ef036f971682",
+            "lineageTag": "35029c20-e79c-4c2b-875c-e4f1f311d9e3",
             "sourceColumn": "dictionary_version",
             "summarizeBy": "none"
           },
@@ -2795,7 +2765,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "81734af4-37bb-4cd8-8ed4-626d337350b7",
+            "lineageTag": "00c8531c-2fec-4905-8e56-db4e7032c014",
             "sourceColumn": "coverage_status",
             "summarizeBy": "none"
           },
@@ -2808,7 +2778,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "77dcd8fa-82eb-4a30-9091-5777623d05b7",
+            "lineageTag": "e7521fc8-39dd-431f-96a7-8a9063a77549",
             "sourceColumn": "acceptance_status",
             "summarizeBy": "none"
           },
@@ -2822,53 +2792,53 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "aa8d00b7-38cf-4bc0-ae70-3761a50f775a",
+            "lineageTag": "5d818579-e69b-4c22-832a-d277a1fdef0e",
             "sourceColumn": "trend_value",
             "summarizeBy": "sum"
           }
         ],
         "description": "每选定构建×质量KPI；构建级，不受岗位/城市切片影响。",
-        "lineageTag": "714cf981-e0f0-4081-be6d-58120db6f071",
+        "lineageTag": "c2d51b80-ebe8-43e5-9448-3303de93e283",
         "measures": [
           {
             "name": "KPI分子",
             "description": "项目运营验收条件；跨KPI不计算无意义总计。",
             "expression": "IF(HASONEVALUE(QualityKpi[kpi_code]),SUM(QualityKpi[numerator]))",
             "formatString": "#,0",
-            "lineageTag": "5abf914b-bf5d-42b4-a997-cf5795cac7cf"
+            "lineageTag": "ffc505f9-3b79-4d2c-9a3f-3deaec281648"
           },
           {
             "name": "KPI分母",
             "description": "项目运营验收条件；跨KPI不计算无意义总计。",
             "expression": "IF(HASONEVALUE(QualityKpi[kpi_code]),SUM(QualityKpi[denominator]))",
             "formatString": "#,0",
-            "lineageTag": "347b312f-61e5-4866-91a7-d21e396f62b7"
+            "lineageTag": "0c773143-7863-44f4-94e7-9c3638071edc"
           },
           {
             "name": "KPI实际值",
             "description": "项目运营验收条件；跨KPI不计算无意义总计。",
             "expression": "DIVIDE([KPI分子],[KPI分母])",
             "formatString": "0.0%",
-            "lineageTag": "2019eb20-9551-4fe4-86d6-f33699488d2e"
+            "lineageTag": "a8956ceb-292a-4206-a927-6df0d3258cea"
           },
           {
             "name": "KPI目标值",
             "description": "项目运营验收条件；跨KPI不计算无意义总计。",
             "expression": "IF(HASONEVALUE(QualityKpi[kpi_code]),MAX(QualityKpi[goal_value]))",
             "formatString": "0.0%",
-            "lineageTag": "8e5542eb-afcc-4da0-b8c2-b874f0f4838c"
+            "lineageTag": "da2e1925-fc09-43fc-a82a-6587558ce23a"
           },
           {
             "name": "KPI状态说明",
             "description": "项目运营验收条件；跨KPI不计算无意义总计。",
             "expression": "IF(NOT HASONEVALUE(QualityKpi[kpi_code]),BLANK(),IF(ISBLANK([KPI实际值]),\"无分母\",IF([KPI实际值]>=[KPI目标值],\"达标\",\"未达标\")))",
-            "lineageTag": "9de73978-bb27-4423-a11d-8522a0e57221"
+            "lineageTag": "a77cdf6d-a35f-4b4a-a66c-b633af07b693"
           },
           {
             "name": "KPI趋势说明",
             "description": "项目运营验收条件；跨KPI不计算无意义总计。",
             "expression": "IF(HASONEVALUE(QualityKpi[kpi_code]),\"无可比日序列\")",
-            "lineageTag": "e1b7e4a2-f231-4fb1-a38c-05c4bc2067a0"
+            "lineageTag": "a165876c-387e-4baa-a96b-e3da44b2c807"
           }
         ],
         "partitions": [
@@ -2876,7 +2846,7 @@
             "name": "QualityKpi",
             "mode": "import",
             "source": {
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.cd_quality_kpi WHERE build_id IN (6,5)\")",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.cd_quality_kpi WHERE build_id IN (11,10)\")",
               "type": "m"
             }
           }
@@ -2888,19 +2858,19 @@
           {
             "name": "source",
             "dataType": "string",
-            "lineageTag": "50623f30-dfc3-46ca-a502-db48133b5b89",
+            "lineageTag": "0b914f38-f3f1-4ec8-845e-d963080cec88",
             "sourceColumn": "source",
             "summarizeBy": "none"
           }
         ],
         "description": "固定不可变发布版本的分析关联或属性表。",
-        "lineageTag": "e5b2c061-878f-4dfc-86f8-53a5da7519a8",
+        "lineageTag": "caca452e-ee2d-46f7-8b6f-4524e4bfc21e",
         "partitions": [
           {
             "name": "SnapshotSources",
             "mode": "import",
             "source": {
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT source FROM ads.release_job_detail WHERE release_id=5\")",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT source FROM ads.release_job_detail WHERE release_id=8\")",
               "type": "m"
             }
           }
@@ -2913,35 +2883,35 @@
             "name": "snapshot_key",
             "dataType": "string",
             "isHidden": true,
-            "lineageTag": "49d262e4-572f-47de-87b5-9818d30a6a38",
+            "lineageTag": "f21bc3ea-37f4-460d-b48f-a8b10ecfa888",
             "sourceColumn": "snapshot_key",
             "summarizeBy": "none"
           },
           {
             "name": "source",
             "dataType": "string",
-            "lineageTag": "5745f284-3771-4170-b3cb-97fe2be85cca",
+            "lineageTag": "8e649c46-a68a-49d2-9114-75f9e2e34ce1",
             "sourceColumn": "source",
             "summarizeBy": "none"
           },
           {
             "name": "source_job_id",
             "dataType": "string",
-            "lineageTag": "39c54468-a819-4b46-abca-4368426dc767",
+            "lineageTag": "09598b8d-922f-467d-b970-2119be4af144",
             "sourceColumn": "source_job_id",
             "summarizeBy": "none"
           },
           {
             "name": "batch_id",
             "dataType": "string",
-            "lineageTag": "e4775892-1e24-4016-8828-1b802b0fdbed",
+            "lineageTag": "74124453-bbc8-4df1-b3a0-fe8017c80d43",
             "sourceColumn": "batch_id",
             "summarizeBy": "none"
           },
           {
             "name": "title_raw",
             "dataType": "string",
-            "lineageTag": "39caaf46-98b6-4f8d-b313-bfeeae501060",
+            "lineageTag": "3732d9dc-00a5-4c7a-ab8c-35a7cd84d659",
             "sourceColumn": "title_raw",
             "summarizeBy": "none"
           },
@@ -2949,49 +2919,49 @@
             "name": "source_url",
             "dataCategory": "WebUrl",
             "dataType": "string",
-            "lineageTag": "58a2ec3a-2254-48d7-8060-64dddde4d00d",
+            "lineageTag": "867b0508-e1d8-4f4f-9515-260c732f8bcf",
             "sourceColumn": "source_url",
             "summarizeBy": "none"
           },
           {
             "name": "company_name",
             "dataType": "string",
-            "lineageTag": "a49aad63-e098-4272-8bc6-5d4b3156fa71",
+            "lineageTag": "51b1b1a2-46ad-4033-89e0-7b292bf54d53",
             "sourceColumn": "company_name",
             "summarizeBy": "none"
           },
           {
             "name": "category_group",
             "dataType": "string",
-            "lineageTag": "b9128c50-e6c0-4a57-bd1e-200db1ee44a7",
+            "lineageTag": "c5922a6d-a122-4e6c-9dc7-4370d750c7d9",
             "sourceColumn": "category_group",
             "summarizeBy": "none"
           },
           {
             "name": "education_group",
             "dataType": "string",
-            "lineageTag": "3f2dfc1b-d1f2-4be4-b9d7-eb1b0d6ace37",
+            "lineageTag": "0b261f9a-aa97-4941-b2a0-b1856f4aea7b",
             "sourceColumn": "education_group",
             "summarizeBy": "none"
           },
           {
             "name": "experience_group",
             "dataType": "string",
-            "lineageTag": "2ec0d38c-f386-4139-9509-3c67516d2c9c",
+            "lineageTag": "056ead54-dfa9-484d-8f14-46214dc30ab6",
             "sourceColumn": "experience_group",
             "summarizeBy": "none"
           },
           {
             "name": "employment_type_group",
             "dataType": "string",
-            "lineageTag": "efe1bc1c-5e4b-47d4-b392-15a802399a3f",
+            "lineageTag": "b12f4d1a-26e5-40a0-886d-05ffc09f696c",
             "sourceColumn": "employment_type_group",
             "summarizeBy": "none"
           },
           {
             "name": "dataset_note",
             "dataType": "string",
-            "lineageTag": "a47fcb0a-6bdc-4085-b14d-c7caee1b3594",
+            "lineageTag": "9509c4ac-4bfc-48b1-b0b0-c10758a0b970",
             "sourceColumn": "dataset_note",
             "summarizeBy": "none"
           },
@@ -2999,7 +2969,7 @@
             "name": "release_id",
             "dataType": "int64",
             "isHidden": true,
-            "lineageTag": "d2345db3-b714-4800-851f-f9f2ca6d2aba",
+            "lineageTag": "9660ded1-0cf9-4315-8275-1242bd4c79b0",
             "sourceColumn": "release_id",
             "summarizeBy": "none"
           },
@@ -3007,7 +2977,7 @@
             "name": "date_key",
             "dataType": "int64",
             "isHidden": true,
-            "lineageTag": "43540b0b-b57e-48c4-b73c-26101b207215",
+            "lineageTag": "a2afc230-a472-4953-abee-b93365cbbc3f",
             "sourceColumn": "date_key",
             "summarizeBy": "none"
           },
@@ -3015,7 +2985,7 @@
             "name": "job_key",
             "dataType": "int64",
             "isHidden": true,
-            "lineageTag": "c62ee90f-7076-4a44-9ed9-0945ba2c687f",
+            "lineageTag": "9387e362-a8a0-423d-8728-165cff7bf63a",
             "sourceColumn": "job_key",
             "summarizeBy": "none"
           },
@@ -3023,7 +2993,7 @@
             "name": "build_id",
             "dataType": "int64",
             "isHidden": true,
-            "lineageTag": "d2dc1045-3579-4567-b117-69c57294fa83",
+            "lineageTag": "bbb1a0e8-4bb5-4ea9-bd31-f3b723a76cb9",
             "sourceColumn": "build_id",
             "summarizeBy": "none"
           },
@@ -3037,28 +3007,28 @@
             ],
             "dataType": "dateTime",
             "formatString": "yyyy-MM-dd",
-            "lineageTag": "667a4c60-0cb4-45d6-ac34-c4eee9c19c60",
+            "lineageTag": "e2b5a2eb-10f4-42b8-ad8b-86ae4e9fba5d",
             "sourceColumn": "analysis_date",
             "summarizeBy": "none"
           },
           {
             "name": "is_core",
             "dataType": "boolean",
-            "lineageTag": "2254036a-837e-4a9c-be56-61b4fd09eece",
+            "lineageTag": "313ea9d2-ed94-4aff-a4b5-a16c37965e12",
             "sourceColumn": "is_core",
             "summarizeBy": "none"
           },
           {
             "name": "body_valid",
             "dataType": "boolean",
-            "lineageTag": "23f27c44-a6ec-404b-87c9-24467700992e",
+            "lineageTag": "1bcd4bf1-d0c9-431a-87c8-aeecbd0d1d44",
             "sourceColumn": "body_valid",
             "summarizeBy": "none"
           },
           {
             "name": "education_basis_label",
             "dataType": "string",
-            "lineageTag": "36498f8e-3194-4c76-b01b-7521cf5e2d08",
+            "lineageTag": "96e36ea5-8a50-4120-b807-a673c90404a4",
             "sourceColumn": "education_basis_label",
             "summarizeBy": "none"
           },
@@ -3072,7 +3042,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "5d87d3e5-7b5d-44f5-9441-09ae8ae564bd",
+            "lineageTag": "7f327336-a96b-4ffc-9117-f646f1f22e2b",
             "sourceColumn": "calendar_year",
             "summarizeBy": "sum"
           },
@@ -3086,7 +3056,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "777d8ac4-c05a-4405-87c8-dc476eafebb6",
+            "lineageTag": "9ad793d1-9c88-47e4-bbe5-9145610368bd",
             "sourceColumn": "calendar_quarter",
             "summarizeBy": "sum"
           },
@@ -3100,7 +3070,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "6dd3c8ba-3b5c-455a-a079-e3a7e9537517",
+            "lineageTag": "eefdebef-36b9-4123-86c7-546df85272d3",
             "sourceColumn": "calendar_month",
             "summarizeBy": "sum"
           },
@@ -3114,7 +3084,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "266f14c1-554f-49b0-baa5-dcb30ba72c2a",
+            "lineageTag": "0005bf6a-aa93-4b30-a08f-dedaf0ab476e",
             "sourceColumn": "observation_key",
             "summarizeBy": "sum"
           },
@@ -3128,7 +3098,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "2cab3c05-362f-46f6-bc64-eba66d49e9dc",
+            "lineageTag": "13fa0bb7-658e-4e11-aab2-8a23c6910e7d",
             "sourceColumn": "version_key",
             "summarizeBy": "sum"
           },
@@ -3141,7 +3111,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "31f69618-6d8b-4309-8d2c-9630e4244724",
+            "lineageTag": "6348d652-dfec-471f-a76f-f9850cf18f8d",
             "sourceColumn": "qualification_rule_version",
             "summarizeBy": "none"
           },
@@ -3154,7 +3124,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "b1e36066-aa64-4fce-981c-bef27ecb0d5e",
+            "lineageTag": "3e96f0f5-29c1-42e6-8870-fb323edeb2b5",
             "sourceColumn": "education_resolution_status",
             "summarizeBy": "none"
           },
@@ -3167,7 +3137,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "13fe39cf-5667-4867-b068-7b5d8f9ba23b",
+            "lineageTag": "78459fd5-951b-4107-8855-8d6f6cf8efc4",
             "sourceColumn": "education_basis",
             "summarizeBy": "none"
           },
@@ -3180,7 +3150,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "bd2c2425-b749-4371-a944-d0bb88c07a8d",
+            "lineageTag": "9ce7b434-298f-4257-89ae-906e32768442",
             "sourceColumn": "education_resolution_json",
             "summarizeBy": "none"
           },
@@ -3193,7 +3163,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "c7e82325-4ca2-4be9-afe2-3167e5ca396c",
+            "lineageTag": "9959b0a2-6930-4c05-945a-ba045b926889",
             "sourceColumn": "experience_resolution_json",
             "summarizeBy": "none"
           },
@@ -3206,7 +3176,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "e85f8ddf-712b-497a-b8cd-ab5c37f66276",
+            "lineageTag": "15b61a3f-0481-4ece-8c42-ec48d10087fe",
             "sourceColumn": "category_raw",
             "summarizeBy": "none"
           },
@@ -3219,7 +3189,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "17e2651a-e3fd-4057-bbcb-54a5abc34da5",
+            "lineageTag": "3b26a560-6bc2-4b25-aa00-eb0740e5edf6",
             "sourceColumn": "education_raw",
             "summarizeBy": "none"
           },
@@ -3232,7 +3202,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "7418da3f-ed2b-4dc9-8dd7-34d2155ef3aa",
+            "lineageTag": "749d4671-a36a-42b4-847b-e97503e8ee28",
             "sourceColumn": "experience_raw",
             "summarizeBy": "none"
           },
@@ -3246,7 +3216,7 @@
             ],
             "dataType": "boolean",
             "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
-            "lineageTag": "ac105dbf-95b7-48fc-bf99-976bdb381329",
+            "lineageTag": "84d6a819-0b57-40ce-aa85-33b1139f1803",
             "sourceColumn": "location_conflict",
             "summarizeBy": "none"
           },
@@ -3260,7 +3230,7 @@
             ],
             "dataType": "boolean",
             "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
-            "lineageTag": "5d7f843e-e37d-4147-a69d-db5db71d1383",
+            "lineageTag": "85dc952e-30ce-4f2d-9f9b-f12f500fe2b2",
             "sourceColumn": "education_conflict",
             "summarizeBy": "none"
           },
@@ -3274,7 +3244,7 @@
             ],
             "dataType": "boolean",
             "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
-            "lineageTag": "1dbdb095-8de7-4ab5-b3f9-a54d55e43623",
+            "lineageTag": "bb79c4bb-be58-4992-b9bc-5d484e5b7aa9",
             "sourceColumn": "experience_conflict",
             "summarizeBy": "none"
           },
@@ -3288,7 +3258,7 @@
             ],
             "dataType": "boolean",
             "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
-            "lineageTag": "1d407790-e98e-4d73-aa9d-03641ff2ef6e",
+            "lineageTag": "9086275d-dd6f-47cb-8c5a-7848745ac7b0",
             "sourceColumn": "experience_hint",
             "summarizeBy": "none"
           },
@@ -3301,7 +3271,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "646070a2-d42e-4759-936d-e5f4667d3e46",
+            "lineageTag": "5f9b1255-6b81-4405-bd11-276a05bad3d8",
             "sourceColumn": "raw_ref",
             "summarizeBy": "none"
           },
@@ -3314,7 +3284,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "745d1f52-2ee4-4ef5-913e-8a3586239959",
+            "lineageTag": "21431965-b8a7-4e9c-a9b7-3cfd8707cb46",
             "sourceColumn": "raw_sha256",
             "summarizeBy": "none"
           },
@@ -3327,7 +3297,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "6933541a-cc7f-43fb-adcc-63e21a9a5b21",
+            "lineageTag": "17039485-29c4-414c-8daf-97abe222cbde",
             "sourceColumn": "content_json",
             "summarizeBy": "none"
           },
@@ -3340,7 +3310,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "45ea745e-d71c-44f5-86d3-bf9a1db0f08a",
+            "lineageTag": "826e03de-20d9-488b-b36d-5a83616f921f",
             "sourceColumn": "additional_requirements_raw",
             "summarizeBy": "none"
           },
@@ -3353,7 +3323,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "24e5f108-42f0-43ad-b191-3b507d9f6a42",
+            "lineageTag": "090cfdca-faac-4dd8-8bca-33a49172ce27",
             "sourceColumn": "issues_json",
             "summarizeBy": "none"
           },
@@ -3366,7 +3336,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "7db7179a-49a0-422e-ae0a-bfb85c449580",
+            "lineageTag": "e2ff3621-c74a-4273-bbe9-b3cf248ce6fd",
             "sourceColumn": "scope_reason",
             "summarizeBy": "none"
           },
@@ -3379,7 +3349,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "11e43a6e-6d44-4659-a2ea-0fe72099fcad",
+            "lineageTag": "39200e38-485c-476a-8d78-cc9ee6121c06",
             "sourceColumn": "body_hash_version",
             "summarizeBy": "none"
           },
@@ -3392,7 +3362,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "ec25340a-83e0-4c04-8667-51e1cb23d615",
+            "lineageTag": "7207b484-7e0b-4aea-96d8-e03f88ca506a",
             "sourceColumn": "dictionary_version",
             "summarizeBy": "none"
           },
@@ -3405,7 +3375,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "2377155e-6aa5-4d7c-89cf-d2f48b586e5a",
+            "lineageTag": "883c4366-b52a-420a-895a-b4ca3493555b",
             "sourceColumn": "rule_version",
             "summarizeBy": "none"
           },
@@ -3418,7 +3388,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "6a4b53f2-bcca-4fc7-b62c-dda3fe8a3eb6",
+            "lineageTag": "371920b4-b914-4689-8d89-86f8da3e6992",
             "sourceColumn": "scope_version",
             "summarizeBy": "none"
           },
@@ -3431,7 +3401,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "3d9ef81d-7b30-4719-b29d-6dd31a3279e4",
+            "lineageTag": "1d7168e6-f834-4876-8cd0-fa8a5cce205b",
             "sourceColumn": "skill_text_scope",
             "summarizeBy": "none"
           },
@@ -3444,7 +3414,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "ec72d8e2-5e08-49cb-8edd-05e258a72af8",
+            "lineageTag": "f65967d3-3f7a-4e45-9104-6658187e7dda",
             "sourceColumn": "channel",
             "summarizeBy": "none"
           },
@@ -3457,7 +3427,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "760b7817-74fb-43e1-8bb9-38a778e1d934",
+            "lineageTag": "56dd167c-1b51-46c9-944a-80001e7265fa",
             "sourceColumn": "normalization_version",
             "summarizeBy": "none"
           },
@@ -3470,7 +3440,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "7832374c-e8f6-467d-a947-f4fd6553acef",
+            "lineageTag": "fb293cd9-31da-422c-9faa-cc4c0041791d",
             "sourceColumn": "mapping_version",
             "summarizeBy": "none"
           },
@@ -3483,7 +3453,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "30e0f180-db9c-4f34-9d98-5179cc456ff5",
+            "lineageTag": "f99375d9-bd1e-47b4-ad76-48942e9778b7",
             "sourceColumn": "coverage_status",
             "summarizeBy": "none"
           },
@@ -3496,48 +3466,48 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "1f94fa0b-43ba-494c-91e8-41a0fb5972ca",
+            "lineageTag": "9ca79769-f795-4dee-ae4f-2dfe9ad734ef",
             "sourceColumn": "acceptance_status",
             "summarizeBy": "none"
           }
         ],
         "description": "每固定发布版本×批次结束日×来源身份；一致性维度分析切片，跨日总计按岗位去重。",
-        "lineageTag": "8dcff4c7-ac09-424f-a91b-1bc32b154faf",
+        "lineageTag": "f1080fe8-9b50-46f2-9f24-235137f99441",
         "measures": [
           {
             "name": "快照核心岗位数",
             "description": "按当前筛选重算去重岗位集合；城市多值不可累加，技能选择保持正文分母。",
             "expression": "VAR K = VALUES(SnapshotCityJobs[snapshot_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(SnapshotJobs[job_key]),KEEPFILTERS(SnapshotJobs[is_core]=TRUE()), TREATAS(K,SnapshotJobs[snapshot_key])),0)",
             "formatString": "#,0",
-            "lineageTag": "0f352edf-d468-4496-b25f-a21ca30bf08a"
+            "lineageTag": "85f0dde3-36a9-4760-83f9-1319c2121de2"
           },
           {
             "name": "快照正文分母",
             "description": "按当前筛选重算去重岗位集合；城市多值不可累加，技能选择保持正文分母。",
             "expression": "VAR K = VALUES(SnapshotCityJobs[snapshot_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(SnapshotJobs[job_key]),KEEPFILTERS(SnapshotJobs[is_core]=TRUE()), TREATAS(K,SnapshotJobs[snapshot_key]), KEEPFILTERS(SnapshotJobs[body_valid]=TRUE())),0)",
             "formatString": "#,0",
-            "lineageTag": "cbb5b8c9-02b5-4e77-a383-536a3af846f5"
+            "lineageTag": "c9e57f5a-a399-4842-9890-5601dda639cf"
           },
           {
             "name": "快照技能岗位数",
             "description": "按当前筛选重算去重岗位集合；城市多值不可累加，技能选择保持正文分母。",
             "expression": "VAR K = VALUES(SnapshotCityJobs[snapshot_key]) RETURN COALESCE(CALCULATE(DISTINCTCOUNT(SnapshotSkillJobs[job_key]),KEEPFILTERS(SnapshotJobs[is_core]=TRUE()), TREATAS(K,SnapshotJobs[snapshot_key]), KEEPFILTERS(SnapshotJobs[body_valid]=TRUE())),0)",
             "formatString": "#,0",
-            "lineageTag": "6741e897-60ff-4080-8d9d-cbaf4d40717a"
+            "lineageTag": "964848f2-444c-4180-9c10-e9ac0e015cb1"
           },
           {
             "name": "快照技能占比",
             "description": "按当前筛选重算去重岗位集合；城市多值不可累加，技能选择保持正文分母。",
             "expression": "DIVIDE([快照技能岗位数],[快照正文分母])",
             "formatString": "0.0%",
-            "lineageTag": "1880a65a-c17c-438f-8cf9-82166fb4a2ea"
+            "lineageTag": "06fbfc51-015e-41cc-afa1-6a2bca848e27"
           },
           {
             "name": "可比新增观察数",
             "description": "按当前筛选重算去重岗位集合；城市多值不可累加，技能选择保持正文分母。",
             "expression": "IF(HASONEVALUE(Calendar[date_key]),MAX(SnapshotDays[newly_observed_count]))",
             "formatString": "#,0",
-            "lineageTag": "363324cc-4118-4bf2-b9eb-a0d4980d25d3"
+            "lineageTag": "19a90d4d-d3ec-42de-a54b-261dbf372715"
           }
         ],
         "partitions": [
@@ -3545,7 +3515,7 @@
             "name": "SnapshotJobs",
             "mode": "import",
             "source": {
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT CONCAT(release_id,'|',date_key,'|',job_key) AS snapshot_key,* FROM ads.release_job_detail WHERE release_id=5\")",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT CONCAT(release_id,'|',date_key,'|',job_key) AS snapshot_key,* FROM ads.release_job_detail WHERE release_id=8\")",
               "type": "m"
             }
           }
@@ -3558,21 +3528,21 @@
             "name": "snapshot_key",
             "dataType": "string",
             "isHidden": true,
-            "lineageTag": "c3b08877-265f-4516-ac44-dc3aa14451bd",
+            "lineageTag": "f84f8447-6d66-4b78-8f04-34a473859e0e",
             "sourceColumn": "snapshot_key",
             "summarizeBy": "none"
           },
           {
             "name": "city_name",
             "dataType": "string",
-            "lineageTag": "edffff01-aa35-42ef-aa96-8489f82125e2",
+            "lineageTag": "b4c9dbe4-6ce9-4271-aa38-3a5c41e4ae3d",
             "sourceColumn": "city_name",
             "summarizeBy": "none"
           },
           {
             "name": "province_name",
             "dataType": "string",
-            "lineageTag": "02e93d59-a733-4be2-ba8b-6ee23d0f2130",
+            "lineageTag": "14967721-883f-4a74-9181-b7e3206a212e",
             "sourceColumn": "province_name",
             "summarizeBy": "none"
           }
@@ -3585,27 +3555,27 @@
               {
                 "name": "省",
                 "column": "province_name",
-                "lineageTag": "da632056-7643-4ea3-b741-cf09fde469a0",
+                "lineageTag": "88c2ecf7-2d49-4d52-aef0-92e9b808c3d6",
                 "ordinal": 0
               },
               {
                 "name": "市",
                 "column": "city_name",
-                "lineageTag": "a38c11af-4e3a-4038-b971-0a6394386cbd",
+                "lineageTag": "2e744cab-7f0b-4203-9b1f-aee4f23b48da",
                 "ordinal": 1
               }
             ],
-            "lineageTag": "6b3941a6-c804-4967-9deb-167e96a127bb"
+            "lineageTag": "fbd4a928-f880-478e-8e0d-9a90d1caecdb"
           }
         ],
         "isHidden": true,
-        "lineageTag": "399d5cc4-abf9-469c-98e3-d576428ac578",
+        "lineageTag": "6f9e232a-4ebd-479c-8e92-ed3e3435cabf",
         "partitions": [
           {
             "name": "SnapshotCityJobs",
             "mode": "import",
             "source": {
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT snapshot_key,city_name,province_name FROM ads.release_city_detail WHERE release_id=5\")",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT snapshot_key,city_name,province_name FROM ads.release_city_detail WHERE release_id=8\")",
               "type": "m"
             }
           }
@@ -3618,7 +3588,7 @@
             "name": "snapshot_key",
             "dataType": "string",
             "isHidden": true,
-            "lineageTag": "dd0c3fc1-bd55-4a19-bb59-34b439d539b7",
+            "lineageTag": "deffd1f8-3836-4b62-985d-d96b18f12f2e",
             "sourceColumn": "snapshot_key",
             "summarizeBy": "none"
           },
@@ -3626,27 +3596,27 @@
             "name": "job_key",
             "dataType": "int64",
             "isHidden": true,
-            "lineageTag": "a6d48598-e0bb-4e7e-896b-f7802bc21d55",
+            "lineageTag": "917b7b47-62df-4d63-a1ca-09f7f1903a20",
             "sourceColumn": "job_key",
             "summarizeBy": "none"
           },
           {
             "name": "skill_name",
             "dataType": "string",
-            "lineageTag": "e309c9fd-ec66-4162-8f34-0dd3fa9012f0",
+            "lineageTag": "13590618-8749-4aac-b2ef-de7484f2cecd",
             "sourceColumn": "skill_name",
             "summarizeBy": "none"
           }
         ],
         "description": "固定不可变发布版本的分析关联或属性表。",
         "isHidden": true,
-        "lineageTag": "3c839e5b-15fc-447c-9534-2615e5870c81",
+        "lineageTag": "1499877d-923b-4dad-b29f-74cac7c70545",
         "partitions": [
           {
             "name": "SnapshotSkillJobs",
             "mode": "import",
             "source": {
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT snapshot_key,job_key,skill_name FROM ads.release_skill_detail WHERE release_id=5\")",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT snapshot_key,job_key,skill_name FROM ads.release_skill_detail WHERE release_id=8\")",
               "type": "m"
             }
           }
@@ -3658,19 +3628,19 @@
           {
             "name": "skill_name",
             "dataType": "string",
-            "lineageTag": "3046241c-5a83-4c44-b493-bea8a672adbb",
+            "lineageTag": "240eef0c-6093-4f0d-8e93-1e3d54722130",
             "sourceColumn": "skill_name",
             "summarizeBy": "none"
           }
         ],
         "description": "固定不可变发布版本的分析关联或属性表。",
-        "lineageTag": "0673c414-aef0-4155-ad51-8025097e356f",
+        "lineageTag": "4a9bfd94-53d2-4f2c-90e4-c21832a62ad7",
         "partitions": [
           {
             "name": "SnapshotSkills",
             "mode": "import",
             "source": {
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT skill_name FROM ads.release_skill_detail WHERE release_id=5\")",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT DISTINCT skill_name FROM ads.release_skill_detail WHERE release_id=8\")",
               "type": "m"
             }
           }
@@ -3683,63 +3653,63 @@
             "name": "snapshot_key",
             "dataType": "string",
             "isHidden": true,
-            "lineageTag": "6fdef3c2-4409-4aee-9a8f-8aecaf46d24e",
+            "lineageTag": "4f7d68b4-61d8-4302-8ab8-530a923637d1",
             "sourceColumn": "snapshot_key",
             "summarizeBy": "none"
           },
           {
             "name": "skill_name",
             "dataType": "string",
-            "lineageTag": "8ad51a9e-a216-4d90-8f2a-9c6de8089c64",
+            "lineageTag": "46c38229-0d3f-42ba-b239-37e6631c284a",
             "sourceColumn": "skill_name",
             "summarizeBy": "none"
           },
           {
             "name": "evidence_field",
             "dataType": "string",
-            "lineageTag": "6d469d40-a427-4d7e-bdaa-956e02c76344",
+            "lineageTag": "9f22b1a5-058f-4c14-b13e-c201c95e2a08",
             "sourceColumn": "evidence_field",
             "summarizeBy": "none"
           },
           {
             "name": "evidence",
             "dataType": "string",
-            "lineageTag": "9195f3d4-176a-4444-918b-93b58dc40c6e",
+            "lineageTag": "3aefa07e-5e45-48ad-9228-9bf47b7ba9e4",
             "sourceColumn": "evidence",
             "summarizeBy": "none"
           },
           {
             "name": "raw_ref",
             "dataType": "string",
-            "lineageTag": "9ae1ba6e-d8fc-4664-b2cc-9d3bc9874cc9",
+            "lineageTag": "37473ae5-cc42-4f03-9fff-4c4cf46f4623",
             "sourceColumn": "raw_ref",
             "summarizeBy": "none"
           },
           {
             "name": "body_hash_version",
             "dataType": "string",
-            "lineageTag": "2f9b1c1b-b7f2-4938-bd0c-2c35ca054277",
+            "lineageTag": "089125c9-b259-4065-9009-10dc1d1cb46a",
             "sourceColumn": "body_hash_version",
             "summarizeBy": "none"
           },
           {
             "name": "eligible_for_metric",
             "dataType": "boolean",
-            "lineageTag": "e4abe62a-3ffb-4c4d-a6d6-362f82f2f09a",
+            "lineageTag": "0f6570b1-7b21-470d-aef9-b3595cdd7063",
             "sourceColumn": "eligible_for_metric",
             "summarizeBy": "none"
           },
           {
             "name": "evidence_start",
             "dataType": "int64",
-            "lineageTag": "99ef286c-c586-4453-b30d-8bb5b1516600",
+            "lineageTag": "713aa48d-6abe-4d47-9e9c-ca4015baa854",
             "sourceColumn": "evidence_start",
             "summarizeBy": "none"
           },
           {
             "name": "evidence_end",
             "dataType": "int64",
-            "lineageTag": "a57e1fac-6a85-47c4-bcb2-f8c8b8d66534",
+            "lineageTag": "31e30217-ce14-4ce8-af50-9c6a817977ce",
             "sourceColumn": "evidence_end",
             "summarizeBy": "none"
           },
@@ -3753,7 +3723,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "0dd14618-7a94-471a-85f1-b7313da06428",
+            "lineageTag": "856769cc-6acb-445b-ae36-f7d45c42b8aa",
             "sourceColumn": "release_id",
             "summarizeBy": "sum"
           },
@@ -3767,7 +3737,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "56322782-6c19-4c53-b748-05972ccc6f63",
+            "lineageTag": "2f8783c8-de92-4fed-90c2-e989fc543aaf",
             "sourceColumn": "date_key",
             "summarizeBy": "sum"
           },
@@ -3781,19 +3751,19 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "e2965315-1f70-4ee3-8198-1a53605a88e4",
+            "lineageTag": "2d70f660-d04a-4f8f-b6b3-ea93f3251d79",
             "sourceColumn": "job_key",
             "summarizeBy": "sum"
           }
         ],
         "description": "固定不可变发布版本的分析关联或属性表。",
-        "lineageTag": "a566e72d-4957-4b5b-9340-d141708adc8d",
+        "lineageTag": "cdea0633-d0e1-4cd1-83a7-3cb24f11078f",
         "partitions": [
           {
             "name": "SnapshotEvidence",
             "mode": "import",
             "source": {
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.release_skill_evidence WHERE release_id=5\")",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.release_skill_evidence WHERE release_id=8\")",
               "type": "m"
             }
           }
@@ -3806,35 +3776,35 @@
             "name": "date_key",
             "dataType": "int64",
             "isHidden": true,
-            "lineageTag": "ec42ad35-1d7b-4280-b113-ace3029af3d6",
+            "lineageTag": "8dd35d1d-5c71-4188-a408-d69264402640",
             "sourceColumn": "date_key",
             "summarizeBy": "none"
           },
           {
             "name": "calendar_year",
             "dataType": "int64",
-            "lineageTag": "b13eea93-dc94-4928-9016-ccb106577802",
+            "lineageTag": "f9350085-e474-4cf7-8453-44fa70587684",
             "sourceColumn": "calendar_year",
             "summarizeBy": "none"
           },
           {
             "name": "calendar_quarter",
             "dataType": "int64",
-            "lineageTag": "1eb998a5-3694-4c9d-8b0d-cfa987573ae1",
+            "lineageTag": "35b58409-a78d-4cf6-b512-9c5d34c4d95d",
             "sourceColumn": "calendar_quarter",
             "summarizeBy": "none"
           },
           {
             "name": "calendar_month",
             "dataType": "int64",
-            "lineageTag": "ae737eed-865c-4a9a-8173-256c66cf2c56",
+            "lineageTag": "f02ca770-5e4c-42bd-9057-f15ff3e111d4",
             "sourceColumn": "calendar_month",
             "summarizeBy": "none"
           },
           {
             "name": "calendar_day",
             "dataType": "int64",
-            "lineageTag": "3bf3c3ce-6a6a-431b-945d-bf71ed0db0e5",
+            "lineageTag": "3761b9ae-38db-49ca-bcbe-ed490ea03571",
             "sourceColumn": "calendar_day",
             "summarizeBy": "none"
           },
@@ -3849,7 +3819,7 @@
             "dataType": "dateTime",
             "formatString": "yyyy-MM-dd",
             "isKey": true,
-            "lineageTag": "3aac5d6e-6044-417f-81b3-90e7a4f09b19",
+            "lineageTag": "200ea756-7c24-4c57-936b-8aafe49e758c",
             "sourceColumn": "calendar_date",
             "summarizeBy": "none"
           },
@@ -3863,7 +3833,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "27aa36f7-f228-42cd-8d3e-8d79c914728f",
+            "lineageTag": "f86ab81d-3c7f-4065-b628-80abfbdac783",
             "sourceColumn": "release_id",
             "summarizeBy": "sum"
           }
@@ -3877,38 +3847,38 @@
               {
                 "name": "年",
                 "column": "calendar_year",
-                "lineageTag": "27ab1398-73f8-4f70-8279-45fe1f75af99",
+                "lineageTag": "19e1f86a-9711-4aa4-aa66-3e6d173efd2e",
                 "ordinal": 0
               },
               {
                 "name": "季度",
                 "column": "calendar_quarter",
-                "lineageTag": "b71f2f4b-f0f1-43c5-8b34-aa01c99215c0",
+                "lineageTag": "c0a27d65-6cf1-4a81-be16-51ba1eadc415",
                 "ordinal": 1
               },
               {
                 "name": "月",
                 "column": "calendar_month",
-                "lineageTag": "9c85f8e0-2c84-4826-bd5e-7a2c4d66bc5f",
+                "lineageTag": "8cae3683-9ce1-4978-b368-8884abbff945",
                 "ordinal": 2
               },
               {
                 "name": "日",
                 "column": "calendar_date",
-                "lineageTag": "010b7e89-a242-46e0-879c-1064d4f9e49f",
+                "lineageTag": "fe95c34b-c7b3-4bb4-9d99-1d084efc06e7",
                 "ordinal": 3
               }
             ],
-            "lineageTag": "949b3364-49a0-40a6-a2f7-ec65ce5978c9"
+            "lineageTag": "7021e370-f7c1-4125-9584-b9661df068cb"
           }
         ],
-        "lineageTag": "3c0e8e23-bbed-47ce-b6f4-0d0aa6fba10a",
+        "lineageTag": "11f1d381-8988-45b4-a21a-d9320cbfeba8",
         "partitions": [
           {
             "name": "Calendar",
             "mode": "import",
             "source": {
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.release_calendar WHERE release_id=5\")",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.release_calendar WHERE release_id=8\")",
               "type": "m"
             }
           }
@@ -3921,7 +3891,7 @@
             "name": "release_id",
             "dataType": "int64",
             "isHidden": true,
-            "lineageTag": "56d39b20-991d-4299-92c1-9ab66e7706b2",
+            "lineageTag": "822c3de3-e389-42bb-aee0-cfee4ebf854f",
             "sourceColumn": "release_id",
             "summarizeBy": "none"
           },
@@ -3929,84 +3899,84 @@
             "name": "date_key",
             "dataType": "int64",
             "isHidden": true,
-            "lineageTag": "ecdb9c80-845d-4363-bef5-814c3f67dd08",
+            "lineageTag": "b09916ea-1e1a-4806-ae20-52e642078b22",
             "sourceColumn": "date_key",
             "summarizeBy": "none"
           },
           {
             "name": "source_posting_count",
             "dataType": "int64",
-            "lineageTag": "a49c4704-539f-467f-9954-0ed32a851d70",
+            "lineageTag": "799b048c-55fa-46bf-8bda-17df483cf1f0",
             "sourceColumn": "source_posting_count",
             "summarizeBy": "none"
           },
           {
             "name": "core_posting_count",
             "dataType": "int64",
-            "lineageTag": "0c395019-9733-438c-8ea8-ba270b035182",
+            "lineageTag": "c68cc402-0050-4ea8-b6ea-6d5b5bc1bf05",
             "sourceColumn": "core_posting_count",
             "summarizeBy": "none"
           },
           {
             "name": "skill_denominator",
             "dataType": "int64",
-            "lineageTag": "09f5be94-a4ed-4d5c-8d70-0e3c497a84bd",
+            "lineageTag": "7646161c-1a22-420a-8858-d9969e8a82ec",
             "sourceColumn": "skill_denominator",
             "summarizeBy": "none"
           },
           {
             "name": "expected_source_count",
             "dataType": "int64",
-            "lineageTag": "61d87078-2812-4022-93d7-44b7d8ac2b7c",
+            "lineageTag": "484bb802-4c00-4340-9ddc-948d45a574e4",
             "sourceColumn": "expected_source_count",
             "summarizeBy": "none"
           },
           {
             "name": "observed_source_count",
             "dataType": "int64",
-            "lineageTag": "c626f5a5-a807-453d-968d-38241b9360c0",
+            "lineageTag": "acdb974a-63f2-4630-be1d-b1a91b69162b",
             "sourceColumn": "observed_source_count",
             "summarizeBy": "none"
           },
           {
             "name": "complete_source_count",
             "dataType": "int64",
-            "lineageTag": "d52490a9-868f-4cea-a383-efe15cf8a57a",
+            "lineageTag": "5873d0ca-6416-4258-b7e5-6a57408e0b58",
             "sourceColumn": "complete_source_count",
             "summarizeBy": "none"
           },
           {
             "name": "newly_observed_count",
             "dataType": "int64",
-            "lineageTag": "bfc9464e-b520-4471-a6ed-39e9468c0ddd",
+            "lineageTag": "75e81ddb-ad6d-4a38-8c48-bbfc37b9257c",
             "sourceColumn": "newly_observed_count",
             "summarizeBy": "none"
           },
           {
             "name": "content_changed_count",
             "dataType": "int64",
-            "lineageTag": "a4c4de20-359c-4da3-9eb6-fd41db060d0d",
+            "lineageTag": "865d3e30-0477-495a-b009-24d84fa725cb",
             "sourceColumn": "content_changed_count",
             "summarizeBy": "none"
           },
           {
             "name": "is_complete",
             "dataType": "boolean",
-            "lineageTag": "da20b586-a65d-47ef-b447-a5acc2957eb7",
+            "lineageTag": "33c2dbd3-5ad5-46ca-9b14-2c418369fa46",
             "sourceColumn": "is_complete",
             "summarizeBy": "none"
           },
           {
             "name": "is_comparable",
             "dataType": "boolean",
-            "lineageTag": "d9028e2f-e561-4cf0-9209-7390b27ac173",
+            "lineageTag": "955160b0-4b44-4109-8d77-65aa76ada668",
             "sourceColumn": "is_comparable",
             "summarizeBy": "none"
           },
           {
             "name": "comparison_note",
             "dataType": "string",
-            "lineageTag": "88d108a2-ed2c-4bd2-9482-97415324b8a1",
+            "lineageTag": "ac6d01c0-99c9-40f6-920e-4d655560d732",
             "sourceColumn": "comparison_note",
             "summarizeBy": "none"
           },
@@ -4024,7 +3994,7 @@
             ],
             "dataType": "dateTime",
             "formatString": "Long Date",
-            "lineageTag": "0fcb22d1-d6b4-4fbb-8cc1-0cafdcb5ec87",
+            "lineageTag": "cd88b2de-3fa1-4594-af36-40d99e9198d7",
             "sourceColumn": "calendar_date",
             "summarizeBy": "none"
           },
@@ -4038,7 +4008,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "d721f33c-ddd7-48b2-93b5-263e523dfc81",
+            "lineageTag": "909a8036-6526-4aa6-866d-fb2c971eb401",
             "sourceColumn": "previous_date_key",
             "summarizeBy": "sum"
           },
@@ -4052,7 +4022,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "bc37c851-c22d-4781-82d6-35eff5931a38",
+            "lineageTag": "68426611-bc6d-4461-83ad-4f48367347cb",
             "sourceColumn": "first_discovered_count",
             "summarizeBy": "sum"
           },
@@ -4066,20 +4036,20 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "d31ad030-576a-4492-9ebe-7c3f9a8036c0",
+            "lineageTag": "94921cad-b1ac-4116-ab5e-90a9faf53499",
             "sourceColumn": "still_unobserved_count",
             "summarizeBy": "sum"
           }
         ],
         "description": "固定不可变发布版本的分析关联或属性表。",
         "isHidden": true,
-        "lineageTag": "1fc0783d-2bce-4569-a7a1-60ddfbd3e101",
+        "lineageTag": "21a47152-431c-4109-94f7-c787a4e0aff1",
         "partitions": [
           {
             "name": "SnapshotDays",
             "mode": "import",
             "source": {
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.release_observed_change WHERE release_id=5\")",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.release_observed_change WHERE release_id=8\")",
               "type": "m"
             }
           }
@@ -4092,70 +4062,70 @@
             "name": "snapshot_key",
             "dataType": "string",
             "isHidden": true,
-            "lineageTag": "d27f7e27-e263-4785-a98f-01d0db5f76fa",
+            "lineageTag": "c8d5395b-e181-4d79-90f8-202cbd75511c",
             "sourceColumn": "snapshot_key",
             "summarizeBy": "none"
           },
           {
             "name": "qualification_kind",
             "dataType": "string",
-            "lineageTag": "31c2037b-219a-43c6-b407-778e1c8f40fd",
+            "lineageTag": "2cf0e45d-0c55-4651-ae4e-dc27cbdbf92e",
             "sourceColumn": "qualification_kind",
             "summarizeBy": "none"
           },
           {
             "name": "qualification_value",
             "dataType": "string",
-            "lineageTag": "edf98ddd-a163-4a5b-89c1-e5ee254254d4",
+            "lineageTag": "46237f2e-af9e-49a2-b3e7-0d86192a28bc",
             "sourceColumn": "qualification_value",
             "summarizeBy": "none"
           },
           {
             "name": "resolution_status",
             "dataType": "string",
-            "lineageTag": "8a71dfb6-801c-4003-b552-2987b1502eb2",
+            "lineageTag": "9f40b8ce-98cf-47d8-b56f-fd04c2333072",
             "sourceColumn": "resolution_status",
             "summarizeBy": "none"
           },
           {
             "name": "evidence_field",
             "dataType": "string",
-            "lineageTag": "d777a289-85c1-4480-82a5-d5c4606f3b6a",
+            "lineageTag": "5ca78723-3562-4cd0-9f6f-ddffbfeecafb",
             "sourceColumn": "evidence_field",
             "summarizeBy": "none"
           },
           {
             "name": "evidence",
             "dataType": "string",
-            "lineageTag": "eef03b17-35e4-40cb-8579-aada0f371d2f",
+            "lineageTag": "5d852c19-7e9d-4ead-a3ca-311dd5cca1a5",
             "sourceColumn": "evidence",
             "summarizeBy": "none"
           },
           {
             "name": "strength",
             "dataType": "string",
-            "lineageTag": "a2b055a3-6316-4ffd-a45e-14e4af25125d",
+            "lineageTag": "018074fa-88f3-4d90-a10c-8518fb7adbc0",
             "sourceColumn": "strength",
             "summarizeBy": "none"
           },
           {
             "name": "record_ref",
             "dataType": "string",
-            "lineageTag": "534af845-4473-4cc7-b99a-7f91eef9e676",
+            "lineageTag": "5a53fe27-9bdb-4bb1-a43a-b5556d8c0edd",
             "sourceColumn": "record_ref",
             "summarizeBy": "none"
           },
           {
             "name": "evidence_start",
             "dataType": "int64",
-            "lineageTag": "96a28ef3-df86-45f5-81ad-9fb8034b08d7",
+            "lineageTag": "a555f84e-8a4e-4ada-b1a9-0be46daff92d",
             "sourceColumn": "evidence_start",
             "summarizeBy": "none"
           },
           {
             "name": "evidence_end",
             "dataType": "int64",
-            "lineageTag": "7b93eb51-7d5a-4d25-a0a2-d55f182bb1e0",
+            "lineageTag": "9acb3659-f972-4473-8a15-fb2b58690e18",
             "sourceColumn": "evidence_end",
             "summarizeBy": "none"
           },
@@ -4169,7 +4139,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "717cf2b9-c250-42e2-a131-4f1fdc20c1bd",
+            "lineageTag": "28e26bbf-9aa3-4f64-8d17-8862c0cfb10c",
             "sourceColumn": "release_id",
             "summarizeBy": "sum"
           },
@@ -4183,7 +4153,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "71f4f093-23e8-4414-8f49-deba947c1597",
+            "lineageTag": "60b207cc-29a8-4e80-90ac-6441786f1477",
             "sourceColumn": "date_key",
             "summarizeBy": "sum"
           },
@@ -4197,7 +4167,7 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "b850b112-c8b8-4edf-ba44-8858b5d4a7b8",
+            "lineageTag": "988b9f4d-7cde-4d84-9ee6-37203c1425a2",
             "sourceColumn": "job_key",
             "summarizeBy": "sum"
           },
@@ -4210,7 +4180,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "20d96658-a408-4192-84a9-591a665b56e3",
+            "lineageTag": "5b2f7b23-7950-4f7c-b86c-703bc0664764",
             "sourceColumn": "qualification_rule_version",
             "summarizeBy": "none"
           },
@@ -4223,7 +4193,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "edc78a04-328c-4705-9ecc-6d7e8578da2c",
+            "lineageTag": "226fb64d-735e-44a3-8dd4-1c9d0278a4eb",
             "sourceColumn": "degree",
             "summarizeBy": "none"
           },
@@ -4236,7 +4206,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "7d020e15-0caa-489a-b50c-69f61c2a2a6e",
+            "lineageTag": "f7b00845-60ec-45d1-bca6-dfc4efa4d69d",
             "sourceColumn": "source",
             "summarizeBy": "none"
           },
@@ -4249,7 +4219,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "a05e83a2-3f73-432f-ab6c-a2c76e3f19ac",
+            "lineageTag": "278605e7-69b7-4353-b7bc-298027f24b8f",
             "sourceColumn": "source_job_id",
             "summarizeBy": "none"
           },
@@ -4262,7 +4232,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "7265189d-b889-46bc-8d25-89ca263b4e68",
+            "lineageTag": "274041c9-5c5b-441f-a479-c88bbd6333dd",
             "sourceColumn": "raw_ref",
             "summarizeBy": "none"
           },
@@ -4275,7 +4245,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "c3a39df1-9049-4886-89db-95a9055d07fc",
+            "lineageTag": "55035cf3-fbae-43c7-91b4-23b9bf3d4c12",
             "sourceColumn": "raw_sha256",
             "summarizeBy": "none"
           },
@@ -4288,19 +4258,19 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "e1f7f4aa-e8d6-4fc7-8db4-3468aaad9dbd",
+            "lineageTag": "157af31e-957a-4ba5-8c61-00e619c247c8",
             "sourceColumn": "raw_refs_json",
             "summarizeBy": "none"
           }
         ],
         "description": "固定不可变发布版本的分析关联或属性表。",
-        "lineageTag": "5c35cadd-8703-41de-8065-3870a2622d5d",
+        "lineageTag": "f6698d2b-4b7e-4034-b8c8-ac1b7bac984f",
         "partitions": [
           {
             "name": "QualificationEvidence",
             "mode": "import",
             "source": {
-              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.release_qualification_evidence WHERE release_id=5\")",
+              "expression": "Odbc.Query(\"driver={ODBC Driver 18 for SQL Server};server=lpc:localhost;database=recruitment_dw_dev_cd_v1;encrypt=yes;trustservercertificate=yes;\", \"SELECT * FROM ads.release_qualification_evidence WHERE release_id=8\")",
               "type": "m"
             }
           }

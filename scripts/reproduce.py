@@ -11,6 +11,7 @@ from warehouse.release_build import records
 def reproduce(database,prepare_bi=False):
     if not re.fullmatch(r'recruitment_dw_dev(?:_[a-z0-9_]+)?',database):raise ValueError('Dedicated development database required')
     config=json.loads((ROOT/'warehouse/pipeline.json').read_text(encoding='utf-8'));config['database']=database
+    expected=config['pilot_expectations']
     # The fixed baseline does not absorb unrelated future batches during reproduction.
     config['discover_roots']=[]
     folder=ROOT/'.local/reproduction'/database;folder.mkdir(parents=True,exist_ok=True)
@@ -29,8 +30,9 @@ def reproduce(database,prepare_bi=False):
            ON f.release_id=b.release_id AND f.date_key=b.date_key AND f.job_key=b.job_key
           JOIN dim.source s ON s.source_key=f.source_key WHERE b.release_id=?
           GROUP BY s.source_code ORDER BY s.source_code''',rid)
-        assert len(counts)==2 and all((x['source_postings'],x['core_postings'],x['body_denominator'])==(100,98,98) for x in counts)
-        assert {x['source']:x['posting_skill_pairs'] for x in pairs}=={'netease':334,'tencent':333}
+        assert len(counts)==2 and all((x['source_postings'],x['core_postings'],x['body_denominator'])==
+            (expected['source_postings_per_source'],expected['core_postings_per_source'],expected['core_postings_per_source']) for x in counts)
+        assert {x['source']:x['posting_skill_pairs'] for x in pairs}==expected['posting_skill_pairs']
         assert c.execute('SELECT COUNT(*) FROM ads.release_validation WHERE release_id=?',rid).fetchval()==0
         assert c.execute('SELECT COUNT(*) FROM ads.release_observed_change WHERE release_id=? AND is_comparable=1',rid).fetchval()==0
     finally:c.close()

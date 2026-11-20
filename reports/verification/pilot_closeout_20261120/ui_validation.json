@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "actor": "Codex AI via native Power BI Desktop UI",
+  "database": "recruitment_dw_dev_cd_v1",
+  "release_id": 8,
+  "actual_sql_refresh_completed": true,
+  "model_saved_without_tmdl_upgrade": true,
+  "final_page": "06 岗位需求多维分析",
+  "filters_restored_to_all": true,
+  "checks": [
+    {
+      "name": "default",
+      "core": 196,
+      "body_denominator": 196,
+      "skilled": 165,
+      "share_display": "84.2%",
+      "screenshot": "ui_default.png"
+    },
+    {
+      "name": "Python single selection",
+      "core": 196,
+      "body_denominator": 196,
+      "skilled": 56,
+      "share_display": "28.6%",
+      "screenshot": "ui_python.png"
+    },
+    {
+      "name": "Python OR C++ multi-selection union",
+      "core": 196,
+      "body_denominator": 196,
+      "skilled": 93,
+      "share_display": "47.4%",
+      "screenshot": "ui_skill_union.png"
+    },
+    {
+      "name": "NetEase verified full-time selection",
+      "core": 67,
+      "body_denominator": 67,
+      "skilled": 61,
+      "share_display": "91.0%",
+      "screenshot": "ui_fulltime.png"
+    },
+    {
+      "name": "Bachelor, expand development then Guangdong, C++ selection",
+      "province_row_core": 31,
+      "province_row_body_denominator": 31,
+      "province_row_skilled": 18,
+      "province_row_share_display": "58.1%",
+      "page_population": 95,
+      "screenshot": "ui_training_cohort.png"
+    },
+    {
+      "name": "Drill through Guangdong development bachelor context, select NetEase 79115",
+      "qualification_rows": [
+        "experience_raw 3-5年",
+        "education_raw 本科",
+        "requirements_raw 本科及以上学历，3年以上游戏客户端开发经历"
+      ],
+      "skill_evidence": "2.熟练掌握C++/Python,熟练掌握常用数据结构与算法",
+      "eligible": true,
+      "evidence_start": 25,
+      "evidence_end": 56,
+      "screenshot": "ui_job_evidence.png"
+    },
+    {
+      "name": "Return action via button and Control+Enter",
+      "returned_to_page06": true,
+      "bachelor_and_cpp_context_retained": true
+    },
+    {
+      "name": "Blank skill selection with Bachelor population",
+      "core": 95,
+      "body_denominator": 95,
+      "skilled": 0,
+      "share_display": "0.0%",
+      "screenshot": "ui_zero_skill.png"
+    },
+    {
+      "name": "Date/province/city and rotated views rendered",
+      "date_rows": [
+        "2026-10-31: Tencent98",
+        "2026-11-01: NetEase98"
+      ],
+      "distinct_total": 196,
+      "note": "Existing date/geo expansions were inspected; development/province hierarchy was manually expanded in this run."
+    }
+  ],
+  "engine_evidence": "powerbi_validation.json",
+  "human_reviewer": null,
+  "screenshots": "Unedited original app captures; row screenshots do not claim a province row filters the whole page.",
+  "screenshot_sha256": {
+    "ui_default.png": "76cb0c528a2b647de92640fe11d4939a67f0dfc4c6db6c29c7fce65d8c2b9517",
+    "ui_fulltime.png": "3ea2ae520dd8d42228ab75bffcb4450ee3e3c15fa0a63c2886147122ef3a27a2",
+    "ui_job_evidence.png": "809bf645e18fdd7466436da8496e141b52404e7285b84c3ed15dae7593f901a8",
+    "ui_python.png": "87e9bad8c47ca67fd3c522ac085ecbc1766a7f5c72df98ebd05a93b09133e011",
+    "ui_skill_union.png": "a4146ed2e04937acf0c97fec0445861270522e153889dfff0079336ddf7d510c",
+    "ui_training_cohort.png": "9e1c4223ac68daf32358e151d49128dc3f5e47ed3754b5399dc0b65029fe18df",
+    "ui_zero_skill.png": "72aeee690164761963a8632d715aaf24398ada95136d46121ff1738f4661c627"
+  }
+}

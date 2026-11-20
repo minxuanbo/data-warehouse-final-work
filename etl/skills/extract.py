@@ -1,7 +1,7 @@
 """可解释的词典提取；偏移为 Python Unicode 字符下标，end 不包含在内。"""
 import re
 
-RULE_VERSION = "skills-rules-0.3.0"
+RULE_VERSION = "skills-rules-0.3.1"
 BODY_HASH_VERSION = "skills-body-1.1"
 FIELDS = ("description_raw", "requirements_raw", "additional_requirements_raw")
 VALID_LEVELS = {"必需", "优先", "提及"}
@@ -17,7 +17,8 @@ def alias_pattern(alias):
 
 def clauses(text):
     # 逗号只在新谓语或转折前切分，保留 PyTorch、TensorFlow 等技能列表。
-    splitter = r"[\r\n。；;]+|[，,](?=(?:但|而|同时|熟悉|掌握|精通|具备|至少掌握|能熟练使用|深入掌握|深入理解|有[^，,。；;\r\n]{0,32}经验))"
+    preferred_list = r"(?:[A-Za-z][A-Za-z0-9+#._ -]*[、/])*[A-Za-z][A-Za-z0-9+#._ -]*(?:优先|加分)"
+    splitter = r"[\r\n。；;]+|[，,](?=\s*(?:但|而|同时|熟悉|掌握|精通|具备|至少掌握|能熟练使用|熟练使用|深入掌握|深入理解|有[^，,。；;\r\n]{0,32}经验|" + preferred_list + r"))"
     start = 0
     for match in re.finditer(splitter, text):
         if text[start:match.start()].strip():
@@ -64,6 +65,9 @@ def extract(job, dictionary):
             for skill, alias, pattern in compiled:
                 for match in pattern.finditer(clause):
                     if skill["name"] == "React" and match.group() == "ReAct":
+                        continue
+                    if skill["name"] == "Ray" and re.match(r"\s+tracing\b",clause[match.end():],re.I):
+                        # Graphics ray tracing is not the distributed-computing framework.
                         continue
                     hits.append((match.start(), match.end(), skill, alias, match.group()))
             selected = []

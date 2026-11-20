@@ -2,7 +2,7 @@
 import json
 from collections import defaultdict
 
-from scripts.check_skills_v11 import input_paths
+from scripts.analysis_inputs import input_paths
 from scripts.prepare_powerbi import PROJECT, ROOT, write_json
 from warehouse.integrate_analysis import prepare
 from warehouse.normalization import classify

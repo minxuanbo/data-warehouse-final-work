@@ -6,6 +6,14 @@ from scripts.powerbi_contract import validate_model,fix_model
 
 
 class AnalysisModelTests(unittest.TestCase):
+    def test_label_polishing_does_not_add_invalid_sort_properties(self):
+        from scripts.pin_powerbi import polish_visuals
+        field={'Column':{'Expression':{'SourceRef':{'Entity':'SnapshotJobs'}},'Property':'source_job_id'}}
+        item=polish_visuals({'field':field,'direction':'Ascending','displayName':'invalid'},8)
+        self.assertEqual(set(item),{'field','direction'})
+        projection=polish_visuals({'field':field,'queryRef':'SnapshotJobs.source_job_id'},8)
+        self.assertEqual(projection['displayName'],'来源岗位 ID')
+
     def setUp(self):
         self.model=json.loads(Path('dashboards/powerbi/Recruitment.SemanticModel/model.bim').read_text(encoding='utf-8'))
 

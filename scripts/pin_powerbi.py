@@ -23,7 +23,11 @@ def polish_visuals(value,rid):
     if not isinstance(value,dict):return value
     result={k:polish_visuals(v,rid) for k,v in value.items()}
     field=result.get('field',{}).get('Column',{})
-    if field.get('Property') in LABELS:result['displayName']=LABELS[field['Property']]
+    # Only projections and filter cards permit displayName; sort items do not.
+    if field.get('Property') in LABELS and ('queryRef' in result or 'name' in result):
+        result['displayName']=LABELS[field['Property']]
+    elif 'direction' in result and 'field' in result:
+        result.pop('displayName',None)
     return result
 
 

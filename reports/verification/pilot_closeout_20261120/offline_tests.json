@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "test_command": ".venv-dbt/Scripts/python.exe -X utf8 -m unittest discover -s tests",
+  "tests_run": 84,
+  "failures": 0,
+  "errors": 0,
+  "source": "actual completed exec output, 2026-11-20",
+  "note": "Includes reviewed-field preservation and PBIR sort schema regression; historical fixtures prepared separately."
+}

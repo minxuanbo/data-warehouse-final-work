@@ -1,0 +1,121 @@
+{
+  "checked_at": "2026-11-20T18:37:11.520757+08:00",
+  "database": "recruitment_dw_dev_cd_v1",
+  "reference_release_id": 8,
+  "input_mode": "published_database_star",
+  "stage": "pilot_integration",
+  "filters": {
+    "province": "广东",
+    "category_group": "开发",
+    "education_group": "本科"
+  },
+  "regional_development_jobs": 60,
+  "education_groups": {
+    "未注明": 17,
+    "本科": 31,
+    "硕士": 4,
+    "不限": 4,
+    "冲突待确认": 4
+  },
+  "cohort_jobs": 31,
+  "body_denominator": 31,
+  "top_skills": [
+    [
+      "C++",
+      18,
+      0.5806451612903226
+    ],
+    [
+      "Python",
+      8,
+      0.25806451612903225
+    ],
+    [
+      "Unity",
+      7,
+      0.22580645161290322
+    ],
+    [
+      "C#",
+      6,
+      0.1935483870967742
+    ],
+    [
+      "C",
+      6,
+      0.1935483870967742
+    ],
+    [
+      "Linux",
+      5,
+      0.16129032258064516
+    ],
+    [
+      "Lua",
+      4,
+      0.12903225806451613
+    ],
+    [
+      "Unreal Engine",
+      4,
+      0.12903225806451613
+    ]
+  ],
+  "top_pairs": [
+    [
+      [
+        "C++",
+        "Unity"
+      ],
+      7,
+      0.22580645161290322
+    ],
+    [
+      [
+        "C#",
+        "C++"
+      ],
+      6,
+      0.1935483870967742
+    ],
+    [
+      [
+        "C",
+        "C++"
+      ],
+      6,
+      0.1935483870967742
+    ],
+    [
+      [
+        "C++",
+        "Python"
+      ],
+      6,
+      0.1935483870967742
+    ],
+    [
+      [
+        "C#",
+        "Unity"
+      ],
+      4,
+      0.12903225806451613
+    ]
+  ],
+  "experience_groups": {
+    "3年以上": 6,
+    "冲突待确认": 2,
+    "5年以上": 2,
+    "1年以上": 5,
+    "2年以上": 3,
+    "3-5年": 6,
+    "5-10年": 1,
+    "不限": 6
+  },
+  "zero_skill_jobs": 3,
+  "checks": [
+    "one_observation_per_identity",
+    "independent_skill_set_count"
+  ]
+}

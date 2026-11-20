@@ -6,6 +6,7 @@ from itertools import combinations
 import json
 from pathlib import Path
 import re
+import os
 
 from warehouse.load import ROOT,connect
 from warehouse.release_build import records
@@ -29,7 +30,7 @@ def read_verified_files():
             locs=[None] if j['location_conflict'] else j['confirmed_locations'] or [None]
             for loc in locs:places.append({'date_key':dk,'job_key':identity,'province_name':city(loc,j['location_conflict'])['province']})
         skill_set={(r['source_job_id'],r['skill_name']) for r in evidence if r['is_core'] and r['eligible_for_metric']}
-        assert len(skill_set)=={'tencent':333,'netease':334}[checked['manifest']['source']]
+        assert len(skill_set)==config['pilot_expectations']['posting_skill_pairs'][checked['manifest']['source']]
         for identity,name in sorted(skill_set):labels.append({'date_key':int(day.strftime('%Y%m%d')),
             'job_key':checked['manifest']['source']+'|'+identity,'skill_name':name})
     return jobs,places,labels
@@ -55,8 +56,17 @@ def read_database(database,release_id):
         original=records(c,'''SELECT r.batch_id,r.source_job_id,r.payload FROM ods.posting_record r
           JOIN audit.release_input i ON i.batch_id=r.batch_id WHERE i.release_id=?''',rid)
         raw={(r['batch_id'],r['source_job_id']):json.loads(r['payload']) for r in original}
+        enriched=records(c,'''SELECT o.batch_id,p.source_job_id,e.additional_requirements_raw
+          FROM dwd.observation_enrichment e
+          JOIN dwd.fact_posting_observation o ON o.observation_key=e.observation_key
+          JOIN dim.posting_identity p ON p.posting_key=o.posting_key
+          JOIN audit.release_input i ON i.build_id=e.build_id AND i.batch_id=o.batch_id
+          WHERE i.release_id=?''',rid)
+        additional={(r['batch_id'],r['source_job_id']):r['additional_requirements_raw'] for r in enriched}
         for job in jobs:
-            payload=raw[(job['batch_id'],job['source_job_id'])]
+            identity=(job['batch_id'],job['source_job_id'])
+            # Tencent ImportantItem belongs to the reviewed enrichment, not the collector payload.
+            payload={**raw[identity],'additional_requirements_raw':additional[identity]}
             job.update(title_raw=payload['title_raw'],category_raw=payload.get('category_raw'),
                        source_url=payload['source_url'],raw_ref=payload.get('raw_refs'),content_json=payload)
         places=records(c,'''SELECT b.date_key,b.job_key,d.province_name FROM dwd.bridge_daily_city b
@@ -67,7 +77,7 @@ def read_database(database,release_id):
     return rid,jobs,places,labels
 
 
-def prepare(database='recruitment_dw_dev_cd_v1',release_id=None,offline=False):
+def prepare(database='recruitment_dw_dev_cd_v1',release_id=None,offline=False,output_dir=None):
     if offline:
         jobs,places,labels=read_verified_files();rid=release_id
     else:rid,jobs,places,labels=read_database(database,release_id)
@@ -98,7 +108,7 @@ def prepare(database='recruitment_dw_dev_cd_v1',release_id=None,offline=False):
         'top_pairs':[[list(names),n,n/len(body)] for names,n in pairs.most_common(5)],
         'experience_groups':dict(Counter(j['experience_group'] for j in cohort)),
         'zero_skill_jobs':sum(not skills[key(j)] for j in body),'checks':['one_observation_per_identity','independent_skill_set_count']}
-    out=ROOT/'reports/verification';out.mkdir(exist_ok=True)
+    out=Path(output_dir) if output_dir else ROOT/'reports/verification';out.mkdir(parents=True,exist_ok=True)
     (out/f'小批决策案例对账_{day}.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     lines=['# 广东开发方向的技能训练样本案例','',
         f'生成日期：{stamp:%Y-%m-%d}；参考 sample 发布 `{rid}`。当前为小批联调。',
@@ -125,8 +135,8 @@ def prepare(database='recruitment_dw_dev_cd_v1',release_id=None,offline=False):
         '## 原文回查样例','','| 来源 | 岗位ID | 岗位名称 | 来源链接 |','| --- | --- | --- | --- |']
     for j in sorted(body,key=lambda j:(j['source'],j['source_job_id']))[:5]:
         lines.append(f'| {j["source"]} | {j["source_job_id"]} | {j["title_raw"].replace("|","/")} | [官网]({j["source_url"]}) |')
-    lines+=['','本案例为两家企业不同观察日的 partial 小批描述；自动主方向仍待独立业务复核，技能人工复核尚未完成。不能推断广东市场份额、岗位增长、录用概率或课程就业效果。',
-        f'对账记录：[小批决策案例对账](../verification/小批决策案例对账_{day}.json)。']
+    lines+=['','本案例为两家企业不同观察日的partial小批描述；本轮以AI辅助规则和原文审计收口，未冒称独立人工金标。不能推断广东市场份额、岗位增长、录用概率或课程就业效果。',
+        f'对账记录：[小批决策案例对账]({Path(os.path.relpath(out/f"小批决策案例对账_{day}.json",ROOT/"reports/analysis")).as_posix()})。']
     (ROOT/'reports/analysis/小批技能训练决策案例.md').write_text('\n'.join(lines)+'\n',encoding='utf-8',newline='\n')
     candidates=[]
     for j in sorted(jobs,key=lambda j:(j['source'],j['source_job_id'])):
@@ -154,5 +164,6 @@ def prepare(database='recruitment_dw_dev_cd_v1',release_id=None,offline=False):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--database',default='recruitment_dw_dev_cd_v1');p.add_argument('--release-id',type=int)
     p.add_argument('--offline',action='store_true',help='Recompute from hash-verified fixed repository inputs without SQL; release ID is a reference only')
-    a=p.parse_args();r=prepare(a.database,a.release_id,a.offline)
+    p.add_argument('--output-dir',type=Path)
+    a=p.parse_args();r=prepare(a.database,a.release_id,a.offline,a.output_dir)
     print(json.dumps({k:r[k] for k in ('reference_release_id','input_mode','cohort_jobs','body_denominator','top_skills','category_review_candidates')},ensure_ascii=False))

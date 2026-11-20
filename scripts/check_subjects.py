@@ -1,16 +1,17 @@
 """Read-only population reconciliation and business analysis from a fixed real release."""
 import argparse
 from collections import Counter,defaultdict
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 from itertools import combinations
 import json
 import os
+from pathlib import Path
 
 from warehouse.load import ROOT,connect
 from warehouse.release_build import records
 
 
-def check(database='recruitment_dw_dev_cd_v1',release_id=None,write_report=True):
+def check(database='recruitment_dw_dev_cd_v1',release_id=None,write_report=True,output_dir=None):
     c=connect(database);c.timeout=30
     try:
         rid=release_id or c.execute("SELECT release_id FROM audit.publication_pointer WHERE channel='sample'").fetchval()
@@ -65,9 +66,12 @@ def check(database='recruitment_dw_dev_cd_v1',release_id=None,write_report=True)
       'education':[[list(k),v] for k,v in sorted(education.items())],
       'note':'Category mapping is automatic initial classification; no human-review accuracy claim.'}
     if write_report:
-        out=ROOT/'reports/verification/主题分析对账_20261118.json';out.write_text(json.dumps(record,ensure_ascii=False,indent=2,default=str)+'\n',encoding='utf-8')
+        stamp=datetime.now(timezone(timedelta(hours=8)));day=stamp.strftime('%Y%m%d')
+        folder=Path(output_dir) if output_dir else ROOT/'reports/verification'
+        folder.mkdir(parents=True,exist_ok=True)
+        out=folder/f'主题分析对账_{day}.json';out.write_text(json.dumps(record,ensure_ascii=False,indent=2,default=str)+'\n',encoding='utf-8',newline='\n')
         denominator=sum(j['body_valid'] for j in core)
-        lines=['# 公开数字技术岗位需求主题分析','',f'核查日期：2026-11-18；数据库 `{database}`，固定发布 `{rid}`。',
+        lines=['# 公开数字技术岗位需求主题分析','',f'核查日期：{stamp:%Y-%m-%d}；数据库 `{database}`，固定发布 `{rid}`。',
           '', '**用途：支持人才培训与就业指导的岗位方向、技能训练和门槛适配规划。以下为两来源不同观察日的 partial 小批描述，不是同日全量比较或市场调查。**',
           '', '## 数据范围','', '| 来源 | 观察日期 | 来源岗位 | 核心岗位 | 正文分母 | 岗位×技能 |', '| --- | --- | --- | --- | --- | --- |']
         for source,s in record['sources'].items():lines.append(f"| {source} | {', '.join(s['dates'])} | {s['source_postings']} | {s['core_postings']} | {s['body_denominator']} | {s['posting_skill_pairs']} |")
@@ -91,15 +95,15 @@ def check(database='recruitment_dw_dev_cd_v1',release_id=None,write_report=True)
         lines+=['','## B03 岗位门槛与数据可用性','','| 来源 | 学历组 | 核心岗位 |','| --- | --- | --- |']
         for (source,label),count in sorted(education.items()):lines.append(f'| {source} | {label} | {count} |')
         lines+=['','学历优先保留结构化来源语义，来源缺失时从任职/补充要求提取明确的最低学历，并保存证据。未注明不等于不限；仅有“硕士优先”不提升硬性门槛；来源与正文不一致时单列冲突。两来源的采样与字段披露方式不同，不据此推导市场整体学历高低。经验将“三年以上工作经验”等忠实规范为“3年以上”，原区间不伪装成更细区间。',
-          '', '招聘类型数字代码尚未独立核实，本批不形成社招/校招/实习比例结论。',
+          '', '网易workType已由官网公开前端核实为0全职、1实习、2派遣；腾讯数字代码保留未释义。就业形式不等于社招/校招渠道，不据此形成两来源招录渠道对比。',
           '', '## B04 观察变化','','当前两日各缺一个来源且均为 partial，因此新增观察、持续未观察与内容变化不发布比较结论。日期层次展开只用于定位观察，不代表已有市场趋势。',
           '', '## 指标与证据追踪','','B01：`ads.release_job_structure`；B02：`ads.release_skill_profile`、技能/原文证据；B03：`ads.release_entry_profile`。查询均须固定 release_id。上述三个主题接口已与日明细及去重技能集合独立聚合对账，原始输入、提取规则和版本可回查。',
-          '', '[对账记录](../verification/主题分析对账_20261118.json) · [分析设计](../../docs/design/07_多维分析与可视化.md)',
+          '', f'[对账记录]({Path(os.path.relpath(out,ROOT/"reports/analysis")).as_posix()}) · [分析设计](../../docs/design/07_多维分析与可视化.md)',
           '', '本报告由真实发布数据生成。无虚构薪资、录用、招聘人数或历史观察；自动分类和技能规则存在误差，额外人工复核未完成时不声称已满足最终人工精确率/召回率验收。']
-        (ROOT/'reports/analysis/岗位需求主题分析.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+        (ROOT/'reports/analysis/岗位需求主题分析.md').write_text('\n'.join(lines)+'\n',encoding='utf-8',newline='\n')
     return record
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--database',default='recruitment_dw_dev_cd_v1');p.add_argument('--release-id',type=int);a=p.parse_args()
-    r=check(a.database,a.release_id);print(json.dumps({k:r[k] for k in ('status','database','release_id','sources','standard_category_counts')},ensure_ascii=False))
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--database',default='recruitment_dw_dev_cd_v1');p.add_argument('--release-id',type=int);p.add_argument('--output-dir',type=Path);a=p.parse_args()
+    r=check(a.database,a.release_id,output_dir=a.output_dir);print(json.dumps({k:r[k] for k in ('status','database','release_id','sources','standard_category_counts')},ensure_ascii=False))
