@@ -97,7 +97,10 @@ def validate(path):
         raise ValueError('Empty batch or counts mismatch')
     if m['coverage_status']=='complete':
         from collectors.coverage import assess_coverage
-        if m['source'] in ('xiaomi','jd'):
+        if m.get('collection_protocol')=='public-pagination-2.0':
+            from collectors.pagination_v2 import assess
+            proof=assess(root,m['source'],m['stop_reason'],m['counts'],m['error_pages'])
+        elif m['source'] in ('xiaomi','jd'):
             from collectors.enterprise_coverage import assess
             proof=assess(root,m['source'],m['stop_reason'],m['counts'],m['error_pages'])
         else:proof=assess_coverage(root,m['source'],m['stop_reason'],m['counts'],m['error_pages'])

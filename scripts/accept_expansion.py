@@ -81,8 +81,12 @@ def main(batch,output,accept=False):
         if locations and all(x in FOREIGN_CITIES or OVERSEAS.search(x) for x in locations):
             in_core,reason=False,'来源明确为境外城市，不进入本期中国大陆核心范围'
         decisions[sid]={'is_core':in_core,'reason':reason,'raw_ref':list_ref['path']}
-    proof=(assess(root,source,m['stop_reason'],m['counts'],m['error_pages']) if source in ('xiaomi','jd')
-           else assess_coverage(root,source,m['stop_reason'],m['counts'],m['error_pages']))
+    if m.get('collection_protocol')=='public-pagination-2.0':
+        from collectors.pagination_v2 import assess as assess_v2
+        proof=assess_v2(root,source,m['stop_reason'],m['counts'],m['error_pages'])
+    else:
+        proof=(assess(root,source,m['stop_reason'],m['counts'],m['error_pages']) if source in ('xiaomi','jd')
+               else assess_coverage(root,source,m['stop_reason'],m['counts'],m['error_pages']))
     assert proof['coverage_status']==m['coverage_status'],proof
     if source=='netease':
         # Detail comparisons can reveal source drift; preserve it as a caveat.

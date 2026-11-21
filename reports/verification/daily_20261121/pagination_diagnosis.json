@@ -1,0 +1,25 @@
+{
+  "date_beijing": "2026-11-21",
+  "status": "verified",
+  "jd": {
+    "official_js": "reports/verification/expansion_current/source_reference/jd_jobindex.js",
+    "count": 1555,
+    "last_data_page": 156,
+    "last_page_rows": 5,
+    "out_of_range_157_repeats_156": true,
+    "repair": "Stop at ceiling(count/page_size); fetch final count even after bounded/network stop, never after restriction",
+    "coverage_gate": "Stable totals, contiguous pages and distinct source ID equality still required"
+  },
+  "netease": {
+    "total": 2602,
+    "pages": 261,
+    "last_data_page_rows": 2,
+    "lastPage_at_261": true,
+    "out_of_range_262_total": 0,
+    "repair": "Honor validated pages/lastPage on last data page; do not use out-of-range zero as changing business total"
+  },
+  "old_batches": "Immutable and still partial; no retrospective status promotion",
+  "new_collection": "New source-versioned daily collector; source mappings reused unchanged",
+  "test_command": "python -m unittest tests.test_pagination_v2 tests.test_collection_coverage tests.test_expansion -v",
+  "tests_passed": 16
+}
