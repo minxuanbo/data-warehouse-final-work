@@ -1,0 +1,282 @@
+{
+  "checked_at_utc": "2026-11-21T03:32:20.756100+00:00",
+  "status": "passed",
+  "database": "recruitment_dw_dev_expansion_v1",
+  "release_id": 1,
+  "checks": [
+    "snapshot_grain",
+    "structure_population",
+    "entry_population",
+    "skill_numerator",
+    "skill_denominator",
+    "partial_change_gate"
+  ],
+  "sources": {
+    "netease": {
+      "source_postings": 448,
+      "core_postings": 444,
+      "body_denominator": 444,
+      "posting_skill_pairs": 1263,
+      "dates": [
+        "2026-11-20"
+      ]
+    },
+    "xiaomi": {
+      "source_postings": 500,
+      "core_postings": 497,
+      "body_denominator": 497,
+      "posting_skill_pairs": 1170,
+      "dates": [
+        "2026-11-20"
+      ]
+    },
+    "jd": {
+      "source_postings": 200,
+      "core_postings": 199,
+      "body_denominator": 199,
+      "posting_skill_pairs": 263,
+      "dates": [
+        "2026-11-20"
+      ]
+    },
+    "tencent": {
+      "source_postings": 431,
+      "core_postings": 416,
+      "body_denominator": 416,
+      "posting_skill_pairs": 1304,
+      "dates": [
+        "2026-11-21"
+      ]
+    }
+  },
+  "standard_category_counts": {
+    "开发": 725,
+    "测试": 119,
+    "运维/安全": 47,
+    "算法/AI": 602,
+    "数据开发/分析": 51,
+    "待分类": 12
+  },
+  "top_skills": [
+    [
+      "Python",
+      420
+    ],
+    [
+      "C++",
+      416
+    ],
+    [
+      "Linux",
+      229
+    ],
+    [
+      "C",
+      194
+    ],
+    [
+      "PyTorch",
+      170
+    ],
+    [
+      "Java",
+      117
+    ],
+    [
+      "Unreal Engine",
+      114
+    ],
+    [
+      "Android",
+      109
+    ],
+    [
+      "RAG",
+      108
+    ],
+    [
+      "MySQL",
+      96
+    ]
+  ],
+  "top_pairs": [
+    [
+      [
+        "C++",
+        "Python"
+      ],
+      222
+    ],
+    [
+      [
+        "C",
+        "C++"
+      ],
+      155
+    ],
+    [
+      [
+        "PyTorch",
+        "Python"
+      ],
+      101
+    ],
+    [
+      [
+        "C++",
+        "Linux"
+      ],
+      93
+    ],
+    [
+      [
+        "C",
+        "Python"
+      ],
+      86
+    ],
+    [
+      [
+        "PyTorch",
+        "TensorFlow"
+      ],
+      78
+    ],
+    [
+      [
+        "C++",
+        "Unreal Engine"
+      ],
+      76
+    ],
+    [
+      [
+        "MySQL",
+        "Redis"
+      ],
+      68
+    ],
+    [
+      [
+        "Linux",
+        "Python"
+      ],
+      63
+    ],
+    [
+      [
+        "C",
+        "Linux"
+      ],
+      57
+    ]
+  ],
+  "education": [
+    [
+      [
+        "jd",
+        "未注明"
+      ],
+      141
+    ],
+    [
+      [
+        "jd",
+        "本科"
+      ],
+      43
+    ],
+    [
+      [
+        "jd",
+        "硕士"
+      ],
+      15
+    ],
+    [
+      [
+        "netease",
+        "不限"
+      ],
+      43
+    ],
+    [
+      [
+        "netease",
+        "冲突待确认"
+      ],
+      105
+    ],
+    [
+      [
+        "netease",
+        "本科"
+      ],
+      284
+    ],
+    [
+      [
+        "netease",
+        "硕士"
+      ],
+      12
+    ],
+    [
+      [
+        "tencent",
+        "博士"
+      ],
+      4
+    ],
+    [
+      [
+        "tencent",
+        "未注明"
+      ],
+      170
+    ],
+    [
+      [
+        "tencent",
+        "本科"
+      ],
+      186
+    ],
+    [
+      [
+        "tencent",
+        "硕士"
+      ],
+      56
+    ],
+    [
+      [
+        "xiaomi",
+        "博士"
+      ],
+      10
+    ],
+    [
+      [
+        "xiaomi",
+        "未注明"
+      ],
+      161
+    ],
+    [
+      [
+        "xiaomi",
+        "本科"
+      ],
+      206
+    ],
+    [
+      [
+        "xiaomi",
+        "硕士"
+      ],
+      120
+    ]
+  ],
+  "note": "Category mapping is automatic initial classification; no human-review accuracy claim."
+}

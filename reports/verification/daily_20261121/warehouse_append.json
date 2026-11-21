@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-21T03:30:51.537121+00:00",
+  "database": "recruitment_dw_dev_expansion_v1",
+  "input_revision": "6df8db84455ee4cdee34bfadc07345dd369d6b2b",
+  "batches": [
+    {
+      "source": "tencent",
+      "batch_id": "tencent_20261121T031813Z_5f37563c",
+      "first": "loaded_trial",
+      "repeated": "unchanged",
+      "ods_rows": 150,
+      "observation_rows": 150
+    },
+    {
+      "source": "netease",
+      "batch_id": "netease_20261121T031813Z_4be7ceeb",
+      "first": "loaded_trial",
+      "repeated": "unchanged",
+      "ods_rows": 150,
+      "observation_rows": 150
+    },
+    {
+      "source": "xiaomi",
+      "batch_id": "xiaomi_20261121T031813Z_996f48b6",
+      "first": "loaded_trial",
+      "repeated": "unchanged",
+      "ods_rows": 150,
+      "observation_rows": 150
+    },
+    {
+      "source": "jd",
+      "batch_id": "jd_20261121T031813Z_e4abceb0",
+      "first": "loaded_trial",
+      "repeated": "unchanged",
+      "ods_rows": 150,
+      "observation_rows": 150
+    }
+  ],
+  "selected_release_before": {
+    "release_id": 1,
+    "snapshot_rows": 1579,
+    "core_rows": 1556,
+    "skill_pairs": 4000,
+    "release_inputs": [
+      [
+        "jd_20261120T152717Z_b825c288",
+        7
+      ],
+      [
+        "netease_20261120T145742Z_a2a9c5c5",
+        5
+      ],
+      [
+        "tencent_20261120T145742Z_cb8952ee",
+        4
+      ],
+      [
+        "xiaomi_20261120T152702Z_470b8a89",
+        6
+      ]
+    ]
+  },
+  "selected_release_after": {
+    "release_id": 1,
+    "snapshot_rows": 1579,
+    "core_rows": 1556,
+    "skill_pairs": 4000,
+    "release_inputs": [
+      [
+        "jd_20261120T152717Z_b825c288",
+        7
+      ],
+      [
+        "netease_20261120T145742Z_a2a9c5c5",
+        5
+      ],
+      [
+        "tencent_20261120T145742Z_cb8952ee",
+        4
+      ],
+      [
+        "xiaomi_20261120T152702Z_470b8a89",
+        6
+      ]
+    ]
+  },
+  "scope": "New source observations in ODS/history only; not an analytical release or market-growth claim"
+}

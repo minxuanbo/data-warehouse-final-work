@@ -1,0 +1,32 @@
+{
+  "scope": "Only identities observed in both selected samples; raw-field differences, not market trend",
+  "differences": [
+    {
+      "source": "netease",
+      "source_job_id": "23198",
+      "fields": [
+        "source_updated_at_raw"
+      ],
+      "previous_batch": "netease_20261120T145742Z_a2a9c5c5",
+      "current_batch": "netease_20261121T031813Z_4be7ceeb"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "53229",
+      "fields": [
+        "source_updated_at_raw"
+      ],
+      "previous_batch": "netease_20261120T145742Z_a2a9c5c5",
+      "current_batch": "netease_20261121T031813Z_4be7ceeb"
+    },
+    {
+      "source": "netease",
+      "source_job_id": "76595",
+      "fields": [
+        "source_updated_at_raw"
+      ],
+      "previous_batch": "netease_20261120T145742Z_a2a9c5c5",
+      "current_batch": "netease_20261121T031813Z_4be7ceeb"
+    }
+  ]
+}
