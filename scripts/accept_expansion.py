@@ -20,6 +20,7 @@ from warehouse.normalization import category
 
 
 LANGUAGE=re.compile(r'Java|Python|Android|iOS|HarmonyOS|鸿蒙|\bWeb\b|C\+\+|C#|Golang|SDK|推荐|搜索|智能体|\bAgent\b',re.I)
+SOFTWARE_ROLE=re.compile(r'(?:后端|后台|前端|全栈|客户端|服务端|框架)(?:研发|开发)(?:工程师|专家|架构师)|AI\s*Agent\s*架构师|(?:系统|软件|平台)架构师',re.I)
 FOREIGN_CITIES={'伦敦','奥克兰','贝尔维尤','法兰克福','尔湾','悉尼','马德里','慕尼黑','迪拜'}
 # Reviewed against this exact new batch. A department prefix such as 营销/客服
 # cannot override an explicit software engineering role. Never copy to new scans.
@@ -78,6 +79,8 @@ def main(batch,output,accept=False):
         if m['batch_id']=='tencent_20261120T145742Z_cb8952ee' and sid in TENCENT_REVIEWED_SOFTWARE:
             assert TENCENT_REVIEWED_SOFTWARE[sid] in title
             in_core,reason=True,'本批原文复核：部门前缀不替代明确软件研发职责；依据标题 '+TENCENT_REVIEWED_SOFTWARE[sid]
+        if m.get('collection_protocol')=='public-pagination-2.0' and SOFTWARE_ROLE.search(title):
+            in_core,reason=True,'新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 '+SOFTWARE_ROLE.search(title)[0]
         if locations and all(x in FOREIGN_CITIES or OVERSEAS.search(x) for x in locations):
             in_core,reason=False,'来源明确为境外城市，不进入本期中国大陆核心范围'
         decisions[sid]={'is_core':in_core,'reason':reason,'raw_ref':list_ref['path']}
@@ -93,6 +96,7 @@ def main(batch,output,accept=False):
         detail_checks=sum(bool(r['response_path'] and r['response_path'].startswith('raw/detail_') and r['business_success']) for r in requests)
         assert detail_checks>=5,'At least five real public detail checks required'
     result={'status':'passed_for_technical_acceptance','checked_at':datetime.now(timezone.utc).isoformat(),
+            'scope_review_version':'daily-software-title-1.0' if m.get('collection_protocol')=='public-pagination-2.0' else 'expanded-v2.1',
             'source':source,'batch_id':m['batch_id'],'jobs':len(checked['jobs']),'field_values_reconstructed':reconstructed,
             'files_hashed':len(checked['files']),'request_attempts':len(requests),'failed_attempts':m['counts']['failed_requests'],
             'coverage_proof':proof,'core_jobs':sum(x['is_core'] for x in decisions.values()),'scope_decisions':decisions,

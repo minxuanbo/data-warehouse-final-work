@@ -1,0 +1,230 @@
+{
+  "source": "netease",
+  "batch_id": "netease_20261121T031813Z_4be7ceeb",
+  "listed_rows": 780,
+  "unique_ids": 767,
+  "duplicate_ids": [
+    {
+      "source_job_id": "46179",
+      "occurrences": [
+        {
+          "page": "list_000008.json",
+          "name": "游戏战斗策划（永劫无间）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000009.json",
+          "name": "游戏战斗策划（永劫无间）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        }
+      ]
+    },
+    {
+      "source_job_id": "47017",
+      "occurrences": [
+        {
+          "page": "list_000008.json",
+          "name": "游戏任务/叙事策划 （无限大）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000009.json",
+          "name": "游戏任务/叙事策划 （无限大）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        }
+      ]
+    },
+    {
+      "source_job_id": "47966",
+      "occurrences": [
+        {
+          "page": "list_000008.json",
+          "name": "游戏系统策划（永劫无间手游）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000009.json",
+          "name": "游戏系统策划（永劫无间手游）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        }
+      ]
+    },
+    {
+      "source_job_id": "48076",
+      "occurrences": [
+        {
+          "page": "list_000008.json",
+          "name": "游戏美协策划（天谕手游）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000009.json",
+          "name": "游戏美协策划（天谕手游）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        }
+      ]
+    },
+    {
+      "source_job_id": "50601",
+      "occurrences": [
+        {
+          "page": "list_000008.json",
+          "name": "游戏系统策划（天谕手游）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000009.json",
+          "name": "游戏系统策划（天谕手游）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        }
+      ]
+    },
+    {
+      "source_job_id": "50954",
+      "occurrences": [
+        {
+          "page": "list_000008.json",
+          "name": "资深特效设计师",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000009.json",
+          "name": "资深特效设计师",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        }
+      ]
+    },
+    {
+      "source_job_id": "51806",
+      "occurrences": [
+        {
+          "page": "list_000008.json",
+          "name": "高级/资深音频设计师",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000009.json",
+          "name": "高级/资深音频设计师",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        }
+      ]
+    },
+    {
+      "source_job_id": "52395",
+      "occurrences": [
+        {
+          "page": "list_000008.json",
+          "name": "游戏数值策划（永劫无间手游）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000009.json",
+          "name": "游戏数值策划（永劫无间手游）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        }
+      ]
+    },
+    {
+      "source_job_id": "53706",
+      "occurrences": [
+        {
+          "page": "list_000008.json",
+          "name": "游戏文案策划（永劫无间）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000010.json",
+          "name": "游戏文案策划（永劫无间）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        }
+      ]
+    },
+    {
+      "source_job_id": "54538",
+      "occurrences": [
+        {
+          "page": "list_000008.json",
+          "name": "游戏玩法策划（无限大）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000010.json",
+          "name": "游戏玩法策划（无限大）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        }
+      ]
+    },
+    {
+      "source_job_id": "43595",
+      "occurrences": [
+        {
+          "page": "list_000009.json",
+          "name": "高级/资深系统策划（永劫无间）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000014.json",
+          "name": "高级/资深系统策划（永劫无间）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        }
+      ]
+    },
+    {
+      "source_job_id": "79777",
+      "occurrences": [
+        {
+          "page": "list_000013.json",
+          "name": "音频QA工程师（无限大）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000015.json",
+          "name": "音频QA工程师（无限大）",
+          "updateTime": 1795141942000,
+          "publishTime": null
+        }
+      ]
+    },
+    {
+      "source_job_id": "77924",
+      "occurrences": [
+        {
+          "page": "list_000047.json",
+          "name": "游戏战斗策划实习生（七日世界）",
+          "updateTime": 1794713688000,
+          "publishTime": null
+        },
+        {
+          "page": "list_000048.json",
+          "name": "游戏战斗策划实习生（七日世界）",
+          "updateTime": 1794713688000,
+          "publishTime": null
+        }
+      ]
+    }
+  ],
+  "interpretation": "Official responses overlap across page boundaries. Client deduplicates identities and preserves all raw responses; no claim of source completeness or a proven server-side cause."
+}

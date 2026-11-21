@@ -1,0 +1,45 @@
+{
+  "kind": "programmatic source/list-detail comparison; not human labels",
+  "jobs": [
+    {
+      "source_job_id": "23198",
+      "raw_ref": {
+        "path": "raw/detail_23198.json",
+        "sha256": "b5eba9a25a555ae43867692b8777fcb4cb492e101f7901692a3b27caa3f064b4"
+      },
+      "differences": []
+    },
+    {
+      "source_job_id": "53229",
+      "raw_ref": {
+        "path": "raw/detail_53229.json",
+        "sha256": "79c47fe794e49f3b952bb0c1731faf76aede71a039b2bbad51c1915f6af359ed"
+      },
+      "differences": []
+    },
+    {
+      "source_job_id": "76595",
+      "raw_ref": {
+        "path": "raw/detail_76595.json",
+        "sha256": "aeae332f74669552a5a42424a0db2d5b7cc91067e28a3c24601c4a9de4073a87"
+      },
+      "differences": []
+    },
+    {
+      "source_job_id": "79396",
+      "raw_ref": {
+        "path": "raw/detail_79396.json",
+        "sha256": "4064c79edb998fc739f637d5e9b4d02a82b3c639ca365a6c8a7805d4ea32735b"
+      },
+      "differences": []
+    },
+    {
+      "source_job_id": "79599",
+      "raw_ref": {
+        "path": "raw/detail_79599.json",
+        "sha256": "5470a8003b8991729655e9507902819a29f5b7c66d138815edae8c374470c4bd"
+      },
+      "differences": []
+    }
+  ]
+}

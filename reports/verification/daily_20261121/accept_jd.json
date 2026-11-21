@@ -1,0 +1,785 @@
+{
+  "status": "passed_for_technical_acceptance",
+  "checked_at": "2026-11-21T03:25:40.854244+00:00",
+  "source": "jd",
+  "batch_id": "jd_20261121T031813Z_e4abceb0",
+  "jobs": 150,
+  "field_values_reconstructed": 3150,
+  "files_hashed": 135,
+  "request_attempts": 132,
+  "failed_attempts": 1,
+  "coverage_proof": {
+    "version": "public-pagination-2.0",
+    "coverage_status": "partial",
+    "unique_listed_ids": 1282,
+    "listed_rows": 1290,
+    "reported_totals": [
+      1555
+    ],
+    "validated_last_page": false,
+    "reasons": [
+      "duplicate_id_across_pages",
+      "ids_not_fully_accounted",
+      "no_validated_last_data_page",
+      "not_source_exhausted",
+      "unique_ids_do_not_match_business_total",
+      "unprocessed_ids"
+    ]
+  },
+  "core_jobs": 149,
+  "scope_decisions": {
+    "228051": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000001.json"
+    },
+    "228013": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000003.json"
+    },
+    "228014": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000003.json"
+    },
+    "228007": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000004.json"
+    },
+    "228006": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000005.json"
+    },
+    "227950": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000008.json"
+    },
+    "227942": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000008.json"
+    },
+    "227905": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000009.json"
+    },
+    "227907": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000009.json"
+    },
+    "227906": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000009.json"
+    },
+    "227889": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000011.json"
+    },
+    "227890": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000011.json"
+    },
+    "227868": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000012.json"
+    },
+    "227859": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000012.json"
+    },
+    "227767": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000013.json"
+    },
+    "227120": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000014.json"
+    },
+    "227816": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000014.json"
+    },
+    "227467": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000017.json"
+    },
+    "227529": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000018.json"
+    },
+    "227495": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000018.json"
+    },
+    "227764": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000018.json"
+    },
+    "227742": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000020.json"
+    },
+    "226961": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000021.json"
+    },
+    "227716": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000021.json"
+    },
+    "227618": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000022.json"
+    },
+    "227650": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000022.json"
+    },
+    "227541": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000022.json"
+    },
+    "227537": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000022.json"
+    },
+    "227642": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000024.json"
+    },
+    "227628": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000024.json"
+    },
+    "227623": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000026.json"
+    },
+    "227629": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000026.json"
+    },
+    "224113": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000026.json"
+    },
+    "226695": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000026.json"
+    },
+    "227248": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000027.json"
+    },
+    "227595": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000028.json"
+    },
+    "212390": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000030.json"
+    },
+    "227512": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000033.json"
+    },
+    "227485": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000033.json"
+    },
+    "227156": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000033.json"
+    },
+    "227461": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000033.json"
+    },
+    "222996": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000033.json"
+    },
+    "222927": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000033.json"
+    },
+    "222918": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000034.json"
+    },
+    "222917": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000034.json"
+    },
+    "222921": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000034.json"
+    },
+    "222889": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000034.json"
+    },
+    "222926": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000034.json"
+    },
+    "225061": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000034.json"
+    },
+    "222914": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000034.json"
+    },
+    "227440": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000035.json"
+    },
+    "227396": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000035.json"
+    },
+    "227030": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000037.json"
+    },
+    "227402": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000038.json"
+    },
+    "227394": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000038.json"
+    },
+    "227388": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000038.json"
+    },
+    "227349": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000040.json"
+    },
+    "227309": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000042.json"
+    },
+    "227269": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000043.json"
+    },
+    "227285": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000043.json"
+    },
+    "220739": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000046.json"
+    },
+    "227069": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000046.json"
+    },
+    "227178": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000048.json"
+    },
+    "227193": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000048.json"
+    },
+    "227155": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000049.json"
+    },
+    "227158": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000049.json"
+    },
+    "226803": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000049.json"
+    },
+    "226920": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000050.json"
+    },
+    "227104": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000050.json"
+    },
+    "227047": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000051.json"
+    },
+    "227044": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000051.json"
+    },
+    "227043": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000051.json"
+    },
+    "226275": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000053.json"
+    },
+    "226694": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000055.json"
+    },
+    "226812": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000056.json"
+    },
+    "226802": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000058.json"
+    },
+    "226657": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000059.json"
+    },
+    "226845": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000059.json"
+    },
+    "226773": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000060.json"
+    },
+    "226872": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000060.json"
+    },
+    "226762": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000061.json"
+    },
+    "226842": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000061.json"
+    },
+    "226832": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000062.json"
+    },
+    "226686": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000063.json"
+    },
+    "226698": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000063.json"
+    },
+    "226520": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000065.json"
+    },
+    "225333": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000065.json"
+    },
+    "226656": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000066.json"
+    },
+    "226720": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000066.json"
+    },
+    "226051": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000067.json"
+    },
+    "226049": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000067.json"
+    },
+    "226187": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000067.json"
+    },
+    "224988": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000067.json"
+    },
+    "226499": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000071.json"
+    },
+    "226478": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000072.json"
+    },
+    "226482": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000073.json"
+    },
+    "226539": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000073.json"
+    },
+    "226454": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000075.json"
+    },
+    "226470": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000075.json"
+    },
+    "226462": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000075.json"
+    },
+    "226416": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000076.json"
+    },
+    "226151": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000076.json"
+    },
+    "226421": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000076.json"
+    },
+    "221749": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000077.json"
+    },
+    "226271": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000077.json"
+    },
+    "226395": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000077.json"
+    },
+    "226333": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000079.json"
+    },
+    "226276": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000080.json"
+    },
+    "222256": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000082.json"
+    },
+    "226220": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000083.json"
+    },
+    "226219": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000083.json"
+    },
+    "226181": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000084.json"
+    },
+    "226188": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000084.json"
+    },
+    "226162": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000085.json"
+    },
+    "226042": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000086.json"
+    },
+    "225948": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000087.json"
+    },
+    "226050": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000088.json"
+    },
+    "225993": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000089.json"
+    },
+    "225884": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000089.json"
+    },
+    "225895": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000091.json"
+    },
+    "225526": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000093.json"
+    },
+    "225705": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000096.json"
+    },
+    "225654": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000096.json"
+    },
+    "225282": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000099.json"
+    },
+    "225493": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000100.json"
+    },
+    "225451": {
+      "is_core": false,
+      "reason": "设计创作职责；AIGC工具使用不等于算法或软件研发",
+      "raw_ref": "raw/list_000101.json"
+    },
+    "225444": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000101.json"
+    },
+    "223528": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000103.json"
+    },
+    "223416": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000103.json"
+    },
+    "225280": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000105.json"
+    },
+    "224216": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000105.json"
+    },
+    "225164": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000106.json"
+    },
+    "225244": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000106.json"
+    },
+    "223634": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000106.json"
+    },
+    "225111": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000107.json"
+    },
+    "225242": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000107.json"
+    },
+    "225113": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000108.json"
+    },
+    "225165": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000108.json"
+    },
+    "224942": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000111.json"
+    },
+    "224961": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000112.json"
+    },
+    "224980": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000113.json"
+    },
+    "224931": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000113.json"
+    },
+    "223742": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000118.json"
+    },
+    "224347": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000119.json"
+    },
+    "224396": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000122.json"
+    },
+    "224102": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000123.json"
+    },
+    "224416": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000125.json"
+    },
+    "223831": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000126.json"
+    },
+    "223112": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000128.json"
+    },
+    "224092": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000129.json"
+    }
+  },
+  "human_annotation": false,
+  "review_actor": "AI-assisted technical verification authorized by user",
+  "acceptance_scope": "Collected subset and source lineage; not full market coverage or independent precision/recall"
+}

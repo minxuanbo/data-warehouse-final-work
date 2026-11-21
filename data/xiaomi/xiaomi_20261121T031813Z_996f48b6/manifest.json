@@ -1,0 +1,419 @@
+{
+  "schema_version": "1.0",
+  "scope_version": "digital_jobs_cn_v1",
+  "phase": "expansion",
+  "source": "xiaomi",
+  "owner": "D",
+  "batch_id": "xiaomi_20261121T031813Z_996f48b6",
+  "started_at": "2026-11-21T03:18:13Z",
+  "finished_at": "2026-11-21T03:20:44Z",
+  "collector_commit": "b247efb9af61e128069839d69f6a2e27cd1659f4",
+  "parser_version": "daily-public-1.0.0",
+  "collector_version": "daily-public-1.0.0",
+  "collection_protocol": "public-pagination-2.0",
+  "collection_window": "four-source-20261121-additional",
+  "execution_actor": "AI-assisted collection authorized by user; not member manual review",
+  "collector_source": [
+    {
+      "path": "collectors/daily.py",
+      "sha256": "d4da27527ab868d3a5e2d980cec6ae79fe3fd191e2db019b71e0d1f2f424ac77",
+      "newline": "LF"
+    },
+    {
+      "path": "collectors/pagination_v2.py",
+      "sha256": "109a8069157e6ac4da7890ee156fc2c69cfa616e697f348a0049ac3a8c7b6bfb",
+      "newline": "LF"
+    },
+    {
+      "path": "collectors/enterprise.py",
+      "sha256": "be80b9bea27775cbaad3edad449d49bc352b49260c91c3710551593f302cd286",
+      "newline": "LF"
+    }
+  ],
+  "acceptance_status": "accepted",
+  "coverage_status": "partial",
+  "stop_reason": "bounded_sample_limit",
+  "counts": {
+    "requests": 51,
+    "failed_requests": 0,
+    "list_pages": 51,
+    "raw_response_files": 51,
+    "unique_source_ids": 510,
+    "output_records": 150,
+    "excluded_unique_ids": 360,
+    "unprocessed_unique_ids": 0,
+    "unresolved_unique_ids": 0,
+    "unidentified_records": 0,
+    "listed_records": 510
+  },
+  "error_pages": [],
+  "files": [
+    {
+      "path": "jobs.jsonl",
+      "bytes": 290592,
+      "sha256": "8ca59016f58564c7f5257d0980c514093d4b199837246fac12f41aedb7bd360c",
+      "records": 150
+    },
+    {
+      "path": "pagination.json",
+      "bytes": 64,
+      "sha256": "87051b09b6778cbf0f73efb2c1c89f201db63cc7827cc7e52cf754e1df08c9ab",
+      "records": null
+    },
+    {
+      "path": "quality_issues.jsonl",
+      "bytes": 110973,
+      "sha256": "5e456e2667501f4190c0291df4265b5d26f8fde6431292bc220940d9d8c96f33",
+      "records": 360
+    },
+    {
+      "path": "raw/list_000001.json",
+      "bytes": 17158,
+      "sha256": "459309e03e81a36383ad34d0a909c67acaa7dbc95001d8f9e9d613c5ca5a696a",
+      "records": null
+    },
+    {
+      "path": "raw/list_000002.json",
+      "bytes": 19130,
+      "sha256": "a72c3d2951bb8d56e8cbee065b8182aaa38b00b3bcad48a6f874f53ede922422",
+      "records": null
+    },
+    {
+      "path": "raw/list_000003.json",
+      "bytes": 14970,
+      "sha256": "9b8ddc43723d7bcf70a169860922ae3020e181d03646f446462e8ca9d77ce016",
+      "records": null
+    },
+    {
+      "path": "raw/list_000004.json",
+      "bytes": 15889,
+      "sha256": "f4505364b0cd1916314938cafbefd2ff6671cd30b16a167794b393034b5ee459",
+      "records": null
+    },
+    {
+      "path": "raw/list_000005.json",
+      "bytes": 15616,
+      "sha256": "0b008cf909863b5e00bd3b2449aebb5515a8b2dc4cbf0cc3a89a79b7c1b762a9",
+      "records": null
+    },
+    {
+      "path": "raw/list_000006.json",
+      "bytes": 18584,
+      "sha256": "b0cd223069e1c943b862479c4a44e65928b8c9170e1778a14e447b9ca4bcba2e",
+      "records": null
+    },
+    {
+      "path": "raw/list_000007.json",
+      "bytes": 18367,
+      "sha256": "0a623723b8429e17d5d6b0622c31b51eb2383daf712bd0ae229febdba1beeb4d",
+      "records": null
+    },
+    {
+      "path": "raw/list_000008.json",
+      "bytes": 16917,
+      "sha256": "9cb98b4b7e852dc9431bf9920e21bc3828385fd0813a68aefefae2a29c97f8c4",
+      "records": null
+    },
+    {
+      "path": "raw/list_000009.json",
+      "bytes": 15100,
+      "sha256": "7414c21ca801158bb6f9a6e96e4cc4e113ec217be2e9d4c7b2d511fb45fa627a",
+      "records": null
+    },
+    {
+      "path": "raw/list_000010.json",
+      "bytes": 19282,
+      "sha256": "82fe69abe00a76f3c8a8ad2a30ec18f2e437eed0e475b89204753ed245e3bfa7",
+      "records": null
+    },
+    {
+      "path": "raw/list_000011.json",
+      "bytes": 16966,
+      "sha256": "ce4bc15324bfe231ec83ff513f3f2802daa5e84e9b4521dac840abf8134b6c40",
+      "records": null
+    },
+    {
+      "path": "raw/list_000012.json",
+      "bytes": 15515,
+      "sha256": "7eda566d24e0e2a488ab64d53fd2d056738c87463428e6361fe350eafc9d95fe",
+      "records": null
+    },
+    {
+      "path": "raw/list_000013.json",
+      "bytes": 16592,
+      "sha256": "4e28238cff1cf49d33c753cd9e2236b27419d45dccd3d1ff26752c037499bd35",
+      "records": null
+    },
+    {
+      "path": "raw/list_000014.json",
+      "bytes": 16778,
+      "sha256": "430e635b6b88f1db2a88a60a94a5edd703dcde20c235b52ec0de586ddc6843fb",
+      "records": null
+    },
+    {
+      "path": "raw/list_000015.json",
+      "bytes": 19565,
+      "sha256": "e6c7f3be249ac75fe92e8ae5dbc75e984fe884ecb4d737cc8b87668ca2ab1d35",
+      "records": null
+    },
+    {
+      "path": "raw/list_000016.json",
+      "bytes": 14124,
+      "sha256": "cdffeadeac3920e2a1bfb07b6451d72c68794f178cb6fefc076f5aef943d8c7e",
+      "records": null
+    },
+    {
+      "path": "raw/list_000017.json",
+      "bytes": 15529,
+      "sha256": "da52d969798af5f6137f01aa1928fc36427c9c3500ff48b0d12544fd2a2e8db3",
+      "records": null
+    },
+    {
+      "path": "raw/list_000018.json",
+      "bytes": 13769,
+      "sha256": "7960764cc9a95edbab6b8683fc4f11a200c999479667f1932043425c59a616ae",
+      "records": null
+    },
+    {
+      "path": "raw/list_000019.json",
+      "bytes": 15097,
+      "sha256": "0f5f2c9a0f574be4f0621fb886c2bb8d5593ccdbf1882487e62046e1b83fd39e",
+      "records": null
+    },
+    {
+      "path": "raw/list_000020.json",
+      "bytes": 18030,
+      "sha256": "7bb0e73a1d5585c2a483489d9cca148a7bfd6840faa12faf77ee5e93244f9ccc",
+      "records": null
+    },
+    {
+      "path": "raw/list_000021.json",
+      "bytes": 12791,
+      "sha256": "daf6c7cdd60e15064ef96930eaf43d33852c65d2c3462d969916e4a5572cbea3",
+      "records": null
+    },
+    {
+      "path": "raw/list_000022.json",
+      "bytes": 13639,
+      "sha256": "7f5c9122a5be0c73e5ee84b74dd10e06d224036c21db4e29a3ace2291f24502f",
+      "records": null
+    },
+    {
+      "path": "raw/list_000023.json",
+      "bytes": 16417,
+      "sha256": "6643cc0dbd3437a128bea424d5a61bb1163df57fc7b5cd170bbbfd606d8bea15",
+      "records": null
+    },
+    {
+      "path": "raw/list_000024.json",
+      "bytes": 16876,
+      "sha256": "e17edd6ab050b19fd67df1d89ddaef7a9319f7f40627e3c85608631ceeb1542f",
+      "records": null
+    },
+    {
+      "path": "raw/list_000025.json",
+      "bytes": 13585,
+      "sha256": "f1bc31c192ea04cf53002358d783bcd5682af64bed1f4ca8450646ff3823cc69",
+      "records": null
+    },
+    {
+      "path": "raw/list_000026.json",
+      "bytes": 12760,
+      "sha256": "639616a393ef9a0590170cc272aa6298f4b6d10bb45f004caec5c1955e342eb9",
+      "records": null
+    },
+    {
+      "path": "raw/list_000027.json",
+      "bytes": 12668,
+      "sha256": "9871ff6f78eda1348d2a8cd59b71ce135df36d0d6f3d8a9d920ec5859e383ba4",
+      "records": null
+    },
+    {
+      "path": "raw/list_000028.json",
+      "bytes": 17680,
+      "sha256": "22229bcddee60556cde787e41ab06612a7924ce2afb298f45fa489e7e3bd2d7e",
+      "records": null
+    },
+    {
+      "path": "raw/list_000029.json",
+      "bytes": 22741,
+      "sha256": "d8d1b9f4fbfd30597018e620843a75ae457db71821b14e4b84f1b53b43acf9b2",
+      "records": null
+    },
+    {
+      "path": "raw/list_000030.json",
+      "bytes": 18968,
+      "sha256": "da505478eb9fb9fbe1aca9447062330b6ef0e3f03d331fe9229f65e8b2b466fc",
+      "records": null
+    },
+    {
+      "path": "raw/list_000031.json",
+      "bytes": 15479,
+      "sha256": "3a7818120ea1b1c2210c2d3856c022542aaea084ebb26b04bce52037a48cf2b0",
+      "records": null
+    },
+    {
+      "path": "raw/list_000032.json",
+      "bytes": 12623,
+      "sha256": "1e4fa2f3f4e0493a730273b6e6752a5629eee7103677c9703feea5d01eb3f195",
+      "records": null
+    },
+    {
+      "path": "raw/list_000033.json",
+      "bytes": 13969,
+      "sha256": "50f574795f78cd0464c4f6cc14ee791acad0f608b7367b5a4e606632cf11c602",
+      "records": null
+    },
+    {
+      "path": "raw/list_000034.json",
+      "bytes": 16786,
+      "sha256": "ce0b4f0d3d0576ccd74640a6dc4994acda7b85c40f3e9d7ead79648bedb046bf",
+      "records": null
+    },
+    {
+      "path": "raw/list_000035.json",
+      "bytes": 14872,
+      "sha256": "77ae6181f5ded409b1a8e1394af4d0c1db29a4fbfe2fdf6aa5ffc2af689b21ab",
+      "records": null
+    },
+    {
+      "path": "raw/list_000036.json",
+      "bytes": 15744,
+      "sha256": "4083df3ef0060a844020b53cbbcd25170c421e6ef06266183a1e52a3f245c790",
+      "records": null
+    },
+    {
+      "path": "raw/list_000037.json",
+      "bytes": 14960,
+      "sha256": "6ce10474d39d9b1496fae8cae1851909edfb915ed539e059ffa3d3fa373ddec0",
+      "records": null
+    },
+    {
+      "path": "raw/list_000038.json",
+      "bytes": 13829,
+      "sha256": "37873363e8d3515548926a612c4633efb8d53bcc22c31863ab26656c5ea73b91",
+      "records": null
+    },
+    {
+      "path": "raw/list_000039.json",
+      "bytes": 14470,
+      "sha256": "b666c5ef74175c4ebcd94c48ce57ddc704b74da61901fbfeae690617d78cb09f",
+      "records": null
+    },
+    {
+      "path": "raw/list_000040.json",
+      "bytes": 16439,
+      "sha256": "10e9a144c0b87c6ad39727d617855d2e0d3e313241ee5776f66c84e4d646cee7",
+      "records": null
+    },
+    {
+      "path": "raw/list_000041.json",
+      "bytes": 12831,
+      "sha256": "52519d3ab19aa114d6bfe13d6fe0b222569dfe5506fca257622d2396470ff3e6",
+      "records": null
+    },
+    {
+      "path": "raw/list_000042.json",
+      "bytes": 17550,
+      "sha256": "3199ac8a0f8fdbae1a5179ac9a8867c7378c5f33fb8c1598e71fdca0e9dd12e9",
+      "records": null
+    },
+    {
+      "path": "raw/list_000043.json",
+      "bytes": 15558,
+      "sha256": "2b34a584b554cd11eb9422e4db8ec7b4ee71f5ffa938b7560109fb96442c8934",
+      "records": null
+    },
+    {
+      "path": "raw/list_000044.json",
+      "bytes": 16737,
+      "sha256": "d51904f34551fcc79fbacd4efdbac014614f24894c1b6a0df66c55b3ba2a9cd9",
+      "records": null
+    },
+    {
+      "path": "raw/list_000045.json",
+      "bytes": 12279,
+      "sha256": "396e57c4349f53b216513db9befc7b60002b0d2c46829f04502ce41d63e331fd",
+      "records": null
+    },
+    {
+      "path": "raw/list_000046.json",
+      "bytes": 13321,
+      "sha256": "f3861a9c98edb3d501bfa76a05cb414f7f12af8d13d5dd978317c368bc0a0046",
+      "records": null
+    },
+    {
+      "path": "raw/list_000047.json",
+      "bytes": 14222,
+      "sha256": "99e5b422cf3bc7bfb775d6367ccd4f0fe61bbdf4cfe06e1f2e5ea9ab81ff57a8",
+      "records": null
+    },
+    {
+      "path": "raw/list_000048.json",
+      "bytes": 12486,
+      "sha256": "189ea5d1f2e848f0f3b5beb337a2866dcae1a3be2b8c57ff278f9d64e7f94893",
+      "records": null
+    },
+    {
+      "path": "raw/list_000049.json",
+      "bytes": 12170,
+      "sha256": "2abaebef60697785ee49df0ec87ecdb9f280f5ad5c7ffd5707237c518cf8f25a",
+      "records": null
+    },
+    {
+      "path": "raw/list_000050.json",
+      "bytes": 13837,
+      "sha256": "d3ad39e2d279db731e23775c7efef509897a6d917fead6c62864d0711e16fe7e",
+      "records": null
+    },
+    {
+      "path": "raw/list_000051.json",
+      "bytes": 11138,
+      "sha256": "53e646d45dde7138c4f75c50ad1d36daec3dc56fae136e44ec5a39478cee6ac8",
+      "records": null
+    },
+    {
+      "path": "requests.jsonl",
+      "bytes": 19474,
+      "sha256": "bc280b4cad3df1dbe6368bc74c25fe25c9939f9c9c78ae9b33ec53eba47aef08",
+      "records": 51
+    }
+  ],
+  "coverage_evidence": {
+    "version": "public-pagination-2.0",
+    "coverage_status": "partial",
+    "unique_listed_ids": 510,
+    "listed_rows": 510,
+    "reported_totals": [
+      3696
+    ],
+    "validated_last_page": false,
+    "reasons": [
+      "no_validated_last_data_page",
+      "not_source_exhausted",
+      "unique_ids_do_not_match_business_total"
+    ]
+  },
+  "query_spec": {
+    "endpoints": [
+      "https://hr.xiaomi.com/website/api/agent/searchJobPage"
+    ],
+    "parameters": {
+      "query": {
+        "keyword": "",
+        "cityZhNames": "",
+        "pageSize": 10,
+        "pageNum": 1
+      },
+      "until_exhausted": false,
+      "target": 150
+    },
+    "selection_rule": "Official category/title candidates; no keyword or location filter; bounded output is not full coverage",
+    "pagination_basis": "Validated advertised last data page, stable totals, distinct ID accounting; no beyond-last-page requests"
+  },
+  "technical_acceptance": {
+    "evidence": "reports/verification/daily_20261121/accept_xiaomi.json",
+    "sha256": "84bd61a4ccf2b92acb70e64e495cd8312a1b303845b57a639f67df7afbe977c6",
+    "kind": "AI_assisted_technical_acceptance_not_human_labels"
+  }
+}

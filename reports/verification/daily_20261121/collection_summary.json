@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "observation_date_beijing": "2026-11-21",
+  "sources": [
+    {
+      "source": "tencent",
+      "batch_id": "tencent_20261121T031813Z_5f37563c",
+      "source_postings": 150,
+      "core_candidates_reviewed": 146,
+      "field_values_reconstructed": 3150,
+      "coverage_status": "partial",
+      "started_at": "2026-11-21T03:18:13Z",
+      "finished_at": "2026-11-21T03:27:50Z",
+      "also_in_previous_frozen_sample": 147,
+      "not_in_previous_frozen_sample": 3,
+      "same_raw_business_content": 147,
+      "raw_business_content_different": 0,
+      "requests": 192,
+      "failed_attempts": 0
+    },
+    {
+      "source": "netease",
+      "batch_id": "netease_20261121T031813Z_4be7ceeb",
+      "source_postings": 150,
+      "core_candidates_reviewed": 148,
+      "field_values_reconstructed": 3150,
+      "coverage_status": "partial",
+      "started_at": "2026-11-21T03:18:13Z",
+      "finished_at": "2026-11-21T03:22:20Z",
+      "also_in_previous_frozen_sample": 150,
+      "not_in_previous_frozen_sample": 0,
+      "same_raw_business_content": 147,
+      "raw_business_content_different": 3,
+      "requests": 83,
+      "failed_attempts": 0
+    },
+    {
+      "source": "xiaomi",
+      "batch_id": "xiaomi_20261121T031813Z_996f48b6",
+      "source_postings": 150,
+      "core_candidates_reviewed": 150,
+      "field_values_reconstructed": 3150,
+      "coverage_status": "partial",
+      "started_at": "2026-11-21T03:18:13Z",
+      "finished_at": "2026-11-21T03:20:44Z",
+      "also_in_previous_frozen_sample": 150,
+      "not_in_previous_frozen_sample": 0,
+      "same_raw_business_content": 150,
+      "raw_business_content_different": 0,
+      "requests": 51,
+      "failed_attempts": 0
+    },
+    {
+      "source": "jd",
+      "batch_id": "jd_20261121T031813Z_e4abceb0",
+      "source_postings": 150,
+      "core_candidates_reviewed": 149,
+      "field_values_reconstructed": 3150,
+      "coverage_status": "partial",
+      "started_at": "2026-11-21T03:18:13Z",
+      "finished_at": "2026-11-21T03:24:51Z",
+      "also_in_previous_frozen_sample": 150,
+      "not_in_previous_frozen_sample": 0,
+      "same_raw_business_content": 150,
+      "raw_business_content_different": 0,
+      "requests": 132,
+      "failed_attempts": 1
+    }
+  ],
+  "source_observations": 600,
+  "field_values_reconstructed": 12600,
+  "note": "600 new observation records, not 600 new distinct positions or newly published jobs. Partial subsets cannot support market change conclusions. Fixed analytical baseline remains selected."
+}

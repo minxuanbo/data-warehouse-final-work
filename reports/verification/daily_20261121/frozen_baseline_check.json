@@ -1,0 +1,11 @@
+{
+  "status": "validated",
+  "input_batches": [
+    "tencent_20261120T145742Z_cb8952ee",
+    "netease_20261120T145742Z_a2a9c5c5",
+    "xiaomi_20261120T152702Z_470b8a89",
+    "jd_20261120T152717Z_b825c288"
+  ],
+  "pending_batches": [],
+  "database": "recruitment_dw_dev_expansion_v1"
+}

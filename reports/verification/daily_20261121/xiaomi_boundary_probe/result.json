@@ -1,0 +1,13 @@
+{
+  "requested_at": "2026-11-21T03:26:21Z",
+  "advertised_page": 370,
+  "initial_total": 3696,
+  "current_total": 3696,
+  "rows": 6,
+  "last_page_recognized": true,
+  "raw_ref": {
+    "path": "raw/last_advertised_page.json",
+    "sha256": "d759c99044ada05a54b66cbdcc423dffe6c319bfd46ca8cab5f8989aac7a112d"
+  },
+  "interpretation": "Boundary probe only; not proof of traversing intervening pages or full coverage"
+}

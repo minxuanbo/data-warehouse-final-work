@@ -1,0 +1,786 @@
+{
+  "status": "passed_for_technical_acceptance",
+  "checked_at": "2026-11-21T03:29:23.374819+00:00",
+  "scope_review_version": "daily-software-title-1.0",
+  "source": "tencent",
+  "batch_id": "tencent_20261121T031813Z_5f37563c",
+  "jobs": 150,
+  "field_values_reconstructed": 3150,
+  "files_hashed": 196,
+  "request_attempts": 192,
+  "failed_attempts": 0,
+  "coverage_proof": {
+    "version": "public-pagination-2.0",
+    "coverage_status": "partial",
+    "unique_listed_ids": 419,
+    "listed_rows": 420,
+    "reported_totals": [
+      2065
+    ],
+    "validated_last_page": false,
+    "reasons": [
+      "duplicate_id_across_pages",
+      "ids_not_fully_accounted",
+      "no_validated_last_data_page",
+      "not_source_exhausted",
+      "unique_ids_do_not_match_business_total",
+      "unprocessed_ids"
+    ]
+  },
+  "core_jobs": 146,
+  "scope_decisions": {
+    "2101877681489625088": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000001.json"
+    },
+    "2101877445857820672": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000001.json"
+    },
+    "2009274767156334592": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000001.json"
+    },
+    "2109972730605645824": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000002.json"
+    },
+    "2119986711848206336": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000002.json"
+    },
+    "2091059890004082688": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000002.json"
+    },
+    "2091060441991262208": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000002.json"
+    },
+    "2091060154840825856": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000002.json"
+    },
+    "2009274773280018432": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000003.json"
+    },
+    "2078640022554324992": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000004.json"
+    },
+    "2034117544100655104": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000004.json"
+    },
+    "2052685072754196480": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000004.json"
+    },
+    "2089604837229641728": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000004.json"
+    },
+    "2109846092265996288": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 全栈开发工程师",
+      "raw_ref": "raw/list_000005.json"
+    },
+    "2102397330870419456": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000005.json"
+    },
+    "2089960263330742272": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 后端开发工程师",
+      "raw_ref": "raw/list_000005.json"
+    },
+    "2100383431103004672": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 客户端开发工程师",
+      "raw_ref": "raw/list_000005.json"
+    },
+    "2123662691158634496": {
+      "is_core": false,
+      "reason": "来源明确为境外城市，不进入本期中国大陆核心范围",
+      "raw_ref": "raw/list_000006.json"
+    },
+    "2046443162679013376": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000007.json"
+    },
+    "2046088672834650112": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000007.json"
+    },
+    "2000481633232375808": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000007.json"
+    },
+    "2068941069860646912": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000007.json"
+    },
+    "2079454077317722112": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000007.json"
+    },
+    "2068941068765933568": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000007.json"
+    },
+    "2007743926701805568": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000008.json"
+    },
+    "2090699892921118720": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000008.json"
+    },
+    "2112508940502876160": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000008.json"
+    },
+    "2112508942931374080": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000008.json"
+    },
+    "2011617156839657472": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000008.json"
+    },
+    "1803020828879626240": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000008.json"
+    },
+    "1980268719548551168": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 客户端开发工程师",
+      "raw_ref": "raw/list_000009.json"
+    },
+    "2104760602634403840": {
+      "is_core": false,
+      "reason": "非本期软件数据数字技术职责或管理/运营岗位",
+      "raw_ref": "raw/list_000009.json"
+    },
+    "1670301957484453888": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000010.json"
+    },
+    "1936112113181392896": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000010.json"
+    },
+    "2021521585860673536": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000010.json"
+    },
+    "2020723058859470848": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000010.json"
+    },
+    "2056671347148505088": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 后台开发工程师",
+      "raw_ref": "raw/list_000010.json"
+    },
+    "2090623498723700736": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000011.json"
+    },
+    "2077641750666719232": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000011.json"
+    },
+    "2046923451989651456": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000011.json"
+    },
+    "2088458663969865728": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000012.json"
+    },
+    "2098253188510695424": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000012.json"
+    },
+    "2099340341776920576": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000013.json"
+    },
+    "1936679262442594304": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000013.json"
+    },
+    "2078639812935593984": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 后台开发工程师",
+      "raw_ref": "raw/list_000013.json"
+    },
+    "2056993391002169344": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000013.json"
+    },
+    "2079125521983254528": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000014.json"
+    },
+    "2120442506620616704": {
+      "is_core": false,
+      "reason": "标题未明确属于本期数字技术方向，保守排除",
+      "raw_ref": "raw/list_000014.json"
+    },
+    "1810211324303515648": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000015.json"
+    },
+    "2112199650017718272": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 客户端研发专家",
+      "raw_ref": "raw/list_000015.json"
+    },
+    "2113177003082559488": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000016.json"
+    },
+    "2044972210678038528": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000016.json"
+    },
+    "2007768437438439424": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000016.json"
+    },
+    "2079038134749933568": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000017.json"
+    },
+    "2109491868134981632": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000017.json"
+    },
+    "2078468629443293184": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000018.json"
+    },
+    "2087735931724546048": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000019.json"
+    },
+    "2108399574078107648": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 后台开发工程师",
+      "raw_ref": "raw/list_000019.json"
+    },
+    "2089991944880173056": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 后台开发工程师",
+      "raw_ref": "raw/list_000020.json"
+    },
+    "2084535921369329664": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000021.json"
+    },
+    "2067161119168053248": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000021.json"
+    },
+    "2121174204811493376": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 后台研发工程师",
+      "raw_ref": "raw/list_000021.json"
+    },
+    "2089728223888977920": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 后台开发工程师",
+      "raw_ref": "raw/list_000021.json"
+    },
+    "2038450034349080576": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000021.json"
+    },
+    "2049487881189371904": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 后台开发工程师",
+      "raw_ref": "raw/list_000022.json"
+    },
+    "2089544603412901888": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000022.json"
+    },
+    "2037411500376879104": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000022.json"
+    },
+    "2020821173599895552": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000023.json"
+    },
+    "2076584243550666752": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000023.json"
+    },
+    "2062097072978575360": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000023.json"
+    },
+    "2085294808083116032": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000023.json"
+    },
+    "1976128424510644224": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 框架开发工程师",
+      "raw_ref": "raw/list_000023.json"
+    },
+    "2078468631578198016": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000024.json"
+    },
+    "1955829491829985280": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 后台开发工程师",
+      "raw_ref": "raw/list_000024.json"
+    },
+    "2021416952777568256": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000024.json"
+    },
+    "2122504689126912000": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000025.json"
+    },
+    "2122503698335842304": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000025.json"
+    },
+    "2122347965157912576": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000025.json"
+    },
+    "2122348015627972608": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000025.json"
+    },
+    "2122666103573495808": {
+      "is_core": false,
+      "reason": "来源明确为境外城市，不进入本期中国大陆核心范围",
+      "raw_ref": "raw/list_000025.json"
+    },
+    "2076490660172705792": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000025.json"
+    },
+    "2066810245954580480": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000026.json"
+    },
+    "1873621940523008000": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000026.json"
+    },
+    "2066685859809378304": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000026.json"
+    },
+    "2034532284522196992": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000026.json"
+    },
+    "2078028283043299328": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000027.json"
+    },
+    "2099340394696458240": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000027.json"
+    },
+    "2067161117129617408": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000027.json"
+    },
+    "2067515726658453504": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000027.json"
+    },
+    "2089640451039735808": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000027.json"
+    },
+    "2110578879772143616": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000027.json"
+    },
+    "2119715112666447872": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000028.json"
+    },
+    "2067104290106945536": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000028.json"
+    },
+    "2098252336337170432": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000028.json"
+    },
+    "2040982136533712896": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000028.json"
+    },
+    "2066729923632087040": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 客户端开发工程师",
+      "raw_ref": "raw/list_000028.json"
+    },
+    "2119685008418586624": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000029.json"
+    },
+    "2119685006426288128": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000029.json"
+    },
+    "1976128441346576384": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000029.json"
+    },
+    "1919951376599863296": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000029.json"
+    },
+    "2067065220651728896": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000029.json"
+    },
+    "2054531247396532224": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000029.json"
+    },
+    "2077214550939316224": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 客户端开发工程师",
+      "raw_ref": "raw/list_000029.json"
+    },
+    "1788096462568038400": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000030.json"
+    },
+    "2067065229401042944": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000030.json"
+    },
+    "2067065222975369216": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000031.json"
+    },
+    "2067065225080913920": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000031.json"
+    },
+    "1967484294205169664": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000031.json"
+    },
+    "2078318720920498176": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000031.json"
+    },
+    "2007656317103267840": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000031.json"
+    },
+    "2077312480664797184": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000033.json"
+    },
+    "2119283217256333312": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 全栈开发工程师",
+      "raw_ref": "raw/list_000033.json"
+    },
+    "2064239874424352768": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000033.json"
+    },
+    "2062097137205952512": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000033.json"
+    },
+    "2062097141408641024": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000033.json"
+    },
+    "2067065227102564352": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000034.json"
+    },
+    "1976459712002154496": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000034.json"
+    },
+    "2043890003045679104": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000034.json"
+    },
+    "2066810094796058624": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 后台开发工程师",
+      "raw_ref": "raw/list_000035.json"
+    },
+    "1976128414842773504": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000035.json"
+    },
+    "2076940751543119872": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000035.json"
+    },
+    "2077293041282105344": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 全栈开发工程师",
+      "raw_ref": "raw/list_000035.json"
+    },
+    "2077292986491912192": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000035.json"
+    },
+    "2118617283625664512": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 全栈研发工程师",
+      "raw_ref": "raw/list_000036.json"
+    },
+    "2077641357278752768": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000036.json"
+    },
+    "2077641011089293312": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000036.json"
+    },
+    "1810211329928077312": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000036.json"
+    },
+    "2042427588500160512": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000036.json"
+    },
+    "2020723060671414272": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000036.json"
+    },
+    "2066702542833893376": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000037.json"
+    },
+    "2076872261968773120": {
+      "is_core": true,
+      "reason": "新版标题职责复核：明确软件研发职能优先于营销/运营等部门前缀；依据 客户端开发工程师",
+      "raw_ref": "raw/list_000037.json"
+    },
+    "2066702544654221312": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000037.json"
+    },
+    "2102663178751229952": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000037.json"
+    },
+    "2037411502792798208": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000037.json"
+    },
+    "2043890114802905088": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000038.json"
+    },
+    "2039169824982204416": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000039.json"
+    },
+    "2042527610751315968": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000039.json"
+    },
+    "1831157606756933632": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000039.json"
+    },
+    "2026189607191867392": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000039.json"
+    },
+    "2088463697747034112": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000039.json"
+    },
+    "2121086557418078208": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000040.json"
+    },
+    "2120809482392092672": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000040.json"
+    },
+    "2120809479330246656": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000040.json"
+    },
+    "2087100620363448320": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000040.json"
+    },
+    "2044246233480069120": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000040.json"
+    },
+    "2076588782953611264": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000041.json"
+    },
+    "2098594911686410240": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000041.json"
+    },
+    "2043890150156693504": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000041.json"
+    },
+    "2120820118580805632": {
+      "is_core": true,
+      "reason": "标题明确数字技术方向",
+      "raw_ref": "raw/list_000041.json"
+    },
+    "2052709099375869952": {
+      "is_core": true,
+      "reason": "标题/来源类别与任职要求共同支持数字技术职责",
+      "raw_ref": "raw/list_000042.json"
+    }
+  },
+  "human_annotation": false,
+  "review_actor": "AI-assisted technical verification authorized by user",
+  "acceptance_scope": "Collected subset and source lineage; not full market coverage or independent precision/recall"
+}

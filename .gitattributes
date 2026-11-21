@@ -21,3 +21,5 @@ warehouse/cd_policy.json -text
 /reports/verification/expansion_current/** -text whitespace=cr-at-eol
 /reports/verification/expansion_attempts/** -text whitespace=cr-at-eol
 /reports/verification/defense_20261120/** -text whitespace=cr-at-eol
+
+/reports/verification/daily_20261121/** -text whitespace=cr-at-eol

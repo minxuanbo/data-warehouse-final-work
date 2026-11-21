@@ -10,6 +10,13 @@ from collectors.daily import Daily
 
 
 class PaginationV2Tests(unittest.TestCase):
+    def test_department_prefix_does_not_hide_explicit_software_roles(self):
+        from scripts.accept_expansion import SOFTWARE_ROLE
+        for title in ('营销与交易产品部-云mallJava后端开发工程师','微信开放平台-后台开发工程师-运营治理方向','腾讯营销-资深全栈开发工程师'):
+            self.assertIsNotNone(SOFTWARE_ROLE.search(title))
+        for title in ('营销产品经理','腾讯云通信技术运营','软件开发项目经理'):
+            self.assertIsNone(SOFTWARE_ROLE.search(title))
+
     def test_netease_stops_on_last_data_page_not_out_of_range_zero(self):
         p={'code':200,'data':{'total':12,'pages':2,'lastPage':True,'list':[{'id':11},{'id':12}]}}
         self.assertTrue(page_data('netease',p,2,10)[2])
