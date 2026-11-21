@@ -1,0 +1,27 @@
+{
+  "status": "ready",
+  "checked_at": "2026-11-21T11:43:34.263370+08:00",
+  "python": "C:\\Users\\21051\\Desktop\\datawarehouse\\data-warehouse-final-work\\.venv-dbt\\Scripts\\pythonw.exe",
+  "working_directory": "C:\\Users\\21051\\Desktop\\datawarehouse\\data-warehouse-final-work",
+  "project_root": "C:\\Users\\21051\\Desktop\\datawarehouse\\data-warehouse-final-work",
+  "revision": "036c1d97a86751a5ba8d04ce6be6cc7d7853fecf",
+  "config": {
+    "version": "scheduled-public-1.0",
+    "timezone": "Asia/Shanghai",
+    "daily_time": "11:18",
+    "sources": [
+      "tencent",
+      "netease",
+      "xiaomi",
+      "jd"
+    ],
+    "until_exhausted": true,
+    "target_if_bounded": 150,
+    "max_pages": 500,
+    "max_runtime_minutes": 100,
+    "automatic_acceptance": false,
+    "automatic_publication": false
+  },
+  "network_requests": 0,
+  "collection_started": false
+}

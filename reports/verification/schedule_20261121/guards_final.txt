@@ -1,0 +1,8 @@
+test_check_makes_no_network_request_or_collection (tests.test_scheduled_collection.ScheduledCollectionTests.test_check_makes_no_network_request_or_collection) ... ok
+test_configuration_rejects_automatic_approval_and_scope_shrink (tests.test_scheduled_collection.ScheduledCollectionTests.test_configuration_rejects_automatic_approval_and_scope_shrink) ... ok
+test_existing_actual_day_marker_prevents_duplicate_collection (tests.test_scheduled_collection.ScheduledCollectionTests.test_existing_actual_day_marker_prevents_duplicate_collection) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.187s
+
+OK

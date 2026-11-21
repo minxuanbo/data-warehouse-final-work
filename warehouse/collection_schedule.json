@@ -1,0 +1,12 @@
+{
+  "version": "scheduled-public-1.0",
+  "timezone": "Asia/Shanghai",
+  "daily_time": "11:18",
+  "sources": ["tencent", "netease", "xiaomi", "jd"],
+  "until_exhausted": true,
+  "target_if_bounded": 150,
+  "max_pages": 500,
+  "max_runtime_minutes": 100,
+  "automatic_acceptance": false,
+  "automatic_publication": false
+}

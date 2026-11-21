@@ -1,0 +1,14 @@
+{
+  "TaskName": "RecruitmentDW-Collect-FourSources-1118",
+  "State": "Ready",
+  "NextRunTime": "2026-11-22T11:18:00.0000000+08:00",
+  "Execute": "C:\\Users\\21051\\Desktop\\datawarehouse\\data-warehouse-final-work\\.venv-dbt\\Scripts\\pythonw.exe",
+  "Arguments": "-X utf8 -m scripts.scheduled_collection",
+  "WorkingDirectory": "C:\\Users\\21051\\Desktop\\datawarehouse\\data-warehouse-final-work",
+  "LogonType": "Interactive",
+  "RunLevel": "Limited",
+  "MultipleInstances": "IgnoreNew",
+  "StartWhenAvailable": true,
+  "WakeToRun": false,
+  "ExecutionTimeLimit": "PT2H"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "task_result": 0,
+  "last_run": "2026-11-21T11:43:30.0000000+08:00",
+  "logon_type": "Interactive",
+  "run_level": "Limited",
+  "network_requests": 0,
+  "python": "C:\\Users\\21051\\Desktop\\datawarehouse\\data-warehouse-final-work\\.venv-dbt\\Scripts\\pythonw.exe"
+}
